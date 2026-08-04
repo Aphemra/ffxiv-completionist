@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "startsAfterQuestIds": ["arr-msq-its-probably-pirates2"],
+  "groups": [
+    {
+      "id": "arr-shared-levels-15-20",
+      "title": "Levels 15-20",
+      "sortOrder": 1,
+      "levelRange": {
+        "minimum": 15,
+        "maximum": 20
+      },
+      "quests": [
+        {
+          "id": "arr-msq-its-probably-pirates3",
+          "name": "It's Probably Pirates",
+          "level": 15,
+          "start": {
+            "npcName": "Baderon",
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.6,
+              "y": 11.1
+            }
+          },
+          "rewards": {
+            "experience": 5760,
+            "gil": 668
+          },
+          "duties": [
+            {
+              "id": "duty-sastasha",
+              "name": "Sastasha",
+              "type": "dungeon",
+              "level": 15,
+              "dutySupportAvailable": true
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "dungeon",
+              "targetId": "duty-sastasha",
+              "name": "Sastasha"
+            },
+            {
+              "type": "feature",
+              "name": "Party Finder"
+            },
+            {
+              "type": "system",
+              "name": "Duty Support"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -28,7 +28,10 @@ import { getPreviousQuestIds } from '../utilities/questProgression';
 import './QuestLogPage.css';
 
 function formatVerificationStatus(status: string): string {
-  return status.charAt(0).toUpperCase() + status.slice(1);
+  return status
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
 }
 
 export function QuestLogPage() {

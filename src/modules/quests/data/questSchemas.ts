@@ -49,8 +49,9 @@ export const questCategorySchema = z.enum([
 ]);
 
 export const questVerificationStatusSchema = z.enum([
-  'sample',
-  'partial',
+  'incomplete',
+  'partially-complete',
+  'in-review',
   'verified',
 ]);
 
