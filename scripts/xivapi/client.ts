@@ -4,6 +4,25 @@ const XIVAPI_BASE_URL = 'https://v2.xivapi.com/api';
 
 const RETRYABLE_STATUS_CODES = new Set([429, 500, 502, 503, 504]);
 
+export class XivapiRequestError extends Error {
+  public readonly status: number;
+  public readonly url: string;
+  public readonly responseText: string;
+
+  constructor(status: number, url: string, responseText: string) {
+    super(
+      [`XIVAPI request failed with HTTP ${status}.`, url, responseText].join(
+        '\n',
+      ),
+    );
+
+    this.name = 'XivapiRequestError';
+    this.status = status;
+    this.url = url;
+    this.responseText = responseText;
+  }
+}
+
 interface XivapiRequestOptions<TSchema extends z.ZodType> {
   path: string;
 
@@ -84,12 +103,10 @@ export async function requestXivapi<TSchema extends z.ZodType>(
           continue;
         }
 
-        throw new Error(
-          [
-            `XIVAPI request failed with HTTP ${response.status}.`,
-            url.toString(),
-            responseText,
-          ].join('\n'),
+        throw new XivapiRequestError(
+          response.status,
+          url.toString(),
+          responseText,
         );
       }
 

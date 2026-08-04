@@ -412,6 +412,42 @@ function parseRewardItems(
   return parsedRewards;
 }
 
+function createCanonicalRewardItem(item: ParsedItemReward): JsonObject {
+  const canonicalItem: JsonObject = {
+    itemId: item.itemId,
+    itemName: item.itemName,
+    quantity: item.quantity,
+  };
+
+  if (item.quality !== undefined) {
+    canonicalItem.quality = item.quality;
+  }
+
+  if (item.choiceGroup !== undefined) {
+    canonicalItem.choiceGroup = item.choiceGroup;
+  }
+
+  if (item.stainId !== undefined) {
+    canonicalItem.stainId = item.stainId;
+  }
+
+  const extensions: JsonObject = {};
+
+  if (item.stainName !== undefined) {
+    extensions.stainName = item.stainName;
+  }
+
+  if (item.iconId !== undefined) {
+    extensions.iconId = item.iconId;
+  }
+
+  if (Object.keys(extensions).length > 0) {
+    canonicalItem.extensions = extensions;
+  }
+
+  return canonicalItem;
+}
+
 function parsePreviousQuests(fields: JsonObject): ParsedPreviousQuest[] {
   const previousQuests: ParsedPreviousQuest[] = [];
 
@@ -981,8 +1017,10 @@ async function main(): Promise<void> {
       ? {
           experienceFactor,
           gil,
-          items: guaranteedItems,
-          optionalItems: choiceItems,
+
+          items: guaranteedItems.map(createCanonicalRewardItem),
+
+          optionalItems: choiceItems.map(createCanonicalRewardItem),
         }
       : undefined;
 
@@ -1091,6 +1129,10 @@ async function main(): Promise<void> {
     rewards,
 
     tags: ['xivapi-import'],
+
+    extensions: {
+      iconId: iconId(fields.Icon),
+    },
 
     sourceData: {
       xivapi: {
