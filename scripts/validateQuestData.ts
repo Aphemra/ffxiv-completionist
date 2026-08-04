@@ -13,7 +13,6 @@ import {
   questManifestSchema,
   type Quest,
   type QuestCollection,
-  type QuestManifestEntry,
 } from '../src/modules/quests/data/questSchemas';
 
 type ValidationSeverity = 'error' | 'warning';

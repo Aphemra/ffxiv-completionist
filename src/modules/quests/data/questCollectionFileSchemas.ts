@@ -2,52 +2,19 @@ import * as z from 'zod';
 
 import {
   gameDataIdSchema,
-  gameLevelSchema,
-  nonEmptyStringSchema,
-  questAvailabilitySchema,
   questCollectionSchema,
-  questDutySchema,
-  questNoteSchema,
-  questRequirementSchema,
-  questRewardsSchema,
-  questStartSchema,
-  questUnlockSchema,
+  questGroupSchema,
+  questSchema,
   sortOrderSchema,
   type QuestCollection,
   type QuestManifestEntry,
 } from './questSchemas';
 
-const levelRangeSchema = z
-  .strictObject({
-    minimum: gameLevelSchema,
-    maximum: gameLevelSchema,
-  })
-  .refine((range) => range.minimum <= range.maximum, {
-    message: 'The minimum level cannot be greater than the maximum level.',
-    path: ['minimum'],
-  });
-
-const questContentBaseSchema = z.strictObject({
-  id: gameDataIdSchema,
-  name: nonEmptyStringSchema,
-  level: gameLevelSchema,
-
-  start: questStartSchema.optional(),
-  availability: questAvailabilitySchema.optional(),
-
-  prerequisiteQuestIds: z.array(gameDataIdSchema).optional(),
-
-  nextQuestIds: z.array(gameDataIdSchema).optional(),
-
-  requirements: z.array(questRequirementSchema).optional(),
-
-  rewards: questRewardsSchema.optional(),
-
-  duties: z.array(questDutySchema).optional(),
-
-  unlocks: z.array(questUnlockSchema).optional(),
-
-  notes: z.array(questNoteSchema).optional(),
+const questContentBaseSchema = questSchema.omit({
+  category: true,
+  expansionId: true,
+  patch: true,
+  sortOrder: true,
 });
 
 const standardQuestContentSchema = questContentBaseSchema.extend({
@@ -58,12 +25,8 @@ const linearQuestContentSchema = questContentBaseSchema.extend({
   sortOrder: sortOrderSchema.optional(),
 });
 
-const questGroupBaseSchema = z.strictObject({
-  id: gameDataIdSchema,
-  title: nonEmptyStringSchema,
-  description: nonEmptyStringSchema.optional(),
-  sortOrder: sortOrderSchema,
-  levelRange: levelRangeSchema.optional(),
+const questGroupBaseSchema = questGroupSchema.omit({
+  quests: true,
 });
 
 const standardQuestGroupContentSchema = questGroupBaseSchema.extend({
@@ -120,7 +83,10 @@ function createCollectionMetadata(manifestEntry: QuestManifestEntry) {
     availability: manifestEntry.availability,
 
     sortOrder: manifestEntry.sortOrder,
+
     verificationStatus: manifestEntry.verificationStatus,
+
+    extensions: manifestEntry.extensions,
   };
 }
 
@@ -165,11 +131,7 @@ function normalizeLinearCollection(
   let globalQuestIndex = 0;
 
   const groups = source.groups.map((group) => ({
-    id: group.id,
-    title: group.title,
-    description: group.description,
-    sortOrder: group.sortOrder,
-    levelRange: group.levelRange,
+    ...group,
 
     quests: group.quests.map((quest, groupQuestIndex) => {
       const questIndex = globalQuestIndex;

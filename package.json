@@ -8,7 +8,11 @@
     "build": "npm run validate:data && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "validate:data": "tsx scripts/validateQuestData.ts"
+    "validate:data": "tsx scripts/validateQuestData.ts",
+    "xivapi:pin": "tsx scripts/xivapi/pinXivapi.ts",
+    "xivapi:index:quests": "tsx scripts/xivapi/syncQuestIndex.ts",
+    "xivapi:inspect:quest": "tsx scripts/xivapi/inspectQuest.ts",
+    "xivapi:fetch:quests": "tsx scripts/xivapi/fetchQuestRows.ts"
   },
   "dependencies": {
     "react": "^19.2.8",
