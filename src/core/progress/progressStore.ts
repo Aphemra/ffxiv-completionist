@@ -53,6 +53,8 @@ interface ProgressActions {
 
   setQuestCompletion: (questId: string, completed: boolean) => void;
 
+  markQuestsComplete: (questIds: readonly string[]) => void;
+
   setCurrentQuest: (questId: string | null) => void;
 
   toggleQuestBookmark: (questId: string) => void;
@@ -108,6 +110,33 @@ export const useProgressStore = create<ProgressStore>()(
             completedQuestIds.add(questId);
           } else {
             completedQuestIds.delete(questId);
+          }
+
+          return {
+            profile: updateProfile(state.profile, {
+              completedQuestIds: Array.from(completedQuestIds),
+            }),
+          };
+        });
+      },
+
+      markQuestsComplete: (questIds) => {
+        set((state) => {
+          const completedQuestIds = new Set(state.profile.completedQuestIds);
+
+          let hasChanges = false;
+
+          for (const questId of questIds) {
+            if (completedQuestIds.has(questId)) {
+              continue;
+            }
+
+            completedQuestIds.add(questId);
+            hasChanges = true;
+          }
+
+          if (!hasChanges) {
+            return state;
           }
 
           return {

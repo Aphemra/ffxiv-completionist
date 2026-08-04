@@ -4,8 +4,22 @@ import type {
   QuestRequirement,
 } from '../data/questSchemas';
 
+const EXPANSION_LABELS: Readonly<Record<string, string>> = {
+  arr: 'A Realm Reborn',
+  heavensward: 'Heavensward',
+  stormblood: 'Stormblood',
+  shadowbringers: 'Shadowbringers',
+  endwalker: 'Endwalker',
+  dawntrail: 'Dawntrail',
+  evercold: 'Evercold',
+};
+
 export type QuestStatusFilter =
-  'all' | 'incomplete' | 'completed' | 'current' | 'bookmarked';
+  | 'all'
+  | 'incomplete'
+  | 'completed'
+  | 'current'
+  | 'bookmarked';
 
 interface QuestCategoryOption {
   value: QuestCategory;
@@ -216,4 +230,36 @@ export function questMatchesStatus(
     case 'bookmarked':
       return progress.bookmarkedQuestIds.has(quest.id);
   }
+}
+
+export function formatExpansionName(expansionId: string): string {
+  const knownLabel = EXPANSION_LABELS[expansionId];
+
+  if (knownLabel) {
+    return knownLabel;
+  }
+
+  return expansionId
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+export function comparePatchVersions(left: string, right: string): number {
+  const leftParts = left.split('.').map((part) => Number(part));
+
+  const rightParts = right.split('.').map((part) => Number(part));
+
+  const partCount = Math.max(leftParts.length, rightParts.length);
+
+  for (let index = 0; index < partCount; index += 1) {
+    const leftPart = leftParts[index] ?? 0;
+    const rightPart = rightParts[index] ?? 0;
+
+    if (leftPart !== rightPart) {
+      return leftPart - rightPart;
+    }
+  }
+
+  return left.localeCompare(right);
 }

@@ -223,6 +223,11 @@ export function QuestDetailsDrawer({
               .join(' ')}
             type="button"
             aria-pressed={isCurrent}
+            title={
+              isCurrent
+                ? 'Clear the current quest'
+                : 'Set current and mark all previous quests complete'
+            }
             onClick={onToggleCurrent}
           >
             {isCurrent ? 'Current quest' : 'Set current'}

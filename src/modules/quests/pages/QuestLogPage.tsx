@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { Link } from 'react-router';
+import { useMemo, useState } from 'react';
 
-import { createAvailableQuestCatalog } from '../utilities/questAvailability';
+import { Link } from 'react-router';
 
 import { useProgressStore } from '../../../core/progress/progressStore';
 
@@ -12,13 +11,19 @@ import type { QuestCategory } from '../data/questSchemas';
 
 import { useQuestCatalog } from '../hooks/useQuestCatalog';
 
+import { createAvailableQuestCatalog } from '../utilities/questAvailability';
+
 import {
+  comparePatchVersions,
+  formatExpansionName,
   QUEST_CATEGORY_OPTIONS,
   QUEST_STATUS_OPTIONS,
   questMatchesSearch,
   questMatchesStatus,
   type QuestStatusFilter,
 } from '../utilities/questPresentation';
+
+import { getPreviousQuestIds } from '../utilities/questProgression';
 
 import './QuestLogPage.css';
 
@@ -35,6 +40,10 @@ export function QuestLogPage() {
     (store) => store.toggleQuestCompletion,
   );
 
+  const markQuestsComplete = useProgressStore(
+    (store) => store.markQuestsComplete,
+  );
+
   const setCurrentQuest = useProgressStore((store) => store.setCurrentQuest);
 
   const toggleQuestBookmark = useProgressStore(
@@ -45,6 +54,10 @@ export function QuestLogPage() {
 
   const [searchQuery, setSearchQuery] = useState('');
 
+  const [expansionFilter, setExpansionFilter] = useState('all');
+
+  const [patchFilter, setPatchFilter] = useState('all');
+
   const [categoryFilter, setCategoryFilter] = useState<QuestCategory | 'all'>(
     'all',
   );
@@ -53,41 +66,117 @@ export function QuestLogPage() {
 
   const [selectedQuestId, setSelectedQuestId] = useState<string | null>(null);
 
-  const [collapsedGroupIds, setCollapsedGroupIds] = useState<
+  const [expandedCollectionIds, setExpandedCollectionIds] = useState<
     ReadonlySet<string>
   >(() => new Set());
 
-  const completedQuestIdSet = new Set(profile.completedQuestIds);
+  const [expandedGroupIds, setExpandedGroupIds] = useState<ReadonlySet<string>>(
+    () => new Set(),
+  );
 
-  const bookmarkedQuestIdSet = new Set(profile.bookmarkedQuestIds);
+  const completedQuestIdSet = useMemo(
+    () => new Set(profile.completedQuestIds),
+    [profile.completedQuestIds],
+  );
 
-  const catalog =
-    state.status === 'success'
-      ? createAvailableQuestCatalog(state.catalog, {
-          startingCity: profile.startingCity,
-        })
-      : null;
+  const bookmarkedQuestIdSet = useMemo(
+    () => new Set(profile.bookmarkedQuestIds),
+    [profile.bookmarkedQuestIds],
+  );
 
-  const filteredCollections =
-    catalog?.collections
+  const catalog = useMemo(() => {
+    if (state.status !== 'success') {
+      return null;
+    }
+
+    return createAvailableQuestCatalog(state.catalog, {
+      startingCity: profile.startingCity,
+    });
+  }, [state, profile.startingCity]);
+
+  const expansionOptions = useMemo(() => {
+    if (!catalog) {
+      return [];
+    }
+
+    const expansionIds = new Set<string>();
+
+    for (const collection of catalog.collections) {
+      if (collection.expansionId) {
+        expansionIds.add(collection.expansionId);
+      }
+    }
+
+    return Array.from(expansionIds).sort((left, right) =>
+      formatExpansionName(left).localeCompare(formatExpansionName(right)),
+    );
+  }, [catalog]);
+
+  const patchOptions = useMemo(() => {
+    if (!catalog || expansionFilter === 'all') {
+      return [];
+    }
+
+    const patches = new Set<string>();
+
+    for (const collection of catalog.collections) {
+      for (const group of collection.groups) {
+        for (const quest of group.quests) {
+          if (quest.expansionId !== expansionFilter) {
+            continue;
+          }
+
+          patches.add(quest.patch);
+        }
+      }
+    }
+
+    return Array.from(patches).sort(comparePatchVersions);
+  }, [catalog, expansionFilter]);
+
+  const filteredCollections = useMemo(() => {
+    if (!catalog) {
+      return [];
+    }
+
+    const progressContext = {
+      completedQuestIds: completedQuestIdSet,
+
+      bookmarkedQuestIds: bookmarkedQuestIdSet,
+
+      currentQuestId: profile.currentQuestId,
+    };
+
+    return catalog.collections
       .map((collection) => {
         const groups = collection.groups
           .map((group) => {
             const quests = group.quests.filter((quest) => {
+              const matchesExpansion =
+                expansionFilter === 'all' ||
+                quest.expansionId === expansionFilter;
+
+              const matchesPatch =
+                patchFilter === 'all' || quest.patch === patchFilter;
+
               const matchesCategory =
                 categoryFilter === 'all' || quest.category === categoryFilter;
 
               const matchesSearch = questMatchesSearch(quest, searchQuery);
 
-              const matchesStatus = questMatchesStatus(quest, statusFilter, {
-                completedQuestIds: completedQuestIdSet,
+              const matchesStatus = questMatchesStatus(
+                quest,
+                statusFilter,
+                progressContext,
+              );
 
-                bookmarkedQuestIds: bookmarkedQuestIdSet,
-
-                currentQuestId: profile.currentQuestId,
-              });
-
-              return matchesCategory && matchesSearch && matchesStatus;
+              return (
+                matchesExpansion &&
+                matchesPatch &&
+                matchesCategory &&
+                matchesSearch &&
+                matchesStatus
+              );
             });
 
             return {
@@ -102,20 +191,42 @@ export function QuestLogPage() {
           groups,
         };
       })
-      .filter(({ groups }) => groups.length > 0) ?? [];
+      .filter(({ groups }) => groups.length > 0);
+  }, [
+    catalog,
+    expansionFilter,
+    patchFilter,
+    categoryFilter,
+    searchQuery,
+    statusFilter,
+    completedQuestIdSet,
+    bookmarkedQuestIdSet,
+    profile.currentQuestId,
+  ]);
 
-  const visibleQuestCount = filteredCollections.reduce(
-    (collectionTotal, { groups }) =>
-      collectionTotal +
-      groups.reduce((groupTotal, { quests }) => groupTotal + quests.length, 0),
-    0,
+  const visibleQuestCount = useMemo(
+    () =>
+      filteredCollections.reduce(
+        (collectionTotal, { groups }) =>
+          collectionTotal +
+          groups.reduce(
+            (groupTotal, { quests }) => groupTotal + quests.length,
+            0,
+          ),
+        0,
+      ),
+    [filteredCollections],
   );
 
-  const loadedCompletedCount = catalog
-    ? profile.completedQuestIds.filter((questId) =>
-        catalog.questsById.has(questId),
-      ).length
-    : 0;
+  const loadedCompletedCount = useMemo(() => {
+    if (!catalog) {
+      return 0;
+    }
+
+    return profile.completedQuestIds.filter((questId) =>
+      catalog.questsById.has(questId),
+    ).length;
+  }, [catalog, profile.completedQuestIds]);
 
   const selectedQuest =
     catalog && selectedQuestId
@@ -124,11 +235,32 @@ export function QuestLogPage() {
 
   const hasActiveFilters =
     searchQuery.trim().length > 0 ||
+    expansionFilter !== 'all' ||
+    patchFilter !== 'all' ||
     categoryFilter !== 'all' ||
     statusFilter !== 'all';
 
-  function toggleGroup(groupKey: string) {
-    setCollapsedGroupIds((current) => {
+  const shouldAutoExpandMatches =
+    searchQuery.trim().length > 0 ||
+    statusFilter === 'current' ||
+    statusFilter === 'bookmarked';
+
+  function toggleCollection(collectionId: string): void {
+    setExpandedCollectionIds((current) => {
+      const next = new Set(current);
+
+      if (next.has(collectionId)) {
+        next.delete(collectionId);
+      } else {
+        next.add(collectionId);
+      }
+
+      return next;
+    });
+  }
+
+  function toggleGroup(groupKey: string): void {
+    setExpandedGroupIds((current) => {
       const next = new Set(current);
 
       if (next.has(groupKey)) {
@@ -141,10 +273,37 @@ export function QuestLogPage() {
     });
   }
 
-  function clearFilters() {
+  function clearFilters(): void {
     setSearchQuery('');
+    setExpansionFilter('all');
+    setPatchFilter('all');
     setCategoryFilter('all');
     setStatusFilter('all');
+  }
+
+  function handleExpansionChange(expansionId: string): void {
+    setExpansionFilter(expansionId);
+
+    // A selected patch may not exist in the
+    // newly selected expansion.
+    setPatchFilter('all');
+  }
+
+  function handleSetCurrentQuest(questId: string): void {
+    if (!catalog) {
+      return;
+    }
+
+    if (profile.currentQuestId === questId) {
+      setCurrentQuest(null);
+      return;
+    }
+
+    const previousQuestIds = getPreviousQuestIds(questId, catalog.questsById);
+
+    markQuestsComplete(previousQuestIds);
+
+    setCurrentQuest(questId);
   }
 
   return (
@@ -185,8 +344,8 @@ export function QuestLogPage() {
 
             <p>
               Early ARR quests differ between Gridania, Limsa Lominsa, and
-              Ul&apos;dah. Restricted quest collections will remain hidden until
-              your route is configured.
+              Ul&apos;dah. Restricted quest collections remain hidden until your
+              route is configured.
             </p>
 
             <Link to="/profile">Configure profile</Link>
@@ -227,7 +386,7 @@ export function QuestLogPage() {
         </section>
       )}
 
-      {state.status === 'success' && (
+      {state.status === 'success' && catalog && (
         <>
           <section className="quest-toolbar" aria-label="Quest filters">
             <label className="quest-filter quest-filter--search">
@@ -244,6 +403,49 @@ export function QuestLogPage() {
             </label>
 
             <div className="quest-toolbar__selects">
+              <label className="quest-filter">
+                <span>Expansion</span>
+
+                <select
+                  value={expansionFilter}
+                  onChange={(event) => {
+                    handleExpansionChange(event.target.value);
+                  }}
+                >
+                  <option value="all">All expansions</option>
+
+                  {expansionOptions.map((expansionId) => (
+                    <option key={expansionId} value={expansionId}>
+                      {formatExpansionName(expansionId)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="quest-filter">
+                <span>Patch</span>
+
+                <select
+                  value={patchFilter}
+                  disabled={expansionFilter === 'all'}
+                  onChange={(event) => {
+                    setPatchFilter(event.target.value);
+                  }}
+                >
+                  <option value="all">
+                    {expansionFilter === 'all'
+                      ? 'Select an expansion first'
+                      : 'All expansion patches'}
+                  </option>
+
+                  {patchOptions.map((patch) => (
+                    <option key={patch} value={patch}>
+                      Patch {patch}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
               <label className="quest-filter">
                 <span>Category</span>
 
@@ -286,7 +488,7 @@ export function QuestLogPage() {
             <div className="quest-toolbar__summary">
               <p>
                 {visibleQuestCount.toLocaleString()} of{' '}
-                {catalog?.questCount.toLocaleString() ?? 0} quests shown
+                {catalog.questCount.toLocaleString()} quests shown
               </p>
 
               <button
@@ -310,13 +512,31 @@ export function QuestLogPage() {
                   (quest) => completedQuestIdSet.has(quest.id),
                 ).length;
 
+                const visibleCollectionCount = groups.reduce(
+                  (total, { quests }) => total + quests.length,
+                  0,
+                );
+
+                const isCollectionExpanded =
+                  shouldAutoExpandMatches ||
+                  expandedCollectionIds.has(collection.id);
+
                 return (
-                  <section key={collection.id} className="quest-collection">
+                  <section
+                    key={collection.id}
+                    className={[
+                      'quest-collection',
+                      isCollectionExpanded ? 'quest-collection--expanded' : '',
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                  >
                     <header className="quest-collection__header">
                       <div>
                         <p className="quest-collection__eyebrow">
-                          {collection.expansionId?.toUpperCase() ??
-                            'Quest Collection'}
+                          {collection.expansionId
+                            ? formatExpansionName(collection.expansionId)
+                            : 'Quest Collection'}
 
                           {collection.patch && ` · Patch ${collection.patch}`}
                         </p>
@@ -333,111 +553,159 @@ export function QuestLogPage() {
                         </p>
                       </div>
 
-                      <span
-                        className={[
-                          'quest-collection__status',
-                          `quest-collection__status--${collection.verificationStatus}`,
-                        ].join(' ')}
-                      >
-                        {formatVerificationStatus(
-                          collection.verificationStatus,
+                      <div className="quest-collection__header-actions">
+                        <span
+                          className={[
+                            'quest-collection__status',
+                            `quest-collection__status--${collection.verificationStatus}`,
+                          ].join(' ')}
+                        >
+                          {formatVerificationStatus(
+                            collection.verificationStatus,
+                          )}
+                        </span>
+
+                        {visibleCollectionCount !== collectionQuests.length && (
+                          <span className="quest-collection__visible-count">
+                            {visibleCollectionCount} shown
+                          </span>
                         )}
-                      </span>
+
+                        <button
+                          className="quest-collection__collapse-button"
+                          type="button"
+                          aria-expanded={isCollectionExpanded}
+                          aria-label={
+                            isCollectionExpanded
+                              ? `Collapse ${collection.title}`
+                              : `Expand ${collection.title}`
+                          }
+                          title={
+                            shouldAutoExpandMatches
+                              ? 'Expanded automatically to show matching quests'
+                              : undefined
+                          }
+                          disabled={shouldAutoExpandMatches}
+                          onClick={() => {
+                            toggleCollection(collection.id);
+                          }}
+                        >
+                          <span
+                            className={[
+                              'quest-collection__chevron',
+                              isCollectionExpanded
+                                ? 'quest-collection__chevron--open'
+                                : '',
+                            ]
+                              .filter(Boolean)
+                              .join(' ')}
+                            aria-hidden="true"
+                          >
+                            ›
+                          </span>
+                        </button>
+                      </div>
                     </header>
 
-                    <div className="quest-groups">
-                      {groups.map(({ group, quests }) => {
-                        const groupKey = `${collection.id}:${group.id}`;
+                    {isCollectionExpanded && (
+                      <div className="quest-groups">
+                        {groups.map(({ group, quests }) => {
+                          const groupKey = `${collection.id}:${group.id}`;
 
-                        const isCollapsed = collapsedGroupIds.has(groupKey);
+                          const isGroupExpanded =
+                            shouldAutoExpandMatches ||
+                            expandedGroupIds.has(groupKey);
 
-                        const completedGroupCount = group.quests.filter(
-                          (quest) => completedQuestIdSet.has(quest.id),
-                        ).length;
+                          const completedGroupCount = group.quests.filter(
+                            (quest) => completedQuestIdSet.has(quest.id),
+                          ).length;
 
-                        return (
-                          <section key={group.id} className="quest-group">
-                            <button
-                              className="quest-group__toggle"
-                              type="button"
-                              aria-expanded={!isCollapsed}
-                              onClick={() => {
-                                toggleGroup(groupKey);
-                              }}
-                            >
-                              <span className="quest-group__title">
-                                <span className="quest-group__eyebrow">
-                                  Quest Range
+                          return (
+                            <section key={group.id} className="quest-group">
+                              <button
+                                className="quest-group__toggle"
+                                type="button"
+                                aria-expanded={isGroupExpanded}
+                                disabled={shouldAutoExpandMatches}
+                                title={
+                                  shouldAutoExpandMatches
+                                    ? 'Expanded automatically to show matching quests'
+                                    : undefined
+                                }
+                                onClick={() => {
+                                  toggleGroup(groupKey);
+                                }}
+                              >
+                                <span className="quest-group__title">
+                                  <span className="quest-group__eyebrow">
+                                    Quest Range
+                                  </span>
+
+                                  <strong>{group.title}</strong>
                                 </span>
 
-                                <strong>{group.title}</strong>
-                              </span>
+                                <span className="quest-group__summary">
+                                  <span>
+                                    {completedGroupCount} /{' '}
+                                    {group.quests.length} complete
+                                  </span>
 
-                              <span className="quest-group__summary">
-                                <span>
-                                  {completedGroupCount} / {group.quests.length}{' '}
-                                  complete
+                                  {quests.length !== group.quests.length && (
+                                    <span>{quests.length} shown</span>
+                                  )}
+
+                                  <span
+                                    className={[
+                                      'quest-group__chevron',
+                                      isGroupExpanded
+                                        ? 'quest-group__chevron--open'
+                                        : '',
+                                    ]
+                                      .filter(Boolean)
+                                      .join(' ')}
+                                    aria-hidden="true"
+                                  >
+                                    ›
+                                  </span>
                                 </span>
+                              </button>
 
-                                {quests.length !== group.quests.length && (
-                                  <span>{quests.length} shown</span>
-                                )}
-
-                                <span
-                                  className={[
-                                    'quest-group__chevron',
-                                    isCollapsed
-                                      ? ''
-                                      : 'quest-group__chevron--open',
-                                  ]
-                                    .filter(Boolean)
-                                    .join(' ')}
-                                  aria-hidden="true"
-                                >
-                                  ›
-                                </span>
-                              </span>
-                            </button>
-
-                            {!isCollapsed && (
-                              <div className="quest-group__entries">
-                                {quests.map((quest) => (
-                                  <QuestEntry
-                                    key={quest.id}
-                                    quest={quest}
-                                    isCompleted={completedQuestIdSet.has(
-                                      quest.id,
-                                    )}
-                                    isCurrent={
-                                      profile.currentQuestId === quest.id
-                                    }
-                                    isBookmarked={bookmarkedQuestIdSet.has(
-                                      quest.id,
-                                    )}
-                                    onToggleCompletion={() => {
-                                      toggleQuestCompletion(quest.id);
-                                    }}
-                                    onToggleCurrent={() => {
-                                      setCurrentQuest(
+                              {isGroupExpanded && (
+                                <div className="quest-group__entries">
+                                  {quests.map((quest) => (
+                                    <QuestEntry
+                                      key={quest.id}
+                                      quest={quest}
+                                      isCompleted={completedQuestIdSet.has(
+                                        quest.id,
+                                      )}
+                                      isCurrent={
                                         profile.currentQuestId === quest.id
-                                          ? null
-                                          : quest.id,
-                                      );
-                                    }}
-                                    onToggleBookmark={() => {
-                                      toggleQuestBookmark(quest.id);
-                                    }}
-                                    onOpenDetails={() => {
-                                      setSelectedQuestId(quest.id);
-                                    }}
-                                  />
-                                ))}
-                              </div>
-                            )}
-                          </section>
-                        );
-                      })}
-                    </div>
+                                      }
+                                      isBookmarked={bookmarkedQuestIdSet.has(
+                                        quest.id,
+                                      )}
+                                      onToggleCompletion={() => {
+                                        toggleQuestCompletion(quest.id);
+                                      }}
+                                      onToggleCurrent={() => {
+                                        handleSetCurrentQuest(quest.id);
+                                      }}
+                                      onToggleBookmark={() => {
+                                        toggleQuestBookmark(quest.id);
+                                      }}
+                                      onOpenDetails={() => {
+                                        setSelectedQuestId(quest.id);
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                              )}
+                            </section>
+                          );
+                        })}
+                      </div>
+                    )}
                   </section>
                 );
               })}
@@ -449,8 +717,8 @@ export function QuestLogPage() {
               <h2>No quests match these filters</h2>
 
               <p>
-                Try a broader search or clear the active category and progress
-                filters.
+                Try a broader search or clear the active expansion, patch,
+                category, and progress filters.
               </p>
 
               <button type="button" onClick={clearFilters}>
@@ -476,11 +744,7 @@ export function QuestLogPage() {
             toggleQuestCompletion(selectedQuest.id);
           }}
           onToggleCurrent={() => {
-            setCurrentQuest(
-              profile.currentQuestId === selectedQuest.id
-                ? null
-                : selectedQuest.id,
-            );
+            handleSetCurrentQuest(selectedQuest.id);
           }}
           onToggleBookmark={() => {
             toggleQuestBookmark(selectedQuest.id);

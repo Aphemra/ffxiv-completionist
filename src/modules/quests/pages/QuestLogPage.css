@@ -166,7 +166,7 @@
 
 .quest-toolbar__selects {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
   gap: 0.75rem;
 }
 
@@ -243,6 +243,9 @@
   gap: 1rem;
 
   padding: 1.25rem;
+}
+
+.quest-collection--expanded .quest-collection__header {
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -279,6 +282,71 @@
   color: var(--color-text-secondary);
   font-size: 0.7rem;
   font-weight: 700;
+}
+
+.quest-collection__header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  flex-shrink: 0;
+}
+
+.quest-collection__visible-count {
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.quest-collection__collapse-button {
+  width: 2rem;
+  height: 2rem;
+
+  display: grid;
+  place-items: center;
+  flex: 0 0 2rem;
+
+  padding: 0;
+
+  border: 1px solid var(--color-border);
+  border-radius: 0.4rem;
+
+  color: var(--color-accent-light);
+  background: var(--color-surface-raised);
+
+  cursor: pointer;
+}
+
+.quest-collection__collapse-button:hover:not(:disabled) {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-hover);
+}
+
+.quest-collection__collapse-button:focus-visible {
+  outline: 0.15rem solid var(--color-accent-light);
+  outline-offset: 0.15rem;
+}
+
+.quest-collection__collapse-button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+.quest-collection__chevron {
+  display: inline-block;
+
+  font-size: 1.15rem;
+  line-height: 1;
+
+  transform: rotate(0deg);
+
+  transition: transform 140ms ease;
+}
+
+.quest-collection__chevron--open {
+  transform: rotate(90deg);
 }
 
 .quest-collection__status {
@@ -346,8 +414,12 @@
   cursor: pointer;
 }
 
-.quest-group__toggle:hover {
-  background: rgb(255 255 255 / 2%);
+.quest-group__toggle:disabled {
+  cursor: default;
+}
+
+.quest-group__toggle:disabled:hover {
+  background: transparent;
 }
 
 .quest-group__toggle:focus-visible {
@@ -527,6 +599,17 @@
   color: var(--color-text-primary);
 }
 
+.quest-filter select:disabled {
+  opacity: 0.55;
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  cursor: not-allowed;
+}
+
+.quest-filter select:disabled:hover {
+  border-color: var(--color-border);
+}
+
 @keyframes quest-data-spin {
   to {
     transform: rotate(360deg);
@@ -543,12 +626,15 @@
   }
 
   .quest-collection__header {
-    display: block;
+    display: grid;
+  }
+
+  .quest-collection__header-actions {
+    justify-content: flex-start;
   }
 
   .quest-collection__status {
     display: inline-block;
-    margin-top: 0.8rem;
   }
 
   .quest-group__toggle {
@@ -566,7 +652,8 @@
     animation: none;
   }
 
-  .quest-group__chevron {
+  .quest-group__chevron,
+  .quest-collection__chevron {
     transition: none;
   }
 }
