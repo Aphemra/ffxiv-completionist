@@ -2,37 +2,31 @@ import * as z from 'zod';
 
 export const xivapiFieldsSchema = z.record(z.string(), z.unknown());
 
-export const xivapiRowSchema = z
-  .object({
-    row_id: z.number().int().min(0),
+export const xivapiRowSchema = z.looseObject({
+  row_id: z.number().int().min(0),
 
-    fields: xivapiFieldsSchema,
+  fields: xivapiFieldsSchema,
 
-    transient: xivapiFieldsSchema.optional(),
-  })
-  .passthrough();
+  transient: xivapiFieldsSchema.optional(),
+});
 
-export const xivapiSheetResponseSchema = z
-  .object({
-    schema: z.string().min(1),
-    version: z.string().min(1),
+export const xivapiSheetResponseSchema = z.looseObject({
+  schema: z.string().min(1),
+  version: z.string().min(1),
 
-    rows: z.array(xivapiRowSchema),
-  })
-  .passthrough();
+  rows: z.array(xivapiRowSchema),
+});
 
-export const xivapiRowResponseSchema = z
-  .object({
-    schema: z.string().min(1),
-    version: z.string().min(1),
+export const xivapiRowResponseSchema = z.looseObject({
+  schema: z.string().min(1),
+  version: z.string().min(1),
 
-    row_id: z.number().int().min(0),
+  row_id: z.number().int().min(0),
 
-    fields: xivapiFieldsSchema,
+  fields: xivapiFieldsSchema,
 
-    transient: xivapiFieldsSchema.optional(),
-  })
-  .passthrough();
+  transient: xivapiFieldsSchema.optional(),
+});
 
 export const xivapiPinsSchema = z.strictObject({
   version: z.string().min(1),

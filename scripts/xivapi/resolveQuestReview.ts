@@ -36,7 +36,7 @@ interface EnrichedReferences {
   unresolved: JsonObject[];
 }
 
-const questIndexEntrySchema = z.strictObject({
+const questIndexEntrySchema = z.looseObject({
   rowId: z.number().int().min(0),
   name: z.string().min(1),
 
@@ -47,26 +47,20 @@ const questIndexEntrySchema = z.strictObject({
   nextQuestRowIds: z.array(z.number().int().min(0)),
 });
 
-const questIndexFileSchema = z
-  .object({
-    indexVersion: z.literal(2),
+const questIndexFileSchema = z.looseObject({
+  indexVersion: z.number().int().min(2),
 
-    quests: z.array(questIndexEntrySchema),
-  })
-  .passthrough();
+  quests: z.array(questIndexEntrySchema),
+});
 
-const questReviewSchema = z
-  .object({
-    identity: z
-      .object({
-        rowId: z.number().int().min(0),
-        name: z.string().min(1),
-      })
-      .passthrough(),
+const questReviewSchema = z.looseObject({
+  identity: z.looseObject({
+    rowId: z.number().int().min(0),
+    name: z.string().min(1),
+  }),
 
-    questDraft: z.record(z.string(), z.unknown()),
-  })
-  .passthrough();
+  questDraft: z.record(z.string(), z.unknown()),
+});
 
 function asObject(value: unknown): JsonObject | undefined {
   if (typeof value !== 'object' || value === null || Array.isArray(value)) {

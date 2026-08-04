@@ -13,13 +13,17 @@ interface QuestIndexEntry {
   name: string;
 
   gameId?: string;
+  journalGenreName?: string;
+  journalCategoryName?: string;
+
+  isMainScenario: boolean;
 
   previousQuestRowIds: number[];
   nextQuestRowIds: number[];
 }
 
 interface QuestIndexFile {
-  indexVersion: 2;
+  indexVersion: 3;
 
   source: {
     provider: 'xivapi';
@@ -63,6 +67,10 @@ function readInteger(value: unknown): number | undefined {
     : undefined;
 }
 
+function relationFields(value: unknown): JsonObject | undefined {
+  return asObject(asObject(value)?.fields);
+}
+
 function relationRowId(value: unknown): number | undefined {
   const relation = asObject(value);
 
@@ -72,11 +80,29 @@ function relationRowId(value: unknown): number | undefined {
 }
 
 function parseRelationshipRowIds(value: unknown): number[] {
-  const rowIds = asArray(value)
-    .map(relationRowId)
-    .filter((rowId): rowId is number => rowId !== undefined);
+  const rowIds: number[] = [];
+
+  for (const rawRelation of asArray(value)) {
+    const rowId = relationRowId(rawRelation);
+
+    if (rowId === undefined) {
+      continue;
+    }
+
+    rowIds.push(rowId);
+  }
 
   return Array.from(new Set(rowIds));
+}
+
+function isMainScenarioCategory(
+  journalCategoryName: string | undefined,
+): boolean {
+  if (!journalCategoryName) {
+    return false;
+  }
+
+  return journalCategoryName.toLowerCase().includes('main scenario');
 }
 
 function populateReverseRelationships(quests: QuestIndexEntry[]): void {
@@ -119,6 +145,10 @@ async function main(): Promise<void> {
         fields: [
           'Name',
           'Id',
+
+          'JournalGenre.Name',
+          'JournalGenre.JournalCategory.Name',
+
           'PreviousQuest[].Name',
           'PreviousQuest[].Id',
         ].join(','),
@@ -146,9 +176,19 @@ async function main(): Promise<void> {
         continue;
       }
 
+      const journalGenreFields = relationFields(row.fields.JournalGenre);
+
+      //const journalGenreName = readString(journalGenreFields?.Name);
+
+      const journalCategoryName = readString(
+        relationFields(journalGenreFields?.JournalCategory)?.Name,
+      );
+
       const questEntry: QuestIndexEntry = {
         rowId: row.row_id,
         name,
+
+        isMainScenario: isMainScenarioCategory(journalCategoryName),
 
         previousQuestRowIds: parseRelationshipRowIds(row.fields.PreviousQuest),
 
@@ -159,6 +199,10 @@ async function main(): Promise<void> {
 
       if (gameId !== undefined) {
         questEntry.gameId = gameId;
+      }
+
+      if (journalCategoryName !== undefined) {
+        questEntry.journalCategoryName = journalCategoryName;
       }
 
       questEntries.push(questEntry);
@@ -179,8 +223,12 @@ async function main(): Promise<void> {
 
   questEntries.sort((left, right) => left.rowId - right.rowId);
 
+  const mainScenarioCount = questEntries.filter(
+    (quest) => quest.isMainScenario,
+  ).length;
+
   const output: QuestIndexFile = {
-    indexVersion: 2,
+    indexVersion: 3,
 
     source: {
       provider: 'xivapi',
@@ -199,10 +247,19 @@ async function main(): Promise<void> {
 
   await writeJsonFile(questIndexPath, output);
 
+  console.log('');
   console.log(
     ['Indexed', questEntries.length.toLocaleString(), 'named quest rows.'].join(
       ' ',
     ),
+  );
+
+  console.log(
+    [
+      'Classified',
+      mainScenarioCount.toLocaleString(),
+      'main-scenario quest rows.',
+    ].join(' '),
   );
 
   console.log('Calculated reverse next-quest relationships.');
