@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "startsAfterQuestIds": ["previous-collection-final-quest"],
+  "continuesToQuestIds": ["next-collection-first-quest"],
+  "groups": [
+    {
+      "id": "example-quest-range",
+      "title": "Levels 1-10",
+      "description": "Dummy quest range used as a reference template.",
+      "sortOrder": 1,
+      "levelRange": {
+        "minimum": 1,
+        "maximum": 10
+      },
+      "quests": [
+        {
+          "id": "example-quest",
+          "name": "Example Quest",
+          "level": 1,
+          "sortOrder": 1,
+          "start": {
+            "npcName": "Example NPC",
+            "zoneId": "example-zone",
+            "zoneName": "Example Zone",
+            "coordinates": {
+              "x": 10.0,
+              "y": 20.0
+            }
+          },
+          "availability": {
+            "startingCityIds": ["gridania"]
+          },
+          "prerequisiteQuestIds": ["example-prerequisite-quest"],
+          "nextQuestIds": ["example-next-quest"],
+          "requirements": [],
+          "rewards": {
+            "experience": 1000,
+            "gil": 500,
+            "items": [
+              {
+                "itemId": "example-item",
+                "itemName": "Example Item",
+                "quantity": 1
+              }
+            ]
+          },
+          "duties": [
+            {
+              "id": "example-duty",
+              "name": "Example Duty",
+              "type": "dungeon",
+              "level": 1,
+              "dutySupportAvailable": true
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "dungeon",
+              "targetId": "example-duty",
+              "name": "Example Duty"
+            },
+            {
+              "type": "feature",
+              "name": "Example Feature"
+            },
+            {
+              "type": "system",
+              "name": "Example System"
+            }
+          ],
+          "notes": []
+        }
+      ]
+    }
+  ]
+}
