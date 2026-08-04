@@ -51,7 +51,7 @@ export function createAvailableQuestCatalog(
   catalog: QuestCatalog,
   context: QuestAvailabilityContext,
 ): QuestCatalog {
-  const collections = catalog.collections
+  const filteredCollections = catalog.collections
     .filter((collection) => isQuestCollectionAvailable(collection, context))
     .map((collection) => {
       const groups = collection.groups
@@ -70,6 +70,34 @@ export function createAvailableQuestCatalog(
       };
     })
     .filter((collection) => collection.groups.length > 0);
+
+  const availableQuestIds = new Set(
+    filteredCollections.flatMap((collection) =>
+      collection.groups.flatMap((group) =>
+        group.quests.map((quest) => quest.id),
+      ),
+    ),
+  );
+
+  const collections = filteredCollections.map((collection) => ({
+    ...collection,
+
+    groups: collection.groups.map((group) => ({
+      ...group,
+
+      quests: group.quests.map((quest) => ({
+        ...quest,
+
+        prerequisiteQuestIds: quest.prerequisiteQuestIds?.filter((questId) =>
+          availableQuestIds.has(questId),
+        ),
+
+        nextQuestIds: quest.nextQuestIds?.filter((questId) =>
+          availableQuestIds.has(questId),
+        ),
+      })),
+    })),
+  }));
 
   const questsById = new Map<string, Quest>();
 

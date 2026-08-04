@@ -66,12 +66,28 @@ export const questAvailabilitySchema = z.strictObject({
 
 export const itemQualitySchema = z.enum(['normal', 'high-quality', 'either']);
 
-export const questStartSchema = z.strictObject({
-  npcName: nonEmptyStringSchema,
-  zoneId: gameDataIdSchema,
-  zoneName: nonEmptyStringSchema,
-  coordinates: coordinatesSchema.optional(),
-});
+export const questStartSchema = z
+  .strictObject({
+    npcName: nonEmptyStringSchema,
+    zoneId: gameDataIdSchema.optional(),
+    zoneName: nonEmptyStringSchema.optional(),
+    coordinates: coordinatesSchema.optional(),
+  })
+  .superRefine((start, context) => {
+    const hasZoneId = start.zoneId !== undefined;
+    const hasZoneName = start.zoneName !== undefined;
+
+    if (hasZoneId === hasZoneName) {
+      return;
+    }
+
+    context.addIssue({
+      code: 'custom',
+      path: hasZoneId ? ['zoneName'] : ['zoneId'],
+      message:
+        'A quest starting location must provide both zoneId and zoneName, or neither.',
+    });
+  });
 
 const classJobLevelRequirementSchema = z.strictObject({
   type: z.literal('class-job-level'),

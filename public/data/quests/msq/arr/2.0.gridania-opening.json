@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "id": "arr-2-0-gridania-opening",
+  "title": "A Realm Reborn — Gridania Opening",
+  "description": "The Gridanian opening route for characters who begin as an Archer, Lancer, or Conjurer.",
+  "category": "msq",
+  "expansionId": "arr",
+  "patch": "2.0",
+  "availability": {
+    "startingCityIds": ["gridania"]
+  },
+  "sortOrder": 100,
+  "verificationStatus": "partial",
+  "continuesToQuestIds": ["arr-msq-its-probably-pirates"],
+  "groups": [
+    {
+      "id": "gridania-levels-1-9",
+      "title": "Levels 1-9",
+      "sortOrder": 1,
+      "levelRange": {
+        "minimum": 1,
+        "maximum": 9
+      },
+      "quests": [
+        {
+          "id": "arr-msq-gridania-close-to-home",
+          "name": "Close to Home",
+          "level": 1,
+          "start": { "npcName": "Mother Miounne" },
+          "unlocks": [{ "type": "system", "name": "Return" }]
+        },
+        {
+          "id": "arr-msq-to-the-bannock",
+          "name": "To the Bannock",
+          "level": 4,
+          "start": { "npcName": "Mother Miounne" }
+        },
+        {
+          "id": "arr-msq-passing-muster",
+          "name": "Passing Muster",
+          "level": 5,
+          "start": { "npcName": "Galfrid" }
+        },
+        {
+          "id": "arr-msq-chasing-shadows",
+          "name": "Chasing Shadows",
+          "level": 5,
+          "start": { "npcName": "Galfrid" }
+        },
+        {
+          "id": "arr-msq-eggs-over-queasy",
+          "name": "Eggs over Queasy",
+          "level": 7,
+          "start": { "npcName": "Galfrid" }
+        },
+        {
+          "id": "arr-msq-surveying-the-damage",
+          "name": "Surveying the Damage",
+          "level": 8,
+          "start": { "npcName": "Monranguin" }
+        },
+        {
+          "id": "arr-msq-a-soldiers-breakfast",
+          "name": "A Soldier's Breakfast",
+          "level": 9,
+          "start": { "npcName": "Pauline" }
+        },
+        {
+          "id": "arr-msq-spirithold-broken",
+          "name": "Spirithold Broken",
+          "level": 9,
+          "start": { "npcName": "Galfrid" },
+          "unlocks": [
+            { "type": "feature", "name": "Inn Rooms" },
+            { "type": "system", "name": "Guildleves" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gridania-levels-10-15",
+      "title": "Levels 10-15",
+      "sortOrder": 2,
+      "levelRange": {
+        "minimum": 10,
+        "maximum": 15
+      },
+      "quests": [
+        {
+          "id": "arr-msq-on-to-bentbranch",
+          "name": "On to Bentbranch",
+          "level": 10,
+          "start": { "npcName": "Mother Miounne" }
+        },
+        {
+          "id": "arr-msq-you-shall-not-trespass",
+          "name": "You Shall Not Trespass",
+          "level": 10,
+          "start": { "npcName": "Keitha" }
+        },
+        {
+          "id": "arr-msq-dont-look-down",
+          "name": "Don't Look Down",
+          "level": 11,
+          "start": { "npcName": "Osha Jaab" }
+        },
+        {
+          "id": "arr-msq-in-the-grim-darkness-of-the-forest",
+          "name": "In the Grim Darkness of the Forest",
+          "level": 11,
+          "start": { "npcName": "Theodore" }
+        },
+        {
+          "id": "arr-msq-threat-level-elevated",
+          "name": "Threat Level Elevated",
+          "level": 11,
+          "start": { "npcName": "Roseline" }
+        },
+        {
+          "id": "arr-msq-migrant-marauders",
+          "name": "Migrant Marauders",
+          "level": 12,
+          "start": { "npcName": "Eylgar" }
+        },
+        {
+          "id": "arr-msq-a-hearer-is-often-late",
+          "name": "A Hearer Is Often Late",
+          "level": 13,
+          "start": { "npcName": "Lothaire" }
+        },
+        {
+          "id": "arr-msq-salvaging-the-scene",
+          "name": "Salvaging the Scene",
+          "level": 13,
+          "start": { "npcName": "Armelle" }
+        },
+        {
+          "id": "arr-msq-leias-legacy",
+          "name": "Leia's Legacy",
+          "level": 14,
+          "start": { "npcName": "Luquelot" }
+        },
+        {
+          "id": "arr-msq-dread-is-in-the-air",
+          "name": "Dread Is in the Air",
+          "level": 14,
+          "start": { "npcName": "Luquelot" }
+        },
+        {
+          "id": "arr-msq-to-guard-a-guardian",
+          "name": "To Guard a Guardian",
+          "level": 14,
+          "start": { "npcName": "Mother Miounne" }
+        },
+        {
+          "id": "arr-msq-festive-endeavors",
+          "name": "Festive Endeavors",
+          "level": 14,
+          "start": { "npcName": "Lewin" }
+        },
+        {
+          "id": "arr-msq-renewing-the-covenant",
+          "name": "Renewing the Covenant",
+          "level": 14,
+          "start": { "npcName": "Mother Miounne" }
+        },
+        {
+          "id": "arr-msq-the-gridanian-envoy",
+          "name": "The Gridanian Envoy",
+          "level": 15,
+          "start": { "npcName": "Kan-E-Senna" },
+          "rewards": {
+            "items": [
+              {
+                "itemId": "item-wind-up-airship",
+                "itemName": "Wind-up Airship",
+                "quantity": 1
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "system",
+              "name": "Airship Travel"
+            }
+          ]
+        },
+        {
+          "id": "arr-msq-gridania-call-of-the-sea",
+          "name": "Call of the Sea",
+          "level": 15,
+          "start": { "npcName": "Bartholomew" }
+        }
+      ]
+    }
+  ]
+}

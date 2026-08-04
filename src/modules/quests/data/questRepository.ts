@@ -1,8 +1,9 @@
 import { DataLoadError } from '../../../core/data/DataLoadError';
 import { loadJson } from '../../../core/data/loadJson';
 
+import { questCollectionFileSchema } from './questCollectionFileSchemas';
+
 import {
-  questCollectionSchema,
   questManifestSchema,
   type Quest,
   type QuestCollection,
@@ -45,7 +46,10 @@ export class JsonQuestRepository implements QuestRepository {
 
     const collections = await Promise.all(
       enabledEntries.map(async (entry) => {
-        const collection = await loadJson(entry.path, questCollectionSchema);
+        const collection = await loadJson(
+          entry.path,
+          questCollectionFileSchema,
+        );
 
         if (collection.id !== entry.id) {
           throw new DataLoadError(

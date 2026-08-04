@@ -4,8 +4,9 @@ import { fileURLToPath } from 'node:url';
 
 import * as z from 'zod';
 
+import { questCollectionFileSchema } from '../src/modules/quests/data/questCollectionFileSchemas';
+
 import {
-  questCollectionSchema,
   questManifestSchema,
   type Quest,
   type QuestCollection,
@@ -517,7 +518,7 @@ async function main(): Promise<void> {
   for (const entry of manifest.collections) {
     const collection = await readValidatedJson(
       entry.path,
-      questCollectionSchema,
+      questCollectionFileSchema,
     );
 
     if (!collection) {

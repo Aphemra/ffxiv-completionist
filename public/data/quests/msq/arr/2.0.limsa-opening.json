@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "id": "arr-2-0-limsa-opening",
+  "title": "A Realm Reborn — Limsa Lominsa Opening",
+  "description": "The Lominsan opening route for characters who begin as a Marauder or Arcanist.",
+  "category": "msq",
+  "expansionId": "arr",
+  "patch": "2.0",
+  "availability": {
+    "startingCityIds": ["limsa-lominsa"]
+  },
+  "sortOrder": 110,
+  "verificationStatus": "partial",
+  "continuesToQuestIds": ["arr-msq-its-probably-pirates"],
+  "groups": [
+    {
+      "id": "limsa-levels-1-9",
+      "title": "Levels 1-9",
+      "sortOrder": 1,
+      "levelRange": {
+        "minimum": 1,
+        "maximum": 9
+      },
+      "quests": [
+        {
+          "id": "arr-msq-limsa-close-to-home",
+          "name": "Close to Home",
+          "level": 1,
+          "start": { "npcName": "Baderon" },
+          "unlocks": [{ "type": "system", "name": "Return" }]
+        },
+        {
+          "id": "arr-msq-on-to-summerford",
+          "name": "On to Summerford",
+          "level": 4,
+          "start": { "npcName": "Baderon" }
+        },
+        {
+          "id": "arr-msq-dressed-to-call",
+          "name": "Dressed to Call",
+          "level": 5,
+          "start": { "npcName": "Staelwyrn" }
+        },
+        {
+          "id": "arr-msq-lurkers-in-the-grotto",
+          "name": "Lurkers in the Grotto",
+          "level": 5,
+          "start": { "npcName": "Staelwyrn" }
+        },
+        {
+          "id": "arr-msq-washed-up",
+          "name": "Washed Up",
+          "level": 7,
+          "start": { "npcName": "Staelwyrn" }
+        },
+        {
+          "id": "arr-msq-double-dealing",
+          "name": "Double Dealing",
+          "level": 8,
+          "start": { "npcName": "Staelwyrn" }
+        },
+        {
+          "id": "arr-msq-loam-maintenance",
+          "name": "Loam Maintenance",
+          "level": 9,
+          "start": { "npcName": "Gurcant" }
+        },
+        {
+          "id": "arr-msq-plowshares-to-swords",
+          "name": "Plowshares to Swords",
+          "level": 9,
+          "start": { "npcName": "Pfrewahl" }
+        },
+        {
+          "id": "arr-msq-just-deserts",
+          "name": "Just Deserts",
+          "level": 9,
+          "start": { "npcName": "Staelwyrn" },
+          "unlocks": [
+            { "type": "feature", "name": "Inn Rooms" },
+            { "type": "system", "name": "Guildleves" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limsa-levels-10-15",
+      "title": "Levels 10-15",
+      "sortOrder": 2,
+      "levelRange": {
+        "minimum": 10,
+        "maximum": 15
+      },
+      "quests": [
+        {
+          "id": "arr-msq-sky-high",
+          "name": "Sky-high",
+          "level": 10,
+          "start": { "npcName": "Baderon" }
+        },
+        {
+          "id": "arr-msq-thanks-a-million",
+          "name": "Thanks a Million",
+          "level": 11,
+          "start": { "npcName": "Wyrkrhit" }
+        },
+        {
+          "id": "arr-msq-relighting-the-torch",
+          "name": "Relighting the Torch",
+          "level": 11,
+          "start": { "npcName": "Fraeloef" }
+        },
+        {
+          "id": "arr-msq-on-to-the-drydocks",
+          "name": "On to the Drydocks",
+          "level": 11,
+          "start": { "npcName": "H'naanza" }
+        },
+        {
+          "id": "arr-msq-without-a-doubt",
+          "name": "Without a Doubt",
+          "level": 12,
+          "start": { "npcName": "Ahtbyrm" }
+        },
+        {
+          "id": "arr-msq-righting-the-shipwright",
+          "name": "Righting the Shipwright",
+          "level": 12,
+          "start": { "npcName": "Haldbroda" }
+        },
+        {
+          "id": "arr-msq-do-angry-pirates-dream",
+          "name": "Do Angry Pirates Dream",
+          "level": 13,
+          "start": { "npcName": "Ahtbyrm" }
+        },
+        {
+          "id": "arr-msq-victory-in-peril",
+          "name": "Victory in Peril",
+          "level": 14,
+          "start": { "npcName": "Ghimthota" }
+        },
+        {
+          "id": "arr-msq-men-of-the-blue-tattoos",
+          "name": "Men of the Blue Tattoos",
+          "level": 14,
+          "start": { "npcName": "Ghimthota" }
+        },
+        {
+          "id": "arr-msq-feint-and-strike",
+          "name": "Feint and Strike",
+          "level": 14,
+          "start": { "npcName": "Baderon" }
+        },
+        {
+          "id": "arr-msq-high-society",
+          "name": "High Society",
+          "level": 14,
+          "start": { "npcName": "Reyner" }
+        },
+        {
+          "id": "arr-msq-a-mizzenmast-repast",
+          "name": "A Mizzenmast Repast",
+          "level": 14,
+          "start": { "npcName": "Baderon" }
+        },
+        {
+          "id": "arr-msq-the-lominsan-envoy",
+          "name": "The Lominsan Envoy",
+          "level": 15,
+          "start": { "npcName": "Merlwyb" },
+          "rewards": {
+            "items": [
+              {
+                "itemId": "item-wind-up-airship",
+                "itemName": "Wind-up Airship",
+                "quantity": 1
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "system",
+              "name": "Airship Travel"
+            }
+          ]
+        },
+        {
+          "id": "arr-msq-limsa-call-of-the-sea",
+          "name": "Call of the Sea",
+          "level": 15,
+          "start": { "npcName": "Bartholomew" }
+        }
+      ]
+    }
+  ]
+}

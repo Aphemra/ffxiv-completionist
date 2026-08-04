@@ -257,10 +257,12 @@ export function QuestDetailsDrawer({
                   <dd>{quest.start.npcName}</dd>
                 </div>
 
-                <div>
-                  <dt>Zone</dt>
-                  <dd>{quest.start.zoneName}</dd>
-                </div>
+                {quest.start.zoneName && (
+                  <div>
+                    <dt>Zone</dt>
+                    <dd>{quest.start.zoneName}</dd>
+                  </div>
+                )}
 
                 {quest.start.coordinates && (
                   <div>
