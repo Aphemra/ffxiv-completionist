@@ -93,20 +93,17 @@
   border-color: var(--color-accent);
 }
 
-.quest-entry__check input:focus-visible
-  + .quest-entry__custom-check {
+.quest-entry__check input:focus-visible + .quest-entry__custom-check {
   outline: 0.15rem solid var(--color-accent-light);
   outline-offset: 0.15rem;
 }
 
-.quest-entry__check input:checked
-  + .quest-entry__custom-check {
+.quest-entry__check input:checked + .quest-entry__custom-check {
   border-color: var(--color-accent);
   background: var(--color-accent-light);
 }
 
-.quest-entry__check input:checked
-  + .quest-entry__custom-check::after {
+.quest-entry__check input:checked + .quest-entry__custom-check::after {
   opacity: 1;
 }
 

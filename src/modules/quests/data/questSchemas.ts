@@ -7,10 +7,7 @@ export const gameDataIdSchema = z
   .trim()
   .min(1)
   .max(120)
-  .regex(
-    /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
-    'IDs must use lowercase kebab-case.',
-  );
+  .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'IDs must use lowercase kebab-case.');
 
 export const nonEmptyStringSchema = z.string().trim().min(1);
 
@@ -61,22 +58,13 @@ export const questAvailabilitySchema = z.strictObject({
   startingCityIds: z
     .array(startingCityIdSchema)
     .min(1)
-    .refine(
-      (cityIds) =>
-        new Set(cityIds).size === cityIds.length,
-      {
-        message:
-          'Starting-city restrictions cannot contain duplicate cities.',
-      },
-    )
+    .refine((cityIds) => new Set(cityIds).size === cityIds.length, {
+      message: 'Starting-city restrictions cannot contain duplicate cities.',
+    })
     .optional(),
 });
 
-export const itemQualitySchema = z.enum([
-  'normal',
-  'high-quality',
-  'either',
-]);
+export const itemQualitySchema = z.enum(['normal', 'high-quality', 'either']);
 
 export const questStartSchema = z.strictObject({
   npcName: nonEmptyStringSchema,
@@ -213,9 +201,9 @@ export const questSchema = z.strictObject({
   sortOrder: sortOrderSchema,
 
   start: questStartSchema.optional(),
-availability: questAvailabilitySchema.optional(),
+  availability: questAvailabilitySchema.optional(),
 
-prerequisiteQuestIds: z.array(gameDataIdSchema).optional(),
+  prerequisiteQuestIds: z.array(gameDataIdSchema).optional(),
   nextQuestIds: z.array(gameDataIdSchema).optional(),
 
   requirements: z.array(questRequirementSchema).optional(),
@@ -247,9 +235,9 @@ export const questCollectionSchema = z
     patch: patchVersionSchema.optional(),
     classJobId: gameDataIdSchema.optional(),
 
-availability: questAvailabilitySchema.optional(),
+    availability: questAvailabilitySchema.optional(),
 
-sortOrder: sortOrderSchema,
+    sortOrder: sortOrderSchema,
     verificationStatus: questVerificationStatusSchema,
 
     groups: z.array(questGroupSchema).min(1),

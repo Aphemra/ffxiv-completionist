@@ -1,8 +1,5 @@
 import { create } from 'zustand';
-import {
-  createJSONStorage,
-  persist,
-} from 'zustand/middleware';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
 import {
   persistedProgressStateSchema,
@@ -24,9 +21,9 @@ function createInitialProfile(): PlayerProgress {
 
     profileId: 'local-profile',
     characterName: '',
-startingCity: null,
-dataCenter: '',
-world: '',
+    startingCity: null,
+    dataCenter: '',
+    world: '',
 
     completedQuestIds: [],
     currentQuestId: null,
@@ -54,10 +51,7 @@ interface ProgressActions {
 
   toggleQuestCompletion: (questId: string) => void;
 
-  setQuestCompletion: (
-    questId: string,
-    completed: boolean,
-  ) => void;
+  setQuestCompletion: (questId: string, completed: boolean) => void;
 
   setCurrentQuest: (questId: string | null) => void;
 
@@ -81,18 +75,16 @@ export const useProgressStore = create<ProgressStore>()(
         set((state) => ({
           profile: updateProfile(state.profile, {
             characterName: metadata.characterName.trim(),
-startingCity: metadata.startingCity,
-dataCenter: metadata.dataCenter.trim(),
-world: metadata.world.trim(),
+            startingCity: metadata.startingCity,
+            dataCenter: metadata.dataCenter.trim(),
+            world: metadata.world.trim(),
           }),
         }));
       },
 
       toggleQuestCompletion: (questId) => {
         set((state) => {
-          const completedQuestIds = new Set(
-            state.profile.completedQuestIds,
-          );
+          const completedQuestIds = new Set(state.profile.completedQuestIds);
 
           if (completedQuestIds.has(questId)) {
             completedQuestIds.delete(questId);
@@ -110,9 +102,7 @@ world: metadata.world.trim(),
 
       setQuestCompletion: (questId, completed) => {
         set((state) => {
-          const completedQuestIds = new Set(
-            state.profile.completedQuestIds,
-          );
+          const completedQuestIds = new Set(state.profile.completedQuestIds);
 
           if (completed) {
             completedQuestIds.add(questId);
@@ -138,9 +128,7 @@ world: metadata.world.trim(),
 
       toggleQuestBookmark: (questId) => {
         set((state) => {
-          const bookmarkedQuestIds = new Set(
-            state.profile.bookmarkedQuestIds,
-          );
+          const bookmarkedQuestIds = new Set(state.profile.bookmarkedQuestIds);
 
           if (bookmarkedQuestIds.has(questId)) {
             bookmarkedQuestIds.delete(questId);
@@ -150,9 +138,7 @@ world: metadata.world.trim(),
 
           return {
             profile: updateProfile(state.profile, {
-              bookmarkedQuestIds: Array.from(
-                bookmarkedQuestIds,
-              ),
+              bookmarkedQuestIds: Array.from(bookmarkedQuestIds),
             }),
           };
         });
@@ -202,10 +188,7 @@ world: metadata.world.trim(),
       }),
 
       merge: (persistedState, currentState) => {
-        const result =
-          persistedProgressStateSchema.safeParse(
-            persistedState,
-          );
+        const result = persistedProgressStateSchema.safeParse(persistedState);
 
         if (!result.success) {
           console.warn(

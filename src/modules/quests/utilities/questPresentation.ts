@@ -5,11 +5,7 @@ import type {
 } from '../data/questSchemas';
 
 export type QuestStatusFilter =
-  | 'all'
-  | 'incomplete'
-  | 'completed'
-  | 'current'
-  | 'bookmarked';
+  'all' | 'incomplete' | 'completed' | 'current' | 'bookmarked';
 
 interface QuestCategoryOption {
   value: QuestCategory;
@@ -85,19 +81,14 @@ export const QUEST_STATUS_OPTIONS = [
   label: string;
 }>;
 
-export function formatQuestCategory(
-  category: QuestCategory,
-): string {
+export function formatQuestCategory(category: QuestCategory): string {
   return (
-    QUEST_CATEGORY_OPTIONS.find(
-      (option) => option.value === category,
-    )?.label ?? category
+    QUEST_CATEGORY_OPTIONS.find((option) => option.value === category)?.label ??
+    category
   );
 }
 
-function getRequirementSearchValues(
-  requirement: QuestRequirement,
-): string[] {
+function getRequirementSearchValues(requirement: QuestRequirement): string[] {
   switch (requirement.type) {
     case 'class-job-level':
       return [
@@ -149,10 +140,7 @@ function getRequirementSearchValues(
   }
 }
 
-export function questMatchesSearch(
-  quest: Quest,
-  query: string,
-): boolean {
+export function questMatchesSearch(quest: Quest, query: string): boolean {
   const normalizedQuery = query.trim().toLowerCase();
 
   if (normalizedQuery.length === 0) {
@@ -172,9 +160,7 @@ export function questMatchesSearch(
     quest.start?.zoneId ?? '',
     quest.start?.zoneName ?? '',
 
-    ...(quest.requirements?.flatMap(
-      getRequirementSearchValues,
-    ) ?? []),
+    ...(quest.requirements?.flatMap(getRequirementSearchValues) ?? []),
 
     ...(quest.rewards?.items?.flatMap((item) => [
       item.itemId,
@@ -200,10 +186,7 @@ export function questMatchesSearch(
     ...(quest.notes?.map((note) => note.text) ?? []),
   ];
 
-  return searchValues
-    .join(' ')
-    .toLowerCase()
-    .includes(normalizedQuery);
+  return searchValues.join(' ').toLowerCase().includes(normalizedQuery);
 }
 
 interface QuestProgressState {

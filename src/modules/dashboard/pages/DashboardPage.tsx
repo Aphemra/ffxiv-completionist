@@ -1,8 +1,6 @@
 import { useProgressStore } from '../../../core/progress/progressStore';
 import { useQuestCatalog } from '../../quests/hooks/useQuestCatalog';
-import {
-  createAvailableQuestCatalog,
-} from '../../quests/utilities/questAvailability';
+import { createAvailableQuestCatalog } from '../../quests/utilities/questAvailability';
 
 import './DashboardPage.css';
 
@@ -19,10 +17,7 @@ function ProgressCard({
   total,
   description,
 }: ProgressCardProps) {
-  const percentage =
-    total > 0
-      ? Math.round((completed / total) * 100)
-      : 0;
+  const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
 
   return (
     <article className="progress-card">
@@ -35,8 +30,7 @@ function ProgressCard({
       </div>
 
       <p className="progress-card__count">
-        {completed.toLocaleString()} /{' '}
-        {total.toLocaleString()}
+        {completed.toLocaleString()} / {total.toLocaleString()}
       </p>
 
       <div
@@ -53,9 +47,7 @@ function ProgressCard({
         />
       </div>
 
-      <p className="progress-card__description">
-        {description}
-      </p>
+      <p className="progress-card__description">{description}</p>
     </article>
   );
 }
@@ -63,79 +55,55 @@ function ProgressCard({
 export function DashboardPage() {
   const questCatalogState = useQuestCatalog();
 
-  const profile = useProgressStore(
-    (state) => state.profile,
-  );
+  const profile = useProgressStore((state) => state.profile);
 
-  const completedQuestIdSet = new Set(
-    profile.completedQuestIds,
-  );
+  const completedQuestIdSet = new Set(profile.completedQuestIds);
 
-const availableQuestCatalog =
-  questCatalogState.status === 'success'
-    ? createAvailableQuestCatalog(
-        questCatalogState.catalog,
-        {
+  const availableQuestCatalog =
+    questCatalogState.status === 'success'
+      ? createAvailableQuestCatalog(questCatalogState.catalog, {
           startingCity: profile.startingCity,
-        },
-      )
-    : null;
+        })
+      : null;
 
-const quests = availableQuestCatalog
-  ? Array.from(
-      availableQuestCatalog.questsById.values(),
-    )
-  : [];
+  const quests = availableQuestCatalog
+    ? Array.from(availableQuestCatalog.questsById.values())
+    : [];
 
-  const mainScenarioQuests = quests.filter(
-    (quest) => quest.category === 'msq',
-  );
+  const mainScenarioQuests = quests.filter((quest) => quest.category === 'msq');
 
   const classAndJobQuests = quests.filter((quest) =>
-    [
-      'class',
-      'job',
-      'role',
-      'crafting',
-      'gathering',
-    ].includes(quest.category),
+    ['class', 'job', 'role', 'crafting', 'gathering'].includes(quest.category),
   );
 
   const completedQuestCount = quests.filter((quest) =>
     completedQuestIdSet.has(quest.id),
   ).length;
 
-  const completedMainScenarioCount =
-    mainScenarioQuests.filter((quest) =>
-      completedQuestIdSet.has(quest.id),
-    ).length;
+  const completedMainScenarioCount = mainScenarioQuests.filter((quest) =>
+    completedQuestIdSet.has(quest.id),
+  ).length;
 
-  const completedClassAndJobCount =
-    classAndJobQuests.filter((quest) =>
-      completedQuestIdSet.has(quest.id),
-    ).length;
+  const completedClassAndJobCount = classAndJobQuests.filter((quest) =>
+    completedQuestIdSet.has(quest.id),
+  ).length;
 
-const currentQuest =
-  profile.currentQuestId &&
-  availableQuestCatalog
-    ? availableQuestCatalog.questsById.get(
-        profile.currentQuestId,
-      )
-    : undefined;
+  const currentQuest =
+    profile.currentQuestId && availableQuestCatalog
+      ? availableQuestCatalog.questsById.get(profile.currentQuestId)
+      : undefined;
 
   return (
     <div className="dashboard-page">
       <header className="page-header">
         <div>
-          <p className="page-header__eyebrow">
-            Character Overview
-          </p>
+          <p className="page-header__eyebrow">Character Overview</p>
 
           <h1>Completion Dashboard</h1>
 
           <p className="page-header__description">
-            Track your progression across quests and future
-            completionist modules.
+            Track your progression across quests and future completionist
+            modules.
           </p>
         </div>
 
@@ -145,10 +113,7 @@ const currentQuest =
         </div>
       </header>
 
-      <section
-        className="dashboard-progress"
-        aria-label="Completion summaries"
-      >
+      <section className="dashboard-progress" aria-label="Completion summaries">
         <ProgressCard
           title="Overall Progress"
           completed={completedQuestCount}
@@ -175,9 +140,7 @@ const currentQuest =
         <section className="dashboard-panel">
           <header className="dashboard-panel__header">
             <div>
-              <p className="dashboard-panel__eyebrow">
-                Current Journey
-              </p>
+              <p className="dashboard-panel__eyebrow">Current Journey</p>
 
               <h2>Where you left off</h2>
             </div>
@@ -186,45 +149,35 @@ const currentQuest =
           {currentQuest ? (
             <div className="dashboard-current-quest">
               <p className="dashboard-current-quest__eyebrow">
-                {currentQuest.expansionId.toUpperCase()} ·
-                Patch {currentQuest.patch}
+                {currentQuest.expansionId.toUpperCase()} · Patch{' '}
+                {currentQuest.patch}
               </p>
 
               <h3>{currentQuest.name}</h3>
 
               <p className="dashboard-current-quest__level">
-                Level {currentQuest.level}{' '}
-                {currentQuest.category.toUpperCase()}
+                Level {currentQuest.level} {currentQuest.category.toUpperCase()}
               </p>
 
-              {currentQuest.duties &&
-                currentQuest.duties.length > 0 && (
-                  <div className="dashboard-current-quest__details">
-                    <p>Upcoming duty</p>
+              {currentQuest.duties && currentQuest.duties.length > 0 && (
+                <div className="dashboard-current-quest__details">
+                  <p>Upcoming duty</p>
 
-                    {currentQuest.duties.map((duty) => (
-                      <strong key={duty.id}>
-                        {duty.name}
-                      </strong>
-                    ))}
-                  </div>
-                )}
+                  {currentQuest.duties.map((duty) => (
+                    <strong key={duty.id}>{duty.name}</strong>
+                  ))}
+                </div>
+              )}
             </div>
           ) : (
             <div className="dashboard-empty-state">
-              <div
-                className="dashboard-empty-state__symbol"
-                aria-hidden="true"
-              >
+              <div className="dashboard-empty-state__symbol" aria-hidden="true">
                 ◇
               </div>
 
               <h3>No current quest selected</h3>
 
-              <p>
-                Select “Set current” beside a quest to display
-                it here.
-              </p>
+              <p>Select “Set current” beside a quest to display it here.</p>
             </div>
           )}
         </section>
@@ -232,9 +185,7 @@ const currentQuest =
         <section className="dashboard-panel">
           <header className="dashboard-panel__header">
             <div>
-              <p className="dashboard-panel__eyebrow">
-                Modules
-              </p>
+              <p className="dashboard-panel__eyebrow">Modules</p>
 
               <h2>Tracker status</h2>
             </div>
@@ -247,8 +198,7 @@ const currentQuest =
 
                 <p>
                   {completedQuestCount.toLocaleString()} of{' '}
-                  {quests.length.toLocaleString()} loaded
-                  quests complete.
+                  {quests.length.toLocaleString()} loaded quests complete.
                 </p>
               </div>
 
@@ -261,15 +211,10 @@ const currentQuest =
               <div>
                 <h3>Additional Modules</h3>
 
-                <p>
-                  Fishing, duties, mounts, and other
-                  trackers.
-                </p>
+                <p>Fishing, duties, mounts, and other trackers.</p>
               </div>
 
-              <span className="module-status__badge">
-                Future
-              </span>
+              <span className="module-status__badge">Future</span>
             </div>
           </div>
         </section>

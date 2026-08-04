@@ -1,17 +1,8 @@
-import {
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import type {
-  Quest,
-  QuestRequirement,
-} from '../data/questSchemas';
+import type { Quest, QuestRequirement } from '../data/questSchemas';
 
-import {
-  formatQuestCategory,
-} from '../utilities/questPresentation';
+import { formatQuestCategory } from '../utilities/questPresentation';
 
 import './QuestDetailsDrawer.css';
 
@@ -32,9 +23,7 @@ interface QuestDetailsDrawerProps {
   onSaveNote: (note: string) => void;
 }
 
-function formatQuality(
-  quality: 'normal' | 'high-quality' | 'either',
-): string {
+function formatQuality(quality: 'normal' | 'high-quality' | 'either'): string {
   switch (quality) {
     case 'normal':
       return 'Normal quality';
@@ -47,9 +36,7 @@ function formatQuality(
   }
 }
 
-function formatRequirement(
-  requirement: QuestRequirement,
-): {
+function formatRequirement(requirement: QuestRequirement): {
   title: string;
   detail: string;
 } {
@@ -57,18 +44,13 @@ function formatRequirement(
     case 'class-job-level':
       return {
         title: `${requirement.classJobName} level ${requirement.level}`,
-        detail:
-          requirement.notes ??
-          'Class or job level requirement.',
+        detail: requirement.notes ?? 'Class or job level requirement.',
       };
 
     case 'item':
       return {
         title: `${requirement.quantity}× ${requirement.itemName}`,
-        detail: [
-          formatQuality(requirement.quality),
-          requirement.notes,
-        ]
+        detail: [formatQuality(requirement.quality), requirement.notes]
           .filter(Boolean)
           .join(' · '),
       };
@@ -106,9 +88,7 @@ function formatRequirement(
     case 'feature':
       return {
         title: requirement.name,
-        detail:
-          requirement.notes ??
-          'Required game feature or system.',
+        detail: requirement.notes ?? 'Required game feature or system.',
       };
   }
 }
@@ -133,14 +113,11 @@ export function QuestDetailsDrawer({
   onToggleBookmark,
   onSaveNote,
 }: QuestDetailsDrawerProps) {
-  const closeButtonRef =
-    useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  const [noteDraft, setNoteDraft] =
-    useState(personalNote);
+  const [noteDraft, setNoteDraft] = useState(personalNote);
 
-  const [noteMessage, setNoteMessage] =
-    useState('');
+  const [noteMessage, setNoteMessage] = useState('');
 
   useEffect(() => {
     setNoteDraft(personalNote);
@@ -148,8 +125,7 @@ export function QuestDetailsDrawer({
   }, [personalNote, quest.id]);
 
   useEffect(() => {
-    const previousOverflow =
-      document.body.style.overflow;
+    const previousOverflow = document.body.style.overflow;
 
     document.body.style.overflow = 'hidden';
     closeButtonRef.current?.focus();
@@ -163,13 +139,9 @@ export function QuestDetailsDrawer({
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.body.style.overflow =
-        previousOverflow;
+      document.body.style.overflow = previousOverflow;
 
-      window.removeEventListener(
-        'keydown',
-        handleKeyDown,
-      );
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [onClose]);
 
@@ -178,23 +150,14 @@ export function QuestDetailsDrawer({
 
     onSaveNote(trimmedNote);
     setNoteDraft(trimmedNote);
-    setNoteMessage(
-      trimmedNote.length > 0
-        ? 'Note saved.'
-        : 'Note removed.',
-    );
+    setNoteMessage(trimmedNote.length > 0 ? 'Note saved.' : 'Note removed.');
   }
 
   const hasRewards =
     quest.rewards &&
-    (
-      quest.rewards.experience !== undefined ||
+    (quest.rewards.experience !== undefined ||
       quest.rewards.gil !== undefined ||
-      (
-        quest.rewards.items &&
-        quest.rewards.items.length > 0
-      )
-    );
+      (quest.rewards.items && quest.rewards.items.length > 0));
 
   return (
     <div
@@ -215,17 +178,13 @@ export function QuestDetailsDrawer({
         <header className="quest-details__header">
           <div>
             <p className="quest-details__eyebrow">
-              {quest.expansionId.toUpperCase()} · Patch{' '}
-              {quest.patch}
+              {quest.expansionId.toUpperCase()} · Patch {quest.patch}
             </p>
 
-            <h2 id="quest-details-title">
-              {quest.name}
-            </h2>
+            <h2 id="quest-details-title">{quest.name}</h2>
 
             <p className="quest-details__subtitle">
-              Level {quest.level} ·{' '}
-              {formatQuestCategory(quest.category)}
+              Level {quest.level} · {formatQuestCategory(quest.category)}
             </p>
           </div>
 
@@ -244,9 +203,7 @@ export function QuestDetailsDrawer({
           <button
             className={[
               'quest-details__action',
-              isCompleted
-                ? 'quest-details__action--active'
-                : '',
+              isCompleted ? 'quest-details__action--active' : '',
             ]
               .filter(Boolean)
               .join(' ')}
@@ -254,17 +211,13 @@ export function QuestDetailsDrawer({
             aria-pressed={isCompleted}
             onClick={onToggleCompletion}
           >
-            {isCompleted
-              ? 'Completed'
-              : 'Mark complete'}
+            {isCompleted ? 'Completed' : 'Mark complete'}
           </button>
 
           <button
             className={[
               'quest-details__action',
-              isCurrent
-                ? 'quest-details__action--active'
-                : '',
+              isCurrent ? 'quest-details__action--active' : '',
             ]
               .filter(Boolean)
               .join(' ')}
@@ -272,17 +225,13 @@ export function QuestDetailsDrawer({
             aria-pressed={isCurrent}
             onClick={onToggleCurrent}
           >
-            {isCurrent
-              ? 'Current quest'
-              : 'Set current'}
+            {isCurrent ? 'Current quest' : 'Set current'}
           </button>
 
           <button
             className={[
               'quest-details__action',
-              isBookmarked
-                ? 'quest-details__action--active'
-                : '',
+              isBookmarked ? 'quest-details__action--active' : '',
             ]
               .filter(Boolean)
               .join(' ')}
@@ -290,9 +239,7 @@ export function QuestDetailsDrawer({
             aria-pressed={isBookmarked}
             onClick={onToggleBookmark}
           >
-            {isBookmarked
-              ? 'Bookmarked'
-              : 'Bookmark'}
+            {isBookmarked ? 'Bookmarked' : 'Bookmark'}
           </button>
         </div>
 
@@ -319,9 +266,7 @@ export function QuestDetailsDrawer({
                   <div>
                     <dt>Coordinates</dt>
                     <dd>
-                      X:{' '}
-                      {quest.start.coordinates.x.toFixed(1)}
-                      , Y:{' '}
+                      X: {quest.start.coordinates.x.toFixed(1)}, Y:{' '}
                       {quest.start.coordinates.y.toFixed(1)}
                     </dd>
                   </div>
@@ -336,35 +281,27 @@ export function QuestDetailsDrawer({
               <h3>Before starting</h3>
             </header>
 
-            {quest.requirements &&
-            quest.requirements.length > 0 ? (
+            {quest.requirements && quest.requirements.length > 0 ? (
               <div className="quest-details__list">
-                {quest.requirements.map(
-                  (requirement, index) => {
-                    const formatted =
-                      formatRequirement(requirement);
+                {quest.requirements.map((requirement, index) => {
+                  const formatted = formatRequirement(requirement);
 
-                    return (
-                      <article
-                        key={`${requirement.type}-${index}`}
-                        className="quest-details__list-item"
-                      >
-                        <strong>
-                          {formatted.title}
-                        </strong>
+                  return (
+                    <article
+                      key={`${requirement.type}-${index}`}
+                      className="quest-details__list-item"
+                    >
+                      <strong>{formatted.title}</strong>
 
-                        <span>
-                          {formatted.detail}
-                        </span>
-                      </article>
-                    );
-                  },
-                )}
+                      <span>{formatted.detail}</span>
+                    </article>
+                  );
+                })}
               </div>
             ) : (
               <p className="quest-details__empty">
-                No detailed requirement data has been
-                entered for this quest yet.
+                No detailed requirement data has been entered for this quest
+                yet.
               </p>
             )}
           </section>
@@ -378,10 +315,7 @@ export function QuestDetailsDrawer({
 
               <div className="quest-details__list">
                 {quest.duties.map((duty) => (
-                  <article
-                    key={duty.id}
-                    className="quest-details__list-item"
-                  >
+                  <article key={duty.id} className="quest-details__list-item">
                     <strong>{duty.name}</strong>
 
                     <span>
@@ -392,41 +326,36 @@ export function QuestDetailsDrawer({
                         ' · Duty Support available'}
                     </span>
 
-                    {duty.notes && (
-                      <span>{duty.notes}</span>
-                    )}
+                    {duty.notes && <span>{duty.notes}</span>}
                   </article>
                 ))}
               </div>
             </section>
           )}
 
-          {quest.unlocks &&
-            quest.unlocks.length > 0 && (
-              <section className="quest-details__section">
-                <header>
-                  <p>Progression</p>
-                  <h3>Unlocks</h3>
-                </header>
+          {quest.unlocks && quest.unlocks.length > 0 && (
+            <section className="quest-details__section">
+              <header>
+                <p>Progression</p>
+                <h3>Unlocks</h3>
+              </header>
 
-                <div className="quest-details__list">
-                  {quest.unlocks.map((unlock) => (
-                    <article
-                      key={`${unlock.type}-${unlock.targetId ?? unlock.name}`}
-                      className="quest-details__list-item"
-                    >
-                      <strong>{unlock.name}</strong>
+              <div className="quest-details__list">
+                {quest.unlocks.map((unlock) => (
+                  <article
+                    key={`${unlock.type}-${unlock.targetId ?? unlock.name}`}
+                    className="quest-details__list-item"
+                  >
+                    <strong>{unlock.name}</strong>
 
-                      <span>{unlock.type}</span>
+                    <span>{unlock.type}</span>
 
-                      {unlock.notes && (
-                        <span>{unlock.notes}</span>
-                      )}
-                    </article>
-                  ))}
-                </div>
-              </section>
-            )}
+                    {unlock.notes && <span>{unlock.notes}</span>}
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
 
           {hasRewards && quest.rewards && (
             <section className="quest-details__section">
@@ -439,51 +368,37 @@ export function QuestDetailsDrawer({
                 {quest.rewards.experience !== undefined && (
                   <div>
                     <dt>Experience</dt>
-                    <dd>
-                      {quest.rewards.experience.toLocaleString()}
-                    </dd>
+                    <dd>{quest.rewards.experience.toLocaleString()}</dd>
                   </div>
                 )}
 
                 {quest.rewards.gil !== undefined && (
                   <div>
                     <dt>Gil</dt>
-                    <dd>
-                      {quest.rewards.gil.toLocaleString()}
-                    </dd>
+                    <dd>{quest.rewards.gil.toLocaleString()}</dd>
                   </div>
                 )}
               </dl>
 
-              {quest.rewards.items &&
-                quest.rewards.items.length > 0 && (
-                  <div className="quest-details__list">
-                    {quest.rewards.items.map((item) => (
-                      <article
-                        key={item.itemId}
-                        className="quest-details__list-item"
-                      >
-                        <strong>{item.itemName}</strong>
-                        <span>
-                          Quantity: {item.quantity}
-                        </span>
-                      </article>
-                    ))}
-                  </div>
-                )}
+              {quest.rewards.items && quest.rewards.items.length > 0 && (
+                <div className="quest-details__list">
+                  {quest.rewards.items.map((item) => (
+                    <article
+                      key={item.itemId}
+                      className="quest-details__list-item"
+                    >
+                      <strong>{item.itemName}</strong>
+                      <span>Quantity: {item.quantity}</span>
+                    </article>
+                  ))}
+                </div>
+              )}
             </section>
           )}
 
-          {(
-            (
-              quest.prerequisiteQuestIds &&
-              quest.prerequisiteQuestIds.length > 0
-            ) ||
-            (
-              quest.nextQuestIds &&
-              quest.nextQuestIds.length > 0
-            )
-          ) && (
+          {((quest.prerequisiteQuestIds &&
+            quest.prerequisiteQuestIds.length > 0) ||
+            (quest.nextQuestIds && quest.nextQuestIds.length > 0)) && (
             <section className="quest-details__section">
               <header>
                 <p>Quest Chain</p>
@@ -491,45 +406,33 @@ export function QuestDetailsDrawer({
               </header>
 
               {quest.prerequisiteQuestIds &&
-                quest.prerequisiteQuestIds.length >
-                  0 && (
+                quest.prerequisiteQuestIds.length > 0 && (
                   <div className="quest-details__relationship">
                     <h4>Previous</h4>
 
                     <ul>
-                      {quest.prerequisiteQuestIds.map(
-                        (questId) => (
-                          <li key={questId}>
-                            {getRelatedQuestName(
-                              questId,
-                              questsById,
-                            )}
-                          </li>
-                        ),
-                      )}
+                      {quest.prerequisiteQuestIds.map((questId) => (
+                        <li key={questId}>
+                          {getRelatedQuestName(questId, questsById)}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 )}
 
-              {quest.nextQuestIds &&
-                quest.nextQuestIds.length > 0 && (
-                  <div className="quest-details__relationship">
-                    <h4>Next</h4>
+              {quest.nextQuestIds && quest.nextQuestIds.length > 0 && (
+                <div className="quest-details__relationship">
+                  <h4>Next</h4>
 
-                    <ul>
-                      {quest.nextQuestIds.map(
-                        (questId) => (
-                          <li key={questId}>
-                            {getRelatedQuestName(
-                              questId,
-                              questsById,
-                            )}
-                          </li>
-                        ),
-                      )}
-                    </ul>
-                  </div>
-                )}
+                  <ul>
+                    {quest.nextQuestIds.map((questId) => (
+                      <li key={questId}>
+                        {getRelatedQuestName(questId, questsById)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </section>
           )}
 
@@ -583,9 +486,7 @@ export function QuestDetailsDrawer({
                 Save note
               </button>
 
-              <p aria-live="polite">
-                {noteMessage}
-              </p>
+              <p aria-live="polite">{noteMessage}</p>
             </div>
           </section>
         </div>

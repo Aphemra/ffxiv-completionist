@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import {
-  questRepository,
-  type QuestCatalog,
-} from '../data/questRepository';
+import { questRepository, type QuestCatalog } from '../data/questRepository';
 
 type QuestCatalogState =
   | {

@@ -1,8 +1,6 @@
 import type { Quest } from '../data/questSchemas';
 
-import {
-  formatQuestCategory,
-} from '../utilities/questPresentation';
+import { formatQuestCategory } from '../utilities/questPresentation';
 
 import './QuestEntry.css';
 
@@ -48,10 +46,7 @@ export function QuestEntry({
             onChange={onToggleCompletion}
           />
 
-          <span
-            className="quest-entry__custom-check"
-            aria-hidden="true"
-          />
+          <span className="quest-entry__custom-check" aria-hidden="true" />
         </label>
 
         <div className="quest-entry__content">
@@ -60,8 +55,7 @@ export function QuestEntry({
               <h4>{quest.name}</h4>
 
               <p>
-                Level {quest.level} ·{' '}
-                {formatQuestCategory(quest.category)}
+                Level {quest.level} · {formatQuestCategory(quest.category)}
               </p>
             </div>
 
@@ -69,9 +63,7 @@ export function QuestEntry({
               <button
                 className={[
                   'quest-entry__bookmark-button',
-                  isBookmarked
-                    ? 'quest-entry__bookmark-button--active'
-                    : '',
+                  isBookmarked ? 'quest-entry__bookmark-button--active' : '',
                 ]
                   .filter(Boolean)
                   .join(' ')}
@@ -82,24 +74,16 @@ export function QuestEntry({
                     : `Bookmark ${quest.name}`
                 }
                 aria-pressed={isBookmarked}
-                title={
-                  isBookmarked
-                    ? 'Remove bookmark'
-                    : 'Bookmark quest'
-                }
+                title={isBookmarked ? 'Remove bookmark' : 'Bookmark quest'}
                 onClick={onToggleBookmark}
               >
-                <span aria-hidden="true">
-                  {isBookmarked ? '★' : '☆'}
-                </span>
+                <span aria-hidden="true">{isBookmarked ? '★' : '☆'}</span>
               </button>
 
               <button
                 className={[
                   'quest-entry__current-button',
-                  isCurrent
-                    ? 'quest-entry__current-button--active'
-                    : '',
+                  isCurrent ? 'quest-entry__current-button--active' : '',
                 ]
                   .filter(Boolean)
                   .join(' ')}
@@ -121,10 +105,7 @@ export function QuestEntry({
           </div>
 
           {quest.duties && quest.duties.length > 0 && (
-            <div
-              className="quest-entry__metadata"
-              aria-label="Quest duties"
-            >
+            <div className="quest-entry__metadata" aria-label="Quest duties">
               {quest.duties.map((duty) => (
                 <span
                   key={duty.id}
@@ -137,10 +118,7 @@ export function QuestEntry({
           )}
 
           {quest.unlocks && quest.unlocks.length > 0 && (
-            <div
-              className="quest-entry__metadata"
-              aria-label="Quest unlocks"
-            >
+            <div className="quest-entry__metadata" aria-label="Quest unlocks">
               {quest.unlocks.map((unlock) => (
                 <span
                   key={`${unlock.type}-${unlock.targetId ?? unlock.name}`}

@@ -37,10 +37,7 @@ export class JsonQuestRepository implements QuestRepository {
   }
 
   private async loadCatalogInternal(): Promise<QuestCatalog> {
-    const manifest = await loadJson(
-      QUEST_MANIFEST_PATH,
-      questManifestSchema,
-    );
+    const manifest = await loadJson(QUEST_MANIFEST_PATH, questManifestSchema);
 
     const enabledEntries = manifest.collections
       .filter((entry) => entry.enabled)
@@ -48,10 +45,7 @@ export class JsonQuestRepository implements QuestRepository {
 
     const collections = await Promise.all(
       enabledEntries.map(async (entry) => {
-        const collection = await loadJson(
-          entry.path,
-          questCollectionSchema,
-        );
+        const collection = await loadJson(entry.path, questCollectionSchema);
 
         if (collection.id !== entry.id) {
           throw new DataLoadError(
@@ -84,14 +78,10 @@ export class JsonQuestRepository implements QuestRepository {
     const questsById = new Map<string, Quest>();
 
     for (const collection of collections) {
-      collection.groups.sort(
-        (left, right) => left.sortOrder - right.sortOrder,
-      );
+      collection.groups.sort((left, right) => left.sortOrder - right.sortOrder);
 
       for (const group of collection.groups) {
-        group.quests.sort(
-          (left, right) => left.sortOrder - right.sortOrder,
-        );
+        group.quests.sort((left, right) => left.sortOrder - right.sortOrder);
 
         for (const quest of group.quests) {
           if (questsById.has(quest.id)) {

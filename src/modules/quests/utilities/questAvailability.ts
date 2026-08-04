@@ -1,6 +1,4 @@
-import type {
-  StartingCityId,
-} from '../../../core/game/gameSchemas';
+import type { StartingCityId } from '../../../core/game/gameSchemas';
 
 import type {
   Quest,
@@ -8,9 +6,7 @@ import type {
   QuestCollection,
 } from '../data/questSchemas';
 
-import type {
-  QuestCatalog,
-} from '../data/questRepository';
+import type { QuestCatalog } from '../data/questRepository';
 
 export interface QuestAvailabilityContext {
   startingCity: StartingCityId | null;
@@ -20,13 +16,9 @@ function matchesAvailability(
   availability: QuestAvailability | undefined,
   context: QuestAvailabilityContext,
 ): boolean {
-  const startingCityIds =
-    availability?.startingCityIds;
+  const startingCityIds = availability?.startingCityIds;
 
-  if (
-    !startingCityIds ||
-    startingCityIds.length === 0
-  ) {
+  if (!startingCityIds || startingCityIds.length === 0) {
     return true;
   }
 
@@ -34,19 +26,14 @@ function matchesAvailability(
     return false;
   }
 
-  return startingCityIds.includes(
-    context.startingCity,
-  );
+  return startingCityIds.includes(context.startingCity);
 }
 
 export function isQuestCollectionAvailable(
   collection: QuestCollection,
   context: QuestAvailabilityContext,
 ): boolean {
-  return matchesAvailability(
-    collection.availability,
-    context,
-  );
+  return matchesAvailability(collection.availability, context);
 }
 
 export function isQuestAvailable(
@@ -55,14 +42,8 @@ export function isQuestAvailable(
   context: QuestAvailabilityContext,
 ): boolean {
   return (
-    isQuestCollectionAvailable(
-      collection,
-      context,
-    ) &&
-    matchesAvailability(
-      quest.availability,
-      context,
-    )
+    isQuestCollectionAvailable(collection, context) &&
+    matchesAvailability(quest.availability, context)
   );
 }
 
@@ -71,38 +52,24 @@ export function createAvailableQuestCatalog(
   context: QuestAvailabilityContext,
 ): QuestCatalog {
   const collections = catalog.collections
-    .filter((collection) =>
-      isQuestCollectionAvailable(
-        collection,
-        context,
-      ),
-    )
+    .filter((collection) => isQuestCollectionAvailable(collection, context))
     .map((collection) => {
       const groups = collection.groups
         .map((group) => ({
           ...group,
 
           quests: group.quests.filter((quest) =>
-            isQuestAvailable(
-              quest,
-              collection,
-              context,
-            ),
+            isQuestAvailable(quest, collection, context),
           ),
         }))
-        .filter(
-          (group) => group.quests.length > 0,
-        );
+        .filter((group) => group.quests.length > 0);
 
       return {
         ...collection,
         groups,
       };
     })
-    .filter(
-      (collection) =>
-        collection.groups.length > 0,
-    );
+    .filter((collection) => collection.groups.length > 0);
 
   const questsById = new Map<string, Quest>();
 

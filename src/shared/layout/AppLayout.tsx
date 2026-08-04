@@ -5,10 +5,7 @@ import { useProgressStore } from '../../core/progress/progressStore';
 
 import './AppLayout.css';
 
-type NavigationIconName =
-  | 'dashboard'
-  | 'quests'
-  | 'profile';
+type NavigationIconName = 'dashboard' | 'quests' | 'profile';
 
 interface NavigationItem {
   label: string;
@@ -61,9 +58,7 @@ function ProfileIcon() {
   );
 }
 
-function NavigationIcon({
-  name,
-}: NavigationIconProps) {
+function NavigationIcon({ name }: NavigationIconProps) {
   if (name === 'dashboard') {
     return (
       <svg
@@ -105,9 +100,7 @@ function NavigationIcon({
   );
 }
 
-function handleNavigationClick(
-  event: MouseEvent<HTMLAnchorElement>,
-) {
+function handleNavigationClick(event: MouseEvent<HTMLAnchorElement>) {
   if (event.detail > 0) {
     event.currentTarget.blur();
   }
@@ -118,9 +111,7 @@ export function AppLayout() {
     (state) => state.profile.characterName,
   );
 
-  const world = useProgressStore(
-    (state) => state.profile.world,
-  );
+  const world = useProgressStore((state) => state.profile.world);
 
   return (
     <div className="app-shell">
@@ -131,23 +122,14 @@ export function AppLayout() {
           </div>
 
           <div className="app-brand__copy">
-            <p className="app-brand__eyebrow">
-              Completion Tracker
-            </p>
+            <p className="app-brand__eyebrow">Completion Tracker</p>
 
-            <p className="app-brand__name">
-              Final Fantasy XIV
-            </p>
+            <p className="app-brand__name">Final Fantasy XIV</p>
           </div>
         </header>
 
-        <nav
-          className="app-navigation"
-          aria-label="Primary navigation"
-        >
-          <p className="app-navigation__heading">
-            Progress
-          </p>
+        <nav className="app-navigation" aria-label="Primary navigation">
+          <p className="app-navigation__heading">Progress</p>
 
           <div className="app-navigation__items">
             {navigationItems.map((item) => (
@@ -161,9 +143,7 @@ export function AppLayout() {
                 className={({ isActive }) =>
                   [
                     'app-navigation__link',
-                    isActive
-                      ? 'app-navigation__link--active'
-                      : '',
+                    isActive ? 'app-navigation__link--active' : '',
                   ]
                     .filter(Boolean)
                     .join(' ')

@@ -6,9 +6,7 @@ export const startingCityIdSchema = z.enum([
   'uldah',
 ]);
 
-export type StartingCityId = z.infer<
-  typeof startingCityIdSchema
->;
+export type StartingCityId = z.infer<typeof startingCityIdSchema>;
 
 interface StartingCityOption {
   value: StartingCityId;

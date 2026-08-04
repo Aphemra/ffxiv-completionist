@@ -1,7 +1,4 @@
-import {
-  useState,
-  type FormEvent,
-} from 'react';
+import { useState, type FormEvent } from 'react';
 
 import {
   STARTING_CITY_OPTIONS,
@@ -23,18 +20,13 @@ export function ProfilePage() {
     (state) => state.resetQuestProgress,
   );
 
-  const [characterName, setCharacterName] = useState(
-    profile.characterName,
-  );
+  const [characterName, setCharacterName] = useState(profile.characterName);
 
-  const [startingCity, setStartingCity] =
-  useState<StartingCityId | null>(
+  const [startingCity, setStartingCity] = useState<StartingCityId | null>(
     profile.startingCity,
   );
 
-  const [dataCenter, setDataCenter] = useState(
-    profile.dataCenter,
-  );
+  const [dataCenter, setDataCenter] = useState(profile.dataCenter);
 
   const [world, setWorld] = useState(profile.world);
 
@@ -44,11 +36,11 @@ export function ProfilePage() {
     event.preventDefault();
 
     updateProfileMetadata({
-  characterName,
-  startingCity,
-  dataCenter,
-  world,
-});
+      characterName,
+      startingCity,
+      dataCenter,
+      world,
+    });
 
     setSaveMessage('Profile saved.');
   }
@@ -75,15 +67,13 @@ export function ProfilePage() {
     <div className="profile-page">
       <header className="page-header">
         <div>
-          <p className="page-header__eyebrow">
-            Local Character
-          </p>
+          <p className="page-header__eyebrow">Local Character</p>
 
           <h1>Profile</h1>
 
           <p className="page-header__description">
-            Configure the character associated with this browser’s
-            completion data.
+            Configure the character associated with this browser’s completion
+            data.
           </p>
         </div>
 
@@ -99,14 +89,9 @@ export function ProfilePage() {
             <h2>Profile details</h2>
           </header>
 
-          <form
-            className="profile-form"
-            onSubmit={handleSubmit}
-          >
+          <form className="profile-form" onSubmit={handleSubmit}>
             <label className="profile-field">
-              <span className="profile-field__label">
-                Character name
-              </span>
+              <span className="profile-field__label">Character name</span>
 
               <input
                 type="text"
@@ -121,48 +106,36 @@ export function ProfilePage() {
             </label>
 
             <label className="profile-field">
-  <span className="profile-field__label">
-    Starting city
-  </span>
+              <span className="profile-field__label">Starting city</span>
 
-  <select
-    value={startingCity ?? ''}
-    onChange={(event) => {
-      const value = event.target.value;
+              <select
+                value={startingCity ?? ''}
+                onChange={(event) => {
+                  const value = event.target.value;
 
-      setStartingCity(
-        value.length > 0
-          ? (value as StartingCityId)
-          : null,
-      );
+                  setStartingCity(
+                    value.length > 0 ? (value as StartingCityId) : null,
+                  );
 
-      setSaveMessage('');
-    }}
-  >
-    <option value="">
-      Select a starting city
-    </option>
+                  setSaveMessage('');
+                }}
+              >
+                <option value="">Select a starting city</option>
 
-    {STARTING_CITY_OPTIONS.map((option) => (
-      <option
-        key={option.value}
-        value={option.value}
-      >
-        {option.label}
-      </option>
-    ))}
-  </select>
+                {STARTING_CITY_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
 
-  <span className="profile-field__hint">
-    Used to select the correct early ARR main
-    scenario route.
-  </span>
-</label>
+              <span className="profile-field__hint">
+                Used to select the correct early ARR main scenario route.
+              </span>
+            </label>
 
             <label className="profile-field">
-              <span className="profile-field__label">
-                Data center
-              </span>
+              <span className="profile-field__label">Data center</span>
 
               <input
                 type="text"
@@ -177,9 +150,7 @@ export function ProfilePage() {
             </label>
 
             <label className="profile-field">
-              <span className="profile-field__label">
-                World
-              </span>
+              <span className="profile-field__label">World</span>
 
               <input
                 type="text"
@@ -201,10 +172,7 @@ export function ProfilePage() {
                 Save profile
               </button>
 
-              <p
-                className="profile-form__message"
-                aria-live="polite"
-              >
+              <p className="profile-form__message" aria-live="polite">
                 {saveMessage}
               </p>
             </div>
@@ -220,25 +188,17 @@ export function ProfilePage() {
           <dl className="profile-statistics">
             <div>
               <dt>Completed quests</dt>
-              <dd>
-                {profile.completedQuestIds.length.toLocaleString()}
-              </dd>
+              <dd>{profile.completedQuestIds.length.toLocaleString()}</dd>
             </div>
 
             <div>
               <dt>Bookmarked quests</dt>
-              <dd>
-                {profile.bookmarkedQuestIds.length.toLocaleString()}
-              </dd>
+              <dd>{profile.bookmarkedQuestIds.length.toLocaleString()}</dd>
             </div>
 
             <div>
               <dt>Quest notes</dt>
-              <dd>
-                {Object.keys(
-                  profile.questNotes,
-                ).length.toLocaleString()}
-              </dd>
+              <dd>{Object.keys(profile.questNotes).length.toLocaleString()}</dd>
             </div>
           </dl>
 
@@ -246,9 +206,8 @@ export function ProfilePage() {
             <h3>Browser-local progress</h3>
 
             <p>
-              This profile is stored only in this browser for now.
-              Export, import, and additional character profiles will
-              be added later.
+              This profile is stored only in this browser for now. Export,
+              import, and additional character profiles will be added later.
             </p>
           </div>
 
@@ -257,8 +216,8 @@ export function ProfilePage() {
               <h3>Reset quest progress</h3>
 
               <p>
-                Clear all tracked quest state while preserving the
-                character information above.
+                Clear all tracked quest state while preserving the character
+                information above.
               </p>
             </div>
 
