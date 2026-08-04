@@ -4,7 +4,10 @@ import { fileURLToPath } from 'node:url';
 
 import * as z from 'zod';
 
-import { questCollectionFileSchema } from '../src/modules/quests/data/questCollectionFileSchemas';
+import {
+  createQuestCollection,
+  questCollectionFileSchema,
+} from '../src/modules/quests/data/questCollectionFileSchemas';
 
 import {
   questManifestSchema,
@@ -22,7 +25,6 @@ interface ValidationMessage {
 }
 
 interface LoadedCollection {
-  entry: QuestManifestEntry;
   collection: QuestCollection;
   source: string;
 }
@@ -161,31 +163,7 @@ function reportDuplicateSortOrders<T>(
 }
 
 function validateCollectionMetadata(loadedCollection: LoadedCollection): void {
-  const { entry, collection, source } = loadedCollection;
-
-  if (entry.id !== collection.id) {
-    addMessage(
-      'error',
-      source,
-      [
-        'Manifest and collection IDs do not match.',
-        `Manifest: "${entry.id}".`,
-        `Collection: "${collection.id}".`,
-      ].join(' '),
-    );
-  }
-
-  if (entry.category !== collection.category) {
-    addMessage(
-      'error',
-      source,
-      [
-        'Manifest and collection categories do not match.',
-        `Manifest: "${entry.category}".`,
-        `Collection: "${collection.category}".`,
-      ].join(' '),
-    );
-  }
+  const { collection, source } = loadedCollection;
 
   reportDuplicateSortOrders(
     collection.groups,
@@ -516,17 +494,41 @@ async function main(): Promise<void> {
   const loadedCollections: LoadedCollection[] = [];
 
   for (const entry of manifest.collections) {
-    const collection = await readValidatedJson(
+    const collectionFile = await readValidatedJson(
       entry.path,
       questCollectionFileSchema,
     );
 
-    if (!collection) {
+    if (!collectionFile) {
+      continue;
+    }
+
+    let collection: QuestCollection;
+
+    try {
+      collection = createQuestCollection(entry, collectionFile);
+    } catch (error) {
+      const errorMessage =
+        error instanceof z.ZodError
+          ? z.prettifyError(error)
+          : error instanceof Error
+            ? error.message
+            : 'Unknown collection assembly error.';
+
+      addMessage(
+        'error',
+        normalizePublicPath(entry.path),
+        [
+          'The collection content could not be combined',
+          'with its manifest metadata.',
+          errorMessage,
+        ].join('\n'),
+      );
+
       continue;
     }
 
     const loadedCollection = {
-      entry,
       collection,
       source: normalizePublicPath(entry.path),
     };

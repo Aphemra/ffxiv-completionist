@@ -1,7 +1,10 @@
 import { DataLoadError } from '../../../core/data/DataLoadError';
 import { loadJson } from '../../../core/data/loadJson';
 
-import { questCollectionFileSchema } from './questCollectionFileSchemas';
+import {
+  createQuestCollection,
+  questCollectionFileSchema,
+} from './questCollectionFileSchemas';
 
 import {
   questManifestSchema,
@@ -46,34 +49,12 @@ export class JsonQuestRepository implements QuestRepository {
 
     const collections = await Promise.all(
       enabledEntries.map(async (entry) => {
-        const collection = await loadJson(
+        const collectionFile = await loadJson(
           entry.path,
           questCollectionFileSchema,
         );
 
-        if (collection.id !== entry.id) {
-          throw new DataLoadError(
-            [
-              `Quest collection ID mismatch in "${entry.path}".`,
-              `Manifest ID: "${entry.id}"`,
-              `Collection ID: "${collection.id}"`,
-            ].join('\n'),
-            entry.path,
-          );
-        }
-
-        if (collection.category !== entry.category) {
-          throw new DataLoadError(
-            [
-              `Quest collection category mismatch in "${entry.path}".`,
-              `Manifest category: "${entry.category}"`,
-              `Collection category: "${collection.category}"`,
-            ].join('\n'),
-            entry.path,
-          );
-        }
-
-        return collection;
+        return createQuestCollection(entry, collectionFile);
       }),
     );
 

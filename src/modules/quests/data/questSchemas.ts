@@ -290,9 +290,19 @@ export const questCollectionSchema = z
 export const questManifestEntrySchema = z.strictObject({
   id: gameDataIdSchema,
   title: nonEmptyStringSchema,
+  description: nonEmptyStringSchema,
+
   category: questCategorySchema,
-  path: nonEmptyStringSchema,
+  expansionId: gameDataIdSchema,
+  patch: patchVersionSchema,
+  classJobId: gameDataIdSchema.optional(),
+
+  availability: questAvailabilitySchema.optional(),
+
   sortOrder: sortOrderSchema,
+  verificationStatus: questVerificationStatusSchema,
+
+  path: nonEmptyStringSchema,
   enabled: z.boolean().default(true),
 });
 
