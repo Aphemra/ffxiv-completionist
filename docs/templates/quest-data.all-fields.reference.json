@@ -1,0 +1,341 @@
+{
+  "manifestEntry": {
+    "id": "example-collection",
+    "title": "Example Quest Collection",
+    "description": "Reference manifest entry containing every supported collection-level field.",
+    "category": "msq",
+    "expansionId": "arr",
+    "patch": "2.0",
+    "classJobId": "example-class-job",
+    "availability": {
+      "startingCityIds": ["gridania", "limsa-lominsa", "uldah"]
+    },
+    "sortOrder": 100,
+    "verificationStatus": "partial",
+    "path": "data/quests/example/example-collection.json",
+    "enabled": true
+  },
+  "collectionFile": {
+    "schemaVersion": 1,
+    "format": "linear",
+    "startsAfterQuestIds": ["previous-collection-final-quest"],
+    "continuesToQuestIds": ["next-collection-first-quest"],
+    "groups": [
+      {
+        "id": "example-quest-range",
+        "title": "Levels 1-10",
+        "description": "Reference group containing every supported group-level field.",
+        "sortOrder": 1,
+        "levelRange": {
+          "minimum": 1,
+          "maximum": 10
+        },
+        "quests": [
+          {
+            "id": "example-quest",
+            "name": "Example Quest",
+            "level": 10,
+            "sortOrder": 1,
+            "start": {
+              "npcName": "Example NPC",
+              "zoneId": "example-zone",
+              "zoneName": "Example Zone",
+              "coordinates": {
+                "x": 10.0,
+                "y": 20.0
+              }
+            },
+            "availability": {
+              "startingCityIds": ["gridania"]
+            },
+            "prerequisiteQuestIds": ["example-prerequisite-quest"],
+            "nextQuestIds": ["example-next-quest"],
+            "requirements": [
+              {
+                "type": "class-job-level",
+                "classJobId": "archer",
+                "classJobName": "Archer",
+                "level": 10,
+                "notes": "Optional requirement notes."
+              },
+              {
+                "type": "item",
+                "itemId": "example-normal-item",
+                "itemName": "Example Normal-Quality Item",
+                "quantity": 3,
+                "quality": "normal",
+                "notes": "Quality must be normal, high-quality, or either."
+              },
+              {
+                "type": "item",
+                "itemId": "example-hq-item",
+                "itemName": "Example High-Quality Item",
+                "quantity": 1,
+                "quality": "high-quality",
+                "notes": "Example of the high-quality enum value."
+              },
+              {
+                "type": "craft",
+                "itemId": "example-crafted-item",
+                "itemName": "Example Crafted Item",
+                "quantity": 1,
+                "quality": "either",
+                "craftingJobId": "carpenter",
+                "craftingJobName": "Carpenter",
+                "recipeLevel": 10,
+                "notes": "Optional crafting requirement notes."
+              },
+              {
+                "type": "gather",
+                "itemId": "example-gathered-item",
+                "itemName": "Example Gathered Item",
+                "quantity": 5,
+                "quality": "either",
+                "gatheringJobId": "botanist",
+                "gatheringJobName": "Botanist",
+                "gatheringLevel": 10,
+                "notes": "Optional gathering requirement notes."
+              },
+              {
+                "type": "feature",
+                "featureId": "example-feature",
+                "name": "Example Feature",
+                "notes": "Optional feature requirement notes."
+              }
+            ],
+            "rewards": {
+              "experience": 1000,
+              "gil": 500,
+              "items": [
+                {
+                  "itemId": "example-reward-item",
+                  "itemName": "Example Reward Item",
+                  "quantity": 1
+                }
+              ]
+            },
+            "duties": [
+              {
+                "id": "example-dungeon",
+                "name": "Example Dungeon",
+                "type": "dungeon",
+                "level": 10,
+                "minimumItemLevel": 5,
+                "dutySupportAvailable": true,
+                "notes": "Optional duty notes."
+              },
+              {
+                "id": "example-trial",
+                "name": "Example Trial",
+                "type": "trial",
+                "level": 10,
+                "minimumItemLevel": 5,
+                "dutySupportAvailable": true,
+                "notes": "Trial example."
+              },
+              {
+                "id": "example-solo-duty",
+                "name": "Example Solo Duty",
+                "type": "solo-duty",
+                "level": 10,
+                "minimumItemLevel": 0,
+                "dutySupportAvailable": false,
+                "notes": "Solo-duty example."
+              },
+              {
+                "id": "example-guildhest",
+                "name": "Example Guildhest",
+                "type": "guildhest",
+                "level": 10,
+                "minimumItemLevel": 0,
+                "dutySupportAvailable": false,
+                "notes": "Guildhest example."
+              },
+              {
+                "id": "example-normal-raid",
+                "name": "Example Normal Raid",
+                "type": "normal-raid",
+                "level": 10,
+                "minimumItemLevel": 5,
+                "dutySupportAvailable": false,
+                "notes": "Normal-raid example."
+              },
+              {
+                "id": "example-alliance-raid",
+                "name": "Example Alliance Raid",
+                "type": "alliance-raid",
+                "level": 10,
+                "minimumItemLevel": 5,
+                "dutySupportAvailable": false,
+                "notes": "Alliance-raid example."
+              },
+              {
+                "id": "example-field-operation",
+                "name": "Example Field Operation",
+                "type": "field-operation",
+                "level": 10,
+                "minimumItemLevel": 0,
+                "dutySupportAvailable": false,
+                "notes": "Field-operation example."
+              }
+            ],
+            "unlocks": [
+              {
+                "type": "class",
+                "targetId": "example-class",
+                "name": "Example Class",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "job",
+                "targetId": "example-job",
+                "name": "Example Job",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "dungeon",
+                "targetId": "example-dungeon",
+                "name": "Example Dungeon",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "trial",
+                "targetId": "example-trial",
+                "name": "Example Trial",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "raid",
+                "targetId": "example-raid",
+                "name": "Example Raid",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "feature",
+                "targetId": "example-feature",
+                "name": "Example Feature",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "system",
+                "targetId": "example-system",
+                "name": "Example System",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "mount",
+                "targetId": "example-mount",
+                "name": "Example Mount",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "mount-speed",
+                "targetId": "example-zone",
+                "name": "Example Zone Mount Speed",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "flight",
+                "targetId": "example-zone",
+                "name": "Flight in Example Zone",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "zone",
+                "targetId": "example-zone",
+                "name": "Example Zone",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "vendor",
+                "targetId": "example-vendor",
+                "name": "Example Vendor",
+                "notes": "Optional unlock notes."
+              },
+              {
+                "type": "emote",
+                "targetId": "example-emote",
+                "name": "Example Emote",
+                "notes": "Optional unlock notes."
+              }
+            ],
+            "notes": [
+              {
+                "type": "info",
+                "text": "General informational note."
+              },
+              {
+                "type": "tip",
+                "text": "Helpful gameplay tip."
+              },
+              {
+                "type": "warning",
+                "text": "Important warning."
+              },
+              {
+                "type": "spoiler",
+                "text": "Spoiler-sensitive note."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "enumValues": {
+    "questCategories": [
+      "msq",
+      "class",
+      "job",
+      "role",
+      "crafting",
+      "gathering",
+      "feature",
+      "side-story",
+      "tribal",
+      "relic"
+    ],
+    "verificationStatuses": ["sample", "partial", "verified"],
+    "startingCityIds": ["gridania", "limsa-lominsa", "uldah"],
+    "itemQualities": ["normal", "high-quality", "either"],
+    "requirementTypes": [
+      "class-job-level",
+      "item",
+      "craft",
+      "gather",
+      "feature"
+    ],
+    "dutyTypes": [
+      "dungeon",
+      "trial",
+      "solo-duty",
+      "guildhest",
+      "normal-raid",
+      "alliance-raid",
+      "field-operation"
+    ],
+    "unlockTypes": [
+      "class",
+      "job",
+      "dungeon",
+      "trial",
+      "raid",
+      "feature",
+      "system",
+      "mount",
+      "mount-speed",
+      "flight",
+      "zone",
+      "vendor",
+      "emote"
+    ],
+    "noteTypes": ["info", "tip", "warning", "spoiler"]
+  },
+  "usageNotes": [
+    "This is reference data and should remain outside public/data/quests unless converted into real game data.",
+    "The collection file is structurally valid for the linear collection-content schema described in the project.",
+    "Dummy prerequisite and next-quest IDs will fail cross-file reference validation if this template is added to the live manifest without replacing or removing them.",
+    "All schemas use strictObject, so unrecognized fields will fail validation.",
+    "Optional fields may be removed entirely rather than set to null."
+  ]
+}
