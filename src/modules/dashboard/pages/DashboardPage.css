@@ -229,6 +229,64 @@
   border-color: var(--color-success-border);
 }
 
+.dashboard-current-quest {
+  padding: 1.5rem;
+}
+
+.dashboard-current-quest__eyebrow {
+  margin: 0 0 0.4rem;
+
+  color: var(--color-accent-light);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dashboard-current-quest h3 {
+  margin: 0;
+
+  color: var(--color-text-primary);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+}
+
+.dashboard-current-quest__level {
+  margin: 0.45rem 0 0;
+
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.dashboard-current-quest__details {
+  display: grid;
+  gap: 0.25rem;
+
+  margin-top: 1.25rem;
+  padding: 0.85rem;
+
+  border: 1px solid var(--color-accent-border);
+  border-radius: 0.55rem;
+
+  background: var(--color-accent-muted);
+}
+
+.dashboard-current-quest__details p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dashboard-current-quest__details strong {
+  color: var(--color-accent-light);
+  font-size: 0.78rem;
+}
+
 @media (max-width: 68rem) {
   .dashboard-columns {
     grid-template-columns: 1fr;

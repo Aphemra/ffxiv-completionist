@@ -150,6 +150,14 @@
   line-height: 1.6;
 }
 
+.quest-collection__progress {
+  margin: 0.65rem 0 0;
+
+  color: var(--color-text-secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
 .quest-collection__status {
   flex-shrink: 0;
 
@@ -242,12 +250,27 @@
 
   transition:
     border-color 120ms ease,
-    background-color 120ms ease;
+    background-color 120ms ease,
+    opacity 120ms ease;
 }
 
 .quest-entry:hover {
   border-color: var(--color-border-strong);
   background: var(--color-surface-hover);
+}
+
+.quest-entry--complete {
+  opacity: 0.66;
+}
+
+.quest-entry--complete .quest-entry__heading h4 {
+  text-decoration: line-through;
+  text-decoration-color: var(--color-text-subtle);
+}
+
+.quest-entry--current {
+  border-color: var(--color-accent-border);
+  box-shadow: inset 0.18rem 0 0 var(--color-accent);
 }
 
 .quest-entry__main {
@@ -264,12 +287,16 @@
   flex: 0 0 1.35rem;
 
   margin-top: 0.05rem;
+
+  cursor: pointer;
 }
 
 .quest-entry__check input {
   position: absolute;
+
   width: 1px;
   height: 1px;
+
   overflow: hidden;
   opacity: 0;
 }
@@ -278,10 +305,51 @@
   position: absolute;
   inset: 0;
 
+  display: grid;
+  place-items: center;
+
   border: 1px solid var(--color-border-strong);
   border-radius: 0.3rem;
 
   background: var(--color-background);
+
+  transition:
+    border-color 120ms ease,
+    background-color 120ms ease;
+}
+
+.quest-entry__custom-check::after {
+  content: '';
+
+  width: 0.28rem;
+  height: 0.55rem;
+
+  opacity: 0;
+  transform: translateY(-0.05rem) rotate(45deg);
+
+  border-right: 0.14rem solid var(--color-background);
+  border-bottom: 0.14rem solid var(--color-background);
+}
+
+.quest-entry__check:hover .quest-entry__custom-check {
+  border-color: var(--color-accent);
+}
+
+.quest-entry__check input:focus-visible
+  + .quest-entry__custom-check {
+  outline: 0.15rem solid var(--color-accent-light);
+  outline-offset: 0.15rem;
+}
+
+.quest-entry__check input:checked
+  + .quest-entry__custom-check {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+.quest-entry__check input:checked
+  + .quest-entry__custom-check::after {
+  opacity: 1;
 }
 
 .quest-entry__content {
@@ -291,22 +359,73 @@
 
 .quest-entry__heading {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
 }
 
 .quest-entry__heading h4 {
   margin: 0;
+
   color: var(--color-text-primary);
   font-size: 0.84rem;
+
+  transition:
+    color 120ms ease,
+    opacity 120ms ease;
+}
+
+.quest-entry__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .quest-entry__level {
   flex-shrink: 0;
+
   color: var(--color-text-muted);
   font-size: 0.65rem;
   font-weight: 700;
+}
+
+.quest-entry__current-button {
+  padding: 0.23rem 0.42rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 0.35rem;
+
+  color: var(--color-text-muted);
+  background: transparent;
+
+  font-size: 0.6rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    border-color 120ms ease,
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.quest-entry__current-button:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+  background: rgb(255 255 255 / 3%);
+}
+
+.quest-entry__current-button:focus-visible {
+  outline: 0.15rem solid var(--color-accent-light);
+  outline-offset: 0.15rem;
+}
+
+.quest-entry__current-button--active {
+  border-color: var(--color-accent-border);
+  color: var(--color-accent-light);
+  background: var(--color-accent-muted);
 }
 
 .quest-entry__metadata {
@@ -353,9 +472,17 @@
     margin-top: 0.8rem;
   }
 
+  .quest-group__header {
+    align-items: flex-start;
+  }
+
   .quest-entry__heading {
     display: grid;
-    gap: 0.2rem;
+    gap: 0.45rem;
+  }
+
+  .quest-entry__actions {
+    justify-content: flex-start;
   }
 }
 
@@ -364,7 +491,10 @@
     animation: none;
   }
 
-  .quest-entry {
+  .quest-entry,
+  .quest-entry__custom-check,
+  .quest-entry__heading h4,
+  .quest-entry__current-button {
     transition: none;
   }
 }

@@ -1,3 +1,6 @@
+import { useProgressStore } from '../../../core/progress/progressStore';
+import { useQuestCatalog } from '../../quests/hooks/useQuestCatalog';
+
 import './DashboardPage.css';
 
 interface ProgressCardProps {
@@ -14,7 +17,9 @@ function ProgressCard({
   description,
 }: ProgressCardProps) {
   const percentage =
-    total > 0 ? Math.round((completed / total) * 100) : 0;
+    total > 0
+      ? Math.round((completed / total) * 100)
+      : 0;
 
   return (
     <article className="progress-card">
@@ -27,7 +32,8 @@ function ProgressCard({
       </div>
 
       <p className="progress-card__count">
-        {completed.toLocaleString()} / {total.toLocaleString()}
+        {completed.toLocaleString()} /{' '}
+        {total.toLocaleString()}
       </p>
 
       <div
@@ -44,25 +50,87 @@ function ProgressCard({
         />
       </div>
 
-      <p className="progress-card__description">{description}</p>
+      <p className="progress-card__description">
+        {description}
+      </p>
     </article>
   );
 }
 
 export function DashboardPage() {
+  const questCatalogState = useQuestCatalog();
+
+  const profile = useProgressStore(
+    (state) => state.profile,
+  );
+
+  const completedQuestIdSet = new Set(
+    profile.completedQuestIds,
+  );
+
+  const quests =
+    questCatalogState.status === 'success'
+      ? Array.from(
+          questCatalogState.catalog.questsById.values(),
+        )
+      : [];
+
+  const mainScenarioQuests = quests.filter(
+    (quest) => quest.category === 'msq',
+  );
+
+  const classAndJobQuests = quests.filter((quest) =>
+    [
+      'class',
+      'job',
+      'role',
+      'crafting',
+      'gathering',
+    ].includes(quest.category),
+  );
+
+  const completedQuestCount = quests.filter((quest) =>
+    completedQuestIdSet.has(quest.id),
+  ).length;
+
+  const completedMainScenarioCount =
+    mainScenarioQuests.filter((quest) =>
+      completedQuestIdSet.has(quest.id),
+    ).length;
+
+  const completedClassAndJobCount =
+    classAndJobQuests.filter((quest) =>
+      completedQuestIdSet.has(quest.id),
+    ).length;
+
+  const currentQuest =
+    profile.currentQuestId &&
+    questCatalogState.status === 'success'
+      ? questCatalogState.catalog.questsById.get(
+          profile.currentQuestId,
+        )
+      : undefined;
+
   return (
     <div className="dashboard-page">
       <header className="page-header">
         <div>
-          <p className="page-header__eyebrow">Character Overview</p>
+          <p className="page-header__eyebrow">
+            Character Overview
+          </p>
+
           <h1>Completion Dashboard</h1>
+
           <p className="page-header__description">
-            Track your progression across quests and future completionist
-            modules.
+            Track your progression across quests and future
+            completionist modules.
           </p>
         </div>
 
-        <div className="page-header__badge">No profile selected</div>
+        <div className="page-header__badge">
+          {profile.characterName || 'No character name'}
+          {profile.world && ` · ${profile.world}`}
+        </div>
       </header>
 
       <section
@@ -71,22 +139,22 @@ export function DashboardPage() {
       >
         <ProgressCard
           title="Overall Progress"
-          completed={0}
-          total={0}
-          description="All registered completion categories."
+          completed={completedQuestCount}
+          total={quests.length}
+          description="All currently loaded completion entries."
         />
 
         <ProgressCard
           title="Main Scenario"
-          completed={0}
-          total={0}
-          description="MSQ completion across every expansion and patch."
+          completed={completedMainScenarioCount}
+          total={mainScenarioQuests.length}
+          description="MSQ completion across every loaded expansion and patch."
         />
 
         <ProgressCard
           title="Class & Job Quests"
-          completed={0}
-          total={0}
+          completed={completedClassAndJobCount}
+          total={classAndJobQuests.length}
           description="Combat, crafting, and gathering quest lines."
         />
       </section>
@@ -95,29 +163,67 @@ export function DashboardPage() {
         <section className="dashboard-panel">
           <header className="dashboard-panel__header">
             <div>
-              <p className="dashboard-panel__eyebrow">Current Journey</p>
+              <p className="dashboard-panel__eyebrow">
+                Current Journey
+              </p>
+
               <h2>Where you left off</h2>
             </div>
           </header>
 
-          <div className="dashboard-empty-state">
-            <div className="dashboard-empty-state__symbol" aria-hidden="true">
-              ◇
+          {currentQuest ? (
+            <div className="dashboard-current-quest">
+              <p className="dashboard-current-quest__eyebrow">
+                {currentQuest.expansionId.toUpperCase()} ·
+                Patch {currentQuest.patch}
+              </p>
+
+              <h3>{currentQuest.name}</h3>
+
+              <p className="dashboard-current-quest__level">
+                Level {currentQuest.level}{' '}
+                {currentQuest.category.toUpperCase()}
+              </p>
+
+              {currentQuest.duties &&
+                currentQuest.duties.length > 0 && (
+                  <div className="dashboard-current-quest__details">
+                    <p>Upcoming duty</p>
+
+                    {currentQuest.duties.map((duty) => (
+                      <strong key={duty.id}>
+                        {duty.name}
+                      </strong>
+                    ))}
+                  </div>
+                )}
             </div>
+          ) : (
+            <div className="dashboard-empty-state">
+              <div
+                className="dashboard-empty-state__symbol"
+                aria-hidden="true"
+              >
+                ◇
+              </div>
 
-            <h3>No current quest selected</h3>
+              <h3>No current quest selected</h3>
 
-            <p>
-              Your active MSQ and the next major unlocks will appear here once
-              quest progression is configured.
-            </p>
-          </div>
+              <p>
+                Select “Set current” beside a quest to display
+                it here.
+              </p>
+            </div>
+          )}
         </section>
 
         <section className="dashboard-panel">
           <header className="dashboard-panel__header">
             <div>
-              <p className="dashboard-panel__eyebrow">Modules</p>
+              <p className="dashboard-panel__eyebrow">
+                Modules
+              </p>
+
               <h2>Tracker status</h2>
             </div>
           </header>
@@ -126,7 +232,12 @@ export function DashboardPage() {
             <div className="module-status">
               <div>
                 <h3>Quest Log</h3>
-                <p>MSQ, class quests, job quests, and unlocks.</p>
+
+                <p>
+                  {completedQuestCount.toLocaleString()} of{' '}
+                  {quests.length.toLocaleString()} loaded
+                  quests complete.
+                </p>
               </div>
 
               <span className="module-status__badge module-status__badge--active">
@@ -137,10 +248,16 @@ export function DashboardPage() {
             <div className="module-status">
               <div>
                 <h3>Additional Modules</h3>
-                <p>Fishing, duties, mounts, and other trackers.</p>
+
+                <p>
+                  Fishing, duties, mounts, and other
+                  trackers.
+                </p>
               </div>
 
-              <span className="module-status__badge">Future</span>
+              <span className="module-status__badge">
+                Future
+              </span>
             </div>
           </div>
         </section>
