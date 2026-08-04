@@ -16,15 +16,10 @@
   overflow-x: hidden;
   overflow-y: auto;
 
-  background:
-    linear-gradient(
-      180deg,
-      rgb(21 26 38 / 99%) 0%,
-      rgb(14 18 28 / 100%) 100%
-    );
+  background: var(--color-sidebar);
 
   border-right: 1px solid var(--color-border);
-  box-shadow: 1rem 0 2rem rgb(0 0 0 / 10%);
+  box-shadow: 0.4rem 0 1.25rem rgb(0 0 0 / 14%);
 
   transition:
     width 180ms ease,
@@ -34,7 +29,7 @@
 .app-sidebar:hover,
 .app-sidebar:focus-within {
   width: 17rem;
-  box-shadow: 1.25rem 0 3rem rgb(0 0 0 / 28%);
+  box-shadow: 0.75rem 0 2rem rgb(0 0 0 / 28%);
 }
 
 .app-brand {
@@ -57,14 +52,14 @@
   place-items: center;
   flex: 0 0 3.25rem;
 
-  border: 1px solid var(--color-accent-border);
-  border-radius: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.45rem;
 
   color: var(--color-accent-light);
-  background: var(--color-accent-muted);
+  background: transparent;
 
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.08em;
 }

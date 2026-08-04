@@ -1,7 +1,23 @@
+import { useState } from 'react';
+
 import { useProgressStore } from '../../../core/progress/progressStore';
 
-import type { Quest } from '../data/questSchemas';
+import { QuestDetailsDrawer } from '../components/QuestDetailsDrawer';
+import { QuestEntry } from '../components/QuestEntry';
+
+import type {
+  QuestCategory,
+} from '../data/questSchemas';
+
 import { useQuestCatalog } from '../hooks/useQuestCatalog';
+
+import {
+  QUEST_CATEGORY_OPTIONS,
+  QUEST_STATUS_OPTIONS,
+  questMatchesSearch,
+  questMatchesStatus,
+  type QuestStatusFilter,
+} from '../utilities/questPresentation';
 
 import './QuestLogPage.css';
 
@@ -11,119 +27,11 @@ function formatVerificationStatus(
   return status.charAt(0).toUpperCase() + status.slice(1);
 }
 
-interface QuestEntryProps {
-  quest: Quest;
-  isCompleted: boolean;
-  isCurrent: boolean;
-  onToggleCompletion: () => void;
-  onToggleCurrent: () => void;
-}
-
-function QuestEntry({
-  quest,
-  isCompleted,
-  isCurrent,
-  onToggleCompletion,
-  onToggleCurrent,
-}: QuestEntryProps) {
-  return (
-    <article
-      className={[
-        'quest-entry',
-        isCompleted ? 'quest-entry--complete' : '',
-        isCurrent ? 'quest-entry--current' : '',
-      ]
-        .filter(Boolean)
-        .join(' ')}
-    >
-      <div className="quest-entry__main">
-        <label className="quest-entry__check">
-          <input
-            type="checkbox"
-            checked={isCompleted}
-            aria-label={`Mark ${quest.name} complete`}
-            onChange={onToggleCompletion}
-          />
-
-          <span
-            className="quest-entry__custom-check"
-            aria-hidden="true"
-          />
-        </label>
-
-        <div className="quest-entry__content">
-          <div className="quest-entry__heading">
-            <h4>{quest.name}</h4>
-
-            <div className="quest-entry__actions">
-              <span className="quest-entry__level">
-                Level {quest.level}
-              </span>
-
-              <button
-                className={[
-                  'quest-entry__current-button',
-                  isCurrent
-                    ? 'quest-entry__current-button--active'
-                    : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-                type="button"
-                aria-pressed={isCurrent}
-                onClick={onToggleCurrent}
-              >
-                {isCurrent ? 'Current' : 'Set current'}
-              </button>
-            </div>
-          </div>
-
-          {quest.duties && quest.duties.length > 0 && (
-            <div
-              className="quest-entry__metadata"
-              aria-label="Quest duties"
-            >
-              {quest.duties.map((duty) => (
-                <span
-                  key={duty.id}
-                  className="quest-entry__tag quest-entry__tag--duty"
-                >
-                  {duty.type}: {duty.name}
-                </span>
-              ))}
-            </div>
-          )}
-
-          {quest.unlocks && quest.unlocks.length > 0 && (
-            <div
-              className="quest-entry__metadata"
-              aria-label="Quest unlocks"
-            >
-              {quest.unlocks.map((unlock) => (
-                <span
-                  key={`${unlock.type}-${unlock.targetId ?? unlock.name}`}
-                  className="quest-entry__tag"
-                >
-                  Unlocks: {unlock.name}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-    </article>
-  );
-}
-
 export function QuestLogPage() {
   const state = useQuestCatalog();
 
-  const completedQuestIds = useProgressStore(
-    (store) => store.profile.completedQuestIds,
-  );
-
-  const currentQuestId = useProgressStore(
-    (store) => store.profile.currentQuestId,
+  const profile = useProgressStore(
+    (store) => store.profile,
   );
 
   const toggleQuestCompletion = useProgressStore(
@@ -134,16 +42,152 @@ export function QuestLogPage() {
     (store) => store.setCurrentQuest,
   );
 
-  const completedQuestIdSet = new Set(
-    completedQuestIds,
+  const toggleQuestBookmark = useProgressStore(
+    (store) => store.toggleQuestBookmark,
   );
 
-  const loadedCompletedCount =
+  const setQuestNote = useProgressStore(
+    (store) => store.setQuestNote,
+  );
+
+  const [searchQuery, setSearchQuery] =
+    useState('');
+
+  const [categoryFilter, setCategoryFilter] =
+    useState<QuestCategory | 'all'>('all');
+
+  const [statusFilter, setStatusFilter] =
+    useState<QuestStatusFilter>('all');
+
+  const [selectedQuestId, setSelectedQuestId] =
+    useState<string | null>(null);
+
+  const [
+    collapsedGroupIds,
+    setCollapsedGroupIds,
+  ] = useState<ReadonlySet<string>>(
+    () => new Set(),
+  );
+
+  const completedQuestIdSet = new Set(
+    profile.completedQuestIds,
+  );
+
+  const bookmarkedQuestIdSet = new Set(
+    profile.bookmarkedQuestIds,
+  );
+
+  const catalog =
     state.status === 'success'
-      ? completedQuestIds.filter((questId) =>
-          state.catalog.questsById.has(questId),
-        ).length
-      : 0;
+      ? state.catalog
+      : null;
+
+  const filteredCollections =
+    catalog?.collections
+      .map((collection) => {
+        const groups = collection.groups
+          .map((group) => {
+            const quests = group.quests.filter(
+              (quest) => {
+                const matchesCategory =
+                  categoryFilter === 'all' ||
+                  quest.category === categoryFilter;
+
+                const matchesSearch =
+                  questMatchesSearch(
+                    quest,
+                    searchQuery,
+                  );
+
+                const matchesStatus =
+                  questMatchesStatus(
+                    quest,
+                    statusFilter,
+                    {
+                      completedQuestIds:
+                        completedQuestIdSet,
+
+                      bookmarkedQuestIds:
+                        bookmarkedQuestIdSet,
+
+                      currentQuestId:
+                        profile.currentQuestId,
+                    },
+                  );
+
+                return (
+                  matchesCategory &&
+                  matchesSearch &&
+                  matchesStatus
+                );
+              },
+            );
+
+            return {
+              group,
+              quests,
+            };
+          })
+          .filter(
+            ({ quests }) => quests.length > 0,
+          );
+
+        return {
+          collection,
+          groups,
+        };
+      })
+      .filter(({ groups }) => groups.length > 0) ??
+    [];
+
+  const visibleQuestCount =
+    filteredCollections.reduce(
+      (collectionTotal, { groups }) =>
+        collectionTotal +
+        groups.reduce(
+          (groupTotal, { quests }) =>
+            groupTotal + quests.length,
+          0,
+        ),
+      0,
+    );
+
+  const loadedCompletedCount = catalog
+    ? profile.completedQuestIds.filter(
+        (questId) =>
+          catalog.questsById.has(questId),
+      ).length
+    : 0;
+
+  const selectedQuest =
+    catalog && selectedQuestId
+      ? catalog.questsById.get(selectedQuestId)
+      : undefined;
+
+  const hasActiveFilters =
+    searchQuery.trim().length > 0 ||
+    categoryFilter !== 'all' ||
+    statusFilter !== 'all';
+
+  function toggleGroup(groupKey: string) {
+    setCollapsedGroupIds((current) => {
+      const next = new Set(current);
+
+      if (next.has(groupKey)) {
+        next.delete(groupKey);
+      } else {
+        next.add(groupKey);
+      }
+
+      return next;
+    });
+  }
+
+  function clearFilters() {
+    setSearchQuery('');
+    setCategoryFilter('all');
+    setStatusFilter('all');
+  }
 
   return (
     <div className="quest-log-page">
@@ -156,8 +200,8 @@ export function QuestLogPage() {
           <h1>Quest Log</h1>
 
           <p className="page-header__description">
-            Track the main scenario and every class, job,
-            crafting, and gathering quest.
+            Track the main scenario and every class,
+            job, crafting, and gathering quest.
           </p>
         </div>
 
@@ -188,8 +232,9 @@ export function QuestLogPage() {
             <h2>Preparing the quest catalog</h2>
 
             <p>
-              The manifest and every enabled quest collection
-              are being loaded and validated.
+              The manifest and every enabled quest
+              collection are being loaded and
+              validated.
             </p>
           </div>
         </section>
@@ -219,123 +264,377 @@ export function QuestLogPage() {
       )}
 
       {state.status === 'success' && (
-        <div className="quest-collections">
-          {state.catalog.collections.map(
-            (collection) => {
-              const collectionQuests =
-                collection.groups.flatMap(
-                  (group) => group.quests,
-                );
+        <>
+          <section
+            className="quest-toolbar"
+            aria-label="Quest filters"
+          >
+            <label className="quest-filter quest-filter--search">
+              <span>Search</span>
 
-              const completedCollectionCount =
-                collectionQuests.filter((quest) =>
-                  completedQuestIdSet.has(quest.id),
-                ).length;
+              <input
+                type="search"
+                value={searchQuery}
+                placeholder="Quest, duty, unlock, NPC, zone, item..."
+                onChange={(event) => {
+                  setSearchQuery(
+                    event.target.value,
+                  );
+                }}
+              />
+            </label>
 
-              return (
-                <section
-                  key={collection.id}
-                  className="quest-collection"
+            <div className="quest-toolbar__selects">
+              <label className="quest-filter">
+                <span>Category</span>
+
+                <select
+                  value={categoryFilter}
+                  onChange={(event) => {
+                    setCategoryFilter(
+                      event.target.value as
+                        | QuestCategory
+                        | 'all',
+                    );
+                  }}
                 >
-                  <header className="quest-collection__header">
-                    <div>
-                      <p className="quest-collection__eyebrow">
-                        {collection.expansionId?.toUpperCase() ??
-                          'Quest Collection'}
+                  <option value="all">
+                    All categories
+                  </option>
 
-                        {collection.patch &&
-                          ` · Patch ${collection.patch}`}
-                      </p>
+                  {QUEST_CATEGORY_OPTIONS.map(
+                    (option) => (
+                      <option
+                        key={option.value}
+                        value={option.value}
+                      >
+                        {option.label}
+                      </option>
+                    ),
+                  )}
+                </select>
+              </label>
 
-                      <h2>{collection.title}</h2>
+              <label className="quest-filter">
+                <span>Progress</span>
 
-                      <p className="quest-collection__description">
-                        {collection.description}
-                      </p>
+                <select
+                  value={statusFilter}
+                  onChange={(event) => {
+                    setStatusFilter(
+                      event.target
+                        .value as QuestStatusFilter,
+                    );
+                  }}
+                >
+                  {QUEST_STATUS_OPTIONS.map(
+                    (option) => (
+                      <option
+                        key={option.value}
+                        value={option.value}
+                      >
+                        {option.label}
+                      </option>
+                    ),
+                  )}
+                </select>
+              </label>
+            </div>
 
-                      <p className="quest-collection__progress">
-                        {completedCollectionCount} of{' '}
-                        {collectionQuests.length} complete
-                      </p>
-                    </div>
+            <div className="quest-toolbar__summary">
+              <p>
+                {visibleQuestCount.toLocaleString()} of{' '}
+                {state.catalog.questCount.toLocaleString()}{' '}
+                quests shown
+              </p>
 
-                    <span
-                      className={[
-                        'quest-collection__status',
-                        `quest-collection__status--${collection.verificationStatus}`,
-                      ].join(' ')}
+              <button
+                type="button"
+                disabled={!hasActiveFilters}
+                onClick={clearFilters}
+              >
+                Clear filters
+              </button>
+            </div>
+          </section>
+
+          {filteredCollections.length > 0 ? (
+            <div className="quest-collections">
+              {filteredCollections.map(
+                ({ collection, groups }) => {
+                  const collectionQuests =
+                    collection.groups.flatMap(
+                      (group) => group.quests,
+                    );
+
+                  const completedCollectionCount =
+                    collectionQuests.filter(
+                      (quest) =>
+                        completedQuestIdSet.has(
+                          quest.id,
+                        ),
+                    ).length;
+
+                  return (
+                    <section
+                      key={collection.id}
+                      className="quest-collection"
                     >
-                      {formatVerificationStatus(
-                        collection.verificationStatus,
-                      )}
-                    </span>
-                  </header>
+                      <header className="quest-collection__header">
+                        <div>
+                          <p className="quest-collection__eyebrow">
+                            {collection.expansionId?.toUpperCase() ??
+                              'Quest Collection'}
 
-                  <div className="quest-groups">
-                    {collection.groups.map((group) => {
-                      const completedGroupCount =
-                        group.quests.filter((quest) =>
-                          completedQuestIdSet.has(
-                            quest.id,
-                          ),
-                        ).length;
+                            {collection.patch &&
+                              ` · Patch ${collection.patch}`}
+                          </p>
 
-                      return (
-                        <section
-                          key={group.id}
-                          className="quest-group"
+                          <h2>
+                            {collection.title}
+                          </h2>
+
+                          <p className="quest-collection__description">
+                            {collection.description}
+                          </p>
+
+                          <p className="quest-collection__progress">
+                            {
+                              completedCollectionCount
+                            }{' '}
+                            of{' '}
+                            {
+                              collectionQuests.length
+                            }{' '}
+                            complete
+                          </p>
+                        </div>
+
+                        <span
+                          className={[
+                            'quest-collection__status',
+                            `quest-collection__status--${collection.verificationStatus}`,
+                          ].join(' ')}
                         >
-                          <header className="quest-group__header">
-                            <div>
-                              <p className="quest-group__eyebrow">
-                                Quest Range
-                              </p>
+                          {formatVerificationStatus(
+                            collection.verificationStatus,
+                          )}
+                        </span>
+                      </header>
 
-                              <h3>{group.title}</h3>
-                            </div>
+                      <div className="quest-groups">
+                        {groups.map(
+                          ({ group, quests }) => {
+                            const groupKey = `${collection.id}:${group.id}`;
 
-                            <span className="quest-group__count">
-                              {completedGroupCount} /{' '}
-                              {group.quests.length} complete
-                            </span>
-                          </header>
+                            const isCollapsed =
+                              collapsedGroupIds.has(
+                                groupKey,
+                              );
 
-                          <div className="quest-group__entries">
-                            {group.quests.map((quest) => (
-                              <QuestEntry
-                                key={quest.id}
-                                quest={quest}
-                                isCompleted={completedQuestIdSet.has(
-                                  quest.id,
-                                )}
-                                isCurrent={
-                                  currentQuestId === quest.id
-                                }
-                                onToggleCompletion={() => {
-                                  toggleQuestCompletion(
+                            const completedGroupCount =
+                              group.quests.filter(
+                                (quest) =>
+                                  completedQuestIdSet.has(
                                     quest.id,
-                                  );
-                                }}
-                                onToggleCurrent={() => {
-                                  setCurrentQuest(
-                                    currentQuestId ===
-                                      quest.id
-                                      ? null
-                                      : quest.id,
-                                  );
-                                }}
-                              />
-                            ))}
-                          </div>
-                        </section>
-                      );
-                    })}
-                  </div>
-                </section>
-              );
-            },
+                                  ),
+                              ).length;
+
+                            return (
+                              <section
+                                key={group.id}
+                                className="quest-group"
+                              >
+                                <button
+                                  className="quest-group__toggle"
+                                  type="button"
+                                  aria-expanded={
+                                    !isCollapsed
+                                  }
+                                  onClick={() => {
+                                    toggleGroup(
+                                      groupKey,
+                                    );
+                                  }}
+                                >
+                                  <span className="quest-group__title">
+                                    <span className="quest-group__eyebrow">
+                                      Quest Range
+                                    </span>
+
+                                    <strong>
+                                      {group.title}
+                                    </strong>
+                                  </span>
+
+                                  <span className="quest-group__summary">
+                                    <span>
+                                      {
+                                        completedGroupCount
+                                      }{' '}
+                                      /{' '}
+                                      {
+                                        group.quests
+                                          .length
+                                      }{' '}
+                                      complete
+                                    </span>
+
+                                    {quests.length !==
+                                      group.quests
+                                        .length && (
+                                      <span>
+                                        {quests.length}{' '}
+                                        shown
+                                      </span>
+                                    )}
+
+                                    <span
+                                      className={[
+                                        'quest-group__chevron',
+                                        isCollapsed
+                                          ? ''
+                                          : 'quest-group__chevron--open',
+                                      ]
+                                        .filter(
+                                          Boolean,
+                                        )
+                                        .join(' ')}
+                                      aria-hidden="true"
+                                    >
+                                      ›
+                                    </span>
+                                  </span>
+                                </button>
+
+                                {!isCollapsed && (
+                                  <div className="quest-group__entries">
+                                    {quests.map(
+                                      (quest) => (
+                                        <QuestEntry
+                                          key={
+                                            quest.id
+                                          }
+                                          quest={
+                                            quest
+                                          }
+                                          isCompleted={completedQuestIdSet.has(
+                                            quest.id,
+                                          )}
+                                          isCurrent={
+                                            profile.currentQuestId ===
+                                            quest.id
+                                          }
+                                          isBookmarked={bookmarkedQuestIdSet.has(
+                                            quest.id,
+                                          )}
+                                          onToggleCompletion={() => {
+                                            toggleQuestCompletion(
+                                              quest.id,
+                                            );
+                                          }}
+                                          onToggleCurrent={() => {
+                                            setCurrentQuest(
+                                              profile.currentQuestId ===
+                                                quest.id
+                                                ? null
+                                                : quest.id,
+                                            );
+                                          }}
+                                          onToggleBookmark={() => {
+                                            toggleQuestBookmark(
+                                              quest.id,
+                                            );
+                                          }}
+                                          onOpenDetails={() => {
+                                            setSelectedQuestId(
+                                              quest.id,
+                                            );
+                                          }}
+                                        />
+                                      ),
+                                    )}
+                                  </div>
+                                )}
+                              </section>
+                            );
+                          },
+                        )}
+                      </div>
+                    </section>
+                  );
+                },
+              )}
+            </div>
+          ) : (
+            <section className="quest-empty-results">
+              <div aria-hidden="true">◇</div>
+
+              <h2>No quests match these filters</h2>
+
+              <p>
+                Try a broader search or clear the
+                active category and progress filters.
+              </p>
+
+              <button
+                type="button"
+                onClick={clearFilters}
+              >
+                Clear filters
+              </button>
+            </section>
           )}
-        </div>
+        </>
+      )}
+
+      {selectedQuest && catalog && (
+        <QuestDetailsDrawer
+          quest={selectedQuest}
+          questsById={catalog.questsById}
+          isCompleted={completedQuestIdSet.has(
+            selectedQuest.id,
+          )}
+          isCurrent={
+            profile.currentQuestId ===
+            selectedQuest.id
+          }
+          isBookmarked={bookmarkedQuestIdSet.has(
+            selectedQuest.id,
+          )}
+          personalNote={
+            profile.questNotes[
+              selectedQuest.id
+            ] ?? ''
+          }
+          onClose={() => {
+            setSelectedQuestId(null);
+          }}
+          onToggleCompletion={() => {
+            toggleQuestCompletion(
+              selectedQuest.id,
+            );
+          }}
+          onToggleCurrent={() => {
+            setCurrentQuest(
+              profile.currentQuestId ===
+                selectedQuest.id
+                ? null
+                : selectedQuest.id,
+            );
+          }}
+          onToggleBookmark={() => {
+            toggleQuestBookmark(
+              selectedQuest.id,
+            );
+          }}
+          onSaveNote={(note) => {
+            setQuestNote(
+              selectedQuest.id,
+              note,
+            );
+          }}
+        />
       )}
     </div>
   );

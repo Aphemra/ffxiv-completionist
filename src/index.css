@@ -1,37 +1,60 @@
 :root {
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
     sans-serif;
-  color: #e8ebf2;
-  background: #0d111a;
+
+  color: #f2f3f4;
+  background: #2b3036;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 
-  --color-background: #0d111a;
-  --color-surface: #161c28;
-  --color-surface-raised: #1a2130;
-  --color-surface-hover: #202838;
+  /*
+   * Teamcraft-inspired charcoal palette.
+   *
+   * The original Teamcraft interface uses blue for its primary accent.
+   * This application intentionally retains a gold/yellow accent instead.
+   */
 
-  --color-border: #2a3344;
-  --color-border-strong: #3a465c;
+  --color-background: #2b3036;
 
-  --color-text-primary: #f1f3f8;
-  --color-text-secondary: #bbc2d0;
-  --color-text-muted: #8993a5;
-  --color-text-subtle: #667084;
+  --color-sidebar: #171d24;
+  --color-sidebar-raised: #20262e;
 
-  --color-accent: #bf934d;
-  --color-accent-light: #e4bd78;
-  --color-accent-muted: rgb(191 147 77 / 12%);
-  --color-accent-border: rgb(191 147 77 / 35%);
+  --color-surface: #353a40;
+  --color-surface-raised: #41464c;
+  --color-surface-hover: #4a5057;
 
-  --color-success: #89c89b;
-  --color-success-muted: rgb(76 158 100 / 12%);
-  --color-success-border: rgb(76 158 100 / 35%);
+  --color-border: #474d54;
+  --color-border-strong: #5d646c;
 
-  --color-progress-track: #252d3d;
+  --color-text-primary: #f3f4f5;
+  --color-text-secondary: #c9cdd1;
+  --color-text-muted: #9ba1a8;
+  --color-text-subtle: #747b83;
 
-  --shadow-panel: 0 1rem 3rem rgb(0 0 0 / 12%);
+  --color-accent: #d8aa3d;
+  --color-accent-light: #f0ca67;
+  --color-accent-muted: rgb(216 170 61 / 14%);
+  --color-accent-border: rgb(216 170 61 / 48%);
+
+  --color-success: #8acb9b;
+  --color-success-muted: rgb(87 174 110 / 14%);
+  --color-success-border: rgb(87 174 110 / 42%);
+
+  --color-danger: #e18989;
+  --color-danger-muted: rgb(185 72 72 / 15%);
+  --color-danger-border: rgb(205 91 91 / 45%);
+
+  --color-progress-track: #565c63;
+
+  --shadow-panel: 0 0.25rem 0.85rem rgb(0 0 0 / 10%);
+  --shadow-overlay: 0 1rem 3rem rgb(0 0 0 / 32%);
 }
 
 * {
@@ -41,6 +64,8 @@
 html {
   min-width: 20rem;
   min-height: 100%;
+
+  color-scheme: dark;
   background: var(--color-background);
 }
 
@@ -48,13 +73,9 @@ body {
   min-width: 20rem;
   min-height: 100vh;
   margin: 0;
-  background:
-    radial-gradient(
-      circle at 80% 0%,
-      rgb(56 68 94 / 20%) 0%,
-      transparent 32rem
-    ),
-    var(--color-background);
+
+  color: var(--color-text-primary);
+  background: var(--color-background);
 }
 
 button,
@@ -74,8 +95,27 @@ a {
 }
 
 ::selection {
-  color: var(--color-text-primary);
-  background: rgb(191 147 77 / 35%);
+  color: #171717;
+  background: var(--color-accent-light);
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-sidebar);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 0.15rem solid var(--color-sidebar);
+  border-radius: 999px;
+  background: var(--color-border-strong);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-subtle);
 }
 
 .simple-page {
@@ -86,6 +126,7 @@ a {
 
 .simple-page h1 {
   margin: 0;
+
   color: var(--color-text-primary);
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -93,12 +134,14 @@ a {
 
 .simple-page > p:not(.page-header__eyebrow) {
   margin: 1rem 0;
+
   color: var(--color-text-secondary);
   line-height: 1.7;
 }
 
 .text-link {
   display: inline-block;
+
   color: var(--color-accent-light);
   font-size: 0.9rem;
   font-weight: 700;
