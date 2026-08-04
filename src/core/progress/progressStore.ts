@@ -24,8 +24,9 @@ function createInitialProfile(): PlayerProgress {
 
     profileId: 'local-profile',
     characterName: '',
-    dataCenter: '',
-    world: '',
+startingCity: null,
+dataCenter: '',
+world: '',
 
     completedQuestIds: [],
     currentQuestId: null,
@@ -80,8 +81,9 @@ export const useProgressStore = create<ProgressStore>()(
         set((state) => ({
           profile: updateProfile(state.profile, {
             characterName: metadata.characterName.trim(),
-            dataCenter: metadata.dataCenter.trim(),
-            world: metadata.world.trim(),
+startingCity: metadata.startingCity,
+dataCenter: metadata.dataCenter.trim(),
+world: metadata.world.trim(),
           }),
         }));
       },

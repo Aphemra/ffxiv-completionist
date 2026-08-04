@@ -60,7 +60,14 @@
   font-weight: 700;
 }
 
-.profile-field input {
+.profile-field__hint {
+  color: var(--color-text-muted);
+  font-size: 0.67rem;
+  line-height: 1.5;
+}
+
+.profile-field input,
+.profile-field select {
   width: 100%;
   min-height: 2.8rem;
 
@@ -83,11 +90,13 @@
   color: var(--color-text-subtle);
 }
 
-.profile-field input:hover {
+.profile-field input:hover,
+.profile-field select:hover {
   border-color: var(--color-border-strong);
 }
 
-.profile-field input:focus {
+.profile-field input:focus,
+.profile-field select:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 0 0.2rem var(--color-accent-muted);
 }

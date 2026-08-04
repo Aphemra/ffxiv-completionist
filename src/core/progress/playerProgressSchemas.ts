@@ -1,5 +1,9 @@
 import * as z from 'zod';
 
+import {
+  startingCityIdSchema,
+} from '../game/gameSchemas';
+
 const contentIdSchema = z
   .string()
   .trim()
@@ -15,6 +19,11 @@ export const playerProgressSchema = z.strictObject({
 
   profileId: z.string().trim().min(1).max(120),
   characterName: z.string().trim().max(80),
+
+  startingCity: startingCityIdSchema
+    .nullable()
+    .default(null),
+
   dataCenter: z.string().trim().max(80),
   world: z.string().trim().max(80),
 
@@ -35,9 +44,14 @@ export const persistedProgressStateSchema = z.strictObject({
   profile: playerProgressSchema,
 });
 
-export type PlayerProgress = z.infer<typeof playerProgressSchema>;
+export type PlayerProgress = z.infer<
+  typeof playerProgressSchema
+>;
 
 export type ProfileMetadata = Pick<
   PlayerProgress,
-  'characterName' | 'dataCenter' | 'world'
+  | 'characterName'
+  | 'startingCity'
+  | 'dataCenter'
+  | 'world'
 >;

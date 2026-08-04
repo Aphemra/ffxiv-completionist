@@ -1,5 +1,8 @@
 import { useProgressStore } from '../../../core/progress/progressStore';
 import { useQuestCatalog } from '../../quests/hooks/useQuestCatalog';
+import {
+  createAvailableQuestCatalog,
+} from '../../quests/utilities/questAvailability';
 
 import './DashboardPage.css';
 
@@ -68,12 +71,21 @@ export function DashboardPage() {
     profile.completedQuestIds,
   );
 
-  const quests =
-    questCatalogState.status === 'success'
-      ? Array.from(
-          questCatalogState.catalog.questsById.values(),
-        )
-      : [];
+const availableQuestCatalog =
+  questCatalogState.status === 'success'
+    ? createAvailableQuestCatalog(
+        questCatalogState.catalog,
+        {
+          startingCity: profile.startingCity,
+        },
+      )
+    : null;
+
+const quests = availableQuestCatalog
+  ? Array.from(
+      availableQuestCatalog.questsById.values(),
+    )
+  : [];
 
   const mainScenarioQuests = quests.filter(
     (quest) => quest.category === 'msq',
@@ -103,13 +115,13 @@ export function DashboardPage() {
       completedQuestIdSet.has(quest.id),
     ).length;
 
-  const currentQuest =
-    profile.currentQuestId &&
-    questCatalogState.status === 'success'
-      ? questCatalogState.catalog.questsById.get(
-          profile.currentQuestId,
-        )
-      : undefined;
+const currentQuest =
+  profile.currentQuestId &&
+  availableQuestCatalog
+    ? availableQuestCatalog.questsById.get(
+        profile.currentQuestId,
+      )
+    : undefined;
 
   return (
     <div className="dashboard-page">

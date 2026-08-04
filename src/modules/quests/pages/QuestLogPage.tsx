@@ -1,4 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router';
+
+import {
+  createAvailableQuestCatalog,
+} from '../utilities/questAvailability';
 
 import { useProgressStore } from '../../../core/progress/progressStore';
 
@@ -77,10 +82,15 @@ export function QuestLogPage() {
     profile.bookmarkedQuestIds,
   );
 
-  const catalog =
-    state.status === 'success'
-      ? state.catalog
-      : null;
+const catalog =
+  state.status === 'success'
+    ? createAvailableQuestCatalog(
+        state.catalog,
+        {
+          startingCity: profile.startingCity,
+        },
+      )
+    : null;
 
   const filteredCollections =
     catalog?.collections
@@ -213,9 +223,40 @@ export function QuestLogPage() {
             'Quest data error'}
 
           {state.status === 'success' &&
-            `${loadedCompletedCount.toLocaleString()} / ${state.catalog.questCount.toLocaleString()} complete`}
+  catalog &&
+  `${loadedCompletedCount.toLocaleString()} / ${catalog.questCount.toLocaleString()} complete`}
         </div>
       </header>
+
+      {profile.startingCity === null && (
+  <section className="quest-path-notice">
+    <div
+      className="quest-path-notice__icon"
+      aria-hidden="true"
+    >
+      !
+    </div>
+
+    <div>
+      <p className="quest-path-notice__eyebrow">
+        Character route needed
+      </p>
+
+      <h2>Select your starting city</h2>
+
+      <p>
+        Early ARR quests differ between Gridania,
+        Limsa Lominsa, and Ul&apos;dah. Restricted
+        quest collections will remain hidden until
+        your route is configured.
+      </p>
+
+      <Link to="/profile">
+        Configure profile
+      </Link>
+    </div>
+  </section>
+)}
 
       {state.status === 'loading' && (
         <section className="quest-data-state">
@@ -344,7 +385,7 @@ export function QuestLogPage() {
             <div className="quest-toolbar__summary">
               <p>
                 {visibleQuestCount.toLocaleString()} of{' '}
-                {state.catalog.questCount.toLocaleString()}{' '}
+                {catalog?.questCount.toLocaleString() ?? 0}{' '}
                 quests shown
               </p>
 

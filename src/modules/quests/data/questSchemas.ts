@@ -1,5 +1,7 @@
 import * as z from 'zod';
 
+import { startingCityIdSchema } from '../../../core/game/gameSchemas';
+
 export const gameDataIdSchema = z
   .string()
   .trim()
@@ -54,6 +56,21 @@ export const questVerificationStatusSchema = z.enum([
   'partial',
   'verified',
 ]);
+
+export const questAvailabilitySchema = z.strictObject({
+  startingCityIds: z
+    .array(startingCityIdSchema)
+    .min(1)
+    .refine(
+      (cityIds) =>
+        new Set(cityIds).size === cityIds.length,
+      {
+        message:
+          'Starting-city restrictions cannot contain duplicate cities.',
+      },
+    )
+    .optional(),
+});
 
 export const itemQualitySchema = z.enum([
   'normal',
@@ -196,8 +213,9 @@ export const questSchema = z.strictObject({
   sortOrder: sortOrderSchema,
 
   start: questStartSchema.optional(),
+availability: questAvailabilitySchema.optional(),
 
-  prerequisiteQuestIds: z.array(gameDataIdSchema).optional(),
+prerequisiteQuestIds: z.array(gameDataIdSchema).optional(),
   nextQuestIds: z.array(gameDataIdSchema).optional(),
 
   requirements: z.array(questRequirementSchema).optional(),
@@ -229,7 +247,9 @@ export const questCollectionSchema = z
     patch: patchVersionSchema.optional(),
     classJobId: gameDataIdSchema.optional(),
 
-    sortOrder: sortOrderSchema,
+availability: questAvailabilitySchema.optional(),
+
+sortOrder: sortOrderSchema,
     verificationStatus: questVerificationStatusSchema,
 
     groups: z.array(questGroupSchema).min(1),
@@ -309,6 +329,7 @@ export type QuestRequirement = z.infer<typeof questRequirementSchema>;
 export type QuestRewards = z.infer<typeof questRewardsSchema>;
 export type QuestDuty = z.infer<typeof questDutySchema>;
 export type QuestUnlock = z.infer<typeof questUnlockSchema>;
+export type QuestAvailability = z.infer<typeof questAvailabilitySchema>;
 export type Quest = z.infer<typeof questSchema>;
 export type QuestGroup = z.infer<typeof questGroupSchema>;
 export type QuestCollection = z.infer<typeof questCollectionSchema>;

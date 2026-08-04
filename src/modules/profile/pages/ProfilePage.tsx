@@ -3,6 +3,11 @@ import {
   type FormEvent,
 } from 'react';
 
+import {
+  STARTING_CITY_OPTIONS,
+  type StartingCityId,
+} from '../../../core/game/gameSchemas';
+
 import { useProgressStore } from '../../../core/progress/progressStore';
 
 import './ProfilePage.css';
@@ -22,6 +27,11 @@ export function ProfilePage() {
     profile.characterName,
   );
 
+  const [startingCity, setStartingCity] =
+  useState<StartingCityId | null>(
+    profile.startingCity,
+  );
+
   const [dataCenter, setDataCenter] = useState(
     profile.dataCenter,
   );
@@ -34,10 +44,11 @@ export function ProfilePage() {
     event.preventDefault();
 
     updateProfileMetadata({
-      characterName,
-      dataCenter,
-      world,
-    });
+  characterName,
+  startingCity,
+  dataCenter,
+  world,
+});
 
     setSaveMessage('Profile saved.');
   }
@@ -108,6 +119,45 @@ export function ProfilePage() {
                 }}
               />
             </label>
+
+            <label className="profile-field">
+  <span className="profile-field__label">
+    Starting city
+  </span>
+
+  <select
+    value={startingCity ?? ''}
+    onChange={(event) => {
+      const value = event.target.value;
+
+      setStartingCity(
+        value.length > 0
+          ? (value as StartingCityId)
+          : null,
+      );
+
+      setSaveMessage('');
+    }}
+  >
+    <option value="">
+      Select a starting city
+    </option>
+
+    {STARTING_CITY_OPTIONS.map((option) => (
+      <option
+        key={option.value}
+        value={option.value}
+      >
+        {option.label}
+      </option>
+    ))}
+  </select>
+
+  <span className="profile-field__hint">
+    Used to select the correct early ARR main
+    scenario route.
+  </span>
+</label>
 
             <label className="profile-field">
               <span className="profile-field__label">
