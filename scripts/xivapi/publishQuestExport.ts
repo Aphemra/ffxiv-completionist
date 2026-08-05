@@ -5,7 +5,11 @@ import {
   questCollectionFileSchema,
   type QuestCollectionFile,
 } from '../../src/modules/quests/data/questCollectionFileSchemas';
-import type { Quest } from '../../src/modules/quests/data/questSchemas';
+import {
+  questManifestEntrySchema,
+  questManifestSchema,
+  type Quest,
+} from '../../src/modules/quests/data/questSchemas';
 import {
   questChainExportSchema,
   type QuestChainExport,
@@ -37,6 +41,19 @@ function requireOption(optionName: string): string {
 
   if (!value) {
     throw new Error(`Missing required option: ${optionName}`);
+  }
+
+  return value;
+}
+
+function requireNonNegativeIntegerOption(optionName: string): number {
+  const rawValue = requireOption(optionName);
+  const value = Number(rawValue);
+
+  if (!Number.isInteger(value) || value < 0) {
+    throw new Error(
+      `${optionName} must be a non-negative integer, received "${rawValue}".`,
+    );
   }
 
   return value;
@@ -352,6 +369,165 @@ function fillGroups(
   });
 }
 
+async function publishGenericCollection(
+  exportData: QuestChainExport,
+  rawOutputPath: string,
+  shouldWrite: boolean,
+): Promise<void> {
+  const collectionId = slugify(readOption('--collection-id') ?? exportData.id);
+
+  const collectionTitle = readOption('--collection-title') ?? exportData.title;
+
+  const collectionDescription =
+    readOption('--collection-description') ??
+    `${collectionTitle} quests imported from XIVAPI.`;
+
+  const collectionSortOrder = requireNonNegativeIntegerOption('--sort-order');
+
+  const groupId = slugify(readOption('--group-id') ?? `${collectionId}-quests`);
+
+  const groupTitle = readOption('--group-title') ?? collectionTitle;
+
+  const verificationStatus = readOption('--verification-status') ?? 'in-review';
+
+  const outputPath = path.resolve(projectRoot, rawOutputPath);
+
+  const questDataRoot = path.join(projectRoot, 'public', 'data', 'quests');
+
+  const relativeQuestDataPath = path.relative(questDataRoot, outputPath);
+
+  if (
+    relativeQuestDataPath.startsWith('..') ||
+    path.isAbsolute(relativeQuestDataPath)
+  ) {
+    throw new Error('--output must point somewhere inside public/data/quests.');
+  }
+
+  const publicRoot = path.join(projectRoot, 'public');
+
+  const manifestCollectionPath = path
+    .relative(publicRoot, outputPath)
+    .split(path.sep)
+    .join('/');
+
+  const quests = exportData.quests.map((quest) =>
+    convertQuest(quest, exportData),
+  );
+
+  const publishedQuestIds = new Set(quests.map((quest) => quest.id));
+
+  const startsAfterQuestIds = Array.from(
+    new Set(
+      quests.flatMap((quest) =>
+        (quest.prerequisiteQuestIds ?? []).filter(
+          (questId) => !publishedQuestIds.has(questId),
+        ),
+      ),
+    ),
+  );
+
+  const continuesToQuestIds = Array.from(
+    new Set(
+      quests.flatMap((quest) =>
+        (quest.nextQuestIds ?? []).filter(
+          (questId) => !publishedQuestIds.has(questId),
+        ),
+      ),
+    ),
+  );
+
+  const collection = questCollectionFileSchema.parse({
+    schemaVersion: 1,
+    format: 'linear',
+
+    startsAfterQuestIds:
+      startsAfterQuestIds.length > 0 ? startsAfterQuestIds : undefined,
+
+    continuesToQuestIds:
+      continuesToQuestIds.length > 0 ? continuesToQuestIds : undefined,
+
+    groups: [
+      {
+        id: groupId,
+        title: groupTitle,
+        sortOrder: 1,
+        quests,
+      },
+    ],
+  });
+
+  const manifestPath = path.join(questDataRoot, 'manifest.json');
+
+  const manifest = questManifestSchema.parse(await readJson(manifestPath));
+
+  const manifestEntry = questManifestEntrySchema.parse({
+    id: collectionId,
+    title: collectionTitle,
+    description: collectionDescription,
+
+    category: exportData.category,
+    expansionId: exportData.expansionId,
+    patch: exportData.patch,
+
+    sortOrder: collectionSortOrder,
+    verificationStatus,
+
+    path: manifestCollectionPath,
+    enabled: true,
+  });
+
+  const pathConflict = manifest.collections.find(
+    (entry) =>
+      entry.path === manifestEntry.path && entry.id !== manifestEntry.id,
+  );
+
+  if (pathConflict) {
+    throw new Error(
+      [
+        `Manifest path "${manifestEntry.path}" is already used by`,
+        `collection "${pathConflict.id}".`,
+      ].join(' '),
+    );
+  }
+
+  const existingEntryIndex = manifest.collections.findIndex(
+    (entry) => entry.id === manifestEntry.id,
+  );
+
+  const collections =
+    existingEntryIndex >= 0
+      ? manifest.collections.map((entry, index) =>
+          index === existingEntryIndex ? manifestEntry : entry,
+        )
+      : [...manifest.collections, manifestEntry];
+
+  collections.sort(
+    (left, right) =>
+      left.sortOrder - right.sortOrder || left.id.localeCompare(right.id),
+  );
+
+  const updatedManifest = questManifestSchema.parse({
+    ...manifest,
+    collections,
+  });
+
+  console.log(`${manifestCollectionPath}: ${quests.length} quests`);
+  console.log(
+    existingEntryIndex >= 0
+      ? `Updated manifest collection: ${collectionId}`
+      : `Added manifest collection: ${collectionId}`,
+  );
+
+  if (shouldWrite) {
+    await writeJsonFile(outputPath, collection);
+    await writeJsonFile(manifestPath, updatedManifest);
+
+    console.log('Collection and manifest updated.');
+  } else {
+    console.log('Dry run only; no files changed.');
+  }
+}
+
 async function main(): Promise<void> {
   const inputPath = path.resolve(projectRoot, requireOption('--file'));
   const shouldWrite = process.argv.includes('--write');
@@ -362,6 +538,14 @@ async function main(): Promise<void> {
     exportData.summary.unresolvedIssueCount > 0
   ) {
     throw new Error('The export is not complete.');
+  }
+
+  const genericOutputPath = readOption('--output');
+
+  if (genericOutputPath) {
+    await publishGenericCollection(exportData, genericOutputPath, shouldWrite);
+
+    return;
   }
 
   if (

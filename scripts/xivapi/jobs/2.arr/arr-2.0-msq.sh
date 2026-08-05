@@ -6,6 +6,7 @@ TITLE="A Realm Reborn - 2.0 Main Scenario"
 EXPANSION="arr"
 PATCH="2.0"
 CATEGORY="msq"
+DATA_EXPANSION_FOLDER="2.arr"
 
 SELECTION_MODE="chain"
 

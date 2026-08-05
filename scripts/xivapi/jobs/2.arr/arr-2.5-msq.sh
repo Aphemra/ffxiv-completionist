@@ -3,14 +3,15 @@
 EXPORT_ID="arr-2.5-msq"
 TITLE="Before the Fall: Part 1 - 2.5 Main Scenario"
 
+EXPANSION="arr"
+PATCH="2.5"
+CATEGORY="msq"
+DATA_EXPANSION_FOLDER="2.arr"
+
 SELECTION_MODE="chain"
 
 START_QUEST="Good Intentions"
 END_QUEST="In Memory of Moenbryda"
-
-EXPANSION="arr"
-PATCH="2.5"
-CATEGORY="msq"
 
 START_ROW=""
 END_ROW=""

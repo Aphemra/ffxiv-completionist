@@ -39,6 +39,20 @@ CLASS_JOB="${CLASS_JOB:-}"
 
 EXPORT_FILE="${EXPORT_FILE:-scripts/xivapi/exports/${EXPORT_ID}.json}"
 
+DATA_EXPANSION_FOLDER="${DATA_EXPANSION_FOLDER:-$EXPANSION}"
+
+PUBLISH_FILE="${PUBLISH_FILE:-public/data/quests/$CATEGORY/$DATA_EXPANSION_FOLDER/$PATCH/$EXPORT_ID.json}"
+
+COLLECTION_ID="${COLLECTION_ID:-$EXPORT_ID}"
+COLLECTION_TITLE="${COLLECTION_TITLE:-$TITLE}"
+COLLECTION_DESCRIPTION="${COLLECTION_DESCRIPTION:-$TITLE quests imported from XIVAPI.}"
+COLLECTION_SORT_ORDER="${COLLECTION_SORT_ORDER:-${PATCH//./}}"
+
+GROUP_ID="${GROUP_ID:-$COLLECTION_ID-quests}"
+GROUP_TITLE="${GROUP_TITLE:-$COLLECTION_TITLE}"
+
+VERIFICATION_STATUS="${VERIFICATION_STATUS:-in-review}"
+
 EXPORT_ARGUMENTS=(
   --id "$EXPORT_ID"
   --title "$TITLE"
@@ -128,6 +142,22 @@ require_complete() {
     --require-complete
 }
 
+publish_export() {
+  require_complete
+
+  npm run xivapi:publish:export -- \
+    --file "$EXPORT_FILE" \
+    --output "$PUBLISH_FILE" \
+    --collection-id "$COLLECTION_ID" \
+    --collection-title "$COLLECTION_TITLE" \
+    --collection-description "$COLLECTION_DESCRIPTION" \
+    --sort-order "$COLLECTION_SORT_ORDER" \
+    --group-id "$GROUP_ID" \
+    --group-title "$GROUP_TITLE" \
+    --verification-status "$VERIFICATION_STATUS" \
+    --write
+}
+
 regenerate_export() {
   echo
   echo "WARNING: This will overwrite:"
@@ -159,6 +189,7 @@ Usage:
   $0 issues
   $0 complete
   $0 regenerate
+  $0 publish
 
 Actions:
   export       Create the export without overwriting an existing file.
@@ -166,6 +197,7 @@ Actions:
   issues       Validate and print every unresolved field.
   complete     Require every display field to be completed.
   regenerate   Overwrite the export after confirmation.
+  publish      Validate, publish, and update the quest manifest.
 
 Selection mode:
   chain        Export a connected START_QUEST-to-END_QUEST chain.
@@ -193,6 +225,10 @@ case "$ACTION" in
 
   complete)
     require_complete
+    ;;
+
+  publish)
+    publish_export
     ;;
 
   regenerate)

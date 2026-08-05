@@ -6,6 +6,7 @@ TITLE="A Realm Awoken - 2.1 Main Scenario"
 EXPANSION="arr"
 PATCH="2.1"
 CATEGORY="msq"
+DATA_EXPANSION_FOLDER="2.arr"
 
 SELECTION_MODE="chain"
 
