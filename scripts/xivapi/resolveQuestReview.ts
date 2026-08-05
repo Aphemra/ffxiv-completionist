@@ -265,6 +265,21 @@ function collectReferenceRowIds(values: unknown, rowIdField: string): number[] {
     .filter((rowId): rowId is number => rowId !== undefined && rowId > 0);
 }
 
+function collectItemReferenceRowIds(
+  values: unknown,
+  itemSheet: 'Item' | 'EventItem',
+): number[] {
+  return asArray(values)
+    .map(asObject)
+    .filter(
+      (reference): reference is JsonObject =>
+        reference !== undefined &&
+        readString(reference.itemSheet) === itemSheet,
+    )
+    .map((reference) => readInteger(reference.itemRowId))
+    .filter((rowId): rowId is number => rowId !== undefined && rowId > 0);
+}
+
 function enrichReferences(
   values: unknown,
   rowIdField: string,
@@ -646,7 +661,12 @@ async function main(): Promise<void> {
 
   const rawActorReferences = asArray(unresolvedReferences.actors);
 
-  const itemRowIds = collectReferenceRowIds(rawItemReferences, 'itemRowId');
+  const itemRowIds = collectItemReferenceRowIds(rawItemReferences, 'Item');
+
+  const eventItemRowIds = collectItemReferenceRowIds(
+    rawItemReferences,
+    'EventItem',
+  );
 
   const actorRowIds = collectReferenceRowIds(rawActorReferences, 'actorRowId');
 
@@ -654,7 +674,23 @@ async function main(): Promise<void> {
 
   const itemRows = await fetchSheetRows('Item', itemRowIds, 'Name,Icon', pins);
 
+  const eventItemRows = await fetchSheetRows(
+    'EventItem',
+    eventItemRowIds,
+    'Name,Icon',
+    pins,
+  );
+
   const resolvedItems = createResolvedReferences('Item', itemRows);
+
+  const resolvedEventItems = createResolvedReferences(
+    'EventItem',
+    eventItemRows,
+  );
+
+  for (const [rowId, reference] of resolvedEventItems) {
+    resolvedItems.set(rowId, reference);
+  }
 
   const enpcRows = await fetchSheetRows(
     'ENpcResident',
@@ -790,7 +826,7 @@ async function main(): Promise<void> {
   if (enrichedItems.unresolved.length > 0) {
     addManualCheck(
       existingChecks,
-      'Some item references could not be resolved through the Item sheet.',
+      'Some item references could not be resolved through their declared Item or EventItem sheet.',
     );
   }
 

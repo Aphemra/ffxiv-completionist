@@ -57,6 +57,7 @@ interface ScriptParameter {
   referenceType:
     | 'actor'
     | 'item'
+    | 'event-item'
     | 'level'
     | 'event-object'
     | 'action'
@@ -328,8 +329,10 @@ function parseScriptParameters(fields: JsonObject): ScriptParameter[] {
         instruction.startsWith('LOC_ACTOR')
       ) {
         referenceType = 'actor';
-      } else if (instruction.includes('ITEM')) {
+      } else if (/^RITEM\d+$/.test(instruction)) {
         referenceType = 'item';
+      } else if (/^ITEM\d+$/.test(instruction)) {
+        referenceType = 'event-item';
       } else if (instruction.startsWith('LOC_POS')) {
         referenceType = 'level';
       } else if (instruction.includes('EOBJ')) {
@@ -855,17 +858,29 @@ async function main(): Promise<void> {
   const requiredItemReferences = scriptParameters
     .filter(
       (parameter) =>
-        parameter.referenceType === 'item' && parameter.argument > 0,
+        (parameter.referenceType === 'item' ||
+          parameter.referenceType === 'event-item') &&
+        parameter.argument > 0,
     )
-    .map((parameter) => ({
-      sourceInstruction: parameter.instruction,
+    .map((parameter) => {
+      const itemSheet =
+        parameter.referenceType === 'event-item' ? 'EventItem' : 'Item';
 
-      itemRowId: parameter.argument,
-      itemId: `item-${parameter.argument}`,
+      return {
+        sourceInstruction: parameter.instruction,
 
-      itemName: undefined,
-      quantity: undefined,
-    }));
+        itemSheet,
+        itemRowId: parameter.argument,
+
+        itemId:
+          itemSheet === 'EventItem'
+            ? `event-item-${parameter.argument}`
+            : `item-${parameter.argument}`,
+
+        itemName: undefined,
+        quantity: undefined,
+      };
+    });
 
   const unresolvedActorReferences = scriptParameters
     .filter(

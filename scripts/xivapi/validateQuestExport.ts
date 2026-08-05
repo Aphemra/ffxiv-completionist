@@ -194,10 +194,13 @@ function collectStartIssues(
 
 function collectUnresolvedIssues(
   exportData: QuestChainExport,
+  existingIssues: readonly QuestExportIssue[],
 ): QuestExportIssue[] {
-  const issues: QuestExportIssue[] = [];
+  const issues = existingIssues.filter(
+    (issue) => issue.field === 'requirements.item.name',
+  );
 
-  const issueKeys = new Set<string>();
+  const issueKeys = new Set(issues.map(createIssueKey));
 
   for (const quest of exportData.quests) {
     if (quest.level === null) {
@@ -953,7 +956,10 @@ async function main(): Promise<void> {
 
   const exportData = schemaResult.data;
 
-  const unresolvedIssues = collectUnresolvedIssues(exportData);
+  const unresolvedIssues = collectUnresolvedIssues(
+    exportData,
+    exportData.issues,
+  );
 
   const derivedGraphData = deriveGraphData(exportData);
 

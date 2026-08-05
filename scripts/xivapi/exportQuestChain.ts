@@ -1119,6 +1119,34 @@ function extractRequirements(
     }
   }
 
+  for (const rawReference of asArray(reviewRequirements?.unresolvedItems)) {
+    const reference = asObject(rawReference);
+
+    if (!reference) {
+      continue;
+    }
+
+    const itemSheet = readString(reference.itemSheet) ?? 'unknown sheet';
+
+    const itemRowId = readInteger(reference.itemRowId);
+
+    const sourceInstruction =
+      readString(reference.sourceInstruction) ?? 'unknown instruction';
+
+    pushIssue(issues, issueKeys, {
+      questId,
+      questName,
+
+      field: 'requirements.item.name',
+
+      message: [
+        `Could not resolve ${itemSheet}`,
+        `row ${itemRowId ?? 'unknown'}`,
+        `from ${sourceInstruction}.`,
+      ].join(' '),
+    });
+  }
+
   const itemReferences = [
     ...asArray(reviewRequirements?.itemReferences),
 
@@ -1137,6 +1165,10 @@ function extractRequirements(
 
     const itemRowId = readInteger(reference.itemRowId);
 
+    const importedItemId = readString(reference.itemId);
+
+    const itemSheet = readString(reference.itemSheet);
+
     if (!itemName) {
       continue;
     }
@@ -1146,7 +1178,13 @@ function extractRequirements(
     requirements.push({
       type: 'item',
 
-      itemId: itemRowId !== undefined ? `item-${itemRowId}` : slugify(itemName),
+      itemId:
+        importedItemId ??
+        (itemRowId !== undefined
+          ? itemSheet === 'EventItem'
+            ? `event-item-${itemRowId}`
+            : `item-${itemRowId}`
+          : slugify(itemName)),
 
       itemName,
       quantity,
