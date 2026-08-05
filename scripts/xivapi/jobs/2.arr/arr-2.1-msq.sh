@@ -4,7 +4,7 @@ set -euo pipefail
 
 # Resolve the repository root regardless of where this script is launched.
 PROJECT_ROOT="$(
-  cd "$(dirname "${BASH_SOURCE[0]}")/../../.." &&
+  cd "$(dirname "${BASH_SOURCE[0]}")/../../../.." &&
   pwd
 )"
 
@@ -14,14 +14,14 @@ cd "$PROJECT_ROOT"
 # Editable quest-chain configuration
 # ============================================================================
 
-EXPORT_ID="arr-2.0-msq"
-TITLE="A Realm Reborn 2.0 Main Scenario"
+EXPORT_ID="arr-2.1-msq"
+TITLE="A Realm Awoken 2.1 Main Scenario"
 
-START_QUEST="Close to Home"
-END_QUEST="The Ultimate Weapon"
+START_QUEST="The Price of Principles"
+END_QUEST="Build on the Stone"
 
 EXPANSION="arr"
-PATCH="2.0"
+PATCH="2.1"
 CATEGORY="msq"
 
 EXPORT_FILE="scripts/xivapi/exports/${EXPORT_ID}.json"
@@ -38,7 +38,8 @@ export_chain() {
     --end "$END_QUEST" \
     --expansion "$EXPANSION" \
     --patch "$PATCH" \
-    --category "$CATEGORY"
+    --category "$CATEGORY" \
+    --output "$EXPORT_FILE"
 }
 
 validate_export() {
@@ -73,7 +74,7 @@ regenerate_export() {
 
   case "$response" in
     y|Y|yes|YES)
-      npm run xivapi:export:chain -- \
+            npm run xivapi:export:chain -- \
         --id "$EXPORT_ID" \
         --title "$TITLE" \
         --start "$START_QUEST" \
@@ -81,6 +82,7 @@ regenerate_export() {
         --expansion "$EXPANSION" \
         --patch "$PATCH" \
         --category "$CATEGORY" \
+        --output "$EXPORT_FILE" \
         --replace
       ;;
 
