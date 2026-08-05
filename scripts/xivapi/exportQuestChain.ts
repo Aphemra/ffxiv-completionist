@@ -678,6 +678,16 @@ function topologicallySortQuests(
   return orderedQuests;
 }
 
+function createQuestBaseId(
+  quest: QuestIndexEntry,
+  expansionId: string,
+  category: string,
+): string {
+  return [slugify(expansionId), slugify(category), slugify(quest.name)].join(
+    '-',
+  );
+}
+
 function createQuestIds(
   quests: readonly QuestIndexEntry[],
   expansionId: string,
@@ -688,11 +698,7 @@ function createQuestIds(
   const baseIdCounts = new Map<string, number>();
 
   for (const quest of quests) {
-    const baseId = [
-      slugify(expansionId),
-      slugify(category),
-      slugify(quest.name),
-    ].join('-');
+    const baseId = createQuestBaseId(quest, expansionId, category);
 
     baseIdsByRowId.set(quest.rowId, baseId);
 
@@ -715,6 +721,28 @@ function createQuestIds(
   }
 
   return questIdsByRowId;
+}
+
+function resolveRelatedQuestId(
+  rowId: number,
+  questIdsByRowId: ReadonlyMap<number, string>,
+  questsByRowId: ReadonlyMap<number, QuestIndexEntry>,
+  expansionId: string,
+  category: string,
+): string | undefined {
+  const exportedQuestId = questIdsByRowId.get(rowId);
+
+  if (exportedQuestId) {
+    return exportedQuestId;
+  }
+
+  const relatedQuest = questsByRowId.get(rowId);
+
+  if (!relatedQuest || !isEligibleQuest(relatedQuest, category)) {
+    return undefined;
+  }
+
+  return createQuestBaseId(relatedQuest, expansionId, category);
 }
 
 function pushIssue(
@@ -1947,14 +1975,59 @@ async function main(): Promise<void> {
       throw new Error(`Quest row ${quest.rowId} could not be exported.`);
     }
 
-    const previousQuestIds = quest.previousQuestRowIds
-      .filter((rowId) => discoveredRowIds.has(rowId))
-      .map((rowId) => questIdsByRowId.get(rowId))
+    const internalPreviousRowIds = quest.previousQuestRowIds.filter((rowId) =>
+      discoveredRowIds.has(rowId),
+    );
+
+    const previousRowIds =
+      internalPreviousRowIds.length > 0
+        ? internalPreviousRowIds
+        : quest.previousQuestRowIds.filter((rowId) => {
+            const previousQuest = questsByRowId.get(rowId);
+
+            return (
+              previousQuest !== undefined &&
+              isEligibleQuest(previousQuest, category)
+            );
+          });
+
+    const internalNextRowIds = quest.nextQuestRowIds.filter((rowId) =>
+      discoveredRowIds.has(rowId),
+    );
+
+    const nextRowIds =
+      quest.rowId === finalQuest.rowId
+        ? quest.nextQuestRowIds.filter((rowId) => {
+            const nextQuest = questsByRowId.get(rowId);
+
+            return (
+              nextQuest !== undefined && isEligibleQuest(nextQuest, category)
+            );
+          })
+        : internalNextRowIds;
+
+    const previousQuestIds = previousRowIds
+      .map((rowId) =>
+        resolveRelatedQuestId(
+          rowId,
+          questIdsByRowId,
+          questsByRowId,
+          expansionId,
+          category,
+        ),
+      )
       .filter((id): id is string => id !== undefined);
 
-    const nextQuestIds = quest.nextQuestRowIds
-      .filter((rowId) => discoveredRowIds.has(rowId))
-      .map((rowId) => questIdsByRowId.get(rowId))
+    const nextQuestIds = nextRowIds
+      .map((rowId) =>
+        resolveRelatedQuestId(
+          rowId,
+          questIdsByRowId,
+          questsByRowId,
+          expansionId,
+          category,
+        ),
+      )
       .filter((id): id is string => id !== undefined);
 
     exportedQuests.push(

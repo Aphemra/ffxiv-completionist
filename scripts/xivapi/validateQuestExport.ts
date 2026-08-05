@@ -655,10 +655,22 @@ function validateIntegrity(
   });
 
   for (const quest of exportData.quests) {
+    const hasInternalPreviousQuest = quest.previousQuestIds.some((questId) =>
+      questsById.has(questId),
+    );
+
+    const hasInternalNextQuest = quest.nextQuestIds.some((questId) =>
+      questsById.has(questId),
+    );
+
     for (const previousQuestId of quest.previousQuestIds) {
       const previousQuest = questsById.get(previousQuestId);
 
       if (!previousQuest) {
+        if (!hasInternalPreviousQuest) {
+          continue;
+        }
+
         errors.push(
           [
             `${quest.id} references missing previous quest`,
@@ -683,6 +695,10 @@ function validateIntegrity(
       const nextQuest = questsById.get(nextQuestId);
 
       if (!nextQuest) {
+        if (!hasInternalNextQuest) {
+          continue;
+        }
+
         errors.push(
           [
             `${quest.id} references missing next quest`,
