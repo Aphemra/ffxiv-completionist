@@ -28,6 +28,13 @@ import {
   xivapiCacheRoot,
 } from './paths';
 
+import type { InterpretedQuestDutyReference } from './interpretQuestUnlocks';
+
+import {
+  resolveQuestDutyReferences,
+  type ResolvedQuestDuty,
+} from './questDutyResolver';
+
 type JsonObject = Record<string, unknown>;
 
 interface ExportIssue {
@@ -136,6 +143,104 @@ function readNumber(value: unknown): number | undefined {
   return typeof value === 'number' && Number.isFinite(value)
     ? value
     : undefined;
+}
+
+function normalizeDutyReference(
+  rawReference: unknown,
+): InterpretedQuestDutyReference | undefined {
+  const reference = asObject(rawReference);
+
+  if (!reference) {
+    return undefined;
+  }
+
+  const contentFinderConditionRowId = readInteger(
+    reference.contentFinderConditionRowId,
+  );
+
+  const sourceInstruction = readString(reference.sourceInstruction);
+
+  const relationship = readString(reference.relationship);
+
+  if (
+    contentFinderConditionRowId === undefined ||
+    contentFinderConditionRowId <= 0 ||
+    !sourceInstruction ||
+    (relationship !== 'required' && relationship !== 'unlocked')
+  ) {
+    return undefined;
+  }
+
+  return {
+    contentFinderConditionRowId,
+    sourceInstruction,
+    relationship,
+  };
+}
+
+function extractDutyReferences(
+  review: JsonObject,
+  draft: JsonObject,
+): InterpretedQuestDutyReference[] {
+  const unresolvedReferences = asObject(review.unresolvedReferences);
+
+  const draftSourceData = asObject(draft.sourceData);
+
+  const draftXivapiSource = asObject(draftSourceData?.xivapi);
+
+  const rawReferences = [
+    ...asArray(review.dutyReferences),
+
+    ...asArray(unresolvedReferences?.duties),
+
+    ...asArray(draftXivapiSource?.dutyReferences),
+  ];
+
+  const referencesByRowId = new Map<number, InterpretedQuestDutyReference>();
+
+  for (const rawReference of rawReferences) {
+    const reference = normalizeDutyReference(rawReference);
+
+    if (!reference) {
+      continue;
+    }
+
+    const existingReference = referencesByRowId.get(
+      reference.contentFinderConditionRowId,
+    );
+
+    if (!existingReference || reference.relationship === 'unlocked') {
+      referencesByRowId.set(reference.contentFinderConditionRowId, reference);
+    }
+  }
+
+  return Array.from(referencesByRowId.values());
+}
+
+function createExportDuty(duty: ResolvedQuestDuty): JsonObject {
+  return {
+    id: duty.id,
+
+    sourceRowId: duty.contentFinderConditionRowId,
+
+    contentRowId: duty.contentRowId,
+
+    name: duty.name,
+
+    type: duty.type,
+
+    relationship: duty.relationship,
+
+    level: duty.level,
+
+    minimumItemLevel: duty.minimumItemLevel,
+
+    partySize: duty.partySize,
+
+    levelSync: duty.levelSync,
+
+    highEnd: duty.highEnd,
+  };
 }
 
 function chunkValues<T>(values: readonly T[], chunkSize: number): T[][] {
@@ -1456,6 +1561,7 @@ function normalizeUnlock(
 
     id: slugify(
       readString(unlock.id) ??
+        readString(unlock.targetId) ??
         readString(unlock.unlockId) ??
         readString(unlock.dutyId) ??
         name,
@@ -1464,7 +1570,17 @@ function normalizeUnlock(
     name,
   };
 
-  const details = readString(unlock.details) ?? readString(unlock.description);
+  const sourceRowId =
+    readInteger(unlock.sourceRowId) ?? readInteger(unlock.rowId);
+
+  if (sourceRowId !== undefined && sourceRowId > 0) {
+    result.sourceRowId = sourceRowId;
+  }
+
+  const details =
+    readString(unlock.details) ??
+    readString(unlock.description) ??
+    readString(unlock.notes);
 
   if (details !== undefined) {
     result.details = details;
@@ -1473,7 +1589,11 @@ function normalizeUnlock(
   return result;
 }
 
-function extractUnlocks(review: JsonObject, draft: JsonObject): JsonObject[] {
+function extractUnlocks(
+  review: JsonObject,
+  draft: JsonObject,
+  resolvedDuties: readonly ResolvedQuestDuty[],
+): JsonObject[] {
   const rawUnlocks = [...asArray(draft.unlocks), ...asArray(review.unlocks)];
 
   const rawDuties = [...asArray(draft.duties), ...asArray(review.duties)];
@@ -1494,6 +1614,22 @@ function extractUnlocks(review: JsonObject, draft: JsonObject): JsonObject[] {
     if (unlock) {
       unlocks.push(unlock);
     }
+  }
+
+  for (const duty of resolvedDuties) {
+    if (duty.relationship !== 'unlocked') {
+      continue;
+    }
+
+    unlocks.push({
+      type: duty.type,
+
+      id: duty.id,
+
+      sourceRowId: duty.contentFinderConditionRowId,
+
+      name: duty.name,
+    });
   }
 
   const unlocksByKey = new Map<string, JsonObject>();
@@ -1768,6 +1904,7 @@ function createQuestEntry(
   expansionId: string,
   patch: string,
   category: string,
+  resolvedDuties: readonly ResolvedQuestDuty[],
   issues: ExportIssue[],
   issueKeys: Set<string>,
 ): QuestExportEntry {
@@ -1811,6 +1948,8 @@ function createQuestEntry(
   } else if (incomingCount > 1) {
     graphRole = 'convergence';
   }
+
+  const duties = resolvedDuties.map(createExportDuty);
 
   const rawEntry: JsonObject = {
     id: questId,
@@ -1856,7 +1995,9 @@ function createQuestEntry(
 
     nextQuestIds,
 
-    unlocks: extractUnlocks(reviewObject, draft),
+    duties,
+
+    unlocks: extractUnlocks(reviewObject, draft, resolvedDuties),
 
     rewards: extractRewards(
       reviewObject,
@@ -2153,6 +2294,39 @@ async function main(): Promise<void> {
     reviewsByRowId.set(quest.rowId, await readResolvedReview(resolvedPath));
   }
 
+  const dutyReferencesByQuestRowId = new Map<
+    number,
+    InterpretedQuestDutyReference[]
+  >();
+
+  const allDutyReferences: InterpretedQuestDutyReference[] = [];
+
+  for (const [questRowId, review] of reviewsByRowId) {
+    const reviewObject = review as JsonObject;
+
+    const draft = asObject(review.questDraft) ?? {};
+
+    const dutyReferences = extractDutyReferences(reviewObject, draft);
+
+    dutyReferencesByQuestRowId.set(questRowId, dutyReferences);
+
+    allDutyReferences.push(...dutyReferences);
+  }
+
+  const resolvedDutyMetadata = await resolveQuestDutyReferences(
+    allDutyReferences,
+    {
+      offline,
+    },
+  );
+
+  const resolvedDutyMetadataByRowId = new Map(
+    resolvedDutyMetadata.map((duty) => [
+      duty.contentFinderConditionRowId,
+      duty,
+    ]),
+  );
+
   const experienceInputsByRowId = new Map<
     number,
     {
@@ -2284,6 +2458,32 @@ async function main(): Promise<void> {
       )
       .filter((id): id is string => id !== undefined);
 
+    const questDutyReferences =
+      dutyReferencesByQuestRowId.get(quest.rowId) ?? [];
+
+    const resolvedQuestDuties = questDutyReferences.map((reference) => {
+      const duty = resolvedDutyMetadataByRowId.get(
+        reference.contentFinderConditionRowId,
+      );
+
+      if (!duty) {
+        throw new Error(
+          [
+            `Quest row ${quest.rowId}`,
+            'references unresolved',
+            'ContentFinderCondition row',
+            String(reference.contentFinderConditionRowId),
+          ].join(' '),
+        );
+      }
+
+      return {
+        ...duty,
+
+        relationship: reference.relationship,
+      };
+    });
+
     exportedQuests.push(
       createQuestEntry(
         quest,
@@ -2296,6 +2496,7 @@ async function main(): Promise<void> {
         expansionId,
         patch,
         category,
+        resolvedQuestDuties,
         issues,
         issueKeys,
       ),

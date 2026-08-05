@@ -108,10 +108,36 @@ const questRequirementSchema = z.discriminatedUnion('type', [
   }),
 ]);
 
+const questDutySchema = z.strictObject({
+  id: gameDataIdSchema,
+
+  sourceRowId: z.number().int().positive(),
+
+  contentRowId: z.number().int().positive().optional(),
+
+  name: nonEmptyStringSchema,
+
+  type: gameDataIdSchema,
+
+  relationship: z.enum(['required', 'unlocked', 'related']),
+
+  level: z.number().int().min(1),
+
+  minimumItemLevel: z.number().int().positive().optional(),
+
+  partySize: z.number().int().positive().optional(),
+
+  levelSync: z.number().int().positive().optional(),
+
+  highEnd: z.boolean().default(false),
+});
+
 const questUnlockSchema = z.strictObject({
   type: nonEmptyStringSchema,
 
   id: gameDataIdSchema,
+  sourceRowId: z.number().int().positive().optional(),
+
   name: nonEmptyStringSchema,
 
   details: nonEmptyStringSchema.optional(),
@@ -174,6 +200,8 @@ export const questExportEntrySchema = z.strictObject({
   previousQuestMode: z.enum(['all', 'any']).default('all'),
 
   nextQuestIds: z.array(gameDataIdSchema),
+
+  duties: z.array(questDutySchema).default([]),
 
   unlocks: z.array(questUnlockSchema),
 

@@ -286,11 +286,42 @@ function convertQuest(
       items: rewardItems.length > 0 ? rewardItems : undefined,
       optionalItems: optionalItems.length > 0 ? optionalItems : undefined,
     },
+    duties:
+      quest.duties.length > 0
+        ? quest.duties.map((duty) => ({
+            id: duty.id,
+
+            sourceRowId: duty.sourceRowId,
+
+            name: duty.name,
+
+            type: duty.type,
+
+            relationship: duty.relationship,
+
+            level: duty.level,
+
+            minimumItemLevel: duty.minimumItemLevel,
+
+            partySize: duty.partySize,
+
+            levelSync: duty.levelSync,
+
+            extensions: duty.contentRowId
+              ? {
+                  'xivapi-instance-content-row': duty.contentRowId,
+
+                  'xivapi-high-end-duty': duty.highEnd,
+                }
+              : undefined,
+          }))
+        : undefined,
     unlocks:
       quest.unlocks.length > 0
         ? quest.unlocks.map((unlock) => ({
             type: unlock.type,
             targetId: unlock.id,
+            sourceRowId: unlock.sourceRowId,
             name: unlock.name,
             notes: unlock.details,
           }))

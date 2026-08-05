@@ -6,6 +6,11 @@ import { projectRoot, writeJsonFile } from './paths';
 
 import { xivapiRowResponseSchema } from './schemas';
 
+import {
+  interpretQuestDutyReferences,
+  interpretQuestUnlocks,
+} from './interpretQuestUnlocks';
+
 type JsonObject = Record<string, unknown>;
 
 interface ParsedLocation {
@@ -912,6 +917,10 @@ async function main(): Promise<void> {
 
   const isRepeatable = readBoolean(fields.IsRepeatable) ?? false;
 
+  const unlocks = interpretQuestUnlocks(fields);
+
+  const dutyReferences = interpretQuestDutyReferences(fields);
+
   const classJobRequirement =
     classJobId && classJobName
       ? {
@@ -1104,6 +1113,8 @@ async function main(): Promise<void> {
 
     rewards,
 
+    unlocks: unlocks.length > 0 ? unlocks : undefined,
+
     tags: ['xivapi-import'],
 
     extensions: {
@@ -1127,6 +1138,8 @@ async function main(): Promise<void> {
         scriptParameters,
 
         requiredItemReferences,
+
+        dutyReferences,
 
         unresolvedActorReferences,
       },
@@ -1187,6 +1200,10 @@ async function main(): Promise<void> {
       choiceItems,
     },
 
+    dutyReferences,
+
+    unlocks,
+
     flags: {
       isRepeatable,
 
@@ -1205,6 +1222,8 @@ async function main(): Promise<void> {
       actors: unresolvedActorReferences,
 
       items: requiredItemReferences,
+
+      duties: dutyReferences,
     },
 
     questDraft,
