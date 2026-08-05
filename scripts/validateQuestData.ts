@@ -26,6 +26,9 @@ interface ValidationMessage {
 interface LoadedCollection {
   collection: QuestCollection;
   source: string;
+
+  startsAfterQuestIds: readonly string[];
+  continuesToQuestIds: readonly string[];
 }
 
 interface QuestRecord {
@@ -33,6 +36,9 @@ interface QuestRecord {
   collection: QuestCollection;
   source: string;
   groupId: string;
+
+  startsAfterQuestIds: readonly string[];
+  continuesToQuestIds: readonly string[];
 }
 
 const currentFilePath = fileURLToPath(import.meta.url);
@@ -281,7 +287,12 @@ function createQuestIndex(
 ): Map<string, QuestRecord> {
   const questIndex = new Map<string, QuestRecord>();
 
-  for (const { collection, source } of loadedCollections) {
+  for (const {
+    collection,
+    source,
+    startsAfterQuestIds,
+    continuesToQuestIds,
+  } of loadedCollections) {
     for (const group of collection.groups) {
       for (const quest of group.quests) {
         const existingQuest = questIndex.get(quest.id);
@@ -304,6 +315,8 @@ function createQuestIndex(
           collection,
           source,
           groupId: group.id,
+          startsAfterQuestIds,
+          continuesToQuestIds,
         });
       }
     }
@@ -430,6 +443,7 @@ function validateQuestReferences(
       'prerequisite',
       source,
       questIndex,
+      record.startsAfterQuestIds,
     );
 
     validateReferenceList(
@@ -438,6 +452,7 @@ function validateQuestReferences(
       'next quest',
       source,
       questIndex,
+      record.continuesToQuestIds,
     );
 
     validateReciprocalReferences(record, questIndex);
@@ -451,6 +466,7 @@ function validateReferenceList(
   relationshipName: string,
   source: string,
   questIndex: ReadonlyMap<string, QuestRecord>,
+  allowedUnknownQuestIds: readonly string[],
 ): void {
   if (!referencedQuestIds) {
     return;
@@ -486,13 +502,22 @@ function validateReferenceList(
     }
 
     if (!questIndex.has(referencedQuestId)) {
+      const isDeclaredBoundary =
+        allowedUnknownQuestIds.includes(referencedQuestId);
+
       addMessage(
-        'error',
+        isDeclaredBoundary ? 'warning' : 'error',
         source,
-        [
-          `Quest "${quest.id}" references unknown`,
-          `${relationshipName} "${referencedQuestId}".`,
-        ].join(' '),
+        isDeclaredBoundary
+          ? [
+              `Quest "${quest.id}" references not-yet-loaded`,
+              `${relationshipName} "${referencedQuestId}".`,
+              'The relationship is declared as a collection boundary.',
+            ].join(' ')
+          : [
+              `Quest "${quest.id}" references unknown`,
+              `${relationshipName} "${referencedQuestId}".`,
+            ].join(' '),
       );
     }
   }
@@ -634,9 +659,21 @@ async function main(): Promise<void> {
       continue;
     }
 
-    const loadedCollection = {
+    const startsAfterQuestIds =
+      'format' in collectionFile
+        ? (collectionFile.startsAfterQuestIds ?? [])
+        : [];
+
+    const continuesToQuestIds =
+      'format' in collectionFile
+        ? (collectionFile.continuesToQuestIds ?? [])
+        : [];
+
+    const loadedCollection: LoadedCollection = {
       collection,
       source: normalizePublicPath(entry.path),
+      startsAfterQuestIds,
+      continuesToQuestIds,
     };
 
     loadedCollections.push(loadedCollection);

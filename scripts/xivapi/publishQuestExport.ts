@@ -251,7 +251,8 @@ function convertQuest(
           : undefined,
     },
     availability: quest.availability ?? undefined,
-    prerequisiteQuestMode: quest.previousQuestMode,
+    prerequisiteQuestMode:
+      prerequisiteQuestIds.length < 2 ? 'all' : quest.previousQuestMode,
     prerequisiteQuestIds:
       prerequisiteQuestIds.length > 0 ? prerequisiteQuestIds : undefined,
     nextQuestIds: nextQuestIds.length > 0 ? nextQuestIds : undefined,
@@ -302,7 +303,46 @@ function fillGroups(
     group.quests.push(quest);
   }
 
-  return questCollectionFileSchema.parse({ ...collection, groups });
+  if (!('format' in collection)) {
+    return questCollectionFileSchema.parse({
+      ...collection,
+      groups,
+    });
+  }
+
+  const publishedQuestIds = new Set(quests.map((quest) => quest.id));
+
+  const startsAfterQuestIds = Array.from(
+    new Set(
+      quests.flatMap((quest) =>
+        (quest.prerequisiteQuestIds ?? []).filter(
+          (questId) => !publishedQuestIds.has(questId),
+        ),
+      ),
+    ),
+  );
+
+  const continuesToQuestIds = Array.from(
+    new Set(
+      quests.flatMap((quest) =>
+        (quest.nextQuestIds ?? []).filter(
+          (questId) => !publishedQuestIds.has(questId),
+        ),
+      ),
+    ),
+  );
+
+  return questCollectionFileSchema.parse({
+    ...collection,
+
+    startsAfterQuestIds:
+      startsAfterQuestIds.length > 0 ? startsAfterQuestIds : undefined,
+
+    continuesToQuestIds:
+      continuesToQuestIds.length > 0 ? continuesToQuestIds : undefined,
+
+    groups,
+  });
 }
 
 async function main(): Promise<void> {
