@@ -20,44 +20,1841 @@
           "id": "arr-msq-its-probably-pirates",
           "name": "It's Probably Pirates",
           "level": 15,
-          "prerequisiteQuestMode": "any",
+          "externalIds": {
+            "xivapi-quest-row": 65781
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65781,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
           "start": {
+            "npcId": "enpc-1000972",
             "npcName": "Baderon",
+            "sourceRowId": 1000972,
             "zoneId": "limsa-lominsa-upper-decks",
             "zoneName": "Limsa Lominsa Upper Decks",
             "coordinates": {
-              "x": 11.6,
+              "x": 11.7,
               "y": 11.1
             }
           },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "any",
+          "prerequisiteQuestIds": [
+            "arr-msq-uldah-call-of-the-sea",
+            "arr-msq-gridania-call-of-the-sea",
+            "arr-msq-limsa-call-of-the-sea"
+          ],
+          "nextQuestIds": [
+            "arr-msq-call-of-the-forest"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 15
+            }
+          ],
           "rewards": {
             "experience": 5760,
             "gil": 668
           },
-          "duties": [
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-call-of-the-forest",
+          "name": "Call of the Forest",
+          "level": 15,
+          "externalIds": {
+            "xivapi-quest-row": 66212
+          },
+          "sources": [
             {
-              "id": "duty-sastasha",
-              "name": "Sastasha",
-              "type": "dungeon",
-              "level": 15,
-              "dutySupportAvailable": true
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66212,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
             }
           ],
-          "unlocks": [
-            {
-              "type": "dungeon",
-              "targetId": "duty-sastasha",
-              "name": "Sastasha"
-            },
-            {
-              "type": "feature",
-              "name": "Party Finder"
-            },
-            {
-              "type": "system",
-              "name": "Duty Support"
+          "start": {
+            "npcId": "enpc-1000972",
+            "npcName": "Baderon",
+            "sourceRowId": 1000972,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.7,
+              "y": 11.1
             }
-          ]
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-its-probably-pirates"
+          ],
+          "nextQuestIds": [
+            "arr-msq-fire-in-the-gloom"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 15
+            }
+          ],
+          "rewards": {
+            "experience": 5760,
+            "gil": 239,
+            "items": [
+              {
+                "itemId": "item-4552",
+                "itemName": "Hi-Potion",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4555",
+                "itemName": "Ether",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-fire-in-the-gloom",
+          "name": "Fire in the Gloom",
+          "level": 16,
+          "externalIds": {
+            "xivapi-quest-row": 66213
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66213,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000100",
+            "npcName": "Mother Miounne",
+            "sourceRowId": 1000100,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 11.7,
+              "y": 13.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-call-of-the-forest"
+          ],
+          "nextQuestIds": [
+            "arr-msq-call-of-the-desert"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 16
+            }
+          ],
+          "rewards": {
+            "experience": 6000,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-4552",
+                "itemName": "Hi-Potion",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4555",
+                "itemName": "Ether",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-call-of-the-desert",
+          "name": "Call of the Desert",
+          "level": 16,
+          "externalIds": {
+            "xivapi-quest-row": 66214
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66214,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000100",
+            "npcName": "Mother Miounne",
+            "sourceRowId": 1000100,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 11.7,
+              "y": 13.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-fire-in-the-gloom"
+          ],
+          "nextQuestIds": [
+            "arr-msq-into-a-copper-hell"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 16
+            }
+          ],
+          "rewards": {
+            "experience": 6000,
+            "gil": 197
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-into-a-copper-hell",
+          "name": "Into a Copper Hell",
+          "level": 17,
+          "externalIds": {
+            "xivapi-quest-row": 66196
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66196,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001353",
+            "npcName": "Momodi",
+            "sourceRowId": 1001353,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 11.7,
+              "y": 9.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-call-of-the-desert"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-scions-of-the-seventh-dawn"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 17
+            }
+          ],
+          "rewards": {
+            "experience": 6240,
+            "gil": 848,
+            "items": [
+              {
+                "itemId": "item-4552",
+                "itemName": "Hi-Potion",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4555",
+                "itemName": "Ether",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-the-scions-of-the-seventh-dawn",
+          "name": "The Scions of the Seventh Dawn",
+          "level": 17,
+          "externalIds": {
+            "xivapi-quest-row": 66045
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66045,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001353",
+            "npcName": "Momodi",
+            "sourceRowId": 1001353,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 11.7,
+              "y": 9.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-into-a-copper-hell"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-wild-rose-by-any-other-name"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 17
+            }
+          ],
+          "rewards": {
+            "experience": 6240,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-30362",
+                "itemName": "Vesper Bay Aetheryte Ticket",
+                "quantity": 40,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3550",
+                "itemName": "Decorated Bronze Mitt Gauntlets",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-3552",
+                "itemName": "Goatskin Mitts",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-3547",
+                "itemName": "Hard Leather Ringbands",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-a-wild-rose-by-any-other-name",
+          "name": "A Wild Rose by Any Other Name",
+          "level": 17,
+          "externalIds": {
+            "xivapi-quest-row": 66046
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66046,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003783",
+            "npcName": "Minfilia",
+            "sourceRowId": 1003783,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-scions-of-the-seventh-dawn"
+          ],
+          "nextQuestIds": [
+            "arr-msq-unsolved-mystery"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 17
+            }
+          ],
+          "rewards": {
+            "experience": 6240,
+            "gil": 203,
+            "items": [
+              {
+                "itemId": "item-7621",
+                "itemName": "Glamour Dispeller",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-unsolved-mystery",
+          "name": "Unsolved Mystery",
+          "level": 17,
+          "externalIds": {
+            "xivapi-quest-row": 66154
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66154,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003929",
+            "npcName": "Isembard",
+            "sourceRowId": 1003929,
+            "zoneId": "eastern-thanalan",
+            "zoneName": "Eastern Thanalan",
+            "coordinates": {
+              "x": 13.9,
+              "y": 23.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-wild-rose-by-any-other-name"
+          ],
+          "nextQuestIds": [
+            "arr-msq-what-poor-people-think"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 17
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000399",
+              "itemName": "Ripe Corpse",
+              "quantity": 3,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 6240,
+            "gil": 235
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-what-poor-people-think",
+          "name": "What Poor People Think",
+          "level": 18,
+          "externalIds": {
+            "xivapi-quest-row": 66155
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66155,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003929",
+            "npcName": "Isembard",
+            "sourceRowId": 1003929,
+            "zoneId": "eastern-thanalan",
+            "zoneName": "Eastern Thanalan",
+            "coordinates": {
+              "x": 13.9,
+              "y": 23.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-unsolved-mystery"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-proper-burial"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 18
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000515",
+              "itemName": "Isembard's Note",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 6480,
+            "gil": 209,
+            "optionalItems": [
+              {
+                "itemId": "item-2697",
+                "itemName": "Goatskin Pot Helm",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2685",
+                "itemName": "Brass Circlet (Sunstone)",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-a-proper-burial",
+          "name": "A Proper Burial",
+          "level": 18,
+          "externalIds": {
+            "xivapi-quest-row": 66156
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66156,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003929",
+            "npcName": "Isembard",
+            "sourceRowId": 1003929,
+            "zoneId": "eastern-thanalan",
+            "zoneName": "Eastern Thanalan",
+            "coordinates": {
+              "x": 13.9,
+              "y": 23.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-what-poor-people-think"
+          ],
+          "nextQuestIds": [
+            "arr-msq-for-the-children"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 18
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000517",
+              "itemName": "Embalmed Corpse",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 6480,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3039",
+                "itemName": "Cotton Acton",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-27666",
+                "itemName": "Altered Cotton Dalmatica",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-67",
+                "notes": "Stain: Woad Blue"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 5,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-for-the-children",
+          "name": "For the Children",
+          "level": 19,
+          "externalIds": {
+            "xivapi-quest-row": 66157
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66157,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003929",
+            "npcName": "Isembard",
+            "sourceRowId": 1003929,
+            "zoneId": "eastern-thanalan",
+            "zoneName": "Eastern Thanalan",
+            "coordinates": {
+              "x": 13.9,
+              "y": 23.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-proper-burial"
+          ],
+          "nextQuestIds": [
+            "arr-msq-amaljaa-wrong-places"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 19
+            }
+          ],
+          "rewards": {
+            "experience": 6720,
+            "gil": 250,
+            "optionalItems": [
+              {
+                "itemId": "item-3332",
+                "itemName": "Cotton Trousers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-3334",
+                "itemName": "Cotton Breeches",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 4,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-amaljaa-wrong-places",
+          "name": "Amalj'aa Wrong Places",
+          "level": 19,
+          "externalIds": {
+            "xivapi-quest-row": 66158
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66158,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003929",
+            "npcName": "Isembard",
+            "sourceRowId": 1003929,
+            "zoneId": "eastern-thanalan",
+            "zoneName": "Eastern Thanalan",
+            "coordinates": {
+              "x": 13.9,
+              "y": 23.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-for-the-children"
+          ],
+          "nextQuestIds": [
+            "arr-msq-dressed-to-deceive"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 19
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000390",
+              "itemName": "Queer Leaflet",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 6720,
+            "gil": 238,
+            "optionalItems": [
+              {
+                "itemId": "item-3784",
+                "itemName": "Goatskin Leggings",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-3788",
+                "itemName": "Padded Leather Duckbills",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-dressed-to-deceive",
+          "name": "Dressed to Deceive",
+          "level": 19,
+          "externalIds": {
+            "xivapi-quest-row": 66110
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66110,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003929",
+            "npcName": "Isembard",
+            "sourceRowId": 1003929,
+            "zoneId": "eastern-thanalan",
+            "zoneName": "Eastern Thanalan",
+            "coordinates": {
+              "x": 13.9,
+              "y": 23.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-amaljaa-wrong-places"
+          ],
+          "nextQuestIds": [
+            "arr-msq-life-materia-and-everything"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 19
+            },
+            {
+              "type": "item",
+              "itemId": "item-2995",
+              "itemName": "Weathered Shepherd's Tunic",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "item-3306",
+              "itemName": "Weathered Shepherd's Slops",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 6720,
+            "gil": 453
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-life-materia-and-everything",
+          "name": "Life, Materia and Everything",
+          "level": 19,
+          "externalIds": {
+            "xivapi-quest-row": 65808
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65808,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1005116",
+            "npcName": "Minfilia",
+            "sourceRowId": 1005116,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-dressed-to-deceive"
+          ],
+          "nextQuestIds": [
+            "arr-msq-lord-of-the-inferno"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 19
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000461",
+              "itemName": "Minfilia's Dagger",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000462",
+              "itemName": "Materia-enhanced Dagger",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 6720,
+            "gil": 215,
+            "items": [
+              {
+                "itemId": "item-31329",
+                "itemName": "Level 18 Weapon Coffer",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-lord-of-the-inferno",
+          "name": "Lord of the Inferno",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 65879
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65879,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1005116",
+            "npcName": "Minfilia",
+            "sourceRowId": 1005116,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-life-materia-and-everything"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-hero-in-the-making"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 1245,
+            "items": [
+              {
+                "itemId": "item-4102",
+                "itemName": "Dawn Wristguards",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-a-hero-in-the-making",
+          "name": "A Hero in the Making",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66047
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66047,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1005116",
+            "npcName": "Minfilia",
+            "sourceRowId": 1005116,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-lord-of-the-inferno"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-company-you-keep-twin-adder",
+            "arr-msq-the-company-you-keep-maelstrom",
+            "arr-msq-the-company-you-keep-immortal-flames"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 968
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-the-company-you-keep-twin-adder",
+          "name": "The Company You Keep (Twin Adder)",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66216
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66216,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1004884",
+            "npcName": "serpent officer",
+            "sourceRowId": 1004884,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ],
+            "initialGrandCompanyIds": [
+              "twin-adder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-hero-in-the-making"
+          ],
+          "nextQuestIds": [
+            "arr-msq-woods-will-be-done"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-52254",
+                "itemName": "Standard Spectrum Dye",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-the-company-you-keep-maelstrom",
+          "name": "The Company You Keep (Maelstrom)",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66217
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66217,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1004885",
+            "npcName": "storm officer",
+            "sourceRowId": 1004885,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ],
+            "initialGrandCompanyIds": [
+              "maelstrom"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-hero-in-the-making"
+          ],
+          "nextQuestIds": [
+            "arr-msq-till-sea-swallows-all"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-52254",
+                "itemName": "Standard Spectrum Dye",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-the-company-you-keep-immortal-flames",
+          "name": "The Company You Keep (Immortal Flames)",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66218
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66218,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1004883",
+            "npcName": "flame officer",
+            "sourceRowId": 1004883,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ],
+            "initialGrandCompanyIds": [
+              "immortal-flames"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-hero-in-the-making"
+          ],
+          "nextQuestIds": [
+            "arr-msq-for-coin-and-country"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-52254",
+                "itemName": "Standard Spectrum Dye",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-woods-will-be-done",
+          "name": "Wood's Will Be Done",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66219
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66219,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002394",
+            "npcName": "serpent personnel officer",
+            "sourceRowId": 1002394,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 9.9,
+              "y": 11.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ],
+            "initialGrandCompanyIds": [
+              "twin-adder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-company-you-keep-twin-adder"
+          ],
+          "nextQuestIds": [
+            "arr-msq-sylph-management"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 1025
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-till-sea-swallows-all",
+          "name": "Till Sea Swallows All",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66220
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66220,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002388",
+            "npcName": "storm personnel officer",
+            "sourceRowId": 1002388,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 13.2,
+              "y": 12.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ],
+            "initialGrandCompanyIds": [
+              "maelstrom"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-company-you-keep-maelstrom"
+          ],
+          "nextQuestIds": [
+            "arr-msq-sylph-management"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 1025
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-for-coin-and-country",
+          "name": "For Coin and Country",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66221
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66221,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002391",
+            "npcName": "flame personnel officer",
+            "sourceRowId": 1002391,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 8.4,
+              "y": 9.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ],
+            "initialGrandCompanyIds": [
+              "immortal-flames"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-company-you-keep-immortal-flames"
+          ],
+          "nextQuestIds": [
+            "arr-msq-sylph-management"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 1025
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-sylph-management",
+          "name": "Sylph-management",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66049
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66049,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1005128",
+            "npcName": "Minfilia",
+            "sourceRowId": 1005128,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "any",
+          "prerequisiteQuestIds": [
+            "arr-msq-woods-will-be-done",
+            "arr-msq-till-sea-swallows-all",
+            "arr-msq-for-coin-and-country"
+          ],
+          "nextQuestIds": [
+            "arr-msq-we-come-in-peace"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 1245
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-we-come-in-peace",
+          "name": "We Come in Peace",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 69392
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69392,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000168",
+            "npcName": "Vorsaile Heuloix",
+            "sourceRowId": 1000168,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 9.7,
+              "y": 11.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-sylph-management"
+          ],
+          "nextQuestIds": [
+            "arr-msq-sylphic-studies"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 1078
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-sylphic-studies",
+          "name": "Sylphic Studies",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66245
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66245,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000540",
+            "npcName": "Rolfe Hawthorne",
+            "sourceRowId": 1000540,
+            "zoneId": "east-shroud",
+            "zoneName": "East Shroud",
+            "coordinates": {
+              "x": 16.7,
+              "y": 27.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-we-come-in-peace"
+          ],
+          "nextQuestIds": [
+            "arr-msq-first-impressions"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 1078
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-first-impressions",
+          "name": "First Impressions",
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66246
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66246,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000540",
+            "npcName": "Rolfe Hawthorne",
+            "sourceRowId": 1000540,
+            "zoneId": "east-shroud",
+            "zoneName": "East Shroud",
+            "coordinates": {
+              "x": 16.7,
+              "y": 27.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-sylphic-studies"
+          ],
+          "nextQuestIds": [
+            "arr-msq-first-contact"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000571",
+              "itemName": "Amber Syrup",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000831",
+              "itemName": "Milkroot",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 1245
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         }
       ]
     }

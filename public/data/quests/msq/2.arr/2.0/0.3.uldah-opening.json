@@ -1,7 +1,9 @@
 {
   "schemaVersion": 1,
   "format": "linear",
-  "continuesToQuestIds": ["arr-msq-its-probably-pirates"],
+  "continuesToQuestIds": [
+    "arr-msq-its-probably-pirates"
+  ],
   "groups": [
     {
       "id": "uldah-levels-1-9",
@@ -13,57 +15,655 @@
       },
       "quests": [
         {
-          "id": "arr-msq-uldah-close-to-home",
+          "id": "arr-msq-close-to-home-uldah",
           "name": "Close to Home",
           "level": 1,
-          "start": { "npcName": "Momodi" },
-          "unlocks": [{ "type": "system", "name": "Return" }]
+          "externalIds": {
+            "xivapi-quest-row": 66104
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66104,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003988",
+            "npcName": "Momodi",
+            "sourceRowId": 1003988,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 11.7,
+              "y": 9.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "nextQuestIds": [
+            "arr-msq-we-must-rebuild"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000386",
+              "itemName": "Letter of Introduction",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 107
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-we-must-rebuild",
           "name": "We Must Rebuild",
           "level": 4,
-          "start": { "npcName": "Momodi" }
+          "externalIds": {
+            "xivapi-quest-row": 66131
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66131,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001353",
+            "npcName": "Momodi",
+            "sourceRowId": 1001353,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 11.7,
+              "y": 9.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-close-to-home-uldah"
+          ],
+          "nextQuestIds": [
+            "arr-msq-nothing-to-see-here"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 127,
+            "optionalItems": [
+              {
+                "itemId": "item-27634",
+                "itemName": "Altered Thighboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-27665",
+                "itemName": "Altered Leather Thighboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-32",
+                "notes": "Stain: Mole Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-nothing-to-see-here",
           "name": "Nothing to See Here",
-          "level": 5,
-          "start": { "npcName": "Papashan" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 66207
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66207,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003995",
+            "npcName": "Papashan",
+            "sourceRowId": 1003995,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 23,
+              "y": 27.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-we-must-rebuild"
+          ],
+          "nextQuestIds": [
+            "arr-msq-underneath-the-sultantree"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000463",
+              "itemName": "Twilight Pretzel",
+              "quantity": 3,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-4551",
+                "itemName": "Potion",
+                "quantity": 5,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-1602",
+                "itemName": "Bronze Bastard Sword",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-1681",
+                "itemName": "Bone Hora",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2106",
+                "itemName": "Bone Staff",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 4,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-underneath-the-sultantree",
           "name": "Underneath the Sultantree",
-          "level": 5,
-          "start": { "npcName": "Papashan" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 66086
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66086,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003995",
+            "npcName": "Papashan",
+            "sourceRowId": 1003995,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 23,
+              "y": 27.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-nothing-to-see-here"
+          ],
+          "nextQuestIds": [
+            "arr-msq-step-nine"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 132
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-step-nine",
           "name": "Step Nine",
-          "level": 6,
-          "start": { "npcName": "Cicidoa" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 65839
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65839,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001500",
+            "npcName": "Cicidoa",
+            "sourceRowId": 1001500,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 23.1,
+              "y": 27.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-underneath-the-sultantree"
+          ],
+          "nextQuestIds": [
+            "arr-msq-prudence-at-this-junction"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000199",
+              "itemName": "Receipt of Purchase",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000238",
+              "itemName": "Plantation Pumpkin",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 139,
+            "items": [
+              {
+                "itemId": "item-4639",
+                "itemName": "Marmot Steak",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-prudence-at-this-junction",
           "name": "Prudence at This Junction",
-          "level": 8,
-          "start": { "npcName": "Roger" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 69388
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69388,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001541",
+            "npcName": "Roger",
+            "sourceRowId": 1001541,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 19.5,
+              "y": 20.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-step-nine"
+          ],
+          "nextQuestIds": [
+            "arr-msq-out-of-house-and-home"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3008",
+                "itemName": "Hempen Acton",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-3000",
+                "itemName": "Hempen Cowl",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-35",
+                "notes": "Stain: Ul Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-out-of-house-and-home",
           "name": "Out of House and Home",
-          "level": 9,
-          "start": { "npcName": "Warin" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 65843
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65843,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001447",
+            "npcName": "Warin",
+            "sourceRowId": 1001447,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 20.8,
+              "y": 18.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-prudence-at-this-junction"
+          ],
+          "nextQuestIds": [
+            "arr-msq-way-down-in-the-hole"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000212",
+              "itemName": "Silver Ore Cluster",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-1603",
+                "itemName": "Viking Sword",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-1682",
+                "itemName": "Leather Himantes",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2107",
+                "itemName": "Ramhorn Staff",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-way-down-in-the-hole",
           "name": "Way Down in the Hole",
           "level": 9,
-          "start": { "npcName": "Zuzumeda" },
-          "unlocks": [
-            { "type": "feature", "name": "Inn Rooms" },
-            { "type": "system", "name": "Guildleves" }
-          ]
+          "externalIds": {
+            "xivapi-quest-row": 65856
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65856,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001578",
+            "npcName": "Zuzumeda",
+            "sourceRowId": 1001578,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 20.8,
+              "y": 18.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-out-of-house-and-home"
+          ],
+          "nextQuestIds": [
+            "arr-msq-takin-what-theyre-givin"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 9
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000239",
+              "itemName": "Crumbling Ginger Cookie",
+              "quantity": 4,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3240,
+            "gil": 179,
+            "items": [
+              {
+                "itemId": "item-4551",
+                "itemName": "Potion",
+                "quantity": 5,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         }
       ]
     },
@@ -80,112 +680,1268 @@
           "id": "arr-msq-takin-what-theyre-givin",
           "name": "Takin' What They're Givin'",
           "level": 10,
-          "start": { "npcName": "Momodi" }
+          "externalIds": {
+            "xivapi-quest-row": 66159
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66159,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001353",
+            "npcName": "Momodi",
+            "sourceRowId": 1001353,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 11.7,
+              "y": 9.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-way-down-in-the-hole"
+          ],
+          "nextQuestIds": [
+            "arr-msq-supply-and-demands"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3318",
+                "itemName": "Hempen Trousers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-17",
+                "notes": "Stain: Mesa Red"
+              },
+              {
+                "itemId": "item-3316",
+                "itemName": "Amateur's Breeches",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-30",
+                "notes": "Stain: Gobbiebag Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-supply-and-demands",
           "name": "Supply and Demands",
           "level": 10,
-          "start": { "npcName": "Dadanen" }
+          "externalIds": {
+            "xivapi-quest-row": 65864
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65864,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002065",
+            "npcName": "Dadanen",
+            "sourceRowId": 1002065,
+            "zoneId": "western-thanalan",
+            "zoneName": "Western Thanalan",
+            "coordinates": {
+              "x": 22.7,
+              "y": 17.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-takin-what-theyre-givin"
+          ],
+          "nextQuestIds": [
+            "arr-msq-give-it-to-me-raw"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000368",
+              "itemName": "Dadanen's Final Notice",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3770",
+                "itemName": "Leather Jackboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-17",
+                "notes": "Stain: Mesa Red"
+              },
+              {
+                "itemId": "item-3769",
+                "itemName": "Amateur's Duckbills",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-33",
+                "notes": "Stain: Loam Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-give-it-to-me-raw",
           "name": "Give It to Me Raw",
           "level": 10,
-          "start": { "npcName": "Drunken Stag" }
+          "externalIds": {
+            "xivapi-quest-row": 66039
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66039,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002061",
+            "npcName": "Drunken Stag",
+            "sourceRowId": 1002061,
+            "zoneId": "western-thanalan",
+            "zoneName": "Western Thanalan",
+            "coordinates": {
+              "x": 26.3,
+              "y": 18.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-supply-and-demands"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-perfect-swarm"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000369",
+              "itemName": "Raw Nashachite",
+              "quantity": 3,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-2662",
+                "itemName": "Bronze Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-17",
+                "notes": "Stain: Mesa Red"
+              },
+              {
+                "itemId": "item-2661",
+                "itemName": "Amateur's Hempen Coif",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-the-perfect-swarm",
           "name": "The Perfect Swarm",
-          "level": 11,
-          "start": { "npcName": "Drunken Stag" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65865
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65865,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002061",
+            "npcName": "Drunken Stag",
+            "sourceRowId": 1002061,
+            "zoneId": "western-thanalan",
+            "zoneName": "Western Thanalan",
+            "coordinates": {
+              "x": 26.3,
+              "y": 18.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-give-it-to-me-raw"
+          ],
+          "nextQuestIds": [
+            "arr-msq-last-letter-to-lost-hope"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 188,
+            "optionalItems": [
+              {
+                "itemId": "item-3016",
+                "itemName": "Leather Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-17",
+                "notes": "Stain: Mesa Red"
+              },
+              {
+                "itemId": "item-3015",
+                "itemName": "Amateur's Dalmatica",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-last-letter-to-lost-hope",
           "name": "Last Letter to Lost Hope",
-          "level": 11,
-          "start": { "npcName": "Fufulupa" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65866
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65866,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002058",
+            "npcName": "Fufulupa",
+            "sourceRowId": 1002058,
+            "zoneId": "western-thanalan",
+            "zoneName": "Western Thanalan",
+            "coordinates": {
+              "x": 22.7,
+              "y": 17.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-perfect-swarm"
+          ],
+          "nextQuestIds": [
+            "arr-msq-heir-today-gone-tomorrow"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000377",
+              "itemName": "Letter to Leofric",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 188
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-heir-today-gone-tomorrow",
           "name": "Heir Today, Gone Tomorrow",
-          "level": 12,
-          "start": { "npcName": "Leofric" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 69389
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69389,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001605",
+            "npcName": "Leofric",
+            "sourceRowId": 1001605,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 23.4,
+              "y": 16
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-last-letter-to-lost-hope"
+          ],
+          "nextQuestIds": [
+            "arr-msq-passing-the-blade"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3539",
+                "itemName": "Hempen Bracers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-48",
+                "notes": "Stain: Olive Green"
+              },
+              {
+                "itemId": "item-3538",
+                "itemName": "Hempen Dress Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-12",
+                "notes": "Stain: Wine Red"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-passing-the-blade",
           "name": "Passing the Blade",
-          "level": 12,
-          "start": { "npcName": "Leofric" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65868
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65868,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001605",
+            "npcName": "Leofric",
+            "sourceRowId": 1001605,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 23.4,
+              "y": 16
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-heir-today-gone-tomorrow"
+          ],
+          "nextQuestIds": [
+            "arr-msq-following-footfalls"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000381",
+              "itemName": "Antique Dagger",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 196
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-following-footfalls",
           "name": "Following Footfalls",
-          "level": 13,
-          "start": { "npcName": "Fufulupa" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65869
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65869,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002058",
+            "npcName": "Fufulupa",
+            "sourceRowId": 1002058,
+            "zoneId": "western-thanalan",
+            "zoneName": "Western Thanalan",
+            "coordinates": {
+              "x": 22.7,
+              "y": 17.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-passing-the-blade"
+          ],
+          "nextQuestIds": [
+            "arr-msq-storms-on-the-horizon"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 204,
+            "optionalItems": [
+              {
+                "itemId": "item-2230",
+                "itemName": "Bronze Scutum",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 6,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-storms-on-the-horizon",
           "name": "Storms on the Horizon",
-          "level": 13,
-          "start": { "npcName": "Nunuzofu" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65870
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65870,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002067",
+            "npcName": "Nunuzofu",
+            "sourceRowId": 1002067,
+            "zoneId": "western-thanalan",
+            "zoneName": "Western Thanalan",
+            "coordinates": {
+              "x": 17.9,
+              "y": 16.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-following-footfalls"
+          ],
+          "nextQuestIds": [
+            "arr-msq-oh-captain-my-captain"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 195,
+            "optionalItems": [
+              {
+                "itemId": "item-1605",
+                "itemName": "Bronze Spatha",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-1685",
+                "itemName": "Hard Leather Himantes",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2108",
+                "itemName": "Decorated Bone Staff",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-oh-captain-my-captain",
           "name": "Oh Captain, My Captain",
           "level": 14,
-          "start": { "npcName": "Merilda" }
+          "externalIds": {
+            "xivapi-quest-row": 65872
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65872,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002071",
+            "npcName": "Merilda",
+            "sourceRowId": 1002071,
+            "zoneId": "western-thanalan",
+            "zoneName": "Western Thanalan",
+            "coordinates": {
+              "x": 15,
+              "y": 18.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-storms-on-the-horizon"
+          ],
+          "nextQuestIds": [
+            "arr-msq-secrets-and-lies"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 220,
+            "items": [
+              {
+                "itemId": "item-4564",
+                "itemName": "Antidote",
+                "quantity": 5,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-secrets-and-lies",
           "name": "Secrets and Lies",
           "level": 14,
-          "start": { "npcName": "Fufulupa" }
+          "externalIds": {
+            "xivapi-quest-row": 66164
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66164,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002058",
+            "npcName": "Fufulupa",
+            "sourceRowId": 1002058,
+            "zoneId": "western-thanalan",
+            "zoneName": "Western Thanalan",
+            "coordinates": {
+              "x": 22.7,
+              "y": 17.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-oh-captain-my-captain"
+          ],
+          "nextQuestIds": [
+            "arr-msq-duty-honor-country"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000396",
+              "itemName": "Letter to Owyne",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 220
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-duty-honor-country",
           "name": "Duty, Honor, Country",
           "level": 14,
-          "start": { "npcName": "Momodi" }
+          "externalIds": {
+            "xivapi-quest-row": 66087
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66087,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001353",
+            "npcName": "Momodi",
+            "sourceRowId": 1001353,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 11.7,
+              "y": 9.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-secrets-and-lies"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-matter-of-tradition"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000398",
+              "itemName": "Letter to Owyne",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 220,
+            "items": [
+              {
+                "itemId": "item-4429",
+                "itemName": "Ul'dahn Ring",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-a-matter-of-tradition",
           "name": "A Matter of Tradition",
           "level": 14,
-          "start": { "npcName": "Owyne" }
+          "externalIds": {
+            "xivapi-quest-row": 66177
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66177,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1004002",
+            "npcName": "Owyne",
+            "sourceRowId": 1004002,
+            "zoneId": "heart-of-the-sworn",
+            "zoneName": "Heart of the Sworn",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-duty-honor-country"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-royal-reception"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000405",
+              "itemName": "Rosewood Box",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 230,
+            "items": [
+              {
+                "itemId": "item-4196",
+                "itemName": "Voice of the Just",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-a-royal-reception",
           "name": "A Royal Reception",
           "level": 14,
-          "start": { "npcName": "Momodi" }
+          "externalIds": {
+            "xivapi-quest-row": 66088
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66088,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001353",
+            "npcName": "Momodi",
+            "sourceRowId": 1001353,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 11.7,
+              "y": 9.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-matter-of-tradition"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-uldahn-envoy"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "item-4196",
+              "itemName": "Voice of the Just",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 319
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-the-uldahn-envoy",
           "name": "The Ul'dahn Envoy",
-          "level": 15,
-          "start": { "npcName": "Raubahn" },
+          "level": 14,
+          "externalIds": {
+            "xivapi-quest-row": 66064
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66064,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1004004",
+            "npcName": "Raubahn",
+            "sourceRowId": 1004004,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 8.5,
+              "y": 9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-royal-reception"
+          ],
+          "nextQuestIds": [
+            "arr-msq-uldah-call-of-the-sea"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000445",
+              "itemName": "Letter to the Admiral",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000446",
+              "itemName": "Letter to the Elder",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
           "rewards": {
+            "experience": 5520,
+            "gil": 286,
             "items": [
               {
-                "itemId": "item-wind-up-airship",
+                "itemId": "item-6213",
                 "itemName": "Wind-up Airship",
-                "quantity": 1
+                "quantity": 1,
+                "notes": "Stain: No Color"
               }
             ]
           },
-          "unlocks": [
-            {
-              "type": "system",
-              "name": "Airship Travel"
-            }
-          ]
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-uldah-call-of-the-sea",
           "name": "Call of the Sea",
-          "level": 15,
-          "start": { "npcName": "Serpent Officer" }
+          "level": 14,
+          "externalIds": {
+            "xivapi-quest-row": 66209
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66209,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002829",
+            "npcName": "serpent officer",
+            "sourceRowId": 1002829,
+            "zoneId": "old-gridania",
+            "zoneName": "Old Gridania",
+            "coordinates": {
+              "x": 8.1,
+              "y": 11.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-uldahn-envoy"
+          ],
+          "nextQuestIds": [
+            "arr-msq-its-probably-pirates"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 286,
+            "items": [
+              {
+                "itemId": "item-4570",
+                "itemName": "Phoenix Down",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3026",
+                "itemName": "Bronze Cuirass",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-3022",
+                "itemName": "Cotton Shirt",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-3024",
+                "itemName": "Cotton Cowl",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-12",
+                "notes": "Stain: Wine Red"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 4,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         }
       ]
     }

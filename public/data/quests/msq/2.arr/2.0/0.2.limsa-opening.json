@@ -1,7 +1,9 @@
 {
   "schemaVersion": 1,
   "format": "linear",
-  "continuesToQuestIds": ["arr-msq-its-probably-pirates"],
+  "continuesToQuestIds": [
+    "arr-msq-its-probably-pirates"
+  ],
   "groups": [
     {
       "id": "limsa-levels-1-9",
@@ -13,63 +15,757 @@
       },
       "quests": [
         {
-          "id": "arr-msq-limsa-close-to-home",
+          "id": "arr-msq-close-to-home-limsa",
           "name": "Close to Home",
           "level": 1,
-          "start": { "npcName": "Baderon" },
-          "unlocks": [{ "type": "system", "name": "Return" }]
+          "externalIds": {
+            "xivapi-quest-row": 65644
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65644,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002697",
+            "npcName": "Baderon",
+            "sourceRowId": 1002697,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.7,
+              "y": 11.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "nextQuestIds": [
+            "arr-msq-on-to-summerford"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000104",
+              "itemName": "Rusted Octant",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 107
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-on-to-summerford",
           "name": "On to Summerford",
           "level": 4,
-          "start": { "npcName": "Baderon" }
+          "externalIds": {
+            "xivapi-quest-row": 65998
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65998,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000972",
+            "npcName": "Baderon",
+            "sourceRowId": 1000972,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.7,
+              "y": 11.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-close-to-home-limsa"
+          ],
+          "nextQuestIds": [
+            "arr-msq-dressed-to-call"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-27634",
+                "itemName": "Altered Thighboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-32",
+                "notes": "Stain: Mole Brown"
+              },
+              {
+                "itemId": "item-27665",
+                "itemName": "Altered Leather Thighboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-20",
+                "notes": "Stain: Russet Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-dressed-to-call",
           "name": "Dressed to Call",
-          "level": 5,
-          "start": { "npcName": "Staelwyrn" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 65999
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65999,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002626",
+            "npcName": "Staelwyrn",
+            "sourceRowId": 1002626,
+            "zoneId": "middle-la-noscea",
+            "zoneName": "Middle La Noscea",
+            "coordinates": {
+              "x": 25.6,
+              "y": 17
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-on-to-summerford"
+          ],
+          "nextQuestIds": [
+            "arr-msq-lurkers-in-the-grotto"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 161,
+            "optionalItems": [
+              {
+                "itemId": "item-1750",
+                "itemName": "Bronze War Axe",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2143",
+                "itemName": "Leather Grimoire",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-9184",
+                "itemName": "Bronze Daggers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-lurkers-in-the-grotto",
           "name": "Lurkers in the Grotto",
           "level": 5,
-          "start": { "npcName": "Staelwyrn" }
+          "externalIds": {
+            "xivapi-quest-row": 66079
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66079,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002626",
+            "npcName": "Staelwyrn",
+            "sourceRowId": 1002626,
+            "zoneId": "middle-la-noscea",
+            "zoneName": "Middle La Noscea",
+            "coordinates": {
+              "x": 25.6,
+              "y": 17
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-dressed-to-call"
+          ],
+          "nextQuestIds": [
+            "arr-msq-washed-up"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 5
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000522",
+              "itemName": "Blunt Sailor's Knife",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1400,
+            "gil": 128,
+            "items": [
+              {
+                "itemId": "item-4565",
+                "itemName": "Eye Drops",
+                "quantity": 5,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-4551",
+                "itemName": "Potion",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4555",
+                "itemName": "Ether",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-washed-up",
           "name": "Washed Up",
-          "level": 7,
-          "start": { "npcName": "Staelwyrn" }
+          "level": 5,
+          "externalIds": {
+            "xivapi-quest-row": 66001
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66001,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002626",
+            "npcName": "Staelwyrn",
+            "sourceRowId": 1002626,
+            "zoneId": "middle-la-noscea",
+            "zoneName": "Middle La Noscea",
+            "coordinates": {
+              "x": 25.6,
+              "y": 17
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-lurkers-in-the-grotto"
+          ],
+          "nextQuestIds": [
+            "arr-msq-double-dealing"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 5
+            }
+          ],
+          "rewards": {
+            "experience": 1400,
+            "gil": 141
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-double-dealing",
           "name": "Double Dealing",
-          "level": 8,
-          "start": { "npcName": "Staelwyrn" }
+          "level": 5,
+          "externalIds": {
+            "xivapi-quest-row": 66002
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66002,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002626",
+            "npcName": "Staelwyrn",
+            "sourceRowId": 1002626,
+            "zoneId": "middle-la-noscea",
+            "zoneName": "Middle La Noscea",
+            "coordinates": {
+              "x": 25.6,
+              "y": 17
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-washed-up"
+          ],
+          "nextQuestIds": [
+            "arr-msq-loam-maintenance"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 5
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000356",
+              "itemName": "Sack of Oranges",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000357",
+              "itemName": "Sack of Gil",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1400,
+            "gil": 179,
+            "items": [
+              {
+                "itemId": "item-4552",
+                "itemName": "Hi-Potion",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3008",
+                "itemName": "Hempen Acton",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-27",
+                "notes": "Stain: Acorn Brown"
+              },
+              {
+                "itemId": "item-3000",
+                "itemName": "Hempen Cowl",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-18",
+                "notes": "Stain: Bark Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-loam-maintenance",
           "name": "Loam Maintenance",
-          "level": 9,
-          "start": { "npcName": "Gurcant" }
+          "level": 5,
+          "externalIds": {
+            "xivapi-quest-row": 66003
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66003,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002627",
+            "npcName": "Gurcant",
+            "sourceRowId": 1002627,
+            "zoneId": "middle-la-noscea",
+            "zoneName": "Middle La Noscea",
+            "coordinates": {
+              "x": 25.6,
+              "y": 17.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-double-dealing"
+          ],
+          "nextQuestIds": [
+            "arr-msq-plowshares-to-swords"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 5
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000347",
+              "itemName": "Blackloam",
+              "quantity": 3,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1400,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-4092",
+                "itemName": "Leather Wristbands",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4091",
+                "itemName": "Copper Wristlets",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-plowshares-to-swords",
           "name": "Plowshares to Swords",
-          "level": 9,
-          "start": { "npcName": "Pfrewahl" }
+          "level": 5,
+          "externalIds": {
+            "xivapi-quest-row": 66004
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66004,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002631",
+            "npcName": "Pfrewahl",
+            "sourceRowId": 1002631,
+            "zoneId": "middle-la-noscea",
+            "zoneName": "Middle La Noscea",
+            "coordinates": {
+              "x": 21.5,
+              "y": 15.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-loam-maintenance"
+          ],
+          "nextQuestIds": [
+            "arr-msq-just-deserts"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 5
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000348",
+              "itemName": "Stolen Farm Tool",
+              "quantity": 3,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-4565",
+                "itemName": "Eye Drops",
+                "quantity": 5,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-1751",
+                "itemName": "Bronze Labrys",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2144",
+                "itemName": "Maple Picatrix",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-9185",
+                "itemName": "Bronze Knives",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 4,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-just-deserts",
           "name": "Just Deserts",
           "level": 9,
-          "start": { "npcName": "Staelwyrn" },
-          "unlocks": [
-            { "type": "feature", "name": "Inn Rooms" },
-            { "type": "system", "name": "Guildleves" }
-          ]
+          "externalIds": {
+            "xivapi-quest-row": 66005
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66005,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002626",
+            "npcName": "Staelwyrn",
+            "sourceRowId": 1002626,
+            "zoneId": "middle-la-noscea",
+            "zoneName": "Middle La Noscea",
+            "coordinates": {
+              "x": 25.6,
+              "y": 17
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-plowshares-to-swords"
+          ],
+          "nextQuestIds": [
+            "arr-msq-sky-high"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 9
+            }
+          ],
+          "rewards": {
+            "experience": 3240,
+            "gil": 177
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         }
       ]
     },
@@ -86,100 +782,1155 @@
           "id": "arr-msq-sky-high",
           "name": "Sky-high",
           "level": 10,
-          "start": { "npcName": "Baderon" }
+          "externalIds": {
+            "xivapi-quest-row": 65933
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65933,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000972",
+            "npcName": "Baderon",
+            "sourceRowId": 1000972,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.7,
+              "y": 11.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-just-deserts"
+          ],
+          "nextQuestIds": [
+            "arr-msq-thanks-a-million"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3318",
+                "itemName": "Hempen Trousers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-3316",
+                "itemName": "Amateur's Breeches",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-4",
+                "notes": "Stain: Slate Grey"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-thanks-a-million",
           "name": "Thanks a Million",
-          "level": 11,
-          "start": { "npcName": "Wyrkrhit" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65938
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65938,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003239",
+            "npcName": "Wyrkrhit",
+            "sourceRowId": 1003239,
+            "zoneId": "middle-la-noscea",
+            "zoneName": "Middle La Noscea",
+            "coordinates": {
+              "x": 15.8,
+              "y": 16.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-sky-high"
+          ],
+          "nextQuestIds": [
+            "arr-msq-relighting-the-torch"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000342",
+              "itemName": "Millioncorn Seedling",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3016",
+                "itemName": "Leather Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-3015",
+                "itemName": "Amateur's Dalmatica",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-75",
+                "notes": "Stain: Shadow Blue"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-relighting-the-torch",
           "name": "Relighting the Torch",
-          "level": 11,
-          "start": { "npcName": "Fraeloef" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65939
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65939,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003245",
+            "npcName": "Fraeloef",
+            "sourceRowId": 1003245,
+            "zoneId": "western-la-noscea",
+            "zoneName": "Western La Noscea",
+            "coordinates": {
+              "x": 34.6,
+              "y": 31.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-thanks-a-million"
+          ],
+          "nextQuestIds": [
+            "arr-msq-on-to-the-drydocks"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000343",
+              "itemName": "Iron Brazier",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000344",
+              "itemName": "Bomb Claw",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 101,
+            "optionalItems": [
+              {
+                "itemId": "item-2662",
+                "itemName": "Bronze Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-2661",
+                "itemName": "Amateur's Hempen Coif",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-75",
+                "notes": "Stain: Shadow Blue"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-on-to-the-drydocks",
           "name": "On to the Drydocks",
-          "level": 11,
-          "start": { "npcName": "H'naanza" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65942
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65942,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001000",
+            "npcName": "H'naanza",
+            "sourceRowId": 1001000,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 10.6,
+              "y": 15.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-relighting-the-torch"
+          ],
+          "nextQuestIds": [
+            "arr-msq-without-a-doubt"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000217",
+              "itemName": "Naldiq & Vymelli Missive",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 188,
+            "optionalItems": [
+              {
+                "itemId": "item-3770",
+                "itemName": "Leather Jackboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-3769",
+                "itemName": "Amateur's Duckbills",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-18",
+                "notes": "Stain: Bark Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-without-a-doubt",
           "name": "Without a Doubt",
-          "level": 12,
-          "start": { "npcName": "Ahtbyrm" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65948
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65948,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002238",
+            "npcName": "Ahtbyrm",
+            "sourceRowId": 1002238,
+            "zoneId": "lower-la-noscea",
+            "zoneName": "Lower La Noscea",
+            "coordinates": {
+              "x": 26.5,
+              "y": 33.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-on-to-the-drydocks"
+          ],
+          "nextQuestIds": [
+            "arr-msq-righting-the-shipwright"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 196,
+            "optionalItems": [
+              {
+                "itemId": "item-3539",
+                "itemName": "Hempen Bracers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-10",
+                "notes": "Stain: Dalamud Red"
+              },
+              {
+                "itemId": "item-3538",
+                "itemName": "Hempen Dress Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-66",
+                "notes": "Stain: Ceruleum Blue"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-righting-the-shipwright",
           "name": "Righting the Shipwright",
-          "level": 12,
-          "start": { "npcName": "Haldbroda" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65951
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65951,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002274",
+            "npcName": "Haldbroda",
+            "sourceRowId": 1002274,
+            "zoneId": "lower-la-noscea",
+            "zoneName": "Lower La Noscea",
+            "coordinates": {
+              "x": 20.8,
+              "y": 38.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-without-a-doubt"
+          ],
+          "nextQuestIds": [
+            "arr-msq-do-angry-pirates-dream"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000222",
+              "itemName": "Folded Sailcloth",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000223",
+              "itemName": "Brass Helm Wheel",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000224",
+              "itemName": "Knot of Tangled Rigging",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 234
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-do-angry-pirates-dream",
           "name": "Do Angry Pirates Dream",
-          "level": 13,
-          "start": { "npcName": "Ahtbyrm" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65949
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65949,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002238",
+            "npcName": "Ahtbyrm",
+            "sourceRowId": 1002238,
+            "zoneId": "lower-la-noscea",
+            "zoneName": "Lower La Noscea",
+            "coordinates": {
+              "x": 26.5,
+              "y": 33.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-righting-the-shipwright"
+          ],
+          "nextQuestIds": [
+            "arr-msq-victory-in-peril"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 220,
+            "optionalItems": [
+              {
+                "itemId": "item-1753",
+                "itemName": "Spiked Bronze Labrys",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2146",
+                "itemName": "Ash Picatrix",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-9186",
+                "itemName": "Brass Daggers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 7,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-victory-in-peril",
           "name": "Victory in Peril",
           "level": 14,
-          "start": { "npcName": "Ghimthota" }
+          "externalIds": {
+            "xivapi-quest-row": 65950
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65950,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002237",
+            "npcName": "Ghimthota",
+            "sourceRowId": 1002237,
+            "zoneId": "lower-la-noscea",
+            "zoneName": "Lower La Noscea",
+            "coordinates": {
+              "x": 24.9,
+              "y": 35.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-do-angry-pirates-dream"
+          ],
+          "nextQuestIds": [
+            "arr-msq-men-of-the-blue-tattoos"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 212,
+            "items": [
+              {
+                "itemId": "item-4564",
+                "itemName": "Antidote",
+                "quantity": 5,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-men-of-the-blue-tattoos",
           "name": "Men of the Blue Tattoos",
           "level": 14,
-          "start": { "npcName": "Ghimthota" }
+          "externalIds": {
+            "xivapi-quest-row": 66225
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66225,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002237",
+            "npcName": "Ghimthota",
+            "sourceRowId": 1002237,
+            "zoneId": "lower-la-noscea",
+            "zoneName": "Lower La Noscea",
+            "coordinates": {
+              "x": 24.9,
+              "y": 35.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-victory-in-peril"
+          ],
+          "nextQuestIds": [
+            "arr-msq-feint-and-strike"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000520",
+              "itemName": "Arcane Epistle",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 239
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-feint-and-strike",
           "name": "Feint and Strike",
           "level": 14,
-          "start": { "npcName": "Baderon" }
+          "externalIds": {
+            "xivapi-quest-row": 66080
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66080,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000972",
+            "npcName": "Baderon",
+            "sourceRowId": 1000972,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.7,
+              "y": 11.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-men-of-the-blue-tattoos"
+          ],
+          "nextQuestIds": [
+            "arr-msq-high-society"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000519",
+              "itemName": "Baderon's Jottings",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 220,
+            "items": [
+              {
+                "itemId": "item-4427",
+                "itemName": "Lominsan Ring",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-high-society",
           "name": "High Society",
           "level": 14,
-          "start": { "npcName": "Reyner" }
+          "externalIds": {
+            "xivapi-quest-row": 66226
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66226,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003282",
+            "npcName": "Reyner",
+            "sourceRowId": 1003282,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.2,
+              "y": 6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-feint-and-strike"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-mizzenmast-repast"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000523",
+              "itemName": "Raxa-lined Box",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 230,
+            "items": [
+              {
+                "itemId": "item-3760",
+                "itemName": "Dress Shoes",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-a-mizzenmast-repast",
           "name": "A Mizzenmast Repast",
           "level": 14,
-          "start": { "npcName": "Baderon" }
+          "externalIds": {
+            "xivapi-quest-row": 66081
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66081,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000972",
+            "npcName": "Baderon",
+            "sourceRowId": 1000972,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.7,
+              "y": 11.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-high-society"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-lominsan-envoy"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "item-3760",
+              "itemName": "Dress Shoes",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 319
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-the-lominsan-envoy",
           "name": "The Lominsan Envoy",
-          "level": 15,
-          "start": { "npcName": "Merlwyb" },
+          "level": 14,
+          "externalIds": {
+            "xivapi-quest-row": 66082
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66082,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1002694",
+            "npcName": "Merlwyb",
+            "sourceRowId": 1002694,
+            "zoneId": "command-room",
+            "zoneName": "Command Room",
+            "coordinates": {
+              "x": 3.6,
+              "y": 3.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-mizzenmast-repast"
+          ],
+          "nextQuestIds": [
+            "arr-msq-limsa-call-of-the-sea"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000458",
+              "itemName": "Letter to the Elder",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000459",
+              "itemName": "Letter to the General",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
           "rewards": {
+            "experience": 5520,
+            "gil": 286,
             "items": [
               {
-                "itemId": "item-wind-up-airship",
+                "itemId": "item-6213",
                 "itemName": "Wind-up Airship",
-                "quantity": 1
+                "quantity": 1,
+                "notes": "Stain: No Color"
               }
             ]
           },
-          "unlocks": [
-            {
-              "type": "system",
-              "name": "Airship Travel"
-            }
-          ]
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-limsa-call-of-the-sea",
           "name": "Call of the Sea",
-          "level": 15,
-          "start": { "npcName": "Bartholomew" }
+          "level": 14,
+          "externalIds": {
+            "xivapi-quest-row": 66210
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66210,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001821",
+            "npcName": "Bartholomew",
+            "sourceRowId": 1001821,
+            "zoneId": "uldah-steps-of-thal",
+            "zoneName": "Ul'dah - Steps of Thal",
+            "coordinates": {
+              "x": 10.8,
+              "y": 13
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "any",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-lominsan-envoy"
+          ],
+          "nextQuestIds": [
+            "arr-msq-its-probably-pirates"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 286,
+            "items": [
+              {
+                "itemId": "item-4570",
+                "itemName": "Phoenix Down",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3026",
+                "itemName": "Bronze Cuirass",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-3022",
+                "itemName": "Cotton Shirt",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-3024",
+                "itemName": "Cotton Cowl",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 4,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         }
       ]
     }

@@ -1,7 +1,9 @@
 {
   "schemaVersion": 1,
   "format": "linear",
-  "continuesToQuestIds": ["arr-msq-its-probably-pirates"],
+  "continuesToQuestIds": [
+    "arr-msq-its-probably-pirates"
+  ],
   "groups": [
     {
       "id": "gridania-levels-1-9",
@@ -13,57 +15,646 @@
       },
       "quests": [
         {
-          "id": "arr-msq-gridania-close-to-home",
+          "id": "arr-msq-close-to-home-gridania",
           "name": "Close to Home",
           "level": 1,
-          "start": { "npcName": "Mother Miounne" },
-          "unlocks": [{ "type": "system", "name": "Return" }]
+          "externalIds": {
+            "xivapi-quest-row": 65621
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65621,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001140",
+            "npcName": "Mother Miounne",
+            "sourceRowId": 1001140,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 11.7,
+              "y": 13.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "nextQuestIds": [
+            "arr-msq-to-the-bannock"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000074",
+              "itemName": "Handmade Eel Pie",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 107
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-to-the-bannock",
           "name": "To the Bannock",
           "level": 4,
-          "start": { "npcName": "Mother Miounne" }
+          "externalIds": {
+            "xivapi-quest-row": 65564
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65564,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000100",
+            "npcName": "Mother Miounne",
+            "sourceRowId": 1000100,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 11.7,
+              "y": 13.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-close-to-home-gridania"
+          ],
+          "nextQuestIds": [
+            "arr-msq-passing-muster"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 127,
+            "optionalItems": [
+              {
+                "itemId": "item-27634",
+                "itemName": "Altered Thighboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-33",
+                "notes": "Stain: Loam Brown"
+              },
+              {
+                "itemId": "item-27665",
+                "itemName": "Altered Leather Thighboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-33",
+                "notes": "Stain: Loam Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-passing-muster",
           "name": "Passing Muster",
-          "level": 5,
-          "start": { "npcName": "Galfrid" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 65737
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65737,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000421",
+            "npcName": "Galfrid",
+            "sourceRowId": 1000421,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 23.5,
+              "y": 19.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-to-the-bannock"
+          ],
+          "nextQuestIds": [
+            "arr-msq-chasing-shadows"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 128,
+            "optionalItems": [
+              {
+                "itemId": "item-1820",
+                "itemName": "Bone Harpoon",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-1891",
+                "itemName": "Maple Shortbow",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-1958",
+                "itemName": "Maple Wand",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-chasing-shadows",
           "name": "Chasing Shadows",
           "level": 5,
-          "start": { "npcName": "Galfrid" }
+          "externalIds": {
+            "xivapi-quest-row": 65981
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65981,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000421",
+            "npcName": "Galfrid",
+            "sourceRowId": 1000421,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 23.5,
+              "y": 19.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-passing-muster"
+          ],
+          "nextQuestIds": [
+            "arr-msq-eggs-over-queasy"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 5
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000229",
+              "itemName": "Magicked Blade",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1400,
+            "gil": 132
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-eggs-over-queasy",
           "name": "Eggs over Queasy",
-          "level": 7,
-          "start": { "npcName": "Galfrid" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 69390
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69390,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000421",
+            "npcName": "Galfrid",
+            "sourceRowId": 1000421,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 23.5,
+              "y": 19.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-chasing-shadows"
+          ],
+          "nextQuestIds": [
+            "arr-msq-surveying-the-damage"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2003025",
+              "itemName": "Chigoe Egg Sac",
+              "quantity": 3,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 151,
+            "items": [
+              {
+                "itemId": "item-4552",
+                "itemName": "Hi-Potion",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-surveying-the-damage",
           "name": "Surveying the Damage",
-          "level": 8,
-          "start": { "npcName": "Monranguin" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 65711
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65711,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000449",
+            "npcName": "Monranguin",
+            "sourceRowId": 1000449,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 25.5,
+              "y": 19.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-eggs-over-queasy"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-soldiers-breakfast"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000141",
+              "itemName": "Survey Records",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000146",
+              "itemName": "Surveyor's Instruments",
+              "quantity": 2,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000147",
+              "itemName": "Surveyor's Rope",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 179,
+            "optionalItems": [
+              {
+                "itemId": "item-3008",
+                "itemName": "Hempen Acton",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-5",
+                "notes": "Stain: Charcoal Grey"
+              },
+              {
+                "itemId": "item-3000",
+                "itemName": "Hempen Cowl",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-a-soldiers-breakfast",
           "name": "A Soldier's Breakfast",
-          "level": 9,
-          "start": { "npcName": "Pauline" }
+          "level": 4,
+          "externalIds": {
+            "xivapi-quest-row": 69391
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69391,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000685",
+            "npcName": "Pauline",
+            "sourceRowId": 1000685,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 27.3,
+              "y": 20.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-surveying-the-damage"
+          ],
+          "nextQuestIds": [
+            "arr-msq-spirithold-broken"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 4
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2003026",
+              "itemName": "Anole Egg",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 1040,
+            "gil": 186,
+            "optionalItems": [
+              {
+                "itemId": "item-1821",
+                "itemName": "Bronze Spear",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-1892",
+                "itemName": "Maple Longbow",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-1959",
+                "itemName": "Whispering Maple Wand",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-spirithold-broken",
           "name": "Spirithold Broken",
           "level": 9,
-          "start": { "npcName": "Galfrid" },
-          "unlocks": [
-            { "type": "feature", "name": "Inn Rooms" },
-            { "type": "system", "name": "Guildleves" }
-          ]
+          "externalIds": {
+            "xivapi-quest-row": 65665
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65665,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000421",
+            "npcName": "Galfrid",
+            "sourceRowId": 1000421,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 23.5,
+              "y": 19.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-soldiers-breakfast"
+          ],
+          "nextQuestIds": [
+            "arr-msq-on-to-bentbranch"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 9
+            }
+          ],
+          "rewards": {
+            "experience": 3240,
+            "gil": 206
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         }
       ]
     },
@@ -80,106 +671,1208 @@
           "id": "arr-msq-on-to-bentbranch",
           "name": "On to Bentbranch",
           "level": 10,
-          "start": { "npcName": "Mother Miounne" }
+          "externalIds": {
+            "xivapi-quest-row": 65712
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65712,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000100",
+            "npcName": "Mother Miounne",
+            "sourceRowId": 1000100,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 11.7,
+              "y": 13.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-spirithold-broken"
+          ],
+          "nextQuestIds": [
+            "arr-msq-you-shall-not-trespass"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3318",
+                "itemName": "Hempen Trousers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-3316",
+                "itemName": "Amateur's Breeches",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-31",
+                "notes": "Stain: Shale Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-you-shall-not-trespass",
           "name": "You Shall Not Trespass",
           "level": 10,
-          "start": { "npcName": "Keitha" }
+          "externalIds": {
+            "xivapi-quest-row": 65912
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65912,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000470",
+            "npcName": "Keitha",
+            "sourceRowId": 1000470,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 20.3,
+              "y": 22
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-on-to-bentbranch"
+          ],
+          "nextQuestIds": [
+            "arr-msq-dont-look-down"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3016",
+                "itemName": "Leather Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-3015",
+                "itemName": "Amateur's Dalmatica",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-dont-look-down",
           "name": "Don't Look Down",
-          "level": 11,
-          "start": { "npcName": "Osha Jaab" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65913
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65913,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000435",
+            "npcName": "Osha Jaab",
+            "sourceRowId": 1000435,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 19,
+              "y": 20.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-you-shall-not-trespass"
+          ],
+          "nextQuestIds": [
+            "arr-msq-in-the-grim-darkness-of-the-forest"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 191,
+            "optionalItems": [
+              {
+                "itemId": "item-2662",
+                "itemName": "Bronze Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-2661",
+                "itemName": "Amateur's Hempen Coif",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-32",
+                "notes": "Stain: Mole Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-in-the-grim-darkness-of-the-forest",
           "name": "In the Grim Darkness of the Forest",
-          "level": 11,
-          "start": { "npcName": "Theodore" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65915
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65915,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000436",
+            "npcName": "Theodore",
+            "sourceRowId": 1000436,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 17.6,
+              "y": 19.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-dont-look-down"
+          ],
+          "nextQuestIds": [
+            "arr-msq-threat-level-elevated"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000191",
+              "itemName": "Leather Bag",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3770",
+                "itemName": "Leather Jackboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-3769",
+                "itemName": "Amateur's Duckbills",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-29",
+                "notes": "Stain: Chestnut Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-threat-level-elevated",
           "name": "Threat Level Elevated",
-          "level": 11,
-          "start": { "npcName": "Roseline" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65916
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65916,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000748",
+            "npcName": "Roseline",
+            "sourceRowId": 1000748,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 19,
+              "y": 20.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-in-the-grim-darkness-of-the-forest"
+          ],
+          "nextQuestIds": [
+            "arr-msq-migrant-marauders"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000186",
+              "itemName": "Roseline's Missive",
+              "quantity": 3,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 191
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-migrant-marauders",
           "name": "Migrant Marauders",
-          "level": 12,
-          "start": { "npcName": "Eylgar" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65917
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65917,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000741",
+            "npcName": "Eylgar",
+            "sourceRowId": 1000741,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 20.2,
+              "y": 21.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-threat-level-elevated"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-hearer-is-often-late"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 189,
+            "optionalItems": [
+              {
+                "itemId": "item-3539",
+                "itemName": "Hempen Bracers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-41",
+                "notes": "Stain: Halatali Yellow"
+              },
+              {
+                "itemId": "item-3538",
+                "itemName": "Hempen Dress Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-25",
+                "notes": "Stain: Aldgoat Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-a-hearer-is-often-late",
           "name": "A Hearer Is Often Late",
-          "level": 13,
-          "start": { "npcName": "Lothaire" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65920
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65920,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000491",
+            "npcName": "Lothaire",
+            "sourceRowId": 1000491,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 22.5,
+              "y": 26.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-migrant-marauders"
+          ],
+          "nextQuestIds": [
+            "arr-msq-salvaging-the-scene"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 200,
+            "optionalItems": [
+              {
+                "itemId": "item-1823",
+                "itemName": "Feathered Harpoon",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-1894",
+                "itemName": "Wrapped Maple Longbow",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-1960",
+                "itemName": "Budding Maple Wand",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-salvaging-the-scene",
           "name": "Salvaging the Scene",
-          "level": 13,
-          "start": { "npcName": "Armelle" }
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65923
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65923,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000503",
+            "npcName": "Armelle",
+            "sourceRowId": 1000503,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 25.1,
+              "y": 28.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-hearer-is-often-late"
+          ],
+          "nextQuestIds": [
+            "arr-msq-leias-legacy"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000237",
+              "itemName": "Fallen Cargo",
+              "quantity": 2,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 160
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-leias-legacy",
           "name": "Leia's Legacy",
           "level": 14,
-          "start": { "npcName": "Luquelot" }
+          "externalIds": {
+            "xivapi-quest-row": 65697
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65697,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000471",
+            "npcName": "Luquelot",
+            "sourceRowId": 1000471,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 20.3,
+              "y": 21.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-salvaging-the-scene"
+          ],
+          "nextQuestIds": [
+            "arr-msq-dread-is-in-the-air"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000096",
+              "itemName": "Leia's Egg",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 101,
+            "items": [
+              {
+                "itemId": "item-4564",
+                "itemName": "Antidote",
+                "quantity": 5,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-2229",
+                "itemName": "Leather Targe",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-dread-is-in-the-air",
           "name": "Dread Is in the Air",
           "level": 14,
-          "start": { "npcName": "Luquelot" }
+          "externalIds": {
+            "xivapi-quest-row": 65982
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65982,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000471",
+            "npcName": "Luquelot",
+            "sourceRowId": 1000471,
+            "zoneId": "central-shroud",
+            "zoneName": "Central Shroud",
+            "coordinates": {
+              "x": 20.3,
+              "y": 21.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-leias-legacy"
+          ],
+          "nextQuestIds": [
+            "arr-msq-to-guard-a-guardian"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000240",
+              "itemName": "Luquelot's Letter",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 230
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-to-guard-a-guardian",
           "name": "To Guard a Guardian",
           "level": 14,
-          "start": { "npcName": "Mother Miounne" }
+          "externalIds": {
+            "xivapi-quest-row": 65983
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65983,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000100",
+            "npcName": "Mother Miounne",
+            "sourceRowId": 1000100,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 11.7,
+              "y": 13.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-dread-is-in-the-air"
+          ],
+          "nextQuestIds": [
+            "arr-msq-festive-endeavors"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000249",
+              "itemName": "Miounne's Letter",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-4428",
+                "itemName": "Gridanian Ring",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-festive-endeavors",
           "name": "Festive Endeavors",
           "level": 14,
-          "start": { "npcName": "Lewin" }
+          "externalIds": {
+            "xivapi-quest-row": 65984
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65984,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003061",
+            "npcName": "Lewin",
+            "sourceRowId": 1003061,
+            "zoneId": "seat-of-the-first-bow",
+            "zoneName": "Seat of the First Bow",
+            "coordinates": {
+              "x": 3.6,
+              "y": 3.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-to-guard-a-guardian"
+          ],
+          "nextQuestIds": [
+            "arr-msq-renewing-the-covenant"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000250",
+              "itemName": "Wooden Lockbox",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 230,
+            "items": [
+              {
+                "itemId": "item-2651",
+                "itemName": "Monoa Mask",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-renewing-the-covenant",
           "name": "Renewing the Covenant",
           "level": 14,
-          "start": { "npcName": "Mother Miounne" }
+          "externalIds": {
+            "xivapi-quest-row": 65985
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65985,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000100",
+            "npcName": "Mother Miounne",
+            "sourceRowId": 1000100,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 11.7,
+              "y": 13.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-festive-endeavors"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-gridanian-envoy"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "item-2651",
+              "itemName": "Monoa Mask",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 319
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-the-gridanian-envoy",
           "name": "The Gridanian Envoy",
-          "level": 15,
-          "start": { "npcName": "Kan-E-Senna" },
+          "level": 14,
+          "externalIds": {
+            "xivapi-quest-row": 66043
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66043,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003027",
+            "npcName": "Kan-E-Senna",
+            "sourceRowId": 1003027,
+            "zoneId": "lotus-stand",
+            "zoneName": "Lotus Stand",
+            "coordinates": {
+              "x": 6.2,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-renewing-the-covenant"
+          ],
+          "nextQuestIds": [
+            "arr-msq-gridania-call-of-the-sea"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000456",
+              "itemName": "Letter to the Admiral",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000457",
+              "itemName": "Letter to the General",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
           "rewards": {
+            "experience": 5520,
+            "gil": 286,
             "items": [
               {
-                "itemId": "item-wind-up-airship",
+                "itemId": "item-6213",
                 "itemName": "Wind-up Airship",
-                "quantity": 1
+                "quantity": 1,
+                "notes": "Stain: No Color"
               }
             ]
           },
-          "unlocks": [
-            {
-              "type": "system",
-              "name": "Airship Travel"
-            }
-          ]
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         },
         {
           "id": "arr-msq-gridania-call-of-the-sea",
           "name": "Call of the Sea",
-          "level": 15,
-          "start": { "npcName": "Bartholomew" }
+          "level": 14,
+          "externalIds": {
+            "xivapi-quest-row": 66210
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66210,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001821",
+            "npcName": "Bartholomew",
+            "sourceRowId": 1001821,
+            "zoneId": "uldah-steps-of-thal",
+            "zoneName": "Ul'dah - Steps of Thal",
+            "coordinates": {
+              "x": 10.8,
+              "y": 13
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "any",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-gridanian-envoy"
+          ],
+          "nextQuestIds": [
+            "arr-msq-its-probably-pirates"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 14
+            }
+          ],
+          "rewards": {
+            "experience": 5520,
+            "gil": 286,
+            "items": [
+              {
+                "itemId": "item-4570",
+                "itemName": "Phoenix Down",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3026",
+                "itemName": "Bronze Cuirass",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-3022",
+                "itemName": "Cotton Shirt",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-3024",
+                "itemName": "Cotton Cowl",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 4,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         }
       ]
     }

@@ -1,0 +1,442 @@
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
+
+import {
+  questCollectionFileSchema,
+  type QuestCollectionFile,
+} from '../../src/modules/quests/data/questCollectionFileSchemas';
+import type { Quest } from '../../src/modules/quests/data/questSchemas';
+import {
+  questChainExportSchema,
+  type QuestChainExport,
+  type QuestExportEntry,
+} from './questExportSchemas';
+import { projectRoot, writeJsonFile } from './paths';
+
+type RouteId = 'gridania' | 'limsa' | 'uldah';
+
+interface TargetDefinition {
+  path: string;
+  sourceQuests: QuestExportEntry[];
+  routeId?: RouteId;
+}
+
+function readOption(optionName: string): string | undefined {
+  const optionIndex = process.argv.indexOf(optionName);
+  const value = optionIndex >= 0 ? process.argv[optionIndex + 1] : undefined;
+
+  if (value === undefined || value.startsWith('--')) {
+    return undefined;
+  }
+
+  return value;
+}
+
+function requireOption(optionName: string): string {
+  const value = readOption(optionName);
+
+  if (!value) {
+    throw new Error(`Missing required option: ${optionName}`);
+  }
+
+  return value;
+}
+
+function slugify(value: string): string {
+  return value
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase('en-US')
+    .replace(/[’']/g, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+async function readJson(filePath: string): Promise<unknown> {
+  return JSON.parse(await readFile(filePath, 'utf8')) as unknown;
+}
+
+function routeQuestId(questId: string, routeId: RouteId): string {
+  if (questId === 'arr-msq-call-of-the-sea') {
+    return `arr-msq-${routeId}-call-of-the-sea`;
+  }
+
+  if (questId === 'arr-msq-call-of-the-sea-uldah') {
+    return 'arr-msq-uldah-call-of-the-sea';
+  }
+
+  return questId;
+}
+
+function mapRelationIds(questId: string, routeId?: RouteId): string[] {
+  if (routeId) {
+    return [routeQuestId(questId, routeId)];
+  }
+
+  if (questId === 'arr-msq-call-of-the-sea') {
+    return [
+      'arr-msq-gridania-call-of-the-sea',
+      'arr-msq-limsa-call-of-the-sea',
+    ];
+  }
+
+  if (questId === 'arr-msq-call-of-the-sea-uldah') {
+    return ['arr-msq-uldah-call-of-the-sea'];
+  }
+
+  return [questId];
+}
+
+function collectRouteQuests(
+  exportData: QuestChainExport,
+  startQuestId: string,
+  stopQuestId: string,
+): QuestExportEntry[] {
+  const questsById = new Map(
+    exportData.quests.map((quest) => [quest.id, quest]),
+  );
+  const collectedIds = new Set<string>();
+  const pendingIds = [startQuestId];
+
+  while (pendingIds.length > 0) {
+    const questId = pendingIds.pop();
+
+    if (!questId || questId === stopQuestId || collectedIds.has(questId)) {
+      continue;
+    }
+
+    const quest = questsById.get(questId);
+
+    if (!quest) {
+      throw new Error(`Missing route quest ${questId}.`);
+    }
+
+    collectedIds.add(questId);
+    pendingIds.push(...quest.nextQuestIds);
+  }
+
+  return exportData.quests.filter((quest) => collectedIds.has(quest.id));
+}
+
+function convertRequirements(
+  quest: QuestExportEntry,
+): NonNullable<Quest['requirements']> {
+  const requirements: NonNullable<Quest['requirements']> = [];
+
+  for (const requirement of quest.requirements) {
+    switch (requirement.type) {
+      case 'level':
+      case 'quest':
+        break;
+
+      case 'class-job':
+        if (requirement.level) {
+          requirements.push({
+            type: 'class-job-level',
+            classJobId: requirement.classJobId,
+            classJobName: requirement.classJobName,
+            level: requirement.level,
+          });
+        }
+        break;
+
+      case 'item':
+        if (requirement.quantity === null) {
+          throw new Error(`${quest.id} has an unresolved item quantity.`);
+        }
+
+        requirements.push({
+          type: 'item',
+          itemId: requirement.itemId,
+          itemName: requirement.itemName,
+          quantity: requirement.quantity,
+          quality: requirement.quality ?? 'normal',
+        });
+        break;
+
+      case 'feature':
+        requirements.push({
+          type: 'feature',
+          featureId: requirement.id,
+          name: requirement.name,
+        });
+        break;
+    }
+  }
+
+  return requirements;
+}
+
+function convertQuest(
+  quest: QuestExportEntry,
+  exportData: QuestChainExport,
+  routeId?: RouteId,
+  routeSourceIds?: ReadonlySet<string>,
+) {
+  const npc = quest.start.npc;
+  const location = quest.start.location;
+
+  if (!npc?.name) {
+    throw new Error(`${quest.id} has no start NPC.`);
+  }
+
+  const requirements = convertRequirements(quest);
+  const rewardItems = quest.rewards.items.map((item) => {
+    if (item.quantity === null) {
+      throw new Error(`${quest.id} has an unresolved reward quantity.`);
+    }
+
+    return {
+      itemId: item.itemId,
+      itemName: item.itemName,
+      quantity: item.quantity,
+      quality: item.quality,
+      stainId: item.stainId,
+      notes: item.stainName ? `Stain: ${item.stainName}` : undefined,
+    };
+  });
+  const optionalItems = quest.rewards.choices.map((item) => {
+    if (item.quantity === null) {
+      throw new Error(`${quest.id} has an unresolved reward-choice quantity.`);
+    }
+
+    return {
+      itemId: item.itemId,
+      itemName: item.itemName,
+      quantity: item.quantity,
+      quality: item.quality,
+      choiceGroup: 1,
+      stainId: item.stainId,
+      notes: item.stainName ? `Stain: ${item.stainName}` : undefined,
+    };
+  });
+  const prerequisiteQuestIds = quest.previousQuestIds
+    .filter((id) => !routeSourceIds || routeSourceIds.has(id))
+    .flatMap((id) => mapRelationIds(id, routeId));
+  const nextQuestIds = quest.nextQuestIds.flatMap((id) =>
+    mapRelationIds(id, routeId),
+  );
+
+  return {
+    id: routeId ? routeQuestId(quest.id, routeId) : quest.id,
+    name: quest.name,
+    level: quest.level,
+    externalIds: {
+      'xivapi-quest-row': quest.xivapiRowId,
+    },
+    sources: [
+      {
+        provider: 'xivapi',
+        sheet: 'Quest',
+        rowId: quest.xivapiRowId,
+        gameVersion: exportData.source.version,
+        schema: exportData.source.schema,
+        language: 'en' as const,
+        importedAt: exportData.generatedAt,
+      },
+    ],
+    start: {
+      npcId: npc.xivapiRowId ? `enpc-${npc.xivapiRowId}` : undefined,
+      npcName: npc.name,
+      sourceRowId: npc.xivapiRowId,
+      zoneId: location?.zone ? slugify(location.zone) : undefined,
+      zoneName: location?.zone ?? undefined,
+      coordinates:
+        location?.x !== null &&
+        location?.x !== undefined &&
+        location.y !== null &&
+        location.y !== undefined
+          ? { x: location.x, y: location.y }
+          : undefined,
+    },
+    availability: quest.availability ?? undefined,
+    prerequisiteQuestMode: quest.previousQuestMode,
+    prerequisiteQuestIds:
+      prerequisiteQuestIds.length > 0 ? prerequisiteQuestIds : undefined,
+    nextQuestIds: nextQuestIds.length > 0 ? nextQuestIds : undefined,
+    requirements: requirements.length > 0 ? requirements : undefined,
+    rewards: {
+      experience: quest.rewards.experience ?? undefined,
+      gil: quest.rewards.gil ?? undefined,
+      items: rewardItems.length > 0 ? rewardItems : undefined,
+      optionalItems: optionalItems.length > 0 ? optionalItems : undefined,
+    },
+    unlocks:
+      quest.unlocks.length > 0
+        ? quest.unlocks.map((unlock) => ({
+            type: unlock.type,
+            targetId: unlock.id,
+            name: unlock.name,
+            notes: unlock.details,
+          }))
+        : undefined,
+    tags: ['xivapi-import'],
+    lastVerifiedAt: exportData.generatedAt,
+  };
+}
+
+function fillGroups(
+  collection: QuestCollectionFile,
+  quests: ReturnType<typeof convertQuest>[],
+): QuestCollectionFile {
+  const groups = collection.groups.map((group) => ({
+    ...group,
+    quests: [] as typeof quests,
+  }));
+
+  for (const quest of quests) {
+    const group = groups.find(
+      (candidate) =>
+        !candidate.levelRange ||
+        (quest.level >= candidate.levelRange.minimum &&
+          quest.level <= candidate.levelRange.maximum),
+    );
+
+    if (!group) {
+      throw new Error(
+        `No target group accepts ${quest.id} at level ${quest.level}.`,
+      );
+    }
+
+    group.quests.push(quest);
+  }
+
+  return questCollectionFileSchema.parse({ ...collection, groups });
+}
+
+async function main(): Promise<void> {
+  const inputPath = path.resolve(projectRoot, requireOption('--file'));
+  const shouldWrite = process.argv.includes('--write');
+  const exportData = questChainExportSchema.parse(await readJson(inputPath));
+
+  if (
+    exportData.issues.length > 0 ||
+    exportData.summary.unresolvedIssueCount > 0
+  ) {
+    throw new Error('The export is not complete.');
+  }
+
+  if (
+    exportData.expansionId !== 'arr' ||
+    exportData.patch !== '2.0' ||
+    exportData.category !== 'msq'
+  ) {
+    throw new Error(
+      'This publisher currently supports only the ARR 2.0 MSQ export.',
+    );
+  }
+
+  const sharedStartId = 'arr-msq-its-probably-pirates';
+  const routeDefinitions: Array<{
+    routeId: RouteId;
+    startId: string;
+    path: string;
+  }> = [
+    {
+      routeId: 'gridania',
+      startId: 'arr-msq-close-to-home-gridania',
+      path: 'public/data/quests/msq/2.arr/2.0/0.1.gridania-opening.json',
+    },
+    {
+      routeId: 'limsa',
+      startId: 'arr-msq-close-to-home-limsa',
+      path: 'public/data/quests/msq/2.arr/2.0/0.2.limsa-opening.json',
+    },
+    {
+      routeId: 'uldah',
+      startId: 'arr-msq-close-to-home-uldah',
+      path: 'public/data/quests/msq/2.arr/2.0/0.3.uldah-opening.json',
+    },
+  ];
+  const openingSourceIds = new Set<string>();
+  const targets: TargetDefinition[] = routeDefinitions.map((definition) => {
+    const sourceQuests = collectRouteQuests(
+      exportData,
+      definition.startId,
+      sharedStartId,
+    );
+    sourceQuests.forEach((quest) => openingSourceIds.add(quest.id));
+    return { path: definition.path, routeId: definition.routeId, sourceQuests };
+  });
+  const sharedQuests = exportData.quests.filter(
+    (quest) => !openingSourceIds.has(quest.id),
+  );
+  const sharedDefinitions = [
+    {
+      path: 'public/data/quests/msq/2.arr/2.0/1.levels-15-20.json',
+      minimum: 15,
+      maximum: 20,
+    },
+    {
+      path: 'public/data/quests/msq/2.arr/2.0/2.levels-21-30.json',
+      minimum: 21,
+      maximum: 30,
+    },
+    {
+      path: 'public/data/quests/msq/2.arr/2.0/3.levels-31-40.json',
+      minimum: 31,
+      maximum: 40,
+    },
+    {
+      path: 'public/data/quests/msq/2.arr/2.0/4.levels-41-50.json',
+      minimum: 41,
+      maximum: 50,
+    },
+  ];
+
+  for (const definition of sharedDefinitions) {
+    targets.push({
+      path: definition.path,
+      sourceQuests: sharedQuests.filter(
+        (quest) =>
+          quest.level >= definition.minimum &&
+          quest.level <= definition.maximum,
+      ),
+    });
+  }
+
+  let publishedCount = 0;
+  for (const target of targets) {
+    const filePath = path.join(projectRoot, target.path);
+    const collection = questCollectionFileSchema.parse(
+      await readJson(filePath),
+    );
+    const quests = target.sourceQuests.map((quest) =>
+      convertQuest(
+        quest,
+        exportData,
+        target.routeId,
+        target.routeId
+          ? new Set(target.sourceQuests.map((sourceQuest) => sourceQuest.id))
+          : undefined,
+      ),
+    );
+    const result = fillGroups(collection, quests);
+    publishedCount += quests.length;
+    console.log(`${target.path}: ${quests.length}`);
+    if (shouldWrite) {
+      await writeJsonFile(filePath, result);
+    }
+  }
+
+  const expectedPublishedCount = exportData.quests.length + 1;
+
+  if (publishedCount !== expectedPublishedCount) {
+    throw new Error(
+      `Expected ${expectedPublishedCount} published entries, received ${publishedCount}.`,
+    );
+  }
+
+  console.log(`Published entries: ${publishedCount}`);
+  console.log(
+    shouldWrite
+      ? 'Collection files updated.'
+      : 'Dry run only; no files changed.',
+  );
+}
+
+void main().catch((error: unknown) => {
+  console.error(error);
+  process.exitCode = 1;
+});

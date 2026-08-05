@@ -1,7 +1,9 @@
 {
   "schemaVersion": 1,
   "format": "linear",
-  "startsAfterQuestIds": ["arr-msq-its-probably-pirates2"],
+  "startsAfterQuestIds": [
+    "arr-msq-its-probably-pirates2"
+  ],
   "groups": [
     {
       "id": "arr-levels-41-50",
@@ -13,46 +15,2545 @@
       },
       "quests": [
         {
-          "id": "arr-msq-its-probably-pirates3",
-          "name": "It's Probably Pirates",
+          "id": "arr-msq-in-pursuit-of-the-past",
+          "name": "In Pursuit of the Past",
           "level": 41,
-          "start": {
-            "npcName": "Baderon",
-            "zoneId": "limsa-lominsa-upper-decks",
-            "zoneName": "Limsa Lominsa Upper Decks",
-            "coordinates": {
-              "x": 11.6,
-              "y": 11.1
-            }
+          "externalIds": {
+            "xivapi-quest-row": 66488
           },
-          "rewards": {
-            "experience": 5760,
-            "gil": 668
-          },
-          "duties": [
+          "sources": [
             {
-              "id": "duty-sastasha",
-              "name": "Sastasha",
-              "type": "dungeon",
-              "level": 15,
-              "dutySupportAvailable": true
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66488,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
             }
           ],
-          "unlocks": [
-            {
-              "type": "dungeon",
-              "targetId": "duty-sastasha",
-              "name": "Sastasha"
-            },
-            {
-              "type": "feature",
-              "name": "Party Finder"
-            },
-            {
-              "type": "system",
-              "name": "Duty Support"
+          "start": {
+            "npcId": "enpc-1006467",
+            "npcName": "Alphinaud",
+            "sourceRowId": 1006467,
+            "zoneId": "coerthas-central-highlands",
+            "zoneName": "Coerthas Central Highlands",
+            "coordinates": {
+              "x": 12.7,
+              "y": 16.6
             }
-          ]
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-heretic-among-us"
+          ],
+          "nextQuestIds": [
+            "arr-msq-into-the-eye-of-the-storm"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 41
+            }
+          ],
+          "rewards": {
+            "experience": 22000,
+            "gil": 4616
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-into-the-eye-of-the-storm",
+          "name": "Into the Eye of the Storm",
+          "level": 41,
+          "externalIds": {
+            "xivapi-quest-row": 66489
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66489,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006492",
+            "npcName": "Cid",
+            "sourceRowId": 1006492,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 11.4,
+              "y": 13.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-in-pursuit-of-the-past"
+          ],
+          "nextQuestIds": [
+            "arr-msq-sealed-with-science"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 41
+            }
+          ],
+          "rewards": {
+            "experience": 22000,
+            "gil": 1676,
+            "optionalItems": [
+              {
+                "itemId": "item-2812",
+                "itemName": "Mythril Celata",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-27674",
+                "itemName": "Altered Mythril Magnifiers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-33",
+                "notes": "Stain: Loam Brown"
+              },
+              {
+                "itemId": "item-2810",
+                "itemName": "Woolen Turban",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 6,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-sealed-with-science",
+          "name": "Sealed with Science",
+          "level": 41,
+          "externalIds": {
+            "xivapi-quest-row": 66491
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66491,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006493",
+            "npcName": "Lamberteint",
+            "sourceRowId": 1006493,
+            "zoneId": "eastern-thanalan",
+            "zoneName": "Eastern Thanalan",
+            "coordinates": {
+              "x": 12.7,
+              "y": 23.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-into-the-eye-of-the-storm"
+          ],
+          "nextQuestIds": [
+            "arr-msq-with-the-utmost-care"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 41
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000741",
+              "itemName": "Warded Pot",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 22000,
+            "gil": 1676,
+            "optionalItems": [
+              {
+                "itemId": "item-3149",
+                "itemName": "Mythril Cuirass",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-27675",
+                "itemName": "Altered Woolen Gown",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-33",
+                "notes": "Stain: Loam Brown"
+              },
+              {
+                "itemId": "item-27642",
+                "itemName": "Altered Woolen Shirt",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 6,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-with-the-utmost-care",
+          "name": "With the Utmost Care",
+          "level": 41,
+          "externalIds": {
+            "xivapi-quest-row": 66492
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66492,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006495",
+            "npcName": "Hahasako",
+            "sourceRowId": 1006495,
+            "zoneId": "eastern-thanalan",
+            "zoneName": "Eastern Thanalan",
+            "coordinates": {
+              "x": 21.5,
+              "y": 22
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-sealed-with-science"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-promising-prospect"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 41
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000742",
+              "itemName": "Quarrying Maul",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000837",
+              "itemName": "Warded Pot",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000838",
+              "itemName": "Heavy Warded Pot",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 22000,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3628",
+                "itemName": "Mythril Gauntlets",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-3640",
+                "itemName": "Woolen Dress Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-30",
+                "notes": "Stain: Gobbiebag Brown"
+              },
+              {
+                "itemId": "item-3625",
+                "itemName": "Fingerless Peisteskin Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-32",
+                "notes": "Stain: Mole Brown"
+              },
+              {
+                "itemId": "item-5826",
+                "itemName": "Allagan Gold Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-a-promising-prospect",
+          "name": "A Promising Prospect",
+          "level": 41,
+          "externalIds": {
+            "xivapi-quest-row": 66495
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66495,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006493",
+            "npcName": "Lamberteint",
+            "sourceRowId": 1006493,
+            "zoneId": "eastern-thanalan",
+            "zoneName": "Eastern Thanalan",
+            "coordinates": {
+              "x": 12.7,
+              "y": 23.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-with-the-utmost-care"
+          ],
+          "nextQuestIds": [
+            "arr-msq-its-probably-not-pirates"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 41
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000839",
+              "itemName": "Warded Pot",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 22000,
+            "gil": 1575,
+            "optionalItems": [
+              {
+                "itemId": "item-3411",
+                "itemName": "Padded Linen Trousers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-68",
+                "notes": "Stain: Ink Blue"
+              },
+              {
+                "itemId": "item-27676",
+                "itemName": "Altered Woolen Chausses",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-33",
+                "notes": "Stain: Loam Brown"
+              },
+              {
+                "itemId": "item-3408",
+                "itemName": "Woolen Sarouel",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-12",
+                "notes": "Stain: Wine Red"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 6,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-its-probably-not-pirates",
+          "name": "It's Probably Not Pirates",
+          "level": 42,
+          "externalIds": {
+            "xivapi-quest-row": 66496
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66496,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006497",
+            "npcName": "Ceana",
+            "sourceRowId": 1006497,
+            "zoneId": "western-la-noscea",
+            "zoneName": "Western La Noscea",
+            "coordinates": {
+              "x": 27.9,
+              "y": 27
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-promising-prospect"
+          ],
+          "nextQuestIds": [
+            "arr-msq-representing-the-representative"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 42
+            }
+          ],
+          "rewards": {
+            "experience": 22440,
+            "gil": 1676
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-representing-the-representative",
+          "name": "Representing the Representative",
+          "level": 42,
+          "externalIds": {
+            "xivapi-quest-row": 66497
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66497,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006497",
+            "npcName": "Ceana",
+            "sourceRowId": 1006497,
+            "zoneId": "western-la-noscea",
+            "zoneName": "Western La Noscea",
+            "coordinates": {
+              "x": 27.9,
+              "y": 27
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-its-probably-not-pirates"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-reluctant-researcher"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 42
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000745",
+              "itemName": "Golden Feather",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000843",
+              "itemName": "Permission for Passage",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 22440,
+            "gil": 1703
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-the-reluctant-researcher",
+          "name": "The Reluctant Researcher",
+          "level": 42,
+          "externalIds": {
+            "xivapi-quest-row": 66498
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66498,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006497",
+            "npcName": "Ceana",
+            "sourceRowId": 1006497,
+            "zoneId": "western-la-noscea",
+            "zoneName": "Western La Noscea",
+            "coordinates": {
+              "x": 27.9,
+              "y": 27
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-representing-the-representative"
+          ],
+          "nextQuestIds": [
+            "arr-msq-sweet-somethings"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 42
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000840",
+              "itemName": "Warded Pot",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 22440,
+            "gil": 1676
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-sweet-somethings",
+          "name": "Sweet Somethings",
+          "level": 42,
+          "externalIds": {
+            "xivapi-quest-row": 66499
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66499,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006503",
+            "npcName": "Davyd",
+            "sourceRowId": 1006503,
+            "zoneId": "western-la-noscea",
+            "zoneName": "Western La Noscea",
+            "coordinates": {
+              "x": 16.2,
+              "y": 30.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-reluctant-researcher"
+          ],
+          "nextQuestIds": [
+            "arr-msq-history-repeating"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 42
+            }
+          ],
+          "rewards": {
+            "experience": 22440,
+            "gil": 1597
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-history-repeating",
+          "name": "History Repeating",
+          "level": 42,
+          "externalIds": {
+            "xivapi-quest-row": 66503
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66503,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006503",
+            "npcName": "Davyd",
+            "sourceRowId": 1006503,
+            "zoneId": "western-la-noscea",
+            "zoneName": "Western La Noscea",
+            "coordinates": {
+              "x": 16.2,
+              "y": 30.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-sweet-somethings"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-curious-case-of-giggity"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 42
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000849",
+              "itemName": "Brass Earplugs",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000841",
+              "itemName": "Heavy Warded Pot",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 22440,
+            "gil": 3098
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-the-curious-case-of-giggity",
+          "name": "The Curious Case of Giggity",
+          "level": 43,
+          "externalIds": {
+            "xivapi-quest-row": 69406
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69406,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006497",
+            "npcName": "Ceana",
+            "sourceRowId": 1006497,
+            "zoneId": "western-la-noscea",
+            "zoneName": "Western La Noscea",
+            "coordinates": {
+              "x": 27.9,
+              "y": 27
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-history-repeating"
+          ],
+          "nextQuestIds": [
+            "arr-msq-better-late-than-never"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 43
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2003019",
+              "itemName": "True Heart",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2003020",
+              "itemName": "Corrupted Crystal",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 22880,
+            "gil": 1674
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-better-late-than-never",
+          "name": "Better Late than Never",
+          "level": 43,
+          "externalIds": {
+            "xivapi-quest-row": 66511
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66511,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006710",
+            "npcName": "Hedyn",
+            "sourceRowId": 1006710,
+            "zoneId": "old-gridania",
+            "zoneName": "Old Gridania",
+            "coordinates": {
+              "x": 8.8,
+              "y": 8.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-curious-case-of-giggity"
+          ],
+          "nextQuestIds": [
+            "arr-msq-lady-of-the-vortex"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 43
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000753",
+              "itemName": "Corrupted Crystal",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 22880,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-3868",
+                "itemName": "Mythril Sollerets",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-3866",
+                "itemName": "Boarskin Moccasins",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5826",
+                "itemName": "Allagan Gold Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-lady-of-the-vortex",
+          "name": "Lady of the Vortex",
+          "level": 44,
+          "externalIds": {
+            "xivapi-quest-row": 66055
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66055,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006492",
+            "npcName": "Cid",
+            "sourceRowId": 1006492,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 11.4,
+              "y": 13.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-better-late-than-never"
+          ],
+          "nextQuestIds": [
+            "arr-msq-reclamation"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 44
+            }
+          ],
+          "rewards": {
+            "experience": 23320,
+            "gil": 3208,
+            "optionalItems": [
+              {
+                "itemId": "item-27643",
+                "itemName": "Altered Woolen Hat",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-33",
+                "notes": "Stain: Loam Brown"
+              },
+              {
+                "itemId": "item-27657",
+                "itemName": "Altered Mythril Chain Coif",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2832",
+                "itemName": "Woolen Cavalier's Hat",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-12",
+                "notes": "Stain: Wine Red"
+              },
+              {
+                "itemId": "item-5826",
+                "itemName": "Allagan Gold Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-reclamation",
+          "name": "Reclamation",
+          "level": 44,
+          "externalIds": {
+            "xivapi-quest-row": 66056
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66056,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006730",
+            "npcName": "Alphinaud",
+            "sourceRowId": 1006730,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 10.4,
+              "y": 11.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-lady-of-the-vortex"
+          ],
+          "nextQuestIds": [
+            "arr-msq-casing-the-castrum"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 44
+            }
+          ],
+          "rewards": {
+            "experience": 23320,
+            "gil": 0,
+            "optionalItems": [
+              {
+                "itemId": "item-27644",
+                "itemName": "Woolen Tunic",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-33",
+                "notes": "Stain: Loam Brown"
+              },
+              {
+                "itemId": "item-27658",
+                "itemName": "Altered High Mythril Armor",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-3178",
+                "itemName": "Woolen Bliaud",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-12",
+                "notes": "Stain: Wine Red"
+              },
+              {
+                "itemId": "item-5826",
+                "itemName": "Allagan Gold Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-casing-the-castrum",
+          "name": "Casing the Castrum",
+          "level": 44,
+          "externalIds": {
+            "xivapi-quest-row": 66514
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66514,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007473",
+            "npcName": "Y'shtola",
+            "sourceRowId": 1007473,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-reclamation"
+          ],
+          "nextQuestIds": [
+            "arr-msq-eyes-on-the-empire"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 44
+            }
+          ],
+          "rewards": {
+            "experience": 23320,
+            "gil": 1646,
+            "optionalItems": [
+              {
+                "itemId": "item-3649",
+                "itemName": "High Mythril Gauntlets",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-27645",
+                "itemName": "Altered Woolen Bracers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-33",
+                "notes": "Stain: Loam Brown"
+              },
+              {
+                "itemId": "item-5826",
+                "itemName": "Allagan Gold Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-eyes-on-the-empire",
+          "name": "Eyes on the Empire",
+          "level": 44,
+          "externalIds": {
+            "xivapi-quest-row": 66516
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66516,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006380",
+            "npcName": "Portelaine",
+            "sourceRowId": 1006380,
+            "zoneId": "coerthas-central-highlands",
+            "zoneName": "Coerthas Central Highlands",
+            "coordinates": {
+              "x": 24.9,
+              "y": 28.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-casing-the-castrum"
+          ],
+          "nextQuestIds": [
+            "arr-msq-footprints-in-the-snow"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 44
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000842",
+              "itemName": "Letter to Bricelt",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 23320,
+            "gil": 1646,
+            "optionalItems": [
+              {
+                "itemId": "item-3431",
+                "itemName": "High Mythril Flanchard",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-27646",
+                "itemName": "Altered Woolen Trousers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-30",
+                "notes": "Stain: Gobbiebag Brown"
+              },
+              {
+                "itemId": "item-3429",
+                "itemName": "Woolen Gaskins",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-12",
+                "notes": "Stain: Wine Red"
+              },
+              {
+                "itemId": "item-5826",
+                "itemName": "Allagan Gold Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-footprints-in-the-snow",
+          "name": "Footprints in the Snow",
+          "level": 44,
+          "externalIds": {
+            "xivapi-quest-row": 66517
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66517,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006518",
+            "npcName": "Pierremons",
+            "sourceRowId": 1006518,
+            "zoneId": "coerthas-central-highlands",
+            "zoneName": "Coerthas Central Highlands",
+            "coordinates": {
+              "x": 14.4,
+              "y": 35.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-eyes-on-the-empire"
+          ],
+          "nextQuestIds": [
+            "arr-msq-monumental-hopes"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 44
+            }
+          ],
+          "rewards": {
+            "experience": 23320,
+            "gil": 1756
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-monumental-hopes",
+          "name": "Monumental Hopes",
+          "level": 44,
+          "externalIds": {
+            "xivapi-quest-row": 66518
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66518,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006520",
+            "npcName": "Wedge",
+            "sourceRowId": 1006520,
+            "zoneId": "coerthas-central-highlands",
+            "zoneName": "Coerthas Central Highlands",
+            "coordinates": {
+              "x": 7.5,
+              "y": 29
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-footprints-in-the-snow"
+          ],
+          "nextQuestIds": [
+            "arr-msq-notorious-biggs"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 44
+            }
+          ],
+          "rewards": {
+            "experience": 23320,
+            "gil": 1646
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-notorious-biggs",
+          "name": "Notorious Biggs",
+          "level": 44,
+          "externalIds": {
+            "xivapi-quest-row": 66519
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66519,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006520",
+            "npcName": "Wedge",
+            "sourceRowId": 1006520,
+            "zoneId": "coerthas-central-highlands",
+            "zoneName": "Coerthas Central Highlands",
+            "coordinates": {
+              "x": 7.5,
+              "y": 29
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-monumental-hopes"
+          ],
+          "nextQuestIds": [
+            "arr-msq-come-into-my-castrum"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 44
+            }
+          ],
+          "rewards": {
+            "experience": 23320,
+            "gil": 3208
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-come-into-my-castrum",
+          "name": "Come-Into-My-Castrum",
+          "level": 44,
+          "externalIds": {
+            "xivapi-quest-row": 66520
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66520,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006528",
+            "npcName": "Cid",
+            "sourceRowId": 1006528,
+            "zoneId": "coerthas-central-highlands",
+            "zoneName": "Coerthas Central Highlands",
+            "coordinates": {
+              "x": 7.5,
+              "y": 29
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-notorious-biggs"
+          ],
+          "nextQuestIds": [
+            "arr-msq-getting-even-with-garlemald"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 44
+            }
+          ],
+          "rewards": {
+            "experience": 23320,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-getting-even-with-garlemald",
+          "name": "Getting Even with Garlemald",
+          "level": 44,
+          "externalIds": {
+            "xivapi-quest-row": 66522
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66522,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006531",
+            "npcName": "Glaumunt",
+            "sourceRowId": 1006531,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 22.6,
+              "y": 7.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-come-into-my-castrum"
+          ],
+          "nextQuestIds": [
+            "arr-msq-drowning-out-the-voices",
+            "arr-msq-acting-the-part"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 44
+            }
+          ],
+          "rewards": {
+            "experience": 23320,
+            "gil": 2090
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-drowning-out-the-voices",
+          "name": "Drowning Out the Voices",
+          "level": 45,
+          "externalIds": {
+            "xivapi-quest-row": 66537
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66537,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006535",
+            "npcName": "Cid",
+            "sourceRowId": 1006535,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 22,
+              "y": 7.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-getting-even-with-garlemald"
+          ],
+          "nextQuestIds": [
+            "arr-msq-fool-me-twice"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 45
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000766",
+              "itemName": "Electromagnetic Reader",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 23760,
+            "gil": 353
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-acting-the-part",
+          "name": "Acting the Part",
+          "level": 45,
+          "externalIds": {
+            "xivapi-quest-row": 66538
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66538,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006531",
+            "npcName": "Glaumunt",
+            "sourceRowId": 1006531,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 22.6,
+              "y": 7.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-getting-even-with-garlemald"
+          ],
+          "nextQuestIds": [
+            "arr-msq-dressed-for-conquest"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 45
+            }
+          ],
+          "rewards": {
+            "experience": 23760,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-dressed-for-conquest",
+          "name": "Dressed for Conquest",
+          "level": 45,
+          "externalIds": {
+            "xivapi-quest-row": 69407
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69407,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006552",
+            "npcName": "Sark Malark",
+            "sourceRowId": 1006552,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 22.6,
+              "y": 7.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-acting-the-part"
+          ],
+          "nextQuestIds": [
+            "arr-msq-fool-me-twice"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 45
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2003021",
+              "itemName": "Damaged Imperial Uniform",
+              "quantity": 3,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2003022",
+              "itemName": "Damaged Imperial Helm",
+              "quantity": 3,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2003023",
+              "itemName": "Repaired Imperial Uniform",
+              "quantity": 3,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2003024",
+              "itemName": "Repaired Imperial Helm",
+              "quantity": 3,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 23760,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-6223",
+                "itemName": "Mended Imperial Pot Helm",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-6224",
+                "itemName": "Mended Imperial Short Robe",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-fool-me-twice",
+          "name": "Fool Me Twice",
+          "level": 46,
+          "externalIds": {
+            "xivapi-quest-row": 66540
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66540,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006531",
+            "npcName": "Glaumunt",
+            "sourceRowId": 1006531,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 22.6,
+              "y": 7.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "any",
+          "prerequisiteQuestIds": [
+            "arr-msq-drowning-out-the-voices",
+            "arr-msq-dressed-for-conquest"
+          ],
+          "nextQuestIds": [
+            "arr-msq-every-little-thing-she-does-is-magitek"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 46
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000771",
+              "itemName": "Imperial Smoke Signal",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 25300,
+            "gil": 3313,
+            "items": [
+              {
+                "itemId": "item-31336",
+                "itemName": "Level 45 Weapon Coffer",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-every-little-thing-she-does-is-magitek",
+          "name": "Every Little Thing She Does Is Magitek",
+          "level": 46,
+          "externalIds": {
+            "xivapi-quest-row": 66541
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66541,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006555",
+            "npcName": "Cid",
+            "sourceRowId": 1006555,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-fool-me-twice"
+          ],
+          "nextQuestIds": [
+            "arr-msq-escape-from-castrum-centri"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 46
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000772",
+              "itemName": "Mammet Heart",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 25300,
+            "gil": 3313
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-escape-from-castrum-centri",
+          "name": "Escape from Castrum Centri",
+          "level": 46,
+          "externalIds": {
+            "xivapi-quest-row": 66057
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66057,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006555",
+            "npcName": "Cid",
+            "sourceRowId": 1006555,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-every-little-thing-she-does-is-magitek"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-black-wolfs-ultimatum"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 46
+            },
+            {
+              "type": "item",
+              "itemId": "item-6223",
+              "itemName": "Mended Imperial Pot Helm",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "item-6224",
+              "itemName": "Mended Imperial Short Robe",
+              "quantity": 1,
+              "quality": "normal"
+            },
+            {
+              "type": "item",
+              "itemId": "event-item-2000773",
+              "itemName": "Imperial Identification Key",
+              "quantity": 1,
+              "quality": "normal"
+            }
+          ],
+          "rewards": {
+            "experience": 25300,
+            "gil": 3313
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-the-black-wolfs-ultimatum",
+          "name": "The Black Wolf's Ultimatum",
+          "level": 46,
+          "externalIds": {
+            "xivapi-quest-row": 66058
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66058,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006573",
+            "npcName": "Minfilia",
+            "sourceRowId": 1006573,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 10.4,
+              "y": 11.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-escape-from-castrum-centri"
+          ],
+          "nextQuestIds": [
+            "arr-msq-operation-archon"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 46
+            }
+          ],
+          "rewards": {
+            "experience": 25300,
+            "gil": 1808,
+            "items": [
+              {
+                "itemId": "item-30362",
+                "itemName": "Vesper Bay Aetheryte Ticket",
+                "quantity": 26,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-operation-archon",
+          "name": "Operation Archon",
+          "level": 49,
+          "externalIds": {
+            "xivapi-quest-row": 70057
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70057,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006690",
+            "npcName": "Minfilia",
+            "sourceRowId": 1006690,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-the-black-wolfs-ultimatum"
+          ],
+          "nextQuestIds": [
+            "arr-msq-a-hero-in-need"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 49
+            }
+          ],
+          "rewards": {
+            "experience": 27840,
+            "gil": 3463,
+            "optionalItems": [
+              {
+                "itemId": "item-3183",
+                "itemName": "Tortoiseshell Scale Mail",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-3191",
+                "itemName": "Raptorskin Harness",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-27677",
+                "itemName": "Altered Woolen Cowl",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5826",
+                "itemName": "Allagan Gold Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-a-hero-in-need",
+          "name": "A Hero in Need",
+          "level": 49,
+          "externalIds": {
+            "xivapi-quest-row": 66573
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66573,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006578",
+            "npcName": "Allied communications officer",
+            "sourceRowId": 1006578,
+            "zoneId": "western-thanalan",
+            "zoneName": "Western Thanalan",
+            "coordinates": {
+              "x": 12.1,
+              "y": 12
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-operation-archon"
+          ],
+          "nextQuestIds": [
+            "arr-msq-hearts-on-fire"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 49
+            }
+          ],
+          "rewards": {
+            "experience": 27840,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-31337",
+                "itemName": "Level 49 Weapon Coffer",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-hearts-on-fire",
+          "name": "Hearts on Fire",
+          "level": 49,
+          "externalIds": {
+            "xivapi-quest-row": 69408
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69408,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006638",
+            "npcName": "Cracked Fist",
+            "sourceRowId": 1006638,
+            "zoneId": "northern-thanalan",
+            "zoneName": "Northern Thanalan",
+            "coordinates": {
+              "x": 22.3,
+              "y": 29.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-a-hero-in-need"
+          ],
+          "nextQuestIds": [
+            "arr-msq-rock-the-castrum"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 49
+            }
+          ],
+          "rewards": {
+            "experience": 27840,
+            "gil": 1646,
+            "optionalItems": [
+              {
+                "itemId": "item-4281",
+                "itemName": "Darklight Earrings of Fending",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4282",
+                "itemName": "Darklight Earrings of Maiming",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4278",
+                "itemName": "Darklight Earrings of Striking",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-rock-the-castrum",
+          "name": "Rock the Castrum",
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 69409
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69409,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006646",
+            "npcName": "Edelstein",
+            "sourceRowId": 1006646,
+            "zoneId": "northern-thanalan",
+            "zoneName": "Northern Thanalan",
+            "coordinates": {
+              "x": 20.9,
+              "y": 22.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-hearts-on-fire"
+          ],
+          "nextQuestIds": [
+            "arr-msq-the-ultimate-weapon"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "rewards": {
+            "experience": 2340,
+            "gil": 5368,
+            "optionalItems": [
+              {
+                "itemId": "item-4279",
+                "itemName": "Darklight Earrings of Aiming",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4280",
+                "itemName": "Darklight Earrings of Healing",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4283",
+                "itemName": "Darklight Earrings of Casting",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
+        },
+        {
+          "id": "arr-msq-the-ultimate-weapon",
+          "name": "The Ultimate Weapon",
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 70058
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70058,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-05T04:28:04.208Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006657",
+            "npcName": "Raubahn",
+            "sourceRowId": 1006657,
+            "zoneId": "northern-thanalan",
+            "zoneName": "Northern Thanalan",
+            "coordinates": {
+              "x": 15.6,
+              "y": 17
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "arr-msq-rock-the-castrum"
+          ],
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "rewards": {
+            "experience": 2340,
+            "gil": 15000,
+            "items": [
+              {
+                "itemId": "item-6008",
+                "itemName": "Armor Identification Key",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-6221",
+                "itemName": "Fantasia",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-05T04:28:04.208Z"
         }
       ]
     }
