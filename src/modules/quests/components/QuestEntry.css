@@ -1,5 +1,6 @@
 .quest-entry {
   padding: 0.8rem;
+  cursor: pointer;
 
   border: 1px solid var(--color-border);
   border-radius: 0.65rem;
@@ -15,6 +16,11 @@
 .quest-entry:hover {
   border-color: var(--color-border-strong);
   background: var(--color-surface-hover);
+}
+
+.quest-entry:focus-visible {
+  outline: 0.15rem solid var(--color-accent-light);
+  outline-offset: 0.15rem;
 }
 
 .quest-entry--complete {
@@ -153,8 +159,7 @@
 }
 
 .quest-entry__bookmark-button,
-.quest-entry__current-button,
-.quest-entry__details-button {
+.quest-entry__current-button {
   min-height: 1.8rem;
 
   border: 1px solid var(--color-border);
@@ -175,16 +180,14 @@
 }
 
 .quest-entry__bookmark-button:hover,
-.quest-entry__current-button:hover,
-.quest-entry__details-button:hover {
+.quest-entry__current-button:hover {
   border-color: var(--color-border-strong);
   color: var(--color-text-primary);
   background: rgb(255 255 255 / 3%);
 }
 
 .quest-entry__bookmark-button:focus-visible,
-.quest-entry__current-button:focus-visible,
-.quest-entry__details-button:focus-visible {
+.quest-entry__current-button:focus-visible {
   outline: 0.15rem solid var(--color-accent-light);
   outline-offset: 0.15rem;
 }
@@ -196,8 +199,7 @@
   font-size: 0.9rem;
 }
 
-.quest-entry__current-button,
-.quest-entry__details-button {
+.quest-entry__current-button {
   padding: 0.25rem 0.45rem;
 }
 
@@ -208,32 +210,66 @@
   background: var(--color-accent-muted);
 }
 
-.quest-entry__metadata {
+.quest-entry__indicators {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.35rem;
 
   margin-top: 0.55rem;
 }
 
-.quest-entry__tag {
-  padding: 0.23rem 0.4rem;
+.quest-entry__indicator {
+  min-width: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+
+  padding: 0.23rem 0.42rem;
 
   border: 1px solid var(--color-border);
-  border-radius: 0.35rem;
+  border-radius: 999px;
 
   color: var(--color-text-muted);
   background: rgb(255 255 255 / 2%);
 
   font-size: 0.62rem;
+  font-weight: 700;
   line-height: 1.3;
 }
 
-.quest-entry__tag--duty {
+.quest-entry__indicator-icon {
+  color: inherit;
+  font-size: 0.6rem;
+  font-weight: 900;
+}
+
+.quest-entry__indicator--experience {
+  color: #9fd7a4;
+  border-color: rgb(94 170 103 / 38%);
+  background: rgb(94 170 103 / 10%);
+}
+
+.quest-entry__indicator--gil {
   color: var(--color-accent-light);
   border-color: var(--color-accent-border);
   background: var(--color-accent-muted);
-  text-transform: capitalize;
+}
+
+.quest-entry__indicator--unlock {
+  max-width: 18rem;
+
+  color: #9ebce3;
+  border-color: rgb(91 139 201 / 40%);
+  background: rgb(91 139 201 / 10%);
+}
+
+.quest-entry__indicator--unlock > span:last-child {
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media (max-width: 38rem) {
@@ -252,8 +288,7 @@
   .quest-entry__custom-check,
   .quest-entry__title h4,
   .quest-entry__bookmark-button,
-  .quest-entry__current-button,
-  .quest-entry__details-button {
+  .quest-entry__current-button {
     transition: none;
   }
 }

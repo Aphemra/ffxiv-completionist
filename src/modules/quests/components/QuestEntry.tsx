@@ -1,3 +1,5 @@
+import type { KeyboardEvent, MouseEvent } from 'react';
+
 import type { Quest } from '../data/questSchemas';
 
 import { formatQuestCategory } from '../utilities/questPresentation';
@@ -17,6 +19,55 @@ interface QuestEntryProps {
   onOpenDetails: () => void;
 }
 
+function formatUnlockType(type: string): string {
+  return type
+    .split('-')
+    .map((segment) =>
+      segment.length > 0
+        ? segment[0]?.toUpperCase() + segment.slice(1)
+        : segment,
+    )
+    .join(' ');
+}
+
+function getUnlockIcon(type: string): string {
+  const normalizedType = type.toLocaleLowerCase('en-US');
+
+  if (
+    normalizedType.includes('dungeon') ||
+    normalizedType.includes('trial') ||
+    normalizedType.includes('raid') ||
+    normalizedType.includes('duty')
+  ) {
+    return '⚔';
+  }
+
+  if (normalizedType.includes('emote')) {
+    return '☺';
+  }
+
+  if (normalizedType.includes('mount-speed')) {
+    return '⇧';
+  }
+
+  if (normalizedType.includes('mount')) {
+    return '◆';
+  }
+
+  if (normalizedType.includes('action') || normalizedType.includes('ability')) {
+    return '✦';
+  }
+
+  return '◇';
+}
+
+function isInteractiveTarget(target: EventTarget | null): boolean {
+  return (
+    target instanceof HTMLElement &&
+    target.closest('button, input, label, a, select, textarea') !== null
+  );
+}
+
 export function QuestEntry({
   quest,
   isCompleted,
@@ -27,6 +78,39 @@ export function QuestEntry({
   onToggleBookmark,
   onOpenDetails,
 }: QuestEntryProps) {
+  const experience = quest.rewards?.experience;
+  const gil = quest.rewards?.gil;
+
+  const dutyNames = new Set(
+    quest.duties?.map((duty) => duty.name.toLocaleLowerCase('en-US')) ?? [],
+  );
+
+  const additionalUnlocks =
+    quest.unlocks?.filter(
+      (unlock) => !dutyNames.has(unlock.name.toLocaleLowerCase('en-US')),
+    ) ?? [];
+
+  function handleClick(event: MouseEvent<HTMLElement>): void {
+    if (isInteractiveTarget(event.target)) {
+      return;
+    }
+
+    onOpenDetails();
+  }
+
+  function handleKeyDown(event: KeyboardEvent<HTMLElement>): void {
+    if (event.target !== event.currentTarget) {
+      return;
+    }
+
+    if (event.key !== 'Enter' && event.key !== ' ') {
+      return;
+    }
+
+    event.preventDefault();
+    onOpenDetails();
+  }
+
   return (
     <article
       className={[
@@ -36,6 +120,11 @@ export function QuestEntry({
       ]
         .filter(Boolean)
         .join(' ')}
+      role="button"
+      tabIndex={0}
+      aria-label={`Open details for ${quest.name}`}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
     >
       <div className="quest-entry__main">
         <label className="quest-entry__check">
@@ -98,38 +187,80 @@ export function QuestEntry({
               >
                 {isCurrent ? 'Current' : 'Set current'}
               </button>
-
-              <button
-                className="quest-entry__details-button"
-                type="button"
-                onClick={onOpenDetails}
-              >
-                Details
-              </button>
             </div>
           </div>
 
-          {quest.duties && quest.duties.length > 0 && (
-            <div className="quest-entry__metadata" aria-label="Quest duties">
-              {quest.duties.map((duty) => (
+          {((experience !== undefined && experience > 0) ||
+            (gil !== undefined && gil > 0) ||
+            (quest.duties && quest.duties.length > 0) ||
+            additionalUnlocks.length > 0) && (
+            <div
+              className="quest-entry__indicators"
+              aria-label="Quest rewards and unlocks"
+            >
+              {experience !== undefined && experience > 0 && (
+                <span
+                  className="quest-entry__indicator quest-entry__indicator--experience"
+                  title={`${experience.toLocaleString()} experience`}
+                >
+                  <span
+                    className="quest-entry__indicator-icon"
+                    aria-hidden="true"
+                  >
+                    XP
+                  </span>
+
+                  <span>{experience.toLocaleString()}</span>
+                </span>
+              )}
+
+              {gil !== undefined && gil > 0 && (
+                <span
+                  className="quest-entry__indicator quest-entry__indicator--gil"
+                  title={`${gil.toLocaleString()} gil`}
+                >
+                  <span
+                    className="quest-entry__indicator-icon"
+                    aria-hidden="true"
+                  >
+                    G
+                  </span>
+
+                  <span>{gil.toLocaleString()}</span>
+                </span>
+              )}
+
+              {quest.duties?.map((duty) => (
                 <span
                   key={duty.id}
-                  className="quest-entry__tag quest-entry__tag--duty"
+                  className="quest-entry__indicator quest-entry__indicator--unlock"
+                  title={`Unlocks ${formatUnlockType(duty.type)}: ${duty.name}`}
                 >
-                  {duty.type}: {duty.name}
+                  <span
+                    className="quest-entry__indicator-icon"
+                    aria-hidden="true"
+                  >
+                    ⚔
+                  </span>
+
+                  <span>{duty.name}</span>
                 </span>
               ))}
-            </div>
-          )}
 
-          {quest.unlocks && quest.unlocks.length > 0 && (
-            <div className="quest-entry__metadata" aria-label="Quest unlocks">
-              {quest.unlocks.map((unlock) => (
+              {additionalUnlocks.map((unlock) => (
                 <span
                   key={`${unlock.type}-${unlock.targetId ?? unlock.name}`}
-                  className="quest-entry__tag"
+                  className="quest-entry__indicator quest-entry__indicator--unlock"
+                  title={`Unlocks ${formatUnlockType(unlock.type)}: ${unlock.name}`}
                 >
-                  Unlocks: {unlock.name}
+                  <span
+                    className="quest-entry__indicator-icon"
+                    aria-hidden="true"
+                  >
+                    {getUnlockIcon(unlock.type)}
+                  </span>
+
+                  <span>{unlock.name}</span>
                 </span>
               ))}
             </div>

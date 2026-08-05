@@ -368,6 +368,21 @@ export function QuestLogPage() {
     setPatchFilter('all');
   }
 
+  function handleToggleQuestCompletion(quest: Quest): void {
+    if (!catalog || completedQuestIdSet.has(quest.id)) {
+      toggleQuestCompletion(quest.id);
+      return;
+    }
+
+    const previousQuestIds = getPreviousQuestIds(
+      quest.id,
+      catalog.questsById,
+      completedQuestIdSet,
+    );
+
+    markQuestsComplete([...previousQuestIds, quest.id]);
+  }
+
   function handleSetCurrentQuest(questId: string): void {
     if (!catalog) {
       return;
@@ -398,7 +413,7 @@ export function QuestLogPage() {
         isCurrent={profile.currentQuestId === quest.id}
         isBookmarked={bookmarkedQuestIdSet.has(quest.id)}
         onToggleCompletion={() => {
-          toggleQuestCompletion(quest.id);
+          handleToggleQuestCompletion(quest);
         }}
         onToggleCurrent={() => {
           handleSetCurrentQuest(quest.id);
@@ -636,13 +651,24 @@ export function QuestLogPage() {
           {patchSections.length > 0 ? (
             <div className="quest-collections">
               {patchSections.map((section) => {
-                const sectionQuests = section.ranges.flatMap(({ collection }) =>
-                  collection.groups.flatMap((group) => group.quests),
-                );
+                const sectionQuests = catalog.collections
+                  .filter(
+                    (collection) =>
+                      collection.category === section.category &&
+                      collection.expansionId === section.expansionId &&
+                      collection.patch === section.patch,
+                  )
+                  .flatMap((collection) =>
+                    collection.groups.flatMap((group) => group.quests),
+                  );
 
                 const completedSectionCount = sectionQuests.filter((quest) =>
                   completedQuestIdSet.has(quest.id),
                 ).length;
+
+                const isPatchComplete =
+                  sectionQuests.length > 0 &&
+                  completedSectionCount === sectionQuests.length;
 
                 const visibleSectionCount = section.ranges.reduce(
                   (rangeTotal, { groups }) =>
@@ -684,6 +710,7 @@ export function QuestLogPage() {
                     className={[
                       'quest-collection',
                       isPatchExpanded ? 'quest-collection--expanded' : '',
+                      isPatchComplete ? 'quest-collection--complete' : '',
                     ]
                       .filter(Boolean)
                       .join(' ')}
@@ -783,6 +810,10 @@ export function QuestLogPage() {
                               (quest) => completedQuestIdSet.has(quest.id),
                             ).length;
 
+                            const isRangeComplete =
+                              rangeQuests.length > 0 &&
+                              completedRangeCount === rangeQuests.length;
+
                             const isRangeExpanded =
                               shouldAutoExpandMatches ||
                               expandedRangeIds.has(rangeKey);
@@ -790,7 +821,14 @@ export function QuestLogPage() {
                             return (
                               <section
                                 key={collection.id}
-                                className="quest-group"
+                                className={[
+                                  'quest-group',
+                                  isRangeComplete
+                                    ? 'quest-group--complete'
+                                    : '',
+                                ]
+                                  .filter(Boolean)
+                                  .join(' ')}
                               >
                                 <button
                                   className="quest-group__toggle"
@@ -815,6 +853,13 @@ export function QuestLogPage() {
                                   </span>
 
                                   <span className="quest-group__summary">
+                                    {isRangeComplete && (
+                                      <span className="quest-group__complete-marker">
+                                        <span aria-hidden="true">✓</span>
+                                        Complete
+                                      </span>
+                                    )}
+
                                     <span>
                                       {completedRangeCount} /{' '}
                                       {rangeQuests.length} complete
@@ -889,7 +934,7 @@ export function QuestLogPage() {
             setSelectedQuestId(null);
           }}
           onToggleCompletion={() => {
-            toggleQuestCompletion(selectedQuest.id);
+            handleToggleQuestCompletion(selectedQuest);
           }}
           onToggleCurrent={() => {
             handleSetCurrentQuest(selectedQuest.id);
