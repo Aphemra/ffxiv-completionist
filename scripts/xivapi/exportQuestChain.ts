@@ -1,4 +1,4 @@
-import { access, mkdir, readFile } from 'node:fs/promises';
+import { access, mkdir, readFile, readdir } from 'node:fs/promises';
 
 import { constants } from 'node:fs';
 
@@ -273,6 +273,46 @@ function requireOption(optionName: string): string {
   }
 
   return value;
+}
+
+function readPositiveIntegerOption(optionName: string): number | undefined {
+  const value = readOption(optionName);
+
+  if (value === undefined) {
+    return undefined;
+  }
+
+  const parsedValue = Number(value);
+
+  if (!Number.isInteger(parsedValue) || parsedValue <= 0) {
+    throw new Error(
+      `Option "${optionName}" requires a positive integer, received "${value}".`,
+    );
+  }
+
+  return parsedValue;
+}
+
+function readRowIdsOption(optionName: string): number[] {
+  const value = readOption(optionName);
+
+  if (value === undefined) {
+    return [];
+  }
+
+  const rowIds = value.split(',').map((rawRowId) => {
+    const rowId = Number(rawRowId.trim());
+
+    if (!Number.isInteger(rowId) || rowId <= 0) {
+      throw new Error(
+        `Option "${optionName}" contains invalid row ID "${rawRowId}".`,
+      );
+    }
+
+    return rowId;
+  });
+
+  return Array.from(new Set(rowIds));
 }
 
 function hasFlag(flagName: string): boolean {
@@ -678,6 +718,65 @@ function topologicallySortQuests(
   return orderedQuests;
 }
 
+async function readKnownQuestIds(
+  exportsDirectory: string,
+): Promise<Map<number, string>> {
+  const questIdsByRowId = new Map<number, string>();
+
+  let directoryEntries;
+
+  try {
+    directoryEntries = await readdir(exportsDirectory, {
+      withFileTypes: true,
+    });
+  } catch (error) {
+    const errorCode = asObject(error)?.code;
+
+    if (errorCode === 'ENOENT') {
+      return questIdsByRowId;
+    }
+
+    throw error;
+  }
+
+  for (const directoryEntry of directoryEntries) {
+    if (!directoryEntry.isFile() || !directoryEntry.name.endsWith('.json')) {
+      continue;
+    }
+
+    const exportPath = path.join(exportsDirectory, directoryEntry.name);
+    const rawExport = asObject(await readJsonFile(exportPath));
+
+    for (const rawQuest of asArray(rawExport?.quests)) {
+      const quest = asObject(rawQuest);
+
+      const rowId = readInteger(quest?.xivapiRowId);
+      const questId = readString(quest?.id);
+
+      if (rowId === undefined || rowId <= 0 || !questId) {
+        continue;
+      }
+
+      const existingQuestId = questIdsByRowId.get(rowId);
+
+      if (existingQuestId && existingQuestId !== questId) {
+        throw new Error(
+          [
+            `XIVAPI quest row ${rowId} has conflicting export IDs.`,
+            `Existing: ${existingQuestId}`,
+            `Found: ${questId}`,
+            `File: ${exportPath}`,
+          ].join('\n'),
+        );
+      }
+
+      questIdsByRowId.set(rowId, questId);
+    }
+  }
+
+  return questIdsByRowId;
+}
+
 function createQuestBaseId(
   quest: QuestIndexEntry,
   expansionId: string,
@@ -692,32 +791,30 @@ function createQuestIds(
   quests: readonly QuestIndexEntry[],
   expansionId: string,
   category: string,
+  knownQuestIdsByRowId: ReadonlyMap<number, string>,
 ): Map<number, string> {
-  const baseIdsByRowId = new Map<number, string>();
-
-  const baseIdCounts = new Map<string, number>();
+  const questIdsByRowId = new Map<number, string>();
+  const rowIdsByQuestId = new Map<string, number>();
 
   for (const quest of quests) {
     const baseId = createQuestBaseId(quest, expansionId, category);
 
-    baseIdsByRowId.set(quest.rowId, baseId);
+    const questId =
+      knownQuestIdsByRowId.get(quest.rowId) ?? `${baseId}-${quest.rowId}`;
 
-    baseIdCounts.set(baseId, (baseIdCounts.get(baseId) ?? 0) + 1);
-  }
+    const existingRowId = rowIdsByQuestId.get(questId);
 
-  const questIdsByRowId = new Map<number, string>();
-
-  for (const quest of quests) {
-    const baseId = baseIdsByRowId.get(quest.rowId);
-
-    if (!baseId) {
-      continue;
+    if (existingRowId !== undefined && existingRowId !== quest.rowId) {
+      throw new Error(
+        [
+          `Quest ID "${questId}" resolves to multiple XIVAPI rows.`,
+          `Rows: ${existingRowId}, ${quest.rowId}`,
+        ].join('\n'),
+      );
     }
 
-    const finalId =
-      (baseIdCounts.get(baseId) ?? 0) > 1 ? `${baseId}-${quest.rowId}` : baseId;
-
-    questIdsByRowId.set(quest.rowId, finalId);
+    questIdsByRowId.set(quest.rowId, questId);
+    rowIdsByQuestId.set(questId, quest.rowId);
   }
 
   return questIdsByRowId;
@@ -726,6 +823,7 @@ function createQuestIds(
 function resolveRelatedQuestId(
   rowId: number,
   questIdsByRowId: ReadonlyMap<number, string>,
+  knownQuestIdsByRowId: ReadonlyMap<number, string>,
   questsByRowId: ReadonlyMap<number, QuestIndexEntry>,
   expansionId: string,
   category: string,
@@ -736,13 +834,19 @@ function resolveRelatedQuestId(
     return exportedQuestId;
   }
 
+  const knownQuestId = knownQuestIdsByRowId.get(rowId);
+
+  if (knownQuestId) {
+    return knownQuestId;
+  }
+
   const relatedQuest = questsByRowId.get(rowId);
 
   if (!relatedQuest || !isEligibleQuest(relatedQuest, category)) {
     return undefined;
   }
 
-  return createQuestBaseId(relatedQuest, expansionId, category);
+  return `${createQuestBaseId(relatedQuest, expansionId, category)}-${rowId}`;
 }
 
 function pushIssue(
@@ -1718,9 +1822,31 @@ function createQuestEntry(
 async function main(): Promise<void> {
   const exportId = slugify(requireOption('--id'));
 
-  const startQuestName = requireOption('--start');
+  const explicitRowIds = readRowIdsOption('--rows');
 
-  const endQuestName = requireOption('--end');
+  const startQuestName = readOption('--start');
+  const endQuestName = readOption('--end');
+
+  const startQuestRowId = readPositiveIntegerOption('--start-row');
+  const endQuestRowId = readPositiveIntegerOption('--end-row');
+
+  const usesExplicitRows = explicitRowIds.length > 0;
+
+  if (
+    usesExplicitRows &&
+    (startQuestName ||
+      endQuestName ||
+      startQuestRowId !== undefined ||
+      endQuestRowId !== undefined)
+  ) {
+    throw new Error(
+      '"--rows" cannot be combined with --start, --end, --start-row, or --end-row.',
+    );
+  }
+
+  if (!usesExplicitRows && (!startQuestName || !endQuestName)) {
+    throw new Error('Chain exports require both "--start" and "--end".');
+  }
 
   const expansionId = slugify(requireOption('--expansion'));
 
@@ -1781,88 +1907,136 @@ async function main(): Promise<void> {
     questIndex.quests.map((quest) => [quest.rowId, quest]),
   );
 
-  const startCandidates = questIndex.quests.filter(
-    (quest) =>
-      normalizeQuestName(quest.name) === normalizeQuestName(startQuestName) &&
-      isEligibleQuest(quest, category),
-  );
+  const knownQuestIdsByRowId = await readKnownQuestIds(exportsDirectory);
 
-  if (startCandidates.length === 0) {
-    throw new Error(
-      `No eligible starting quest named "${startQuestName}" was found.`,
+  let discoveredRowIds: Set<number>;
+
+  if (usesExplicitRows) {
+    discoveredRowIds = new Set<number>();
+
+    for (const rowId of explicitRowIds) {
+      const quest = questsByRowId.get(rowId);
+
+      if (!quest) {
+        throw new Error(
+          `Explicit quest row ${rowId} is not present in the quest index.`,
+        );
+      }
+
+      if (!isEligibleQuest(quest, category)) {
+        throw new Error(
+          [
+            `Explicit quest row ${rowId} is not eligible`,
+            `for category "${category}".`,
+            `Quest: ${quest.name}`,
+          ].join(' '),
+        );
+      }
+
+      discoveredRowIds.add(rowId);
+    }
+  } else {
+    if (!startQuestName || !endQuestName) {
+      throw new Error('Chain selection is missing its start or end quest.');
+    }
+
+    const startCandidates = questIndex.quests.filter(
+      (quest) =>
+        normalizeQuestName(quest.name) === normalizeQuestName(startQuestName) &&
+        isEligibleQuest(quest, category) &&
+        (startQuestRowId === undefined || quest.rowId === startQuestRowId),
     );
-  }
 
-  const startQuests = collapseEquivalentStarts(
-    startCandidates,
-    questsByRowId,
-    category,
-  );
-
-  const allForwardReachable = collectForwardReachable(
-    startQuests.map((quest) => quest.rowId),
-    questsByRowId,
-    category,
-  );
-
-  const endCandidates = questIndex.quests.filter(
-    (quest) =>
-      normalizeQuestName(quest.name) === normalizeQuestName(endQuestName) &&
-      isEligibleQuest(quest, category) &&
-      allForwardReachable.has(quest.rowId),
-  );
-
-  if (endCandidates.length === 0) {
-    throw new Error(
-      [
-        `No reachable ending quest named "${endQuestName}" was found.`,
-        '',
-        `Starting quest: ${startQuestName}`,
-      ].join('\n'),
-    );
-  }
-
-  if (endCandidates.length > 1) {
-    throw new Error(
-      [
-        `The ending quest name "${endQuestName}" is ambiguous.`,
-        '',
-        ...endCandidates.map((quest) => `Row ${quest.rowId}: ${quest.name}`),
-      ].join('\n'),
-    );
-  }
-
-  const finalQuest = endCandidates[0];
-
-  if (!finalQuest) {
-    throw new Error('The final quest could not be resolved.');
-  }
-
-  const forwardReachable = collectForwardReachable(
-    startQuests.map((quest) => quest.rowId),
-    questsByRowId,
-    category,
-    finalQuest.rowId,
-  );
-
-  const discoveredRowIds = collectBackwardReachable(
-    finalQuest.rowId,
-    forwardReachable,
-    questsByRowId,
-    category,
-  );
-
-  for (const startQuest of startQuests) {
-    if (!discoveredRowIds.has(startQuest.rowId)) {
+    if (startCandidates.length === 0) {
       throw new Error(
         [
-          'A starting route does not',
-          'reach the requested final quest.',
+          `No eligible starting quest named "${startQuestName}" was found.`,
+          startQuestRowId !== undefined
+            ? `Requested row: ${startQuestRowId}`
+            : '',
+        ]
+          .filter(Boolean)
+          .join('\n'),
+      );
+    }
+
+    const startQuests = collapseEquivalentStarts(
+      startCandidates,
+      questsByRowId,
+      category,
+    );
+
+    const allForwardReachable = collectForwardReachable(
+      startQuests.map((quest) => quest.rowId),
+      questsByRowId,
+      category,
+    );
+
+    const endCandidates = questIndex.quests.filter(
+      (quest) =>
+        normalizeQuestName(quest.name) === normalizeQuestName(endQuestName) &&
+        isEligibleQuest(quest, category) &&
+        allForwardReachable.has(quest.rowId) &&
+        (endQuestRowId === undefined || quest.rowId === endQuestRowId),
+    );
+
+    if (endCandidates.length === 0) {
+      throw new Error(
+        [
+          `No reachable ending quest named "${endQuestName}" was found.`,
+          `Starting quest: ${startQuestName}`,
+          endQuestRowId !== undefined
+            ? `Requested ending row: ${endQuestRowId}`
+            : '',
+        ]
+          .filter(Boolean)
+          .join('\n'),
+      );
+    }
+
+    if (endCandidates.length > 1) {
+      throw new Error(
+        [
+          `The ending quest name "${endQuestName}" is ambiguous.`,
           '',
-          `Starting row: ${startQuest.rowId}`,
-          `Starting quest: ${startQuest.name}`,
+          ...endCandidates.map((quest) => `Row ${quest.rowId}: ${quest.name}`),
+          '',
+          'Add --end-row with the intended XIVAPI row ID.',
         ].join('\n'),
       );
+    }
+
+    const finalQuest = endCandidates[0];
+
+    if (!finalQuest) {
+      throw new Error('The final quest could not be resolved.');
+    }
+
+    const forwardReachable = collectForwardReachable(
+      startQuests.map((quest) => quest.rowId),
+      questsByRowId,
+      category,
+      finalQuest.rowId,
+    );
+
+    discoveredRowIds = collectBackwardReachable(
+      finalQuest.rowId,
+      forwardReachable,
+      questsByRowId,
+      category,
+    );
+
+    for (const startQuest of startQuests) {
+      if (!discoveredRowIds.has(startQuest.rowId)) {
+        throw new Error(
+          [
+            'A starting route does not reach the requested final quest.',
+            '',
+            `Starting row: ${startQuest.rowId}`,
+            `Starting quest: ${startQuest.name}`,
+          ].join('\n'),
+        );
+      }
     }
   }
 
@@ -1871,7 +2045,12 @@ async function main(): Promise<void> {
     questsByRowId,
   );
 
-  const questIdsByRowId = createQuestIds(orderedQuests, expansionId, category);
+  const questIdsByRowId = createQuestIds(
+    orderedQuests,
+    expansionId,
+    category,
+    knownQuestIdsByRowId,
+  );
 
   const reviewsByRowId = new Map<number, ResolvedReview>();
 
@@ -1996,21 +2175,22 @@ async function main(): Promise<void> {
     );
 
     const nextRowIds =
-      quest.rowId === finalQuest.rowId
-        ? quest.nextQuestRowIds.filter((rowId) => {
+      internalNextRowIds.length > 0
+        ? internalNextRowIds
+        : quest.nextQuestRowIds.filter((rowId) => {
             const nextQuest = questsByRowId.get(rowId);
 
             return (
               nextQuest !== undefined && isEligibleQuest(nextQuest, category)
             );
-          })
-        : internalNextRowIds;
+          });
 
     const previousQuestIds = previousRowIds
       .map((rowId) =>
         resolveRelatedQuestId(
           rowId,
           questIdsByRowId,
+          knownQuestIdsByRowId,
           questsByRowId,
           expansionId,
           category,
@@ -2023,6 +2203,7 @@ async function main(): Promise<void> {
         resolveRelatedQuestId(
           rowId,
           questIdsByRowId,
+          knownQuestIdsByRowId,
           questsByRowId,
           expansionId,
           category,
