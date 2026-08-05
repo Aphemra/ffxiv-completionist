@@ -162,7 +162,6 @@ export const questExportEntrySchema = z.strictObject({
   rewards: questRewardsSchema,
 
   start: questEndpointSchema,
-  end: questEndpointSchema,
 
   graphRole: z
     .enum(['linear', 'branch', 'convergence', 'branch-and-convergence'])

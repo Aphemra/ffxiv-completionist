@@ -160,12 +160,6 @@ export function QuestDetailsDrawer({
       (quest.rewards.items && quest.rewards.items.length > 0) ||
       (quest.rewards.optionalItems && quest.rewards.optionalItems.length > 0));
 
-  const hasCompletionDetails =
-    quest.completion !== undefined &&
-    (quest.completion.targetName !== undefined ||
-      quest.completion.zoneName !== undefined ||
-      quest.completion.coordinates !== undefined);
-
   return (
     <div
       className="quest-details-backdrop"
@@ -282,41 +276,6 @@ export function QuestDetailsDrawer({
                     <dd>
                       X: {quest.start.coordinates.x.toFixed(1)}, Y:{' '}
                       {quest.start.coordinates.y.toFixed(1)}
-                    </dd>
-                  </div>
-                )}
-              </dl>
-            </section>
-          )}
-
-          {hasCompletionDetails && quest.completion && (
-            <section className="quest-details__section">
-              <header>
-                <p>Completion Point</p>
-                <h3>Where to finish</h3>
-              </header>
-
-              <dl className="quest-details__facts">
-                {quest.completion.targetName && (
-                  <div>
-                    <dt>NPC / target</dt>
-                    <dd>{quest.completion.targetName}</dd>
-                  </div>
-                )}
-
-                {quest.completion.zoneName && (
-                  <div>
-                    <dt>Zone</dt>
-                    <dd>{quest.completion.zoneName}</dd>
-                  </div>
-                )}
-
-                {quest.completion.coordinates && (
-                  <div>
-                    <dt>Coordinates</dt>
-                    <dd>
-                      X: {quest.completion.coordinates.x.toFixed(1)}, Y:{' '}
-                      {quest.completion.coordinates.y.toFixed(1)}
                     </dd>
                   </div>
                 )}

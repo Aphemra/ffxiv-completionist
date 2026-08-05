@@ -823,18 +823,12 @@ async function main(): Promise<void> {
 
   const startActor = parseActor(fields.IssuerStart);
 
-  const endActor = parseActor(fields.TargetEnd);
-
   const startLocation = parseLocation(fields.IssuerLocation, fallbackPlaceName);
 
   const knownActorNames = new Map<number, string>();
 
   if (startActor?.sourceRowId && startActor.name) {
     knownActorNames.set(startActor.sourceRowId, startActor.name);
-  }
-
-  if (endActor?.sourceRowId && endActor.name) {
-    knownActorNames.set(endActor.sourceRowId, endActor.name);
   }
 
   const scriptParameters = parseScriptParameters(fields);
@@ -891,10 +885,6 @@ async function main(): Promise<void> {
   const gil = readInteger(fields.GilReward);
 
   const isRepeatable = readBoolean(fields.IsRepeatable) ?? false;
-
-  const startAndEndAtSameActor =
-    startActor?.sourceRowId !== undefined &&
-    startActor.sourceRowId === endActor?.sourceRowId;
 
   const classJobRequirement =
     classJobId && classJobName
@@ -976,39 +966,6 @@ async function main(): Promise<void> {
       }
     : undefined;
 
-  const completion = endActor?.name
-    ? {
-        targetId: endActor.id,
-        targetType: 'enpc',
-        targetName: endActor.name,
-
-        sourceRowId: endActor.sourceRowId,
-
-        zoneId: startAndEndAtSameActor ? startLocation?.zoneId : undefined,
-
-        zoneName: startAndEndAtSameActor ? startLocation?.zoneName : undefined,
-
-        territoryId: startAndEndAtSameActor
-          ? startLocation?.territoryId
-          : undefined,
-
-        mapId: startAndEndAtSameActor ? startLocation?.mapId : undefined,
-
-        coordinates: startAndEndAtSameActor
-          ? startLocation?.coordinates
-          : undefined,
-
-        notes: startAndEndAtSameActor
-          ? 'Completion location inferred because the issuer and completion actor are the same NPC.'
-          : undefined,
-
-        extensions: {
-          title: endActor.title,
-          locationWasInferred: startAndEndAtSameActor,
-        },
-      }
-    : undefined;
-
   const rewards =
     experienceFactor !== undefined ||
     gil !== undefined ||
@@ -1084,7 +1041,6 @@ async function main(): Promise<void> {
     ],
 
     start,
-    completion,
 
     availability: classJobId
       ? {
@@ -1186,14 +1142,6 @@ async function main(): Promise<void> {
     start: {
       actor: startActor,
       location: startLocation,
-    },
-
-    completion: {
-      actor: endActor,
-
-      location: startAndEndAtSameActor ? startLocation : undefined,
-
-      locationWasInferred: startAndEndAtSameActor,
     },
 
     chain: {

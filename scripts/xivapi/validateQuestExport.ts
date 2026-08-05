@@ -138,57 +138,56 @@ function pushUniqueIssue(
   issues.push(issue);
 }
 
-function collectEndpointIssues(
+function collectStartIssues(
   quest: QuestExportEntry,
-  endpointName: 'start' | 'end',
   issues: QuestExportIssue[],
   issueKeys: Set<string>,
 ): void {
-  const endpoint = quest[endpointName];
+  const start = quest.start;
 
-  if (endpoint.npc === null || endpoint.npc.name === null) {
+  if (start.npc === null || start.npc.name === null) {
     pushUniqueIssue(issues, issueKeys, {
       questId: quest.id,
       questName: quest.name,
 
-      field: `${endpointName}.npc.name`,
+      field: 'start.npc.name',
 
-      message: `Confirm the ${endpointName} NPC.`,
+      message: 'Confirm the start NPC.',
     });
   }
 
-  if (endpoint.location === null) {
+  if (start.location === null) {
     pushUniqueIssue(issues, issueKeys, {
       questId: quest.id,
       questName: quest.name,
 
-      field: `${endpointName}.location`,
+      field: 'start.location',
 
-      message: `Confirm the ${endpointName} location.`,
+      message: 'Confirm the start location.',
     });
 
     return;
   }
 
-  if (endpoint.location.zone === null) {
+  if (start.location.zone === null) {
     pushUniqueIssue(issues, issueKeys, {
       questId: quest.id,
       questName: quest.name,
 
-      field: `${endpointName}.location.zone`,
+      field: 'start.location.zone',
 
-      message: `Confirm the ${endpointName} zone.`,
+      message: 'Confirm the start zone.',
     });
   }
 
-  if (endpoint.location.x === null || endpoint.location.y === null) {
+  if (start.location.x === null || start.location.y === null) {
     pushUniqueIssue(issues, issueKeys, {
       questId: quest.id,
       questName: quest.name,
 
-      field: `${endpointName}.location.coordinates`,
+      field: 'start.location.coordinates',
 
-      message: `Confirm the ${endpointName} coordinates.`,
+      message: 'Confirm the start coordinates.',
     });
   }
 }
@@ -234,9 +233,7 @@ function collectUnresolvedIssues(
       });
     }
 
-    collectEndpointIssues(quest, 'start', issues, issueKeys);
-
-    collectEndpointIssues(quest, 'end', issues, issueKeys);
+    collectStartIssues(quest, issues, issueKeys);
 
     for (const requirement of quest.requirements) {
       if (requirement.type === 'item' && requirement.quantity === null) {

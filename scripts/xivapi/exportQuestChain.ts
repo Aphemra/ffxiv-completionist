@@ -770,8 +770,6 @@ function extractLocation(
     const locationCandidates = [
       endpoint.location,
       endpoint.startLocation,
-      endpoint.endLocation,
-      endpoint.completionLocation,
       endpoint,
     ];
 
@@ -825,15 +823,8 @@ function extractLocation(
   return null;
 }
 
-function extractEndpoint(
-  review: JsonObject,
-  draft: JsonObject,
-  kind: 'start' | 'end',
-): JsonObject {
-  const endpointCandidates =
-    kind === 'start'
-      ? [review.start, draft.start]
-      : [review.end, review.completion, draft.end, draft.completion];
+function extractStart(review: JsonObject, draft: JsonObject): JsonObject {
+  const endpointCandidates = [review.start, draft.start];
 
   return {
     npc: extractActor(endpointCandidates),
@@ -1336,26 +1327,25 @@ function extractRewards(
   };
 }
 
-function addEndpointIssues(
-  endpoint: JsonObject,
-  kind: 'start' | 'end',
+function addStartIssues(
+  start: JsonObject,
   questId: string,
   questName: string,
   issues: ExportIssue[],
   issueKeys: Set<string>,
 ): void {
-  const actor = asObject(endpoint.npc);
+  const actor = asObject(start.npc);
 
-  const location = asObject(endpoint.location);
+  const location = asObject(start.location);
 
   if (!actor || readString(actor.name) === undefined) {
     pushIssue(issues, issueKeys, {
       questId,
       questName,
 
-      field: `${kind}.npc`,
+      field: 'start.npc.name',
 
-      message: `Confirm the ${kind} NPC.`,
+      message: 'Confirm the start NPC.',
     });
   }
 
@@ -1364,9 +1354,9 @@ function addEndpointIssues(
       questId,
       questName,
 
-      field: `${kind}.location`,
+      field: 'start.location',
 
-      message: `Confirm the ${kind} location.`,
+      message: 'Confirm the start location.',
     });
 
     return;
@@ -1377,9 +1367,9 @@ function addEndpointIssues(
       questId,
       questName,
 
-      field: `${kind}.location.zone`,
+      field: 'start.location.zone',
 
-      message: `Confirm the ${kind} zone.`,
+      message: 'Confirm the start zone.',
     });
   }
 
@@ -1391,9 +1381,9 @@ function addEndpointIssues(
       questId,
       questName,
 
-      field: `${kind}.location.coordinates`,
+      field: 'start.location.coordinates',
 
-      message: `Confirm the ${kind} coordinates.`,
+      message: 'Confirm the start coordinates.',
     });
   }
 }
@@ -1430,13 +1420,9 @@ function createQuestEntry(
     });
   }
 
-  const start = extractEndpoint(reviewObject, draft, 'start');
+  const start = extractStart(reviewObject, draft);
 
-  const end = extractEndpoint(reviewObject, draft, 'end');
-
-  addEndpointIssues(start, 'start', questId, quest.name, issues, issueKeys);
-
-  addEndpointIssues(end, 'end', questId, quest.name, issues, issueKeys);
+  addStartIssues(start, questId, quest.name, issues, issueKeys);
 
   const incomingCount = previousQuestIds.length;
 
@@ -1502,7 +1488,6 @@ function createQuestEntry(
     ),
 
     start,
-    end,
 
     graphRole,
   };

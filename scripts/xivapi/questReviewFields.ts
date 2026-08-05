@@ -20,11 +20,9 @@ export const QUEST_REVIEW_FIELDS = [
   'Type',
   'EventIconType',
 
-  // Starting and completion actors
+  // Starting actor
   'IssuerStart.Singular',
   'IssuerStart.Title',
-  'TargetEnd.Singular',
-  'TargetEnd.Title',
   'PlaceName.Name',
 
   // Starting location

@@ -174,41 +174,6 @@ export const questStartSchema = z
     });
   });
 
-export const questCompletionLocationSchema = z
-  .strictObject({
-    targetId: gameDataIdSchema.optional(),
-    targetType: gameDataIdSchema.optional(),
-    targetName: nonEmptyStringSchema.optional(),
-
-    sourceRowId: z.number().int().min(0).optional(),
-
-    zoneId: gameDataIdSchema.optional(),
-    zoneName: nonEmptyStringSchema.optional(),
-
-    territoryId: gameDataIdSchema.optional(),
-    mapId: gameDataIdSchema.optional(),
-
-    coordinates: coordinatesSchema.optional(),
-
-    notes: nonEmptyStringSchema.optional(),
-    extensions: extensionsSchema.optional(),
-  })
-  .superRefine((location, context) => {
-    const hasZoneId = location.zoneId !== undefined;
-    const hasZoneName = location.zoneName !== undefined;
-
-    if (hasZoneId === hasZoneName) {
-      return;
-    }
-
-    context.addIssue({
-      code: 'custom',
-      path: hasZoneId ? ['zoneName'] : ['zoneId'],
-      message:
-        'A quest location must provide both zoneId and zoneName, or neither.',
-    });
-  });
-
 export const questObjectiveLocationSchema = z.strictObject({
   zoneId: gameDataIdSchema.optional(),
   zoneName: nonEmptyStringSchema.optional(),
@@ -512,8 +477,6 @@ export const questSchema = z.strictObject({
   localizations: questLocalizationsSchema.optional(),
 
   start: questStartSchema.optional(),
-
-  completion: questCompletionLocationSchema.optional(),
 
   availability: questAvailabilitySchema.optional(),
 
