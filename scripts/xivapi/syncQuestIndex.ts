@@ -13,17 +13,26 @@ interface QuestIndexEntry {
   name: string;
 
   gameId?: string;
+
   journalGenreName?: string;
   journalCategoryName?: string;
 
+  classJobName?: string;
+  classJobAbbreviation?: string;
+
+  eventIconTypeRowId?: number;
+
+  beastTribeName?: string;
+
   isMainScenario: boolean;
+  isRepeatable: boolean;
 
   previousQuestRowIds: number[];
   nextQuestRowIds: number[];
 }
 
 interface QuestIndexFile {
-  indexVersion: 3;
+  indexVersion: 4;
 
   source: {
     provider: 'xivapi';
@@ -65,6 +74,10 @@ function readInteger(value: unknown): number | undefined {
   return typeof value === 'number' && Number.isInteger(value)
     ? value
     : undefined;
+}
+
+function readBoolean(value: unknown): boolean | undefined {
+  return typeof value === 'boolean' ? value : undefined;
 }
 
 function relationFields(value: unknown): JsonObject | undefined {
@@ -149,6 +162,15 @@ async function main(): Promise<void> {
           'JournalGenre.Name',
           'JournalGenre.JournalCategory.Name',
 
+          'ClassJobRequired.NameEnglish',
+          'ClassJobRequired.Abbreviation',
+
+          'EventIconType',
+
+          'BeastTribe.Name',
+
+          'IsRepeatable',
+
           'PreviousQuest[].Name',
           'PreviousQuest[].Id',
         ].join(','),
@@ -178,17 +200,35 @@ async function main(): Promise<void> {
 
       const journalGenreFields = relationFields(row.fields.JournalGenre);
 
-      //const journalGenreName = readString(journalGenreFields?.Name);
+      const journalGenreName = readString(journalGenreFields?.Name);
 
       const journalCategoryName = readString(
         relationFields(journalGenreFields?.JournalCategory)?.Name,
       );
+
+      const classJobFields = relationFields(row.fields.ClassJobRequired);
+
+      const classJobName =
+        readString(classJobFields?.NameEnglish) ??
+        readString(classJobFields?.Name);
+
+      const classJobAbbreviation = readString(classJobFields?.Abbreviation);
+
+      const eventIconTypeRowId = relationRowId(row.fields.EventIconType);
+
+      const beastTribeName = readString(
+        relationFields(row.fields.BeastTribe)?.Name,
+      );
+
+      const isRepeatable = readBoolean(row.fields.IsRepeatable) ?? false;
 
       const questEntry: QuestIndexEntry = {
         rowId: row.row_id,
         name,
 
         isMainScenario: isMainScenarioCategory(journalCategoryName),
+
+        isRepeatable,
 
         previousQuestRowIds: parseRelationshipRowIds(row.fields.PreviousQuest),
 
@@ -199,6 +239,26 @@ async function main(): Promise<void> {
 
       if (gameId !== undefined) {
         questEntry.gameId = gameId;
+      }
+
+      if (journalGenreName !== undefined) {
+        questEntry.journalGenreName = journalGenreName;
+      }
+
+      if (classJobName !== undefined) {
+        questEntry.classJobName = classJobName;
+      }
+
+      if (classJobAbbreviation !== undefined) {
+        questEntry.classJobAbbreviation = classJobAbbreviation;
+      }
+
+      if (eventIconTypeRowId !== undefined) {
+        questEntry.eventIconTypeRowId = eventIconTypeRowId;
+      }
+
+      if (beastTribeName !== undefined) {
+        questEntry.beastTribeName = beastTribeName;
       }
 
       if (journalCategoryName !== undefined) {
@@ -228,7 +288,7 @@ async function main(): Promise<void> {
   ).length;
 
   const output: QuestIndexFile = {
-    indexVersion: 3,
+    indexVersion: 4,
 
     source: {
       provider: 'xivapi',

@@ -55,7 +55,17 @@ const questIndexEntrySchema = z.looseObject({
 
   journalCategoryName: z.string().min(1).optional(),
 
+  classJobName: z.string().min(1).optional(),
+
+  classJobAbbreviation: z.string().min(1).optional(),
+
+  eventIconTypeRowId: positiveRowIdSchema.optional(),
+
+  beastTribeName: z.string().min(1).optional(),
+
   isMainScenario: z.boolean(),
+
+  isRepeatable: z.boolean(),
 
   previousQuestRowIds: z.array(positiveRowIdSchema),
 
@@ -64,8 +74,16 @@ const questIndexEntrySchema = z.looseObject({
 
 type QuestIndexEntry = z.infer<typeof questIndexEntrySchema>;
 
+interface QuestSelectionFilter {
+  category: string;
+
+  journalCategoryName?: string;
+
+  classJobId?: string;
+}
+
 const questIndexFileSchema = z.looseObject({
-  indexVersion: z.number().int().min(3),
+  indexVersion: z.number().int().min(4),
 
   source: z.looseObject({
     version: z.string().min(1),
@@ -74,8 +92,6 @@ const questIndexFileSchema = z.looseObject({
 
   quests: z.array(questIndexEntrySchema),
 });
-
-// type QuestIndexFile = z.infer<typeof questIndexFileSchema>;
 
 const resolvedReviewSchema = z.looseObject({
   identity: z.looseObject({
@@ -498,16 +514,47 @@ function isEligibleQuest(quest: QuestIndexEntry, category: string): boolean {
   return true;
 }
 
+function matchesQuestSelection(
+  quest: QuestIndexEntry,
+  selection: QuestSelectionFilter,
+): boolean {
+  if (!isEligibleQuest(quest, selection.category)) {
+    return false;
+  }
+
+  if (
+    selection.journalCategoryName &&
+    normalizeQuestName(quest.journalCategoryName ?? '') !==
+      normalizeQuestName(selection.journalCategoryName)
+  ) {
+    return false;
+  }
+
+  if (selection.classJobId) {
+    const classJobIds = [quest.classJobName, quest.classJobAbbreviation]
+      .filter((value): value is string => value !== undefined)
+      .map(slugify);
+
+    if (!classJobIds.includes(selection.classJobId)) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 function createNextSignature(
   quest: QuestIndexEntry,
   questsByRowId: ReadonlyMap<number, QuestIndexEntry>,
-  category: string,
+  selection: QuestSelectionFilter,
 ): string {
   return quest.nextQuestRowIds
     .filter((rowId) => {
       const nextQuest = questsByRowId.get(rowId);
 
-      return nextQuest !== undefined && isEligibleQuest(nextQuest, category);
+      return (
+        nextQuest !== undefined && matchesQuestSelection(nextQuest, selection)
+      );
     })
     .sort((left, right) => left - right)
     .join(',');
@@ -516,12 +563,12 @@ function createNextSignature(
 function collapseEquivalentStarts(
   candidates: readonly QuestIndexEntry[],
   questsByRowId: ReadonlyMap<number, QuestIndexEntry>,
-  category: string,
+  selection: QuestSelectionFilter,
 ): QuestIndexEntry[] {
   const candidatesBySignature = new Map<string, QuestIndexEntry[]>();
 
   for (const candidate of candidates) {
-    const signature = createNextSignature(candidate, questsByRowId, category);
+    const signature = createNextSignature(candidate, questsByRowId, selection);
 
     const existingCandidates = candidatesBySignature.get(signature);
 
@@ -569,7 +616,7 @@ function collapseEquivalentStarts(
 function collectForwardReachable(
   startRowIds: readonly number[],
   questsByRowId: ReadonlyMap<number, QuestIndexEntry>,
-  category: string,
+  selection: QuestSelectionFilter,
   stopRowId?: number,
 ): Set<number> {
   const reachableRowIds = new Set<number>();
@@ -585,7 +632,7 @@ function collectForwardReachable(
 
     const quest = questsByRowId.get(rowId);
 
-    if (!quest || !isEligibleQuest(quest, category)) {
+    if (!quest || !matchesQuestSelection(quest, selection)) {
       continue;
     }
 
@@ -607,7 +654,7 @@ function collectBackwardReachable(
   finalRowId: number,
   forwardReachable: ReadonlySet<number>,
   questsByRowId: ReadonlyMap<number, QuestIndexEntry>,
-  category: string,
+  selection: QuestSelectionFilter,
 ): Set<number> {
   const reachableRowIds = new Set<number>();
 
@@ -626,7 +673,7 @@ function collectBackwardReachable(
 
     const quest = questsByRowId.get(rowId);
 
-    if (!quest || !isEligibleQuest(quest, category)) {
+    if (!quest || !matchesQuestSelection(quest, selection)) {
       continue;
     }
 
@@ -1854,6 +1901,22 @@ async function main(): Promise<void> {
 
   const category = slugify(requireOption('--category'));
 
+  const journalCategoryName = readOption('--journal-category');
+
+  const rawClassJobId = readOption('--class-job');
+
+  const selection: QuestSelectionFilter = {
+    category,
+  };
+
+  if (journalCategoryName) {
+    selection.journalCategoryName = journalCategoryName;
+  }
+
+  if (rawClassJobId) {
+    selection.classJobId = slugify(rawClassJobId);
+  }
+
   const title = readOption('--title') ?? humanizeId(exportId);
 
   const offline = hasFlag('--offline');
@@ -1923,7 +1986,7 @@ async function main(): Promise<void> {
         );
       }
 
-      if (!isEligibleQuest(quest, category)) {
+      if (!matchesQuestSelection(quest, selection)) {
         throw new Error(
           [
             `Explicit quest row ${rowId} is not eligible`,
@@ -1943,7 +2006,7 @@ async function main(): Promise<void> {
     const startCandidates = questIndex.quests.filter(
       (quest) =>
         normalizeQuestName(quest.name) === normalizeQuestName(startQuestName) &&
-        isEligibleQuest(quest, category) &&
+        matchesQuestSelection(quest, selection) &&
         (startQuestRowId === undefined || quest.rowId === startQuestRowId),
     );
 
@@ -1963,19 +2026,19 @@ async function main(): Promise<void> {
     const startQuests = collapseEquivalentStarts(
       startCandidates,
       questsByRowId,
-      category,
+      selection,
     );
 
     const allForwardReachable = collectForwardReachable(
       startQuests.map((quest) => quest.rowId),
       questsByRowId,
-      category,
+      selection,
     );
 
     const endCandidates = questIndex.quests.filter(
       (quest) =>
         normalizeQuestName(quest.name) === normalizeQuestName(endQuestName) &&
-        isEligibleQuest(quest, category) &&
+        matchesQuestSelection(quest, selection) &&
         allForwardReachable.has(quest.rowId) &&
         (endQuestRowId === undefined || quest.rowId === endQuestRowId),
     );
@@ -2015,7 +2078,7 @@ async function main(): Promise<void> {
     const forwardReachable = collectForwardReachable(
       startQuests.map((quest) => quest.rowId),
       questsByRowId,
-      category,
+      selection,
       finalQuest.rowId,
     );
 
@@ -2023,7 +2086,7 @@ async function main(): Promise<void> {
       finalQuest.rowId,
       forwardReachable,
       questsByRowId,
-      category,
+      selection,
     );
 
     for (const startQuest of startQuests) {
