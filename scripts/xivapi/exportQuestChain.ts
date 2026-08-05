@@ -1829,6 +1829,8 @@ function createQuestEntry(
 
     availability: extractAvailability(reviewObject, draft, quest.name),
 
+    repeatability: draft.repeatability,
+
     requirements: extractRequirements(
       reviewObject,
       draft,
@@ -1838,6 +1840,14 @@ function createQuestEntry(
       issues,
       issueKeys,
     ),
+
+    objectives: asArray(draft.objectives),
+
+    rawRelations: draft.rawRelations,
+
+    sources: asArray(draft.sources),
+
+    sourceData: draft.sourceData,
 
     previousQuestIds,
 

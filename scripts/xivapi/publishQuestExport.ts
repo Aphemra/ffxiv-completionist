@@ -225,17 +225,20 @@ function convertQuest(
     externalIds: {
       'xivapi-quest-row': quest.xivapiRowId,
     },
-    sources: [
-      {
-        provider: 'xivapi',
-        sheet: 'Quest',
-        rowId: quest.xivapiRowId,
-        gameVersion: exportData.source.version,
-        schema: exportData.source.schema,
-        language: 'en' as const,
-        importedAt: exportData.generatedAt,
-      },
-    ],
+    sources:
+      quest.sources.length > 0
+        ? quest.sources
+        : [
+            {
+              provider: 'xivapi',
+              sheet: 'Quest',
+              rowId: quest.xivapiRowId,
+              gameVersion: exportData.source.version,
+              schema: exportData.source.schema,
+              language: 'en' as const,
+              importedAt: exportData.generatedAt,
+            },
+          ],
     start: {
       npcId: npc.xivapiRowId ? `enpc-${npc.xivapiRowId}` : undefined,
       npcName: npc.name,
@@ -251,12 +254,15 @@ function convertQuest(
           : undefined,
     },
     availability: quest.availability ?? undefined,
+    repeatability: quest.repeatability,
     prerequisiteQuestMode:
       prerequisiteQuestIds.length < 2 ? 'all' : quest.previousQuestMode,
     prerequisiteQuestIds:
       prerequisiteQuestIds.length > 0 ? prerequisiteQuestIds : undefined,
     nextQuestIds: nextQuestIds.length > 0 ? nextQuestIds : undefined,
+    rawRelations: quest.rawRelations,
     requirements: requirements.length > 0 ? requirements : undefined,
+    objectives: quest.objectives.length > 0 ? quest.objectives : undefined,
     rewards: {
       experience: quest.rewards.experience ?? undefined,
       gil: quest.rewards.gil ?? undefined,
@@ -274,6 +280,7 @@ function convertQuest(
         : undefined,
     tags: ['xivapi-import'],
     lastVerifiedAt: exportData.generatedAt,
+    sourceData: quest.sourceData,
   };
 }
 
