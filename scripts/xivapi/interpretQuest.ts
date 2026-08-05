@@ -572,6 +572,7 @@ function suggestCategory(
   | 'crafting'
   | 'gathering'
   | 'feature'
+  | 'side'
   | 'side-story'
   | 'tribal'
   | 'relic' {
@@ -612,7 +613,16 @@ function suggestCategory(
     return 'class';
   }
 
-  return 'side-story';
+  if (
+    normalizedGenre.includes('side story') ||
+    normalizedGenre.includes('hildibrand') ||
+    normalizedGenre.includes('chronicles of a new era') ||
+    normalizedGenre.includes('chronicles of light')
+  ) {
+    return 'side-story';
+  }
+
+  return 'side';
 }
 
 function cleanValue(value: unknown): unknown {

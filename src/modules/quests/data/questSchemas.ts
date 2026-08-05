@@ -43,8 +43,8 @@ export const jsonValueSchema: z.ZodType<JsonValue> = z.lazy(() =>
 export const extensionsSchema = z.record(z.string(), jsonValueSchema);
 
 export const coordinatesSchema = z.strictObject({
-  x: z.number().finite().min(0).max(999),
-  y: z.number().finite().min(0).max(999),
+  x: z.number().min(0).max(999),
+  y: z.number().min(0).max(999),
 });
 
 export const levelRangeSchema = z
@@ -65,6 +65,7 @@ export const questCategorySchema = z.enum([
   'crafting',
   'gathering',
   'feature',
+  'side',
   'side-story',
   'tribal',
   'relic',
@@ -219,7 +220,7 @@ export const questObjectiveSchema = z.strictObject({
 export const questRepeatabilitySchema = z.strictObject({
   type: gameDataIdSchema,
 
-  intervalHours: z.number().finite().min(0).optional(),
+  intervalHours: z.number().min(0).optional(),
   allowanceCost: z.number().int().min(0).optional(),
 
   resetNotes: nonEmptyStringSchema.optional(),
@@ -392,7 +393,7 @@ export const questRewardReferenceSchema = z.strictObject({
 
 export const questRewardsSchema = z.strictObject({
   experience: z.number().int().min(0).optional(),
-  experienceFactor: z.number().finite().min(0).optional(),
+  experienceFactor: z.number().min(0).optional(),
 
   gil: z.number().int().min(0).optional(),
 

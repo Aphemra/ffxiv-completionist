@@ -56,6 +56,10 @@ export const QUEST_CATEGORY_OPTIONS = [
     label: 'Feature Quests',
   },
   {
+    value: 'side',
+    label: 'Side Quests',
+  },
+  {
     value: 'side-story',
     label: 'Side Stories',
   },

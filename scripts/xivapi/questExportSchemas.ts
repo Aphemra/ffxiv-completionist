@@ -1,6 +1,7 @@
 import * as z from 'zod';
 
 import { GRAND_COMPANY_IDS } from '../../src/domain/grandCompanies';
+import { questCategorySchema } from '../../src/modules/quests/data/questSchemas';
 
 const nonEmptyStringSchema = z.string().trim().min(1);
 
@@ -145,7 +146,7 @@ export const questExportEntrySchema = z.strictObject({
 
   expansionId: gameDataIdSchema,
   patch: nonEmptyStringSchema,
-  category: gameDataIdSchema,
+  category: questCategorySchema,
 
   availability: questAvailabilitySchema.nullable(),
 
@@ -191,7 +192,7 @@ export const questChainExportSchema = z.strictObject({
 
   expansionId: gameDataIdSchema,
   patch: nonEmptyStringSchema,
-  category: gameDataIdSchema,
+  category: questCategorySchema,
 
   generatedAt: nonEmptyStringSchema,
 
