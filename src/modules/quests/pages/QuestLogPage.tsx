@@ -94,8 +94,17 @@ export function QuestLogPage() {
 
     return createAvailableQuestCatalog(state.catalog, {
       startingCity: profile.startingCity,
+
+      initialGrandCompany: profile.initialGrandCompany,
+
+      currentGrandCompany: profile.currentGrandCompany,
     });
-  }, [state, profile.startingCity]);
+  }, [
+    state,
+    profile.startingCity,
+    profile.initialGrandCompany,
+    profile.currentGrandCompany,
+  ]);
 
   const expansionOptions = useMemo(() => {
     if (!catalog) {
@@ -302,7 +311,11 @@ export function QuestLogPage() {
       return;
     }
 
-    const previousQuestIds = getPreviousQuestIds(questId, catalog.questsById);
+    const previousQuestIds = getPreviousQuestIds(
+      questId,
+      catalog.questsById,
+      completedQuestIdSet,
+    );
 
     markQuestsComplete(previousQuestIds);
 
@@ -355,6 +368,31 @@ export function QuestLogPage() {
           </div>
         </section>
       )}
+
+      {profile.startingCity !== null &&
+        profile.initialGrandCompany === null && (
+          <section className="quest-path-notice">
+            <div className="quest-path-notice__icon" aria-hidden="true">
+              !
+            </div>
+
+            <div>
+              <p className="quest-path-notice__eyebrow">
+                Grand Company route needed
+              </p>
+
+              <h2>Select your initial Grand Company</h2>
+
+              <p>
+                ARR includes a mutually exclusive Grand Company story branch.
+                Those quests remain hidden until the company originally chosen
+                by this character is configured.
+              </p>
+
+              <Link to="/profile">Configure profile</Link>
+            </div>
+          </section>
+        )}
 
       {state.status === 'loading' && (
         <section className="quest-data-state">

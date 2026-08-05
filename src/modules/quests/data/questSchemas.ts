@@ -1,6 +1,7 @@
 import * as z from 'zod';
 
 import { startingCityIdSchema } from '../../../core/game/gameSchemas';
+import { grandCompanyIdSchema } from '../../../domain/grandCompanies';
 
 export const gameDataIdSchema = z
   .string()
@@ -85,6 +86,13 @@ const uniqueGameDataIdArraySchema = z
     message: 'ID arrays cannot contain duplicate values.',
   });
 
+const uniqueGrandCompanyIdArraySchema = z
+  .array(grandCompanyIdSchema)
+  .min(1)
+  .refine((ids) => new Set(ids).size === ids.length, {
+    message: 'Grand Company arrays cannot contain duplicate values.',
+  });
+
 export const questConditionSchema = z.strictObject({
   type: gameDataIdSchema,
 
@@ -110,7 +118,9 @@ export const questAvailabilitySchema = z.strictObject({
   classJobIds: uniqueGameDataIdArraySchema.optional(),
   classJobCategoryIds: uniqueGameDataIdArraySchema.optional(),
 
-  grandCompanyIds: uniqueGameDataIdArraySchema.optional(),
+  initialGrandCompanyIds: uniqueGrandCompanyIdArraySchema.optional(),
+
+  currentGrandCompanyIds: uniqueGrandCompanyIdArraySchema.optional(),
 
   grandCompanyRankIds: uniqueGameDataIdArraySchema.optional(),
 
@@ -508,6 +518,8 @@ export const questSchema = z.strictObject({
   availability: questAvailabilitySchema.optional(),
 
   repeatability: questRepeatabilitySchema.optional(),
+
+  prerequisiteQuestMode: z.enum(['all', 'any']).default('all'),
 
   prerequisiteQuestIds: z.array(gameDataIdSchema).optional(),
 

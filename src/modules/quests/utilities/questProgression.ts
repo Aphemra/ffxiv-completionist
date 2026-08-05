@@ -1,8 +1,44 @@
 import type { Quest } from '../data/questSchemas';
 
+function getTraversablePrerequisiteQuestIds(
+  quest: Quest,
+  completedQuestIds: ReadonlySet<string>,
+): readonly string[] {
+  const prerequisiteQuestIds = quest.prerequisiteQuestIds ?? [];
+
+  if (
+    quest.prerequisiteQuestMode !== 'any' ||
+    prerequisiteQuestIds.length <= 1
+  ) {
+    return prerequisiteQuestIds;
+  }
+
+  /*
+   * Prefer the route the player has already completed.
+   *
+   * When profile filtering has selected one mutually exclusive route,
+   * only that route remains in prerequisiteQuestIds and the earlier
+   * single-prerequisite return handles it.
+   */
+  const completedPrerequisiteQuestId = prerequisiteQuestIds.find((questId) =>
+    completedQuestIds.has(questId),
+  );
+
+  if (completedPrerequisiteQuestId) {
+    return [completedPrerequisiteQuestId];
+  }
+
+  /*
+   * Do not arbitrarily complete every branch or choose a random branch
+   * when several valid alternatives remain visible.
+   */
+  return [];
+}
+
 export function getPreviousQuestIds(
   questId: string,
   questsById: ReadonlyMap<string, Quest>,
+  completedQuestIds: ReadonlySet<string>,
 ): string[] {
   const quest = questsById.get(questId);
 
@@ -30,7 +66,12 @@ export function getPreviousQuestIds(
 
     activeTraversal.add(currentQuestId);
 
-    for (const prerequisiteQuestId of currentQuest.prerequisiteQuestIds ?? []) {
+    const prerequisiteQuestIds = getTraversablePrerequisiteQuestIds(
+      currentQuest,
+      completedQuestIds,
+    );
+
+    for (const prerequisiteQuestId of prerequisiteQuestIds) {
       visitQuest(prerequisiteQuestId);
     }
 
@@ -39,7 +80,12 @@ export function getPreviousQuestIds(
     previousQuestIds.push(currentQuestId);
   }
 
-  for (const prerequisiteQuestId of quest.prerequisiteQuestIds ?? []) {
+  const prerequisiteQuestIds = getTraversablePrerequisiteQuestIds(
+    quest,
+    completedQuestIds,
+  );
+
+  for (const prerequisiteQuestId of prerequisiteQuestIds) {
     visitQuest(prerequisiteQuestId);
   }
 

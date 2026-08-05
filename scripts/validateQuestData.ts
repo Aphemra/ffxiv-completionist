@@ -312,6 +312,112 @@ function createQuestIndex(
   return questIndex;
 }
 
+function hasSharedRouteValue(
+  valueGroups: readonly (readonly string[])[],
+): boolean {
+  if (valueGroups.length < 2) {
+    return true;
+  }
+
+  const firstGroup = valueGroups[0];
+
+  if (!firstGroup) {
+    return true;
+  }
+
+  return firstGroup.some((value) =>
+    valueGroups.every((group) => group.includes(value)),
+  );
+}
+
+function validatePrerequisiteMode(
+  record: QuestRecord,
+  questIndex: ReadonlyMap<string, QuestRecord>,
+): void {
+  const { quest, source } = record;
+
+  const prerequisiteQuestIds = quest.prerequisiteQuestIds ?? [];
+
+  if (
+    quest.prerequisiteQuestMode === 'any' &&
+    prerequisiteQuestIds.length < 2
+  ) {
+    addMessage(
+      'warning',
+      source,
+      [
+        `Quest "${quest.id}" uses prerequisiteQuestMode "any",`,
+        'but it has fewer than two prerequisite quests.',
+      ].join(' '),
+    );
+  }
+
+  if (
+    quest.prerequisiteQuestMode !== 'all' ||
+    prerequisiteQuestIds.length < 2
+  ) {
+    return;
+  }
+
+  const prerequisiteQuests = prerequisiteQuestIds
+    .map((questId) => questIndex.get(questId)?.quest)
+    .filter((quest): quest is Quest => quest !== undefined);
+
+  const routeDimensions: readonly {
+    label: string;
+    valueGroups: readonly (readonly string[])[];
+  }[] = [
+    {
+      label: 'starting cities',
+
+      valueGroups: prerequisiteQuests
+        .map(
+          (previousQuest) => previousQuest.availability?.startingCityIds ?? [],
+        )
+        .filter((values) => values.length > 0),
+    },
+    {
+      label: 'initial Grand Companies',
+
+      valueGroups: prerequisiteQuests
+        .map(
+          (previousQuest) =>
+            previousQuest.availability?.initialGrandCompanyIds ?? [],
+        )
+        .filter((values) => values.length > 0),
+    },
+    {
+      label: 'current Grand Companies',
+
+      valueGroups: prerequisiteQuests
+        .map(
+          (previousQuest) =>
+            previousQuest.availability?.currentGrandCompanyIds ?? [],
+        )
+        .filter((values) => values.length > 0),
+    },
+  ];
+
+  for (const routeDimension of routeDimensions) {
+    if (
+      routeDimension.valueGroups.length < 2 ||
+      hasSharedRouteValue(routeDimension.valueGroups)
+    ) {
+      continue;
+    }
+
+    addMessage(
+      'error',
+      source,
+      [
+        `Quest "${quest.id}" requires all prerequisite quests,`,
+        `but those quests belong to mutually exclusive ${routeDimension.label}.`,
+        'Set prerequisiteQuestMode to "any".',
+      ].join(' '),
+    );
+  }
+}
+
 function validateQuestReferences(
   questIndex: ReadonlyMap<string, QuestRecord>,
 ): void {
@@ -335,6 +441,7 @@ function validateQuestReferences(
     );
 
     validateReciprocalReferences(record, questIndex);
+    validatePrerequisiteMode(record, questIndex);
   }
 }
 

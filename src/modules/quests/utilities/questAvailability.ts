@@ -1,5 +1,7 @@
 import type { StartingCityId } from '../../../core/game/gameSchemas';
 
+import type { GrandCompanyId } from '../../../domain/grandCompanies';
+
 import type {
   Quest,
   QuestAvailability,
@@ -10,30 +12,104 @@ import type { QuestCatalog } from '../data/questRepository';
 
 export interface QuestAvailabilityContext {
   startingCity: StartingCityId | null;
+
+  initialGrandCompany: GrandCompanyId | null;
+
+  currentGrandCompany: GrandCompanyId | null;
 }
 
-function matchesAvailability(
+export type QuestApplicability =
+  | 'applicable'
+  | 'alternate-route'
+  | 'undecided-route';
+
+type RestrictionResult = 'matches' | 'mismatch' | 'undecided';
+
+function evaluateRestriction<TValue extends string>(
+  allowedValues: readonly TValue[] | undefined,
+  selectedValue: TValue | null,
+): RestrictionResult {
+  if (!allowedValues || allowedValues.length === 0) {
+    return 'matches';
+  }
+
+  if (selectedValue === null) {
+    return 'undecided';
+  }
+
+  return allowedValues.includes(selectedValue) ? 'matches' : 'mismatch';
+}
+
+function evaluateAvailability(
   availability: QuestAvailability | undefined,
   context: QuestAvailabilityContext,
-): boolean {
-  const startingCityIds = availability?.startingCityIds;
-
-  if (!startingCityIds || startingCityIds.length === 0) {
-    return true;
+): QuestApplicability {
+  if (!availability) {
+    return 'applicable';
   }
 
-  if (!context.startingCity) {
-    return false;
+  const restrictionResults: RestrictionResult[] = [
+    evaluateRestriction(availability.startingCityIds, context.startingCity),
+
+    evaluateRestriction(
+      availability.initialGrandCompanyIds,
+      context.initialGrandCompany,
+    ),
+
+    evaluateRestriction(
+      availability.currentGrandCompanyIds,
+      context.currentGrandCompany,
+    ),
+  ];
+
+  if (restrictionResults.includes('mismatch')) {
+    return 'alternate-route';
   }
 
-  return startingCityIds.includes(context.startingCity);
+  if (restrictionResults.includes('undecided')) {
+    return 'undecided-route';
+  }
+
+  return 'applicable';
+}
+
+function combineApplicability(
+  ...results: readonly QuestApplicability[]
+): QuestApplicability {
+  if (results.includes('alternate-route')) {
+    return 'alternate-route';
+  }
+
+  if (results.includes('undecided-route')) {
+    return 'undecided-route';
+  }
+
+  return 'applicable';
+}
+
+export function getQuestCollectionApplicability(
+  collection: QuestCollection,
+  context: QuestAvailabilityContext,
+): QuestApplicability {
+  return evaluateAvailability(collection.availability, context);
+}
+
+export function getQuestApplicability(
+  quest: Quest,
+  collection: QuestCollection,
+  context: QuestAvailabilityContext,
+): QuestApplicability {
+  return combineApplicability(
+    getQuestCollectionApplicability(collection, context),
+    evaluateAvailability(quest.availability, context),
+  );
 }
 
 export function isQuestCollectionAvailable(
   collection: QuestCollection,
   context: QuestAvailabilityContext,
 ): boolean {
-  return matchesAvailability(collection.availability, context);
+  return getQuestCollectionApplicability(collection, context) === 'applicable';
 }
 
 export function isQuestAvailable(
@@ -41,10 +117,7 @@ export function isQuestAvailable(
   collection: QuestCollection,
   context: QuestAvailabilityContext,
 ): boolean {
-  return (
-    isQuestCollectionAvailable(collection, context) &&
-    matchesAvailability(quest.availability, context)
-  );
+  return getQuestApplicability(quest, collection, context) === 'applicable';
 }
 
 export function createAvailableQuestCatalog(
@@ -85,17 +158,31 @@ export function createAvailableQuestCatalog(
     groups: collection.groups.map((group) => ({
       ...group,
 
-      quests: group.quests.map((quest) => ({
-        ...quest,
+      quests: group.quests.map((quest) => {
+        const prerequisiteQuestIds = quest.prerequisiteQuestIds?.filter(
+          (questId) => availableQuestIds.has(questId),
+        );
 
-        prerequisiteQuestIds: quest.prerequisiteQuestIds?.filter((questId) =>
+        const nextQuestIds = quest.nextQuestIds?.filter((questId) =>
           availableQuestIds.has(questId),
-        ),
+        );
 
-        nextQuestIds: quest.nextQuestIds?.filter((questId) =>
-          availableQuestIds.has(questId),
-        ),
-      })),
+        return {
+          ...quest,
+
+          ...(prerequisiteQuestIds === undefined
+            ? {}
+            : {
+                prerequisiteQuestIds,
+              }),
+
+          ...(nextQuestIds === undefined
+            ? {}
+            : {
+                nextQuestIds,
+              }),
+        };
+      }),
     })),
   }));
 

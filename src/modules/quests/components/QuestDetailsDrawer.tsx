@@ -157,7 +157,14 @@ export function QuestDetailsDrawer({
     quest.rewards &&
     (quest.rewards.experience !== undefined ||
       quest.rewards.gil !== undefined ||
-      (quest.rewards.items && quest.rewards.items.length > 0));
+      (quest.rewards.items && quest.rewards.items.length > 0) ||
+      (quest.rewards.optionalItems && quest.rewards.optionalItems.length > 0));
+
+  const hasCompletionDetails =
+    quest.completion !== undefined &&
+    (quest.completion.targetName !== undefined ||
+      quest.completion.zoneName !== undefined ||
+      quest.completion.coordinates !== undefined);
 
   return (
     <div
@@ -275,6 +282,41 @@ export function QuestDetailsDrawer({
                     <dd>
                       X: {quest.start.coordinates.x.toFixed(1)}, Y:{' '}
                       {quest.start.coordinates.y.toFixed(1)}
+                    </dd>
+                  </div>
+                )}
+              </dl>
+            </section>
+          )}
+
+          {hasCompletionDetails && quest.completion && (
+            <section className="quest-details__section">
+              <header>
+                <p>Completion Point</p>
+                <h3>Where to finish</h3>
+              </header>
+
+              <dl className="quest-details__facts">
+                {quest.completion.targetName && (
+                  <div>
+                    <dt>NPC / target</dt>
+                    <dd>{quest.completion.targetName}</dd>
+                  </div>
+                )}
+
+                {quest.completion.zoneName && (
+                  <div>
+                    <dt>Zone</dt>
+                    <dd>{quest.completion.zoneName}</dd>
+                  </div>
+                )}
+
+                {quest.completion.coordinates && (
+                  <div>
+                    <dt>Coordinates</dt>
+                    <dd>
+                      X: {quest.completion.coordinates.x.toFixed(1)}, Y:{' '}
+                      {quest.completion.coordinates.y.toFixed(1)}
                     </dd>
                   </div>
                 )}
@@ -400,6 +442,27 @@ export function QuestDetailsDrawer({
                   ))}
                 </div>
               )}
+
+              {quest.rewards.optionalItems &&
+                quest.rewards.optionalItems.length > 0 && (
+                  <div className="quest-details__relationship">
+                    <h4>Choose one</h4>
+
+                    <div className="quest-details__list">
+                      {quest.rewards.optionalItems.map((item, index) => (
+                        <article
+                          key={`${item.itemId}-${item.stainId ?? 'unstained'}-${index}`}
+                          className="quest-details__list-item"
+                        >
+                          <strong>{item.itemName}</strong>
+                          <span>Quantity: {item.quantity}</span>
+
+                          {item.notes && <span>{item.notes}</span>}
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                )}
             </section>
           )}
 
@@ -415,7 +478,12 @@ export function QuestDetailsDrawer({
               {quest.prerequisiteQuestIds &&
                 quest.prerequisiteQuestIds.length > 0 && (
                   <div className="quest-details__relationship">
-                    <h4>Previous</h4>
+                    <h4>
+                      Previous{' '}
+                      {quest.prerequisiteQuestMode === 'any'
+                        ? '(complete any one)'
+                        : '(all required)'}
+                    </h4>
 
                     <ul>
                       {quest.prerequisiteQuestIds.map((questId) => (

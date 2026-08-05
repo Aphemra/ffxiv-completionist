@@ -1471,7 +1471,7 @@ function createQuestEntry(
     patch,
     category: slugify(category),
 
-    aavailability: extractAvailability(reviewObject, draft, quest.name),
+    availability: extractAvailability(reviewObject, draft, quest.name),
 
     requirements: extractRequirements(
       reviewObject,

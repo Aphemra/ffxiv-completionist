@@ -63,6 +63,10 @@ export function DashboardPage() {
     questCatalogState.status === 'success'
       ? createAvailableQuestCatalog(questCatalogState.catalog, {
           startingCity: profile.startingCity,
+
+          initialGrandCompany: profile.initialGrandCompany,
+
+          currentGrandCompany: profile.currentGrandCompany,
         })
       : null;
 
