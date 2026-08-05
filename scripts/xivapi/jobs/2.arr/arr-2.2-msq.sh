@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 EXPORT_ID="arr-2.2-msq"
-TITLE="Through the Maelstrom 2.2 - Main Scenario"
+TITLE="Through the Maelstrom - 2.2 Main Scenario"
 
 EXPANSION="arr"
 PATCH="2.2"

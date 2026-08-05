@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 EXPORT_ID="arr-2.3-msq"
-TITLE="Defenders of Eorzea 2.3 - Main Scenario"
+TITLE="Defenders of Eorzea - 2.3 Main Scenario"
 
 EXPANSION="arr"
 PATCH="2.3"
