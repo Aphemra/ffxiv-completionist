@@ -878,7 +878,8 @@ async function main(): Promise<void> {
             : `item-${parameter.argument}`,
 
         itemName: undefined,
-        quantity: undefined,
+
+        quantity: itemSheet === 'Item' ? 1 : undefined,
       };
     });
 

@@ -1153,6 +1153,8 @@ function extractRequirements(
     ...asArray(reviewRequirements?.requiredItems),
   ];
 
+  const consolidatedItemRequirements = new Map<string, JsonObject>();
+
   for (const rawReference of itemReferences) {
     const reference = asObject(rawReference);
 
@@ -1175,20 +1177,38 @@ function extractRequirements(
 
     const quantity = readInteger(reference.quantity) ?? null;
 
-    requirements.push({
-      type: 'item',
+    const itemId =
+      importedItemId ??
+      (itemRowId !== undefined
+        ? itemSheet === 'EventItem'
+          ? `event-item-${itemRowId}`
+          : `item-${itemRowId}`
+        : slugify(itemName));
 
-      itemId:
-        importedItemId ??
-        (itemRowId !== undefined
-          ? itemSheet === 'EventItem'
-            ? `event-item-${itemRowId}`
-            : `item-${itemRowId}`
-          : slugify(itemName)),
+    const consolidationKey = [
+      itemSheet ?? 'unknown',
+      normalizeQuestName(itemName),
+    ].join('|');
 
-      itemName,
-      quantity,
-    });
+    const existingRequirement =
+      consolidatedItemRequirements.get(consolidationKey);
+
+    if (existingRequirement) {
+      const existingQuantity = readInteger(existingRequirement.quantity);
+
+      existingRequirement.quantity =
+        existingQuantity !== undefined && quantity !== null
+          ? existingQuantity + quantity
+          : null;
+    } else {
+      consolidatedItemRequirements.set(consolidationKey, {
+        type: 'item',
+
+        itemId,
+        itemName,
+        quantity,
+      });
+    }
 
     if (quantity === null) {
       pushIssue(issues, issueKeys, {
@@ -1201,6 +1221,8 @@ function extractRequirements(
       });
     }
   }
+
+  requirements.push(...consolidatedItemRequirements.values());
 
   const uniqueRequirements = new Map<string, JsonObject>();
 

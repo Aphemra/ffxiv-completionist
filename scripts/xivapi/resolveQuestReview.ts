@@ -29,6 +29,7 @@ interface ResolvedReference {
   name: string;
 
   iconId?: number;
+  quantity?: number;
 }
 
 interface EnrichedReferences {
@@ -253,6 +254,12 @@ function createResolvedReferences(
       reference.iconId = iconId;
     }
 
+    const quantity = readInteger(fields.StackSize);
+
+    if (quantity !== undefined && quantity > 0) {
+      reference.quantity = quantity;
+    }
+
     references.set(rowId, reference);
   }
 
@@ -278,6 +285,33 @@ function collectItemReferenceRowIds(
     )
     .map((reference) => readInteger(reference.itemRowId))
     .filter((rowId): rowId is number => rowId !== undefined && rowId > 0);
+}
+
+function deduplicateItemReferences(values: readonly unknown[]): JsonObject[] {
+  const referencesByKey = new Map<string, JsonObject>();
+
+  for (const rawValue of values) {
+    const reference = asObject(rawValue);
+
+    if (!reference) {
+      continue;
+    }
+
+    const itemSheet = readString(reference.itemSheet);
+
+    const itemRowId = readInteger(reference.itemRowId);
+
+    const key =
+      itemSheet !== undefined && itemRowId !== undefined
+        ? `${itemSheet}:${itemRowId}`
+        : JSON.stringify(reference);
+
+    if (!referencesByKey.has(key)) {
+      referencesByKey.set(key, reference);
+    }
+  }
+
+  return Array.from(referencesByKey.values());
 }
 
 function enrichReferences(
@@ -311,6 +345,10 @@ function enrichReferences(
 
       if (resolution.iconId !== undefined) {
         enrichedValue.iconId = resolution.iconId;
+      }
+
+      if (resolution.quantity !== undefined) {
+        enrichedValue.quantity = resolution.quantity;
       }
     } else {
       unresolved.push(enrichedValue);
@@ -653,11 +691,11 @@ async function main(): Promise<void> {
 
   const unresolvedReferences = ensureObject(review, 'unresolvedReferences');
 
-  const rawItemReferences = [
+  const rawItemReferences = deduplicateItemReferences([
     ...asArray(requirements.unresolvedItems),
 
     ...asArray(unresolvedReferences.items),
-  ];
+  ]);
 
   const rawActorReferences = asArray(unresolvedReferences.actors);
 
@@ -677,7 +715,7 @@ async function main(): Promise<void> {
   const eventItemRows = await fetchSheetRows(
     'EventItem',
     eventItemRowIds,
-    'Name,Icon',
+    'Name,Icon,StackSize',
     pins,
   );
 
