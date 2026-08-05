@@ -7,7 +7,7 @@ import { useProgressStore } from '../../../core/progress/progressStore';
 import { QuestDetailsDrawer } from '../components/QuestDetailsDrawer';
 import { QuestEntry } from '../components/QuestEntry';
 
-import type { QuestCategory } from '../data/questSchemas';
+import type { QuestCategory, QuestCollection } from '../data/questSchemas';
 
 import { useQuestCatalog } from '../hooks/useQuestCatalog';
 
@@ -16,6 +16,7 @@ import { createAvailableQuestCatalog } from '../utilities/questAvailability';
 import {
   comparePatchVersions,
   formatExpansionName,
+  formatQuestCategory,
   QUEST_CATEGORY_OPTIONS,
   QUEST_STATUS_OPTIONS,
   questMatchesSearch,
@@ -32,6 +33,19 @@ function formatVerificationStatus(status: string): string {
     .split('-')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
+}
+
+const VERIFICATION_STATUS_ORDER: ReadonlyArray<
+  QuestCollection['verificationStatus']
+> = ['incomplete', 'partially-complete', 'in-review', 'verified'];
+
+function getCombinedVerificationStatus(
+  statuses: ReadonlyArray<QuestCollection['verificationStatus']>,
+): QuestCollection['verificationStatus'] {
+  return (
+    VERIFICATION_STATUS_ORDER.find((status) => statuses.includes(status)) ??
+    'incomplete'
+  );
 }
 
 export function QuestLogPage() {
@@ -69,11 +83,11 @@ export function QuestLogPage() {
 
   const [selectedQuestId, setSelectedQuestId] = useState<string | null>(null);
 
-  const [expandedCollectionIds, setExpandedCollectionIds] = useState<
-    ReadonlySet<string>
-  >(() => new Set());
+  const [expandedPatchIds, setExpandedPatchIds] = useState<ReadonlySet<string>>(
+    () => new Set(),
+  );
 
-  const [expandedGroupIds, setExpandedGroupIds] = useState<ReadonlySet<string>>(
+  const [expandedRangeIds, setExpandedRangeIds] = useState<ReadonlySet<string>>(
     () => new Set(),
   );
 
@@ -216,6 +230,55 @@ export function QuestLogPage() {
     profile.currentQuestId,
   ]);
 
+  const patchSections = useMemo(() => {
+    const sections = new Map<
+      string,
+      {
+        id: string;
+        expansionId: string | undefined;
+        patch: string | undefined;
+        category: QuestCategory;
+        sortOrder: number;
+        ranges: typeof filteredCollections;
+      }
+    >();
+
+    for (const filteredCollection of filteredCollections) {
+      const { collection } = filteredCollection;
+
+      const sectionId = [
+        collection.category,
+        collection.expansionId ?? 'unknown-expansion',
+        collection.patch ?? 'unknown-patch',
+      ].join(':');
+
+      const existingSection = sections.get(sectionId);
+
+      if (existingSection) {
+        existingSection.ranges.push(filteredCollection);
+        existingSection.sortOrder = Math.min(
+          existingSection.sortOrder,
+          collection.sortOrder,
+        );
+
+        continue;
+      }
+
+      sections.set(sectionId, {
+        id: sectionId,
+        expansionId: collection.expansionId,
+        patch: collection.patch,
+        category: collection.category,
+        sortOrder: collection.sortOrder,
+        ranges: [filteredCollection],
+      });
+    }
+
+    return Array.from(sections.values()).sort(
+      (left, right) => left.sortOrder - right.sortOrder,
+    );
+  }, [filteredCollections]);
+
   const visibleQuestCount = useMemo(
     () =>
       filteredCollections.reduce(
@@ -257,28 +320,28 @@ export function QuestLogPage() {
     statusFilter === 'current' ||
     statusFilter === 'bookmarked';
 
-  function toggleCollection(collectionId: string): void {
-    setExpandedCollectionIds((current) => {
+  function togglePatch(patchId: string): void {
+    setExpandedPatchIds((current) => {
       const next = new Set(current);
 
-      if (next.has(collectionId)) {
-        next.delete(collectionId);
+      if (next.has(patchId)) {
+        next.delete(patchId);
       } else {
-        next.add(collectionId);
+        next.add(patchId);
       }
 
       return next;
     });
   }
 
-  function toggleGroup(groupKey: string): void {
-    setExpandedGroupIds((current) => {
+  function toggleRange(rangeId: string): void {
+    setExpandedRangeIds((current) => {
       const next = new Set(current);
 
-      if (next.has(groupKey)) {
-        next.delete(groupKey);
+      if (next.has(rangeId)) {
+        next.delete(rangeId);
       } else {
-        next.add(groupKey);
+        next.add(rangeId);
       }
 
       return next;
@@ -542,32 +605,50 @@ export function QuestLogPage() {
             </div>
           </section>
 
-          {filteredCollections.length > 0 ? (
+          {patchSections.length > 0 ? (
             <div className="quest-collections">
-              {filteredCollections.map(({ collection, groups }) => {
-                const collectionQuests = collection.groups.flatMap(
-                  (group) => group.quests,
+              {patchSections.map((section) => {
+                const sectionQuests = section.ranges.flatMap(({ collection }) =>
+                  collection.groups.flatMap((group) => group.quests),
                 );
 
-                const completedCollectionCount = collectionQuests.filter(
-                  (quest) => completedQuestIdSet.has(quest.id),
+                const completedSectionCount = sectionQuests.filter((quest) =>
+                  completedQuestIdSet.has(quest.id),
                 ).length;
 
-                const visibleCollectionCount = groups.reduce(
-                  (total, { quests }) => total + quests.length,
+                const visibleSectionCount = section.ranges.reduce(
+                  (rangeTotal, { groups }) =>
+                    rangeTotal +
+                    groups.reduce(
+                      (groupTotal, { quests }) => groupTotal + quests.length,
+                      0,
+                    ),
                   0,
                 );
 
-                const isCollectionExpanded =
-                  shouldAutoExpandMatches ||
-                  expandedCollectionIds.has(collection.id);
+                const verificationStatus = getCombinedVerificationStatus(
+                  section.ranges.map(
+                    ({ collection }) => collection.verificationStatus,
+                  ),
+                );
+
+                const isPatchExpanded =
+                  shouldAutoExpandMatches || expandedPatchIds.has(section.id);
+
+                const expansionName = section.expansionId
+                  ? formatExpansionName(section.expansionId)
+                  : 'Quest Collection';
+
+                const patchName = section.patch
+                  ? `Patch ${section.patch}`
+                  : 'Unassigned Patch';
 
                 return (
                   <section
-                    key={collection.id}
+                    key={section.id}
                     className={[
                       'quest-collection',
-                      isCollectionExpanded ? 'quest-collection--expanded' : '',
+                      isPatchExpanded ? 'quest-collection--expanded' : '',
                     ]
                       .filter(Boolean)
                       .join(' ')}
@@ -575,22 +656,21 @@ export function QuestLogPage() {
                     <header className="quest-collection__header">
                       <div>
                         <p className="quest-collection__eyebrow">
-                          {collection.expansionId
-                            ? formatExpansionName(collection.expansionId)
-                            : 'Quest Collection'}
-
-                          {collection.patch && ` · Patch ${collection.patch}`}
+                          {expansionName} ·{' '}
+                          {formatQuestCategory(section.category)}
                         </p>
 
-                        <h2>{collection.title}</h2>
+                        <h2>{patchName}</h2>
 
                         <p className="quest-collection__description">
-                          {collection.description}
+                          {expansionName}{' '}
+                          {formatQuestCategory(section.category).toLowerCase()}{' '}
+                          quests introduced in {patchName}.
                         </p>
 
                         <p className="quest-collection__progress">
-                          {completedCollectionCount} of{' '}
-                          {collectionQuests.length} complete
+                          {completedSectionCount} of {sectionQuests.length}{' '}
+                          complete
                         </p>
                       </div>
 
@@ -598,28 +678,26 @@ export function QuestLogPage() {
                         <span
                           className={[
                             'quest-collection__status',
-                            `quest-collection__status--${collection.verificationStatus}`,
+                            `quest-collection__status--${verificationStatus}`,
                           ].join(' ')}
                         >
-                          {formatVerificationStatus(
-                            collection.verificationStatus,
-                          )}
+                          {formatVerificationStatus(verificationStatus)}
                         </span>
 
-                        {visibleCollectionCount !== collectionQuests.length && (
+                        {visibleSectionCount !== sectionQuests.length && (
                           <span className="quest-collection__visible-count">
-                            {visibleCollectionCount} shown
+                            {visibleSectionCount} shown
                           </span>
                         )}
 
                         <button
                           className="quest-collection__collapse-button"
                           type="button"
-                          aria-expanded={isCollectionExpanded}
+                          aria-expanded={isPatchExpanded}
                           aria-label={
-                            isCollectionExpanded
-                              ? `Collapse ${collection.title}`
-                              : `Expand ${collection.title}`
+                            isPatchExpanded
+                              ? `Collapse ${patchName}`
+                              : `Expand ${patchName}`
                           }
                           title={
                             shouldAutoExpandMatches
@@ -628,13 +706,13 @@ export function QuestLogPage() {
                           }
                           disabled={shouldAutoExpandMatches}
                           onClick={() => {
-                            toggleCollection(collection.id);
+                            togglePatch(section.id);
                           }}
                         >
                           <span
                             className={[
                               'quest-collection__chevron',
-                              isCollectionExpanded
+                              isPatchExpanded
                                 ? 'quest-collection__chevron--open'
                                 : '',
                             ]
@@ -648,25 +726,36 @@ export function QuestLogPage() {
                       </div>
                     </header>
 
-                    {isCollectionExpanded && (
+                    {isPatchExpanded && (
                       <div className="quest-groups">
-                        {groups.map(({ group, quests }) => {
-                          const groupKey = `${collection.id}:${group.id}`;
+                        {section.ranges.map(({ collection, groups }) => {
+                          const rangeKey = `${section.id}:${collection.id}`;
 
-                          const isGroupExpanded =
-                            shouldAutoExpandMatches ||
-                            expandedGroupIds.has(groupKey);
+                          const rangeQuests = collection.groups.flatMap(
+                            (group) => group.quests,
+                          );
 
-                          const completedGroupCount = group.quests.filter(
+                          const visibleRangeQuests = groups.flatMap(
+                            ({ quests }) => quests,
+                          );
+
+                          const completedRangeCount = rangeQuests.filter(
                             (quest) => completedQuestIdSet.has(quest.id),
                           ).length;
 
+                          const isRangeExpanded =
+                            shouldAutoExpandMatches ||
+                            expandedRangeIds.has(rangeKey);
+
                           return (
-                            <section key={group.id} className="quest-group">
+                            <section
+                              key={collection.id}
+                              className="quest-group"
+                            >
                               <button
                                 className="quest-group__toggle"
                                 type="button"
-                                aria-expanded={isGroupExpanded}
+                                aria-expanded={isRangeExpanded}
                                 disabled={shouldAutoExpandMatches}
                                 title={
                                   shouldAutoExpandMatches
@@ -674,7 +763,7 @@ export function QuestLogPage() {
                                     : undefined
                                 }
                                 onClick={() => {
-                                  toggleGroup(groupKey);
+                                  toggleRange(rangeKey);
                                 }}
                               >
                                 <span className="quest-group__title">
@@ -682,23 +771,26 @@ export function QuestLogPage() {
                                     Quest Range
                                   </span>
 
-                                  <strong>{group.title}</strong>
+                                  <strong>{collection.title}</strong>
                                 </span>
 
                                 <span className="quest-group__summary">
                                   <span>
-                                    {completedGroupCount} /{' '}
-                                    {group.quests.length} complete
+                                    {completedRangeCount} / {rangeQuests.length}{' '}
+                                    complete
                                   </span>
 
-                                  {quests.length !== group.quests.length && (
-                                    <span>{quests.length} shown</span>
+                                  {visibleRangeQuests.length !==
+                                    rangeQuests.length && (
+                                    <span>
+                                      {visibleRangeQuests.length} shown
+                                    </span>
                                   )}
 
                                   <span
                                     className={[
                                       'quest-group__chevron',
-                                      isGroupExpanded
+                                      isRangeExpanded
                                         ? 'quest-group__chevron--open'
                                         : '',
                                     ]
@@ -711,9 +803,9 @@ export function QuestLogPage() {
                                 </span>
                               </button>
 
-                              {isGroupExpanded && (
+                              {isRangeExpanded && (
                                 <div className="quest-group__entries">
-                                  {quests.map((quest) => (
+                                  {visibleRangeQuests.map((quest) => (
                                     <QuestEntry
                                       key={quest.id}
                                       quest={quest}
