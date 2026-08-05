@@ -120,11 +120,6 @@ export function QuestDetailsDrawer({
   const [noteMessage, setNoteMessage] = useState('');
 
   useEffect(() => {
-    setNoteDraft(personalNote);
-    setNoteMessage('');
-  }, [personalNote, quest.id]);
-
-  useEffect(() => {
     const previousOverflow = document.body.style.overflow;
 
     document.body.style.overflow = 'hidden';

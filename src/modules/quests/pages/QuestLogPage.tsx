@@ -772,6 +772,7 @@ export function QuestLogPage() {
 
       {selectedQuest && catalog && (
         <QuestDetailsDrawer
+          key={selectedQuest.id}
           quest={selectedQuest}
           questsById={catalog.questsById}
           isCompleted={completedQuestIdSet.has(selectedQuest.id)}

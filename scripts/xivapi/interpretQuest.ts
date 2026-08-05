@@ -988,12 +988,6 @@ async function main(): Promise<void> {
     'Review objective text manually; TodoParams provide structure and locations but not player-facing objective text.',
   ];
 
-  if (experienceFactor !== undefined && experienceFactor > 0) {
-    manualChecks.push(
-      `Resolve the actual EXP reward. ExpFactor ${experienceFactor} is not the final experience amount.`,
-    );
-  }
-
   if (requiredItemReferences.length > 0) {
     manualChecks.push(
       'Resolve required item names and quantities from script references or another source.',

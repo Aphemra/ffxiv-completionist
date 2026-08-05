@@ -8,6 +8,12 @@ import path from 'node:path';
 
 import * as z from 'zod';
 
+import { delayBetweenRequests, requestXivapi } from './client';
+
+import { readXivapiPins } from './pins';
+
+import { xivapiSheetResponseSchema } from './schemas';
+
 import {
   questChainExportSchema,
   questExportEntrySchema,
@@ -29,6 +35,11 @@ interface ExportIssue {
   questName: string;
   field: string;
   message: string;
+}
+
+interface ParamGrowExperienceData {
+  scaledQuestXp: number;
+  questExpModifier: number;
 }
 
 const positiveRowIdSchema = z.number().int().positive();
@@ -109,6 +120,123 @@ function readNumber(value: unknown): number | undefined {
   return typeof value === 'number' && Number.isFinite(value)
     ? value
     : undefined;
+}
+
+function chunkValues<T>(values: readonly T[], chunkSize: number): T[][] {
+  const chunks: T[][] = [];
+
+  for (let index = 0; index < values.length; index += chunkSize) {
+    chunks.push(values.slice(index, index + chunkSize));
+  }
+
+  return chunks;
+}
+
+function readQuestExperienceInputs(review: ResolvedReview): {
+  level: number;
+  experienceFactor: number;
+} | null {
+  const draft = asObject(review.questDraft);
+
+  const rewards = asObject(draft?.rewards);
+
+  const level = readInteger(draft?.level);
+
+  const experienceFactor = readInteger(rewards?.experienceFactor);
+
+  if (
+    level === undefined ||
+    level < 1 ||
+    experienceFactor === undefined ||
+    experienceFactor < 0
+  ) {
+    return null;
+  }
+
+  return {
+    level,
+    experienceFactor,
+  };
+}
+
+function calculateQuestExperience(
+  experienceFactor: number,
+  paramGrow: ParamGrowExperienceData,
+): number {
+  return Math.floor(
+    (experienceFactor * paramGrow.scaledQuestXp * paramGrow.questExpModifier) /
+      100,
+  );
+}
+
+async function fetchParamGrowExperienceData(
+  levels: readonly number[],
+  offline: boolean,
+): Promise<Map<number, ParamGrowExperienceData>> {
+  if (offline && levels.length > 0) {
+    throw new Error(
+      [
+        'ParamGrow EXP data is not available in offline mode.',
+        '',
+        'Run this export once without "--offline" to calculate quest EXP.',
+      ].join('\n'),
+    );
+  }
+  const uniqueLevels = Array.from(new Set(levels)).sort(
+    (left, right) => left - right,
+  );
+
+  const pins = await readXivapiPins();
+
+  const result = new Map<number, ParamGrowExperienceData>();
+
+  for (const chunk of chunkValues(uniqueLevels, 20)) {
+    const response = await requestXivapi({
+      path: '/sheet/ParamGrow',
+
+      query: {
+        rows: chunk.join(','),
+
+        fields: 'ScaledQuestXP,QuestExpModifier',
+
+        version: pins.version,
+        schema: pins.schema,
+      },
+
+      responseSchema: xivapiSheetResponseSchema,
+    });
+
+    for (const row of response.rows) {
+      const scaledQuestXp = readInteger(row.fields.ScaledQuestXP);
+
+      const questExpModifier = readInteger(row.fields.QuestExpModifier);
+
+      if (scaledQuestXp === undefined || questExpModifier === undefined) {
+        throw new Error(
+          [
+            `ParamGrow row ${row.row_id} is missing EXP data.`,
+            `ScaledQuestXP: ${String(scaledQuestXp)}`,
+            `QuestExpModifier: ${String(questExpModifier)}`,
+          ].join('\n'),
+        );
+      }
+
+      result.set(row.row_id, {
+        scaledQuestXp,
+        questExpModifier,
+      });
+    }
+
+    await delayBetweenRequests();
+  }
+
+  for (const level of uniqueLevels) {
+    if (!result.has(level)) {
+      throw new Error(`XIVAPI returned no ParamGrow row for level ${level}.`);
+    }
+  }
+
+  return result;
 }
 
 function unwrapRelation(value: unknown): JsonObject | undefined {
@@ -1216,6 +1344,7 @@ function normalizeRewardItem(
 function extractRewards(
   review: JsonObject,
   draft: JsonObject,
+  calculatedExperience: number | undefined,
   questId: string,
   questName: string,
   issues: ExportIssue[],
@@ -1226,6 +1355,7 @@ function extractRewards(
   const reviewRewards = asObject(review.rewards);
 
   const experience =
+    calculatedExperience ??
     readInteger(draftRewards?.experience) ??
     readInteger(reviewRewards?.experience) ??
     null;
@@ -1391,6 +1521,7 @@ function addStartIssues(
 function createQuestEntry(
   quest: QuestIndexEntry,
   review: ResolvedReview,
+  calculatedExperience: number | undefined,
   sortOrder: number,
   questId: string,
   previousQuestIds: string[],
@@ -1481,6 +1612,7 @@ function createQuestEntry(
     rewards: extractRewards(
       reviewObject,
       draft,
+      calculatedExperience,
       questId,
       quest.name,
       issues,
@@ -1681,6 +1813,59 @@ async function main(): Promise<void> {
     reviewsByRowId.set(quest.rowId, await readResolvedReview(resolvedPath));
   }
 
+  const experienceInputsByRowId = new Map<
+    number,
+    {
+      level: number;
+      experienceFactor: number;
+    }
+  >();
+
+  for (const quest of orderedQuests) {
+    const review = reviewsByRowId.get(quest.rowId);
+
+    if (!review) {
+      continue;
+    }
+
+    const inputs = readQuestExperienceInputs(review);
+
+    if (inputs) {
+      experienceInputsByRowId.set(quest.rowId, inputs);
+    }
+  }
+
+  const levelsRequiringParamGrow = Array.from(experienceInputsByRowId.values())
+    .filter((inputs) => inputs.experienceFactor > 0)
+    .map((inputs) => inputs.level);
+
+  const paramGrowByLevel =
+    levelsRequiringParamGrow.length > 0
+      ? await fetchParamGrowExperienceData(levelsRequiringParamGrow, offline)
+      : new Map<number, ParamGrowExperienceData>();
+
+  const experienceByRowId = new Map<number, number>();
+
+  for (const [rowId, inputs] of experienceInputsByRowId) {
+    if (inputs.experienceFactor === 0) {
+      experienceByRowId.set(rowId, 0);
+      continue;
+    }
+
+    const paramGrow = paramGrowByLevel.get(inputs.level);
+
+    if (!paramGrow) {
+      throw new Error(
+        `Quest row ${rowId} could not resolve ParamGrow level ${inputs.level}.`,
+      );
+    }
+
+    experienceByRowId.set(
+      rowId,
+      calculateQuestExperience(inputs.experienceFactor, paramGrow),
+    );
+  }
+
   const issues: ExportIssue[] = [];
 
   const issueKeys = new Set<string>();
@@ -1716,6 +1901,7 @@ async function main(): Promise<void> {
       createQuestEntry(
         quest,
         review,
+        experienceByRowId.get(quest.rowId),
         index + 1,
         questId,
         previousQuestIds,
