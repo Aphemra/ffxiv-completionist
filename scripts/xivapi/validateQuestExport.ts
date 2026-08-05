@@ -497,6 +497,24 @@ function validateGraphConnectivity(
   }
 }
 
+function hasSharedRouteValue(
+  valueGroups: readonly (readonly string[])[],
+): boolean {
+  if (valueGroups.length < 2) {
+    return true;
+  }
+
+  const firstGroup = valueGroups[0];
+
+  if (!firstGroup) {
+    return true;
+  }
+
+  return firstGroup.some((value) =>
+    valueGroups.every((group) => group.includes(value)),
+  );
+}
+
 function validateIntegrity(
   exportData: QuestChainExport,
   derivedGraphData: DerivedGraphData,
@@ -614,6 +632,18 @@ function validateIntegrity(
       errors.push(`${quest.id} references itself as a previous or next quest.`);
     }
 
+    if (
+      quest.previousQuestMode === 'any' &&
+      quest.previousQuestIds.length < 2
+    ) {
+      warnings.push(
+        [
+          `${quest.id} uses previousQuestMode "any"`,
+          'but has fewer than two previous quests.',
+        ].join(' '),
+      );
+    }
+
     const expectedGraphRole = derivedGraphData.graphRoleByQuestId.get(quest.id);
 
     if (
@@ -671,6 +701,50 @@ function validateIntegrity(
           ].join(' '),
         );
       }
+    }
+
+    for (const requirement of quest.requirements) {
+      if (requirement.type !== 'quest') {
+        continue;
+      }
+
+      if (!questsById.has(requirement.questId)) {
+        errors.push(
+          [
+            `${quest.id} has a quest requirement`,
+            `referencing missing quest "${requirement.questId}".`,
+          ].join(' '),
+        );
+      }
+    }
+
+    const previousQuests = quest.previousQuestIds
+      .map((previousQuestId) => questsById.get(previousQuestId))
+      .filter(
+        (previousQuest): previousQuest is QuestExportEntry =>
+          previousQuest !== undefined,
+      );
+
+    const previousInitialGrandCompanyGroups = previousQuests
+      .map(
+        (previousQuest) =>
+          previousQuest.availability?.initialGrandCompanyIds ?? [],
+      )
+      .filter((grandCompanyIds) => grandCompanyIds.length > 0);
+
+    if (
+      quest.previousQuestMode === 'all' &&
+      previousInitialGrandCompanyGroups.length > 1 &&
+      !hasSharedRouteValue(previousInitialGrandCompanyGroups)
+    ) {
+      errors.push(
+        [
+          `${quest.id} requires all previous quests,`,
+          'but those previous quests belong to',
+          'mutually exclusive initial Grand Companies.',
+          'Set previousQuestMode to "any".',
+        ].join(' '),
+      );
     }
   }
 

@@ -1,13 +1,29 @@
 import * as z from 'zod';
 
+import { GRAND_COMPANY_IDS } from '../../src/domain/grandCompanies';
+
 const nonEmptyStringSchema = z.string().trim().min(1);
 
-const nullableNonEmptyStringSchema = nonEmptyStringSchema.nullable();
+const nullableNonEmptyStringSchema = z.preprocess(
+  (value) => {
+    if (typeof value !== 'string') {
+      return value;
+    }
+
+    const trimmedValue = value.trim();
+
+    return trimmedValue.length === 0 ? null : trimmedValue;
+  },
+
+  nonEmptyStringSchema.nullable(),
+);
 
 const gameDataIdSchema = nonEmptyStringSchema.regex(
   /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
   'IDs must use lowercase kebab-case.',
 );
+
+const grandCompanyIdSchema = z.enum(GRAND_COMPANY_IDS);
 
 const coordinateSchema = z.number().finite().min(0).max(100);
 
@@ -36,7 +52,9 @@ const questEndpointSchema = z.strictObject({
 const questAvailabilitySchema = z.strictObject({
   startingCityIds: z.array(gameDataIdSchema).optional(),
 
-  grandCompanyIds: z.array(gameDataIdSchema).optional(),
+  initialGrandCompanyIds: z.array(grandCompanyIdSchema).optional(),
+
+  currentGrandCompanyIds: z.array(grandCompanyIdSchema).optional(),
 
   classJobIds: z.array(gameDataIdSchema).optional(),
 });
@@ -134,6 +152,8 @@ export const questExportEntrySchema = z.strictObject({
   requirements: z.array(questRequirementSchema),
 
   previousQuestIds: z.array(gameDataIdSchema),
+
+  previousQuestMode: z.enum(['all', 'any']).default('all'),
 
   nextQuestIds: z.array(gameDataIdSchema),
 

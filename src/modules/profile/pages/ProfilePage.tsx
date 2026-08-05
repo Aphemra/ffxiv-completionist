@@ -5,6 +5,11 @@ import {
   type StartingCityId,
 } from '../../../core/game/gameSchemas';
 
+import {
+  GRAND_COMPANY_OPTIONS,
+  type GrandCompanyId,
+} from '../../../domain/grandCompanies';
+
 import { useProgressStore } from '../../../core/progress/progressStore';
 
 import './ProfilePage.css';
@@ -26,6 +31,12 @@ export function ProfilePage() {
     profile.startingCity,
   );
 
+  const [initialGrandCompany, setInitialGrandCompany] =
+    useState<GrandCompanyId | null>(profile.initialGrandCompany);
+
+  const [currentGrandCompany, setCurrentGrandCompany] =
+    useState<GrandCompanyId | null>(profile.currentGrandCompany);
+
   const [dataCenter, setDataCenter] = useState(profile.dataCenter);
 
   const [world, setWorld] = useState(profile.world);
@@ -38,6 +49,8 @@ export function ProfilePage() {
     updateProfileMetadata({
       characterName,
       startingCity,
+      initialGrandCompany,
+      currentGrandCompany,
       dataCenter,
       world,
     });
@@ -131,6 +144,70 @@ export function ProfilePage() {
 
               <span className="profile-field__hint">
                 Used to select the correct early ARR main scenario route.
+              </span>
+            </label>
+
+            <label className="profile-field">
+              <span className="profile-field__label">
+                Initial Grand Company
+              </span>
+
+              <select
+                value={initialGrandCompany ?? ''}
+                onChange={(event) => {
+                  const value = event.target.value;
+
+                  setInitialGrandCompany(
+                    value.length > 0 ? (value as GrandCompanyId) : null,
+                  );
+
+                  setSaveMessage('');
+                }}
+              >
+                <option value="">Not chosen yet</option>
+
+                {GRAND_COMPANY_OPTIONS.map((option) => (
+                  <option key={option.id} value={option.id}>
+                    {option.name}
+                  </option>
+                ))}
+              </select>
+
+              <span className="profile-field__hint">
+                Determines which mutually exclusive ARR Grand Company story
+                route applies to this character.
+              </span>
+            </label>
+
+            <label className="profile-field">
+              <span className="profile-field__label">
+                Current Grand Company
+              </span>
+
+              <select
+                value={currentGrandCompany ?? ''}
+                onChange={(event) => {
+                  const value = event.target.value;
+
+                  setCurrentGrandCompany(
+                    value.length > 0 ? (value as GrandCompanyId) : null,
+                  );
+
+                  setSaveMessage('');
+                }}
+              >
+                <option value="">None selected</option>
+
+                {GRAND_COMPANY_OPTIONS.map((option) => (
+                  <option key={option.id} value={option.id}>
+                    {option.name}
+                  </option>
+                ))}
+              </select>
+
+              <span className="profile-field__hint">
+                Used for content based on the character’s present allegiance.
+                Changing this does not alter the original ARR story route.
               </span>
             </label>
 

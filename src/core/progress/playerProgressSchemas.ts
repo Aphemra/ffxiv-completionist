@@ -2,6 +2,8 @@ import * as z from 'zod';
 
 import { startingCityIdSchema } from '../game/gameSchemas';
 
+import { grandCompanyIdSchema } from '../../domain/grandCompanies';
+
 const contentIdSchema = z
   .string()
   .trim()
@@ -19,6 +21,10 @@ export const playerProgressSchema = z.strictObject({
   characterName: z.string().trim().max(80),
 
   startingCity: startingCityIdSchema.nullable().default(null),
+
+  initialGrandCompany: grandCompanyIdSchema.nullable().default(null),
+
+  currentGrandCompany: grandCompanyIdSchema.nullable().default(null),
 
   dataCenter: z.string().trim().max(80),
   world: z.string().trim().max(80),
@@ -41,5 +47,10 @@ export type PlayerProgress = z.infer<typeof playerProgressSchema>;
 
 export type ProfileMetadata = Pick<
   PlayerProgress,
-  'characterName' | 'startingCity' | 'dataCenter' | 'world'
+  | 'characterName'
+  | 'startingCity'
+  | 'initialGrandCompany'
+  | 'currentGrandCompany'
+  | 'dataCenter'
+  | 'world'
 >;

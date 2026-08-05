@@ -21,7 +21,12 @@ function createInitialProfile(): PlayerProgress {
 
     profileId: 'local-profile',
     characterName: '',
+
     startingCity: null,
+
+    initialGrandCompany: null,
+    currentGrandCompany: null,
+
     dataCenter: '',
     world: '',
 
@@ -77,7 +82,13 @@ export const useProgressStore = create<ProgressStore>()(
         set((state) => ({
           profile: updateProfile(state.profile, {
             characterName: metadata.characterName.trim(),
+
             startingCity: metadata.startingCity,
+
+            initialGrandCompany: metadata.initialGrandCompany,
+
+            currentGrandCompany: metadata.currentGrandCompany,
+
             dataCenter: metadata.dataCenter.trim(),
             world: metadata.world.trim(),
           }),

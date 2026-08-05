@@ -615,31 +615,72 @@ function normalizeIdArray(value: unknown): string[] {
   );
 }
 
+function inferInitialGrandCompanyIds(questName: string): string[] {
+  switch (normalizeQuestName(questName)) {
+    case 'the company you keep (twin adder)':
+    case "wood's will be done":
+      return ['twin-adder'];
+
+    case 'the company you keep (maelstrom)':
+    case 'till sea swallows all':
+      return ['maelstrom'];
+
+    case 'the company you keep (immortal flames)':
+    case 'for coin and country':
+      return ['immortal-flames'];
+
+    default:
+      return [];
+  }
+}
+
 function extractAvailability(
   review: JsonObject,
   draft: JsonObject,
+  questName: string,
 ): JsonObject | null {
   const availability =
     asObject(draft.availability) ?? asObject(review.availability);
 
-  if (!availability) {
-    return null;
-  }
-
   const result: JsonObject = {};
 
-  const startingCityIds = normalizeIdArray(availability.startingCityIds);
+  const startingCityIds = normalizeIdArray(availability?.startingCityIds);
 
-  const grandCompanyIds = normalizeIdArray(availability.grandCompanyIds);
+  /*
+   * grandCompanyIds is accepted here
+   * as a legacy importer field and
+   * normalized into the new initial
+   * Grand Company field.
+   */
+  const importedInitialGrandCompanyIds = normalizeIdArray(
+    availability?.initialGrandCompanyIds ?? availability?.grandCompanyIds,
+  );
 
-  const classJobIds = normalizeIdArray(availability.classJobIds);
+  const inferredInitialGrandCompanyIds = inferInitialGrandCompanyIds(questName);
+
+  const initialGrandCompanyIds = Array.from(
+    new Set([
+      ...importedInitialGrandCompanyIds,
+      ...inferredInitialGrandCompanyIds,
+    ]),
+  );
+
+  const currentGrandCompanyIds = normalizeIdArray(
+    availability?.currentGrandCompanyIds,
+  );
+
+  const classJobIds = normalizeIdArray(availability?.classJobIds);
 
   if (startingCityIds.length > 0) {
     result.startingCityIds = startingCityIds;
   }
 
-  if (grandCompanyIds.length > 0) {
-    result.grandCompanyIds = grandCompanyIds;
+  if (initialGrandCompanyIds.length > 0) {
+    result.initialGrandCompanyIds = initialGrandCompanyIds;
+  }
+
+  if (currentGrandCompanyIds.length > 0) {
+    result.currentGrandCompanyIds = currentGrandCompanyIds;
   }
 
   if (classJobIds.length > 0) {
@@ -1430,7 +1471,7 @@ function createQuestEntry(
     patch,
     category: slugify(category),
 
-    availability: extractAvailability(reviewObject, draft),
+    aavailability: extractAvailability(reviewObject, draft, quest.name),
 
     requirements: extractRequirements(
       reviewObject,
@@ -1443,6 +1484,10 @@ function createQuestEntry(
     ),
 
     previousQuestIds,
+
+    previousQuestMode:
+      category === 'msq' && previousQuestIds.length > 1 ? 'any' : 'all',
+
     nextQuestIds,
 
     unlocks: extractUnlocks(reviewObject, draft),
