@@ -20,7 +20,7 @@ JOURNAL_CATEGORY="Heavensward Main Scenario Quests"
 CLASS_JOB=""
 
 COLLECTION_ID="heavensward-3.0-msq"
-COLLECTION_TITLE="Patch 3.0"
+COLLECTION_TITLE="Patch 3.0 - Heavensward"
 COLLECTION_DESCRIPTION="Heavensward main scenario quests introduced in Patch 3.0."
 COLLECTION_SORT_ORDER="300"
 VERIFICATION_STATUS="verified"
@@ -36,10 +36,10 @@ QUEST_GROUP_IDS=(
     "heavensward-3.0-levels-58-60"
 )
 QUEST_GROUP_TITLES=(
-    "Heavensward - Levels 50-51 Part 1"
-    "Heavensward - Levels 50-51 Artoirel"
-    "Heavensward - Levels 50-51 Emmanellain"
-    "Heavensward - Levels 50-51 Part 2"
+    "Heavensward - Levels 50-51 (Part 1)"
+    "Heavensward - Levels 50-51 (Artoirel)"
+    "Heavensward - Levels 50-51 (Emmanellain)"
+    "Heavensward - Levels 50-51 (Part 2)"
     "Heavensward - Levels 52-53"
     "Heavensward - Levels 54-55"
     "Heavensward - Levels 56-57"

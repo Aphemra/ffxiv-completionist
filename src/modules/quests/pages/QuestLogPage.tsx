@@ -701,12 +701,17 @@ export function QuestLogPage() {
                   ? `Patch ${section.patch}`
                   : 'Unassigned Patch';
 
-                const onlyRange =
-                  section.ranges.length === 1 ? section.ranges[0] : undefined;
+                const visibleGroups = section.ranges.flatMap(
+                  ({ collection, groups }) =>
+                    groups.map(({ group, quests }) => ({
+                      collection,
+                      group,
+                      quests,
+                    })),
+                );
 
-                const onlyRangeVisibleQuests = onlyRange
-                  ? onlyRange.groups.flatMap(({ quests }) => quests)
-                  : [];
+                const onlyGroup =
+                  visibleGroups.length === 1 ? visibleGroups[0] : undefined;
 
                 return (
                   <section
@@ -796,116 +801,114 @@ export function QuestLogPage() {
                       isOpen={isPatchExpanded}
                       className="quest-collection__content"
                     >
-                      {onlyRange ? (
+                      {onlyGroup ? (
                         <div className="quest-group__entries quest-group__entries--single-range">
-                          {onlyRangeVisibleQuests.map(renderQuestEntry)}
+                          {onlyGroup.quests.map(renderQuestEntry)}
                         </div>
                       ) : (
                         <div className="quest-groups">
-                          {section.ranges.map(({ collection, groups }) => {
-                            const rangeKey = `${section.id}:${collection.id}`;
+                          {visibleGroups.map(
+                            ({ collection, group, quests }) => {
+                              const rangeKey = `${section.id}:${collection.id}:${group.id}`;
 
-                            const rangeQuests = collection.groups.flatMap(
-                              (group) => group.quests,
-                            );
+                              const rangeQuests = group.quests;
 
-                            const visibleRangeQuests = groups.flatMap(
-                              ({ quests }) => quests,
-                            );
+                              const visibleRangeQuests = quests;
 
-                            const completedRangeCount = rangeQuests.filter(
-                              (quest) => completedQuestIdSet.has(quest.id),
-                            ).length;
+                              const completedRangeCount = rangeQuests.filter(
+                                (quest) => completedQuestIdSet.has(quest.id),
+                              ).length;
 
-                            const isRangeComplete =
-                              rangeQuests.length > 0 &&
-                              completedRangeCount === rangeQuests.length;
+                              const isRangeComplete =
+                                rangeQuests.length > 0 &&
+                                completedRangeCount === rangeQuests.length;
 
-                            const isRangeExpanded =
-                              shouldAutoExpandMatches ||
-                              expandedRangeIds.has(rangeKey);
+                              const isRangeExpanded =
+                                shouldAutoExpandMatches ||
+                                expandedRangeIds.has(rangeKey);
 
-                            return (
-                              <section
-                                key={collection.id}
-                                className={[
-                                  'quest-group',
-                                  isRangeComplete
-                                    ? 'quest-group--complete'
-                                    : '',
-                                ]
-                                  .filter(Boolean)
-                                  .join(' ')}
-                              >
-                                <button
-                                  className="quest-group__toggle"
-                                  type="button"
-                                  aria-expanded={isRangeExpanded}
-                                  disabled={shouldAutoExpandMatches}
-                                  title={
-                                    shouldAutoExpandMatches
-                                      ? 'Expanded automatically to show matching quests'
-                                      : undefined
-                                  }
-                                  onClick={() => {
-                                    toggleRange(rangeKey);
-                                  }}
+                              return (
+                                <section
+                                  key={rangeKey}
+                                  className={[
+                                    'quest-group',
+                                    isRangeComplete
+                                      ? 'quest-group--complete'
+                                      : '',
+                                  ]
+                                    .filter(Boolean)
+                                    .join(' ')}
                                 >
-                                  <span className="quest-group__title">
-                                    <span className="quest-group__eyebrow">
-                                      Quest Range
-                                    </span>
-
-                                    <strong>{collection.title}</strong>
-                                  </span>
-
-                                  <span className="quest-group__summary">
-                                    {isRangeComplete && (
-                                      <span className="quest-group__complete-marker">
-                                        <Check aria-hidden="true" />
-                                        Complete
+                                  <button
+                                    className="quest-group__toggle"
+                                    type="button"
+                                    aria-expanded={isRangeExpanded}
+                                    disabled={shouldAutoExpandMatches}
+                                    title={
+                                      shouldAutoExpandMatches
+                                        ? 'Expanded automatically to show matching quests'
+                                        : undefined
+                                    }
+                                    onClick={() => {
+                                      toggleRange(rangeKey);
+                                    }}
+                                  >
+                                    <span className="quest-group__title">
+                                      <span className="quest-group__eyebrow">
+                                        Quest Range
                                       </span>
-                                    )}
 
-                                    <span>
-                                      {completedRangeCount} /{' '}
-                                      {rangeQuests.length} complete
+                                      <strong>{group.title}</strong>
                                     </span>
 
-                                    {visibleRangeQuests.length !==
-                                      rangeQuests.length && (
+                                    <span className="quest-group__summary">
+                                      {isRangeComplete && (
+                                        <span className="quest-group__complete-marker">
+                                          <Check aria-hidden="true" />
+                                          Complete
+                                        </span>
+                                      )}
+
                                       <span>
-                                        {visibleRangeQuests.length} shown
+                                        {completedRangeCount} /{' '}
+                                        {rangeQuests.length} complete
                                       </span>
-                                    )}
 
-                                    <span
-                                      className={[
-                                        'quest-group__chevron',
-                                        isRangeExpanded
-                                          ? 'quest-group__chevron--open'
-                                          : '',
-                                      ]
-                                        .filter(Boolean)
-                                        .join(' ')}
-                                      aria-hidden="true"
-                                    >
-                                      <ChevronRight />
+                                      {visibleRangeQuests.length !==
+                                        rangeQuests.length && (
+                                        <span>
+                                          {visibleRangeQuests.length} shown
+                                        </span>
+                                      )}
+
+                                      <span
+                                        className={[
+                                          'quest-group__chevron',
+                                          isRangeExpanded
+                                            ? 'quest-group__chevron--open'
+                                            : '',
+                                        ]
+                                          .filter(Boolean)
+                                          .join(' ')}
+                                        aria-hidden="true"
+                                      >
+                                        <ChevronRight />
+                                      </span>
                                     </span>
-                                  </span>
-                                </button>
+                                  </button>
 
-                                <AnimatedCollapse
-                                  isOpen={isRangeExpanded}
-                                  className="quest-group__content"
-                                >
-                                  <div className="quest-group__entries">
-                                    {visibleRangeQuests.map(renderQuestEntry)}
-                                  </div>
-                                </AnimatedCollapse>
-                              </section>
-                            );
-                          })}
+                                  <AnimatedCollapse
+                                    isOpen={isRangeExpanded}
+                                    className="quest-group__content"
+                                  >
+                                    <div className="quest-group__entries">
+                                      {visibleRangeQuests.map(renderQuestEntry)}
+                                    </div>
+                                  </AnimatedCollapse>
+                                </section>
+                              );
+                            },
+                          )}
                         </div>
                       )}
                     </AnimatedCollapse>
