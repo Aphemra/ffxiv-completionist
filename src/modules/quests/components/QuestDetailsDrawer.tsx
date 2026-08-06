@@ -1,10 +1,37 @@
-import { useEffect, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
+
+import { useCallback, useEffect, useRef, useState } from 'react';
+
+import {
+  ArrowLeft,
+  ArrowRight,
+  Bookmark,
+  CheckCircle2,
+  ChevronDown,
+  Coins,
+  Crosshair,
+  Gift,
+  GitBranch,
+  MapPin,
+  Package,
+  ShieldCheck,
+  Sparkles,
+  StickyNote,
+  Swords,
+  TrendingUp,
+  X,
+  type LucideIcon,
+} from 'lucide-react';
+
+import { AnimatedCollapse } from '../../../shared/components/AnimatedCollapse';
 
 import type { Quest, QuestItem, QuestRequirement } from '../data/questSchemas';
 
 import { formatQuestCategory } from '../utilities/questPresentation';
 
 import './QuestDetailsDrawer.css';
+
+const DRAWER_EXIT_DURATION_MS = 240;
 
 interface QuestDetailsDrawerProps {
   quest: Quest;
@@ -23,6 +50,29 @@ interface QuestDetailsDrawerProps {
   onSaveNote: (note: string) => void;
 }
 
+interface FormattedEntry {
+  title: string;
+  detail?: string;
+  badge?: string;
+}
+
+interface DetailRowProps extends FormattedEntry {
+  icon: LucideIcon;
+  tone?: 'default' | 'accent' | 'blue' | 'success';
+}
+
+interface DetailSectionProps {
+  icon: LucideIcon;
+  eyebrow: string;
+  title: string;
+  count?: string;
+  children: ReactNode;
+}
+
+interface CollapsibleDetailSectionProps extends DetailSectionProps {
+  initiallyOpen?: boolean;
+}
+
 function formatQuality(quality: 'normal' | 'high-quality' | 'either'): string {
   switch (quality) {
     case 'normal':
@@ -36,15 +86,24 @@ function formatQuality(quality: 'normal' | 'high-quality' | 'either'): string {
   }
 }
 
-function formatRequirement(requirement: QuestRequirement): {
-  title: string;
-  detail: string;
-} {
+function formatLabel(value: string): string {
+  return value
+    .split('-')
+    .map((segment) =>
+      segment.length > 0
+        ? segment[0]?.toUpperCase() + segment.slice(1)
+        : segment,
+    )
+    .join(' ');
+}
+
+function formatRequirement(requirement: QuestRequirement): FormattedEntry {
   switch (requirement.type) {
     case 'class-job-level':
       return {
-        title: `${requirement.classJobName} level ${requirement.level}`,
-        detail: requirement.notes ?? 'Class or job level requirement.',
+        title: requirement.classJobName,
+        detail: requirement.notes ?? `Level ${requirement.level} required`,
+        badge: `LV ${requirement.level}`,
       };
 
     case 'item':
@@ -53,13 +112,14 @@ function formatRequirement(requirement: QuestRequirement): {
         detail: [formatQuality(requirement.quality), requirement.notes]
           .filter(Boolean)
           .join(' · '),
+        badge: 'Bring',
       };
 
     case 'craft':
       return {
         title: `${requirement.quantity}× ${requirement.itemName}`,
         detail: [
-          `${requirement.craftingJobName} craft`,
+          requirement.craftingJobName,
           requirement.recipeLevel
             ? `Recipe level ${requirement.recipeLevel}`
             : undefined,
@@ -68,13 +128,14 @@ function formatRequirement(requirement: QuestRequirement): {
         ]
           .filter(Boolean)
           .join(' · '),
+        badge: 'Craft',
       };
 
     case 'gather':
       return {
         title: `${requirement.quantity}× ${requirement.itemName}`,
         detail: [
-          `Gather with ${requirement.gatheringJobName}`,
+          requirement.gatheringJobName,
           requirement.gatheringLevel
             ? `Gathering level ${requirement.gatheringLevel}`
             : undefined,
@@ -83,28 +144,27 @@ function formatRequirement(requirement: QuestRequirement): {
         ]
           .filter(Boolean)
           .join(' · '),
+        badge: 'Gather',
       };
 
     case 'feature':
       return {
         title: requirement.name,
-        detail: requirement.notes ?? 'Required game feature or system.',
+        detail: requirement.notes ?? 'Required game feature',
+        badge: 'Required',
       };
   }
 }
 
-function formatQuestItem(item: QuestItem): {
-  title: string;
-  detail: string;
-} {
-  const usageLabels: Record<QuestItem['usage'], string> = {
+function formatQuestItem(item: QuestItem): FormattedEntry {
+  const usageDetails: Record<QuestItem['usage'], string> = {
     'required-before-starting': 'Bring this before starting',
 
     'obtained-during-quest': 'Obtained during this quest',
 
     'used-during-quest': 'Used during this quest',
 
-    'turn-in': 'Turn-in item',
+    'turn-in': 'Turn in during this quest',
 
     equip: 'Equip during this quest',
 
@@ -115,6 +175,17 @@ function formatQuestItem(item: QuestItem): {
     unknown: 'Item involved in this quest',
   };
 
+  const usageBadges: Record<QuestItem['usage'], string> = {
+    'required-before-starting': 'Bring',
+    'obtained-during-quest': 'Obtain',
+    'used-during-quest': 'Use',
+    'turn-in': 'Turn in',
+    equip: 'Equip',
+    craft: 'Craft',
+    gather: 'Gather',
+    unknown: 'Quest item',
+  };
+
   return {
     title:
       item.quantity !== undefined
@@ -122,7 +193,7 @@ function formatQuestItem(item: QuestItem): {
         : item.itemName,
 
     detail: [
-      usageLabels[item.usage],
+      usageDetails[item.usage],
 
       item.quality ? formatQuality(item.quality) : undefined,
 
@@ -130,6 +201,8 @@ function formatQuestItem(item: QuestItem): {
     ]
       .filter(Boolean)
       .join(' · '),
+
+    badge: usageBadges[item.usage],
   };
 }
 
@@ -138,6 +211,110 @@ function getRelatedQuestName(
   questsById: ReadonlyMap<string, Quest>,
 ): string {
   return questsById.get(questId)?.name ?? questId;
+}
+
+function DetailRow({
+  icon: Icon,
+  title,
+  detail,
+  badge,
+  tone = 'default',
+}: DetailRowProps) {
+  return (
+    <article
+      className={['quest-details__row', `quest-details__row--${tone}`].join(
+        ' ',
+      )}
+    >
+      <span className="quest-details__row-icon" aria-hidden="true">
+        <Icon />
+      </span>
+
+      <span className="quest-details__row-copy">
+        <strong>{title}</strong>
+
+        {detail && <span>{detail}</span>}
+      </span>
+
+      {badge && <span className="quest-details__row-badge">{badge}</span>}
+    </article>
+  );
+}
+
+function DetailSection({
+  icon: Icon,
+  eyebrow,
+  title,
+  count,
+  children,
+}: DetailSectionProps) {
+  return (
+    <section className="quest-details__section">
+      <header className="quest-details__section-header">
+        <span className="quest-details__section-icon" aria-hidden="true">
+          <Icon />
+        </span>
+
+        <span className="quest-details__section-title">
+          <span>{eyebrow}</span>
+          <strong>{title}</strong>
+        </span>
+
+        {count && <span className="quest-details__section-count">{count}</span>}
+      </header>
+
+      {children}
+    </section>
+  );
+}
+
+function CollapsibleDetailSection({
+  icon: Icon,
+  eyebrow,
+  title,
+  count,
+  children,
+  initiallyOpen = false,
+}: CollapsibleDetailSectionProps) {
+  const [isOpen, setIsOpen] = useState(initiallyOpen);
+
+  return (
+    <section className="quest-details__section quest-details__section--collapsible">
+      <button
+        className="quest-details__section-toggle"
+        type="button"
+        aria-expanded={isOpen}
+        onClick={() => {
+          setIsOpen((current) => !current);
+        }}
+      >
+        <span className="quest-details__section-icon" aria-hidden="true">
+          <Icon />
+        </span>
+
+        <span className="quest-details__section-title">
+          <span>{eyebrow}</span>
+          <strong>{title}</strong>
+        </span>
+
+        {count && <span className="quest-details__section-count">{count}</span>}
+
+        <ChevronDown
+          className={[
+            'quest-details__section-chevron',
+            isOpen ? 'quest-details__section-chevron--open' : '',
+          ]
+            .filter(Boolean)
+            .join(' ')}
+          aria-hidden="true"
+        />
+      </button>
+
+      <AnimatedCollapse isOpen={isOpen}>
+        <div className="quest-details__collapsible-content">{children}</div>
+      </AnimatedCollapse>
+    </section>
+  );
 }
 
 export function QuestDetailsDrawer({
@@ -155,36 +332,134 @@ export function QuestDetailsDrawer({
 }: QuestDetailsDrawerProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
+  const drawerRef = useRef<HTMLElement>(null);
+
+  const previouslyFocusedElementRef = useRef<HTMLElement | null>(null);
+
+  const closeTimerRef = useRef<number | null>(null);
+
+  const onCloseRef = useRef(onClose);
+
+  const [isClosing, setIsClosing] = useState(false);
+
   const [noteDraft, setNoteDraft] = useState(personalNote);
 
   const [noteMessage, setNoteMessage] = useState('');
 
   useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
+
+  const requestClose = useCallback(() => {
+    if (closeTimerRef.current !== null) {
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+
+    if (prefersReducedMotion) {
+      onCloseRef.current();
+      return;
+    }
+
+    setIsClosing(true);
+
+    closeTimerRef.current = window.setTimeout(() => {
+      onCloseRef.current();
+    }, DRAWER_EXIT_DURATION_MS);
+  }, []);
+
+  useEffect(() => {
+    previouslyFocusedElementRef.current =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+
     const previousOverflow = document.body.style.overflow;
 
     document.body.style.overflow = 'hidden';
+
     closeButtonRef.current?.focus();
 
+    return () => {
+      document.body.style.overflow = previousOverflow;
+
+      previouslyFocusedElementRef.current?.focus();
+
+      if (closeTimerRef.current !== null) {
+        window.clearTimeout(closeTimerRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
-        onClose();
+        requestClose();
+        return;
+      }
+
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const drawer = drawerRef.current;
+
+      if (!drawer) {
+        return;
+      }
+
+      const focusableElements = Array.from(
+        drawer.querySelectorAll<HTMLElement>(
+          [
+            'button:not([disabled])',
+            'a[href]',
+            'input:not([disabled])',
+            'select:not([disabled])',
+            'textarea:not([disabled])',
+            '[tabindex]:not([tabindex="-1"])',
+          ].join(','),
+        ),
+      ).filter(
+        (element) => window.getComputedStyle(element).visibility !== 'hidden',
+      );
+
+      const firstElement = focusableElements[0];
+
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (!firstElement || !lastElement) {
+        event.preventDefault();
+        return;
+      }
+
+      if (event.shiftKey && document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+        return;
+      }
+
+      if (!event.shiftKey && document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
       }
     }
 
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.body.style.overflow = previousOverflow;
-
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onClose]);
+  }, [requestClose]);
 
   function handleSaveNote() {
     const trimmedNote = noteDraft.trim();
 
     onSaveNote(trimmedNote);
     setNoteDraft(trimmedNote);
+
     setNoteMessage(trimmedNote.length > 0 ? 'Note saved.' : 'Note removed.');
   }
 
@@ -199,25 +474,69 @@ export function QuestDetailsDrawer({
         !['required-before-starting', 'craft', 'gather'].includes(item.usage),
     ) ?? [];
 
-  const hasRewards =
-    quest.rewards &&
-    (quest.rewards.experience !== undefined ||
-      quest.rewards.gil !== undefined ||
-      (quest.rewards.items && quest.rewards.items.length > 0) ||
-      (quest.rewards.optionalItems && quest.rewards.optionalItems.length > 0));
+  const dutyNames = new Set(
+    quest.duties?.map((duty) => duty.name.toLocaleLowerCase('en-US')) ?? [],
+  );
+
+  const additionalUnlocks =
+    quest.unlocks?.filter(
+      (unlock) => !dutyNames.has(unlock.name.toLocaleLowerCase('en-US')),
+    ) ?? [];
+
+  const preparationCount =
+    (quest.requirements?.length ?? 0) + preparationItems.length;
+
+  const progressionCount =
+    (quest.duties?.length ?? 0) + additionalUnlocks.length;
+
+  const rewardItemCount =
+    (quest.rewards?.items?.length ?? 0) +
+    (quest.rewards?.optionalItems?.length ?? 0);
+
+  const relationshipCount =
+    (quest.prerequisiteQuestIds?.length ?? 0) +
+    (quest.nextQuestIds?.length ?? 0);
+
+  const experience = quest.rewards?.experience;
+  const gil = quest.rewards?.gil;
+
+  const hasSummary =
+    (experience !== undefined && experience > 0) ||
+    (gil !== undefined && gil > 0) ||
+    progressionCount > 0;
+
+  const startDetail = [
+    quest.start?.zoneName,
+
+    quest.start?.coordinates
+      ? `X: ${quest.start.coordinates.x.toFixed(
+          1,
+        )}, Y: ${quest.start.coordinates.y.toFixed(1)}`
+      : undefined,
+  ]
+    .filter(Boolean)
+    .join(' · ');
 
   return (
     <div
-      className="quest-details-backdrop"
+      className={[
+        'quest-details-backdrop',
+        isClosing ? 'quest-details-backdrop--closing' : '',
+      ]
+        .filter(Boolean)
+        .join(' ')}
       role="presentation"
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) {
-          onClose();
+          requestClose();
         }
       }}
     >
       <aside
-        className="quest-details"
+        ref={drawerRef}
+        className={['quest-details', isClosing ? 'quest-details--closing' : '']
+          .filter(Boolean)
+          .join(' ')}
         role="dialog"
         aria-modal="true"
         aria-labelledby="quest-details-title"
@@ -230,9 +549,11 @@ export function QuestDetailsDrawer({
 
             <h2 id="quest-details-title">{quest.name}</h2>
 
-            <p className="quest-details__subtitle">
-              Level {quest.level} · {formatQuestCategory(quest.category)}
-            </p>
+            <div className="quest-details__meta">
+              <span>Level {quest.level}</span>
+
+              <span>{formatQuestCategory(quest.category)}</span>
+            </div>
           </div>
 
           <button
@@ -240,9 +561,9 @@ export function QuestDetailsDrawer({
             className="quest-details__close"
             type="button"
             aria-label="Close quest details"
-            onClick={onClose}
+            onClick={requestClose}
           >
-            ×
+            <X aria-hidden="true" />
           </button>
         </header>
 
@@ -258,7 +579,9 @@ export function QuestDetailsDrawer({
             aria-pressed={isCompleted}
             onClick={onToggleCompletion}
           >
-            {isCompleted ? 'Completed' : 'Mark complete'}
+            <CheckCircle2 aria-hidden="true" />
+
+            <span>{isCompleted ? 'Completed' : 'Mark complete'}</span>
           </button>
 
           <button
@@ -277,7 +600,9 @@ export function QuestDetailsDrawer({
             }
             onClick={onToggleCurrent}
           >
-            {isCurrent ? 'Current quest' : 'Set current'}
+            <Crosshair aria-hidden="true" />
+
+            <span>{isCurrent ? 'Current quest' : 'Set current'}</span>
           </button>
 
           <button
@@ -291,302 +616,296 @@ export function QuestDetailsDrawer({
             aria-pressed={isBookmarked}
             onClick={onToggleBookmark}
           >
-            {isBookmarked ? 'Bookmarked' : 'Bookmark'}
+            <Bookmark
+              fill={isBookmarked ? 'currentColor' : 'none'}
+              aria-hidden="true"
+            />
+
+            <span>{isBookmarked ? 'Bookmarked' : 'Bookmark'}</span>
           </button>
         </div>
 
+        {hasSummary && (
+          <div className="quest-details__summary" aria-label="Quest summary">
+            {experience !== undefined && experience > 0 && (
+              <div className="quest-details__summary-item">
+                <TrendingUp aria-hidden="true" />
+
+                <span>
+                  <strong>{experience.toLocaleString()}</strong>
+
+                  <small>Experience</small>
+                </span>
+              </div>
+            )}
+
+            {gil !== undefined && gil > 0 && (
+              <div className="quest-details__summary-item">
+                <Coins aria-hidden="true" />
+
+                <span>
+                  <strong>{gil.toLocaleString()}</strong>
+
+                  <small>Gil</small>
+                </span>
+              </div>
+            )}
+
+            {quest.duties && quest.duties.length > 0 && (
+              <div className="quest-details__summary-item">
+                <Swords aria-hidden="true" />
+
+                <span>
+                  <strong>{quest.duties.length}</strong>
+
+                  <small>{quest.duties.length === 1 ? 'Duty' : 'Duties'}</small>
+                </span>
+              </div>
+            )}
+
+            {additionalUnlocks.length > 0 && (
+              <div className="quest-details__summary-item">
+                <Sparkles aria-hidden="true" />
+
+                <span>
+                  <strong>{additionalUnlocks.length}</strong>
+
+                  <small>
+                    {additionalUnlocks.length === 1 ? 'Unlock' : 'Unlocks'}
+                  </small>
+                </span>
+              </div>
+            )}
+          </div>
+        )}
+
         <div className="quest-details__body">
           {quest.start && (
-            <section className="quest-details__section">
-              <header>
-                <p>Preparation</p>
-                <h3>Before starting</h3>
-              </header>
-
-              {(quest.requirements && quest.requirements.length > 0) ||
-              preparationItems.length > 0 ? (
-                <div className="quest-details__list">
-                  {quest.requirements?.map((requirement, index) => {
-                    const formatted = formatRequirement(requirement);
-
-                    return (
-                      <article
-                        key={`${requirement.type}-${index}`}
-                        className="quest-details__list-item"
-                      >
-                        <strong>{formatted.title}</strong>
-
-                        <span>{formatted.detail}</span>
-                      </article>
-                    );
-                  })}
-
-                  {preparationItems.map((item, index) => {
-                    const formatted = formatQuestItem(item);
-
-                    return (
-                      <article
-                        key={`${item.itemId}-${item.usage}-${index}`}
-                        className="quest-details__list-item"
-                      >
-                        <strong>{formatted.title}</strong>
-
-                        <span>{formatted.detail}</span>
-                      </article>
-                    );
-                  })}
-                </div>
-              ) : (
-                <p className="quest-details__empty">
-                  No special preparation is required.
-                </p>
-              )}
-            </section>
-          )}
-
-          {duringQuestItems.length > 0 && (
-            <section className="quest-details__section">
-              <header>
-                <p>Quest Items</p>
-                <h3>During this quest</h3>
-              </header>
-
+            <DetailSection
+              icon={MapPin}
+              eyebrow="Navigation"
+              title="Starting point"
+            >
               <div className="quest-details__list">
-                {duringQuestItems.map((item, index) => {
-                  const formatted = formatQuestItem(item);
-
-                  return (
-                    <article
-                      key={`${item.itemId}-${item.usage}-${index}`}
-                      className="quest-details__list-item"
-                    >
-                      <strong>{formatted.title}</strong>
-
-                      <span>{formatted.detail}</span>
-                    </article>
-                  );
-                })}
+                <DetailRow
+                  icon={MapPin}
+                  title={quest.start.npcName}
+                  detail={startDetail || 'Location details unavailable'}
+                  tone="accent"
+                />
               </div>
-            </section>
+            </DetailSection>
           )}
 
-          <section className="quest-details__section">
-            <header>
-              <p>Requirements</p>
-              <h3>Before starting</h3>
-            </header>
-
-            {quest.requirements && quest.requirements.length > 0 ? (
+          {preparationCount > 0 && (
+            <DetailSection
+              icon={ShieldCheck}
+              eyebrow="Preparation"
+              title="Before starting"
+              count={`${preparationCount}`}
+            >
               <div className="quest-details__list">
-                {quest.requirements.map((requirement, index) => {
+                {quest.requirements?.map((requirement, index) => {
                   const formatted = formatRequirement(requirement);
 
                   return (
-                    <article
+                    <DetailRow
                       key={`${requirement.type}-${index}`}
-                      className="quest-details__list-item"
-                    >
-                      <strong>{formatted.title}</strong>
-
-                      <span>{formatted.detail}</span>
-                    </article>
+                      icon={ShieldCheck}
+                      {...formatted}
+                    />
                   );
                 })}
-              </div>
-            ) : (
-              <p className="quest-details__empty">
-                No detailed requirement data has been entered for this quest
-                yet.
-              </p>
-            )}
-          </section>
 
-          {quest.duties && quest.duties.length > 0 && (
-            <section className="quest-details__section">
-              <header>
-                <p>Instanced Content</p>
-                <h3>Duties</h3>
-              </header>
-
-              <div className="quest-details__list">
-                {quest.duties.map((duty) => (
-                  <article key={duty.id} className="quest-details__list-item">
-                    <strong>{duty.name}</strong>
-
-                    <span>
-                      Level {duty.level} · {duty.type}
-                      {duty.minimumItemLevel !== undefined &&
-                        ` · Minimum item level ${duty.minimumItemLevel}`}
-                      {duty.dutySupportAvailable === true &&
-                        ' · Duty Support available'}
-                    </span>
-
-                    {duty.notes && <span>{duty.notes}</span>}
-                  </article>
+                {preparationItems.map((item, index) => (
+                  <DetailRow
+                    key={`${item.itemId}-${item.usage}-${index}`}
+                    icon={Package}
+                    {...formatQuestItem(item)}
+                  />
                 ))}
               </div>
-            </section>
+            </DetailSection>
           )}
 
-          {quest.unlocks && quest.unlocks.length > 0 && (
-            <section className="quest-details__section">
-              <header>
-                <p>Progression</p>
-                <h3>Unlocks</h3>
-              </header>
-
+          {duringQuestItems.length > 0 && (
+            <DetailSection
+              icon={Package}
+              eyebrow="Quest items"
+              title="During this quest"
+              count={`${duringQuestItems.length}`}
+            >
               <div className="quest-details__list">
-                {quest.unlocks.map((unlock) => (
-                  <article
+                {duringQuestItems.map((item, index) => (
+                  <DetailRow
+                    key={`${item.itemId}-${item.usage}-${index}`}
+                    icon={Package}
+                    tone="blue"
+                    {...formatQuestItem(item)}
+                  />
+                ))}
+              </div>
+            </DetailSection>
+          )}
+
+          {progressionCount > 0 && (
+            <DetailSection
+              icon={Sparkles}
+              eyebrow="Progression"
+              title="Unlocks and duties"
+              count={`${progressionCount}`}
+            >
+              <div className="quest-details__list">
+                {quest.duties?.map((duty) => (
+                  <DetailRow
+                    key={duty.id}
+                    icon={Swords}
+                    title={duty.name}
+                    detail={[
+                      formatLabel(duty.type),
+                      `Level ${duty.level}`,
+                      duty.minimumItemLevel !== undefined
+                        ? `Minimum item level ${duty.minimumItemLevel}`
+                        : undefined,
+                      duty.partySize !== undefined
+                        ? `${duty.partySize} players`
+                        : undefined,
+                      duty.notes,
+                    ]
+                      .filter(Boolean)
+                      .join(' · ')}
+                    badge={
+                      duty.relationship === 'unlocked'
+                        ? 'Unlock'
+                        : duty.relationship
+                          ? formatLabel(duty.relationship)
+                          : undefined
+                    }
+                    tone="blue"
+                  />
+                ))}
+
+                {additionalUnlocks.map((unlock) => (
+                  <DetailRow
                     key={`${unlock.type}-${unlock.targetId ?? unlock.name}`}
-                    className="quest-details__list-item"
-                  >
-                    <strong>{unlock.name}</strong>
-
-                    <span>{unlock.type}</span>
-
-                    {unlock.notes && <span>{unlock.notes}</span>}
-                  </article>
+                    icon={Sparkles}
+                    title={unlock.name}
+                    detail={[formatLabel(unlock.type), unlock.notes]
+                      .filter(Boolean)
+                      .join(' · ')}
+                    badge="Unlock"
+                    tone="success"
+                  />
                 ))}
               </div>
-            </section>
+            </DetailSection>
           )}
 
-          {hasRewards && quest.rewards && (
-            <section className="quest-details__section">
-              <header>
-                <p>Completion</p>
-                <h3>Rewards</h3>
-              </header>
+          {rewardItemCount > 0 && quest.rewards && (
+            <CollapsibleDetailSection
+              icon={Gift}
+              eyebrow="Completion"
+              title="Item rewards"
+              count={`${rewardItemCount}`}
+            >
+              <div className="quest-details__list">
+                {quest.rewards.items?.map((item, index) => (
+                  <DetailRow
+                    key={`${item.itemId}-${index}`}
+                    icon={Gift}
+                    title={`${item.quantity}× ${item.itemName}`}
+                    detail={[
+                      item.quality ? formatQuality(item.quality) : undefined,
+                      item.notes,
+                    ]
+                      .filter(Boolean)
+                      .join(' · ')}
+                    badge="Reward"
+                    tone="success"
+                  />
+                ))}
 
-              <dl className="quest-details__facts">
-                {quest.rewards.experience !== undefined && (
-                  <div>
-                    <dt>Experience</dt>
-                    <dd>{quest.rewards.experience.toLocaleString()}</dd>
-                  </div>
-                )}
-
-                {quest.rewards.gil !== undefined && (
-                  <div>
-                    <dt>Gil</dt>
-                    <dd>{quest.rewards.gil.toLocaleString()}</dd>
-                  </div>
-                )}
-              </dl>
-
-              {quest.rewards.items && quest.rewards.items.length > 0 && (
-                <div className="quest-details__list">
-                  {quest.rewards.items.map((item) => (
-                    <article
-                      key={item.itemId}
-                      className="quest-details__list-item"
-                    >
-                      <strong>{item.itemName}</strong>
-                      <span>Quantity: {item.quantity}</span>
-                    </article>
-                  ))}
-                </div>
-              )}
-
-              {quest.rewards.optionalItems &&
-                quest.rewards.optionalItems.length > 0 && (
-                  <div className="quest-details__relationship">
-                    <h4>Choose one</h4>
-
-                    <div className="quest-details__list">
-                      {quest.rewards.optionalItems.map((item, index) => (
-                        <article
-                          key={`${item.itemId}-${item.stainId ?? 'unstained'}-${index}`}
-                          className="quest-details__list-item"
-                        >
-                          <strong>{item.itemName}</strong>
-                          <span>Quantity: {item.quantity}</span>
-
-                          {item.notes && <span>{item.notes}</span>}
-                        </article>
-                      ))}
-                    </div>
-                  </div>
-                )}
-            </section>
+                {quest.rewards.optionalItems?.map((item, index) => (
+                  <DetailRow
+                    key={`${item.itemId}-${item.stainId ?? 'unstained'}-${index}`}
+                    icon={Gift}
+                    title={`${item.quantity}× ${item.itemName}`}
+                    detail={[
+                      item.quality ? formatQuality(item.quality) : undefined,
+                      item.notes,
+                    ]
+                      .filter(Boolean)
+                      .join(' · ')}
+                    badge="Choose one"
+                    tone="accent"
+                  />
+                ))}
+              </div>
+            </CollapsibleDetailSection>
           )}
 
-          {((quest.prerequisiteQuestIds &&
-            quest.prerequisiteQuestIds.length > 0) ||
-            (quest.nextQuestIds && quest.nextQuestIds.length > 0)) && (
-            <section className="quest-details__section">
-              <header>
-                <p>Quest Chain</p>
-                <h3>Related quests</h3>
-              </header>
+          {relationshipCount > 0 && (
+            <CollapsibleDetailSection
+              icon={GitBranch}
+              eyebrow="Quest chain"
+              title="Related quests"
+              count={`${relationshipCount}`}
+            >
+              <div className="quest-details__list">
+                {quest.prerequisiteQuestIds?.map((questId) => (
+                  <DetailRow
+                    key={`previous-${questId}`}
+                    icon={ArrowLeft}
+                    title={getRelatedQuestName(questId, questsById)}
+                    detail={
+                      quest.prerequisiteQuestMode === 'any'
+                        ? 'Complete any listed prerequisite'
+                        : 'Previous quest'
+                    }
+                    badge="Previous"
+                  />
+                ))}
 
-              {quest.prerequisiteQuestIds &&
-                quest.prerequisiteQuestIds.length > 0 && (
-                  <div className="quest-details__relationship">
-                    <h4>
-                      Previous{' '}
-                      {quest.prerequisiteQuestMode === 'any'
-                        ? '(complete any one)'
-                        : '(all required)'}
-                    </h4>
-
-                    <ul>
-                      {quest.prerequisiteQuestIds.map((questId) => (
-                        <li key={questId}>
-                          {getRelatedQuestName(questId, questsById)}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-              {quest.nextQuestIds && quest.nextQuestIds.length > 0 && (
-                <div className="quest-details__relationship">
-                  <h4>Next</h4>
-
-                  <ul>
-                    {quest.nextQuestIds.map((questId) => (
-                      <li key={questId}>
-                        {getRelatedQuestName(questId, questsById)}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </section>
+                {quest.nextQuestIds?.map((questId) => (
+                  <DetailRow
+                    key={`next-${questId}`}
+                    icon={ArrowRight}
+                    title={getRelatedQuestName(questId, questsById)}
+                    detail="Continues this quest chain"
+                    badge="Next"
+                  />
+                ))}
+              </div>
+            </CollapsibleDetailSection>
           )}
 
           {quest.notes && quest.notes.length > 0 && (
-            <section className="quest-details__section">
-              <header>
-                <p>Game Information</p>
-                <h3>Notes</h3>
-              </header>
-
+            <CollapsibleDetailSection
+              icon={StickyNote}
+              eyebrow="Game information"
+              title="Notes"
+              count={`${quest.notes.length}`}
+            >
               <div className="quest-details__list">
                 {quest.notes.map((note, index) => (
-                  <article
+                  <DetailRow
                     key={`${note.type}-${index}`}
-                    className={[
-                      'quest-details__game-note',
-                      `quest-details__game-note--${note.type}`,
-                    ].join(' ')}
-                  >
-                    <strong>{note.type}</strong>
-                    <span>{note.text}</span>
-                  </article>
+                    icon={StickyNote}
+                    title={formatLabel(note.type)}
+                    detail={note.text}
+                    badge={formatLabel(note.type)}
+                  />
                 ))}
               </div>
-            </section>
+            </CollapsibleDetailSection>
           )}
 
-          <section className="quest-details__section">
-            <header>
-              <p>Personal Tracking</p>
-              <h3>Your note</h3>
-            </header>
-
+          <CollapsibleDetailSection
+            icon={StickyNote}
+            eyebrow="Personal tracking"
+            title="Your note"
+            initiallyOpen={personalNote.trim().length > 0}
+          >
             <textarea
               className="quest-details__note"
               value={noteDraft}
@@ -609,7 +928,7 @@ export function QuestDetailsDrawer({
 
               <p aria-live="polite">{noteMessage}</p>
             </div>
-          </section>
+          </CollapsibleDetailSection>
         </div>
       </aside>
     </div>

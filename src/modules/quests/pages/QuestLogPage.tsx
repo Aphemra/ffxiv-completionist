@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
 
+import { AlertTriangle, Check, ChevronRight, SearchX } from 'lucide-react';
+
 import { Link } from 'react-router';
 
 import { useProgressStore } from '../../../core/progress/progressStore';
@@ -458,7 +460,7 @@ export function QuestLogPage() {
       {profile.startingCity === null && (
         <section className="quest-path-notice">
           <div className="quest-path-notice__icon" aria-hidden="true">
-            !
+            <AlertTriangle />
           </div>
 
           <div>
@@ -481,7 +483,7 @@ export function QuestLogPage() {
         profile.initialGrandCompany === null && (
           <section className="quest-path-notice">
             <div className="quest-path-notice__icon" aria-hidden="true">
-              !
+              <AlertTriangle />
             </div>
 
             <div>
@@ -784,7 +786,7 @@ export function QuestLogPage() {
                               .join(' ')}
                             aria-hidden="true"
                           >
-                            ›
+                            <ChevronRight />
                           </span>
                         </button>
                       </div>
@@ -860,7 +862,7 @@ export function QuestLogPage() {
                                   <span className="quest-group__summary">
                                     {isRangeComplete && (
                                       <span className="quest-group__complete-marker">
-                                        <span aria-hidden="true">✓</span>
+                                        <Check aria-hidden="true" />
                                         Complete
                                       </span>
                                     )}
@@ -888,7 +890,7 @@ export function QuestLogPage() {
                                         .join(' ')}
                                       aria-hidden="true"
                                     >
-                                      ›
+                                      <ChevronRight />
                                     </span>
                                   </span>
                                 </button>
@@ -913,7 +915,9 @@ export function QuestLogPage() {
             </div>
           ) : (
             <section className="quest-empty-results">
-              <div aria-hidden="true">◇</div>
+              <div aria-hidden="true">
+                <SearchX />
+              </div>
 
               <h2>No quests match these filters</h2>
 

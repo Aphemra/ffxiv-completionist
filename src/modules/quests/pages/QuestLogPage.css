@@ -353,6 +353,14 @@
   transition: transform 140ms ease;
 }
 
+.quest-collection__chevron svg,
+.quest-group__chevron svg {
+  width: 1rem;
+  height: 1rem;
+
+  display: block;
+}
+
 .quest-collection__chevron--open {
   transform: rotate(90deg);
 }
@@ -513,6 +521,11 @@
   text-transform: uppercase;
 }
 
+.quest-group__complete-marker svg {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
 .quest-group__chevron {
   display: inline-block;
 
@@ -573,6 +586,11 @@
   font-size: 1.1rem;
 }
 
+.quest-empty-results > div svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 .quest-empty-results h2 {
   margin: 0;
 
@@ -617,6 +635,11 @@
   color: var(--color-accent-light);
   font-family: Georgia, 'Times New Roman', serif;
   font-weight: 800;
+}
+
+.quest-path-notice__icon svg {
+  width: 1.05rem;
+  height: 1.05rem;
 }
 
 .quest-path-notice__eyebrow {

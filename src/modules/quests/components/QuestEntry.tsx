@@ -1,5 +1,19 @@
 import type { KeyboardEvent, MouseEvent } from 'react';
 
+import {
+  Bookmark,
+  Coins,
+  Crosshair,
+  Gauge,
+  Gem,
+  Smile,
+  Sparkles,
+  Swords,
+  TrendingUp,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react';
+
 import type { Quest } from '../data/questSchemas';
 
 import { formatQuestCategory } from '../utilities/questPresentation';
@@ -30,7 +44,7 @@ function formatUnlockType(type: string): string {
     .join(' ');
 }
 
-function getUnlockIcon(type: string): string {
+function getUnlockIcon(type: string): LucideIcon {
   const normalizedType = type.toLocaleLowerCase('en-US');
 
   if (
@@ -39,26 +53,26 @@ function getUnlockIcon(type: string): string {
     normalizedType.includes('raid') ||
     normalizedType.includes('duty')
   ) {
-    return '⚔';
+    return Swords;
   }
 
   if (normalizedType.includes('emote')) {
-    return '☺';
+    return Smile;
   }
 
   if (normalizedType.includes('mount-speed')) {
-    return '⇧';
+    return Gauge;
   }
 
   if (normalizedType.includes('mount')) {
-    return '◆';
+    return Gem;
   }
 
   if (normalizedType.includes('action') || normalizedType.includes('ability')) {
-    return '✦';
+    return Zap;
   }
 
-  return '◇';
+  return Sparkles;
 }
 
 function isInteractiveTarget(target: EventTarget | null): boolean {
@@ -166,7 +180,10 @@ export function QuestEntry({
                 title={isBookmarked ? 'Remove bookmark' : 'Bookmark quest'}
                 onClick={onToggleBookmark}
               >
-                <span aria-hidden="true">{isBookmarked ? '★' : '☆'}</span>
+                <Bookmark
+                  fill={isBookmarked ? 'currentColor' : 'none'}
+                  aria-hidden="true"
+                />
               </button>
 
               <button
@@ -185,7 +202,9 @@ export function QuestEntry({
                 }
                 onClick={onToggleCurrent}
               >
-                {isCurrent ? 'Current' : 'Set current'}
+                <Crosshair aria-hidden="true" />
+
+                <span>{isCurrent ? 'Current' : 'Set current'}</span>
               </button>
             </div>
           </div>
@@ -207,7 +226,7 @@ export function QuestEntry({
                     className="quest-entry__indicator-icon"
                     aria-hidden="true"
                   >
-                    XP
+                    <TrendingUp />
                   </span>
 
                   <span>{experience.toLocaleString()}</span>
@@ -223,7 +242,7 @@ export function QuestEntry({
                     className="quest-entry__indicator-icon"
                     aria-hidden="true"
                   >
-                    G
+                    <Coins />
                   </span>
 
                   <span>{gil.toLocaleString()}</span>
@@ -240,29 +259,33 @@ export function QuestEntry({
                     className="quest-entry__indicator-icon"
                     aria-hidden="true"
                   >
-                    ⚔
+                    <Swords />
                   </span>
 
                   <span>{duty.name}</span>
                 </span>
               ))}
 
-              {additionalUnlocks.map((unlock) => (
-                <span
-                  key={`${unlock.type}-${unlock.targetId ?? unlock.name}`}
-                  className="quest-entry__indicator quest-entry__indicator--unlock"
-                  title={`Unlocks ${formatUnlockType(unlock.type)}: ${unlock.name}`}
-                >
-                  <span
-                    className="quest-entry__indicator-icon"
-                    aria-hidden="true"
-                  >
-                    {getUnlockIcon(unlock.type)}
-                  </span>
+              {additionalUnlocks.map((unlock) => {
+                const UnlockIcon = getUnlockIcon(unlock.type);
 
-                  <span>{unlock.name}</span>
-                </span>
-              ))}
+                return (
+                  <span
+                    key={`${unlock.type}-${unlock.targetId ?? unlock.name}`}
+                    className="quest-entry__indicator quest-entry__indicator--unlock"
+                    title={`Unlocks ${formatUnlockType(unlock.type)}: ${unlock.name}`}
+                  >
+                    <span
+                      className="quest-entry__indicator-icon"
+                      aria-hidden="true"
+                    >
+                      <UnlockIcon />
+                    </span>
+
+                    <span>{unlock.name}</span>
+                  </span>
+                );
+              })}
             </div>
           )}
         </div>
