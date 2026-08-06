@@ -25,6 +25,17 @@ interface TargetDefinition {
   routeId?: RouteId;
 }
 
+interface QuestGroupRangeDefinition {
+  id: string;
+  title: string;
+
+  startQuestName: string;
+  endQuestName: string;
+
+  startQuestRowId?: number;
+  endQuestRowId?: number;
+}
+
 function readOption(optionName: string): string | undefined {
   const optionIndex = process.argv.indexOf(optionName);
   const value = optionIndex >= 0 ? process.argv[optionIndex + 1] : undefined;
@@ -34,6 +45,50 @@ function readOption(optionName: string): string | undefined {
   }
 
   return value;
+}
+
+function readOptions(optionName: string): string[] {
+  const values: string[] = [];
+
+  for (let index = 0; index < process.argv.length; index += 1) {
+    if (process.argv[index] !== optionName) {
+      continue;
+    }
+
+    const value = process.argv[index + 1];
+
+    if (value === undefined || value.startsWith('--')) {
+      throw new Error(`Missing value after ${optionName}.`);
+    }
+
+    values.push(value);
+  }
+
+  return values;
+}
+
+function readOptionalPositiveRowId(
+  rawValue: string,
+  optionName: string,
+  groupIndex: number,
+): number | undefined {
+  if (rawValue.trim().length === 0) {
+    return undefined;
+  }
+
+  const rowId = Number(rawValue);
+
+  if (!Number.isInteger(rowId) || rowId <= 0) {
+    throw new Error(
+      [
+        `${optionName} for quest group`,
+        `${groupIndex + 1} must be empty`,
+        'or a positive integer.',
+      ].join(' '),
+    );
+  }
+
+  return rowId;
 }
 
 function requireOption(optionName: string): string {
@@ -57,6 +112,101 @@ function requireNonNegativeIntegerOption(optionName: string): number {
   }
 
   return value;
+}
+
+function readQuestGroupRangeDefinitions(): QuestGroupRangeDefinition[] {
+  const ids = readOptions('--quest-group-id');
+
+  const titles = readOptions('--quest-group-title');
+
+  const startQuestNames = readOptions('--quest-group-start');
+
+  const endQuestNames = readOptions('--quest-group-end');
+
+  const startQuestRows = readOptions('--quest-group-start-row');
+
+  const endQuestRows = readOptions('--quest-group-end-row');
+
+  const requiredOptionCounts = [
+    ids.length,
+    titles.length,
+    startQuestNames.length,
+    endQuestNames.length,
+  ];
+
+  if (requiredOptionCounts.every((count) => count === 0)) {
+    return [];
+  }
+
+  if (requiredOptionCounts.some((count) => count !== ids.length)) {
+    throw new Error(
+      [
+        'Every named quest group requires one each of:',
+        '--quest-group-id,',
+        '--quest-group-title,',
+        '--quest-group-start, and',
+        '--quest-group-end.',
+      ].join(' '),
+    );
+  }
+
+  for (const [optionName, optionValues] of [
+    ['--quest-group-start-row', startQuestRows],
+    ['--quest-group-end-row', endQuestRows],
+  ] as const) {
+    if (optionValues.length !== 0 && optionValues.length !== ids.length) {
+      throw new Error(
+        [
+          `${optionName} must either be omitted`,
+          'or supplied once for every group.',
+        ].join(' '),
+      );
+    }
+  }
+
+  return ids.map((id, index) => {
+    const title = titles[index];
+
+    const startQuestName = startQuestNames[index];
+
+    const endQuestName = endQuestNames[index];
+
+    if (
+      !id?.trim() ||
+      !title?.trim() ||
+      !startQuestName?.trim() ||
+      !endQuestName?.trim()
+    ) {
+      throw new Error(
+        `Quest group ${index + 1} contains an empty required value.`,
+      );
+    }
+
+    return {
+      id,
+      title,
+      startQuestName,
+      endQuestName,
+
+      startQuestRowId:
+        startQuestRows.length > 0
+          ? readOptionalPositiveRowId(
+              startQuestRows[index] ?? '',
+              '--quest-group-start-row',
+              index,
+            )
+          : undefined,
+
+      endQuestRowId:
+        endQuestRows.length > 0
+          ? readOptionalPositiveRowId(
+              endQuestRows[index] ?? '',
+              '--quest-group-end-row',
+              index,
+            )
+          : undefined,
+    };
+  });
 }
 
 function slugify(value: string): string {
@@ -401,6 +551,184 @@ function fillGroups(
   });
 }
 
+function normalizeQuestName(value: string): string {
+  return value
+    .normalize('NFKC')
+    .trim()
+    .toLocaleLowerCase('en-US')
+    .replace(/\s+/g, ' ');
+}
+
+function resolveQuestBoundaryIndex(
+  quests: readonly QuestExportEntry[],
+  questName: string,
+  questRowId: number | undefined,
+  groupTitle: string,
+  boundaryName: 'start' | 'end',
+): number {
+  const normalizedQuestName = normalizeQuestName(questName);
+
+  const candidateIndices = quests.flatMap((quest, index) => {
+    if (normalizeQuestName(quest.name) !== normalizedQuestName) {
+      return [];
+    }
+
+    if (questRowId !== undefined && quest.xivapiRowId !== questRowId) {
+      return [];
+    }
+
+    return [index];
+  });
+
+  if (candidateIndices.length === 0) {
+    throw new Error(
+      [
+        `Group "${groupTitle}" has an unknown`,
+        `${boundaryName} quest "${questName}".`,
+        questRowId !== undefined ? `Requested Quest row: ${questRowId}.` : '',
+      ]
+        .filter(Boolean)
+        .join(' '),
+    );
+  }
+
+  if (candidateIndices.length > 1) {
+    throw new Error(
+      [
+        `Group "${groupTitle}" has an ambiguous`,
+        `${boundaryName} quest "${questName}".`,
+        `Supply its XIVAPI row through`,
+        `--quest-group-${boundaryName}-row.`,
+      ].join(' '),
+    );
+  }
+
+  const candidateIndex = candidateIndices[0];
+
+  if (candidateIndex === undefined) {
+    throw new Error(`Could not resolve group "${groupTitle}".`);
+  }
+
+  return candidateIndex;
+}
+
+function createQuestGroups(
+  sourceQuests: readonly QuestExportEntry[],
+  convertedQuests: readonly ReturnType<typeof convertQuest>[],
+  definitions: readonly QuestGroupRangeDefinition[],
+  fallbackGroupId: string,
+  fallbackGroupTitle: string,
+) {
+  if (definitions.length === 0) {
+    return [
+      {
+        id: fallbackGroupId,
+        title: fallbackGroupTitle,
+        sortOrder: 1,
+        quests: [...convertedQuests],
+      },
+    ];
+  }
+
+  const groups: Array<{
+    id: string;
+    title: string;
+    sortOrder: number;
+    quests: ReturnType<typeof convertQuest>[];
+  }> = [];
+
+  const usedGroupIds = new Set<string>();
+
+  let expectedStartIndex = 0;
+
+  for (
+    let definitionIndex = 0;
+    definitionIndex < definitions.length;
+    definitionIndex += 1
+  ) {
+    const definition = definitions[definitionIndex];
+
+    if (!definition) {
+      continue;
+    }
+
+    const groupId = slugify(definition.id);
+
+    if (usedGroupIds.has(groupId)) {
+      throw new Error(`Duplicate quest group ID: ${groupId}.`);
+    }
+
+    usedGroupIds.add(groupId);
+
+    const startIndex = resolveQuestBoundaryIndex(
+      sourceQuests,
+      definition.startQuestName,
+      definition.startQuestRowId,
+      definition.title,
+      'start',
+    );
+
+    const endIndex = resolveQuestBoundaryIndex(
+      sourceQuests,
+      definition.endQuestName,
+      definition.endQuestRowId,
+      definition.title,
+      'end',
+    );
+
+    if (endIndex < startIndex) {
+      throw new Error(
+        [
+          `Group "${definition.title}" ends`,
+          'before it starts in export order.',
+        ].join(' '),
+      );
+    }
+
+    if (startIndex !== expectedStartIndex) {
+      const expectedQuest = sourceQuests[expectedStartIndex];
+
+      throw new Error(
+        [
+          `Group "${definition.title}" does not`,
+          'begin with the next ungrouped quest.',
+          expectedQuest
+            ? `Expected "${expectedQuest.name}".`
+            : 'All quests were already grouped.',
+        ].join(' '),
+      );
+    }
+
+    groups.push({
+      id: groupId,
+      title: definition.title,
+      sortOrder: definitionIndex + 1,
+
+      quests: convertedQuests.slice(startIndex, endIndex + 1),
+    });
+
+    expectedStartIndex = endIndex + 1;
+  }
+
+  if (expectedStartIndex !== sourceQuests.length) {
+    const firstUngroupedQuest = sourceQuests[expectedStartIndex];
+
+    throw new Error(
+      [
+        'The named quest groups do not cover',
+        'the complete export.',
+        firstUngroupedQuest
+          ? `First ungrouped quest: "${firstUngroupedQuest.name}".`
+          : '',
+      ]
+        .filter(Boolean)
+        .join(' '),
+    );
+  }
+
+  return groups;
+}
+
 async function publishGenericCollection(
   exportData: QuestChainExport,
   rawOutputPath: string,
@@ -419,6 +747,8 @@ async function publishGenericCollection(
   const groupId = slugify(readOption('--group-id') ?? `${collectionId}-quests`);
 
   const groupTitle = readOption('--group-title') ?? collectionTitle;
+
+  const questGroupDefinitions = readQuestGroupRangeDefinitions();
 
   const verificationStatus = readOption('--verification-status') ?? 'in-review';
 
@@ -444,6 +774,14 @@ async function publishGenericCollection(
 
   const quests = exportData.quests.map((quest) =>
     convertQuest(quest, exportData),
+  );
+
+  const groups = createQuestGroups(
+    exportData.quests,
+    quests,
+    questGroupDefinitions,
+    groupId,
+    groupTitle,
   );
 
   const publishedQuestIds = new Set(quests.map((quest) => quest.id));
@@ -478,14 +816,7 @@ async function publishGenericCollection(
     continuesToQuestIds:
       continuesToQuestIds.length > 0 ? continuesToQuestIds : undefined,
 
-    groups: [
-      {
-        id: groupId,
-        title: groupTitle,
-        sortOrder: 1,
-        quests,
-      },
-    ],
+    groups,
   });
 
   const manifestPath = path.join(questDataRoot, 'manifest.json');
@@ -543,7 +874,11 @@ async function publishGenericCollection(
     collections,
   });
 
-  console.log(`${manifestCollectionPath}: ${quests.length} quests`);
+  console.log(`Quest groups: ${groups.length}`);
+
+  for (const group of groups) {
+    console.log(`  ${group.title}: ${group.quests.length} quests`);
+  }
   console.log(
     existingEntryIndex >= 0
       ? `Updated manifest collection: ${collectionId}`

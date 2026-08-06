@@ -146,19 +146,128 @@ require_complete() {
     --require-complete
 }
 
+quest_group_array_exists() {
+  declare -p "$1" >/dev/null 2>&1
+}
+
+append_quest_group_arguments() {
+  local -n target_arguments="$1"
+
+  local required_array_count=0
+
+  local array_name
+
+  for array_name in \
+    QUEST_GROUP_IDS \
+    QUEST_GROUP_TITLES \
+    QUEST_GROUP_START_QUESTS \
+    QUEST_GROUP_END_QUESTS
+  do
+    if quest_group_array_exists "$array_name"; then
+      required_array_count=$((required_array_count + 1))
+    fi
+  done
+
+  if [[ "$required_array_count" -eq 0 ]]; then
+    target_arguments+=(
+      --group-id "$GROUP_ID"
+      --group-title "$GROUP_TITLE"
+    )
+
+    return
+  fi
+
+  if [[ "$required_array_count" -ne 4 ]]; then
+    echo \
+      'Named groups require all four QUEST_GROUP arrays.' \
+      >&2
+
+    exit 1
+  fi
+
+  local group_count="${#QUEST_GROUP_IDS[@]}"
+
+  if [[ "$group_count" -eq 0 ]]; then
+    echo 'QUEST_GROUP_IDS cannot be empty.' >&2
+    exit 1
+  fi
+
+  if \
+    [[ "${#QUEST_GROUP_TITLES[@]}" -ne "$group_count" ]] ||
+    [[ "${#QUEST_GROUP_START_QUESTS[@]}" -ne "$group_count" ]] ||
+    [[ "${#QUEST_GROUP_END_QUESTS[@]}" -ne "$group_count" ]]
+  then
+    echo \
+      'All required QUEST_GROUP arrays must have equal lengths.' \
+      >&2
+
+    exit 1
+  fi
+
+  if \
+    quest_group_array_exists QUEST_GROUP_START_ROWS &&
+    [[ "${#QUEST_GROUP_START_ROWS[@]}" -ne "$group_count" ]]
+  then
+    echo \
+      'QUEST_GROUP_START_ROWS must match the group count.' \
+      >&2
+
+    exit 1
+  fi
+
+  if \
+    quest_group_array_exists QUEST_GROUP_END_ROWS &&
+    [[ "${#QUEST_GROUP_END_ROWS[@]}" -ne "$group_count" ]]
+  then
+    echo \
+      'QUEST_GROUP_END_ROWS must match the group count.' \
+      >&2
+
+    exit 1
+  fi
+
+  local index
+
+  for ((index = 0; index < group_count; index += 1)); do
+    local start_row=""
+    local end_row=""
+
+    if quest_group_array_exists QUEST_GROUP_START_ROWS; then
+      start_row="${QUEST_GROUP_START_ROWS[$index]}"
+    fi
+
+    if quest_group_array_exists QUEST_GROUP_END_ROWS; then
+      end_row="${QUEST_GROUP_END_ROWS[$index]}"
+    fi
+
+    target_arguments+=(
+      --quest-group-id "${QUEST_GROUP_IDS[$index]}"
+      --quest-group-title "${QUEST_GROUP_TITLES[$index]}"
+      --quest-group-start "${QUEST_GROUP_START_QUESTS[$index]}"
+      --quest-group-end "${QUEST_GROUP_END_QUESTS[$index]}"
+      --quest-group-start-row "$start_row"
+      --quest-group-end-row "$end_row"
+    )
+  done
+}
+
 publish_export() {
   require_complete
 
+  local publish_arguments=(
+    --file "$EXPORT_FILE"
+    --output "$PUBLISH_FILE"
+    --collection-id "$COLLECTION_ID"
+    --collection-title "$COLLECTION_TITLE"
+    --collection-description "$COLLECTION_DESCRIPTION"
+    --sort-order "$COLLECTION_SORT_ORDER"
+    --verification-status "$VERIFICATION_STATUS"
+  )
+
+  append_quest_group_arguments publish_arguments
+
   npm run xivapi:publish:export -- \
-    --file "$EXPORT_FILE" \
-    --output "$PUBLISH_FILE" \
-    --collection-id "$COLLECTION_ID" \
-    --collection-title "$COLLECTION_TITLE" \
-    --collection-description "$COLLECTION_DESCRIPTION" \
-    --sort-order "$COLLECTION_SORT_ORDER" \
-    --group-id "$GROUP_ID" \
-    --group-title "$GROUP_TITLE" \
-    --verification-status "$VERIFICATION_STATUS" \
+    "${publish_arguments[@]}" \
     --write
 }
 
