@@ -236,7 +236,7 @@
   border-radius: 0.5rem;
 
   color: var(--color-text-secondary);
-  background: var(--color-surface-raised);
+  background: var(--color-background);
 
   font-size: 0.65rem;
   font-weight: 800;
@@ -268,7 +268,7 @@
 .quest-empty-results button:hover {
   border-color: var(--color-border-strong);
   color: var(--color-text-primary);
-  background: var(--color-surface-hover);
+  background: var(--color-surface-raised);
 }
 
 .quest-toolbar__completed-button:focus-visible,
@@ -828,10 +828,6 @@
     justify-items: end;
   }
 
-  .quest-toolbar__clear-button {
-    width: 100%;
-  }
-
   .quest-toolbar__primary {
     grid-template-columns: minmax(0, 1fr) auto;
   }
@@ -841,6 +837,7 @@
   }
 
   .quest-toolbar__clear-button {
+    width: 100%;
     align-self: end;
   }
 
