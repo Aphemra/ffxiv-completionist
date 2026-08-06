@@ -14,6 +14,8 @@ import { readXivapiPins } from './pins';
 
 import { xivapiSheetResponseSchema } from './schemas';
 
+import { isReviewedSystemReward } from './questUnlockCatalog';
+
 import {
   questChainExportSchema,
   questExportEntrySchema,
@@ -2050,6 +2052,28 @@ function createQuestEntry(
   const reviewObject = review as JsonObject;
 
   const draft = asObject(review.questDraft) ?? {};
+
+  const sourceData = asObject(draft.sourceData);
+
+  const xivapiSourceData = asObject(sourceData?.xivapi);
+
+  const systemReward = readInteger(xivapiSourceData?.systemReward);
+
+  if (
+    systemReward !== undefined &&
+    systemReward > 0 &&
+    !isReviewedSystemReward(quest.rowId, systemReward)
+  ) {
+    pushIssue(issues, issueKeys, {
+      questId,
+      questName: quest.name,
+      field: 'unlocks.systemReward',
+      message: [
+        `Quest row ${quest.rowId} has unreviewed`,
+        `SystemReward value ${systemReward}.`,
+      ].join(' '),
+    });
+  }
 
   const classification = asObject(reviewObject.classification);
 

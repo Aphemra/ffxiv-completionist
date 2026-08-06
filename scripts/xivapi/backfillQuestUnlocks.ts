@@ -448,7 +448,7 @@ async function loadQuestReferences(rowIds: ReadonlySet<number>): Promise<{
 
       const fields = response.fields as Record<string, unknown>;
 
-      unlocksByRowId.set(rowId, interpretQuestUnlocks(fields));
+      unlocksByRowId.set(rowId, interpretQuestUnlocks(fields, rowId));
 
       dutyReferencesByRowId.set(rowId, interpretQuestDutyReferences(fields));
     } catch (error) {

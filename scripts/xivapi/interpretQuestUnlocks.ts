@@ -1,5 +1,7 @@
 type JsonObject = Record<string, unknown>;
 
+import { getCuratedQuestUnlocks } from './questUnlockCatalog';
+
 export interface InterpretedQuestUnlock {
   type: string;
 
@@ -151,6 +153,7 @@ function createDutyUnlock(value: unknown): InterpretedQuestUnlock | undefined {
 
 export function interpretQuestUnlocks(
   rawFields: unknown,
+  questRowId?: number,
 ): InterpretedQuestUnlock[] {
   const fields = asObject(rawFields);
 
@@ -159,6 +162,18 @@ export function interpretQuestUnlocks(
   }
 
   const unlocks: InterpretedQuestUnlock[] = [];
+
+  if (questRowId !== undefined) {
+    for (const curatedUnlock of getCuratedQuestUnlocks(questRowId)) {
+      unlocks.push({
+        type: curatedUnlock.type,
+        targetId: curatedUnlock.targetId,
+        sourceRowId: questRowId,
+        name: curatedUnlock.name,
+        notes: curatedUnlock.notes,
+      });
+    }
+  }
 
   const actionUnlock = createRelationUnlock(fields.ActionReward, {
     type: 'action',

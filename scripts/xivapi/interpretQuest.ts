@@ -917,7 +917,7 @@ async function main(): Promise<void> {
 
   const isRepeatable = readBoolean(fields.IsRepeatable) ?? false;
 
-  const unlocks = interpretQuestUnlocks(fields);
+  const unlocks = interpretQuestUnlocks(fields, response.row_id);
 
   const dutyReferences = interpretQuestDutyReferences(fields);
 
@@ -1134,6 +1134,8 @@ async function main(): Promise<void> {
         sortKey: readInteger(fields.SortKey),
 
         questLevelOffset: readInteger(fields.QuestLevelOffset),
+
+        systemReward: readInteger(fields.SystemReward),
 
         scriptParameters,
 
