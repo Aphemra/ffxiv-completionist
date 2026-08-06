@@ -396,6 +396,11 @@
   background: var(--color-success-muted);
 }
 
+.quest-collection__content,
+.quest-group__content {
+  min-width: 0;
+}
+
 .quest-groups {
   display: grid;
 }
@@ -420,6 +425,10 @@
 
 .quest-group--complete .quest-group__title strong {
   color: var(--color-accent-light);
+}
+
+.quest-group__content {
+  background: rgb(0 0 0 / 4%);
 }
 
 .quest-group__toggle {

@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 
 import { useProgressStore } from '../../../core/progress/progressStore';
 
+import { AnimatedCollapse } from '../../../shared/components/AnimatedCollapse';
+
 import { QuestDetailsDrawer } from '../components/QuestDetailsDrawer';
 import { QuestEntry } from '../components/QuestEntry';
 
@@ -788,8 +790,11 @@ export function QuestLogPage() {
                       </div>
                     </header>
 
-                    {isPatchExpanded &&
-                      (onlyRange ? (
+                    <AnimatedCollapse
+                      isOpen={isPatchExpanded}
+                      className="quest-collection__content"
+                    >
+                      {onlyRange ? (
                         <div className="quest-group__entries quest-group__entries--single-range">
                           {onlyRangeVisibleQuests.map(renderQuestEntry)}
                         </div>
@@ -888,16 +893,20 @@ export function QuestLogPage() {
                                   </span>
                                 </button>
 
-                                {isRangeExpanded && (
+                                <AnimatedCollapse
+                                  isOpen={isRangeExpanded}
+                                  className="quest-group__content"
+                                >
                                   <div className="quest-group__entries">
                                     {visibleRangeQuests.map(renderQuestEntry)}
                                   </div>
-                                )}
+                                </AnimatedCollapse>
                               </section>
                             );
                           })}
                         </div>
-                      ))}
+                      )}
+                    </AnimatedCollapse>
                   </section>
                 );
               })}
