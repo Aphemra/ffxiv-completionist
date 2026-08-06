@@ -46,6 +46,22 @@ function getPatchSectionId(
   ].join(':');
 }
 
+function formatPatchTitle(
+  patch: string,
+  expansionId: string | undefined,
+  manifestTitle?: string,
+): string {
+  const patchLabel = `Patch ${patch}`;
+
+  if (patch.endsWith('.0') && expansionId) {
+    return `${patchLabel} - ${formatExpansionName(expansionId)}`;
+  }
+
+  const normalizedManifestTitle = manifestTitle?.trim();
+
+  return normalizedManifestTitle || patchLabel;
+}
+
 function formatVerificationStatus(status: string): string {
   return status
     .split('-')
@@ -181,21 +197,31 @@ export function QuestLogPage() {
       return [];
     }
 
-    const patches = new Set<string>();
+    const patches = new Map<string, string>();
 
     for (const collection of catalog.collections) {
-      for (const group of collection.groups) {
-        for (const quest of group.quests) {
-          if (quest.expansionId !== expansionFilter) {
-            continue;
-          }
-
-          patches.add(quest.patch);
-        }
+      if (
+        collection.expansionId !== expansionFilter ||
+        !collection.patch ||
+        patches.has(collection.patch)
+      ) {
+        continue;
       }
+
+      patches.set(
+        collection.patch,
+        formatPatchTitle(
+          collection.patch,
+          collection.expansionId,
+          collection.title,
+        ),
+      );
     }
 
-    return Array.from(patches).sort(comparePatchVersions);
+    return Array.from(patches, ([value, label]) => ({
+      value,
+      label,
+    })).sort((left, right) => comparePatchVersions(left.value, right.value));
   }, [catalog, expansionFilter]);
 
   const filteredCollections = useMemo(() => {
@@ -273,6 +299,7 @@ export function QuestLogPage() {
       string,
       {
         id: string;
+        title: string;
         expansionId: string | undefined;
         patch: string | undefined;
         category: QuestCategory;
@@ -300,6 +327,7 @@ export function QuestLogPage() {
 
       sections.set(sectionId, {
         id: sectionId,
+        title: collection.title,
         expansionId: collection.expansionId,
         patch: collection.patch,
         category: collection.category,
@@ -615,9 +643,9 @@ export function QuestLogPage() {
                       : 'All expansion patches'}
                   </option>
 
-                  {patchOptions.map((patch) => (
-                    <option key={patch} value={patch}>
-                      Patch {patch}
+                  {patchOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
                     </option>
                   ))}
                 </select>
@@ -715,8 +743,16 @@ export function QuestLogPage() {
                   ? formatExpansionName(section.expansionId)
                   : 'Quest Collection';
 
-                const patchName = section.patch
+                const patchLabel = section.patch
                   ? `Patch ${section.patch}`
+                  : 'an unassigned patch';
+
+                const patchName = section.patch
+                  ? formatPatchTitle(
+                      section.patch,
+                      section.expansionId,
+                      section.title,
+                    )
                   : 'Unassigned Patch';
 
                 const visibleGroups = section.ranges.flatMap(
@@ -754,7 +790,7 @@ export function QuestLogPage() {
                         <p className="quest-collection__description">
                           {expansionName}{' '}
                           {formatQuestCategory(section.category).toLowerCase()}{' '}
-                          quests introduced in {patchName}.
+                          quests introduced in {patchLabel}.
                         </p>
 
                         <p className="quest-collection__progress">

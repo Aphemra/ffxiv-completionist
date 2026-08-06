@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 EXPORT_ID="heavensward-3.5-msq"
-TITLE="The Fard Edge of Fate: Part 1 - 3.5 Main Scenario"
+TITLE="The Far Edge of Fate: Part 1 - 3.5 Main Scenario"
 
 EXPANSION="heavensward"
 PATCH="3.5"
@@ -20,7 +20,7 @@ JOURNAL_CATEGORY="Post-Dragonsong Main Scenario Quests"
 CLASS_JOB=""
 
 COLLECTION_ID="heavensward-3.5-msq"
-COLLECTION_TITLE="Patch 3.5 - The Fard Edge of Fate: Part 1"
+COLLECTION_TITLE="Patch 3.5 - The Far Edge of Fate: Part 1"
 COLLECTION_DESCRIPTION="Post-Heavensward main scenario quests introduced in Patch 3.4."
 COLLECTION_SORT_ORDER="350"
 VERIFICATION_STATUS="verified"
