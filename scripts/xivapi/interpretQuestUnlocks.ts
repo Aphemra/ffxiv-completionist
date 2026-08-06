@@ -13,7 +13,7 @@ export interface InterpretedQuestUnlock {
 }
 
 export interface InterpretedQuestDutyReference {
-  contentFinderConditionRowId: number;
+  instanceContentRowId: number;
   sourceInstruction: string;
   relationship: 'required' | 'unlocked';
 }
@@ -374,7 +374,7 @@ export function interpretQuestDutyReferences(
     const existingReference = referencesByRowId.get(parameter.argument);
 
     const reference: InterpretedQuestDutyReference = {
-      contentFinderConditionRowId: parameter.argument,
+      instanceContentRowId: parameter.argument,
       sourceInstruction: parameter.sourceInstruction,
       relationship: unlocksContentFinder ? 'unlocked' : 'required',
     };

@@ -20,6 +20,7 @@ import { xivapiSheetResponseSchema } from './schemas';
 type JsonObject = Record<string, unknown>;
 
 export interface ResolvedQuestDuty {
+  instanceContentRowId: number;
   contentFinderConditionRowId: number;
   contentRowId: number;
 
@@ -63,6 +64,16 @@ const cachedDutySchema = z.strictObject({
 
 type CachedDuty = z.infer<typeof cachedDutySchema>;
 
+const cachedInstanceContentReferenceSchema = z.strictObject({
+  instanceContentRowId: z.number().int().positive(),
+
+  contentFinderConditionRowId: z.number().int().nonnegative(),
+});
+
+type CachedInstanceContentReference = z.infer<
+  typeof cachedInstanceContentReferenceSchema
+>;
+
 const CONTENT_FINDER_FIELDS = [
   'Name',
 
@@ -83,6 +94,8 @@ const CONTENT_FINDER_FIELDS = [
 
   'HighEndDuty',
 ].join(',');
+
+const INSTANCE_CONTENT_REFERENCE_FIELDS = 'ContentFinderCondition@as(raw)';
 
 const CONTENT_MEMBER_PARTY_SIZES = new Map<number, number>([
   [2, 4],
@@ -217,6 +230,20 @@ function getCachePath(version: string, schema: string, rowId: number): string {
   );
 }
 
+function getInstanceContentCachePath(
+  version: string,
+  schema: string,
+  rowId: number,
+): string {
+  return path.join(
+    xivapiCacheRoot,
+    'instance-content-reference',
+    createSafePathSegment(version),
+    createSafePathSegment(schema),
+    `row-${rowId}.json`,
+  );
+}
+
 function parseDutyRow(rowId: number, fields: JsonObject): CachedDuty {
   const rawName = readString(fields.Name);
 
@@ -342,6 +369,152 @@ async function readCachedDuty(
   }
 }
 
+async function readCachedInstanceContentReference(
+  cachePath: string,
+): Promise<CachedInstanceContentReference | undefined> {
+  try {
+    return cachedInstanceContentReferenceSchema.parse(
+      await readJsonFile(cachePath),
+    );
+  } catch (error) {
+    const errorCode =
+      error instanceof Error && 'code' in error
+        ? String(error.code)
+        : undefined;
+
+    if (errorCode === 'ENOENT') {
+      return undefined;
+    }
+
+    throw error;
+  }
+}
+
+async function resolveInstanceContentReferences(
+  rowIds: readonly number[],
+  version: string,
+  schema: string,
+  offline: boolean,
+): Promise<Map<number, CachedInstanceContentReference>> {
+  const referencesByRowId = new Map<number, CachedInstanceContentReference>();
+
+  const missingRowIds: number[] = [];
+
+  for (const rowId of rowIds) {
+    const cachedReference = await readCachedInstanceContentReference(
+      getInstanceContentCachePath(version, schema, rowId),
+    );
+
+    if (cachedReference) {
+      referencesByRowId.set(rowId, cachedReference);
+    } else {
+      missingRowIds.push(rowId);
+    }
+  }
+
+  if (missingRowIds.length === 0) {
+    return referencesByRowId;
+  }
+
+  if (offline) {
+    throw new Error(
+      [
+        'Offline InstanceContent resolution',
+        'is missing cached rows:',
+        missingRowIds.join(', '),
+      ].join(' '),
+    );
+  }
+
+  async function fetchChunk(chunk: readonly number[]): Promise<void> {
+    if (chunk.length === 0) {
+      return;
+    }
+
+    try {
+      const response = await requestXivapi({
+        path: '/sheet/InstanceContent',
+
+        query: {
+          rows: chunk.join(','),
+
+          fields: INSTANCE_CONTENT_REFERENCE_FIELDS,
+
+          language: 'en',
+          version,
+          schema,
+        },
+
+        responseSchema: xivapiSheetResponseSchema,
+      });
+
+      for (const row of response.rows) {
+        const contentFinderConditionRowId =
+          readInteger(
+            (row.fields as JsonObject)['ContentFinderCondition@as(raw)'],
+          ) ?? 0;
+
+        const reference = cachedInstanceContentReferenceSchema.parse({
+          instanceContentRowId: row.row_id,
+          contentFinderConditionRowId,
+        });
+
+        referencesByRowId.set(row.row_id, reference);
+
+        await writeJsonFile(
+          getInstanceContentCachePath(version, schema, row.row_id),
+          reference,
+        );
+      }
+    } catch (error) {
+      const isMissingRowError =
+        error instanceof XivapiRequestError && error.status === 404;
+
+      if (!isMissingRowError) {
+        throw error;
+      }
+
+      if (chunk.length > 1) {
+        const middleIndex = Math.floor(chunk.length / 2);
+
+        await fetchChunk(chunk.slice(0, middleIndex));
+
+        await delayBetweenRequests();
+
+        await fetchChunk(chunk.slice(middleIndex));
+
+        return;
+      }
+
+      console.warn(
+        [
+          'Skipping missing InstanceContent row',
+          String(chunk[0]),
+          'referenced by QuestParams.',
+        ].join(' '),
+      );
+    }
+  }
+
+  const chunks = chunkValues(missingRowIds, 100);
+
+  for (let chunkIndex = 0; chunkIndex < chunks.length; chunkIndex += 1) {
+    const chunk = chunks[chunkIndex];
+
+    if (!chunk) {
+      continue;
+    }
+
+    await fetchChunk(chunk);
+
+    if (chunkIndex < chunks.length - 1) {
+      await delayBetweenRequests();
+    }
+  }
+
+  return referencesByRowId;
+}
+
 function chunkValues<T>(values: readonly T[], chunkSize: number): T[][] {
   const chunks: T[][] = [];
 
@@ -453,11 +626,11 @@ export async function resolveQuestDutyReferences(
 
   for (const reference of references) {
     const existingReference = referencesByRowId.get(
-      reference.contentFinderConditionRowId,
+      reference.instanceContentRowId,
     );
 
     if (!existingReference || reference.relationship === 'unlocked') {
-      referencesByRowId.set(reference.contentFinderConditionRowId, reference);
+      referencesByRowId.set(reference.instanceContentRowId, reference);
     }
   }
 
@@ -467,10 +640,26 @@ export async function resolveQuestDutyReferences(
 
   const pins = await readXivapiPins();
 
+  const instanceContentReferences = await resolveInstanceContentReferences(
+    Array.from(referencesByRowId.keys()),
+    pins.version,
+    pins.schema,
+    options.offline ?? false,
+  );
+
+  const contentFinderConditionRowIds = Array.from(
+    new Set(
+      Array.from(instanceContentReferences.values())
+        .map((reference) => reference.contentFinderConditionRowId)
+        .filter((rowId) => rowId > 0),
+    ),
+  );
+
   const dutiesByRowId = new Map<number, CachedDuty>();
+
   const missingRowIds: number[] = [];
 
-  for (const rowId of referencesByRowId.keys()) {
+  for (const rowId of contentFinderConditionRowIds) {
     const cachedDuty = await readCachedDuty(
       getCachePath(pins.version, pins.schema, rowId),
     );
@@ -486,7 +675,8 @@ export async function resolveQuestDutyReferences(
     if (options.offline) {
       throw new Error(
         [
-          'Offline duty resolution is missing cached rows:',
+          'Offline duty resolution is missing',
+          'cached ContentFinderCondition rows:',
           missingRowIds.join(', '),
         ].join(' '),
       );
@@ -506,18 +696,30 @@ export async function resolveQuestDutyReferences(
   const resolvedDuties: ResolvedQuestDuty[] = [];
 
   for (const reference of referencesByRowId.values()) {
-    const duty = dutiesByRowId.get(reference.contentFinderConditionRowId);
+    const instanceContentReference = instanceContentReferences.get(
+      reference.instanceContentRowId,
+    );
 
-    /*
-     * INSTANCEDUNGEON script parameters can also identify
-     * solo quest instances that have no Duty Finder row.
-     */
+    if (
+      !instanceContentReference ||
+      instanceContentReference.contentFinderConditionRowId <= 0
+    ) {
+      continue;
+    }
+
+    const duty = dutiesByRowId.get(
+      instanceContentReference.contentFinderConditionRowId,
+    );
+
     if (!duty) {
       continue;
     }
 
     resolvedDuties.push({
       ...duty,
+
+      instanceContentRowId: reference.instanceContentRowId,
+
       relationship: reference.relationship,
     });
   }

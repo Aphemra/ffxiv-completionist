@@ -159,17 +159,22 @@ function normalizeDutyReference(
     return undefined;
   }
 
-  const contentFinderConditionRowId = readInteger(
-    reference.contentFinderConditionRowId,
-  );
+  const instanceContentRowId =
+    readInteger(reference.instanceContentRowId) ??
+    /*
+     * Compatibility with reviews created before
+     * QuestParams references were correctly identified
+     * as InstanceContent row IDs.
+     */
+    readInteger(reference.contentFinderConditionRowId);
 
   const sourceInstruction = readString(reference.sourceInstruction);
 
   const relationship = readString(reference.relationship);
 
   if (
-    contentFinderConditionRowId === undefined ||
-    contentFinderConditionRowId <= 0 ||
+    instanceContentRowId === undefined ||
+    instanceContentRowId <= 0 ||
     !sourceInstruction ||
     (relationship !== 'required' && relationship !== 'unlocked')
   ) {
@@ -177,7 +182,7 @@ function normalizeDutyReference(
   }
 
   return {
-    contentFinderConditionRowId,
+    instanceContentRowId,
     sourceInstruction,
     relationship,
   };
@@ -211,11 +216,11 @@ function extractDutyReferences(
     }
 
     const existingReference = referencesByRowId.get(
-      reference.contentFinderConditionRowId,
+      reference.instanceContentRowId,
     );
 
     if (!existingReference || reference.relationship === 'unlocked') {
-      referencesByRowId.set(reference.contentFinderConditionRowId, reference);
+      referencesByRowId.set(reference.instanceContentRowId, reference);
     }
   }
 
@@ -2490,10 +2495,7 @@ async function main(): Promise<void> {
   );
 
   const resolvedDutyMetadataByRowId = new Map(
-    resolvedDutyMetadata.map((duty) => [
-      duty.contentFinderConditionRowId,
-      duty,
-    ]),
+    resolvedDutyMetadata.map((duty) => [duty.instanceContentRowId, duty]),
   );
 
   const experienceInputsByRowId = new Map<
@@ -2630,27 +2632,27 @@ async function main(): Promise<void> {
     const questDutyReferences =
       dutyReferencesByQuestRowId.get(quest.rowId) ?? [];
 
-    const resolvedQuestDuties = questDutyReferences.map((reference) => {
+    const resolvedQuestDuties = questDutyReferences.flatMap((reference) => {
       const duty = resolvedDutyMetadataByRowId.get(
-        reference.contentFinderConditionRowId,
+        reference.instanceContentRowId,
       );
 
+      /*
+       * InstanceContent rows without a
+       * ContentFinderCondition represent
+       * non-Duty-Finder quest instances.
+       */
       if (!duty) {
-        throw new Error(
-          [
-            `Quest row ${quest.rowId}`,
-            'references unresolved',
-            'ContentFinderCondition row',
-            String(reference.contentFinderConditionRowId),
-          ].join(' '),
-        );
+        return [];
       }
 
-      return {
-        ...duty,
+      return [
+        {
+          ...duty,
 
-        relationship: reference.relationship,
-      };
+          relationship: reference.relationship,
+        },
+      ];
     });
 
     exportedQuests.push(

@@ -376,11 +376,11 @@ function resolveDutiesForQuest(
   const resolvedDuties: ResolvedQuestDuty[] = [];
 
   for (const reference of references) {
-    const duty = dutyMetadataByRowId.get(reference.contentFinderConditionRowId);
+    const duty = dutyMetadataByRowId.get(reference.instanceContentRowId);
 
     /*
-     * A missing metadata entry means the script argument was
-     * confirmed not to be a ContentFinderCondition row.
+     * A missing metadata entry means the InstanceContent
+     * row represents a non-Duty-Finder quest instance.
      */
     if (!duty) {
       continue;
@@ -679,10 +679,7 @@ async function main(): Promise<void> {
     await resolveQuestDutyReferences(allDutyReferences);
 
   const dutyMetadataByRowId = new Map(
-    resolvedDutyMetadata.map((duty) => [
-      duty.contentFinderConditionRowId,
-      duty,
-    ]),
+    resolvedDutyMetadata.map((duty) => [duty.instanceContentRowId, duty]),
   );
 
   const exportUpdateCount = await backfillExports(
