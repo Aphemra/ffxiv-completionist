@@ -212,9 +212,9 @@
 .quest-toolbar__selects {
   display: grid;
   grid-template-columns:
-    minmax(10rem, 1fr)
-    minmax(15rem, 1.3fr)
-    minmax(10rem, 1fr);
+    minmax(12rem, 0.95fr)
+    minmax(12rem, 1fr)
+    minmax(15rem, 1.3fr);
   gap: 0.75rem;
 
   padding: 0.9rem 1rem 1rem;
@@ -792,9 +792,9 @@
 @media (max-width: 56rem) {
   .quest-toolbar__selects {
     grid-template-columns:
+      minmax(0, 0.95fr)
       minmax(0, 1fr)
-      minmax(0, 1.3fr)
-      minmax(0, 1fr);
+      minmax(0, 1.3fr);
   }
 }
 

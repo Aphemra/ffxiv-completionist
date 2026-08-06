@@ -34,8 +34,10 @@ import {
   comparePatchVersions,
   formatExpansionName,
   formatQuestCategory,
-  QUEST_CATEGORY_OPTIONS,
+  QUEST_FAMILY_OPTIONS,
+  questMatchesFamily,
   questMatchesSearch,
+  type QuestFamily,
 } from '../utilities/questPresentation';
 
 import {
@@ -108,22 +110,24 @@ export function QuestLogPage() {
 
   const [searchQuery, setSearchQuery] = useState('');
 
-  const expansionFilter = useQuestFilterStore((store) => store.expansionFilter);
-
-  const patchFilter = useQuestFilterStore((store) => store.patchFilter);
-
   const categoryFilter = useQuestFilterStore((store) => store.categoryFilter);
+
+  const primaryFilter = useQuestFilterStore((store) => store.primaryFilter);
+
+  const secondaryFilter = useQuestFilterStore((store) => store.secondaryFilter);
 
   const showCompleted = useQuestFilterStore((store) => store.showCompleted);
 
-  const setExpansionFilter = useQuestFilterStore(
-    (store) => store.setExpansionFilter,
-  );
-
-  const setPatchFilter = useQuestFilterStore((store) => store.setPatchFilter);
-
   const setCategoryFilter = useQuestFilterStore(
     (store) => store.setCategoryFilter,
+  );
+
+  const setPrimaryFilter = useQuestFilterStore(
+    (store) => store.setPrimaryFilter,
+  );
+
+  const setSecondaryFilter = useQuestFilterStore(
+    (store) => store.setSecondaryFilter,
   );
 
   const setShowCompleted = useQuestFilterStore(
@@ -131,6 +135,10 @@ export function QuestLogPage() {
   );
 
   const resetFilters = useQuestFilterStore((store) => store.resetFilters);
+
+  const selectedQuestFamily =
+    QUEST_FAMILY_OPTIONS.find((option) => option.value === categoryFilter) ??
+    QUEST_FAMILY_OPTIONS[0];
 
   const [selectedQuestId, setSelectedQuestId] = useState<string | null>(null);
 
@@ -205,7 +213,7 @@ export function QuestLogPage() {
     const expansionIds = new Set<string>();
 
     for (const collection of catalog.collections) {
-      if (collection.expansionId) {
+      if (collection.category === 'msq' && collection.expansionId) {
         expansionIds.add(collection.expansionId);
       }
     }
@@ -214,7 +222,7 @@ export function QuestLogPage() {
   }, [catalog]);
 
   const patchOptions = useMemo(() => {
-    if (!catalog || expansionFilter === 'all') {
+    if (!catalog || categoryFilter !== 'msq' || primaryFilter === 'all') {
       return [];
     }
 
@@ -222,7 +230,8 @@ export function QuestLogPage() {
 
     for (const collection of catalog.collections) {
       if (
-        collection.expansionId !== expansionFilter ||
+        collection.category !== 'msq' ||
+        collection.expansionId !== primaryFilter ||
         !collection.patch ||
         patches.has(collection.patch)
       ) {
@@ -243,7 +252,7 @@ export function QuestLogPage() {
       value,
       label,
     })).sort((left, right) => comparePatchVersions(left.value, right.value));
-  }, [catalog, expansionFilter]);
+  }, [catalog, categoryFilter, primaryFilter]);
 
   const filteredCollections = useMemo(() => {
     if (!catalog) {
@@ -255,15 +264,17 @@ export function QuestLogPage() {
         const groups = collection.groups
           .map((group) => {
             const quests = group.quests.filter((quest) => {
-              const matchesExpansion =
-                expansionFilter === 'all' ||
-                quest.expansionId === expansionFilter;
+              const matchesCategory = questMatchesFamily(quest, categoryFilter);
 
-              const matchesPatch =
-                patchFilter === 'all' || quest.patch === patchFilter;
+              const matchesPrimaryFilter =
+                categoryFilter !== 'msq' ||
+                primaryFilter === 'all' ||
+                quest.expansionId === primaryFilter;
 
-              const matchesCategory =
-                categoryFilter === 'all' || quest.category === categoryFilter;
+              const matchesSecondaryFilter =
+                categoryFilter !== 'msq' ||
+                secondaryFilter === 'all' ||
+                quest.patch === secondaryFilter;
 
               const matchesSearch = questMatchesSearch(quest, searchQuery);
 
@@ -271,9 +282,9 @@ export function QuestLogPage() {
                 showCompleted || !completedQuestIdSet.has(quest.id);
 
               return (
-                matchesExpansion &&
-                matchesPatch &&
                 matchesCategory &&
+                matchesPrimaryFilter &&
+                matchesSecondaryFilter &&
                 matchesSearch &&
                 matchesCompletion
               );
@@ -294,9 +305,9 @@ export function QuestLogPage() {
       .filter(({ groups }) => groups.length > 0);
   }, [
     catalog,
-    expansionFilter,
-    patchFilter,
     categoryFilter,
+    primaryFilter,
+    secondaryFilter,
     searchQuery,
     completedQuestIdSet,
     showCompleted,
@@ -380,9 +391,9 @@ export function QuestLogPage() {
 
   const hasActiveFilters =
     searchQuery.trim().length > 0 ||
-    expansionFilter !== 'all' ||
-    patchFilter !== 'all' ||
-    categoryFilter !== 'all' ||
+    categoryFilter !== 'msq' ||
+    primaryFilter !== 'all' ||
+    secondaryFilter !== 'all' ||
     !showCompleted;
 
   const shouldAutoExpandMatches = searchQuery.trim().length > 0;
@@ -418,10 +429,6 @@ export function QuestLogPage() {
   function clearFilters(): void {
     setSearchQuery('');
     resetFilters();
-  }
-
-  function handleExpansionChange(expansionId: string): void {
-    setExpansionFilter(expansionId);
   }
 
   function handleToggleQuestCompletion(quest: Quest): void {
@@ -616,66 +623,71 @@ export function QuestLogPage() {
 
             <div className="quest-toolbar__selects">
               <label className="quest-filter">
-                <span>Expansion</span>
-
-                <select
-                  value={expansionFilter}
-                  onChange={(event) => {
-                    handleExpansionChange(event.target.value);
-                  }}
-                >
-                  <option value="all">All expansions</option>
-
-                  {expansionOptions.map((expansionId) => (
-                    <option key={expansionId} value={expansionId}>
-                      {formatExpansionName(expansionId)}
-                    </option>
-                  ))}
-                </select>
-              </label>
-
-              <label className="quest-filter">
-                <span>Patch</span>
-
-                <select
-                  value={patchFilter}
-                  disabled={expansionFilter === 'all'}
-                  onChange={(event) => {
-                    setPatchFilter(event.target.value);
-                  }}
-                >
-                  <option value="all">
-                    {expansionFilter === 'all'
-                      ? 'Select an expansion first'
-                      : 'All expansion patches'}
-                  </option>
-
-                  {patchOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-
-              <label className="quest-filter">
                 <span>Category</span>
 
                 <select
                   value={categoryFilter}
                   onChange={(event) => {
-                    setCategoryFilter(
-                      event.target.value as QuestCategory | 'all',
-                    );
+                    setCategoryFilter(event.target.value as QuestFamily);
                   }}
                 >
-                  <option value="all">All categories</option>
-
-                  {QUEST_CATEGORY_OPTIONS.map((option) => (
+                  {QUEST_FAMILY_OPTIONS.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
                   ))}
+                </select>
+              </label>
+
+              <label className="quest-filter">
+                <span>{selectedQuestFamily.primaryFilterLabel}</span>
+
+                <select
+                  value={primaryFilter}
+                  disabled={categoryFilter !== 'msq'}
+                  onChange={(event) => {
+                    setPrimaryFilter(event.target.value);
+                  }}
+                >
+                  <option value="all">
+                    {categoryFilter === 'msq'
+                      ? 'All expansions'
+                      : `No ${selectedQuestFamily.primaryFilterLabel.toLowerCase()} data loaded`}
+                  </option>
+
+                  {categoryFilter === 'msq' &&
+                    expansionOptions.map((expansionId) => (
+                      <option key={expansionId} value={expansionId}>
+                        {formatExpansionName(expansionId)}
+                      </option>
+                    ))}
+                </select>
+              </label>
+
+              <label className="quest-filter">
+                <span>{selectedQuestFamily.secondaryFilterLabel}</span>
+
+                <select
+                  value={secondaryFilter}
+                  disabled={categoryFilter !== 'msq' || primaryFilter === 'all'}
+                  onChange={(event) => {
+                    setSecondaryFilter(event.target.value);
+                  }}
+                >
+                  <option value="all">
+                    {categoryFilter !== 'msq'
+                      ? `No ${selectedQuestFamily.secondaryFilterLabel.toLowerCase()} data loaded`
+                      : primaryFilter === 'all'
+                        ? 'Select an expansion first'
+                        : 'All expansion patches'}
+                  </option>
+
+                  {categoryFilter === 'msq' &&
+                    patchOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
                 </select>
               </label>
             </div>

@@ -68,6 +68,95 @@ export const QUEST_CATEGORY_OPTIONS = [
   },
 ] satisfies ReadonlyArray<QuestCategoryOption>;
 
+export type QuestFamily =
+  | 'msq'
+  | 'side'
+  | 'feature'
+  | 'jobs'
+  | 'role'
+  | 'side-story'
+  | 'tribal'
+  | 'relic';
+
+interface QuestFamilyOption {
+  value: QuestFamily;
+  label: string;
+
+  categories: readonly QuestCategory[];
+
+  primaryFilterLabel: string;
+  secondaryFilterLabel: string;
+}
+
+export const QUEST_FAMILY_OPTIONS: readonly QuestFamilyOption[] = [
+  {
+    value: 'msq',
+    label: 'Main Scenario',
+    categories: ['msq'],
+    primaryFilterLabel: 'Expansion',
+    secondaryFilterLabel: 'Patch',
+  },
+  {
+    value: 'side',
+    label: 'Side Quests',
+    categories: ['side'],
+    primaryFilterLabel: 'Region',
+    secondaryFilterLabel: 'Zone',
+  },
+  {
+    value: 'feature',
+    label: 'Feature Quests',
+    categories: ['feature'],
+    primaryFilterLabel: 'Region',
+    secondaryFilterLabel: 'Zone',
+  },
+  {
+    value: 'jobs',
+    label: 'Class & Job Quests',
+    categories: ['class', 'job', 'crafting', 'gathering'],
+    primaryFilterLabel: 'Discipline',
+    secondaryFilterLabel: 'Class or Job',
+  },
+  {
+    value: 'role',
+    label: 'Role Quests',
+    categories: ['role'],
+    primaryFilterLabel: 'Expansion',
+    secondaryFilterLabel: 'Role',
+  },
+  {
+    value: 'side-story',
+    label: 'Side Stories',
+    categories: ['side-story'],
+    primaryFilterLabel: 'Series',
+    secondaryFilterLabel: 'Questline',
+  },
+  {
+    value: 'tribal',
+    label: 'Allied Society Quests',
+    categories: ['tribal'],
+    primaryFilterLabel: 'Society',
+    secondaryFilterLabel: 'Questline',
+  },
+  {
+    value: 'relic',
+    label: 'Relic Quests',
+    categories: ['relic'],
+    primaryFilterLabel: 'Relic Series',
+    secondaryFilterLabel: 'Stage',
+  },
+];
+
+export function questMatchesFamily(quest: Quest, family: QuestFamily): boolean {
+  const option = QUEST_FAMILY_OPTIONS.find(
+    (candidate) => candidate.value === family,
+  );
+
+  return (
+    option?.categories.some((category) => category === quest.category) ?? false
+  );
+}
+
 export function formatQuestCategory(category: QuestCategory): string {
   return (
     QUEST_CATEGORY_OPTIONS.find((option) => option.value === category)?.label ??

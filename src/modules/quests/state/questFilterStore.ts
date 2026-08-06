@@ -1,28 +1,30 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
-import type { QuestCategory } from '../data/questSchemas';
-
-type QuestCategoryFilter = QuestCategory | 'all';
+import type { QuestFamily } from '../utilities/questPresentation';
 
 interface QuestFilterState {
-  expansionFilter: string;
-  patchFilter: string;
-  categoryFilter: QuestCategoryFilter;
+  categoryFilter: QuestFamily;
+
+  primaryFilter: string;
+  secondaryFilter: string;
+
   showCompleted: boolean;
 
-  setExpansionFilter: (expansionId: string) => void;
-  setPatchFilter: (patch: string) => void;
-  setCategoryFilter: (category: QuestCategoryFilter) => void;
+  setCategoryFilter: (category: QuestFamily) => void;
+  setPrimaryFilter: (value: string) => void;
+  setSecondaryFilter: (value: string) => void;
   setShowCompleted: (showCompleted: boolean) => void;
 
   resetFilters: () => void;
 }
 
 const DEFAULT_FILTERS = {
-  expansionFilter: 'all',
-  patchFilter: 'all',
-  categoryFilter: 'all' as const,
+  categoryFilter: 'msq' as const,
+
+  primaryFilter: 'all',
+  secondaryFilter: 'all',
+
   showCompleted: true,
 };
 
@@ -31,19 +33,23 @@ export const useQuestFilterStore = create<QuestFilterState>()(
     (set) => ({
       ...DEFAULT_FILTERS,
 
-      setExpansionFilter: (expansionFilter) => {
+      setCategoryFilter: (categoryFilter) => {
         set({
-          expansionFilter,
-          patchFilter: 'all',
+          categoryFilter,
+          primaryFilter: 'all',
+          secondaryFilter: 'all',
         });
       },
 
-      setPatchFilter: (patchFilter) => {
-        set({ patchFilter });
+      setPrimaryFilter: (primaryFilter) => {
+        set({
+          primaryFilter,
+          secondaryFilter: 'all',
+        });
       },
 
-      setCategoryFilter: (categoryFilter) => {
-        set({ categoryFilter });
+      setSecondaryFilter: (secondaryFilter) => {
+        set({ secondaryFilter });
       },
 
       setShowCompleted: (showCompleted) => {
@@ -56,7 +62,7 @@ export const useQuestFilterStore = create<QuestFilterState>()(
     }),
     {
       name: 'ffxiv-completionist-quest-filters',
-      version: 1,
+      version: 2,
       storage: createJSONStorage(() => localStorage),
     },
   ),
