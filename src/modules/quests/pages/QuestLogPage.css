@@ -119,14 +119,45 @@
 
 .quest-toolbar__primary {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: end;
-  gap: 1rem;
+  column-gap: 0.75rem;
+  row-gap: 0.35rem;
 
   padding: 1rem;
 
   border-bottom: 1px solid var(--color-border);
   background: linear-gradient(135deg, rgb(255 255 255 / 2%), transparent 55%);
+}
+
+.quest-toolbar__primary-heading {
+  min-width: 0;
+
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.quest-toolbar__primary-heading > span {
+  color: var(--color-text-muted);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.quest-toolbar__primary-heading > small {
+  overflow: hidden;
+
+  color: var(--color-text-muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .quest-filter {
@@ -147,6 +178,7 @@
 .quest-filter input,
 .quest-filter select {
   width: 100%;
+  height: 2.55rem;
   min-height: 2.55rem;
 
   padding: 0.6rem 0.7rem;
@@ -180,38 +212,77 @@
 .quest-toolbar__selects {
   display: grid;
   grid-template-columns:
-    minmax(8.5rem, 1fr)
-    minmax(18rem, 2fr)
-    minmax(8.5rem, 1fr)
-    minmax(8.5rem, 1fr);
+    minmax(10rem, 1fr)
+    minmax(15rem, 1.3fr)
+    minmax(10rem, 1fr);
   gap: 0.75rem;
 
   padding: 0.9rem 1rem 1rem;
 }
 
-.quest-toolbar__summary {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.65rem;
-}
+.quest-toolbar__completed-button,
+.quest-toolbar__clear-button,
+.quest-empty-results button {
+  min-height: 2.55rem;
 
-.quest-toolbar__summary p {
-  margin: 0;
-  padding: 0.5rem 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  padding: 0.55rem 0.75rem;
 
   border: 1px solid var(--color-border);
-  border-radius: 999px;
+  border-radius: 0.5rem;
 
-  color: var(--color-text-muted);
-  background: var(--color-background);
+  color: var(--color-text-secondary);
+  background: var(--color-surface-raised);
 
-  font-size: 0.67rem;
-  font-weight: 700;
+  font-size: 0.65rem;
+  font-weight: 800;
   white-space: nowrap;
+
+  cursor: pointer;
 }
 
-.quest-toolbar__summary button,
+.quest-toolbar__completed-button,
+.quest-toolbar__clear-button {
+  height: 2.55rem;
+  min-height: 2.55rem;
+
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.quest-toolbar__completed-button {
+  width: 8.25rem;
+}
+
+.quest-toolbar__completed-button svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.quest-toolbar__completed-button:hover,
+.quest-toolbar__clear-button:hover:not(:disabled),
+.quest-empty-results button:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+  background: var(--color-surface-hover);
+}
+
+.quest-toolbar__completed-button:focus-visible,
+.quest-toolbar__clear-button:focus-visible,
+.quest-empty-results button:focus-visible {
+  outline: 0.15rem solid var(--color-accent-light);
+  outline-offset: 0.15rem;
+}
+
+.quest-toolbar__clear-button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
 .quest-empty-results button {
   min-height: 2.1rem;
 
@@ -229,22 +300,15 @@
   cursor: pointer;
 }
 
-.quest-toolbar__summary button:hover:not(:disabled),
 .quest-empty-results button:hover {
   border-color: var(--color-border-strong);
   color: var(--color-text-primary);
   background: var(--color-surface-hover);
 }
 
-.quest-toolbar__summary button:focus-visible,
 .quest-empty-results button:focus-visible {
   outline: 0.15rem solid var(--color-accent-light);
   outline-offset: 0.15rem;
-}
-
-.quest-toolbar__summary button:disabled {
-  opacity: 0.45;
-  cursor: default;
 }
 
 .quest-collections {
@@ -726,16 +790,11 @@
 }
 
 @media (max-width: 56rem) {
-  .quest-toolbar__primary {
-    grid-template-columns: 1fr;
-  }
-
-  .quest-toolbar__summary {
-    justify-content: space-between;
-  }
-
   .quest-toolbar__selects {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.3fr)
+      minmax(0, 1fr);
   }
 }
 
@@ -746,19 +805,6 @@
 
   .quest-toolbar__selects {
     grid-template-columns: 1fr;
-  }
-
-  .quest-toolbar__summary {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .quest-toolbar__summary p {
-    text-align: center;
-  }
-
-  .quest-toolbar__summary button {
-    width: 100%;
   }
 
   .quest-collection__header {
@@ -780,6 +826,26 @@
   .quest-group__summary {
     display: grid;
     justify-items: end;
+  }
+
+  .quest-toolbar__clear-button {
+    width: 100%;
+  }
+
+  .quest-toolbar__primary {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .quest-filter--search {
+    grid-column: 1 / -1;
+  }
+
+  .quest-toolbar__clear-button {
+    align-self: end;
+  }
+
+  .quest-toolbar__completed-button {
+    align-self: end;
   }
 }
 

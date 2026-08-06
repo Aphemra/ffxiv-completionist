@@ -1,6 +1,13 @@
 import { useMemo, useState } from 'react';
 
-import { AlertTriangle, Check, ChevronRight, SearchX } from 'lucide-react';
+import {
+  AlertTriangle,
+  Check,
+  ChevronRight,
+  Eye,
+  EyeOff,
+  SearchX,
+} from 'lucide-react';
 
 import { Link } from 'react-router';
 
@@ -10,6 +17,8 @@ import { AnimatedCollapse } from '../../../shared/components/AnimatedCollapse';
 
 import { QuestDetailsDrawer } from '../components/QuestDetailsDrawer';
 import { QuestEntry } from '../components/QuestEntry';
+
+import { useQuestFilterStore } from '../state/questFilterStore';
 
 import type {
   Quest,
@@ -26,10 +35,7 @@ import {
   formatExpansionName,
   formatQuestCategory,
   QUEST_CATEGORY_OPTIONS,
-  QUEST_STATUS_OPTIONS,
   questMatchesSearch,
-  questMatchesStatus,
-  type QuestStatusFilter,
 } from '../utilities/questPresentation';
 
 import { getPreviousQuestIds } from '../utilities/questProgression';
@@ -105,15 +111,29 @@ export function QuestLogPage() {
 
   const [searchQuery, setSearchQuery] = useState('');
 
-  const [expansionFilter, setExpansionFilter] = useState('all');
+  const expansionFilter = useQuestFilterStore((store) => store.expansionFilter);
 
-  const [patchFilter, setPatchFilter] = useState('all');
+  const patchFilter = useQuestFilterStore((store) => store.patchFilter);
 
-  const [categoryFilter, setCategoryFilter] = useState<QuestCategory | 'all'>(
-    'all',
+  const categoryFilter = useQuestFilterStore((store) => store.categoryFilter);
+
+  const showCompleted = useQuestFilterStore((store) => store.showCompleted);
+
+  const setExpansionFilter = useQuestFilterStore(
+    (store) => store.setExpansionFilter,
   );
 
-  const [statusFilter, setStatusFilter] = useState<QuestStatusFilter>('all');
+  const setPatchFilter = useQuestFilterStore((store) => store.setPatchFilter);
+
+  const setCategoryFilter = useQuestFilterStore(
+    (store) => store.setCategoryFilter,
+  );
+
+  const setShowCompleted = useQuestFilterStore(
+    (store) => store.setShowCompleted,
+  );
+
+  const resetFilters = useQuestFilterStore((store) => store.resetFilters);
 
   const [selectedQuestId, setSelectedQuestId] = useState<string | null>(null);
 
@@ -187,9 +207,7 @@ export function QuestLogPage() {
       }
     }
 
-    return Array.from(expansionIds).sort((left, right) =>
-      formatExpansionName(left).localeCompare(formatExpansionName(right)),
-    );
+    return Array.from(expansionIds);
   }, [catalog]);
 
   const patchOptions = useMemo(() => {
@@ -229,14 +247,6 @@ export function QuestLogPage() {
       return [];
     }
 
-    const progressContext = {
-      completedQuestIds: completedQuestIdSet,
-
-      bookmarkedQuestIds: bookmarkedQuestIdSet,
-
-      currentQuestId: profile.currentQuestId,
-    };
-
     return catalog.collections
       .map((collection) => {
         const groups = collection.groups
@@ -254,18 +264,15 @@ export function QuestLogPage() {
 
               const matchesSearch = questMatchesSearch(quest, searchQuery);
 
-              const matchesStatus = questMatchesStatus(
-                quest,
-                statusFilter,
-                progressContext,
-              );
+              const matchesCompletion =
+                showCompleted || !completedQuestIdSet.has(quest.id);
 
               return (
                 matchesExpansion &&
                 matchesPatch &&
                 matchesCategory &&
                 matchesSearch &&
-                matchesStatus
+                matchesCompletion
               );
             });
 
@@ -288,10 +295,8 @@ export function QuestLogPage() {
     patchFilter,
     categoryFilter,
     searchQuery,
-    statusFilter,
     completedQuestIdSet,
-    bookmarkedQuestIdSet,
-    profile.currentQuestId,
+    showCompleted,
   ]);
 
   const patchSections = useMemo(() => {
@@ -375,12 +380,9 @@ export function QuestLogPage() {
     expansionFilter !== 'all' ||
     patchFilter !== 'all' ||
     categoryFilter !== 'all' ||
-    statusFilter !== 'all';
+    !showCompleted;
 
-  const shouldAutoExpandMatches =
-    searchQuery.trim().length > 0 ||
-    statusFilter === 'current' ||
-    statusFilter === 'bookmarked';
+  const shouldAutoExpandMatches = searchQuery.trim().length > 0;
 
   function togglePatch(patchId: string): void {
     setExpandedPatchIds((current) => {
@@ -412,18 +414,11 @@ export function QuestLogPage() {
 
   function clearFilters(): void {
     setSearchQuery('');
-    setExpansionFilter('all');
-    setPatchFilter('all');
-    setCategoryFilter('all');
-    setStatusFilter('all');
+    resetFilters();
   }
 
   function handleExpansionChange(expansionId: string): void {
     setExpansionFilter(expansionId);
-
-    // A selected patch may not exist in the
-    // newly selected expansion.
-    setPatchFilter('all');
   }
 
   function handleToggleQuestCompletion(quest: Quest): void {
@@ -595,11 +590,19 @@ export function QuestLogPage() {
         <>
           <section className="quest-toolbar" aria-label="Quest filters">
             <div className="quest-toolbar__primary">
-              <label className="quest-filter quest-filter--search">
+              <div className="quest-toolbar__primary-heading">
                 <span>Search</span>
 
+                <small>
+                  {visibleQuestCount.toLocaleString()} of{' '}
+                  {catalog.questCount.toLocaleString()} quests shown
+                </small>
+              </div>
+
+              <label className="quest-filter quest-filter--search">
                 <input
                   type="search"
+                  aria-label="Search quests"
                   value={searchQuery}
                   placeholder="Quest, duty, unlock, NPC, zone, item..."
                   onChange={(event) => {
@@ -608,24 +611,98 @@ export function QuestLogPage() {
                 />
               </label>
 
-              <div className="quest-toolbar__summary">
-                <p>
-                  {visibleQuestCount.toLocaleString()} of{' '}
-                  {catalog.questCount.toLocaleString()} quests shown
-                </p>
+              <button
+                className="quest-toolbar__completed-button"
+                type="button"
+                onClick={() => {
+                  setShowCompleted(!showCompleted);
+                }}
+              >
+                {showCompleted ? (
+                  <EyeOff aria-hidden="true" />
+                ) : (
+                  <Eye aria-hidden="true" />
+                )}
 
-                <button
-                  type="button"
-                  disabled={!hasActiveFilters}
-                  onClick={clearFilters}
-                >
-                  Clear filters
-                </button>
-              </div>
+                <span>
+                  {showCompleted ? 'Hide completed' : 'Show completed'}
+                </span>
+              </button>
+
+              <button
+                className="quest-toolbar__clear-button"
+                type="button"
+                disabled={!hasActiveFilters}
+                onClick={clearFilters}
+              >
+                Clear filters
+              </button>
             </div>
 
             <div className="quest-toolbar__selects">
-              {/* Leave all four existing filter labels and selects here unchanged. */}
+              <label className="quest-filter">
+                <span>Expansion</span>
+
+                <select
+                  value={expansionFilter}
+                  onChange={(event) => {
+                    handleExpansionChange(event.target.value);
+                  }}
+                >
+                  <option value="all">All expansions</option>
+
+                  {expansionOptions.map((expansionId) => (
+                    <option key={expansionId} value={expansionId}>
+                      {formatExpansionName(expansionId)}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="quest-filter">
+                <span>Patch</span>
+
+                <select
+                  value={patchFilter}
+                  disabled={expansionFilter === 'all'}
+                  onChange={(event) => {
+                    setPatchFilter(event.target.value);
+                  }}
+                >
+                  <option value="all">
+                    {expansionFilter === 'all'
+                      ? 'Select an expansion first'
+                      : 'All expansion patches'}
+                  </option>
+
+                  {patchOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="quest-filter">
+                <span>Category</span>
+
+                <select
+                  value={categoryFilter}
+                  onChange={(event) => {
+                    setCategoryFilter(
+                      event.target.value as QuestCategory | 'all',
+                    );
+                  }}
+                >
+                  <option value="all">All categories</option>
+
+                  {QUEST_CATEGORY_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
             </div>
           </section>
 
@@ -904,8 +981,8 @@ export function QuestLogPage() {
               <h2>No quests match these filters</h2>
 
               <p>
-                Try a broader search or clear the active expansion, patch,
-                category, and progress filters.
+                Try a broader search, show completed quests, or clear the active
+                filters.
               </p>
 
               <button type="button" onClick={clearFilters}>
