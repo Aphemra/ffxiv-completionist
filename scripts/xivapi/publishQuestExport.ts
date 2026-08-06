@@ -279,6 +279,7 @@ function convertQuest(
     nextQuestIds: nextQuestIds.length > 0 ? nextQuestIds : undefined,
     rawRelations: quest.rawRelations,
     requirements: requirements.length > 0 ? requirements : undefined,
+    questItems: quest.questItems.length > 0 ? quest.questItems : undefined,
     objectives: quest.objectives.length > 0 ? quest.objectives : undefined,
     rewards: {
       experience: quest.rewards.experience ?? undefined,

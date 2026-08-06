@@ -1348,14 +1348,253 @@ function normalizeRequirement(rawRequirement: unknown): JsonObject | undefined {
   return undefined;
 }
 
-function extractRequirements(
+function normalizeQuestItem(rawQuestItem: unknown): JsonObject | undefined {
+  const questItem = asObject(rawQuestItem);
+
+  if (!questItem) {
+    return undefined;
+  }
+
+  const itemName = readString(questItem.itemName) ?? readString(questItem.name);
+
+  const sourceRowId =
+    readInteger(questItem.sourceRowId) ?? readInteger(questItem.itemRowId);
+
+  const rawSourceSheet =
+    readString(questItem.sourceSheet) ?? readString(questItem.itemSheet);
+
+  const sourceSheet =
+    rawSourceSheet === 'EventItem' || rawSourceSheet === 'event-item'
+      ? 'event-item'
+      : rawSourceSheet === 'Item' || rawSourceSheet === 'item'
+        ? 'item'
+        : undefined;
+
+  const rawItemId = readString(questItem.itemId);
+
+  const itemId = rawItemId
+    ? slugify(rawItemId)
+    : sourceRowId !== undefined
+      ? sourceSheet === 'event-item'
+        ? `event-item-${sourceRowId}`
+        : `item-${sourceRowId}`
+      : itemName
+        ? slugify(itemName)
+        : undefined;
+
+  if (!itemId || !itemName) {
+    return undefined;
+  }
+
+  const result: JsonObject = {
+    itemId,
+    itemName,
+  };
+
+  if (sourceRowId !== undefined && sourceRowId > 0) {
+    result.sourceRowId = sourceRowId;
+  }
+
+  if (sourceSheet) {
+    result.sourceSheet = sourceSheet;
+  }
+
+  const quantity = readInteger(questItem.quantity);
+
+  if (quantity !== undefined && quantity > 0) {
+    result.quantity = quantity;
+  }
+
+  const quality = readString(questItem.quality);
+
+  if (
+    quality === 'normal' ||
+    quality === 'high-quality' ||
+    quality === 'either'
+  ) {
+    result.quality = quality;
+  }
+
+  const usage = readString(questItem.usage);
+
+  result.usage =
+    usage === 'required-before-starting' ||
+    usage === 'obtained-during-quest' ||
+    usage === 'used-during-quest' ||
+    usage === 'turn-in' ||
+    usage === 'equip' ||
+    usage === 'craft' ||
+    usage === 'gather' ||
+    usage === 'unknown'
+      ? usage
+      : 'used-during-quest';
+
+  const sourceInstruction = readString(questItem.sourceInstruction);
+
+  if (sourceInstruction) {
+    result.sourceInstruction = sourceInstruction;
+  }
+
+  const notes = readString(questItem.notes);
+
+  if (notes) {
+    result.notes = notes;
+  }
+
+  return result;
+}
+
+function extractQuestItems(
   review: JsonObject,
   draft: JsonObject,
-  level: number | null,
   questId: string,
   questName: string,
   issues: ExportIssue[],
   issueKeys: Set<string>,
+): JsonObject[] {
+  const reviewQuestItems = asObject(review.questItems);
+  const reviewRequirements = asObject(review.requirements);
+  const unresolvedReferences = asObject(review.unresolvedReferences);
+
+  const draftQuestItems = asArray(draft.questItems);
+  const resolvedQuestItemReferences = asArray(reviewQuestItems?.references);
+  const legacyQuestItemReferences = [
+    ...asArray(reviewRequirements?.itemReferences),
+    ...asArray(reviewRequirements?.requiredItems),
+  ];
+
+  /*
+   * Use one representation only. Combining all three would count
+   * the same item more than once because the resolved draft and
+   * review both describe the same XIVAPI reference.
+   */
+  const rawQuestItems =
+    draftQuestItems.length > 0
+      ? draftQuestItems
+      : resolvedQuestItemReferences.length > 0
+        ? resolvedQuestItemReferences
+        : legacyQuestItemReferences;
+
+  const currentUnresolvedReferences = asArray(
+    reviewQuestItems?.unresolvedReferences,
+  );
+  const legacyUnresolvedReferences = [
+    ...asArray(reviewRequirements?.unresolvedItems),
+    ...asArray(unresolvedReferences?.items),
+  ];
+
+  const rawUnresolvedReferences =
+    currentUnresolvedReferences.length > 0
+      ? currentUnresolvedReferences
+      : legacyUnresolvedReferences;
+
+  for (const rawReference of rawUnresolvedReferences) {
+    const reference = asObject(rawReference);
+
+    const itemSheet =
+      readString(reference?.itemSheet) ??
+      readString(reference?.sourceSheet) ??
+      'unknown sheet';
+
+    const itemRowId =
+      readInteger(reference?.itemRowId) ?? readInteger(reference?.sourceRowId);
+
+    const sourceInstruction =
+      readString(reference?.sourceInstruction) ?? 'unknown instruction';
+
+    pushIssue(issues, issueKeys, {
+      questId,
+      questName,
+
+      field: 'questItems.itemName',
+
+      message: [
+        `Could not resolve ${itemSheet}`,
+        `row ${itemRowId ?? 'unknown'}`,
+        `from ${sourceInstruction}.`,
+      ].join(' '),
+    });
+  }
+
+  const consolidatedQuestItems = new Map<string, JsonObject>();
+
+  for (const rawQuestItem of rawQuestItems) {
+    const questItem = normalizeQuestItem(rawQuestItem);
+
+    if (!questItem) {
+      pushIssue(issues, issueKeys, {
+        questId,
+        questName,
+
+        field: 'questItems.itemName',
+
+        message: 'A quest item could not be resolved to an item ID and name.',
+      });
+
+      continue;
+    }
+
+    const itemId = readString(questItem.itemId);
+    const itemName = readString(questItem.itemName);
+
+    if (!itemId || !itemName) {
+      continue;
+    }
+
+    const sourceSheet = readString(questItem.sourceSheet) ?? 'unknown';
+
+    const sourceRowId = readInteger(questItem.sourceRowId);
+
+    const consolidationKey = [
+      sourceSheet,
+      sourceRowId !== undefined ? String(sourceRowId) : itemId,
+      normalizeQuestName(itemName),
+    ].join('|');
+
+    const existingQuestItem = consolidatedQuestItems.get(consolidationKey);
+
+    if (!existingQuestItem) {
+      consolidatedQuestItems.set(consolidationKey, questItem);
+
+      continue;
+    }
+
+    const existingQuantity = readInteger(existingQuestItem.quantity);
+    const incomingQuantity = readInteger(questItem.quantity);
+
+    if (existingQuantity !== undefined && incomingQuantity !== undefined) {
+      existingQuestItem.quantity = existingQuantity + incomingQuantity;
+    } else {
+      delete existingQuestItem.quantity;
+    }
+  }
+
+  const questItems = Array.from(consolidatedQuestItems.values());
+
+  for (const questItem of questItems) {
+    if (readInteger(questItem.quantity) !== undefined) {
+      continue;
+    }
+
+    const itemName = readString(questItem.itemName) ?? 'unknown item';
+
+    pushIssue(issues, issueKeys, {
+      questId,
+      questName,
+
+      field: 'questItems.quantity',
+
+      message: `Confirm the quest item quantity for ${itemName}.`,
+    });
+  }
+
+  return questItems;
+}
+
+function extractRequirements(
+  review: JsonObject,
+  draft: JsonObject,
+  level: number | null,
 ): JsonObject[] {
   const requirements: JsonObject[] = [];
 
@@ -1366,6 +1605,11 @@ function extractRequirements(
     });
   }
 
+  /*
+   * Explicit draft requirements remain valid. This preserves
+   * support for genuine item, crafting, gathering, and feature
+   * prerequisites entered by a future resolver or curator.
+   */
   for (const rawRequirement of asArray(draft.requirements)) {
     const requirement = normalizeRequirement(rawRequirement);
 
@@ -1402,111 +1646,6 @@ function extractRequirements(
       requirements.push(requirement);
     }
   }
-
-  for (const rawReference of asArray(reviewRequirements?.unresolvedItems)) {
-    const reference = asObject(rawReference);
-
-    if (!reference) {
-      continue;
-    }
-
-    const itemSheet = readString(reference.itemSheet) ?? 'unknown sheet';
-
-    const itemRowId = readInteger(reference.itemRowId);
-
-    const sourceInstruction =
-      readString(reference.sourceInstruction) ?? 'unknown instruction';
-
-    pushIssue(issues, issueKeys, {
-      questId,
-      questName,
-
-      field: 'requirements.item.name',
-
-      message: [
-        `Could not resolve ${itemSheet}`,
-        `row ${itemRowId ?? 'unknown'}`,
-        `from ${sourceInstruction}.`,
-      ].join(' '),
-    });
-  }
-
-  const itemReferences = [
-    ...asArray(reviewRequirements?.itemReferences),
-
-    ...asArray(reviewRequirements?.requiredItems),
-  ];
-
-  const consolidatedItemRequirements = new Map<string, JsonObject>();
-
-  for (const rawReference of itemReferences) {
-    const reference = asObject(rawReference);
-
-    if (!reference) {
-      continue;
-    }
-
-    const itemName =
-      readString(reference.name) ?? readString(reference.itemName);
-
-    const itemRowId = readInteger(reference.itemRowId);
-
-    const importedItemId = readString(reference.itemId);
-
-    const itemSheet = readString(reference.itemSheet);
-
-    if (!itemName) {
-      continue;
-    }
-
-    const quantity = readInteger(reference.quantity) ?? null;
-
-    const itemId =
-      importedItemId ??
-      (itemRowId !== undefined
-        ? itemSheet === 'EventItem'
-          ? `event-item-${itemRowId}`
-          : `item-${itemRowId}`
-        : slugify(itemName));
-
-    const consolidationKey = [
-      itemSheet ?? 'unknown',
-      normalizeQuestName(itemName),
-    ].join('|');
-
-    const existingRequirement =
-      consolidatedItemRequirements.get(consolidationKey);
-
-    if (existingRequirement) {
-      const existingQuantity = readInteger(existingRequirement.quantity);
-
-      existingRequirement.quantity =
-        existingQuantity !== undefined && quantity !== null
-          ? existingQuantity + quantity
-          : null;
-    } else {
-      consolidatedItemRequirements.set(consolidationKey, {
-        type: 'item',
-
-        itemId,
-        itemName,
-        quantity,
-      });
-    }
-
-    if (quantity === null) {
-      pushIssue(issues, issueKeys, {
-        questId,
-        questName,
-
-        field: 'requirements.item.quantity',
-
-        message: `Confirm the required quantity for ${itemName}.`,
-      });
-    }
-  }
-
-  requirements.push(...consolidatedItemRequirements.values());
 
   const uniqueRequirements = new Map<string, JsonObject>();
 
@@ -1970,10 +2109,11 @@ function createQuestEntry(
 
     repeatability: draft.repeatability,
 
-    requirements: extractRequirements(
+    requirements: extractRequirements(reviewObject, draft, level),
+
+    questItems: extractQuestItems(
       reviewObject,
       draft,
-      level,
       questId,
       quest.name,
       issues,
