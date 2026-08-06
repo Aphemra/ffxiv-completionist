@@ -35,6 +35,7 @@ import {
   formatExpansionName,
   formatQuestCategory,
   QUEST_FAMILY_OPTIONS,
+  questCategoryMatchesFamily,
   questMatchesFamily,
   questMatchesSearch,
   type QuestFamily,
@@ -254,6 +255,70 @@ export function QuestLogPage() {
     })).sort((left, right) => comparePatchVersions(left.value, right.value));
   }, [catalog, categoryFilter, primaryFilter]);
 
+  const nonMsqPrimaryOptions = useMemo(() => {
+    if (!catalog || categoryFilter === 'msq') {
+      return [];
+    }
+
+    const options = new Map<string, string>();
+
+    for (const collection of catalog.collections) {
+      if (!questCategoryMatchesFamily(collection.category, categoryFilter)) {
+        continue;
+      }
+
+      const primaryFacet = collection.filterFacets?.primary;
+
+      if (!primaryFacet) {
+        continue;
+      }
+
+      options.set(primaryFacet.id, primaryFacet.name);
+    }
+
+    return Array.from(options, ([value, label]) => ({
+      value,
+      label,
+    })).sort((left, right) => left.label.localeCompare(right.label));
+  }, [catalog, categoryFilter]);
+
+  const nonMsqSecondaryOptions = useMemo(() => {
+    if (!catalog || categoryFilter === 'msq' || primaryFilter === 'all') {
+      return [];
+    }
+
+    const options = new Map<string, string>();
+
+    for (const collection of catalog.collections) {
+      if (
+        !questCategoryMatchesFamily(collection.category, categoryFilter) ||
+        collection.filterFacets?.primary.id !== primaryFilter
+      ) {
+        continue;
+      }
+
+      const secondaryFacet = collection.filterFacets.secondary;
+
+      options.set(secondaryFacet.id, secondaryFacet.name);
+    }
+
+    return Array.from(options, ([value, label]) => ({
+      value,
+      label,
+    })).sort((left, right) => left.label.localeCompare(right.label));
+  }, [catalog, categoryFilter, primaryFilter]);
+
+  const primaryFilterOptions =
+    categoryFilter === 'msq'
+      ? expansionOptions.map((expansionId) => ({
+          value: expansionId,
+          label: formatExpansionName(expansionId),
+        }))
+      : nonMsqPrimaryOptions;
+
+  const secondaryFilterOptions =
+    categoryFilter === 'msq' ? patchOptions : nonMsqSecondaryOptions;
+
   const filteredCollections = useMemo(() => {
     if (!catalog) {
       return [];
@@ -267,14 +332,16 @@ export function QuestLogPage() {
               const matchesCategory = questMatchesFamily(quest, categoryFilter);
 
               const matchesPrimaryFilter =
-                categoryFilter !== 'msq' ||
                 primaryFilter === 'all' ||
-                quest.expansionId === primaryFilter;
+                (categoryFilter === 'msq'
+                  ? quest.expansionId === primaryFilter
+                  : collection.filterFacets?.primary.id === primaryFilter);
 
               const matchesSecondaryFilter =
-                categoryFilter !== 'msq' ||
                 secondaryFilter === 'all' ||
-                quest.patch === secondaryFilter;
+                (categoryFilter === 'msq'
+                  ? quest.patch === secondaryFilter
+                  : collection.filterFacets?.secondary.id === secondaryFilter);
 
               const matchesSearch = questMatchesSearch(quest, searchQuery);
 
@@ -463,6 +530,16 @@ export function QuestLogPage() {
     );
   }
 
+  const primaryAllLabel =
+    categoryFilter === 'msq'
+      ? 'All expansions'
+      : `All ${selectedQuestFamily.primaryFilterLabel.toLowerCase()} options`;
+
+  const secondaryAllLabel =
+    categoryFilter === 'msq'
+      ? 'All expansion patches'
+      : `All ${selectedQuestFamily.secondaryFilterLabel.toLowerCase()} options`;
+
   return (
     <div className="quest-log-page">
       <header className="page-header">
@@ -644,23 +721,22 @@ export function QuestLogPage() {
 
                 <select
                   value={primaryFilter}
-                  disabled={categoryFilter !== 'msq'}
+                  disabled={primaryFilterOptions.length === 0}
                   onChange={(event) => {
                     setPrimaryFilter(event.target.value);
                   }}
                 >
                   <option value="all">
-                    {categoryFilter === 'msq'
-                      ? 'All expansions'
-                      : `No ${selectedQuestFamily.primaryFilterLabel.toLowerCase()} data loaded`}
+                    {primaryFilterOptions.length === 0
+                      ? `No ${selectedQuestFamily.primaryFilterLabel.toLowerCase()} data loaded`
+                      : primaryAllLabel}
                   </option>
 
-                  {categoryFilter === 'msq' &&
-                    expansionOptions.map((expansionId) => (
-                      <option key={expansionId} value={expansionId}>
-                        {formatExpansionName(expansionId)}
-                      </option>
-                    ))}
+                  {primaryFilterOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
                 </select>
               </label>
 
@@ -669,25 +745,27 @@ export function QuestLogPage() {
 
                 <select
                   value={secondaryFilter}
-                  disabled={categoryFilter !== 'msq' || primaryFilter === 'all'}
+                  disabled={
+                    primaryFilter === 'all' ||
+                    secondaryFilterOptions.length === 0
+                  }
                   onChange={(event) => {
                     setSecondaryFilter(event.target.value);
                   }}
                 >
                   <option value="all">
-                    {categoryFilter !== 'msq'
-                      ? `No ${selectedQuestFamily.secondaryFilterLabel.toLowerCase()} data loaded`
-                      : primaryFilter === 'all'
-                        ? 'Select an expansion first'
-                        : 'All expansion patches'}
+                    {primaryFilter === 'all'
+                      ? `Select a ${selectedQuestFamily.primaryFilterLabel.toLowerCase()} first`
+                      : secondaryFilterOptions.length === 0
+                        ? `No ${selectedQuestFamily.secondaryFilterLabel.toLowerCase()} data loaded`
+                        : secondaryAllLabel}
                   </option>
 
-                  {categoryFilter === 'msq' &&
-                    patchOptions.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
-                      </option>
-                    ))}
+                  {secondaryFilterOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
                 </select>
               </label>
             </div>

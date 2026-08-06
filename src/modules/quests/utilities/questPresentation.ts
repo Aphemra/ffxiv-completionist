@@ -147,14 +147,23 @@ export const QUEST_FAMILY_OPTIONS: readonly QuestFamilyOption[] = [
   },
 ];
 
-export function questMatchesFamily(quest: Quest, family: QuestFamily): boolean {
+export function questCategoryMatchesFamily(
+  category: QuestCategory,
+  family: QuestFamily,
+): boolean {
   const option = QUEST_FAMILY_OPTIONS.find(
     (candidate) => candidate.value === family,
   );
 
   return (
-    option?.categories.some((category) => category === quest.category) ?? false
+    option?.categories.some(
+      (candidateCategory) => candidateCategory === category,
+    ) ?? false
   );
+}
+
+export function questMatchesFamily(quest: Quest, family: QuestFamily): boolean {
+  return questCategoryMatchesFamily(quest.category, family);
 }
 
 export function formatQuestCategory(category: QuestCategory): string {

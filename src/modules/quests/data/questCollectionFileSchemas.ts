@@ -80,6 +80,8 @@ function createCollectionMetadata(manifestEntry: QuestManifestEntry) {
     patch: manifestEntry.patch,
     classJobId: manifestEntry.classJobId,
 
+    filterFacets: manifestEntry.filterFacets,
+
     availability: manifestEntry.availability,
 
     sortOrder: manifestEntry.sortOrder,

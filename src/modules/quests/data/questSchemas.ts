@@ -565,6 +565,16 @@ export const questGroupSchema = z.strictObject({
   extensions: extensionsSchema.optional(),
 });
 
+export const questCollectionFilterFacetSchema = z.strictObject({
+  id: gameDataIdSchema,
+  name: nonEmptyStringSchema,
+});
+
+export const questCollectionFilterFacetsSchema = z.strictObject({
+  primary: questCollectionFilterFacetSchema,
+  secondary: questCollectionFilterFacetSchema,
+});
+
 export const questCollectionSchema = z
   .strictObject({
     schemaVersion: z.literal(1),
@@ -580,6 +590,8 @@ export const questCollectionSchema = z
     expansionId: gameDataIdSchema.optional(),
     patch: patchVersionSchema.optional(),
     classJobId: gameDataIdSchema.optional(),
+
+    filterFacets: questCollectionFilterFacetsSchema.optional(),
 
     availability: questAvailabilitySchema.optional(),
 
@@ -629,6 +641,8 @@ export const questManifestEntrySchema = z.strictObject({
   expansionId: gameDataIdSchema,
   patch: patchVersionSchema,
   classJobId: gameDataIdSchema.optional(),
+
+  filterFacets: questCollectionFilterFacetsSchema.optional(),
 
   availability: questAvailabilitySchema.optional(),
 
