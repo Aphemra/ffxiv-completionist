@@ -76,10 +76,15 @@ export const QUEST_REVIEW_FIELDS = [
   'GilReward',
 
   // Guaranteed item rewards
-  'ItemRewardType',
   'Reward[].Name',
   'Reward[].Icon',
+  'Reward[].ItemUICategory.Name',
+  'Reward[].ItemAction.Action.row_id',
+  'Reward[].ItemAction.Data',
+  'Reward[].AdditionalData.Name',
+  'Reward[].AdditionalData.Singular',
   'ItemCountReward',
+  'ItemIsHQReward',
   'RewardStain[].Name',
 
   // Choice rewards

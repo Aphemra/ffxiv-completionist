@@ -6,6 +6,8 @@ import { projectRoot, writeJsonFile } from './paths';
 
 import { xivapiRowResponseSchema } from './schemas';
 
+import { readSystemRewardValues } from './questUnlockCatalog';
+
 import {
   interpretQuestDutyReferences,
   interpretQuestUnlocks,
@@ -1135,7 +1137,7 @@ async function main(): Promise<void> {
 
         questLevelOffset: readInteger(fields.QuestLevelOffset),
 
-        systemReward: readInteger(fields.SystemReward),
+        systemRewards: readSystemRewardValues(fields.SystemReward),
 
         scriptParameters,
 

@@ -14,7 +14,10 @@ import { readXivapiPins } from './pins';
 
 import { xivapiSheetResponseSchema } from './schemas';
 
-import { isReviewedSystemReward } from './questUnlockCatalog';
+import {
+  isReviewedSystemReward,
+  readSystemRewardValues,
+} from './questUnlockCatalog';
 
 import {
   questChainExportSchema,
@@ -2057,13 +2060,15 @@ function createQuestEntry(
 
   const xivapiSourceData = asObject(sourceData?.xivapi);
 
-  const systemReward = readInteger(xivapiSourceData?.systemReward);
+  const systemRewards = readSystemRewardValues(
+    xivapiSourceData?.systemRewards ?? xivapiSourceData?.systemReward,
+  );
 
-  if (
-    systemReward !== undefined &&
-    systemReward > 0 &&
-    !isReviewedSystemReward(quest.rowId, systemReward)
-  ) {
+  for (const systemReward of systemRewards) {
+    if (isReviewedSystemReward(quest.rowId, systemReward)) {
+      continue;
+    }
+
     pushIssue(issues, issueKeys, {
       questId,
       questName: quest.name,

@@ -151,6 +151,77 @@ function createDutyUnlock(value: unknown): InterpretedQuestUnlock | undefined {
   };
 }
 
+function createCollectibleRewardUnlock(
+  rawItem: unknown,
+): InterpretedQuestUnlock | undefined {
+  const itemRowId = relationRowId(rawItem);
+
+  const itemFields = relationFields(rawItem);
+
+  const itemName = relationName(rawItem, ['Name']);
+
+  if (itemRowId === undefined || !itemFields || !itemName) {
+    return undefined;
+  }
+
+  const itemActionFields = relationFields(itemFields.ItemAction);
+
+  const actionRowId = relationRowId(itemActionFields?.Action);
+
+  const dataRowId = asArray(itemActionFields?.Data)
+    .map(readInteger)
+    .find((rowId): rowId is number => rowId !== undefined && rowId > 0);
+
+  const additionalDataRowId = relationRowId(itemFields.AdditionalData);
+
+  const relatedRowId = dataRowId ?? additionalDataRowId;
+
+  if (relatedRowId === undefined) {
+    return undefined;
+  }
+
+  let type: string;
+  let targetId: string;
+  let notes: string;
+
+  switch (actionRowId) {
+    case 1322:
+      type = 'mount';
+      targetId = `mount-${relatedRowId}`;
+      notes = `Using ${itemName} unlocks this mount.`;
+      break;
+
+    case 853:
+      type = 'minion';
+      targetId = `minion-${relatedRowId}`;
+      notes = `Using ${itemName} unlocks this minion.`;
+      break;
+
+    case 3357:
+      type = 'triple-triad-card';
+      targetId = `triple-triad-card-${relatedRowId}`;
+      notes = `Using ${itemName} adds this Triple Triad card.`;
+      break;
+
+    case 25183:
+      type = 'orchestrion-roll';
+      targetId = `orchestrion-roll-${relatedRowId}`;
+      notes = `Using ${itemName} adds this orchestrion roll.`;
+      break;
+
+    default:
+      return undefined;
+  }
+
+  return {
+    type,
+    targetId,
+    sourceRowId: itemRowId,
+    name: itemName,
+    notes,
+  };
+}
+
 export function interpretQuestUnlocks(
   rawFields: unknown,
   questRowId?: number,
@@ -221,6 +292,14 @@ export function interpretQuestUnlocks(
 
   if (dutyUnlock) {
     unlocks.push(dutyUnlock);
+  }
+
+  for (const rawRewardItem of asArray(fields.Reward)) {
+    const collectibleUnlock = createCollectibleRewardUnlock(rawRewardItem);
+
+    if (collectibleUnlock) {
+      unlocks.push(collectibleUnlock);
+    }
   }
 
   const unlocksByKey = new Map<string, InterpretedQuestUnlock>();
