@@ -36,6 +36,16 @@ import { getPreviousQuestIds } from '../utilities/questProgression';
 
 import './QuestLogPage.css';
 
+function getPatchSectionId(
+  collection: Pick<QuestCollection, 'category' | 'expansionId' | 'patch'>,
+): string {
+  return [
+    collection.category,
+    collection.expansionId ?? 'unknown-expansion',
+    collection.patch ?? 'unknown-patch',
+  ].join(':');
+}
+
 function formatVerificationStatus(status: string): string {
   return status
     .split('-')
@@ -127,6 +137,26 @@ export function QuestLogPage() {
     profile.initialGrandCompany,
     profile.currentGrandCompany,
   ]);
+
+  const questsByPatchSectionId = useMemo(() => {
+    const questsBySectionId = new Map<string, Quest[]>();
+
+    if (!catalog) {
+      return questsBySectionId;
+    }
+
+    for (const collection of catalog.collections) {
+      const sectionId = getPatchSectionId(collection);
+
+      const sectionQuests = questsBySectionId.get(sectionId) ?? [];
+
+      sectionQuests.push(...collection.groups.flatMap((group) => group.quests));
+
+      questsBySectionId.set(sectionId, sectionQuests);
+    }
+
+    return questsBySectionId;
+  }, [catalog]);
 
   const expansionOptions = useMemo(() => {
     if (!catalog) {
@@ -254,11 +284,7 @@ export function QuestLogPage() {
     for (const filteredCollection of filteredCollections) {
       const { collection } = filteredCollection;
 
-      const sectionId = [
-        collection.category,
-        collection.expansionId ?? 'unknown-expansion',
-        collection.patch ?? 'unknown-patch',
-      ].join(':');
+      const sectionId = getPatchSectionId(collection);
 
       const existingSection = sections.get(sectionId);
 
@@ -655,16 +681,8 @@ export function QuestLogPage() {
           {patchSections.length > 0 ? (
             <div className="quest-collections">
               {patchSections.map((section) => {
-                const sectionQuests = catalog.collections
-                  .filter(
-                    (collection) =>
-                      collection.category === section.category &&
-                      collection.expansionId === section.expansionId &&
-                      collection.patch === section.patch,
-                  )
-                  .flatMap((collection) =>
-                    collection.groups.flatMap((group) => group.quests),
-                  );
+                const sectionQuests =
+                  questsByPatchSectionId.get(section.id) ?? [];
 
                 const completedSectionCount = sectionQuests.filter((quest) =>
                   completedQuestIdSet.has(quest.id),
@@ -800,6 +818,7 @@ export function QuestLogPage() {
                     <AnimatedCollapse
                       isOpen={isPatchExpanded}
                       className="quest-collection__content"
+                      unmountOnExit
                     >
                       {onlyGroup ? (
                         <div className="quest-group__entries quest-group__entries--single-range">
@@ -900,6 +919,7 @@ export function QuestLogPage() {
                                   <AnimatedCollapse
                                     isOpen={isRangeExpanded}
                                     className="quest-group__content"
+                                    unmountOnExit
                                   >
                                     <div className="quest-group__entries">
                                       {visibleRangeQuests.map(renderQuestEntry)}

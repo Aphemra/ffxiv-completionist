@@ -9,10 +9,10 @@ function readRowIds(): number[] {
   if (!rawValue) {
     throw new Error(
       [
-        'ContentFinderCondition row IDs are required.',
+        'InstanceContent row IDs are required.',
         '',
         'Usage:',
-        'npm run xivapi:inspect:duties -- --rows 2,4',
+        'npm run xivapi:inspect:duties -- --rows 20031,20035',
       ].join('\n'),
     );
   }
@@ -20,9 +20,7 @@ function readRowIds(): number[] {
   const rowIds = rawValue.split(',').map((value) => Number(value.trim()));
 
   if (rowIds.some((rowId) => !Number.isInteger(rowId) || rowId <= 0)) {
-    throw new Error(
-      'Every ContentFinderCondition row ID must be a positive integer.',
-    );
+    throw new Error('Every InstanceContent row ID must be a positive integer.');
   }
 
   return Array.from(new Set(rowIds));
@@ -31,7 +29,7 @@ function readRowIds(): number[] {
 async function main(): Promise<void> {
   const references: InterpretedQuestDutyReference[] = readRowIds().map(
     (rowId) => ({
-      contentFinderConditionRowId: rowId,
+      instanceContentRowId: rowId,
       sourceInstruction: 'manual-inspection',
       relationship: 'unlocked',
     }),
