@@ -140,6 +140,10 @@ require_complete() {
     --file "$EXPORT_FILE" \
     --write \
     --require-complete
+
+  npm run xivapi:audit:quest-collectibles -- \
+    --category "$CATEGORY" \
+    --require-complete
 }
 
 publish_export() {

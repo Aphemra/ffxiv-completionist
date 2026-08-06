@@ -151,6 +151,16 @@ function createDutyUnlock(value: unknown): InterpretedQuestUnlock | undefined {
   };
 }
 
+const supportedCollectibleItemActionRowIds = new Set<number>([
+  853, 1322, 3357, 25183,
+]);
+
+export function isSupportedCollectibleItemActionRowId(
+  actionRowId: number,
+): boolean {
+  return supportedCollectibleItemActionRowIds.has(actionRowId);
+}
+
 function createCollectibleRewardUnlock(
   rawItem: unknown,
 ): InterpretedQuestUnlock | undefined {
