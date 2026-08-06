@@ -1,7 +1,6 @@
 import type { KeyboardEvent, MouseEvent } from 'react';
 
 import {
-  Bookmark,
   Coins,
   Crosshair,
   Gauge,
@@ -25,11 +24,8 @@ interface QuestEntryProps {
 
   isCompleted: boolean;
   isCurrent: boolean;
-  isBookmarked: boolean;
 
   onToggleCompletion: () => void;
-  onToggleCurrent: () => void;
-  onToggleBookmark: () => void;
   onOpenDetails: () => void;
 }
 
@@ -86,10 +82,7 @@ export function QuestEntry({
   quest,
   isCompleted,
   isCurrent,
-  isBookmarked,
   onToggleCompletion,
-  onToggleCurrent,
-  onToggleBookmark,
   onOpenDetails,
 }: QuestEntryProps) {
   const experience = quest.rewards?.experience;
@@ -162,51 +155,15 @@ export function QuestEntry({
               </p>
             </div>
 
-            <div className="quest-entry__actions">
-              <button
-                className={[
-                  'quest-entry__bookmark-button',
-                  isBookmarked ? 'quest-entry__bookmark-button--active' : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-                type="button"
-                aria-label={
-                  isBookmarked
-                    ? `Remove ${quest.name} bookmark`
-                    : `Bookmark ${quest.name}`
-                }
-                aria-pressed={isBookmarked}
-                title={isBookmarked ? 'Remove bookmark' : 'Bookmark quest'}
-                onClick={onToggleBookmark}
-              >
-                <Bookmark
-                  fill={isBookmarked ? 'currentColor' : 'none'}
-                  aria-hidden="true"
-                />
-              </button>
+            {isCurrent && (
+              <div className="quest-entry__actions">
+                <span className="quest-entry__current-indicator">
+                  <Crosshair aria-hidden="true" />
 
-              <button
-                className={[
-                  'quest-entry__current-button',
-                  isCurrent ? 'quest-entry__current-button--active' : '',
-                ]
-                  .filter(Boolean)
-                  .join(' ')}
-                type="button"
-                aria-pressed={isCurrent}
-                title={
-                  isCurrent
-                    ? 'Clear the current quest'
-                    : 'Set current and mark all previous quests complete'
-                }
-                onClick={onToggleCurrent}
-              >
-                <Crosshair aria-hidden="true" />
-
-                <span>{isCurrent ? 'Current' : 'Set current'}</span>
-              </button>
-            </div>
+                  <span>Current</span>
+                </span>
+              </div>
+            )}
           </div>
 
           {((experience !== undefined && experience > 0) ||

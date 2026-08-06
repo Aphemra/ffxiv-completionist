@@ -5,7 +5,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   ArrowLeft,
   ArrowRight,
-  Bookmark,
   CheckCircle2,
   ChevronDown,
   Coins,
@@ -39,14 +38,11 @@ interface QuestDetailsDrawerProps {
 
   isCompleted: boolean;
   isCurrent: boolean;
-  isBookmarked: boolean;
 
   personalNote: string;
 
   onClose: () => void;
   onToggleCompletion: () => void;
-  onToggleCurrent: () => void;
-  onToggleBookmark: () => void;
   onSaveNote: (note: string) => void;
 }
 
@@ -322,12 +318,9 @@ export function QuestDetailsDrawer({
   questsById,
   isCompleted,
   isCurrent,
-  isBookmarked,
   personalNote,
   onClose,
   onToggleCompletion,
-  onToggleCurrent,
-  onToggleBookmark,
   onSaveNote,
 }: QuestDetailsDrawerProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -584,45 +577,13 @@ export function QuestDetailsDrawer({
             <span>{isCompleted ? 'Completed' : 'Mark complete'}</span>
           </button>
 
-          <button
-            className={[
-              'quest-details__action',
-              isCurrent ? 'quest-details__action--active' : '',
-            ]
-              .filter(Boolean)
-              .join(' ')}
-            type="button"
-            aria-pressed={isCurrent}
-            title={
-              isCurrent
-                ? 'Clear the current quest'
-                : 'Set current and mark all previous quests complete'
-            }
-            onClick={onToggleCurrent}
-          >
-            <Crosshair aria-hidden="true" />
+          {isCurrent && (
+            <span className="quest-details__action quest-details__action--active quest-details__action--status">
+              <Crosshair aria-hidden="true" />
 
-            <span>{isCurrent ? 'Current quest' : 'Set current'}</span>
-          </button>
-
-          <button
-            className={[
-              'quest-details__action',
-              isBookmarked ? 'quest-details__action--active' : '',
-            ]
-              .filter(Boolean)
-              .join(' ')}
-            type="button"
-            aria-pressed={isBookmarked}
-            onClick={onToggleBookmark}
-          >
-            <Bookmark
-              fill={isBookmarked ? 'currentColor' : 'none'}
-              aria-hidden="true"
-            />
-
-            <span>{isBookmarked ? 'Bookmarked' : 'Bookmark'}</span>
-          </button>
+              <span>Current quest</span>
+            </span>
+          )}
         </div>
 
         {hasSummary && (

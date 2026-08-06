@@ -30,8 +30,6 @@ export const playerProgressSchema = z.strictObject({
   world: z.string().trim().max(80),
 
   completedQuestIds: z.array(contentIdSchema),
-  currentQuestId: contentIdSchema.nullable(),
-  bookmarkedQuestIds: z.array(contentIdSchema),
 
   questNotes: z.record(contentIdSchema, z.string().max(5000)),
 

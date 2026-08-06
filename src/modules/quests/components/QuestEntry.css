@@ -158,8 +158,7 @@
   gap: 0.4rem;
 }
 
-.quest-entry__bookmark-button,
-.quest-entry__current-button {
+.quest-entry__current-indicator {
   min-height: 1.8rem;
 
   display: inline-flex;
@@ -167,57 +166,22 @@
   justify-content: center;
   gap: 0.3rem;
 
-  border: 1px solid var(--color-border);
+  padding: 0.25rem 0.45rem;
+
+  border: 1px solid var(--color-accent-border);
   border-radius: 0.35rem;
 
-  color: var(--color-text-muted);
-  background: transparent;
+  color: var(--color-accent-light);
+  background: var(--color-accent-muted);
 
   font-size: 0.6rem;
   font-weight: 800;
-
-  cursor: pointer;
-
-  transition:
-    border-color 120ms ease,
-    background-color 120ms ease,
-    color 120ms ease;
 }
 
-.quest-entry__bookmark-button svg,
-.quest-entry__current-button svg {
+.quest-entry__current-indicator svg {
   width: 0.85rem;
   height: 0.85rem;
   flex: 0 0 auto;
-}
-
-.quest-entry__bookmark-button:hover,
-.quest-entry__current-button:hover {
-  border-color: var(--color-border-strong);
-  color: var(--color-text-primary);
-  background: rgb(255 255 255 / 3%);
-}
-
-.quest-entry__bookmark-button:focus-visible,
-.quest-entry__current-button:focus-visible {
-  outline: 0.15rem solid var(--color-accent-light);
-  outline-offset: 0.15rem;
-}
-
-.quest-entry__bookmark-button {
-  width: 1.8rem;
-  padding: 0;
-}
-
-.quest-entry__current-button {
-  padding: 0.25rem 0.45rem;
-}
-
-.quest-entry__bookmark-button--active,
-.quest-entry__current-button--active {
-  border-color: var(--color-accent-border);
-  color: var(--color-accent-light);
-  background: var(--color-accent-muted);
 }
 
 .quest-entry__indicators {
@@ -304,9 +268,7 @@
 @media (prefers-reduced-motion: reduce) {
   .quest-entry,
   .quest-entry__custom-check,
-  .quest-entry__title h4,
-  .quest-entry__bookmark-button,
-  .quest-entry__current-button {
+  .quest-entry__title h4 {
     transition: none;
   }
 }

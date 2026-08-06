@@ -1,6 +1,7 @@
 import { useProgressStore } from '../../../core/progress/progressStore';
 import { useQuestCatalog } from '../../quests/hooks/useQuestCatalog';
 import { createAvailableQuestCatalog } from '../../quests/utilities/questAvailability';
+import { getAutomaticCurrentQuestId } from '../../quests/utilities/questProgression';
 
 import './DashboardPage.css';
 
@@ -92,9 +93,16 @@ export function DashboardPage() {
     completedQuestIdSet.has(quest.id),
   ).length;
 
+  const automaticCurrentQuestId = availableQuestCatalog
+    ? getAutomaticCurrentQuestId(
+        availableQuestCatalog.collections,
+        profile.completedQuestIds,
+      )
+    : null;
+
   const currentQuest =
-    profile.currentQuestId && availableQuestCatalog
-      ? availableQuestCatalog.questsById.get(profile.currentQuestId)
+    automaticCurrentQuestId && availableQuestCatalog
+      ? availableQuestCatalog.questsById.get(automaticCurrentQuestId)
       : undefined;
 
   return (
@@ -179,9 +187,11 @@ export function DashboardPage() {
                 ◇
               </div>
 
-              <h3>No current quest selected</h3>
+              <h3>No current quest</h3>
 
-              <p>Select “Set current” beside a quest to display it here.</p>
+              <p>
+                No incomplete quest remains in your active linear questline.
+              </p>
             </div>
           )}
         </section>

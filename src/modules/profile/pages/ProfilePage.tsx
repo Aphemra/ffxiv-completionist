@@ -63,7 +63,7 @@ export function ProfilePage() {
       [
         'Reset all quest progress?',
         '',
-        'This will clear completed quests, the current quest, bookmarks, and quest notes.',
+        'This will clear completed quests and quest notes.',
         'Your character name and world will be preserved.',
       ].join('\n'),
     );
@@ -266,11 +266,6 @@ export function ProfilePage() {
             <div>
               <dt>Completed quests</dt>
               <dd>{profile.completedQuestIds.length.toLocaleString()}</dd>
-            </div>
-
-            <div>
-              <dt>Bookmarked quests</dt>
-              <dd>{profile.bookmarkedQuestIds.length.toLocaleString()}</dd>
             </div>
 
             <div>

@@ -14,12 +14,7 @@ const EXPANSION_LABELS: Readonly<Record<string, string>> = {
   evercold: 'Evercold',
 };
 
-export type QuestStatusFilter =
-  | 'all'
-  | 'incomplete'
-  | 'completed'
-  | 'current'
-  | 'bookmarked';
+export type QuestStatusFilter = 'all' | 'incomplete' | 'completed' | 'current';
 
 interface QuestCategoryOption {
   value: QuestCategory;
@@ -72,32 +67,6 @@ export const QUEST_CATEGORY_OPTIONS = [
     label: 'Relic Quests',
   },
 ] satisfies ReadonlyArray<QuestCategoryOption>;
-
-export const QUEST_STATUS_OPTIONS = [
-  {
-    value: 'all',
-    label: 'All progress states',
-  },
-  {
-    value: 'incomplete',
-    label: 'Incomplete',
-  },
-  {
-    value: 'completed',
-    label: 'Completed',
-  },
-  {
-    value: 'current',
-    label: 'Current quest',
-  },
-  {
-    value: 'bookmarked',
-    label: 'Bookmarked',
-  },
-] satisfies ReadonlyArray<{
-  value: QuestStatusFilter;
-  label: string;
-}>;
 
 export function formatQuestCategory(category: QuestCategory): string {
   return (
@@ -205,35 +174,6 @@ export function questMatchesSearch(quest: Quest, query: string): boolean {
   ];
 
   return searchValues.join(' ').toLowerCase().includes(normalizedQuery);
-}
-
-interface QuestProgressState {
-  completedQuestIds: ReadonlySet<string>;
-  bookmarkedQuestIds: ReadonlySet<string>;
-  currentQuestId: string | null;
-}
-
-export function questMatchesStatus(
-  quest: Quest,
-  status: QuestStatusFilter,
-  progress: QuestProgressState,
-): boolean {
-  switch (status) {
-    case 'all':
-      return true;
-
-    case 'incomplete':
-      return !progress.completedQuestIds.has(quest.id);
-
-    case 'completed':
-      return progress.completedQuestIds.has(quest.id);
-
-    case 'current':
-      return progress.currentQuestId === quest.id;
-
-    case 'bookmarked':
-      return progress.bookmarkedQuestIds.has(quest.id);
-  }
 }
 
 export function formatExpansionName(expansionId: string): string {

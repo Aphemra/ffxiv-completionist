@@ -38,7 +38,10 @@ import {
   questMatchesSearch,
 } from '../utilities/questPresentation';
 
-import { getPreviousQuestIds } from '../utilities/questProgression';
+import {
+  getAutomaticCurrentQuestId,
+  getPreviousQuestIds,
+} from '../utilities/questProgression';
 
 import './QuestLogPage.css';
 
@@ -101,12 +104,6 @@ export function QuestLogPage() {
     (store) => store.markQuestsComplete,
   );
 
-  const setCurrentQuest = useProgressStore((store) => store.setCurrentQuest);
-
-  const toggleQuestBookmark = useProgressStore(
-    (store) => store.toggleQuestBookmark,
-  );
-
   const setQuestNote = useProgressStore((store) => store.setQuestNote);
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -150,11 +147,6 @@ export function QuestLogPage() {
     [profile.completedQuestIds],
   );
 
-  const bookmarkedQuestIdSet = useMemo(
-    () => new Set(profile.bookmarkedQuestIds),
-    [profile.bookmarkedQuestIds],
-  );
-
   const catalog = useMemo(() => {
     if (state.status !== 'success') {
       return null;
@@ -173,6 +165,17 @@ export function QuestLogPage() {
     profile.initialGrandCompany,
     profile.currentGrandCompany,
   ]);
+
+  const automaticCurrentQuestId = useMemo(
+    () =>
+      catalog
+        ? getAutomaticCurrentQuestId(
+            catalog.collections,
+            profile.completedQuestIds,
+          )
+        : null,
+    [catalog, profile.completedQuestIds],
+  );
 
   const questsByPatchSectionId = useMemo(() => {
     const questsBySectionId = new Map<string, Quest[]>();
@@ -436,43 +439,15 @@ export function QuestLogPage() {
     markQuestsComplete([...previousQuestIds, quest.id]);
   }
 
-  function handleSetCurrentQuest(questId: string): void {
-    if (!catalog) {
-      return;
-    }
-
-    if (profile.currentQuestId === questId) {
-      setCurrentQuest(null);
-      return;
-    }
-
-    const previousQuestIds = getPreviousQuestIds(
-      questId,
-      catalog.questsById,
-      completedQuestIdSet,
-    );
-
-    markQuestsComplete(previousQuestIds);
-
-    setCurrentQuest(questId);
-  }
-
   function renderQuestEntry(quest: Quest) {
     return (
       <QuestEntry
         key={quest.id}
         quest={quest}
         isCompleted={completedQuestIdSet.has(quest.id)}
-        isCurrent={profile.currentQuestId === quest.id}
-        isBookmarked={bookmarkedQuestIdSet.has(quest.id)}
+        isCurrent={automaticCurrentQuestId === quest.id}
         onToggleCompletion={() => {
           handleToggleQuestCompletion(quest);
-        }}
-        onToggleCurrent={() => {
-          handleSetCurrentQuest(quest.id);
-        }}
-        onToggleBookmark={() => {
-          toggleQuestBookmark(quest.id);
         }}
         onOpenDetails={() => {
           setSelectedQuestId(quest.id);
@@ -999,20 +974,13 @@ export function QuestLogPage() {
           quest={selectedQuest}
           questsById={catalog.questsById}
           isCompleted={completedQuestIdSet.has(selectedQuest.id)}
-          isCurrent={profile.currentQuestId === selectedQuest.id}
-          isBookmarked={bookmarkedQuestIdSet.has(selectedQuest.id)}
+          isCurrent={automaticCurrentQuestId === selectedQuest.id}
           personalNote={profile.questNotes[selectedQuest.id] ?? ''}
           onClose={() => {
             setSelectedQuestId(null);
           }}
           onToggleCompletion={() => {
             handleToggleQuestCompletion(selectedQuest);
-          }}
-          onToggleCurrent={() => {
-            handleSetCurrentQuest(selectedQuest.id);
-          }}
-          onToggleBookmark={() => {
-            toggleQuestBookmark(selectedQuest.id);
           }}
           onSaveNote={(note) => {
             setQuestNote(selectedQuest.id, note);

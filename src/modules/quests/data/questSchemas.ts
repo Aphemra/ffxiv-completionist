@@ -569,6 +569,8 @@ export const questCollectionSchema = z
   .strictObject({
     schemaVersion: z.literal(1),
 
+    format: z.enum(['standard', 'linear']),
+
     id: gameDataIdSchema,
     title: nonEmptyStringSchema,
     description: nonEmptyStringSchema,

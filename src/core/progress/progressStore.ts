@@ -31,8 +31,6 @@ function createInitialProfile(): PlayerProgress {
     world: '',
 
     completedQuestIds: [],
-    currentQuestId: null,
-    bookmarkedQuestIds: [],
     questNotes: {},
 
     createdAt: timestamp,
@@ -59,10 +57,6 @@ interface ProgressActions {
   setQuestCompletion: (questId: string, completed: boolean) => void;
 
   markQuestsComplete: (questIds: readonly string[]) => void;
-
-  setCurrentQuest: (questId: string | null) => void;
-
-  toggleQuestBookmark: (questId: string) => void;
 
   setQuestNote: (questId: string, note: string) => void;
 
@@ -158,32 +152,6 @@ export const useProgressStore = create<ProgressStore>()(
         });
       },
 
-      setCurrentQuest: (questId) => {
-        set((state) => ({
-          profile: updateProfile(state.profile, {
-            currentQuestId: questId,
-          }),
-        }));
-      },
-
-      toggleQuestBookmark: (questId) => {
-        set((state) => {
-          const bookmarkedQuestIds = new Set(state.profile.bookmarkedQuestIds);
-
-          if (bookmarkedQuestIds.has(questId)) {
-            bookmarkedQuestIds.delete(questId);
-          } else {
-            bookmarkedQuestIds.add(questId);
-          }
-
-          return {
-            profile: updateProfile(state.profile, {
-              bookmarkedQuestIds: Array.from(bookmarkedQuestIds),
-            }),
-          };
-        });
-      },
-
       setQuestNote: (questId, note) => {
         set((state) => {
           const questNotes = {
@@ -210,8 +178,6 @@ export const useProgressStore = create<ProgressStore>()(
         set((state) => ({
           profile: updateProfile(state.profile, {
             completedQuestIds: [],
-            currentQuestId: null,
-            bookmarkedQuestIds: [],
             questNotes: {},
           }),
         }));

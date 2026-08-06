@@ -106,6 +106,7 @@ function normalizeStandardCollection(
 
   return questCollectionSchema.parse({
     schemaVersion: source.schemaVersion,
+    format: 'standard',
 
     ...createCollectionMetadata(manifestEntry),
 
@@ -168,6 +169,7 @@ function normalizeLinearCollection(
 
   return questCollectionSchema.parse({
     schemaVersion: source.schemaVersion,
+    format: 'linear',
 
     ...createCollectionMetadata(manifestEntry),
 

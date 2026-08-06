@@ -1,4 +1,4 @@
-import type { Quest } from '../data/questSchemas';
+import type { Quest, QuestCollection } from '../data/questSchemas';
 
 function getTraversablePrerequisiteQuestIds(
   quest: Quest,
@@ -90,4 +90,109 @@ export function getPreviousQuestIds(
   }
 
   return previousQuestIds;
+}
+
+export function getAutomaticCurrentQuestId(
+  collections: readonly QuestCollection[],
+  completedQuestIds: readonly string[],
+): string | null {
+  const orderedLinearQuests = collections
+    .filter((collection) => collection.format === 'linear')
+    .flatMap((collection) =>
+      collection.groups.flatMap((group) => group.quests),
+    );
+
+  if (orderedLinearQuests.length === 0) {
+    return null;
+  }
+
+  const linearQuestIds = new Set(orderedLinearQuests.map((quest) => quest.id));
+
+  const adjacencyByQuestId = new Map<string, Set<string>>();
+
+  for (const quest of orderedLinearQuests) {
+    adjacencyByQuestId.set(quest.id, new Set());
+  }
+
+  for (const quest of orderedLinearQuests) {
+    const relatedQuestIds = [
+      ...(quest.prerequisiteQuestIds ?? []),
+      ...(quest.nextQuestIds ?? []),
+    ];
+
+    for (const relatedQuestId of relatedQuestIds) {
+      if (!linearQuestIds.has(relatedQuestId)) {
+        continue;
+      }
+
+      adjacencyByQuestId.get(quest.id)?.add(relatedQuestId);
+      adjacencyByQuestId.get(relatedQuestId)?.add(quest.id);
+    }
+  }
+
+  const questOrderById = new Map<string, number>();
+
+  orderedLinearQuests.forEach((quest, index) => {
+    questOrderById.set(quest.id, index);
+  });
+
+  const pathIndexByQuestId = new Map<string, number>();
+  const paths: string[][] = [];
+
+  for (const quest of orderedLinearQuests) {
+    if (pathIndexByQuestId.has(quest.id)) {
+      continue;
+    }
+
+    const pathIndex = paths.length;
+    const pathQuestIds: string[] = [];
+    const pendingQuestIds = [quest.id];
+
+    while (pendingQuestIds.length > 0) {
+      const questId = pendingQuestIds.pop();
+
+      if (!questId || pathIndexByQuestId.has(questId)) {
+        continue;
+      }
+
+      pathIndexByQuestId.set(questId, pathIndex);
+      pathQuestIds.push(questId);
+
+      for (const relatedQuestId of adjacencyByQuestId.get(questId) ?? []) {
+        if (!pathIndexByQuestId.has(relatedQuestId)) {
+          pendingQuestIds.push(relatedQuestId);
+        }
+      }
+    }
+
+    pathQuestIds.sort(
+      (leftQuestId, rightQuestId) =>
+        (questOrderById.get(leftQuestId) ?? 0) -
+        (questOrderById.get(rightQuestId) ?? 0),
+    );
+
+    paths.push(pathQuestIds);
+  }
+
+  let activePathIndex: number | undefined;
+
+  for (const completedQuestId of completedQuestIds) {
+    const completedPathIndex = pathIndexByQuestId.get(completedQuestId);
+
+    if (completedPathIndex !== undefined) {
+      activePathIndex = completedPathIndex;
+    }
+  }
+
+  const activePath = paths[activePathIndex ?? 0];
+
+  if (!activePath) {
+    return null;
+  }
+
+  const completedQuestIdSet = new Set(completedQuestIds);
+
+  return (
+    activePath.find((questId) => !completedQuestIdSet.has(questId)) ?? null
+  );
 }
