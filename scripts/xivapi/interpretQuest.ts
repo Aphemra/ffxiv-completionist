@@ -380,7 +380,10 @@ function parseRewardItems(
 
     const itemName = relationName(reward) ?? `Unresolved item ${rowId}`;
 
-    const quantity = readInteger(counts[index]) ?? 1;
+    const rawQuantity = readInteger(counts[index]);
+
+    const quantity =
+      rawQuantity !== undefined && rawQuantity > 0 ? rawQuantity : 1;
 
     const parsedReward: ParsedItemReward = {
       itemId: `item-${rowId}`,

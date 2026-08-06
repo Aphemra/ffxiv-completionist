@@ -1,0 +1,5337 @@
+{
+  "schemaVersion": 1,
+  "id": "stormblood-4-1-msq",
+  "title": "The Legend Returns - 4.1 Main Scenario",
+  "expansionId": "stormblood",
+  "patch": "4.1",
+  "category": "msq",
+  "generatedAt": "2026-08-06T07:10:37.800Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 11,
+    "branchCount": 0,
+    "convergenceCount": 0,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [],
+  "issues": [],
+  "quests": [
+    {
+      "id": "stormblood-msq-arenvalds-adventure-68498",
+      "xivapiRowId": 68498,
+      "sortOrder": 1,
+      "name": "Arenvald's Adventure",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-arenvalds-adventure-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024136",
+          "locations": [
+            {
+              "zoneId": "rhalgrs-reach",
+              "zoneName": "Rhalgr's Reach",
+              "territoryId": "territory-635",
+              "mapId": "map-366",
+              "sourceLevelRowId": 7074866,
+              "coordinates": {
+                "x": 10.7,
+                "y": 8.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -29.3202,
+                  "y": -0.143373,
+                  "z": -124.516
+                },
+                "mapGameId": "g3t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-arenvalds-adventure-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2009050",
+          "locations": [
+            {
+              "zoneId": "rhalgrs-reach",
+              "zoneName": "Rhalgr's Reach",
+              "territoryId": "territory-635",
+              "mapId": "map-366",
+              "sourceLevelRowId": 7074867,
+              "coordinates": {
+                "x": 12.2,
+                "y": 12.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 49.6972,
+                  "y": 0,
+                  "z": 58.2001
+                },
+                "mapGameId": "g3t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68089
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68498,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:09:59.798Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68498,
+          "internalId": "StmBdb101_02962",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 1,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1019468,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 7074868,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024136,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2009050,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1020419,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT_EVENT_STMBDB101_01",
+              "argument": 1618,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1011887,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1019537,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024136
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1020419
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1011887
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1019537
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024136,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1020419,
+              "name": "Alisaie",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1011887,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1019537,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68499
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-stormblood-68089"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-the-darkness-below-68499"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "emote",
+          "id": "emote-166",
+          "sourceRowId": 166,
+          "name": "Box"
+        }
+      ],
+      "rewards": {
+        "experience": 10800,
+        "gil": 752,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lyse",
+          "xivapiRowId": 1019468
+        },
+        "location": {
+          "zone": "Rhalgr's Reach",
+          "x": 14.7,
+          "y": 9.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-the-darkness-below-68499",
+      "xivapiRowId": 68499,
+      "sortOrder": 2,
+      "name": "The Darkness Below",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-the-darkness-below-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074906,
+              "coordinates": {
+                "x": 33.7,
+                "y": 34.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 610.691,
+                  "y": 74.1782,
+                  "z": 647.804
+                },
+                "mapGameId": "g3f3/00"
+              }
+            },
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074907,
+              "coordinates": {
+                "x": 33.2,
+                "y": 32.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 584.854,
+                  "y": 69.2954,
+                  "z": 568.064
+                },
+                "mapGameId": "g3f3/00"
+              }
+            },
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074908,
+              "coordinates": {
+                "x": 35.2,
+                "y": 32.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 682.271,
+                  "y": 63.7032,
+                  "z": 529.718
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-darkness-below-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024133",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074902,
+              "coordinates": {
+                "x": 36.4,
+                "y": 31.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 745.205,
+                  "y": 70,
+                  "z": 489.769
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-darkness-below-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024103",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074633,
+              "coordinates": {
+                "x": 32.2,
+                "y": 33
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 532.506,
+                  "y": 70,
+                  "z": 576.183
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68498
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68499,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:03.342Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68499,
+          "internalId": "StmBdb102_02963",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 2,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024137,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024138,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1024130,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1024131,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1024132,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1024133,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1024103,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1024104,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR_01",
+              "argument": 7074886,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1011887,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1019537,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_PICTRUE_STMBDB102_01",
+              "argument": 561,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_PICTRUE_STMBDB102_02",
+              "argument": 562,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_01",
+              "argument": 459,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_02",
+              "argument": 92,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024138
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024130
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024131
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024132
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024133
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024103
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024104
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1011887
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1019537
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024138,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024130,
+              "name": "middle-aged Highlander",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024131,
+              "name": "mature maid",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024132,
+              "name": "retired Roegadyn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024133,
+              "name": "Ernold",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024103,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024104,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1011887,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1019537,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68500
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-arenvalds-adventure-68498"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-the-mad-kings-trove-68500"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 10800,
+        "gil": 1062,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-26886",
+            "itemName": "Dai-ryumyaku Accessories of Fending Coffer (IL 370)",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-26887",
+            "itemName": "Dai-ryumyaku Accessories of Slaying Coffer (IL 370)",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-26888",
+            "itemName": "Dai-ryumyaku Accessories of Aiming Coffer (IL 370)",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-26889",
+            "itemName": "Dai-ryumyaku Accessories of Healing Coffer (IL 370)",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-26890",
+            "itemName": "Dai-ryumyaku Accessories of Casting Coffer (IL 370)",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Alphinaud",
+          "xivapiRowId": 1024137
+        },
+        "location": {
+          "zone": "Rhalgr's Reach",
+          "x": 12.2,
+          "y": 12.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-the-mad-kings-trove-68500",
+      "xivapiRowId": 68500,
+      "sortOrder": 3,
+      "name": "The Mad King's Trove",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-the-mad-kings-trove-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024134",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074910,
+              "coordinates": {
+                "x": 25.7,
+                "y": 28.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 207.843,
+                  "y": -0.300967,
+                  "z": 338.552
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-mad-kings-trove-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074917,
+              "coordinates": {
+                "x": 24.4,
+                "y": 21.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 144.444,
+                  "y": -281.108,
+                  "z": -13.8493
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-mad-kings-trove-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074918,
+              "coordinates": {
+                "x": 26.4,
+                "y": 21.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 246.853,
+                  "y": -279.289,
+                  "z": -15.6131
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-mad-kings-trove-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-drowned-city-of-skalla",
+              "zoneName": "The Drowned City of Skalla",
+              "territoryId": "territory-1172",
+              "mapId": "map-415",
+              "sourceLevelRowId": 7074930,
+              "coordinates": {
+                "x": 14.5,
+                "y": 11.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 478.977,
+                  "y": -13.9,
+                  "z": 3.95806
+                },
+                "mapGameId": "g3d4/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-mad-kings-trove-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074921,
+              "coordinates": {
+                "x": 32.1,
+                "y": 33.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 531.646,
+                  "y": 70,
+                  "z": 583.247
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-the-mad-kings-trove-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024104",
+          "targetName": "Alphinaud",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074634,
+              "coordinates": {
+                "x": 32.1,
+                "y": 33
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 530.835,
+                  "y": 70,
+                  "z": 576.013
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68499
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68500,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:06.238Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68500,
+          "internalId": "StmBdb103_02964",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 3,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024104,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024103,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1024134,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1024135,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2009052,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 50,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2009054,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 32,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "INSTANCEDUNGEON0",
+              "argument": 58,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 5010000,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 7074920,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 621,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_01",
+              "argument": 7074633,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_01",
+              "argument": 42,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREENIMAGE_01",
+              "argument": 544,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_EVENT_STMBDB103_01",
+              "argument": 1619,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1011887,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1019537,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR_90",
+              "argument": 10079265,
+              "referenceType": "script-value"
+            }
+          ],
+          "dutyReferences": [
+            {
+              "instanceContentRowId": 58,
+              "sourceInstruction": "INSTANCEDUNGEON0",
+              "relationship": "required"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024103
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024134
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024135
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 5010000
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1011887
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1019537
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024103,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024134,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024135,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 5010000
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1011887,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1019537,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68501
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-the-darkness-below-68499"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-the-butchers-blood-68501"
+      ],
+      "duties": [
+        {
+          "id": "duty-279",
+          "sourceRowId": 279,
+          "contentRowId": 58,
+          "name": "The Drowned City of Skalla",
+          "type": "dungeon",
+          "relationship": "required",
+          "level": 70,
+          "minimumItemLevel": 300,
+          "partySize": 4,
+          "levelSync": 70,
+          "highEnd": false
+        }
+      ],
+      "unlocks": [],
+      "rewards": {
+        "experience": 10800,
+        "gil": 4325,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Alphinaud",
+          "xivapiRowId": 1024104
+        },
+        "location": {
+          "zone": "The Lochs",
+          "x": 32.1,
+          "y": 33
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-the-butchers-blood-68501",
+      "xivapiRowId": 68501,
+      "sortOrder": 4,
+      "name": "The Butcher's Blood",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-the-butchers-blood-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024105",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074635,
+              "coordinates": {
+                "x": 36.3,
+                "y": 32.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 739.223,
+                  "y": 70,
+                  "z": 537.651
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-butchers-blood-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024107",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074640,
+              "coordinates": {
+                "x": 37.3,
+                "y": 34.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 788.418,
+                  "y": 69.993,
+                  "z": 637.385
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-butchers-blood-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024112",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074646,
+              "coordinates": {
+                "x": 37.5,
+                "y": 34.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 796.95,
+                  "y": 69.9999,
+                  "z": 634.769
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68500
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68501,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:10.703Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68501,
+          "internalId": "StmBdb104_02965",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 4,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024103,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024104,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1024105,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1024106,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 7074648,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1024107,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1024108,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1024109,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1024110,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1024111,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1024112,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1020516,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE1",
+              "argument": 7074650,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_0",
+              "argument": 7074634,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_1",
+              "argument": 7074636,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_2",
+              "argument": 7074641,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_3",
+              "argument": 7074651,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_4",
+              "argument": 7074644,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_5",
+              "argument": 7074643,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_0",
+              "argument": 1011887,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_1",
+              "argument": 1019537,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_2",
+              "argument": 1024619,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BGM_001",
+              "argument": 459,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_00",
+              "argument": 1620,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_01",
+              "argument": 1621,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_02",
+              "argument": 1622,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_03",
+              "argument": 1623,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_90",
+              "argument": 10079265,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024104
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024105
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024106
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024107
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024108
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024109
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024110
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024111
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1024112
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1020516
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_0",
+              "actorRowId": 1011887
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_1",
+              "actorRowId": 1019537
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_2",
+              "actorRowId": 1024619
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024104,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024105,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024106
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024107,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024108,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024109,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024110,
+              "name": "Raubahn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024111,
+              "name": "M'naago",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1024112,
+              "name": "prison guard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1020516,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_0",
+              "actorRowId": 1011887,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_1",
+              "actorRowId": 1019537,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_2",
+              "actorRowId": 1024619,
+              "name": "Resistance fighter",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68502
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-the-mad-kings-trove-68500"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-echoes-of-an-echo-68502"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "orchestrion-roll",
+          "id": "orchestrion-roll-173",
+          "sourceRowId": 21317,
+          "name": "The Measure of Our Reach Orchestrion Roll",
+          "details": "Using The Measure of Our Reach Orchestrion Roll adds this orchestrion roll."
+        }
+      ],
+      "rewards": {
+        "experience": 10800,
+        "gil": 1189,
+        "items": [
+          {
+            "itemId": "item-21317",
+            "itemName": "The Measure of Our Reach Orchestrion Roll",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Arenvald",
+          "xivapiRowId": 1024103
+        },
+        "location": {
+          "zone": "The Lochs",
+          "x": 32.2,
+          "y": 33
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-echoes-of-an-echo-68502",
+      "xivapiRowId": 68502,
+      "sortOrder": 5,
+      "name": "Echoes of an Echo",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-echoes-of-an-echo-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024113",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074683,
+              "coordinates": {
+                "x": 36.6,
+                "y": 30
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 754.285,
+                  "y": 70,
+                  "z": 424.71
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-echoes-of-an-echo-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024114",
+          "locations": [
+            {
+              "zoneId": "the-resonatorium",
+              "zoneName": "The Resonatorium",
+              "territoryId": "territory-738",
+              "mapId": "map-419",
+              "sourceLevelRowId": 7080992,
+              "coordinates": {
+                "x": 11.4,
+                "y": 11.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 5.24723,
+                  "y": 0.0543969,
+                  "z": -3.32059
+                },
+                "mapGameId": "g3e6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-echoes-of-an-echo-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 2,
+          "locations": [
+            {
+              "zoneId": "the-resonatorium",
+              "zoneName": "The Resonatorium",
+              "territoryId": "territory-738",
+              "mapId": "map-419",
+              "sourceLevelRowId": 7081707,
+              "coordinates": {
+                "x": 11.3,
+                "y": 11
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 1.85366,
+                  "y": 1.19209e-7,
+                  "z": -14.833
+                },
+                "mapGameId": "g3e6/00"
+              }
+            },
+            {
+              "zoneId": "the-resonatorium",
+              "zoneName": "The Resonatorium",
+              "territoryId": "territory-738",
+              "mapId": "map-419",
+              "sourceLevelRowId": 7081707,
+              "coordinates": {
+                "x": 11.3,
+                "y": 11
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 1.85366,
+                  "y": 1.19209e-7,
+                  "z": -14.833
+                },
+                "mapGameId": "g3e6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-echoes-of-an-echo-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024114",
+          "locations": [
+            {
+              "zoneId": "the-resonatorium",
+              "zoneName": "The Resonatorium",
+              "territoryId": "territory-738",
+              "mapId": "map-419",
+              "sourceLevelRowId": 7080992,
+              "coordinates": {
+                "x": 11.4,
+                "y": 11.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 5.24723,
+                  "y": 0.0543969,
+                  "z": -3.32059
+                },
+                "mapGameId": "g3e6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-echoes-of-an-echo-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024119",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074684,
+              "coordinates": {
+                "x": 36.7,
+                "y": 30.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 758.663,
+                  "y": 70,
+                  "z": 446.311
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68501
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68502,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:14.464Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68502,
+          "internalId": "StmBdb105_02966",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 5,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024125,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024126,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1024127,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1024113,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 7080999,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1024114,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 738,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1024115,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1024116,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1024117,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1024118,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1020517,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2009058,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 54,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2009059,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1020555,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE1",
+              "argument": 7074693,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1024119,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1024120,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1024121,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR_0",
+              "argument": 7074670,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_1",
+              "argument": 7074676,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_2",
+              "argument": 7075127,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_3",
+              "argument": 7074686,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_4",
+              "argument": 7080993,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_5",
+              "argument": 7081697,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_6",
+              "argument": 7080995,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_7",
+              "argument": 7081697,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_0",
+              "argument": 1021968,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_1",
+              "argument": 1011887,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_2",
+              "argument": 1019537,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_3",
+              "argument": 1019559,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BGM_01",
+              "argument": 495,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024126
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024127
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024113
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024114
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024115
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024116
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024117
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024118
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1020517
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1020555
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1024119
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1024120
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1024121
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_0",
+              "actorRowId": 1021968
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_1",
+              "actorRowId": 1011887
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_2",
+              "actorRowId": 1019537
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_3",
+              "actorRowId": 1019559
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024126,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024127,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024113,
+              "name": "Resonatorium guard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024114,
+              "name": "Raubahn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024115,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024116,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024117,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024118,
+              "name": "flame investigator",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1020517,
+              "name": "Ironworks engineer",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1020555,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1024119,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1024120,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1024121,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_0",
+              "actorRowId": 1021968,
+              "name": "Pipin",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_1",
+              "actorRowId": 1011887,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_2",
+              "actorRowId": 1019537,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_3",
+              "actorRowId": 1019559,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68503
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-the-butchers-blood-68501"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-a-sultanas-strings-68503"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 10800,
+        "gil": 898,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lyse",
+          "xivapiRowId": 1024125
+        },
+        "location": {
+          "zone": "The Lochs",
+          "x": 37,
+          "y": 34.3
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-a-sultanas-strings-68503",
+      "xivapiRowId": 68503,
+      "sortOrder": 6,
+      "name": "A Sultana's Strings",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-sultanas-strings-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001821",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-thal",
+              "zoneName": "Ul'dah - Steps of Thal",
+              "territoryId": "territory-131",
+              "mapId": "map-73",
+              "sourceLevelRowId": 2621121,
+              "coordinates": {
+                "x": 10.8,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -24.1226,
+                  "y": 38.0011,
+                  "z": 85.3132
+                },
+                "mapGameId": "w1t2/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-strings-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024122",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 7075135,
+              "coordinates": {
+                "x": 12.4,
+                "y": 8.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 57.969,
+                  "y": 3.98254,
+                  "z": -121.538
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-strings-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024123",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 7074710,
+              "coordinates": {
+                "x": 18.8,
+                "y": 26.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -132.924,
+                  "y": 4.59324,
+                  "z": 238.757
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-strings-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024124",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 7074711,
+              "coordinates": {
+                "x": 26.6,
+                "y": 18.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 254.359,
+                  "y": -6.27241,
+                  "z": -152.337
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-strings-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024102",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-thal",
+              "zoneName": "Ul'dah - Steps of Thal",
+              "territoryId": "territory-131",
+              "mapId": "map-14",
+              "sourceLevelRowId": 7074628,
+              "coordinates": {
+                "x": 9.1,
+                "y": 11.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -105.73,
+                  "y": 6.97333,
+                  "z": -4.10474
+                },
+                "mapGameId": "w1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-strings-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024102",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-thal",
+              "zoneName": "Ul'dah - Steps of Thal",
+              "territoryId": "territory-131",
+              "mapId": "map-14",
+              "sourceLevelRowId": 7074628,
+              "coordinates": {
+                "x": 9.1,
+                "y": 11.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -105.73,
+                  "y": 6.97333,
+                  "z": -4.10474
+                },
+                "mapGameId": "w1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68502
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68503,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:17.410Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68503,
+          "internalId": "StmBdb106_02967",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 6,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024120,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024119,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1024121,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1001821,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1024122,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1024123,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1024124,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1024102,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR_0",
+              "argument": 7074684,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_1",
+              "argument": 7074686,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUEST0",
+              "argument": 68108,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_00",
+              "argument": 1624,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_01",
+              "argument": 1625,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUEST1",
+              "argument": 67013,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024119
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024121
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1001821
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024122
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024123
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024124
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024102
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024119,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024121,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1001821,
+              "name": "Bartholomew",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024122,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024123,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024124,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024102,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68504
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-echoes-of-an-echo-68502"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-a-sultanas-duty-68504"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 10800,
+        "gil": 1875,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-19827",
+            "itemName": "Stewed River Bream",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-19807",
+            "itemName": "Doman Tea",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-19813",
+            "itemName": "Persimmon Pudding",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Alphinaud",
+          "xivapiRowId": 1024120
+        },
+        "location": {
+          "zone": "The Lochs",
+          "x": 36.7,
+          "y": 30.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-a-sultanas-duty-68504",
+      "xivapiRowId": 68504,
+      "sortOrder": 7,
+      "name": "A Sultana's Duty",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-sultanas-duty-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024040",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 7074616,
+              "coordinates": {
+                "x": 7.2,
+                "y": 12.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -201.059,
+                  "y": 18,
+                  "z": 78.6427
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-duty-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024041",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-70",
+              "sourceLevelRowId": 7074617,
+              "coordinates": {
+                "x": 10.8,
+                "y": 11.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -22.7608,
+                  "y": 83.2,
+                  "z": -7.545
+                },
+                "mapGameId": "w1t1/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-duty-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024042",
+          "locations": [
+            {
+              "zoneId": "the-gold-saucer",
+              "zoneName": "The Gold Saucer",
+              "territoryId": "territory-144",
+              "mapId": "map-196",
+              "sourceLevelRowId": 7074654,
+              "coordinates": {
+                "x": 5.1,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -51.6628,
+                  "y": 0.0442799,
+                  "z": 53.9435
+                },
+                "mapGameId": "w1eb/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-duty-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024043",
+          "locations": [
+            {
+              "zoneId": "the-gold-saucer",
+              "zoneName": "The Gold Saucer",
+              "territoryId": "territory-144",
+              "mapId": "map-196",
+              "sourceLevelRowId": 7074652,
+              "coordinates": {
+                "x": 5.9,
+                "y": 7.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -12.7503,
+                  "y": 20.9997,
+                  "z": 47.8548
+                },
+                "mapGameId": "w1eb/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68503
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68504,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:20.480Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68504,
+          "internalId": "StmBdb107_02968",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 7,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024102,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024040,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1024041,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1024585,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1024042,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1024043,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOCAL_QUEST0",
+              "argument": 68135,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOCAL_QSTSET_GODBERT",
+              "argument": 19,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_GODBERT_01",
+              "argument": 1024501,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_ACCEPT_CHK_00",
+              "argument": 65970,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_CHAIR_NANA",
+              "argument": 7099570,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_CHAIR_PAPA",
+              "argument": 7099575,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_CHAIR_MY",
+              "argument": 7099581,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_STAND_NANA",
+              "argument": 7074652,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024040
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024041
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024585
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024042
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024043
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024040,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024041,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024585,
+              "name": "blithesome businessman",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024042,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024043,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68505
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-a-sultanas-strings-68503"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-a-sultanas-resolve-68505"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 10800,
+        "gil": 825,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Nanamo Ul Namo",
+          "xivapiRowId": 1024102
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Thal",
+          "x": 9.1,
+          "y": 11.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-a-sultanas-resolve-68505",
+      "xivapiRowId": 68505,
+      "sortOrder": 8,
+      "name": "A Sultana's Resolve",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-sultanas-resolve-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1020622",
+          "locations": [
+            {
+              "zoneId": "ruby-bazaar-offices",
+              "zoneName": "Ruby Bazaar Offices",
+              "territoryId": "territory-639",
+              "mapId": "map-377",
+              "sourceLevelRowId": 7021290,
+              "coordinates": {
+                "x": 6.1,
+                "y": 6.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 0.049,
+                  "y": 0,
+                  "z": -2.2929
+                },
+                "mapGameId": "e3e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-resolve-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024044",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 7074985,
+              "coordinates": {
+                "x": 9,
+                "y": 9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -110.347,
+                  "y": 3.98254,
+                  "z": -114
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-resolve-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024045",
+          "locations": [
+            {
+              "zoneId": "the-waking-sands",
+              "zoneName": "The Waking Sands",
+              "territoryId": "territory-212",
+              "mapId": "map-107",
+              "sourceLevelRowId": 7074976,
+              "coordinates": {
+                "x": 6.1,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -2.81786,
+                  "y": -2.02948,
+                  "z": -17.1598
+                },
+                "mapGameId": "w1e6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-a-sultanas-resolve-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024045",
+          "locations": [
+            {
+              "zoneId": "the-waking-sands",
+              "zoneName": "The Waking Sands",
+              "territoryId": "territory-212",
+              "mapId": "map-107",
+              "sourceLevelRowId": 7074976,
+              "coordinates": {
+                "x": 6.1,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -2.81786,
+                  "y": -2.02948,
+                  "z": -17.1598
+                },
+                "mapGameId": "w1e6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68504
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68505,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:23.370Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68505,
+          "internalId": "StmBdb108_02969",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 8,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024043,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1020622,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1024044,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 7074977,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1024045,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT_01",
+              "argument": 1626,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1020622
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024044
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024045
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1020622,
+              "name": "Hancock",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024044,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024045,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68506
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-a-sultanas-duty-68504"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-securing-the-saltery-68506"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 10800,
+        "gil": 2896,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-19821",
+            "itemName": "Onigara-yaki",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-19812",
+            "itemName": "Jellied Compote",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-19815",
+            "itemName": "Persimmon Leaf Sushi",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Nanamo Ul Namo",
+          "xivapiRowId": 1024043
+        },
+        "location": {
+          "zone": "The Gold Saucer",
+          "x": 5.9,
+          "y": 7.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-securing-the-saltery-68506",
+      "xivapiRowId": 68506,
+      "sortOrder": 9,
+      "name": "Securing the Saltery",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-securing-the-saltery-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024046",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074674,
+              "coordinates": {
+                "x": 33.4,
+                "y": 33.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 592.706,
+                  "y": 79.9725,
+                  "z": 618.646
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-securing-the-saltery-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1023036",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 6949748,
+              "coordinates": {
+                "x": 15.8,
+                "y": 25.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -285.208,
+                  "y": 11.1832,
+                  "z": 188.844
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-securing-the-saltery-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024052",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074701,
+              "coordinates": {
+                "x": 16.7,
+                "y": 25.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -238.515,
+                  "y": 0.915878,
+                  "z": 196.57
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-securing-the-saltery-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024340",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7091521,
+              "coordinates": {
+                "x": 17.3,
+                "y": 25.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -208.2,
+                  "y": -0.00253034,
+                  "z": 207.646
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-securing-the-saltery-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024053",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074705,
+              "coordinates": {
+                "x": 21.7,
+                "y": 27.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 8.61301,
+                  "y": 5.39527,
+                  "z": 282.798
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-securing-the-saltery-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024341",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7091525,
+              "coordinates": {
+                "x": 21.4,
+                "y": 26.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.4958,
+                  "y": 3.18211,
+                  "z": 249.353
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "adventurer-securing-the-saltery-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1023036",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 6949748,
+              "coordinates": {
+                "x": 15.8,
+                "y": 25.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -285.208,
+                  "y": 11.1832,
+                  "z": 188.844
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68505
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68506,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:26.834Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68506,
+          "internalId": "StmBdb109_02970",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 9,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024045,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024046,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1024047,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1024048,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1024049,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1023036,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1024050,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1024051,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1024052,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 7091522,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1024340,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1024053,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE1",
+              "argument": 7091527,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1024341,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1024054,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BIND_WIS_01",
+              "argument": 7074698,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ALPH_01",
+              "argument": 7074699,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_WIS_02",
+              "argument": 7074709,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_WIS_01",
+              "argument": 1021992,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_ALPH_01",
+              "argument": 1011887,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_AREN_01",
+              "argument": 1019537,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SNP_0",
+              "argument": 17,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SNP_1",
+              "argument": 18,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_ENEMY_01",
+              "argument": 1024346,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_ENEMY_02",
+              "argument": 1024347,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_ENEMY_VS_01",
+              "argument": 7154151,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_ENEMY_VS_02",
+              "argument": 7154152,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_ALPH_01",
+              "argument": 7074675,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_AREN_01",
+              "argument": 7074677,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_WIS_01",
+              "argument": 7074678,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACT_SUFFERING",
+              "argument": 961,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_WIN",
+              "argument": 111,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_WIN_CHEAP",
+              "argument": 23,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_BATTLE",
+              "argument": 113,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_ATK",
+              "argument": 85,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_01",
+              "argument": 459,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024046
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024047
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024048
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024049
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1023036
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024050
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024051
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024052
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1024340
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1024053
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1024341
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1024054
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024046,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024047,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024048,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024049,
+              "name": "Wiscar",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1023036,
+              "name": "Watt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024050,
+              "name": "Wiscar",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024051,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024052,
+              "name": "Wiscar",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1024340,
+              "name": "Wiscar",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1024053,
+              "name": "Wiscar",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1024341,
+              "name": "Wiscar",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1024054,
+              "name": "Wiscar",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68507
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-a-sultanas-resolve-68505"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-a-blissful-arrival-68507"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 10800,
+        "gil": 1954,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Nanamo Ul Namo",
+          "xivapiRowId": 1024045
+        },
+        "location": {
+          "zone": "The Waking Sands",
+          "x": 6.1,
+          "y": 5.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-a-blissful-arrival-68507",
+      "xivapiRowId": 68507,
+      "sortOrder": 10,
+      "name": "A Blissful Arrival",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-blissful-arrival-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2009047",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074716,
+              "coordinates": {
+                "x": 32,
+                "y": 33.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 526.818,
+                  "y": 69.993,
+                  "z": 577.416
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-blissful-arrival-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024055",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074714,
+              "coordinates": {
+                "x": 32,
+                "y": 33
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 525.083,
+                  "y": 70,
+                  "z": 574.688
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-a-blissful-arrival-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024057",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074723,
+              "coordinates": {
+                "x": 28.3,
+                "y": 22.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 340.239,
+                  "y": 73.991,
+                  "z": 70.6949
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68506
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68507,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:30.188Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68507,
+          "internalId": "StmBdb110_02971",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 10,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024051,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024054,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2009047,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1023036,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1024055,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1024056,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1024187,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1024057,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1024058,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1024059,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1024060,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1024061,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1024062,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1024503,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1024504,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BIND_WIS_01",
+              "argument": 7074709,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_WAT_01",
+              "argument": 6949748,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_FUMETSU_01",
+              "argument": 1003865,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_01",
+              "argument": 1627,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_RAU_01",
+              "argument": 1022497,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_ARE_01",
+              "argument": 1019537,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_REGI_01",
+              "argument": 1024458,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_REGI_02",
+              "argument": 1024459,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_BOSS_01",
+              "argument": 1019560,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_MIN_01",
+              "argument": 1018519,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_MIN_02",
+              "argument": 1021670,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_MIN_03",
+              "argument": 1021671,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_MIN_04",
+              "argument": 1021672,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_AREN_01",
+              "argument": 7074715,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_PIPIN_01",
+              "argument": 7081010,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_SOL_01",
+              "argument": 7074728,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_SOL_02",
+              "argument": 7074729,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_ANANTA_01",
+              "argument": 7074730,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_ANANTA_02",
+              "argument": 7074731,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_ANANTA_03",
+              "argument": 7074732,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_ANANTA_04",
+              "argument": 7107323,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_LEVEL_ANANTA_05",
+              "argument": 7107325,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024054
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1023036
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024055
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024056
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024187
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024057
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024058
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024059
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1024060
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1024061
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1024062
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1024503
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1024504
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024054,
+              "name": "Wiscar",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1023036,
+              "name": "Watt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024055,
+              "name": "Raubahn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024056,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024187,
+              "name": "Pipin",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024057,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024058
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024059
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1024060
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1024061
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1024062
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1024503
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1024504
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68508
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-securing-the-saltery-68506"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-return-of-the-bull-68508"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "orchestrion-roll",
+          "id": "orchestrion-roll-172",
+          "sourceRowId": 21278,
+          "name": "The Measure of His Reach Orchestrion Roll",
+          "details": "Using The Measure of His Reach Orchestrion Roll adds this orchestrion roll."
+        }
+      ],
+      "rewards": {
+        "experience": 10800,
+        "gil": 861,
+        "items": [
+          {
+            "itemId": "item-21278",
+            "itemName": "The Measure of His Reach Orchestrion Roll",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-26891",
+            "itemName": "Dai-ryumyaku Weapon Coffer (IL 370)",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Alphinaud",
+          "xivapiRowId": 1024051
+        },
+        "location": {
+          "zone": "The Lochs",
+          "x": 15.8,
+          "y": 25.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "stormblood-msq-return-of-the-bull-68508",
+      "xivapiRowId": 68508,
+      "sortOrder": 11,
+      "name": "Return of the Bull",
+      "level": 70,
+      "expansionId": "stormblood",
+      "patch": "4.1",
+      "category": "msq",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-return-of-the-bull-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2009048",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074922,
+              "coordinates": {
+                "x": 33.4,
+                "y": 34
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 593.565,
+                  "y": 80,
+                  "z": 621.963
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-return-of-the-bull-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024065",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074874,
+              "coordinates": {
+                "x": 36.5,
+                "y": 32
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 749.996,
+                  "y": 70.0847,
+                  "z": 522.881
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-return-of-the-bull-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024066",
+          "locations": [
+            {
+              "zoneId": "the-hall-of-the-griffin",
+              "zoneName": "The Hall of the Griffin",
+              "territoryId": "territory-737",
+              "mapId": "map-417",
+              "sourceLevelRowId": 7081665,
+              "coordinates": {
+                "x": 11.2,
+                "y": 6.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 245.078,
+                  "y": 122,
+                  "z": -349.064
+                },
+                "mapGameId": "g3d2/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-return-of-the-bull-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-hall-of-the-griffin",
+              "zoneName": "The Hall of the Griffin",
+              "territoryId": "territory-737",
+              "mapId": "map-417",
+              "sourceLevelRowId": 7081922,
+              "coordinates": {
+                "x": 11.3,
+                "y": 6.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 250.063,
+                  "y": 122,
+                  "z": -348.741
+                },
+                "mapGameId": "g3d2/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-return-of-the-bull-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024206",
+          "locations": [
+            {
+              "zoneId": "the-hall-of-the-griffin",
+              "zoneName": "The Hall of the Griffin",
+              "territoryId": "territory-737",
+              "mapId": "map-417",
+              "sourceLevelRowId": 7081796,
+              "coordinates": {
+                "x": 11.3,
+                "y": 6.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 251.697,
+                  "y": 121.996,
+                  "z": -345.541
+                },
+                "mapGameId": "g3d2/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-return-of-the-bull-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024068",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074875,
+              "coordinates": {
+                "x": 36.3,
+                "y": 32
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 741.176,
+                  "y": 69.9625,
+                  "z": 525.528
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "adventurer-return-of-the-bull-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1024068",
+          "locations": [
+            {
+              "zoneId": "the-lochs",
+              "zoneName": "The Lochs",
+              "territoryId": "territory-621",
+              "mapId": "map-369",
+              "sourceLevelRowId": 7074875,
+              "coordinates": {
+                "x": 36.3,
+                "y": 32
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 741.176,
+                  "y": 69.9625,
+                  "z": 525.528
+                },
+                "mapGameId": "g3f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "adventurer-return-of-the-bull-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1019468",
+          "locations": [
+            {
+              "zoneId": "rhalgrs-reach",
+              "zoneName": "Rhalgr's Reach",
+              "territoryId": "territory-635",
+              "mapId": "map-366",
+              "sourceLevelRowId": 6865805,
+              "coordinates": {
+                "x": 14.7,
+                "y": 9.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 170.601,
+                  "y": 13.0237,
+                  "z": -91.963
+                },
+                "mapGameId": "g3t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68507
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68508,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-06T07:10:35.317Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68508,
+          "internalId": "StmBdb111_02972",
+          "expansion": "Stormblood",
+          "journalGenre": "Post-Ala Mhigan Liberation",
+          "eventIconType": 3,
+          "sortKey": 11,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1024063,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1024064,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2009048,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 11,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1024065,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1024150,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1024151,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1024152,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1024153,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 7081686,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1024066,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 403,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 5024,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2009072,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "TERRITORYTYPE1",
+              "argument": 737,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "POPRANGE1",
+              "argument": 7081797,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1024206,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE2",
+              "argument": 7081687,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "POPRANGE3",
+              "argument": 7074883,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1024068,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1024069,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1024070,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1024071,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1024072,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR14",
+              "argument": 1024073,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR15",
+              "argument": 1019468,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BIND_AREN_01",
+              "argument": 7074873,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_THAN_01",
+              "argument": 7074897,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_AREN_03",
+              "argument": 7074876,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ALPH_02",
+              "argument": 7074877,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_AREN_01",
+              "argument": 1019537,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_ALPH_01",
+              "argument": 1011887,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_01",
+              "argument": 1628,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_02",
+              "argument": 1630,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_03",
+              "argument": 1631,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_04",
+              "argument": 1632,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_05",
+              "argument": 1633,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_06",
+              "argument": 1634,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_07",
+              "argument": 1635,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_08",
+              "argument": 1636,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_MNAAGO_01",
+              "argument": 1018318,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_ALISAIE_01",
+              "argument": 1019541,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_AREN_EVENT_ZONE",
+              "argument": 7081696,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ALPH_EVENT_ZONE",
+              "argument": 7081698,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_RAU_EVENT_ZONE",
+              "argument": 7081693,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_YSHT_EVENT_ZONE",
+              "argument": 7081695,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_YSHT_01",
+              "argument": 1011889,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC_THAN_01",
+              "argument": 1015842,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_01",
+              "argument": 459,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024064
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024065
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024150
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024151
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024152
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024153
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024066
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024206
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1024068
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1024069
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1024070
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1024071
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1024072
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1024073
+            },
+            {
+              "sourceInstruction": "ACTOR15",
+              "actorRowId": 1019468
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1024064,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1024065,
+              "name": "Resistance guard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1024150,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1024151,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1024152,
+              "name": "Y'shtola",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1024153,
+              "name": "Thancred",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1024066,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1024206,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1024068,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1024069,
+              "name": "Arenvald",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1024070,
+              "name": "Alphinaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1024071,
+              "name": "Nanamo Ul Namo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1024072,
+              "name": "Raubahn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1024073,
+              "name": "Pipin",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR15",
+              "actorRowId": 1019468,
+              "name": "Lyse",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68541,
+              68558
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "stormblood-msq-a-blissful-arrival-68507"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "stormblood-msq-tidings-from-the-east-68558"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "minion",
+          "id": "minion-276",
+          "sourceRowId": 21066,
+          "name": "Dress-up Raubahn",
+          "details": "Using Dress-up Raubahn unlocks this minion."
+        }
+      ],
+      "rewards": {
+        "experience": 10800,
+        "gil": 3481,
+        "items": [
+          {
+            "itemId": "item-21066",
+            "itemName": "Dress-up Raubahn",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Raubahn",
+          "xivapiRowId": 1024063
+        },
+        "location": {
+          "zone": "The Lochs",
+          "x": 28.3,
+          "y": 23
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

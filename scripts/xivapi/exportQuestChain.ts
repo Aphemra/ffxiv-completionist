@@ -1824,7 +1824,12 @@ function normalizeRewardItem(
     return undefined;
   }
 
-  const quantity = readInteger(item.quantity) ?? null;
+  const rawQuantity = readInteger(item.quantity);
+
+  const quantity =
+    rawQuantity !== undefined && rawQuantity >= 0
+      ? Math.max(1, rawQuantity)
+      : null;
 
   const result: JsonObject = {
     itemId,

@@ -19,4 +19,10 @@ END_ROW=""
 JOURNAL_CATEGORY="Seventh Astral Era Main Scenario Quests"
 CLASS_JOB=""
 
+COLLECTION_ID="arr-2.1-msq"
+COLLECTION_TITLE="Patch 2.1 - A Realm Awoken"
+COLLECTION_DESCRIPTION="Post-A Realm Reborn main scenario quests introduced in Patch 2.1."
+COLLECTION_SORT_ORDER="210"
+VERIFICATION_STATUS="verified"
+
 source "$(dirname "${BASH_SOURCE[0]}")/../_quest-job.sh"

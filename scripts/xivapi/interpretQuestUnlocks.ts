@@ -152,7 +152,7 @@ function createDutyUnlock(value: unknown): InterpretedQuestUnlock | undefined {
 }
 
 const supportedCollectibleItemActionRowIds = new Set<number>([
-  853, 1322, 3357, 25183,
+  853, 1322, 3357, 20086, 25183,
 ]);
 
 export function isSupportedCollectibleItemActionRowId(
@@ -217,6 +217,12 @@ function createCollectibleRewardUnlock(
       type = 'orchestrion-roll';
       targetId = `orchestrion-roll-${relatedRowId}`;
       notes = `Using ${itemName} adds this orchestrion roll.`;
+      break;
+
+    case 20086:
+      type = 'fashion-accessory';
+      targetId = `fashion-accessory-${relatedRowId}`;
+      notes = `Using ${itemName} unlocks this fashion accessory.`;
       break;
 
     default:

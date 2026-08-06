@@ -19,4 +19,10 @@ END_ROW=""
 JOURNAL_CATEGORY="Seventh Astral Era Main Scenario Quests"
 CLASS_JOB=""
 
+COLLECTION_ID="arr-2.2-msq"
+COLLECTION_TITLE="Patch 2.2 - Through the Maelstrom"
+COLLECTION_DESCRIPTION="Post-A Realm Reborn main scenario quests introduced in Patch 2.2."
+COLLECTION_SORT_ORDER="220"
+VERIFICATION_STATUS="verified"
+
 source "$(dirname "${BASH_SOURCE[0]}")/../_quest-job.sh"

@@ -19,4 +19,10 @@ END_ROW=""
 JOURNAL_CATEGORY="Seventh Umbral Era Main Scenario Quests"
 CLASS_JOB=""
 
+COLLECTION_ID="arr-2.0-msq"
+COLLECTION_TITLE="Patch 2.0 - A Realm Reborn"
+COLLECTION_DESCRIPTION="A Realm Reborn main scenario quests introduced in Patch 2.0."
+COLLECTION_SORT_ORDER="200"
+VERIFICATION_STATUS="verified"
+
 source "$(dirname "${BASH_SOURCE[0]}")/../_quest-job.sh"
