@@ -141,6 +141,42 @@ export const questAvailabilitySchema = z.strictObject({
 
 export const itemQualitySchema = z.enum(['normal', 'high-quality', 'either']);
 
+export const questItemUsageSchema = z.enum([
+  'required-before-starting',
+
+  'obtained-during-quest',
+  'used-during-quest',
+
+  'turn-in',
+  'equip',
+
+  'craft',
+  'gather',
+
+  'unknown',
+]);
+
+export const questItemSchema = z.strictObject({
+  itemId: gameDataIdSchema,
+  itemName: nonEmptyStringSchema,
+
+  sourceRowId: z.number().int().positive().optional(),
+
+  sourceSheet: z.enum(['item', 'event-item']).optional(),
+
+  quantity: z.number().int().min(1).optional(),
+
+  quality: itemQualitySchema.optional(),
+
+  usage: questItemUsageSchema.default('unknown'),
+
+  sourceInstruction: nonEmptyStringSchema.optional(),
+
+  notes: nonEmptyStringSchema.optional(),
+
+  extensions: extensionsSchema.optional(),
+});
+
 export const questStartSchema = z
   .strictObject({
     npcId: gameDataIdSchema.optional(),
@@ -495,6 +531,8 @@ export const questSchema = z.strictObject({
 
   conditions: z.array(questConditionSchema).optional(),
 
+  questItems: z.array(questItemSchema).optional(),
+
   objectives: z.array(questObjectiveSchema).optional(),
 
   rewards: questRewardsSchema.optional(),
@@ -640,6 +678,8 @@ export const questManifestSchema = z
 export type QuestCategory = z.infer<typeof questCategorySchema>;
 
 export type QuestRequirement = z.infer<typeof questRequirementSchema>;
+
+export type QuestItem = z.infer<typeof questItemSchema>;
 
 export type QuestRewards = z.infer<typeof questRewardsSchema>;
 

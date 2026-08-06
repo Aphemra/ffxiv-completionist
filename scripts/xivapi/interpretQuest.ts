@@ -870,7 +870,7 @@ async function main(): Promise<void> {
     1,
   );
 
-  const requiredItemReferences = scriptParameters
+  const questItemReferences = scriptParameters
     .filter(
       (parameter) =>
         (parameter.referenceType === 'item' ||
@@ -1023,9 +1023,9 @@ async function main(): Promise<void> {
     'Review objective text manually; TodoParams provide structure and locations but not player-facing objective text.',
   ];
 
-  if (requiredItemReferences.length > 0) {
+  if (questItemReferences.length > 0) {
     manualChecks.push(
-      'Resolve required item names and quantities from script references or another source.',
+      'Resolve quest item names and quantities from script references or another source.',
     );
   }
 
@@ -1137,7 +1137,7 @@ async function main(): Promise<void> {
 
         scriptParameters,
 
-        requiredItemReferences,
+        questItemReferences,
 
         dutyReferences,
 
@@ -1187,8 +1187,10 @@ async function main(): Promise<void> {
 
     requirements: {
       classJob: classJobRequirement,
+    },
 
-      unresolvedItems: requiredItemReferences,
+    questItems: {
+      unresolvedReferences: questItemReferences,
     },
 
     objectives,
@@ -1221,7 +1223,7 @@ async function main(): Promise<void> {
     unresolvedReferences: {
       actors: unresolvedActorReferences,
 
-      items: requiredItemReferences,
+      items: questItemReferences,
 
       duties: dutyReferences,
     },

@@ -4,6 +4,7 @@ import { GRAND_COMPANY_IDS } from '../../src/domain/grandCompanies';
 import {
   extensionsSchema,
   questCategorySchema,
+  questItemSchema,
   questObjectiveSchema,
   questRawRelationsSchema,
   questRepeatabilitySchema,
@@ -186,6 +187,8 @@ export const questExportEntrySchema = z.strictObject({
   repeatability: questRepeatabilitySchema.optional(),
 
   requirements: z.array(questRequirementSchema),
+
+  questItems: z.array(questItemSchema).default([]),
 
   objectives: z.array(questObjectiveSchema).default([]),
 

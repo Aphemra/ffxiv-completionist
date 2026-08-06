@@ -441,6 +441,8 @@ function createMarkdown(review: JsonObject): string {
 
   const requirements = asObject(review.requirements);
 
+  const questItems = asObject(review.questItems);
+
   const rewards = asObject(review.rewards);
 
   const flags = asObject(review.flags);
@@ -527,21 +529,21 @@ function createMarkdown(review: JsonObject): string {
     );
   }
 
-  const itemReferences = asArray(requirements?.itemReferences);
+  const itemReferences = asArray(questItems?.references);
 
   if (itemReferences.length === 0) {
-    lines.push('- Required items: None detected');
+    lines.push('- Quest items: None detected');
   } else {
     for (const rawReference of itemReferences) {
       const reference = asObject(rawReference);
 
       lines.push(
         [
-          '- Required item:',
+          '- Quest item:',
           readString(reference?.name) ??
             `Unresolved item row ${readInteger(reference?.itemRowId) ?? 'unknown'}`,
 
-          '(quantity requires review)',
+          '(used during the quest)',
         ].join(' '),
       );
     }
@@ -689,9 +691,20 @@ async function main(): Promise<void> {
 
   const requirements = ensureObject(review, 'requirements');
 
+  const questItems = ensureObject(review, 'questItems');
+
   const unresolvedReferences = ensureObject(review, 'unresolvedReferences');
 
   const rawItemReferences = deduplicateItemReferences([
+    /*
+     * Current semantic location.
+     */
+    ...asArray(questItems.unresolvedReferences),
+
+    /*
+     * Backward compatibility for reviews created before
+     * quest items were separated from requirements.
+     */
     ...asArray(requirements.unresolvedItems),
 
     ...asArray(unresolvedReferences.items),
@@ -771,13 +784,20 @@ async function main(): Promise<void> {
     resolvedActors,
   );
 
-  requirements.itemReferences = enrichedItems.all;
+  questItems.references = enrichedItems.all;
 
   if (enrichedItems.unresolved.length > 0) {
-    requirements.unresolvedItems = enrichedItems.unresolved;
+    questItems.unresolvedReferences = enrichedItems.unresolved;
   } else {
-    delete requirements.unresolvedItems;
+    delete questItems.unresolvedReferences;
   }
+
+  /*
+   * Remove legacy generated fields. A manually entered
+   * requirement elsewhere in the draft remains untouched.
+   */
+  delete requirements.itemReferences;
+  delete requirements.unresolvedItems;
 
   if (enrichedItems.unresolved.length > 0) {
     unresolvedReferences.items = enrichedItems.unresolved;
@@ -803,11 +823,62 @@ async function main(): Promise<void> {
 
   updateObjectiveNames(questDraft.objectives, resolvedActors);
 
+  questDraft.questItems = enrichedItems.all
+    .map((rawReference) => {
+      const reference = asObject(rawReference);
+
+      if (!reference) {
+        return undefined;
+      }
+
+      const itemName =
+        readString(reference.name) ?? readString(reference.itemName);
+
+      const itemId = readString(reference.itemId);
+
+      const sourceRowId = readInteger(reference.itemRowId);
+
+      const itemSheet = readString(reference.itemSheet);
+
+      if (!itemId || !itemName) {
+        return undefined;
+      }
+
+      const quantity = readInteger(reference.quantity);
+
+      return {
+        itemId,
+        itemName,
+
+        sourceRowId,
+
+        sourceSheet:
+          itemSheet === 'EventItem'
+            ? 'event-item'
+            : itemSheet === 'Item'
+              ? 'item'
+              : undefined,
+
+        quantity: quantity !== undefined && quantity > 0 ? quantity : undefined,
+
+        /*
+         * QuestParams tells us that the item participates
+         * in the quest, but not that it gates acceptance.
+         */
+        usage: 'used-during-quest',
+
+        sourceInstruction: readString(reference.sourceInstruction),
+      };
+    })
+    .filter((item): item is NonNullable<typeof item> => item !== undefined);
+
   const sourceData = ensureObject(questDraft, 'sourceData');
 
   const xivapiSourceData = ensureObject(sourceData, 'xivapi');
 
-  xivapiSourceData.requiredItemReferences = enrichedItems.all;
+  xivapiSourceData.questItemReferences = enrichedItems.all;
+
+  delete xivapiSourceData.requiredItemReferences;
 
   xivapiSourceData.resolvedActorReferences = enrichedActors.all;
 
@@ -832,6 +903,11 @@ async function main(): Promise<void> {
   removeManualCheck(
     existingChecks,
     'Resolve required item names and quantities from script references or another source.',
+  );
+
+  removeManualCheck(
+    existingChecks,
+    'Resolve quest item names and quantities from script references or another source.',
   );
 
   if (nextQuests.length === 0) {

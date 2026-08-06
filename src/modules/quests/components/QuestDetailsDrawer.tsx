@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-import type { Quest, QuestRequirement } from '../data/questSchemas';
+import type { Quest, QuestItem, QuestRequirement } from '../data/questSchemas';
 
 import { formatQuestCategory } from '../utilities/questPresentation';
 
@@ -93,6 +93,46 @@ function formatRequirement(requirement: QuestRequirement): {
   }
 }
 
+function formatQuestItem(item: QuestItem): {
+  title: string;
+  detail: string;
+} {
+  const usageLabels: Record<QuestItem['usage'], string> = {
+    'required-before-starting': 'Bring this before starting',
+
+    'obtained-during-quest': 'Obtained during this quest',
+
+    'used-during-quest': 'Used during this quest',
+
+    'turn-in': 'Turn-in item',
+
+    equip: 'Equip during this quest',
+
+    craft: 'Craft for this quest',
+
+    gather: 'Gather for this quest',
+
+    unknown: 'Item involved in this quest',
+  };
+
+  return {
+    title:
+      item.quantity !== undefined
+        ? `${item.quantity}× ${item.itemName}`
+        : item.itemName,
+
+    detail: [
+      usageLabels[item.usage],
+
+      item.quality ? formatQuality(item.quality) : undefined,
+
+      item.notes,
+    ]
+      .filter(Boolean)
+      .join(' · '),
+  };
+}
+
 function getRelatedQuestName(
   questId: string,
   questsById: ReadonlyMap<string, Quest>,
@@ -147,6 +187,17 @@ export function QuestDetailsDrawer({
     setNoteDraft(trimmedNote);
     setNoteMessage(trimmedNote.length > 0 ? 'Note saved.' : 'Note removed.');
   }
+
+  const preparationItems =
+    quest.questItems?.filter((item) =>
+      ['required-before-starting', 'craft', 'gather'].includes(item.usage),
+    ) ?? [];
+
+  const duringQuestItems =
+    quest.questItems?.filter(
+      (item) =>
+        !['required-before-starting', 'craft', 'gather'].includes(item.usage),
+    ) ?? [];
 
   const hasRewards =
     quest.rewards &&
@@ -248,33 +299,74 @@ export function QuestDetailsDrawer({
           {quest.start && (
             <section className="quest-details__section">
               <header>
-                <p>Starting Point</p>
-                <h3>Where to begin</h3>
+                <p>Preparation</p>
+                <h3>Before starting</h3>
               </header>
 
-              <dl className="quest-details__facts">
-                <div>
-                  <dt>NPC</dt>
-                  <dd>{quest.start.npcName}</dd>
+              {(quest.requirements && quest.requirements.length > 0) ||
+              preparationItems.length > 0 ? (
+                <div className="quest-details__list">
+                  {quest.requirements?.map((requirement, index) => {
+                    const formatted = formatRequirement(requirement);
+
+                    return (
+                      <article
+                        key={`${requirement.type}-${index}`}
+                        className="quest-details__list-item"
+                      >
+                        <strong>{formatted.title}</strong>
+
+                        <span>{formatted.detail}</span>
+                      </article>
+                    );
+                  })}
+
+                  {preparationItems.map((item, index) => {
+                    const formatted = formatQuestItem(item);
+
+                    return (
+                      <article
+                        key={`${item.itemId}-${item.usage}-${index}`}
+                        className="quest-details__list-item"
+                      >
+                        <strong>{formatted.title}</strong>
+
+                        <span>{formatted.detail}</span>
+                      </article>
+                    );
+                  })}
                 </div>
+              ) : (
+                <p className="quest-details__empty">
+                  No special preparation is required.
+                </p>
+              )}
+            </section>
+          )}
 
-                {quest.start.zoneName && (
-                  <div>
-                    <dt>Zone</dt>
-                    <dd>{quest.start.zoneName}</dd>
-                  </div>
-                )}
+          {duringQuestItems.length > 0 && (
+            <section className="quest-details__section">
+              <header>
+                <p>Quest Items</p>
+                <h3>During this quest</h3>
+              </header>
 
-                {quest.start.coordinates && (
-                  <div>
-                    <dt>Coordinates</dt>
-                    <dd>
-                      X: {quest.start.coordinates.x.toFixed(1)}, Y:{' '}
-                      {quest.start.coordinates.y.toFixed(1)}
-                    </dd>
-                  </div>
-                )}
-              </dl>
+              <div className="quest-details__list">
+                {duringQuestItems.map((item, index) => {
+                  const formatted = formatQuestItem(item);
+
+                  return (
+                    <article
+                      key={`${item.itemId}-${item.usage}-${index}`}
+                      className="quest-details__list-item"
+                    >
+                      <strong>{formatted.title}</strong>
+
+                      <span>{formatted.detail}</span>
+                    </article>
+                  );
+                })}
+              </div>
             </section>
           )}
 
