@@ -105,10 +105,9 @@
   z-index: 5;
 
   display: grid;
-  gap: 0.8rem;
+  overflow: hidden;
 
   margin-bottom: 1rem;
-  padding: 1rem;
 
   border: 1px solid var(--color-border);
   border-radius: 0.75rem;
@@ -118,7 +117,21 @@
   backdrop-filter: blur(0.7rem);
 }
 
+.quest-toolbar__primary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 1rem;
+
+  padding: 1rem;
+
+  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(135deg, rgb(255 255 255 / 2%), transparent 55%);
+}
+
 .quest-filter {
+  min-width: 0;
+
   display: grid;
   gap: 0.35rem;
 }
@@ -166,23 +179,36 @@
 
 .quest-toolbar__selects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
+  grid-template-columns:
+    minmax(8.5rem, 1fr)
+    minmax(18rem, 2fr)
+    minmax(8.5rem, 1fr)
+    minmax(8.5rem, 1fr);
   gap: 0.75rem;
+
+  padding: 0.9rem 1rem 1rem;
 }
 
 .quest-toolbar__summary {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: flex-end;
+  gap: 0.65rem;
 }
 
 .quest-toolbar__summary p {
   margin: 0;
+  padding: 0.5rem 0.65rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
 
   color: var(--color-text-muted);
+  background: var(--color-background);
+
   font-size: 0.67rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .quest-toolbar__summary button,
@@ -699,6 +725,20 @@
   }
 }
 
+@media (max-width: 56rem) {
+  .quest-toolbar__primary {
+    grid-template-columns: 1fr;
+  }
+
+  .quest-toolbar__summary {
+    justify-content: space-between;
+  }
+
+  .quest-toolbar__selects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 38rem) {
   .quest-toolbar {
     position: static;
@@ -706,6 +746,19 @@
 
   .quest-toolbar__selects {
     grid-template-columns: 1fr;
+  }
+
+  .quest-toolbar__summary {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .quest-toolbar__summary p {
+    text-align: center;
+  }
+
+  .quest-toolbar__summary button {
+    width: 100%;
   }
 
   .quest-collection__header {
