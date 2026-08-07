@@ -65,6 +65,12 @@ function getQuestSectionId(
   ].join(':');
 }
 
+function collectionHasFeatureQuests(collection: QuestCollection): boolean {
+  return collection.groups.some((group) =>
+    group.quests.some((quest) => quest.isFeatureQuest),
+  );
+}
+
 function formatPatchTitle(
   patch: string,
   expansionId: string | undefined,
@@ -270,6 +276,19 @@ export function QuestLogPage() {
     const options = new Map<string, string>();
 
     for (const collection of catalog.collections) {
+      if (categoryFilter === 'feature') {
+        if (!collectionHasFeatureQuests(collection)) {
+          continue;
+        }
+
+        options.set(
+          collection.category,
+          formatQuestCategory(collection.category),
+        );
+
+        continue;
+      }
+
       if (!questCategoryMatchesFamily(collection.category, categoryFilter)) {
         continue;
       }
@@ -297,6 +316,19 @@ export function QuestLogPage() {
     const options = new Map<string, string>();
 
     for (const collection of catalog.collections) {
+      if (categoryFilter === 'feature') {
+        if (
+          collection.category !== primaryFilter ||
+          !collectionHasFeatureQuests(collection)
+        ) {
+          continue;
+        }
+
+        options.set(collection.id, collection.title);
+
+        continue;
+      }
+
       if (
         !questCategoryMatchesFamily(collection.category, categoryFilter) ||
         collection.filterFacets?.primary.id !== primaryFilter
@@ -342,13 +374,18 @@ export function QuestLogPage() {
                 primaryFilter === 'all' ||
                 (categoryFilter === 'msq'
                   ? quest.expansionId === primaryFilter
-                  : collection.filterFacets?.primary.id === primaryFilter);
+                  : categoryFilter === 'feature'
+                    ? quest.category === primaryFilter
+                    : collection.filterFacets?.primary.id === primaryFilter);
 
               const matchesSecondaryFilter =
                 secondaryFilter === 'all' ||
                 (categoryFilter === 'msq'
                   ? quest.patch === secondaryFilter
-                  : collection.filterFacets?.secondary.id === secondaryFilter);
+                  : categoryFilter === 'feature'
+                    ? collection.id === secondaryFilter
+                    : collection.filterFacets?.secondary.id ===
+                      secondaryFilter);
 
               const matchesSearch = questMatchesSearch(quest, searchQuery);
 

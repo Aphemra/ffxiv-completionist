@@ -47,10 +47,6 @@ export const QUEST_CATEGORY_OPTIONS = [
     label: 'Gathering Quests',
   },
   {
-    value: 'feature',
-    label: 'Feature Quests',
-  },
-  {
     value: 'side',
     label: 'Side Quests',
   },
@@ -106,9 +102,9 @@ export const QUEST_FAMILY_OPTIONS: readonly QuestFamilyOption[] = [
   {
     value: 'feature',
     label: 'Feature Quests',
-    categories: ['feature'],
-    primaryFilterLabel: 'Region',
-    secondaryFilterLabel: 'Zone',
+    categories: [],
+    primaryFilterLabel: 'Quest Type',
+    secondaryFilterLabel: 'Collection',
   },
   {
     value: 'jobs',
@@ -163,6 +159,10 @@ export function questCategoryMatchesFamily(
 }
 
 export function questMatchesFamily(quest: Quest, family: QuestFamily): boolean {
+  if (family === 'feature') {
+    return quest.isFeatureQuest;
+  }
+
   return questCategoryMatchesFamily(quest.category, family);
 }
 

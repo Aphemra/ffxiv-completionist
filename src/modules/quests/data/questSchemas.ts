@@ -64,7 +64,6 @@ export const questCategorySchema = z.enum([
   'role',
   'crafting',
   'gathering',
-  'feature',
   'side',
   'side-story',
   'tribal',
@@ -500,6 +499,8 @@ export const questSchema = z.strictObject({
   name: nonEmptyStringSchema,
 
   category: questCategorySchema,
+
+  isFeatureQuest: z.boolean().default(false),
 
   expansionId: gameDataIdSchema.optional(),
   patch: patchVersionSchema.optional(),

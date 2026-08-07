@@ -395,6 +395,9 @@ function convertQuest(
     name: quest.name,
     level: quest.level,
     sortOrder: quest.sortOrder,
+
+    isFeatureQuest: quest.isFeatureQuest,
+
     externalIds: {
       'xivapi-quest-row': quest.xivapiRowId,
     },

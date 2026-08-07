@@ -581,7 +581,6 @@ function suggestCategory(
   | 'role'
   | 'crafting'
   | 'gathering'
-  | 'feature'
   | 'side'
   | 'side-story'
   | 'tribal'
