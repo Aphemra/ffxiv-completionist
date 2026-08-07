@@ -14,9 +14,11 @@ export const xivapiRoot = path.join(projectRoot, 'scripts', 'xivapi');
 
 export const xivapiCacheRoot = path.join(xivapiRoot, '.cache');
 
+export const xivapiDataRoot = path.join(xivapiRoot, 'data');
+
 export const xivapiPinsPath = path.join(xivapiRoot, 'pins.json');
 
-export const questIndexPath = path.join(xivapiCacheRoot, 'quest-index.json');
+export const questIndexPath = path.join(xivapiDataRoot, 'quest-index.json');
 
 export async function ensureDirectory(directoryPath: string): Promise<void> {
   await mkdir(directoryPath, {

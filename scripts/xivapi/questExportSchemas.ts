@@ -182,6 +182,8 @@ export const questExportEntrySchema = z.strictObject({
   patch: nonEmptyStringSchema.optional(),
   category: questCategorySchema,
 
+  isFeatureQuest: z.boolean().default(false),
+
   availability: questAvailabilitySchema.nullable(),
 
   repeatability: questRepeatabilitySchema.optional(),

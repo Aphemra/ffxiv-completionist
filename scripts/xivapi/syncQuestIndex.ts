@@ -6,6 +6,8 @@ import { questIndexPath, writeJsonFile } from './paths';
 
 import { xivapiSheetResponseSchema } from './schemas';
 
+import { isFeatureQuestEventIconType } from './questClassification';
+
 type JsonObject = Record<string, unknown>;
 
 interface QuestIndexEntry {
@@ -25,6 +27,7 @@ interface QuestIndexEntry {
   beastTribeName?: string;
 
   isMainScenario: boolean;
+  isFeatureQuest: boolean;
   isRepeatable: boolean;
 
   previousQuestRowIds: number[];
@@ -32,7 +35,7 @@ interface QuestIndexEntry {
 }
 
 interface QuestIndexFile {
-  indexVersion: 4;
+  indexVersion: 5;
 
   source: {
     provider: 'xivapi';
@@ -228,6 +231,8 @@ async function main(): Promise<void> {
 
         isMainScenario: isMainScenarioCategory(journalCategoryName),
 
+        isFeatureQuest: isFeatureQuestEventIconType(eventIconTypeRowId),
+
         isRepeatable,
 
         previousQuestRowIds: parseRelationshipRowIds(row.fields.PreviousQuest),
@@ -288,7 +293,7 @@ async function main(): Promise<void> {
   ).length;
 
   const output: QuestIndexFile = {
-    indexVersion: 4,
+    indexVersion: 5,
 
     source: {
       provider: 'xivapi',

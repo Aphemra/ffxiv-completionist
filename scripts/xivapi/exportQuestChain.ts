@@ -77,6 +77,8 @@ const questIndexEntrySchema = z.looseObject({
 
   isMainScenario: z.boolean(),
 
+  isFeatureQuest: z.boolean(),
+
   isRepeatable: z.boolean(),
 
   previousQuestRowIds: z.array(positiveRowIdSchema),
@@ -95,7 +97,7 @@ interface QuestSelectionFilter {
 }
 
 const questIndexFileSchema = z.looseObject({
-  indexVersion: z.number().int().min(4),
+  indexVersion: z.number().int().min(5),
 
   source: z.looseObject({
     version: z.string().min(1),
@@ -2187,6 +2189,8 @@ function createQuestEntry(
 
     patch,
     category: slugify(category),
+
+    isFeatureQuest: quest.isFeatureQuest,
 
     availability: extractAvailability(reviewObject, draft, quest.name),
 
