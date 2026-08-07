@@ -501,8 +501,8 @@ export const questSchema = z.strictObject({
 
   category: questCategorySchema,
 
-  expansionId: gameDataIdSchema,
-  patch: patchVersionSchema,
+  expansionId: gameDataIdSchema.optional(),
+  patch: patchVersionSchema.optional(),
 
   level: gameLevelSchema,
   sortOrder: sortOrderSchema,
@@ -632,29 +632,51 @@ export const questCollectionSchema = z
     });
   });
 
-export const questManifestEntrySchema = z.strictObject({
-  id: gameDataIdSchema,
-  title: nonEmptyStringSchema,
-  description: nonEmptyStringSchema,
+export const questManifestEntrySchema = z
+  .strictObject({
+    id: gameDataIdSchema,
+    title: nonEmptyStringSchema,
+    description: nonEmptyStringSchema,
 
-  category: questCategorySchema,
-  expansionId: gameDataIdSchema,
-  patch: patchVersionSchema,
-  classJobId: gameDataIdSchema.optional(),
+    category: questCategorySchema,
+    expansionId: gameDataIdSchema.optional(),
+    patch: patchVersionSchema.optional(),
+    classJobId: gameDataIdSchema.optional(),
 
-  filterFacets: questCollectionFilterFacetsSchema.optional(),
+    filterFacets: questCollectionFilterFacetsSchema.optional(),
 
-  availability: questAvailabilitySchema.optional(),
+    availability: questAvailabilitySchema.optional(),
 
-  sortOrder: sortOrderSchema,
+    sortOrder: sortOrderSchema,
 
-  verificationStatus: questVerificationStatusSchema,
+    verificationStatus: questVerificationStatusSchema,
 
-  path: nonEmptyStringSchema,
-  enabled: z.boolean().default(true),
+    path: nonEmptyStringSchema,
+    enabled: z.boolean().default(true),
 
-  extensions: extensionsSchema.optional(),
-});
+    extensions: extensionsSchema.optional(),
+  })
+  .superRefine((entry, context) => {
+    if (entry.category !== 'msq') {
+      return;
+    }
+
+    if (!entry.expansionId) {
+      context.addIssue({
+        code: 'custom',
+        path: ['expansionId'],
+        message: 'MSQ collections require an expansion ID.',
+      });
+    }
+
+    if (!entry.patch) {
+      context.addIssue({
+        code: 'custom',
+        path: ['patch'],
+        message: 'MSQ collections require a patch.',
+      });
+    }
+  });
 
 export const questManifestSchema = z
   .strictObject({

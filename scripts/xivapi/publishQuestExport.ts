@@ -389,6 +389,7 @@ function convertQuest(
     id: routeId ? routeQuestId(quest.id, routeId) : quest.id,
     name: quest.name,
     level: quest.level,
+    sortOrder: quest.sortOrder,
     externalIds: {
       'xivapi-quest-row': quest.xivapiRowId,
     },
@@ -752,6 +753,59 @@ async function publishGenericCollection(
 
   const verificationStatus = readOption('--verification-status') ?? 'in-review';
 
+  const collectionFormat = readOption('--format') ?? 'linear';
+
+  if (collectionFormat !== 'linear' && collectionFormat !== 'standard') {
+    throw new Error('"--format" must be either "linear" or "standard".');
+  }
+
+  const primaryFacetId = readOption('--primary-facet-id');
+  const primaryFacetName = readOption('--primary-facet-name');
+
+  const secondaryFacetId = readOption('--secondary-facet-id');
+  const secondaryFacetName = readOption('--secondary-facet-name');
+
+  const facetValues = [
+    primaryFacetId,
+    primaryFacetName,
+    secondaryFacetId,
+    secondaryFacetName,
+  ];
+
+  const suppliedFacetCount = facetValues.filter(
+    (value) => value !== undefined,
+  ).length;
+
+  if (suppliedFacetCount !== 0 && suppliedFacetCount !== 4) {
+    throw new Error(
+      [
+        'Collection facets require all four options:',
+        '--primary-facet-id, --primary-facet-name,',
+        '--secondary-facet-id, and --secondary-facet-name.',
+      ].join(' '),
+    );
+  }
+
+  const filterFacets =
+    primaryFacetId && primaryFacetName && secondaryFacetId && secondaryFacetName
+      ? {
+          primary: {
+            id: slugify(primaryFacetId),
+            name: primaryFacetName,
+          },
+          secondary: {
+            id: slugify(secondaryFacetId),
+            name: secondaryFacetName,
+          },
+        }
+      : undefined;
+
+  if (exportData.category !== 'msq' && !filterFacets) {
+    throw new Error(
+      'Non-MSQ collections require primary and secondary filter facets.',
+    );
+  }
+
   const outputPath = path.resolve(projectRoot, rawOutputPath);
 
   const questDataRoot = path.join(projectRoot, 'public', 'data', 'quests');
@@ -806,18 +860,25 @@ async function publishGenericCollection(
     ),
   );
 
-  const collection = questCollectionFileSchema.parse({
-    schemaVersion: 1,
-    format: 'linear',
+  const collection = questCollectionFileSchema.parse(
+    collectionFormat === 'linear'
+      ? {
+          schemaVersion: 1,
+          format: 'linear',
 
-    startsAfterQuestIds:
-      startsAfterQuestIds.length > 0 ? startsAfterQuestIds : undefined,
+          startsAfterQuestIds:
+            startsAfterQuestIds.length > 0 ? startsAfterQuestIds : undefined,
 
-    continuesToQuestIds:
-      continuesToQuestIds.length > 0 ? continuesToQuestIds : undefined,
+          continuesToQuestIds:
+            continuesToQuestIds.length > 0 ? continuesToQuestIds : undefined,
 
-    groups,
-  });
+          groups,
+        }
+      : {
+          schemaVersion: 1,
+          groups,
+        },
+  );
 
   const manifestPath = path.join(questDataRoot, 'manifest.json');
 
@@ -831,6 +892,8 @@ async function publishGenericCollection(
     category: exportData.category,
     expansionId: exportData.expansionId,
     patch: exportData.patch,
+
+    filterFacets,
 
     sortOrder: collectionSortOrder,
     verificationStatus,

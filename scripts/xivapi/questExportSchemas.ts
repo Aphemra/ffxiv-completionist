@@ -178,8 +178,8 @@ export const questExportEntrySchema = z.strictObject({
 
   level: z.number().int().min(1),
 
-  expansionId: gameDataIdSchema,
-  patch: nonEmptyStringSchema,
+  expansionId: gameDataIdSchema.optional(),
+  patch: nonEmptyStringSchema.optional(),
   category: questCategorySchema,
 
   availability: questAvailabilitySchema.nullable(),
@@ -232,44 +232,66 @@ const questExportIssueSchema = z.strictObject({
   message: nonEmptyStringSchema,
 });
 
-export const questChainExportSchema = z.strictObject({
-  schemaVersion: z.literal(1),
+export const questChainExportSchema = z
+  .strictObject({
+    schemaVersion: z.literal(1),
 
-  id: gameDataIdSchema,
-  title: nonEmptyStringSchema,
+    id: gameDataIdSchema,
+    title: nonEmptyStringSchema,
 
-  expansionId: gameDataIdSchema,
-  patch: nonEmptyStringSchema,
-  category: questCategorySchema,
+    expansionId: gameDataIdSchema.optional(),
+    patch: nonEmptyStringSchema.optional(),
+    category: questCategorySchema,
 
-  generatedAt: nonEmptyStringSchema,
+    generatedAt: nonEmptyStringSchema,
 
-  source: z.strictObject({
-    provider: z.literal('xivapi'),
+    source: z.strictObject({
+      provider: z.literal('xivapi'),
 
-    version: nonEmptyStringSchema,
+      version: nonEmptyStringSchema,
 
-    schema: nonEmptyStringSchema,
-  }),
+      schema: nonEmptyStringSchema,
+    }),
 
-  summary: z.strictObject({
-    questCount: z.number().int().min(1),
+    summary: z.strictObject({
+      questCount: z.number().int().min(1),
 
-    branchCount: z.number().int().min(0),
+      branchCount: z.number().int().min(0),
 
-    convergenceCount: z.number().int().min(0),
+      convergenceCount: z.number().int().min(0),
 
-    unresolvedIssueCount: z.number().int().min(0),
-  }),
+      unresolvedIssueCount: z.number().int().min(0),
+    }),
 
-  branches: z.array(questGraphPointSchema),
+    branches: z.array(questGraphPointSchema),
 
-  convergences: z.array(questGraphPointSchema),
+    convergences: z.array(questGraphPointSchema),
 
-  issues: z.array(questExportIssueSchema),
+    issues: z.array(questExportIssueSchema),
 
-  quests: z.array(questExportEntrySchema).min(1),
-});
+    quests: z.array(questExportEntrySchema).min(1),
+  })
+  .superRefine((exportData, context) => {
+    if (exportData.category !== 'msq') {
+      return;
+    }
+
+    if (!exportData.expansionId) {
+      context.addIssue({
+        code: 'custom',
+        path: ['expansionId'],
+        message: 'MSQ exports require an expansion ID.',
+      });
+    }
+
+    if (!exportData.patch) {
+      context.addIssue({
+        code: 'custom',
+        path: ['patch'],
+        message: 'MSQ exports require a patch.',
+      });
+    }
+  });
 
 export type QuestExportEntry = z.infer<typeof questExportEntrySchema>;
 

@@ -456,6 +456,11 @@ export function QuestDetailsDrawer({
     setNoteMessage(trimmedNote.length > 0 ? 'Note saved.' : 'Note removed.');
   }
 
+  const questContextLabel =
+    quest.expansionId && quest.patch
+      ? `${quest.expansionId.toUpperCase()} · Patch ${quest.patch}`
+      : formatQuestCategory(quest.category);
+
   const preparationItems =
     quest.questItems?.filter((item) =>
       ['required-before-starting', 'craft', 'gather'].includes(item.usage),
@@ -536,9 +541,7 @@ export function QuestDetailsDrawer({
       >
         <header className="quest-details__header">
           <div>
-            <p className="quest-details__eyebrow">
-              {quest.expansionId.toUpperCase()} · Patch {quest.patch}
-            </p>
+            <p className="quest-details__eyebrow">{questContextLabel}</p>
 
             <h2 id="quest-details-title">{quest.name}</h2>
 

@@ -2055,8 +2055,8 @@ function createQuestEntry(
   questId: string,
   previousQuestIds: string[],
   nextQuestIds: string[],
-  expansionId: string,
-  patch: string,
+  expansionId: string | undefined,
+  patch: string | undefined,
   category: string,
   resolvedDuties: readonly ResolvedQuestDuty[],
   issues: ExportIssue[],
@@ -2139,7 +2139,7 @@ function createQuestEntry(
     name: quest.name,
     level,
 
-    expansionId: slugify(expansionId),
+    expansionId: expansionId ? slugify(expansionId) : undefined,
 
     patch,
     category: slugify(category),
@@ -2225,11 +2225,18 @@ async function main(): Promise<void> {
     throw new Error('Chain exports require both "--start" and "--end".');
   }
 
-  const expansionId = slugify(requireOption('--expansion'));
-
-  const patch = requireOption('--patch');
-
   const category = slugify(requireOption('--category'));
+
+  const rawExpansionId = readOption('--expansion');
+  const expansionId = rawExpansionId ? slugify(rawExpansionId) : undefined;
+
+  const patch = readOption('--patch');
+
+  if (category === 'msq' && (!expansionId || !patch)) {
+    throw new Error('MSQ exports require both "--expansion" and "--patch".');
+  }
+
+  const questIdNamespace = expansionId ?? exportId;
 
   const journalCategoryName = readOption('--journal-category');
 
@@ -2440,7 +2447,7 @@ async function main(): Promise<void> {
 
   const questIdsByRowId = createQuestIds(
     orderedQuests,
-    expansionId,
+    questIdNamespace,
     category,
     knownQuestIdsByRowId,
   );
@@ -2615,7 +2622,7 @@ async function main(): Promise<void> {
           questIdsByRowId,
           knownQuestIdsByRowId,
           questsByRowId,
-          expansionId,
+          questIdNamespace,
           category,
         ),
       )
@@ -2628,7 +2635,7 @@ async function main(): Promise<void> {
           questIdsByRowId,
           knownQuestIdsByRowId,
           questsByRowId,
-          expansionId,
+          questIdNamespace,
           category,
         ),
       )

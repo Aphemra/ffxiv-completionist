@@ -20,11 +20,32 @@ require_job_value() {
 
 require_job_value "EXPORT_ID"
 require_job_value "TITLE"
-require_job_value "EXPANSION"
-require_job_value "PATCH"
 require_job_value "CATEGORY"
 
+EXPANSION="${EXPANSION:-}"
+PATCH="${PATCH:-}"
+
+if [[ "$CATEGORY" == "msq" ]]; then
+  require_job_value "EXPANSION"
+  require_job_value "PATCH"
+fi
+
 SELECTION_MODE="${SELECTION_MODE:-chain}"
+
+COLLECTION_FORMAT="${COLLECTION_FORMAT:-linear}"
+
+PRIMARY_FACET_ID="${PRIMARY_FACET_ID:-}"
+PRIMARY_FACET_NAME="${PRIMARY_FACET_NAME:-}"
+
+SECONDARY_FACET_ID="${SECONDARY_FACET_ID:-}"
+SECONDARY_FACET_NAME="${SECONDARY_FACET_NAME:-}"
+
+if [[ "$CATEGORY" != "msq" ]]; then
+  require_job_value "PRIMARY_FACET_ID"
+  require_job_value "PRIMARY_FACET_NAME"
+  require_job_value "SECONDARY_FACET_ID"
+  require_job_value "SECONDARY_FACET_NAME"
+fi
 
 START_QUEST="${START_QUEST:-}"
 END_QUEST="${END_QUEST:-}"
@@ -41,12 +62,28 @@ EXPORT_FILE="${EXPORT_FILE:-scripts/xivapi/exports/${EXPORT_ID}.json}"
 
 DATA_EXPANSION_FOLDER="${DATA_EXPANSION_FOLDER:-$EXPANSION}"
 
-PUBLISH_FILE="${PUBLISH_FILE:-public/data/quests/$CATEGORY/$DATA_EXPANSION_FOLDER/$PATCH/$EXPORT_ID.json}"
+PUBLISH_FILE="${PUBLISH_FILE:-}"
+
+if [[ -z "$PUBLISH_FILE" ]]; then
+  if [[ "$CATEGORY" == "msq" ]]; then
+    PUBLISH_FILE="public/data/quests/$CATEGORY/$DATA_EXPANSION_FOLDER/$PATCH/$EXPORT_ID.json"
+  else
+    PUBLISH_FILE="public/data/quests/$CATEGORY/$EXPORT_ID.json"
+  fi
+fi
 
 COLLECTION_ID="${COLLECTION_ID:-$EXPORT_ID}"
 COLLECTION_TITLE="${COLLECTION_TITLE:-$TITLE}"
 COLLECTION_DESCRIPTION="${COLLECTION_DESCRIPTION:-$TITLE quests imported from XIVAPI.}"
-COLLECTION_SORT_ORDER="${COLLECTION_SORT_ORDER:-${PATCH//./}}"
+COLLECTION_SORT_ORDER="${COLLECTION_SORT_ORDER:-}"
+
+if [[ -z "$COLLECTION_SORT_ORDER" ]]; then
+  if [[ -n "$PATCH" ]]; then
+    COLLECTION_SORT_ORDER="${PATCH//./}"
+  else
+    COLLECTION_SORT_ORDER="1000"
+  fi
+fi
 
 GROUP_ID="${GROUP_ID:-$COLLECTION_ID-quests}"
 GROUP_TITLE="${GROUP_TITLE:-$COLLECTION_TITLE}"
@@ -56,11 +93,17 @@ VERIFICATION_STATUS="${VERIFICATION_STATUS:-in-review}"
 EXPORT_ARGUMENTS=(
   --id "$EXPORT_ID"
   --title "$TITLE"
-  --expansion "$EXPANSION"
-  --patch "$PATCH"
   --category "$CATEGORY"
   --output "$EXPORT_FILE"
 )
+
+if [[ -n "$EXPANSION" ]]; then
+  EXPORT_ARGUMENTS+=(--expansion "$EXPANSION")
+fi
+
+if [[ -n "$PATCH" ]]; then
+  EXPORT_ARGUMENTS+=(--patch "$PATCH")
+fi
 
 case "$SELECTION_MODE" in
   chain)
@@ -262,7 +305,17 @@ publish_export() {
     --collection-description "$COLLECTION_DESCRIPTION"
     --sort-order "$COLLECTION_SORT_ORDER"
     --verification-status "$VERIFICATION_STATUS"
+    --format "$COLLECTION_FORMAT"
   )
+
+  if [[ -n "$PRIMARY_FACET_ID" ]]; then
+  publish_arguments+=(
+    --primary-facet-id "$PRIMARY_FACET_ID"
+    --primary-facet-name "$PRIMARY_FACET_NAME"
+    --secondary-facet-id "$SECONDARY_FACET_ID"
+    --secondary-facet-name "$SECONDARY_FACET_NAME"
+  )
+  fi
 
   append_quest_group_arguments publish_arguments
 
@@ -311,6 +364,14 @@ Actions:
   complete     Require every display field to be completed.
   regenerate   Overwrite the export after confirmation.
   publish      Validate, publish, and update the quest manifest.
+
+Collection format:
+  linear      One ordered questline; participates in automatic Current Quest.
+  standard    Independent quests or multiple unrelated questlines.
+
+Non-MSQ filtering:
+  Non-MSQ jobs require PRIMARY_FACET_ID, PRIMARY_FACET_NAME,
+  SECONDARY_FACET_ID, and SECONDARY_FACET_NAME.
 
 Selection mode:
   chain        Export a connected START_QUEST-to-END_QUEST chain.

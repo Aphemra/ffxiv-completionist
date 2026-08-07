@@ -237,8 +237,8 @@ export function questMatchesSearch(quest: Quest, query: string): boolean {
     quest.name,
     quest.category,
     formatQuestCategory(quest.category),
-    quest.expansionId,
-    quest.patch,
+    quest.expansionId ?? '',
+    quest.patch ?? '',
     String(quest.level),
 
     quest.start?.npcName ?? '',

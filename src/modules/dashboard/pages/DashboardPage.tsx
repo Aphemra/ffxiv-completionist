@@ -105,6 +105,13 @@ export function DashboardPage() {
       ? availableQuestCatalog.questsById.get(automaticCurrentQuestId)
       : undefined;
 
+  const currentQuestContext =
+    currentQuest?.expansionId && currentQuest.patch
+      ? `${currentQuest.expansionId.toUpperCase()} · Patch ${currentQuest.patch}`
+      : currentQuest
+        ? currentQuest.category.toUpperCase()
+        : null;
+
   return (
     <div className="dashboard-page">
       <header className="page-header">
@@ -161,8 +168,7 @@ export function DashboardPage() {
           {currentQuest ? (
             <div className="dashboard-current-quest">
               <p className="dashboard-current-quest__eyebrow">
-                {currentQuest.expansionId.toUpperCase()} · Patch{' '}
-                {currentQuest.patch}
+                {currentQuestContext}
               </p>
 
               <h3>{currentQuest.name}</h3>
