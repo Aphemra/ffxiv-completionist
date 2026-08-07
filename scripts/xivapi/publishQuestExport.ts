@@ -613,14 +613,110 @@ function resolveQuestBoundaryIndex(
   return candidateIndex;
 }
 
-function createQuestGroups(
+type ConvertedQuest = ReturnType<typeof convertQuest>;
+
+interface PublishedQuestGroup {
+  id: string;
+  title: string;
+  sortOrder: number;
+  quests: ConvertedQuest[];
+}
+
+function findConnectedQuestComponents(
+  quests: readonly QuestExportEntry[],
+): QuestExportEntry[][] {
+  const questsById = new Map(quests.map((quest) => [quest.id, quest]));
+
+  const adjacencyByQuestId = new Map<string, Set<string>>();
+
+  for (const quest of quests) {
+    adjacencyByQuestId.set(quest.id, new Set());
+  }
+
+  for (const quest of quests) {
+    const relatedQuestIds = [...quest.previousQuestIds, ...quest.nextQuestIds];
+
+    for (const relatedQuestId of relatedQuestIds) {
+      if (!questsById.has(relatedQuestId)) {
+        continue;
+      }
+
+      adjacencyByQuestId.get(quest.id)?.add(relatedQuestId);
+      adjacencyByQuestId.get(relatedQuestId)?.add(quest.id);
+    }
+  }
+
+  const visitedQuestIds = new Set<string>();
+  const components: QuestExportEntry[][] = [];
+
+  for (const quest of quests) {
+    if (visitedQuestIds.has(quest.id)) {
+      continue;
+    }
+
+    const component: QuestExportEntry[] = [];
+    const pendingQuestIds = [quest.id];
+
+    while (pendingQuestIds.length > 0) {
+      const questId = pendingQuestIds.pop();
+
+      if (!questId || visitedQuestIds.has(questId)) {
+        continue;
+      }
+
+      visitedQuestIds.add(questId);
+
+      const componentQuest = questsById.get(questId);
+
+      if (!componentQuest) {
+        continue;
+      }
+
+      component.push(componentQuest);
+
+      for (const relatedQuestId of adjacencyByQuestId.get(questId) ?? []) {
+        if (!visitedQuestIds.has(relatedQuestId)) {
+          pendingQuestIds.push(relatedQuestId);
+        }
+      }
+    }
+
+    component.sort((left, right) => left.sortOrder - right.sortOrder);
+
+    components.push(component);
+  }
+
+  components.sort(
+    (left, right) => (left[0]?.sortOrder ?? 0) - (right[0]?.sortOrder ?? 0),
+  );
+
+  return components;
+}
+
+function createAutomaticQuestGroups(
   sourceQuests: readonly QuestExportEntry[],
-  convertedQuests: readonly ReturnType<typeof convertQuest>[],
-  definitions: readonly QuestGroupRangeDefinition[],
+  convertedQuests: readonly ConvertedQuest[],
   fallbackGroupId: string,
   fallbackGroupTitle: string,
-) {
-  if (definitions.length === 0) {
+  collectionFormat: 'linear' | 'standard',
+): PublishedQuestGroup[] {
+  const components = findConnectedQuestComponents(sourceQuests);
+
+  if (components.length === 0) {
+    throw new Error('No quest components were available for grouping.');
+  }
+
+  if (collectionFormat === 'linear' && components.length > 1) {
+    throw new Error(
+      [
+        'A linear collection must contain one connected questline.',
+        `The filtered export contains ${components.length} disconnected questlines.`,
+        'Use COLLECTION_FORMAT="standard" or narrow the filters.',
+      ].join(' '),
+    );
+  }
+
+  if (components.length === 1) {
     return [
       {
         id: fallbackGroupId,
@@ -631,12 +727,105 @@ function createQuestGroups(
     ];
   }
 
-  const groups: Array<{
-    id: string;
-    title: string;
-    sortOrder: number;
-    quests: ReturnType<typeof convertQuest>[];
-  }> = [];
+  const convertedQuestsById = new Map(
+    convertedQuests.map((quest) => [quest.id, quest]),
+  );
+
+  const groups: PublishedQuestGroup[] = [];
+  const standaloneQuests: ConvertedQuest[] = [];
+
+  for (const component of components) {
+    if (component.length === 1) {
+      const sourceQuest = component[0];
+
+      if (!sourceQuest) {
+        continue;
+      }
+
+      const convertedQuest = convertedQuestsById.get(sourceQuest.id);
+
+      if (!convertedQuest) {
+        throw new Error(`Could not find converted quest "${sourceQuest.id}".`);
+      }
+
+      standaloneQuests.push(convertedQuest);
+      continue;
+    }
+
+    const componentQuestIds = new Set(component.map((quest) => quest.id));
+
+    const rootQuest =
+      component.find((quest) =>
+        quest.previousQuestIds.every(
+          (previousQuestId) => !componentQuestIds.has(previousQuestId),
+        ),
+      ) ?? component[0];
+
+    if (!rootQuest) {
+      throw new Error('A connected quest component has no quests.');
+    }
+
+    const componentQuests = component.map((quest) => {
+      const convertedQuest = convertedQuestsById.get(quest.id);
+
+      if (!convertedQuest) {
+        throw new Error(`Could not find converted quest "${quest.id}".`);
+      }
+
+      return convertedQuest;
+    });
+
+    groups.push({
+      id: slugify(`${fallbackGroupId}-${rootQuest.id}`),
+      title: `${rootQuest.name} Questline`,
+      sortOrder: groups.length + 1,
+      quests: componentQuests,
+    });
+  }
+
+  if (standaloneQuests.length > 0) {
+    groups.push({
+      id: slugify(`${fallbackGroupId}-standalone`),
+      title: 'Standalone Quests',
+      sortOrder: groups.length + 1,
+      quests: standaloneQuests,
+    });
+  }
+
+  return groups;
+}
+
+function createQuestGroups(
+  sourceQuests: readonly QuestExportEntry[],
+  convertedQuests: readonly ConvertedQuest[],
+  definitions: readonly QuestGroupRangeDefinition[],
+  fallbackGroupId: string,
+  fallbackGroupTitle: string,
+  automaticGroups: boolean,
+  collectionFormat: 'linear' | 'standard',
+): PublishedQuestGroup[] {
+  if (definitions.length === 0) {
+    if (automaticGroups) {
+      return createAutomaticQuestGroups(
+        sourceQuests,
+        convertedQuests,
+        fallbackGroupId,
+        fallbackGroupTitle,
+        collectionFormat,
+      );
+    }
+
+    return [
+      {
+        id: fallbackGroupId,
+        title: fallbackGroupTitle,
+        sortOrder: 1,
+        quests: [...convertedQuests],
+      },
+    ];
+  }
+
+  const groups: PublishedQuestGroup[] = [];
 
   const usedGroupIds = new Set<string>();
 
@@ -759,6 +948,8 @@ async function publishGenericCollection(
     throw new Error('"--format" must be either "linear" or "standard".');
   }
 
+  const automaticGroups = process.argv.includes('--auto-groups');
+
   const primaryFacetId = readOption('--primary-facet-id');
   const primaryFacetName = readOption('--primary-facet-name');
 
@@ -836,6 +1027,8 @@ async function publishGenericCollection(
     questGroupDefinitions,
     groupId,
     groupTitle,
+    automaticGroups,
+    collectionFormat,
   );
 
   const publishedQuestIds = new Set(quests.map((quest) => quest.id));

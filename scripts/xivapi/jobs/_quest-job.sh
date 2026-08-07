@@ -34,6 +34,21 @@ SELECTION_MODE="${SELECTION_MODE:-chain}"
 
 COLLECTION_FORMAT="${COLLECTION_FORMAT:-linear}"
 
+AUTO_GROUPS="${AUTO_GROUPS:-}"
+
+if [[ -z "$AUTO_GROUPS" ]]; then
+  if [[ "$SELECTION_MODE" == "filter" ]]; then
+    AUTO_GROUPS="true"
+  else
+    AUTO_GROUPS="false"
+  fi
+fi
+
+if [[ "$AUTO_GROUPS" != "true" && "$AUTO_GROUPS" != "false" ]]; then
+  echo 'AUTO_GROUPS must be "true" or "false".' >&2
+  exit 1
+fi
+
 PRIMARY_FACET_ID="${PRIMARY_FACET_ID:-}"
 PRIMARY_FACET_NAME="${PRIMARY_FACET_NAME:-}"
 
@@ -368,11 +383,21 @@ publish_export() {
     )
   fi
 
+  if [[ "$AUTO_GROUPS" == "true" ]]; then
+    publish_arguments+=(--auto-groups)
+  fi
+
   append_quest_group_arguments publish_arguments
 
   npm run xivapi:publish:export -- \
     "${publish_arguments[@]}" \
     --write
+}
+
+replace_export() {
+  npm run xivapi:export:chain -- \
+    "${EXPORT_ARGUMENTS[@]}" \
+    --replace
 }
 
 regenerate_export() {
@@ -387,15 +412,28 @@ regenerate_export() {
 
   case "$response" in
     y|Y|yes|YES)
-      npm run xivapi:export:chain -- \
-        "${EXPORT_ARGUMENTS[@]}" \
-        --replace
+      replace_export
       ;;
 
     *)
       echo "Regeneration cancelled."
       ;;
   esac
+}
+
+sync_quest_data() {
+  echo
+  echo "Synchronizing quest data for: $TITLE"
+  echo
+
+  replace_export
+
+  echo
+  echo "Export regenerated successfully."
+  echo "Validating and publishing..."
+  echo
+
+  publish_export
 }
 
 print_usage() {
@@ -407,6 +445,7 @@ Usage:
   $0 complete
   $0 regenerate
   $0 publish
+  $0 sync
 
 Actions:
   export       Create the export without overwriting an existing file.
@@ -415,10 +454,16 @@ Actions:
   complete     Require every display field to be completed.
   regenerate   Overwrite the export after confirmation.
   publish      Validate, publish, and update the quest manifest.
+  sync         Regenerate, validate, audit, publish, and update the manifest.
 
 Collection format:
   linear      One ordered questline; participates in automatic Current Quest.
   standard    Independent quests or multiple unrelated questlines.
+
+Automatic grouping:
+  Filter jobs enable AUTO_GROUPS by default.
+  Connected questlines become separate accordions.
+  Isolated quests are combined under Standalone Quests.
 
 Non-MSQ filtering:
   Non-MSQ jobs require PRIMARY_FACET_ID, PRIMARY_FACET_NAME,
@@ -466,6 +511,10 @@ case "$ACTION" in
 
   regenerate)
     regenerate_export
+    ;;
+  
+  sync)
+    sync_quest_data
     ;;
 
   help|--help|-h)
