@@ -93,6 +93,16 @@ function formatLabel(value: string): string {
     .join(' ');
 }
 
+function formatSentenceCase(value: string): string {
+  const trimmedValue = value.trim();
+
+  if (trimmedValue.length === 0) {
+    return value;
+  }
+
+  return trimmedValue.charAt(0).toUpperCase() + trimmedValue.slice(1);
+}
+
 function formatRequirement(requirement: QuestRequirement): FormattedEntry {
   switch (requirement.type) {
     case 'class-job-level':
@@ -653,7 +663,7 @@ export function QuestDetailsDrawer({
               <div className="quest-details__list">
                 <DetailRow
                   icon={MapPin}
-                  title={quest.start.npcName}
+                  title={formatSentenceCase(quest.start.npcName)}
                   detail={startDetail || 'Location details unavailable'}
                   tone="accent"
                 />

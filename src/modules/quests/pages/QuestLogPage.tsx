@@ -48,9 +48,16 @@ import {
 
 import './QuestLogPage.css';
 
-function getPatchSectionId(
-  collection: Pick<QuestCollection, 'category' | 'expansionId' | 'patch'>,
+function getQuestSectionId(
+  collection: Pick<
+    QuestCollection,
+    'id' | 'category' | 'expansionId' | 'patch'
+  >,
 ): string {
+  if (collection.category !== 'msq') {
+    return `collection:${collection.id}`;
+  }
+
   return [
     collection.category,
     collection.expansionId ?? 'unknown-expansion',
@@ -194,7 +201,7 @@ export function QuestLogPage() {
     }
 
     for (const collection of catalog.collections) {
-      const sectionId = getPatchSectionId(collection);
+      const sectionId = getQuestSectionId(collection);
 
       const sectionQuests = questsBySectionId.get(sectionId) ?? [];
 
@@ -397,7 +404,7 @@ export function QuestLogPage() {
     for (const filteredCollection of filteredCollections) {
       const { collection } = filteredCollection;
 
-      const sectionId = getPatchSectionId(collection);
+      const sectionId = getQuestSectionId(collection);
 
       const existingSection = sections.get(sectionId);
 
@@ -804,21 +811,35 @@ export function QuestLogPage() {
                 const isPatchExpanded =
                   shouldAutoExpandMatches || expandedPatchIds.has(section.id);
 
-                const expansionName = section.expansionId
-                  ? formatExpansionName(section.expansionId)
-                  : 'Quest Collection';
+                const representativeCollection = section.ranges[0]?.collection;
 
-                const patchLabel = section.patch
-                  ? `Patch ${section.patch}`
-                  : 'an unassigned patch';
+                const isMainScenarioSection = section.category === 'msq';
 
-                const patchName = section.patch
-                  ? formatPatchTitle(
-                      section.patch,
-                      section.expansionId,
-                      section.title,
-                    )
-                  : 'Unassigned Patch';
+                const sectionContext = isMainScenarioSection
+                  ? section.expansionId
+                    ? formatExpansionName(section.expansionId)
+                    : 'Main Scenario'
+                  : (representativeCollection?.filterFacets?.primary.name ??
+                    formatQuestCategory(section.category));
+
+                const sectionName =
+                  isMainScenarioSection && section.patch
+                    ? formatPatchTitle(
+                        section.patch,
+                        section.expansionId,
+                        section.title,
+                      )
+                    : section.title;
+
+                const sectionDescription =
+                  isMainScenarioSection && section.patch
+                    ? `${
+                        section.expansionId
+                          ? formatExpansionName(section.expansionId)
+                          : 'Main scenario'
+                      } ${formatQuestCategory(section.category).toLowerCase()} quests introduced in Patch ${section.patch}.`
+                    : (representativeCollection?.description ??
+                      `${formatQuestCategory(section.category)} collection.`);
 
                 const visibleGroups = section.ranges.flatMap(
                   ({ collection, groups }) =>
@@ -846,16 +867,14 @@ export function QuestLogPage() {
                     <header className="quest-collection__header">
                       <div>
                         <p className="quest-collection__eyebrow">
-                          {expansionName} ·{' '}
+                          {sectionContext} ·{' '}
                           {formatQuestCategory(section.category)}
                         </p>
 
-                        <h2>{patchName}</h2>
+                        <h2>{sectionName}</h2>
 
                         <p className="quest-collection__description">
-                          {expansionName}{' '}
-                          {formatQuestCategory(section.category).toLowerCase()}{' '}
-                          quests introduced in {patchLabel}.
+                          {sectionDescription}
                         </p>
 
                         <p className="quest-collection__progress">
@@ -886,8 +905,8 @@ export function QuestLogPage() {
                           aria-expanded={isPatchExpanded}
                           aria-label={
                             isPatchExpanded
-                              ? `Collapse ${patchName}`
-                              : `Expand ${patchName}`
+                              ? `Collapse ${sectionName}`
+                              : `Expand ${sectionName}`
                           }
                           title={
                             shouldAutoExpandMatches
