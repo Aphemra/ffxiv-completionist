@@ -519,6 +519,7 @@ function validateIntegrity(
   exportData: QuestChainExport,
   derivedGraphData: DerivedGraphData,
   unresolvedIssues: readonly QuestExportIssue[],
+  allowDisconnected: boolean,
 ): IntegrityResult {
   const errors: string[] = [];
   const warnings: string[] = [];
@@ -766,7 +767,9 @@ function validateIntegrity(
 
   validateGraphCycle(exportData, questsById, errors);
 
-  validateGraphConnectivity(exportData, questsById, errors);
+  if (!allowDisconnected) {
+    validateGraphConnectivity(exportData, questsById, errors);
+  }
 
   if (arrayOrderMismatchCount > 0) {
     warnings.push(
@@ -950,6 +953,8 @@ async function main(): Promise<void> {
 
   const verbose = hasFlag('--verbose');
 
+  const allowDisconnected = hasFlag('--allow-disconnected');
+
   let rawExport: unknown;
 
   try {
@@ -983,6 +988,7 @@ async function main(): Promise<void> {
     exportData,
     derivedGraphData,
     unresolvedIssues,
+    allowDisconnected,
   );
 
   const questsWithIssues = new Set(

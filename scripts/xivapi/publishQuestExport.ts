@@ -101,8 +101,13 @@ function requireOption(optionName: string): string {
   return value;
 }
 
-function requireNonNegativeIntegerOption(optionName: string): number {
-  const rawValue = requireOption(optionName);
+function readNonNegativeIntegerOption(optionName: string): number | undefined {
+  const rawValue = readOption(optionName);
+
+  if (rawValue === undefined) {
+    return undefined;
+  }
+
   const value = Number(rawValue);
 
   if (!Number.isInteger(value) || value < 0) {
@@ -932,7 +937,8 @@ async function publishGenericCollection(
     readOption('--collection-description') ??
     `${collectionTitle} quests imported from XIVAPI.`;
 
-  const collectionSortOrder = requireNonNegativeIntegerOption('--sort-order');
+  const requestedCollectionSortOrder =
+    readNonNegativeIntegerOption('--sort-order');
 
   const groupId = slugify(readOption('--group-id') ?? `${collectionId}-quests`);
 
@@ -1076,6 +1082,21 @@ async function publishGenericCollection(
   const manifestPath = path.join(questDataRoot, 'manifest.json');
 
   const manifest = questManifestSchema.parse(await readJson(manifestPath));
+
+  const existingManifestEntry = manifest.collections.find(
+    (entry) => entry.id === collectionId,
+  );
+
+  const nextAvailableSortOrder =
+    manifest.collections.reduce(
+      (highestSortOrder, entry) => Math.max(highestSortOrder, entry.sortOrder),
+      -10,
+    ) + 10;
+
+  const collectionSortOrder =
+    requestedCollectionSortOrder ??
+    existingManifestEntry?.sortOrder ??
+    Math.max(nextAvailableSortOrder, 0);
 
   const manifestEntry = questManifestEntrySchema.parse({
     id: collectionId,

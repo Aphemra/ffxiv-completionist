@@ -1,0 +1,3770 @@
+{
+  "schemaVersion": 1,
+  "id": "viper-job-quests",
+  "title": "Viper Quests",
+  "category": "job",
+  "generatedAt": "2026-08-07T19:44:01.397Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 6,
+    "branchCount": 0,
+    "convergenceCount": 0,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [],
+  "issues": [],
+  "quests": [
+    {
+      "id": "viper-job-quests-job-enter-the-viper-70384",
+      "xivapiRowId": 70384,
+      "sortOrder": 1,
+      "name": "Enter the Viper",
+      "level": 80,
+      "category": "job",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-enter-the-viper-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046334",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-thal",
+              "zoneName": "Ul'dah - Steps of Thal",
+              "territoryId": "territory-131",
+              "mapId": "map-14",
+              "sourceLevelRowId": 10207122,
+              "coordinates": {
+                "x": 13,
+                "y": 12.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 89.1171,
+                  "y": 12,
+                  "z": 49.4948
+                },
+                "mapGameId": "w1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-enter-the-viper-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046336",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 10207127,
+              "coordinates": {
+                "x": 13.3,
+                "y": 23.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -408.503,
+                  "y": -55.9062,
+                  "z": 120.756
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-enter-the-viper-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046337",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-thal",
+              "zoneName": "Ul'dah - Steps of Thal",
+              "territoryId": "territory-131",
+              "mapId": "map-14",
+              "sourceLevelRowId": 10207124,
+              "coordinates": {
+                "x": 13,
+                "y": 12.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 89.0523,
+                  "y": 12,
+                  "z": 47.3052
+                },
+                "mapGameId": "w1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70384,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-07T19:43:31.885Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70384,
+          "internalId": "KinGbb101_04848",
+          "expansion": "Dawntrail",
+          "journalGenre": "Viper Quests",
+          "eventIconType": 8,
+          "sortKey": 10,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "CLASSJOB",
+              "argument": 41,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR0",
+              "argument": 1046333,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1046334,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1046335,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1046336,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 10207113,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1046337,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR0",
+              "argument": 10207123,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_N_01",
+              "argument": 3252,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_CLASS_HRV",
+              "argument": 1267,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_CLASS_CHANGE",
+              "argument": 10,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_JOB",
+              "argument": 94,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_JOBCHANGE",
+              "argument": 1207,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_COMP_CHK_01",
+              "argument": 70287,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_COMP_CHK_02",
+              "argument": 70399,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1046415,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046334
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046335
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046336
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046337
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046415
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046334,
+              "name": "so-called viper",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046335,
+              "name": "perplexed weaver",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046336,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046337,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046415,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70385
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "viper-job-quests-job-fangs-of-the-viper-70385"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 224400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-41456",
+            "itemName": "Soul of the Viper",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-43537",
+            "itemName": "Weathered Snakebite Attire Coffer (IL 515)",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-41808",
+            "itemName": "Weathered Twinfangs",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "worried weaver",
+          "xivapiRowId": 1046333
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 9.4,
+          "y": 9.3
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "viper-job-quests-job-fangs-of-the-viper-70385",
+      "xivapiRowId": 70385,
+      "sortOrder": 2,
+      "name": "Fangs of the Viper",
+      "level": 80,
+      "category": "job",
+      "availability": {
+        "classJobIds": [
+          "viper"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "viper",
+          "classJobName": "Viper",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "viper-fangs-of-the-viper-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 10208280,
+              "coordinates": {
+                "x": 11.6,
+                "y": 8.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 16.76,
+                  "y": 0,
+                  "z": -141.503
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "viper-fangs-of-the-viper-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046339",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 10208147,
+              "coordinates": {
+                "x": 11.8,
+                "y": 8.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.3444,
+                  "y": 4,
+                  "z": -136.362
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "viper-fangs-of-the-viper-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046344",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 10208361,
+              "coordinates": {
+                "x": 23.3,
+                "y": 30.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 90.25,
+                  "y": 4.07056,
+                  "z": 434.55
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "viper-fangs-of-the-viper-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046344",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 10208361,
+              "coordinates": {
+                "x": 23.3,
+                "y": 30.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 90.25,
+                  "y": 4.07056,
+                  "z": 434.55
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "viper-fangs-of-the-viper-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 10208390,
+              "coordinates": {
+                "x": 26.6,
+                "y": 31.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 253.949,
+                  "y": 11.1539,
+                  "z": 484.864
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "viper-fangs-of-the-viper-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046345",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 10208150,
+              "coordinates": {
+                "x": 9.4,
+                "y": 9.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -92.2717,
+                  "y": 4,
+                  "z": -99.7487
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "viper-fangs-of-the-viper-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 10208290,
+              "coordinates": {
+                "x": 9,
+                "y": 9.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -111.72,
+                  "y": 0,
+                  "z": -96.8059
+                },
+                "mapGameId": "w1t1/01"
+              }
+            },
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 10208150,
+              "coordinates": {
+                "x": 9.4,
+                "y": 9.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -92.2717,
+                  "y": 4,
+                  "z": -99.7487
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "viper-fangs-of-the-viper-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 10208291,
+              "coordinates": {
+                "x": 8.2,
+                "y": 11.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -151.776,
+                  "y": 8,
+                  "z": 5.03173
+                },
+                "mapGameId": "w1t1/01"
+              }
+            },
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 10208150,
+              "coordinates": {
+                "x": 9.4,
+                "y": 9.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -92.2717,
+                  "y": 4,
+                  "z": -99.7487
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8,
+            "completeSequence": 8
+          }
+        },
+        {
+          "id": "viper-fangs-of-the-viper-objective-9",
+          "sortOrder": 9,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046346",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 10208245,
+              "coordinates": {
+                "x": 8.2,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -152.159,
+                  "y": 12,
+                  "z": 11.7539
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 9
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70384
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70385,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-07T19:43:36.644Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70385,
+          "internalId": "KinGbb102_04849",
+          "expansion": "Dawntrail",
+          "journalGenre": "Viper Quests",
+          "eventIconType": 8,
+          "sortKey": 20,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1046337,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1046338,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1046339,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1046340,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1046344,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1046342,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1046343,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 1235,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 5072,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2013566,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "TERRITORYTYPE1",
+              "argument": 141,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1046345,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1004332,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1001288,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 10208162,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENTRANGE1",
+              "argument": 10208241,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2013567,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2013568,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1046346,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "SEQEV_00",
+              "argument": 178,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR0",
+              "argument": 10208148,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR1",
+              "argument": 10208357,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR2",
+              "argument": 10208359,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR3",
+              "argument": 10208150,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 10208366,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1046415,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1046424,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_PICTRUE_KINGBB102_001",
+              "argument": 1300,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_PICTRUE_KINGBB102_002",
+              "argument": 1301,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_PICTRUE_KINGBB102_003",
+              "argument": 1302,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_COMP_CHK_01",
+              "argument": 70288,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 5718,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION1",
+              "argument": 5646,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVPIC_HINTSPOT",
+              "argument": 1077,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ET_DOUKOU",
+              "argument": 5,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046338
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046339
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046340
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046344
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046342
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1046343
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1046345
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1004332
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1001288
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1046346
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046415
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1046424
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046338,
+              "name": "knowledgeable adventurer",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046339,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046340,
+              "name": "befuddled boy",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046344,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046342
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1046343
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1046345,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1004332,
+              "name": "Rand",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1001288,
+              "name": "Didilata",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1046346,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046415,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1046424,
+              "name": "Innocent Stork",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70386
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "viper-job-quests-job-enter-the-viper-70384"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "viper-job-quests-job-viper-in-the-vidraals-shadow-70386"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 448800,
+        "gil": 2455,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Keshkwa",
+          "xivapiRowId": 1046337
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Thal",
+          "x": 13,
+          "y": 12.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "viper-job-quests-job-viper-in-the-vidraals-shadow-70386",
+      "xivapiRowId": 70386,
+      "sortOrder": 3,
+      "name": "Viper in the Vidraal's Shadow",
+      "level": 83,
+      "category": "job",
+      "availability": {
+        "classJobIds": [
+          "viper"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 83
+        },
+        {
+          "type": "class-job",
+          "classJobId": "viper",
+          "classJobName": "Viper",
+          "level": 83
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "viper-viper-in-the-vidraals-shadow-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000193",
+          "locations": [
+            {
+              "zoneId": "new-gridania",
+              "zoneName": "New Gridania",
+              "territoryId": "territory-132",
+              "mapId": "map-2",
+              "sourceLevelRowId": 1369401,
+              "coordinates": {
+                "x": 10.1,
+                "y": 11.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -56.7508,
+                  "y": -1.71721,
+                  "z": 7.90794
+                },
+                "mapGameId": "f1t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "viper-viper-in-the-vidraals-shadow-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046347",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207424,
+              "coordinates": {
+                "x": 25.6,
+                "y": 20.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 205.822,
+                  "y": 8.79698,
+                  "z": -72.1538
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "viper-viper-in-the-vidraals-shadow-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046351",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207430,
+              "coordinates": {
+                "x": 17.6,
+                "y": 30.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -192.381,
+                  "y": 15.005,
+                  "z": 447.288
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "viper-viper-in-the-vidraals-shadow-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207971,
+              "coordinates": {
+                "x": 18.4,
+                "y": 31
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -153.97,
+                  "y": -4,
+                  "z": 476.244
+                },
+                "mapGameId": "f1f3/00"
+              }
+            },
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207972,
+              "coordinates": {
+                "x": 19.4,
+                "y": 28.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -106.721,
+                  "y": -4,
+                  "z": 348.488
+                },
+                "mapGameId": "f1f3/00"
+              }
+            },
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207973,
+              "coordinates": {
+                "x": 19,
+                "y": 27.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -123.04,
+                  "y": -3,
+                  "z": 303.935
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "viper-viper-in-the-vidraals-shadow-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046356",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207777,
+              "coordinates": {
+                "x": 20.5,
+                "y": 30.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -48.2061,
+                  "y": 1.0302,
+                  "z": 452.613
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "viper-viper-in-the-vidraals-shadow-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2013572",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207782,
+              "coordinates": {
+                "x": 16.8,
+                "y": 31.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -237.12,
+                  "y": 0.604343,
+                  "z": 502.81
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "viper-viper-in-the-vidraals-shadow-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207974,
+              "coordinates": {
+                "x": 22.5,
+                "y": 26
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 47.731,
+                  "y": 15.3604,
+                  "z": 223.259
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "viper-viper-in-the-vidraals-shadow-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046368",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207968,
+              "coordinates": {
+                "x": 25.6,
+                "y": 20
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 205.096,
+                  "y": 8.72853,
+                  "z": -74.0521
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70385
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70386,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-07T19:43:42.091Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70386,
+          "internalId": "KinGbb111_04850",
+          "expansion": "Dawntrail",
+          "journalGenre": "Viper Quests",
+          "eventIconType": 8,
+          "sortKey": 30,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1046346,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000193,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1046347,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1046348,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1046349,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1046370,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1046351,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1046352,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1046353,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1046354,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1046355,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1046357,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2013569,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 3,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2013570,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2013571,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1046356,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1046358,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR14",
+              "argument": 1046359,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR15",
+              "argument": 1046360,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2013080,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2013081,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT5",
+              "argument": 2013572,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 13,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR16",
+              "argument": 1046361,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR17",
+              "argument": 1046362,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR18",
+              "argument": 1046363,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR19",
+              "argument": 1046364,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR20",
+              "argument": 1046365,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR21",
+              "argument": 1046366,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR22",
+              "argument": 1046367,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 10207967,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR23",
+              "argument": 1046368,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "CUT_SCENE_N_01",
+              "argument": 3253,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1046415,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1046417,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1046418,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR3",
+              "argument": 1046419,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR4",
+              "argument": 1046420,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR5",
+              "argument": 1046421,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR6",
+              "argument": 1046416,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR0",
+              "argument": 10207425,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR1",
+              "argument": 10207426,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR2",
+              "argument": 10207432,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR3",
+              "argument": 10207433,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR4",
+              "argument": 10207434,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR5",
+              "argument": 10207435,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR6",
+              "argument": 10207780,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR7",
+              "argument": 10207937,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR8",
+              "argument": 10207970,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000193
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046347
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046348
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046349
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046370
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1046351
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1046352
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1046353
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1046354
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1046355
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1046357
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1046356
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1046358
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1046359
+            },
+            {
+              "sourceInstruction": "ACTOR15",
+              "actorRowId": 1046360
+            },
+            {
+              "sourceInstruction": "ACTOR16",
+              "actorRowId": 1046361
+            },
+            {
+              "sourceInstruction": "ACTOR17",
+              "actorRowId": 1046362
+            },
+            {
+              "sourceInstruction": "ACTOR18",
+              "actorRowId": 1046363
+            },
+            {
+              "sourceInstruction": "ACTOR19",
+              "actorRowId": 1046364
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1046365
+            },
+            {
+              "sourceInstruction": "ACTOR21",
+              "actorRowId": 1046366
+            },
+            {
+              "sourceInstruction": "ACTOR22",
+              "actorRowId": 1046367
+            },
+            {
+              "sourceInstruction": "ACTOR23",
+              "actorRowId": 1046368
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046415
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1046417
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1046418
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1046419
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1046420
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1046421
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR6",
+              "actorRowId": 1046416
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000193,
+              "name": "Gavin",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046347,
+              "name": "Golias",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046348,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046349,
+              "name": "Innocent Stork",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046370
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1046351,
+              "name": "hunt leader",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1046352
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1046353
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1046354
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1046355
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1046357,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1046356,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1046358
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1046359
+            },
+            {
+              "sourceInstruction": "ACTOR15",
+              "actorRowId": 1046360
+            },
+            {
+              "sourceInstruction": "ACTOR16",
+              "actorRowId": 1046361,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR17",
+              "actorRowId": 1046362,
+              "name": "hired naturalist",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR18",
+              "actorRowId": 1046363,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR19",
+              "actorRowId": 1046364
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1046365
+            },
+            {
+              "sourceInstruction": "ACTOR21",
+              "actorRowId": 1046366
+            },
+            {
+              "sourceInstruction": "ACTOR22",
+              "actorRowId": 1046367
+            },
+            {
+              "sourceInstruction": "ACTOR23",
+              "actorRowId": 1046368,
+              "name": "Innocent Stork",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046415,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1046417,
+              "name": "hired naturalist",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1046418,
+              "name": "hunt leader",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1046419,
+              "name": "hired marauder",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1046420,
+              "name": "hired thaumaturge",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1046421
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR6",
+              "actorRowId": 1046416,
+              "name": "Golias",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70387
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "viper-job-quests-job-fangs-of-the-viper-70385"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "viper-job-quests-job-vipers-on-the-hunt-70387"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 468600,
+        "gil": 1407,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Keshkwa",
+          "xivapiRowId": 1046346
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 8.2,
+          "y": 11.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "viper-job-quests-job-vipers-on-the-hunt-70387",
+      "xivapiRowId": 70387,
+      "sortOrder": 4,
+      "name": "Vipers on the Hunt",
+      "level": 85,
+      "category": "job",
+      "availability": {
+        "classJobIds": [
+          "viper"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 85
+        },
+        {
+          "type": "class-job",
+          "classJobId": "viper",
+          "classJobName": "Viper",
+          "level": 85
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003478",
+          "itemName": "Fragrant Wildgrass",
+          "sourceRowId": 2003478,
+          "sourceSheet": "event-item",
+          "quantity": 3,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "viper-vipers-on-the-hunt-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046372",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 10208521,
+              "coordinates": {
+                "x": 19.7,
+                "y": 25.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -90.023,
+                  "y": -46.5446,
+                  "z": 212.031
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "viper-vipers-on-the-hunt-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "targetId": "actor-1046374",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 10208527,
+              "coordinates": {
+                "x": 20.6,
+                "y": 25.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -43.8908,
+                  "y": -40.95,
+                  "z": 190.885
+                },
+                "mapGameId": "f1f4/00"
+              }
+            },
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 10208533,
+              "coordinates": {
+                "x": 21.2,
+                "y": 25.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -13.7422,
+                  "y": -38.9716,
+                  "z": 190.121
+                },
+                "mapGameId": "f1f4/00"
+              }
+            },
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 10208538,
+              "coordinates": {
+                "x": 21,
+                "y": 25
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -25.3439,
+                  "y": -34.6506,
+                  "z": 172.99
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "viper-vipers-on-the-hunt-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046377",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 10208543,
+              "coordinates": {
+                "x": 20.4,
+                "y": 26.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -54.7409,
+                  "y": -40.8761,
+                  "z": 239.378
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "viper-vipers-on-the-hunt-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046379",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 10208558,
+              "coordinates": {
+                "x": 20.2,
+                "y": 26.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -62.6078,
+                  "y": -45.5788,
+                  "z": 269.52
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "viper-vipers-on-the-hunt-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046372",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 10208521,
+              "coordinates": {
+                "x": 19.7,
+                "y": 25.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -90.023,
+                  "y": -46.5446,
+                  "z": 212.031
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "viper-vipers-on-the-hunt-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "the-fringes",
+              "zoneName": "The Fringes",
+              "territoryId": "territory-612",
+              "mapId": "map-367",
+              "sourceLevelRowId": 10208585,
+              "coordinates": {
+                "x": 15.8,
+                "y": 15
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -283.153,
+                  "y": 55.0848,
+                  "z": -324.303
+                },
+                "mapGameId": "g3f1/00"
+              }
+            },
+            {
+              "zoneId": "the-fringes",
+              "zoneName": "The Fringes",
+              "territoryId": "territory-612",
+              "mapId": "map-367",
+              "sourceLevelRowId": 10208589,
+              "coordinates": {
+                "x": 15.3,
+                "y": 16.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -311.763,
+                  "y": 55.2157,
+                  "z": -269.663
+                },
+                "mapGameId": "g3f1/00"
+              }
+            },
+            {
+              "zoneId": "the-fringes",
+              "zoneName": "The Fringes",
+              "territoryId": "territory-612",
+              "mapId": "map-367",
+              "sourceLevelRowId": 10208589,
+              "coordinates": {
+                "x": 15.3,
+                "y": 16.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -311.763,
+                  "y": 55.2157,
+                  "z": -269.663
+                },
+                "mapGameId": "g3f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "viper-vipers-on-the-hunt-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046381",
+          "locations": [
+            {
+              "zoneId": "the-fringes",
+              "zoneName": "The Fringes",
+              "territoryId": "territory-612",
+              "mapId": "map-367",
+              "sourceLevelRowId": 10208580,
+              "coordinates": {
+                "x": 15.9,
+                "y": 14.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -278.215,
+                  "y": 59.7036,
+                  "z": -333.537
+                },
+                "mapGameId": "g3f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "viper-vipers-on-the-hunt-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046347",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10207424,
+              "coordinates": {
+                "x": 25.6,
+                "y": 20.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 205.822,
+                  "y": 8.79698,
+                  "z": -72.1538
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70386
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70387,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-07T19:43:49.843Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70387,
+          "internalId": "KinGbb121_04851",
+          "expansion": "Dawntrail",
+          "journalGenre": "Viper Quests",
+          "eventIconType": 8,
+          "sortKey": 40,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1046371,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1046372,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1046373,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1046374,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1046375,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1046376,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1046377,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1046378,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1046379,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1046380,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2013573,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 31,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003478,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2013574,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2013575,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 32,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 10208575,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENTACTION2",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1046381,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1046347,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1046348,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1046368,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR14",
+              "argument": 1046370,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1046416,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR0",
+              "argument": 10208522,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR1",
+              "argument": 10208560,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR2",
+              "argument": 10207968,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR3",
+              "argument": 10207970,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR4",
+              "argument": 10207425,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_COMP_CHK_01",
+              "argument": 67982,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_PICTRUE_KINGBB121_001",
+              "argument": 1303,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003478,
+              "itemId": "event-item-2003478",
+              "name": "Fragrant Wildgrass",
+              "resolvedSheet": "EventItem",
+              "iconId": 21681,
+              "quantity": 3
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046372
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046373
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046374
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046375
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046376
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1046377
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1046378
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1046379
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1046380
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1046381
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1046347
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1046348
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1046368
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1046370
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046416
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046372,
+              "name": "Golias",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046373,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046374,
+              "name": "mild-mannered adventurer",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046375,
+              "name": "weary adventurer",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046376,
+              "name": "traumatized adventurer",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1046377,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1046378
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1046379,
+              "name": "composed adventurer",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1046380,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1046381,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1046347,
+              "name": "Golias",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1046348,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1046368,
+              "name": "Innocent Stork",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1046370
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046416,
+              "name": "Golias",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70388
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "viper-job-quests-job-viper-in-the-vidraals-shadow-70386"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "viper-job-quests-job-into-the-viper-pit-70388"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 481800,
+        "gil": 1303,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Keshkwa",
+          "xivapiRowId": 1046371
+        },
+        "location": {
+          "zone": "South Shroud",
+          "x": 25.6,
+          "y": 20.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "viper-job-quests-job-into-the-viper-pit-70388",
+      "xivapiRowId": 70388,
+      "sortOrder": 5,
+      "name": "Into the Viper Pit",
+      "level": 88,
+      "category": "job",
+      "availability": {
+        "classJobIds": [
+          "viper"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 88
+        },
+        {
+          "type": "class-job",
+          "classJobId": "viper",
+          "classJobName": "Viper",
+          "level": 88
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "viper-into-the-viper-pit-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046382",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 10209050,
+              "coordinates": {
+                "x": 18.9,
+                "y": 11.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -183.179,
+                  "y": 100.886,
+                  "z": -541.427
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "viper-into-the-viper-pit-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "targetId": "actor-2013576",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 10209074,
+              "coordinates": {
+                "x": 19.1,
+                "y": 15.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -173.877,
+                  "y": 110.307,
+                  "z": -343.618
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 10209099,
+              "coordinates": {
+                "x": 21.2,
+                "y": 15.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -69.2704,
+                  "y": 100.939,
+                  "z": -336.452
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 10209106,
+              "coordinates": {
+                "x": 19.8,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -139.96,
+                  "y": 111.041,
+                  "z": -270.56
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "viper-into-the-viper-pit-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046383",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 10209126,
+              "coordinates": {
+                "x": 22.6,
+                "y": 17
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 1.8489,
+                  "y": 103.493,
+                  "z": -280.113
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "viper-into-the-viper-pit-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046384",
+          "locations": [
+            {
+              "zoneId": "coerthas-western-highlands",
+              "zoneName": "Coerthas Western Highlands",
+              "territoryId": "territory-397",
+              "mapId": "map-211",
+              "sourceLevelRowId": 10209215,
+              "coordinates": {
+                "x": 28.4,
+                "y": 28.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 289.1,
+                  "y": 163.692,
+                  "z": 288.22
+                },
+                "mapGameId": "r2f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "viper-into-the-viper-pit-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-5000000",
+          "locations": [
+            {
+              "zoneId": "coerthas-western-highlands",
+              "zoneName": "Coerthas Western Highlands",
+              "territoryId": "territory-397",
+              "mapId": "map-211",
+              "sourceLevelRowId": 10209299,
+              "coordinates": {
+                "x": 27.8,
+                "y": 21.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 259.347,
+                  "y": 179.454,
+                  "z": -46.3075
+                },
+                "mapGameId": "r2f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "viper-into-the-viper-pit-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046385",
+          "locations": [
+            {
+              "zoneId": "coerthas-western-highlands",
+              "zoneName": "Coerthas Western Highlands",
+              "territoryId": "territory-397",
+              "mapId": "map-211",
+              "sourceLevelRowId": 10209218,
+              "coordinates": {
+                "x": 27.5,
+                "y": 21.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 246.214,
+                  "y": 180.633,
+                  "z": -41.6022
+                },
+                "mapGameId": "r2f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "viper-into-the-viper-pit-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046371",
+          "targetName": "Keshkwa",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10208518,
+              "coordinates": {
+                "x": 25.6,
+                "y": 20.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 205.088,
+                  "y": 8.66152,
+                  "z": -71.6747
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70387
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70388,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-07T19:43:54.491Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70388,
+          "internalId": "KinGbb131_04852",
+          "expansion": "Dawntrail",
+          "journalGenre": "Viper Quests",
+          "eventIconType": 8,
+          "sortKey": 50,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1046371,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1046382,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2013576,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 68,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2013577,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2013578,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1046383,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2013579,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1046384,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 10209217,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 10209299,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 10209333,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1046398,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1046385,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2013580,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 35,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "CUT_SCENE_N_01",
+              "argument": 3254,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1046416,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1046424,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1046425,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "QST_COMP_CHK_01",
+              "argument": 70441,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046382
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046383
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046384
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046398
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046385
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046416
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1046424
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1046425
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046382,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046383,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046384,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046398
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046385,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046416,
+              "name": "Golias",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1046424,
+              "name": "Innocent Stork",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1046425
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70389
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "viper-job-quests-job-vipers-on-the-hunt-70387"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "viper-job-quests-job-vengeance-of-the-viper-70389"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 501600,
+        "gil": 1287,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Keshkwa",
+          "xivapiRowId": 1046371
+        },
+        "location": {
+          "zone": "South Shroud",
+          "x": 25.6,
+          "y": 20.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "viper-job-quests-job-vengeance-of-the-viper-70389",
+      "xivapiRowId": 70389,
+      "sortOrder": 6,
+      "name": "Vengeance of the Viper",
+      "level": 90,
+      "category": "job",
+      "availability": {
+        "classJobIds": [
+          "viper"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 90
+        },
+        {
+          "type": "class-job",
+          "classJobId": "viper",
+          "classJobName": "Viper",
+          "level": 90
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "viper-vengeance-of-the-viper-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2014381",
+          "locations": [
+            {
+              "zoneId": "new-gridania",
+              "zoneName": "New Gridania",
+              "territoryId": "territory-132",
+              "mapId": "map-2",
+              "sourceLevelRowId": 10842088,
+              "coordinates": {
+                "x": 10,
+                "y": 11.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -64.5883,
+                  "y": -0.503343,
+                  "z": 7.7782
+                },
+                "mapGameId": "f1t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "viper-vengeance-of-the-viper-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046388",
+          "locations": [
+            {
+              "zoneId": "southern-thanalan",
+              "zoneName": "Southern Thanalan",
+              "territoryId": "territory-146",
+              "mapId": "map-23",
+              "sourceLevelRowId": 10209396,
+              "coordinates": {
+                "x": 16,
+                "y": 34.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -275,
+                  "y": 27.0187,
+                  "z": 636.81
+                },
+                "mapGameId": "w1f4/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "viper-vengeance-of-the-viper-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "southern-thanalan",
+              "zoneName": "Southern Thanalan",
+              "territoryId": "territory-146",
+              "mapId": "map-23",
+              "sourceLevelRowId": 10209602,
+              "coordinates": {
+                "x": 13.2,
+                "y": 36.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -412.753,
+                  "y": -4.6183,
+                  "z": 746.201
+                },
+                "mapGameId": "w1f4/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "viper-vengeance-of-the-viper-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046391",
+          "locations": [
+            {
+              "zoneId": "southern-thanalan",
+              "zoneName": "Southern Thanalan",
+              "territoryId": "territory-146",
+              "mapId": "map-23",
+              "sourceLevelRowId": 10209600,
+              "coordinates": {
+                "x": 13.2,
+                "y": 36.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -414.878,
+                  "y": -0.412125,
+                  "z": 747.768
+                },
+                "mapGameId": "w1f4/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "viper-vengeance-of-the-viper-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1046393",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 10209603,
+              "coordinates": {
+                "x": 25.6,
+                "y": 20.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 204.51,
+                  "y": 8.56664,
+                  "z": -71.4619
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70388
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70389,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-07T19:43:58.718Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70389,
+          "internalId": "KinGbb141_04853",
+          "expansion": "Dawntrail",
+          "journalGenre": "Viper Quests",
+          "eventIconType": 8,
+          "sortKey": 60,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1046371,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2014381,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1046388,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 1236,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 5079,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1046389,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1046390,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2013581,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "TERRITORYTYPE1",
+              "argument": 146,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1046391,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1046392,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1046393,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1046394,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1046395,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "CUT_SCENE_N_01",
+              "argument": 3255,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_N_02",
+              "argument": 3257,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR0",
+              "argument": 10209386,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR1",
+              "argument": 10209601,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR2",
+              "argument": 10209605,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BIND_ACTOR3",
+              "argument": 10209606,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1046415,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1051541,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BGM0",
+              "argument": 90,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046388
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046389
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046390
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046391
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046392
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1046393
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1046394
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1046395
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046415
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1051541
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1046388,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1046389
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1046390
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1046391,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1046392,
+              "name": "Golias",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1046393,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1046394,
+              "name": "Golias",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1046395,
+              "name": "serpent captain",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1046415,
+              "name": "Keshkwa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1051541,
+              "name": "serpent captain",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "viper-job-quests-job-into-the-viper-pit-70388"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 994560,
+        "gil": 2510,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Keshkwa",
+          "xivapiRowId": 1046371
+        },
+        "location": {
+          "zone": "South Shroud",
+          "x": 25.6,
+          "y": 20.1
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

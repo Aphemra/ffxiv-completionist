@@ -121,12 +121,8 @@ COLLECTION_TITLE="${COLLECTION_TITLE:-$TITLE}"
 COLLECTION_DESCRIPTION="${COLLECTION_DESCRIPTION:-$TITLE quests imported from XIVAPI.}"
 COLLECTION_SORT_ORDER="${COLLECTION_SORT_ORDER:-}"
 
-if [[ -z "$COLLECTION_SORT_ORDER" ]]; then
-  if [[ -n "$PATCH" ]]; then
-    COLLECTION_SORT_ORDER="${PATCH//./}"
-  else
-    COLLECTION_SORT_ORDER="1000"
-  fi
+if [[ -z "$COLLECTION_SORT_ORDER" && -n "$PATCH" ]]; then
+  COLLECTION_SORT_ORDER="${PATCH//./}"
 fi
 
 GROUP_ID="${GROUP_ID:-$COLLECTION_ID-quests}"
@@ -232,23 +228,47 @@ export_quests() {
 }
 
 validate_export() {
-  npm run xivapi:validate:export -- \
-    --file "$EXPORT_FILE" \
+  local validation_arguments=(
+    --file "$EXPORT_FILE"
     --write
+  )
+
+  if [[ "$COLLECTION_FORMAT" == "standard" ]]; then
+    validation_arguments+=(--allow-disconnected)
+  fi
+
+  npm run xivapi:validate:export -- \
+    "${validation_arguments[@]}"
 }
 
 show_all_issues() {
-  npm run xivapi:validate:export -- \
-    --file "$EXPORT_FILE" \
-    --write \
+  local validation_arguments=(
+    --file "$EXPORT_FILE"
+    --write
     --verbose
+  )
+
+  if [[ "$COLLECTION_FORMAT" == "standard" ]]; then
+    validation_arguments+=(--allow-disconnected)
+  fi
+
+  npm run xivapi:validate:export -- \
+    "${validation_arguments[@]}"
 }
 
 require_complete() {
-  npm run xivapi:validate:export -- \
-    --file "$EXPORT_FILE" \
-    --write \
+  local validation_arguments=(
+    --file "$EXPORT_FILE"
+    --write
     --require-complete
+  )
+
+  if [[ "$COLLECTION_FORMAT" == "standard" ]]; then
+    validation_arguments+=(--allow-disconnected)
+  fi
+
+  npm run xivapi:validate:export -- \
+    "${validation_arguments[@]}"
 
   npm run xivapi:audit:quest-collectibles -- \
     --category "$CATEGORY" \
@@ -369,10 +389,15 @@ publish_export() {
     --collection-id "$COLLECTION_ID"
     --collection-title "$COLLECTION_TITLE"
     --collection-description "$COLLECTION_DESCRIPTION"
-    --sort-order "$COLLECTION_SORT_ORDER"
     --verification-status "$VERIFICATION_STATUS"
     --format "$COLLECTION_FORMAT"
   )
+
+  if [[ -n "$COLLECTION_SORT_ORDER" ]]; then
+    publish_arguments+=(
+      --sort-order "$COLLECTION_SORT_ORDER"
+    )
+  fi
 
   if [[ -n "$PRIMARY_FACET_ID" ]]; then
     publish_arguments+=(

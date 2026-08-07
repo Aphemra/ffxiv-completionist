@@ -470,6 +470,12 @@ function hasFlag(flagName: string): boolean {
   return process.argv.includes(flagName);
 }
 
+function cleanQuestDisplayName(value: string): string {
+  const cleanedValue = value.replace(/^[\uE000-\uF8FF]\s*/u, '').trim();
+
+  return cleanedValue.length > 0 ? cleanedValue : value.trim();
+}
+
 function normalizeQuestName(value: string): string {
   return value.trim().toLocaleLowerCase('en-US');
 }
@@ -2358,9 +2364,18 @@ async function main(): Promise<void> {
     );
   }
 
-  const questIndex = questIndexFileSchema.parse(
+  const rawQuestIndex = questIndexFileSchema.parse(
     await readJsonFile(questIndexPath),
   );
+
+  const questIndex = {
+    ...rawQuestIndex,
+
+    quests: rawQuestIndex.quests.map((quest) => ({
+      ...quest,
+      name: cleanQuestDisplayName(quest.name),
+    })),
+  };
 
   const questsByRowId = new Map(
     questIndex.quests.map((quest) => [quest.rowId, quest]),
