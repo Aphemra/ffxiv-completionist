@@ -89,9 +89,9 @@ type QuestIndexEntry = z.infer<typeof questIndexEntrySchema>;
 interface QuestSelectionFilter {
   category: string;
 
-  journalCategoryName?: string;
-
-  classJobId?: string;
+  journalGenreNames: readonly string[];
+  journalCategoryNames: readonly string[];
+  classJobIds: readonly string[];
 }
 
 const questIndexFileSchema = z.looseObject({
@@ -396,6 +396,26 @@ function readOption(optionName: string): string | undefined {
   return optionValue;
 }
 
+function readOptions(optionName: string): string[] {
+  const values: string[] = [];
+
+  for (let index = 0; index < process.argv.length; index += 1) {
+    if (process.argv[index] !== optionName) {
+      continue;
+    }
+
+    const value = process.argv[index + 1];
+
+    if (value === undefined || value.startsWith('--')) {
+      throw new Error(`Option "${optionName}" requires a value.`);
+    }
+
+    values.push(value);
+  }
+
+  return values;
+}
+
 function requireOption(optionName: string): string {
   const value = readOption(optionName);
 
@@ -638,19 +658,37 @@ function matchesQuestSelection(
   }
 
   if (
-    selection.journalCategoryName &&
-    normalizeQuestName(quest.journalCategoryName ?? '') !==
-      normalizeQuestName(selection.journalCategoryName)
+    selection.journalGenreNames.length > 0 &&
+    !selection.journalGenreNames.some(
+      (journalGenreName) =>
+        normalizeQuestName(quest.journalGenreName ?? '') ===
+        normalizeQuestName(journalGenreName),
+    )
   ) {
     return false;
   }
 
-  if (selection.classJobId) {
-    const classJobIds = [quest.classJobName, quest.classJobAbbreviation]
+  if (
+    selection.journalCategoryNames.length > 0 &&
+    !selection.journalCategoryNames.some(
+      (journalCategoryName) =>
+        normalizeQuestName(quest.journalCategoryName ?? '') ===
+        normalizeQuestName(journalCategoryName),
+    )
+  ) {
+    return false;
+  }
+
+  if (selection.classJobIds.length > 0) {
+    const questClassJobIds = [quest.classJobName, quest.classJobAbbreviation]
       .filter((value): value is string => value !== undefined)
       .map(slugify);
 
-    if (!classJobIds.includes(selection.classJobId)) {
+    const matchesClassJob = selection.classJobIds.some((classJobId) =>
+      questClassJobIds.includes(classJobId),
+    );
+
+    if (!matchesClassJob) {
       return false;
     }
   }
@@ -2209,19 +2247,29 @@ async function main(): Promise<void> {
 
   const usesExplicitRows = explicitRowIds.length > 0;
 
-  if (
-    usesExplicitRows &&
-    (startQuestName ||
-      endQuestName ||
-      startQuestRowId !== undefined ||
-      endQuestRowId !== undefined)
-  ) {
+  const usesFilterSelection = hasFlag('--filter');
+
+  const hasChainSelection =
+    startQuestName !== undefined ||
+    endQuestName !== undefined ||
+    startQuestRowId !== undefined ||
+    endQuestRowId !== undefined;
+
+  if (usesFilterSelection && (usesExplicitRows || hasChainSelection)) {
     throw new Error(
-      '"--rows" cannot be combined with --start, --end, --start-row, or --end-row.',
+      '"--filter" cannot be combined with row or chain selection.',
     );
   }
 
-  if (!usesExplicitRows && (!startQuestName || !endQuestName)) {
+  if (usesExplicitRows && hasChainSelection) {
+    throw new Error('"--rows" cannot be combined with chain selection.');
+  }
+
+  if (
+    !usesFilterSelection &&
+    !usesExplicitRows &&
+    (!startQuestName || !endQuestName)
+  ) {
     throw new Error('Chain exports require both "--start" and "--end".');
   }
 
@@ -2238,20 +2286,31 @@ async function main(): Promise<void> {
 
   const questIdNamespace = expansionId ?? exportId;
 
-  const journalCategoryName = readOption('--journal-category');
+  const journalGenreNames = readOptions('--journal-genre');
 
-  const rawClassJobId = readOption('--class-job');
+  const journalCategoryNames = readOptions('--journal-category');
+
+  const classJobIds = readOptions('--class-job').map(slugify);
 
   const selection: QuestSelectionFilter = {
     category,
+    journalGenreNames,
+    journalCategoryNames,
+    classJobIds,
   };
 
-  if (journalCategoryName) {
-    selection.journalCategoryName = journalCategoryName;
-  }
-
-  if (rawClassJobId) {
-    selection.classJobId = slugify(rawClassJobId);
+  if (
+    usesFilterSelection &&
+    journalGenreNames.length === 0 &&
+    journalCategoryNames.length === 0 &&
+    classJobIds.length === 0
+  ) {
+    throw new Error(
+      [
+        'Filter selection requires at least one scope:',
+        '--journal-genre, --journal-category, or --class-job.',
+      ].join(' '),
+    );
   }
 
   const title = readOption('--title') ?? humanizeId(exportId);
@@ -2335,6 +2394,25 @@ async function main(): Promise<void> {
 
       discoveredRowIds.add(rowId);
     }
+  } else if (usesFilterSelection) {
+    discoveredRowIds = new Set(
+      questIndex.quests
+        .filter((quest) => matchesQuestSelection(quest, selection))
+        .map((quest) => quest.rowId),
+    );
+
+    if (discoveredRowIds.size === 0) {
+      throw new Error(
+        [
+          'No quests matched the supplied filter selection.',
+          `Journal genres: ${journalGenreNames.join(', ') || 'none'}`,
+          `Journal categories: ${journalCategoryNames.join(', ') || 'none'}`,
+          `Classes/jobs: ${classJobIds.join(', ') || 'none'}`,
+        ].join('\n'),
+      );
+    }
+
+    console.log(`Filter selection matched ${discoveredRowIds.size} quests.`);
   } else {
     if (!startQuestName || !endQuestName) {
       throw new Error('Chain selection is missing its start or end quest.');

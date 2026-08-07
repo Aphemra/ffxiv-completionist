@@ -55,8 +55,37 @@ END_ROW="${END_ROW:-}"
 
 QUEST_ROWS="${QUEST_ROWS:-}"
 
+JOURNAL_GENRE="${JOURNAL_GENRE:-}"
 JOURNAL_CATEGORY="${JOURNAL_CATEGORY:-}"
 CLASS_JOB="${CLASS_JOB:-}"
+
+JOURNAL_GENRE_VALUES=()
+JOURNAL_CATEGORY_VALUES=()
+CLASS_JOB_VALUES=()
+
+if [[ -n "$JOURNAL_GENRE" ]]; then
+  JOURNAL_GENRE_VALUES+=("$JOURNAL_GENRE")
+fi
+
+if [[ -n "$JOURNAL_CATEGORY" ]]; then
+  JOURNAL_CATEGORY_VALUES+=("$JOURNAL_CATEGORY")
+fi
+
+if [[ -n "$CLASS_JOB" ]]; then
+  CLASS_JOB_VALUES+=("$CLASS_JOB")
+fi
+
+if declare -p JOURNAL_GENRES >/dev/null 2>&1; then
+  JOURNAL_GENRE_VALUES+=("${JOURNAL_GENRES[@]}")
+fi
+
+if declare -p JOURNAL_CATEGORIES >/dev/null 2>&1; then
+  JOURNAL_CATEGORY_VALUES+=("${JOURNAL_CATEGORIES[@]}")
+fi
+
+if declare -p CLASS_JOBS >/dev/null 2>&1; then
+  CLASS_JOB_VALUES+=("${CLASS_JOBS[@]}")
+fi
 
 EXPORT_FILE="${EXPORT_FILE:-scripts/xivapi/exports/${EXPORT_ID}.json}"
 
@@ -138,27 +167,49 @@ case "$SELECTION_MODE" in
     EXPORT_ARGUMENTS+=(--rows "$QUEST_ROWS")
     ;;
 
+  filter)
+    if \
+      [[ "${#JOURNAL_GENRE_VALUES[@]}" -eq 0 ]] &&
+      [[ "${#JOURNAL_CATEGORY_VALUES[@]}" -eq 0 ]] &&
+      [[ "${#CLASS_JOB_VALUES[@]}" -eq 0 ]]
+    then
+      echo \
+        'Filter jobs require JOURNAL_GENRE(S), JOURNAL_CATEGORY(IES), or CLASS_JOB(S).' \
+        >&2
+
+      exit 1
+    fi
+
+    EXPORT_ARGUMENTS+=(--filter)
+    ;;
+
   *)
     echo \
       "Unknown SELECTION_MODE: $SELECTION_MODE" \
       >&2
 
-    echo 'Expected "chain" or "rows".' >&2
+    echo 'Expected "chain", "rows", or "filter".' >&2
     exit 1
     ;;
 esac
 
-if [[ -n "$JOURNAL_CATEGORY" ]]; then
+for journal_genre in "${JOURNAL_GENRE_VALUES[@]}"; do
   EXPORT_ARGUMENTS+=(
-    --journal-category "$JOURNAL_CATEGORY"
+    --journal-genre "$journal_genre"
   )
-fi
+done
 
-if [[ -n "$CLASS_JOB" ]]; then
+for journal_category in "${JOURNAL_CATEGORY_VALUES[@]}"; do
   EXPORT_ARGUMENTS+=(
-    --class-job "$CLASS_JOB"
+    --journal-category "$journal_category"
   )
-fi
+done
+
+for class_job in "${CLASS_JOB_VALUES[@]}"; do
+  EXPORT_ARGUMENTS+=(
+    --class-job "$class_job"
+  )
+done
 
 export_quests() {
   npm run xivapi:export:chain -- \
@@ -309,12 +360,12 @@ publish_export() {
   )
 
   if [[ -n "$PRIMARY_FACET_ID" ]]; then
-  publish_arguments+=(
-    --primary-facet-id "$PRIMARY_FACET_ID"
-    --primary-facet-name "$PRIMARY_FACET_NAME"
-    --secondary-facet-id "$SECONDARY_FACET_ID"
-    --secondary-facet-name "$SECONDARY_FACET_NAME"
-  )
+    publish_arguments+=(
+      --primary-facet-id "$PRIMARY_FACET_ID"
+      --primary-facet-name "$PRIMARY_FACET_NAME"
+      --secondary-facet-id "$SECONDARY_FACET_ID"
+      --secondary-facet-name "$SECONDARY_FACET_NAME"
+    )
   fi
 
   append_quest_group_arguments publish_arguments
@@ -376,6 +427,14 @@ Non-MSQ filtering:
 Selection mode:
   chain        Export a connected START_QUEST-to-END_QUEST chain.
   rows         Export the comma-separated rows in QUEST_ROWS.
+  filter       Export every quest matching the supplied metadata filters.
+
+Filter scopes:
+  JOURNAL_GENRE or JOURNAL_GENRES
+  JOURNAL_CATEGORY or JOURNAL_CATEGORIES
+  CLASS_JOB or CLASS_JOBS
+
+  Array values use OR matching. Different filter types combine with AND.
 
 Default action:
   validate
