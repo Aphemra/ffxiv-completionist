@@ -523,6 +523,21 @@ function validateReferenceList(
   }
 }
 
+function shouldRequirePrerequisiteReciprocity(
+  record: QuestRecord,
+  prerequisiteRecord: QuestRecord,
+): boolean {
+  if (record.collection.id === prerequisiteRecord.collection.id) {
+    return true;
+  }
+
+  return (
+    record.collection.format === 'linear' &&
+    prerequisiteRecord.collection.format === 'linear' &&
+    record.collection.category === prerequisiteRecord.collection.category
+  );
+}
+
 function validateReciprocalReferences(
   record: QuestRecord,
   questIndex: ReadonlyMap<string, QuestRecord>,
@@ -533,6 +548,10 @@ function validateReciprocalReferences(
     const prerequisiteRecord = questIndex.get(prerequisiteQuestId);
 
     if (!prerequisiteRecord) {
+      continue;
+    }
+
+    if (!shouldRequirePrerequisiteReciprocity(record, prerequisiteRecord)) {
       continue;
     }
 
