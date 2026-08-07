@@ -40,6 +40,11 @@ import {
   type ResolvedQuestDuty,
 } from './questDutyResolver';
 
+import {
+  questIndexFileSchema,
+  type QuestIndexEntry,
+} from './questIndexSchemas';
+
 type JsonObject = Record<string, unknown>;
 
 interface ExportIssue {
@@ -56,38 +61,6 @@ interface ParamGrowExperienceData {
 
 const positiveRowIdSchema = z.number().int().positive();
 
-const questIndexEntrySchema = z.looseObject({
-  rowId: positiveRowIdSchema,
-
-  name: z.string().min(1),
-
-  gameId: z.string().min(1).optional(),
-
-  journalGenreName: z.string().min(1).optional(),
-
-  journalCategoryName: z.string().min(1).optional(),
-
-  classJobName: z.string().min(1).optional(),
-
-  classJobAbbreviation: z.string().min(1).optional(),
-
-  eventIconTypeRowId: positiveRowIdSchema.optional(),
-
-  beastTribeName: z.string().min(1).optional(),
-
-  isMainScenario: z.boolean(),
-
-  isFeatureQuest: z.boolean(),
-
-  isRepeatable: z.boolean(),
-
-  previousQuestRowIds: z.array(positiveRowIdSchema),
-
-  nextQuestRowIds: z.array(positiveRowIdSchema),
-});
-
-type QuestIndexEntry = z.infer<typeof questIndexEntrySchema>;
-
 interface QuestSelectionFilter {
   category: string;
 
@@ -95,17 +68,6 @@ interface QuestSelectionFilter {
   journalCategoryNames: readonly string[];
   classJobIds: readonly string[];
 }
-
-const questIndexFileSchema = z.looseObject({
-  indexVersion: z.number().int().min(5),
-
-  source: z.looseObject({
-    version: z.string().min(1),
-    schema: z.string().min(1),
-  }),
-
-  quests: z.array(questIndexEntrySchema),
-});
 
 const resolvedReviewSchema = z.looseObject({
   identity: z.looseObject({

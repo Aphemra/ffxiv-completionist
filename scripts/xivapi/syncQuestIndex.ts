@@ -1,55 +1,29 @@
+import path from 'node:path';
+
+import { compareQuestIndexes } from './questIndexComparison';
+
 import { delayBetweenRequests, requestXivapi } from './client';
 
 import { readXivapiPins } from './pins';
 
-import { questIndexPath, writeJsonFile } from './paths';
+import {
+  questIndexPath,
+  readJsonFile,
+  writeJsonFile,
+  xivapiCacheRoot,
+} from './paths';
 
 import { xivapiSheetResponseSchema } from './schemas';
 
 import { isFeatureQuestEventIconType } from './questClassification';
 
+import {
+  questIndexFileSchema,
+  type QuestIndexEntry,
+  type QuestIndexFile,
+} from './questIndexSchemas';
+
 type JsonObject = Record<string, unknown>;
-
-interface QuestIndexEntry {
-  rowId: number;
-  name: string;
-
-  gameId?: string;
-
-  journalGenreName?: string;
-  journalCategoryName?: string;
-
-  classJobName?: string;
-  classJobAbbreviation?: string;
-
-  eventIconTypeRowId?: number;
-
-  beastTribeName?: string;
-
-  isMainScenario: boolean;
-  isFeatureQuest: boolean;
-  isRepeatable: boolean;
-
-  previousQuestRowIds: number[];
-  nextQuestRowIds: number[];
-}
-
-interface QuestIndexFile {
-  indexVersion: 5;
-
-  source: {
-    provider: 'xivapi';
-    sheet: 'Quest';
-
-    version: string;
-    schema: string;
-
-    language: 'en';
-    generatedAt: string;
-  };
-
-  quests: QuestIndexEntry[];
-}
 
 function asObject(value: unknown): JsonObject | undefined {
   if (typeof value !== 'object' || value === null || Array.isArray(value)) {
@@ -143,7 +117,21 @@ function populateReverseRelationships(quests: QuestIndexEntry[]): void {
   }
 }
 
+async function readExistingQuestIndex(): Promise<QuestIndexFile | undefined> {
+  try {
+    return questIndexFileSchema.parse(await readJsonFile(questIndexPath));
+  } catch (error) {
+    if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
+      return undefined;
+    }
+
+    throw error;
+  }
+}
+
 async function main(): Promise<void> {
+  const previousIndex = await readExistingQuestIndex();
+
   const pins = await readXivapiPins();
 
   const questEntries: QuestIndexEntry[] = [];
@@ -310,7 +298,24 @@ async function main(): Promise<void> {
     quests: questEntries,
   };
 
-  await writeJsonFile(questIndexPath, output);
+  const comparison = compareQuestIndexes(previousIndex, output);
+
+  const comparisonPath = path.join(xivapiCacheRoot, 'quest-index-diff.json');
+
+  await writeJsonFile(comparisonPath, comparison);
+
+  const hasSemanticChanges =
+    comparison.summary.addedQuestCount > 0 ||
+    comparison.summary.removedQuestCount > 0 ||
+    comparison.summary.changedQuestCount > 0;
+
+  if (
+    previousIndex === undefined ||
+    comparison.summary.sourceChanged ||
+    hasSemanticChanges
+  ) {
+    await writeJsonFile(questIndexPath, output);
+  }
 
   console.log('');
   console.log(
@@ -329,7 +334,27 @@ async function main(): Promise<void> {
 
   console.log('Calculated reverse next-quest relationships.');
 
-  console.log(`Saved: ${questIndexPath}`);
+  console.log('');
+  console.log('Quest index comparison');
+  console.log(`Added quest rows: ${comparison.summary.addedQuestCount}`);
+  console.log(`Removed quest rows: ${comparison.summary.removedQuestCount}`);
+  console.log(`Changed quest rows: ${comparison.summary.changedQuestCount}`);
+  console.log(
+    `Source changed: ${comparison.summary.sourceChanged ? 'yes' : 'no'}`,
+  );
+
+  console.log('');
+  console.log(`Comparison report: ${comparisonPath}`);
+
+  if (
+    previousIndex === undefined ||
+    comparison.summary.sourceChanged ||
+    hasSemanticChanges
+  ) {
+    console.log(`Updated index: ${questIndexPath}`);
+  } else {
+    console.log('The tracked quest index is already current.');
+  }
 }
 
 await main();
