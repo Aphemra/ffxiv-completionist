@@ -1,0 +1,4228 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "rhalgrs-reach-sidequests-quests-68541",
+      "title": "None Forgotten, None Forsaken Questline",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "rhalgrs-reach-sidequests-side-none-forgotten-none-forsaken-68541",
+          "name": "None Forgotten, None Forsaken",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 68541
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68541,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:34.387Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1019459",
+            "npcName": "Galiena",
+            "sourceRowId": 1019459,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 9.8,
+              "y": 12.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "rhalgrs-reach-sidequests-side-not-while-their-names-are-still-spoken-68542"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68508,
+              68477
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-none-forgotten-none-forsaken-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1020337",
+              "locations": [
+                {
+                  "zoneId": "rhalgrs-reach",
+                  "zoneName": "Rhalgr's Reach",
+                  "territoryId": "territory-635",
+                  "mapId": "map-366",
+                  "sourceLevelRowId": 6829441,
+                  "coordinates": {
+                    "x": 14.7,
+                    "y": 9.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 171.325,
+                      "y": 13.0159,
+                      "z": -89.9405
+                    },
+                    "mapGameId": "g3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 25000,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-12861",
+                "itemName": "Baked Onion Soup",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-12866",
+                "itemName": "Stuffed Cabbage Rolls",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68541,
+              "internalId": "SubCts610_03005",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 8,
+              "sortKey": 1000,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1019459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1020337,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1018318,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "SCREENIMAGE_01",
+                  "argument": 551,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 4301,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 1059,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1019468,
+                  "referenceType": "actor"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1020337
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1018318
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1019468
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1020337,
+                  "name": "M'naago",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1018318,
+                  "name": "M'naago",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1019468,
+                  "name": "Lyse",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68542
+                ]
+              }
+            }
+          },
+          "sortOrder": 9
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-not-while-their-names-are-still-spoken-68542",
+          "name": "Not While Their Names Are Still Spoken",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 68542
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68542,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:36.124Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1020337",
+            "npcName": "M'naago",
+            "sourceRowId": 1020337,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 14.7,
+              "y": 9.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rhalgrs-reach-sidequests-side-none-forgotten-none-forsaken-68541"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68541
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-not-while-their-names-are-still-spoken-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-peaks",
+                  "zoneName": "The Peaks",
+                  "territoryId": "territory-620",
+                  "mapId": "map-368",
+                  "sourceLevelRowId": 7105297,
+                  "coordinates": {
+                    "x": 15.4,
+                    "y": 37
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -302.677,
+                      "y": 247.527,
+                      "z": 773.115
+                    },
+                    "mapGameId": "g3f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-not-while-their-names-are-still-spoken-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-lochs",
+                  "zoneName": "The Lochs",
+                  "territoryId": "territory-621",
+                  "mapId": "map-369",
+                  "sourceLevelRowId": 7105300,
+                  "coordinates": {
+                    "x": 34.8,
+                    "y": 32.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 666.131,
+                      "y": 60,
+                      "z": 532.313
+                    },
+                    "mapGameId": "g3f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-not-while-their-names-are-still-spoken-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1021565",
+              "locations": [
+                {
+                  "zoneId": "the-fringes",
+                  "zoneName": "The Fringes",
+                  "territoryId": "territory-612",
+                  "mapId": "map-367",
+                  "sourceLevelRowId": 6904630,
+                  "coordinates": {
+                    "x": 30.3,
+                    "y": 25.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 440.142,
+                      "y": 114.254,
+                      "z": 212.865
+                    },
+                    "mapGameId": "g3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-not-while-their-names-are-still-spoken-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1020337",
+              "targetName": "M'naago",
+              "locations": [
+                {
+                  "zoneId": "rhalgrs-reach",
+                  "zoneName": "Rhalgr's Reach",
+                  "territoryId": "territory-635",
+                  "mapId": "map-366",
+                  "sourceLevelRowId": 6829441,
+                  "coordinates": {
+                    "x": 14.7,
+                    "y": 9.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 171.325,
+                      "y": 13.0159,
+                      "z": -89.9405
+                    },
+                    "mapGameId": "g3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 25000,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-12863",
+                "itemName": "Emerald Soup",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-12867",
+                "itemName": "Dhalmel Gratin",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68542,
+              "internalId": "SubCts611_03006",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 8,
+              "sortKey": 1005,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1020337,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1024443,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1024394,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1024455,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1024444,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1024395,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1021565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1024508,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1020806,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1020805,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1018318,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1024391,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1024392,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_04",
+                  "argument": 1021985,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_05",
+                  "argument": 1024393,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_06",
+                  "argument": 1024584,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_07",
+                  "argument": 1024587,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 4260,
+                  "referenceType": "action"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1024443
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1024394
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1024455
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1024444
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1024395
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1021565
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1024508
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1020806
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1020805
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1018318
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1024391
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1024392
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1021985
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_05",
+                  "actorRowId": 1024393
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_06",
+                  "actorRowId": 1024584
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_07",
+                  "actorRowId": 1024587
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1024443,
+                  "name": "M'naago",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1024394,
+                  "name": "Geila",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1024455,
+                  "name": "wide-eyed child",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1024444,
+                  "name": "M'naago",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1024395,
+                  "name": "Grede",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1021565,
+                  "name": "M'rahz Nunh",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1024508,
+                  "name": "Hrudolf",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1020806,
+                  "name": "M'hahtoa",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1020805,
+                  "name": "M'zalikko",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1018318,
+                  "name": "M'naago",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1024391,
+                  "name": "wide-eyed child",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1024392,
+                  "name": "Hrudolf",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1021985,
+                  "name": "M'hahtoa",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_05",
+                  "actorRowId": 1024393,
+                  "name": "M'zalikko",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_06",
+                  "actorRowId": 1024584,
+                  "name": "Grede",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_07",
+                  "actorRowId": 1024587,
+                  "name": "Geila",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 10
+        }
+      ]
+    },
+    {
+      "id": "rhalgrs-reach-sidequests-quests-standalone",
+      "title": "Standalone Quests",
+      "sortOrder": 2,
+      "quests": [
+        {
+          "id": "rhalgrs-reach-sidequests-side-to-kill-a-coeurl-68169",
+          "name": "To Kill a Coeurl",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 70,
+          "externalIds": {
+            "xivapi-quest-row": 68169
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68169,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:14.933Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1019479",
+            "npcName": "Ortwin",
+            "sourceRowId": 1019479,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 13,
+              "y": 12.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68089
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 70
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-to-kill-a-coeurl-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1023611",
+              "locations": [
+                {
+                  "zoneId": "rhalgrs-reach",
+                  "zoneName": "Rhalgr's Reach",
+                  "territoryId": "territory-635",
+                  "mapId": "map-366",
+                  "sourceLevelRowId": 7004631,
+                  "coordinates": {
+                    "x": 12.2,
+                    "y": 5.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 49.6192,
+                      "y": 23.6408,
+                      "z": -286.549
+                    },
+                    "mapGameId": "g3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-to-kill-a-coeurl-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-temple-of-the-fist",
+                  "zoneName": "The Temple of the Fist",
+                  "territoryId": "territory-663",
+                  "mapId": "map-363",
+                  "sourceLevelRowId": 7005069,
+                  "coordinates": {
+                    "x": 12.2,
+                    "y": 5.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -250.135,
+                      "y": 276,
+                      "z": -462.035
+                    },
+                    "mapGameId": "g3d3/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-to-kill-a-coeurl-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1023611",
+              "locations": [
+                {
+                  "zoneId": "rhalgrs-reach",
+                  "zoneName": "Rhalgr's Reach",
+                  "territoryId": "territory-635",
+                  "mapId": "map-366",
+                  "sourceLevelRowId": 7004631,
+                  "coordinates": {
+                    "x": 12.2,
+                    "y": 5.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 49.6192,
+                      "y": 23.6408,
+                      "z": -286.549
+                    },
+                    "mapGameId": "g3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 3997
+          },
+          "duties": [
+            {
+              "id": "duty-236",
+              "name": "The Temple of the Fist",
+              "sourceRowId": 236,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 70,
+              "minimumItemLevel": 280,
+              "partySize": 4,
+              "levelSync": 70,
+              "extensions": {
+                "xivapi-instance-content-row": 51,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68169,
+              "internalId": "StmBdy002_02633",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 8,
+              "sortKey": 10020,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1019479,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1023611,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 51,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1019473,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 498,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 6865831,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_CHECK0",
+                  "argument": 66597,
+                  "referenceType": "script-value"
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 51,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1023611
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1019473
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1023611,
+                  "name": "Marjorie",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1019473,
+                  "name": "Hrotmar",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-hard-blow-68187",
+          "name": "Hard Blow",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 61,
+          "externalIds": {
+            "xivapi-quest-row": 68187
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68187,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:17.616Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1023407",
+            "npcName": "straight-arrow sutler",
+            "sourceRowId": 1023407,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 14.9,
+              "y": 8.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68000
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 61
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-hard-blow-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1022057",
+              "locations": [
+                {
+                  "zoneId": "rhalgrs-reach",
+                  "zoneName": "Rhalgr's Reach",
+                  "territoryId": "territory-635",
+                  "mapId": "map-366",
+                  "sourceLevelRowId": 6958442,
+                  "coordinates": {
+                    "x": 15.5,
+                    "y": 9.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 212.716,
+                      "y": 12.9655,
+                      "z": -68.598
+                    },
+                    "mapGameId": "g3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-hard-blow-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2008880",
+              "locations": [
+                {
+                  "zoneId": "rhalgrs-reach",
+                  "zoneName": "Rhalgr's Reach",
+                  "territoryId": "territory-635",
+                  "mapId": "map-366",
+                  "sourceLevelRowId": 6958452,
+                  "coordinates": {
+                    "x": 15.5,
+                    "y": 10
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 213.654,
+                      "y": 12.9655,
+                      "z": -64.3801
+                    },
+                    "mapGameId": "g3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-hard-blow-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1022057",
+              "locations": [
+                {
+                  "zoneId": "rhalgrs-reach",
+                  "zoneName": "Rhalgr's Reach",
+                  "territoryId": "territory-635",
+                  "mapId": "map-366",
+                  "sourceLevelRowId": 6958442,
+                  "coordinates": {
+                    "x": 15.5,
+                    "y": 9.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 212.716,
+                      "y": 12.9655,
+                      "z": -68.598
+                    },
+                    "mapGameId": "g3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 25250,
+            "gil": 655
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68187,
+              "internalId": "StmBdz101_02651",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 1,
+              "sortKey": 1010,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1023407,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1023408,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1022057,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1022058,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2008821,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2008880,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 6958443,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 6958744,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "SNP_0",
+                  "argument": 5,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1023408
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1022057
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1022058
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 6958443
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 6958744
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1023408,
+                  "name": "Resistance fighter",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1022057,
+                  "name": "straight-arrow sutler",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1022058,
+                  "name": "Resistance fighter",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 6958443
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 6958744
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-mothers-boy-68188",
+          "name": "Mother's Boy",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 61,
+          "externalIds": {
+            "xivapi-quest-row": 68188
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68188,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:20.604Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1021173",
+            "npcName": "wounded Resistance fighter",
+            "sourceRowId": 1021173,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 8.4,
+              "y": 10
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "peaks-sidequests-side-of-rats-and-men-68189"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68000
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 61
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2002078",
+              "itemName": "Bloody Bandana",
+              "sourceRowId": 2002078,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-mothers-boy-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-peaks",
+                  "zoneName": "The Peaks",
+                  "territoryId": "territory-620",
+                  "mapId": "map-368",
+                  "sourceLevelRowId": 6840911,
+                  "coordinates": {
+                    "x": 24.4,
+                    "y": 5.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 145.912,
+                      "y": 127.696,
+                      "z": -785.594
+                    },
+                    "mapGameId": "g3f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 25250,
+            "gil": 666
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68188,
+              "internalId": "StmBdz102_02652",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 1,
+              "sortKey": 1020,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1021173,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2002078,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1021174,
+                  "referenceType": "actor"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2002078,
+                  "itemId": "event-item-2002078",
+                  "name": "Bloody Bandana",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 23301,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1021174
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1021174,
+                  "name": "Resistance fighter's mother",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68189
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-ant-juice-68404",
+          "name": "Ant Juice",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 69,
+          "externalIds": {
+            "xivapi-quest-row": 68404
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68404,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:22.647Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1019477",
+            "npcName": "Ranulf",
+            "sourceRowId": 1019477,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 12.8,
+              "y": 10.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68083
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 69
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2002091",
+              "itemName": "Fine Powder",
+              "sourceRowId": 2002091,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "event-item-2002092",
+              "itemName": "Bottle of Antlion Secretion",
+              "sourceRowId": 2002092,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-ant-juice-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-fringes",
+                  "zoneName": "The Fringes",
+                  "territoryId": "territory-612",
+                  "mapId": "map-367",
+                  "sourceLevelRowId": 6847759,
+                  "coordinates": {
+                    "x": 34.7,
+                    "y": 34
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 658.875,
+                      "y": 70.9993,
+                      "z": 626.136
+                    },
+                    "mapGameId": "g3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-ant-juice-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1019477",
+              "targetName": "Ranulf",
+              "locations": [
+                {
+                  "zoneId": "rhalgrs-reach",
+                  "zoneName": "Rhalgr's Reach",
+                  "territoryId": "territory-635",
+                  "mapId": "map-366",
+                  "sourceLevelRowId": 6865847,
+                  "coordinates": {
+                    "x": 12.8,
+                    "y": 10.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 78.9349,
+                      "y": 0.0151978,
+                      "z": -25.4674
+                    },
+                    "mapGameId": "g3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 27250,
+            "gil": 701,
+            "items": [
+              {
+                "itemId": "item-20627",
+                "itemName": "Head Bandage",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68404,
+              "internalId": "StmBdz912_02868",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 1,
+              "sortKey": 9010,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1019477,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2002091,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2008088,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 6847778,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM1",
+                  "argument": 2002092,
+                  "referenceType": "event-item"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2002091,
+                  "itemId": "event-item-2002091",
+                  "name": "Fine Powder",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 21006,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM1",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2002092,
+                  "itemId": "event-item-2002092",
+                  "name": "Bottle of Antlion Secretion",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 20661,
+                  "quantity": 1
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-dearest-daughter-68405",
+          "name": "Dearest Daughter",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 69,
+          "externalIds": {
+            "xivapi-quest-row": 68405
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68405,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:24.407Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1023342",
+            "npcName": "elderly private",
+            "sourceRowId": 1023342,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 9,
+              "y": 10.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "fringes-sidequests-side-confessions-of-the-heart-68407",
+            "fringes-sidequests-side-falling-down-on-the-job-68408"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68083
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 69
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-dearest-daughter-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 4,
+              "targetId": "actor-1019519",
+              "locations": [
+                {
+                  "zoneId": "the-fringes",
+                  "zoneName": "The Fringes",
+                  "territoryId": "territory-612",
+                  "mapId": "map-367",
+                  "sourceLevelRowId": 6793072,
+                  "coordinates": {
+                    "x": 9.2,
+                    "y": 10.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -613.092,
+                      "y": 129.992,
+                      "z": -529.839
+                    },
+                    "mapGameId": "g3f1/00"
+                  }
+                },
+                {
+                  "zoneId": "the-fringes",
+                  "zoneName": "The Fringes",
+                  "territoryId": "territory-612",
+                  "mapId": "map-367",
+                  "sourceLevelRowId": 6793070,
+                  "coordinates": {
+                    "x": 8.4,
+                    "y": 11.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -652.979,
+                      "y": 129.9,
+                      "z": -510.643
+                    },
+                    "mapGameId": "g3f1/00"
+                  }
+                },
+                {
+                  "zoneId": "the-fringes",
+                  "zoneName": "The Fringes",
+                  "territoryId": "territory-612",
+                  "mapId": "map-367",
+                  "sourceLevelRowId": 6793071,
+                  "coordinates": {
+                    "x": 9.5,
+                    "y": 11.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -601.099,
+                      "y": 129.992,
+                      "z": -487.48
+                    },
+                    "mapGameId": "g3f1/00"
+                  }
+                },
+                {
+                  "zoneId": "the-fringes",
+                  "zoneName": "The Fringes",
+                  "territoryId": "territory-612",
+                  "mapId": "map-367",
+                  "sourceLevelRowId": 6793443,
+                  "coordinates": {
+                    "x": 9,
+                    "y": 11.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -625.91,
+                      "y": 130.068,
+                      "z": -493.98
+                    },
+                    "mapGameId": "g3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-dearest-daughter-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1023343",
+              "locations": [
+                {
+                  "zoneId": "the-fringes",
+                  "zoneName": "The Fringes",
+                  "territoryId": "territory-612",
+                  "mapId": "map-367",
+                  "sourceLevelRowId": 6958476,
+                  "coordinates": {
+                    "x": 8.5,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -650.172,
+                      "y": 130.123,
+                      "z": -555.413
+                    },
+                    "mapGameId": "g3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 27250,
+            "gil": 737
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68405,
+              "internalId": "StmBdz913_02869",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 1,
+              "sortKey": 9020,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1023342,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1019519,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1019517,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1019518,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1019522,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1023343,
+                  "referenceType": "actor"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1019519
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1019517
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1019518
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1019522
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1023343
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1019519,
+                  "name": "Serpent Marshal Brookstone",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1019517,
+                  "name": "Loezkirz",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1019518,
+                  "name": "Kakalai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1019522,
+                  "name": "Pip",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1023343,
+                  "name": "serpent recruit",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68407,
+                  68408
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-fallen-friend-of-mine-68406",
+          "name": "Fallen Friend of Mine",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 69,
+          "externalIds": {
+            "xivapi-quest-row": 68406
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68406,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:26.171Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1023170",
+            "npcName": "Ananta battlemaid",
+            "sourceRowId": 1023170,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 10.6,
+              "y": 12.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "peaks-sidequests-side-religious-freedom-68410",
+            "peaks-sidequests-side-the-qiqirn-strikes-back-68411"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68083
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 69
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2002312",
+              "itemName": "Stonemason's Hammer",
+              "sourceRowId": 2002312,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-fallen-friend-of-mine-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1023172",
+              "locations": [
+                {
+                  "zoneId": "the-peaks",
+                  "zoneName": "The Peaks",
+                  "territoryId": "territory-620",
+                  "mapId": "map-368",
+                  "sourceLevelRowId": 6953030,
+                  "coordinates": {
+                    "x": 21.7,
+                    "y": 6.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 10.9102,
+                      "y": 114.033,
+                      "z": -761.746
+                    },
+                    "mapGameId": "g3f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-fallen-friend-of-mine-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-peaks",
+                  "zoneName": "The Peaks",
+                  "territoryId": "territory-620",
+                  "mapId": "map-368",
+                  "sourceLevelRowId": 6953035,
+                  "coordinates": {
+                    "x": 24.9,
+                    "y": 7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 167.4,
+                      "y": 112.859,
+                      "z": -723.212
+                    },
+                    "mapGameId": "g3f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-fallen-friend-of-mine-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1023172",
+              "locations": [
+                {
+                  "zoneId": "the-peaks",
+                  "zoneName": "The Peaks",
+                  "territoryId": "territory-620",
+                  "mapId": "map-368",
+                  "sourceLevelRowId": 6953030,
+                  "coordinates": {
+                    "x": 21.7,
+                    "y": 6.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 10.9102,
+                      "y": 114.033,
+                      "z": -761.746
+                    },
+                    "mapGameId": "g3f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-fallen-friend-of-mine-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-peaks",
+                  "zoneName": "The Peaks",
+                  "territoryId": "territory-620",
+                  "mapId": "map-368",
+                  "sourceLevelRowId": 6953036,
+                  "coordinates": {
+                    "x": 24.4,
+                    "y": 8.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 143.416,
+                      "y": 111.142,
+                      "z": -661.703
+                    },
+                    "mapGameId": "g3f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-fallen-friend-of-mine-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1023173",
+              "locations": [
+                {
+                  "zoneId": "the-peaks",
+                  "zoneName": "The Peaks",
+                  "territoryId": "territory-620",
+                  "mapId": "map-368",
+                  "sourceLevelRowId": 6953033,
+                  "coordinates": {
+                    "x": 21.8,
+                    "y": 6.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 13.5347,
+                      "y": 114.391,
+                      "z": -761.44
+                    },
+                    "mapGameId": "g3f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 27250,
+            "gil": 917
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68406,
+              "internalId": "StmBdz914_02870",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 1,
+              "sortKey": 9030,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1023170,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1023172,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1023171,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1023173,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2008777,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 7,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2002312,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "QST_ACTOR0",
+                  "argument": 6953033,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_ACTOR1",
+                  "argument": 6953030,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_ACTION0",
+                  "argument": 273,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "QST_ACTION1",
+                  "argument": 274,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "QST_ACTION10",
+                  "argument": 271,
+                  "referenceType": "action"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2002312,
+                  "itemId": "event-item-2002312",
+                  "name": "Stonemason's Hammer",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 35052,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1023172
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1023171
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1023173
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1023172,
+                  "name": "Ananta battlemaid",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1023171,
+                  "name": "stonemason",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1023173,
+                  "name": "stonemason",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68410,
+                  68411
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-dreaming-of-home-68421",
+          "name": "Dreaming of Home",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 70,
+          "externalIds": {
+            "xivapi-quest-row": 68421
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68421,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:28.235Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1022398",
+            "npcName": "Wichard",
+            "sourceRowId": 1022398,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 9.7,
+              "y": 12
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "uldah-thanalan-sidequests-side-for-wilred-68422"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68089
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 70
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2002240",
+              "itemName": "Wichard's Letter",
+              "sourceRowId": 2002240,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-dreaming-of-home-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006215",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4251866,
+                  "coordinates": {
+                    "x": 16.9,
+                    "y": 14.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -227.317,
+                      "y": 26.1684,
+                      "z": -352.97
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-dreaming-of-home-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1022398",
+              "targetName": "Wichard",
+              "locations": [
+                {
+                  "zoneId": "rhalgrs-reach",
+                  "zoneName": "Rhalgr's Reach",
+                  "territoryId": "territory-635",
+                  "mapId": "map-366",
+                  "sourceLevelRowId": 6907679,
+                  "coordinates": {
+                    "x": 9.7,
+                    "y": 12
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -76.4203,
+                      "y": 0,
+                      "z": 36.5989
+                    },
+                    "mapGameId": "g3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-dreaming-of-home-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006215",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4251866,
+                  "coordinates": {
+                    "x": 16.9,
+                    "y": 14.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -227.317,
+                      "y": 26.1684,
+                      "z": -352.97
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1500
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68421,
+              "internalId": "StmBdz991_02885",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 1,
+              "sortKey": 10010,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1022398,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2002240,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1006215,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_BASE_READ_LETTER",
+                  "argument": 996,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_EQUIP_00",
+                  "argument": 27,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 137,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDLE0",
+                  "argument": 1017,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDLE1",
+                  "argument": 812,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDLE2",
+                  "argument": 825,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1023850,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1023854,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1023855,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR3",
+                  "argument": 1023856,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR4",
+                  "argument": 1023851,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR5",
+                  "argument": 1023852,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR6",
+                  "argument": 1023853,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR7",
+                  "argument": 1023857,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 7022003,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 7022004,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR2",
+                  "argument": 7022005,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR3",
+                  "argument": 7022006,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR4",
+                  "argument": 7022007,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR5",
+                  "argument": 7022008,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR6",
+                  "argument": 7022009,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR7",
+                  "argument": 7022011,
+                  "referenceType": "level"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2002240,
+                  "itemId": "event-item-2002240",
+                  "name": "Wichard's Letter",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25918,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1006215
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1023850
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1023854
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1023855
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1023856
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1023851
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR5",
+                  "actorRowId": 1023852
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR6",
+                  "actorRowId": 1023853
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR7",
+                  "actorRowId": 1023857
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1006215,
+                  "name": "Gundobald",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1023850
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1023854
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1023855
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1023856
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1023851
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR5",
+                  "actorRowId": 1023852
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR6",
+                  "actorRowId": 1023853
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR7",
+                  "actorRowId": 1023857
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68422
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-another-striking-opportunity-68476",
+          "name": "Another Striking Opportunity",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 70,
+          "externalIds": {
+            "xivapi-quest-row": 68476
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68476,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:32.647Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1023642",
+            "npcName": "starry-eyed Ala Mhigan",
+            "sourceRowId": 1023642,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 12.3,
+              "y": 13.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "idyllshire-sidequests-side-a-striking-opportunity-67654"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68089,
+              67654
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 70
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-another-striking-opportunity-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1022849",
+              "locations": [
+                {
+                  "zoneId": "the-fringes",
+                  "zoneName": "The Fringes",
+                  "territoryId": "territory-612",
+                  "mapId": "map-367",
+                  "sourceLevelRowId": 6938713,
+                  "coordinates": {
+                    "x": 30.1,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 429.374,
+                      "y": 60.5019,
+                      "z": -506.798
+                    },
+                    "mapGameId": "g3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 533
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68476,
+              "internalId": "StmBdy109_02940",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 8,
+              "sortKey": 10030,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1023642,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1022849,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 389,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1022849
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1022849,
+                  "name": "battle-scarred veteran",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 8
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-a-fortune-in-salt-68566",
+          "name": "A Fortune in Salt",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 70,
+          "externalIds": {
+            "xivapi-quest-row": 68566
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68566,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:37.889Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1025653",
+            "npcName": "perky peddler",
+            "sourceRowId": 1025653,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 12.8,
+              "y": 12.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68610
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 70
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-fortune-in-salt-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1024010",
+              "locations": [
+                {
+                  "zoneId": "the-lochs",
+                  "zoneName": "The Lochs",
+                  "territoryId": "territory-621",
+                  "mapId": "map-369",
+                  "sourceLevelRowId": 7073010,
+                  "coordinates": {
+                    "x": 16.2,
+                    "y": 24.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -267.014,
+                      "y": 17.9904,
+                      "z": 167.163
+                    },
+                    "mapGameId": "g3f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-a-fortune-in-salt-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1025654",
+              "locations": [
+                {
+                  "zoneId": "the-lochs",
+                  "zoneName": "The Lochs",
+                  "territoryId": "territory-621",
+                  "mapId": "map-369",
+                  "sourceLevelRowId": 7385052,
+                  "coordinates": {
+                    "x": 15.5,
+                    "y": 24.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -299.349,
+                      "y": 11.2229,
+                      "z": 159.936
+                    },
+                    "mapGameId": "g3f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-a-fortune-in-salt-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1025655",
+              "locations": [
+                {
+                  "zoneId": "the-lochs",
+                  "zoneName": "The Lochs",
+                  "territoryId": "territory-621",
+                  "mapId": "map-369",
+                  "sourceLevelRowId": 7385053,
+                  "coordinates": {
+                    "x": 16.8,
+                    "y": 25
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -236.787,
+                      "y": -0.0026437,
+                      "z": 175.2
+                    },
+                    "mapGameId": "g3f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-a-fortune-in-salt-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1025115",
+              "locations": [
+                {
+                  "zoneId": "the-lochs",
+                  "zoneName": "The Lochs",
+                  "territoryId": "territory-621",
+                  "mapId": "map-369",
+                  "sourceLevelRowId": 7232406,
+                  "coordinates": {
+                    "x": 15.8,
+                    "y": 25.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -285.975,
+                      "y": 11.1543,
+                      "z": 185.846
+                    },
+                    "mapGameId": "g3f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1038,
+            "items": [
+              {
+                "itemId": "item-19907",
+                "itemName": "Ala Mhigan Salt Crystal",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-19827",
+                "itemName": "Stewed River Bream",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-19819",
+                "itemName": "Jerked Jhammel",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-21088",
+                "itemName": "Chawan-mushi",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-19810",
+                "itemName": "Steppe Tea",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68566,
+              "internalId": "StmBdz980_03030",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 1,
+              "sortKey": 10040,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1025653,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1025692,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1024010,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1025115,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1025654,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1025655,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1025656,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_LEVEL_WIS_01",
+                  "argument": 7385054,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_PAPA_01",
+                  "argument": 1005139,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_LILI_01",
+                  "argument": 1003871,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LEVEL_S_MACH_01",
+                  "argument": 7232826,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LEVEL_S_MACH_CHOCO_01",
+                  "argument": 7232827,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LEVEL_W_MACH_01",
+                  "argument": 7232151,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LEVEL_W_MACH_CHOCO_01",
+                  "argument": 7232154,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LEVEL_YOUTH_01",
+                  "argument": 7232156,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LEVEL_NIMOTSU_01",
+                  "argument": 7232308,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LEVEL_CHECKER_01",
+                  "argument": 7232307,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LEVEL_OYAKATA_01",
+                  "argument": 7232313,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_SALT_01",
+                  "argument": 1025764,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_SALT_02",
+                  "argument": 1025765,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_SALT_03",
+                  "argument": 1025766,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_FACE_01",
+                  "argument": 621,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_01",
+                  "argument": 801,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1025692
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1024010
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1025115
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1025654
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1025655
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1025656
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1025692
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1024010,
+                  "name": "Wiscar",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1025115,
+                  "name": "Watt",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1025654,
+                  "name": "Wiscar",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1025655,
+                  "name": "Wiscar",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1025656,
+                  "name": "Wiscar",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 11
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-an-unwanted-truth-68613",
+          "name": "An Unwanted Truth",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 70,
+          "externalIds": {
+            "xivapi-quest-row": 68613
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68613,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:39.933Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1025166",
+            "npcName": "Philiot",
+            "sourceRowId": 1025166,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 13.2,
+              "y": 12.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68089
+            ],
+            "instanceContentRowIds": [
+              35
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 70
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-an-unwanted-truth-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1025167",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 7237043,
+                  "coordinates": {
+                    "x": 26.7,
+                    "y": 33.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 206.564,
+                      "y": 21.7838,
+                      "z": 556.455
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-an-unwanted-truth-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-fractal-continuum-hard",
+                  "zoneName": "The Fractal Continuum (Hard)",
+                  "territoryId": "territory-743",
+                  "mapId": "map-443",
+                  "sourceLevelRowId": 7238958,
+                  "coordinates": {
+                    "x": 11.3,
+                    "y": 11.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.111264,
+                      "y": 0,
+                      "z": 299.865
+                    },
+                    "mapGameId": "a2d4/03"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-an-unwanted-truth-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1024718",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 7243924,
+                  "coordinates": {
+                    "x": 26.5,
+                    "y": 33.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 196.399,
+                      "y": 18.4586,
+                      "z": 547.631
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-an-unwanted-truth-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1025169",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 7237141,
+                  "coordinates": {
+                    "x": 24.1,
+                    "y": 23.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 132.326,
+                      "y": -13.6013,
+                      "z": 120.126
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-an-unwanted-truth-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1025169",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 7237141,
+                  "coordinates": {
+                    "x": 24.1,
+                    "y": 23.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 132.326,
+                      "y": -13.6013,
+                      "z": 120.126
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 4500
+          },
+          "duties": [
+            {
+              "id": "duty-285",
+              "name": "The Fractal Continuum (Hard)",
+              "sourceRowId": 285,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 70,
+              "minimumItemLevel": 310,
+              "partySize": 4,
+              "levelSync": 70,
+              "extensions": {
+                "xivapi-instance-content-row": 60,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68613,
+              "internalId": "StmBdy004_03077",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 8,
+              "sortKey": 10021,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1025166,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1025167,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 60,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2009051,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1024718,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1024714,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 7256167,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1025169,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "CLEAR_FLAG_IXA_ALL",
+                  "argument": 67029,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CLEAR_FLAG_IXA_1",
+                  "argument": 67022,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 7243721,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 7243787,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1025186,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1009608,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR2",
+                  "argument": 7244470,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 5540,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR3",
+                  "argument": 7244996,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 587,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 953,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION2",
+                  "argument": 946,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION3",
+                  "argument": 767,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION4",
+                  "argument": 972,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR4",
+                  "argument": 7253878,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR5",
+                  "argument": 7253879,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1009632,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR6",
+                  "argument": 7258657,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_EOBJ1",
+                  "argument": 2008950,
+                  "referenceType": "event-object"
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 60,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1025167
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1024718
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1024714
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1025169
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1025186
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1009608
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1009632
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1025167,
+                  "name": "Philiot",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1024718,
+                  "name": "Philiot",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1024714
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1025169,
+                  "name": "Philiot",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1025186,
+                  "name": "Kezul Itzcan",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1009608,
+                  "name": "Sezul Totoloc",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1009632,
+                  "name": "Ehcatl Nine dropper",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 12
+        },
+        {
+          "id": "rhalgrs-reach-sidequests-side-secret-of-the-ooze-68678",
+          "name": "Secret of the Ooze",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 70,
+          "externalIds": {
+            "xivapi-quest-row": 68678
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68678,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:06:43.216Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1026200",
+            "npcName": "Sawney",
+            "sourceRowId": 1026200,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 11.8,
+              "y": 12
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "dravanian-hinterlands-sidequests-side-an-overgrown-ambition-67738"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68089,
+              67738
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 70
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-secret-of-the-ooze-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1026201",
+              "locations": [
+                {
+                  "zoneId": "the-dravanian-hinterlands",
+                  "zoneName": "The Dravanian Hinterlands",
+                  "territoryId": "territory-399",
+                  "mapId": "map-213",
+                  "sourceLevelRowId": 7571955,
+                  "coordinates": {
+                    "x": 10.2,
+                    "y": 23.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -617.243,
+                      "y": 147.125,
+                      "z": 62.1804
+                    },
+                    "mapGameId": "d2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-secret-of-the-ooze-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "saint-mociannes-arboretum-hard",
+                  "zoneName": "Saint Mocianne's Arboretum (Hard)",
+                  "territoryId": "territory-788",
+                  "mapId": "map-482",
+                  "sourceLevelRowId": 7572082,
+                  "coordinates": {
+                    "x": 18.3,
+                    "y": 4.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 352.195,
+                      "y": -345.499,
+                      "z": -350.786
+                    },
+                    "mapGameId": "d2d9/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-secret-of-the-ooze-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1026202",
+              "locations": [
+                {
+                  "zoneId": "the-dravanian-hinterlands",
+                  "zoneName": "The Dravanian Hinterlands",
+                  "territoryId": "territory-399",
+                  "mapId": "map-213",
+                  "sourceLevelRowId": 7571963,
+                  "coordinates": {
+                    "x": 10.3,
+                    "y": 23.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -611.617,
+                      "y": 146.868,
+                      "z": 57.8972
+                    },
+                    "mapGameId": "d2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 4500
+          },
+          "duties": [
+            {
+              "id": "duty-584",
+              "name": "Saint Mocianne's Arboretum (Hard)",
+              "sourceRowId": 584,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 70,
+              "minimumItemLevel": 340,
+              "partySize": 4,
+              "levelSync": 70,
+              "extensions": {
+                "xivapi-instance-content-row": 62,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:13:21.895Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68678,
+              "internalId": "StmBdy005_03142",
+              "expansion": "Stormblood",
+              "journalGenre": "Rhalgr's Reach Sidequests",
+              "eventIconType": 8,
+              "sortKey": 10022,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1026200,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1026201,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 62,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1012133,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 7572187,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1026202,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1026203,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "QST_CLSHRV601",
+                  "argument": 68156,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_CLSHRV700",
+                  "argument": 68160,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1021037,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1021039,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1016111,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_04",
+                  "argument": 1025578,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_05",
+                  "argument": 1025579,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_06",
+                  "argument": 1012495,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "SCREENIMAGE_01",
+                  "argument": 638,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 624,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 182,
+                  "referenceType": "script-value"
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 62,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1026201
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1012133
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1026202
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1026203
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1021037
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1021039
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1016111
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1025578
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_05",
+                  "actorRowId": 1025579
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_06",
+                  "actorRowId": 1012495
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1026201,
+                  "name": "Sawney",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1012133,
+                  "name": "Midnight Dew",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1026202,
+                  "name": "Sawney",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1026203,
+                  "name": "×泥まりも",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1021037,
+                  "name": "Edgyth",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1021039,
+                  "name": "Edgyth",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1016111,
+                  "name": "Sawney",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1025578,
+                  "name": "Genbu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_05",
+                  "actorRowId": 1025579
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_06",
+                  "actorRowId": 1012495,
+                  "name": "Midnight Dew",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 13
+        }
+      ]
+    }
+  ]
+}

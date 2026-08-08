@@ -14,6 +14,8 @@ import {
 
 import { questIndexFileSchema } from './questIndexSchemas';
 
+import { isExcludedQuestRowId } from './excludedQuestRows';
+
 const QUEST_CLASSIFICATION_FIELDS = [
   'isFeatureQuest',
   'isRepeatable',
@@ -204,6 +206,18 @@ async function main(): Promise<void> {
     questIndex.quests.map((quest) => [quest.rowId, quest]),
   );
 
+  const excludedIndexQuests = questIndex.quests.filter((quest) =>
+    isExcludedQuestRowId(quest.rowId),
+  );
+
+  const publishedExcludedRows = Array.from(
+    occurrencesByRowId,
+    ([rowId, occurrences]) => ({
+      rowId,
+      occurrences,
+    }),
+  ).filter(({ rowId }) => isExcludedQuestRowId(rowId));
+
   const publishedRowsMissingFromIndex = Array.from(
     occurrencesByRowId.keys(),
   ).filter((rowId) => !indexRowsById.has(rowId));
@@ -243,7 +257,9 @@ async function main(): Promise<void> {
   }
 
   const unpublishedQuests = questIndex.quests.filter(
-    (quest) => !occurrencesByRowId.has(quest.rowId),
+    (quest) =>
+      !isExcludedQuestRowId(quest.rowId) &&
+      !occurrencesByRowId.has(quest.rowId),
   );
 
   const missingCountsByJournalCategory = new Map<string, number>();
@@ -280,6 +296,8 @@ async function main(): Promise<void> {
 
     summary: {
       indexedQuestRows: questIndex.quests.length,
+      excludedQuestRows: excludedIndexQuests.length,
+
       publishedQuestOccurrences: publishedOccurrenceCount,
       publishedUniqueQuestRows: occurrencesByRowId.size,
       unpublishedQuestRows: unpublishedQuests.length,
@@ -289,6 +307,7 @@ async function main(): Promise<void> {
 
       questsMissingXivapiRowIds: questsMissingRowIds.length,
       publishedRowsMissingFromIndex: publishedRowsMissingFromIndex.length,
+      publishedExcludedRows: publishedExcludedRows.length,
 
       publishedClassificationMismatches:
         publishedClassificationMismatches.length,
@@ -302,6 +321,7 @@ async function main(): Promise<void> {
 
     questsMissingRowIds,
     publishedRowsMissingFromIndex,
+    publishedExcludedRows,
 
     publishedClassificationMismatches,
   };
@@ -314,6 +334,7 @@ async function main(): Promise<void> {
   console.log('Quest coverage audit');
   console.log('');
   console.log(`Indexed quest rows: ${report.summary.indexedQuestRows}`);
+  console.log(`Curated excluded rows: ${report.summary.excludedQuestRows}`);
   console.log(
     `Published occurrences: ${report.summary.publishedQuestOccurrences}`,
   );
@@ -330,6 +351,9 @@ async function main(): Promise<void> {
   );
   console.log(
     `Published rows absent from index: ${report.summary.publishedRowsMissingFromIndex}`,
+  );
+  console.log(
+    `Published excluded rows: ${report.summary.publishedExcludedRows}`,
   );
   console.log(
     `Published classification mismatches: ${report.summary.publishedClassificationMismatches}`,
@@ -366,6 +390,7 @@ async function main(): Promise<void> {
     unexpectedDuplicates.length > 0 ||
     questsMissingRowIds.length > 0 ||
     publishedRowsMissingFromIndex.length > 0 ||
+    publishedExcludedRows.length > 0 ||
     publishedClassificationMismatches.length > 0;
 
   if (hasIntegrityErrors || (requireComplete && unpublishedQuests.length > 0)) {

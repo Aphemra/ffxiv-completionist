@@ -1,0 +1,5646 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "zodiac-weapons-quests-65897",
+      "title": "His Dark Materia Questline",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "zodiac-weapons-relic-his-dark-materia-65897",
+          "name": "His Dark Materia",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65897
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65897,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:19:52.927Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003075",
+            "npcName": "Gerolt",
+            "sourceRowId": 1003075,
+            "zoneId": "north-shroud",
+            "zoneName": "North Shroud",
+            "coordinates": {
+              "x": 30.3,
+              "y": 20.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "zodiac-weapons-relic-rise-and-shine-66096"
+          ],
+          "rawRelations": {
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-his-dark-materia-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1001425",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 2465082,
+                  "coordinates": {
+                    "x": 23.8,
+                    "y": 13.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 115.156,
+                      "y": 31.9002,
+                      "z": -392.182
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-his-dark-materia-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003075",
+              "targetName": "Gerolt",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4311940,
+                  "coordinates": {
+                    "x": 30.3,
+                    "y": 20.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 440.726,
+                      "y": -0.937455,
+                      "z": -62.1923
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 799
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65897,
+              "internalId": "JobRel015_00361",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 11,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003075,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1001425,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1008948,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5492098,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5492113,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 87,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1001425
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1008948
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1001425,
+                  "name": "Mutamix Bubblypots",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1008948,
+                  "name": "Jalzahn",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66096
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "zodiac-weapons-relic-rise-and-shine-66096",
+          "name": "Rise and Shine",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66096
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66096,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:19:54.681Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1008948",
+            "npcName": "Jalzahn",
+            "sourceRowId": 1008948,
+            "zoneId": "north-shroud",
+            "zoneName": "North Shroud",
+            "coordinates": {
+              "x": 29.6,
+              "y": 19.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-his-dark-materia-65897"
+          ],
+          "nextQuestIds": [
+            "zodiac-weapons-relic-the-vital-title-66097",
+            "zodiac-weapons-relic-the-vital-title-67823"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65897
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001561",
+              "itemName": "Sunshine",
+              "sourceRowId": 2001561,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-rise-and-shine-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003075",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4311940,
+                  "coordinates": {
+                    "x": 30.3,
+                    "y": 20.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 440.726,
+                      "y": -0.937455,
+                      "z": -62.1923
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-rise-and-shine-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1001304",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4374262,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 25.5894,
+                      "y": 28.9768,
+                      "z": -825.376
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-rise-and-shine-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003075",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4311940,
+                  "coordinates": {
+                    "x": 30.3,
+                    "y": 20.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 440.726,
+                      "y": -0.937455,
+                      "z": -62.1923
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-rise-and-shine-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1011791",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 5673441,
+                  "coordinates": {
+                    "x": 34.3,
+                    "y": 31.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 641.685,
+                      "y": 9.44449,
+                      "z": 511.198
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1612
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66096,
+              "internalId": "JobRel016_00560",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 12,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001561,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003075,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1001304,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1011791,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 4697909,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5674350,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5674351,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTION0",
+                  "argument": 1041,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 274,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 86,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001561,
+                  "itemId": "event-item-2001561",
+                  "name": "Sunshine",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25936,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1001304
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1011791
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1001304,
+                  "name": "Rowena",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1011791,
+                  "name": "Remon",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66097,
+                  67823
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "zodiac-weapons-relic-the-vital-title-66097",
+          "name": "The Vital Title",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66097
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66097,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:19:56.764Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1008948",
+            "npcName": "Jalzahn",
+            "sourceRowId": 1008948,
+            "zoneId": "north-shroud",
+            "zoneName": "North Shroud",
+            "coordinates": {
+              "x": 29.6,
+              "y": 19.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-rise-and-shine-66096"
+          ],
+          "nextQuestIds": [
+            "gridiana-black-shroud-sidequests-side-kettle-to-the-mettle-67206"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66096
+            ],
+            "lockedByQuestRowIds": [
+              67823
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-vital-title-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003075",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4311940,
+                  "coordinates": {
+                    "x": 30.3,
+                    "y": 20.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 440.726,
+                      "y": -0.937455,
+                      "z": -62.1923
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-vital-title-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1008948",
+              "targetName": "Jalzahn",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4697909,
+                  "coordinates": {
+                    "x": 29.6,
+                    "y": 19.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 405.12,
+                      "y": -4.49814,
+                      "z": -89.1504
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 658
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66097,
+              "internalId": "JobRel017_00561",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 13,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003075,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1011792,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 4697909,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR1",
+                  "argument": 4678141,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5674415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5674418,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 4311940,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5764983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_EOBJ0",
+                  "argument": 2005235,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LCUT_ACTION0",
+                  "argument": 827,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION1",
+                  "argument": 828,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION2",
+                  "argument": 1091,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION3",
+                  "argument": 990,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION4",
+                  "argument": 1039,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 72,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 80,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 275,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 100,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACHIEVEMENT_RELIC6",
+                  "argument": 1081,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  67206
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "zodiac-weapons-relic-the-vital-title-67823",
+          "name": "The Vital Title",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 67823
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67823,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:20.472Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1008948",
+            "npcName": "Jalzahn",
+            "sourceRowId": 1008948,
+            "zoneId": "north-shroud",
+            "zoneName": "North Shroud",
+            "coordinates": {
+              "x": 29.6,
+              "y": 19.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-rise-and-shine-66096"
+          ],
+          "nextQuestIds": [
+            "gridiana-black-shroud-sidequests-side-kettle-to-the-mettle-67206"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66096
+            ],
+            "lockedByQuestRowIds": [
+              66097
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-vital-title-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003075",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4311940,
+                  "coordinates": {
+                    "x": 30.3,
+                    "y": 20.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 440.726,
+                      "y": -0.937455,
+                      "z": -62.1923
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-vital-title-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1008948",
+              "targetName": "Jalzahn",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4697909,
+                  "coordinates": {
+                    "x": 29.6,
+                    "y": 19.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 405.12,
+                      "y": -4.49814,
+                      "z": -89.1504
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 658
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67823,
+              "internalId": "JobRel099_02287",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 13,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003075,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1011792,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 4697909,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR1",
+                  "argument": 4678141,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5674415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5674418,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 4311940,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5764983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_EOBJ0",
+                  "argument": 2005235,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LCUT_ACTION0",
+                  "argument": 827,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION1",
+                  "argument": 828,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION2",
+                  "argument": 1091,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION3",
+                  "argument": 990,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION4",
+                  "argument": 1039,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 72,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 80,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 275,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 100,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_KNIGHT_MAIN",
+                  "argument": 12124,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_MONK",
+                  "argument": 12133,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_WARRIOR",
+                  "argument": 12142,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_DRAGON",
+                  "argument": 12151,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_BARD",
+                  "argument": 12160,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_NINJA",
+                  "argument": 12169,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_WHITE",
+                  "argument": 12178,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_BLACK",
+                  "argument": 12187,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_SUMMONER",
+                  "argument": 12196,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_SCHOLAR",
+                  "argument": 12205,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REPLICA_KNIGHT_SUB",
+                  "argument": 12213,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  67206
+                ]
+              }
+            }
+          },
+          "sortOrder": 14
+        }
+      ]
+    },
+    {
+      "id": "zodiac-weapons-quests-66971",
+      "title": "Up in Arms Questline",
+      "sortOrder": 2,
+      "quests": [
+        {
+          "id": "zodiac-weapons-relic-up-in-arms-66971",
+          "name": "Up in Arms",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66971
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66971,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:19:58.507Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003075",
+            "npcName": "Gerolt",
+            "sourceRowId": 1003075,
+            "zoneId": "north-shroud",
+            "zoneName": "North Shroud",
+            "coordinates": {
+              "x": 30.3,
+              "y": 20.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "zodiac-weapons-relic-trials-of-the-braves-66972"
+          ],
+          "rawRelations": {
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-up-in-arms-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1008948",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4697909,
+                  "coordinates": {
+                    "x": 29.6,
+                    "y": 19.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 405.12,
+                      "y": -4.49814,
+                      "z": -89.1504
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 658
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66971,
+              "internalId": "JobRel001_01435",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 1,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003075,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ZODIAC_CAMPAIGN_START",
+                  "argument": 207,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ZODIAC_TIPS_UNLOCKED",
+                  "argument": 208,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1008948
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1008948,
+                  "name": "Jalzahn",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66972
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "zodiac-weapons-relic-trials-of-the-braves-66972",
+          "name": "Trials of the Braves",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66972
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66972,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:00.280Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1008948",
+            "npcName": "Jalzahn",
+            "sourceRowId": 1008948,
+            "zoneId": "north-shroud",
+            "zoneName": "North Shroud",
+            "coordinates": {
+              "x": 29.6,
+              "y": 19.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-up-in-arms-66971"
+          ],
+          "nextQuestIds": [
+            "zodiac-weapons-relic-celestial-radiance-66998"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66971
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-trials-of-the-braves-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1001304",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4374262,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 25.5894,
+                      "y": 28.9768,
+                      "z": -825.376
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-trials-of-the-braves-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006976",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4697831,
+                  "coordinates": {
+                    "x": 22.9,
+                    "y": 7.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 71.9581,
+                      "y": 33.0666,
+                      "z": -706.265
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 658
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66972,
+              "internalId": "JobRel002_01436",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 2,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1001304,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1006976,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ZODIAC_SCROLL_UNLOCKED",
+                  "argument": 209,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_ZODIAC_SCROLL",
+                  "argument": 174,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1001304
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1006976
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1001304,
+                  "name": "Rowena",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1006976,
+                  "name": "G'jusana",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66998
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "zodiac-weapons-relic-celestial-radiance-66998",
+          "name": "Celestial Radiance",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66998
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66998,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:02.055Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1008948",
+            "npcName": "Jalzahn",
+            "sourceRowId": 1008948,
+            "zoneId": "north-shroud",
+            "zoneName": "North Shroud",
+            "coordinates": {
+              "x": 29.6,
+              "y": 19.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-trials-of-the-braves-66972"
+          ],
+          "nextQuestIds": [
+            "gridiana-black-shroud-sidequests-side-one-mans-trash-66676",
+            "zodiac-weapons-relic-star-light-star-bright-67000"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66972
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-7885",
+              "itemName": "Superior Enchanted Ink",
+              "sourceRowId": 7885,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-celestial-radiance-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1001425",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 2465082,
+                  "coordinates": {
+                    "x": 23.8,
+                    "y": 13.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 115.156,
+                      "y": 31.9002,
+                      "z": -392.182
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-celestial-radiance-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009151",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 4739886,
+                  "coordinates": {
+                    "x": 23.6,
+                    "y": 13.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 105.363,
+                      "y": 30.9041,
+                      "z": -385.135
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-celestial-radiance-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1001304",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4374262,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 25.5894,
+                      "y": 28.9768,
+                      "z": -825.376
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-celestial-radiance-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009151",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 4739886,
+                  "coordinates": {
+                    "x": 23.6,
+                    "y": 13.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 105.363,
+                      "y": 30.9041,
+                      "z": -385.135
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 939
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66998,
+              "internalId": "JobRel003_01462",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 3,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1001425,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1009151,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1001304,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 7885,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ZODIAC_SPHERE_SCROLL_UNLOCK",
+                  "argument": 212,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_SPHERE_SCROLL",
+                  "argument": 175,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 7885,
+                  "itemId": "item-7885",
+                  "quantity": 1,
+                  "name": "Superior Enchanted Ink",
+                  "resolvedSheet": "Item",
+                  "iconId": 25923
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1001425
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1009151
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1001304
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1001425,
+                  "name": "Mutamix Bubblypots",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1009151,
+                  "name": "Hubairtin",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1001304,
+                  "name": "Rowena",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66676,
+                  67000
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "zodiac-weapons-relic-star-light-star-bright-67000",
+          "name": "Star Light, Star Bright",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 67000
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67000,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:04.138Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009151",
+            "npcName": "Hubairtin",
+            "sourceRowId": 1009151,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 23.6,
+              "y": 13.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-celestial-radiance-66998"
+          ],
+          "nextQuestIds": [
+            "zodiac-weapons-relic-mmmmmm-soulglazed-relics-65742"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66998
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-star-light-star-bright-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1008948",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4697909,
+                  "coordinates": {
+                    "x": 29.6,
+                    "y": 19.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 405.12,
+                      "y": -4.49814,
+                      "z": -89.1504
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 658
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67000,
+              "internalId": "JobRel004_01464",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 4,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009151,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1008948
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1008948,
+                  "name": "Jalzahn",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65742
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        },
+        {
+          "id": "zodiac-weapons-relic-mmmmmm-soulglazed-relics-65742",
+          "name": "Mmmmmm, Soulglazed Relics",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65742
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65742,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:05.918Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1008948",
+            "npcName": "Jalzahn",
+            "sourceRowId": 1008948,
+            "zoneId": "north-shroud",
+            "zoneName": "North Shroud",
+            "coordinates": {
+              "x": 29.6,
+              "y": 19.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-star-light-star-bright-67000"
+          ],
+          "nextQuestIds": [
+            "zodiac-weapons-relic-wherefore-art-thou-zodiac-65892"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67000
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-mmmmmm-soulglazed-relics-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003075",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4311940,
+                  "coordinates": {
+                    "x": 30.3,
+                    "y": 20.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 440.726,
+                      "y": -0.937455,
+                      "z": -62.1923
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-mmmmmm-soulglazed-relics-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1008948",
+              "targetName": "Jalzahn",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4697909,
+                  "coordinates": {
+                    "x": 29.6,
+                    "y": 19.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 405.12,
+                      "y": -4.49814,
+                      "z": -89.1504
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-mmmmmm-soulglazed-relics-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1008948",
+              "targetName": "Jalzahn",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4697909,
+                  "coordinates": {
+                    "x": 29.6,
+                    "y": 19.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 405.12,
+                      "y": -4.49814,
+                      "z": -89.1504
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 658,
+            "items": [
+              {
+                "itemId": "item-8659",
+                "itemName": "Zodiac Glass",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65742,
+              "internalId": "JobRel007_00206",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 5,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003075,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1003075,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 4311940,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 241,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 80,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREEN_IMAGE_RELIC4",
+                  "argument": 244,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_RELIC4",
+                  "argument": 189,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1003075
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1003075,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65892
+                ]
+              }
+            }
+          },
+          "sortOrder": 8
+        },
+        {
+          "id": "zodiac-weapons-relic-wherefore-art-thou-zodiac-65892",
+          "name": "Wherefore Art Thou, Zodiac",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65892
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65892,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:07.658Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1008948",
+            "npcName": "Jalzahn",
+            "sourceRowId": 1008948,
+            "zoneId": "north-shroud",
+            "zoneName": "North Shroud",
+            "coordinates": {
+              "x": 29.6,
+              "y": 19.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-mmmmmm-soulglazed-relics-65742"
+          ],
+          "nextQuestIds": [
+            "zodiac-weapons-relic-a-ponze-of-flesh-65893",
+            "zodiac-weapons-relic-labor-of-love-65894",
+            "zodiac-weapons-relic-method-in-his-malice-65895",
+            "zodiac-weapons-relic-a-treasured-mother-65896"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65742
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-wherefore-art-thou-zodiac-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003075",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4311940,
+                  "coordinates": {
+                    "x": 30.3,
+                    "y": 20.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 440.726,
+                      "y": -0.937455,
+                      "z": -62.1923
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-wherefore-art-thou-zodiac-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1008948",
+              "targetName": "Jalzahn",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4697909,
+                  "coordinates": {
+                    "x": 29.6,
+                    "y": 19.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 405.12,
+                      "y": -4.49814,
+                      "z": -89.1504
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 517
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65892,
+              "internalId": "JobRel010_00356",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 6,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1008948,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003075,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1003075,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 4311940,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREEN_IMAGE_RELIC5",
+                  "argument": 263,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTION0",
+                  "argument": 1061,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 80,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM1",
+                  "argument": 82,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM2",
+                  "argument": 97,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM3",
+                  "argument": 86,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003075,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65893,
+                  65894,
+                  65895,
+                  65896
+                ]
+              }
+            }
+          },
+          "sortOrder": 9
+        },
+        {
+          "id": "zodiac-weapons-relic-a-ponze-of-flesh-65893",
+          "name": "A Ponze of Flesh",
+          "isFeatureQuest": true,
+          "isRepeatable": true,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65893
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65893,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:09.431Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1010809",
+            "npcName": "Papana",
+            "sourceRowId": 1010809,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 23,
+              "y": 7.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "repeatability": {
+            "type": "repeatable",
+            "extensions": {
+              "repeatIntervalType": 0,
+              "dailyQuestPool": 0
+            }
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-wherefore-art-thou-zodiac-65892"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65892
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-9539",
+              "itemName": "Bombard Core",
+              "sourceRowId": 9539,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-9540",
+              "itemName": "Sacred Spring Water",
+              "sourceRowId": 9540,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            },
+            {
+              "itemId": "item-9538",
+              "itemName": "Bronze Lake Crystal",
+              "sourceRowId": 9538,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM2"
+            },
+            {
+              "itemId": "event-item-2001528",
+              "itemName": "Horn of the Beast",
+              "sourceRowId": 2001528,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "event-item-2001529",
+              "itemName": "Gobmachine Bangplate",
+              "sourceRowId": 2001529,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM1"
+            },
+            {
+              "itemId": "event-item-2001530",
+              "itemName": "Narasimha Hide",
+              "sourceRowId": 2001530,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM2"
+            },
+            {
+              "itemId": "event-item-2001531",
+              "itemName": "Sickle Fang",
+              "sourceRowId": 2001531,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM3"
+            },
+            {
+              "itemId": "item-9510",
+              "itemName": "Furnace Ring",
+              "sourceRowId": 9510,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM3"
+            },
+            {
+              "itemId": "item-9511",
+              "itemName": "Perfect Firewood",
+              "sourceRowId": 9511,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM4"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-ponze-of-flesh-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010809",
+              "targetName": "Papana",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 5491454,
+                  "coordinates": {
+                    "x": 23,
+                    "y": 7.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 73.1265,
+                      "y": 33.0666,
+                      "z": -704.391
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-a-ponze-of-flesh-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "dzemael-darkhold",
+                  "zoneName": "Dzemael Darkhold",
+                  "territoryId": "territory-1330",
+                  "mapId": "map-86",
+                  "sourceLevelRowId": 4374660,
+                  "coordinates": {
+                    "x": 12.9,
+                    "y": 7.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 83.1764,
+                      "y": -38.4482,
+                      "z": -167.622
+                    },
+                    "mapGameId": "r1r1/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-a-ponze-of-flesh-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "brayfloxs-longstop-hard",
+                  "zoneName": "Brayflox's Longstop (Hard)",
+                  "territoryId": "territory-362",
+                  "mapId": "map-146",
+                  "sourceLevelRowId": 5495644,
+                  "coordinates": {
+                    "x": 10.8,
+                    "y": 6.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -24.8149,
+                      "y": 35.3181,
+                      "z": -229.485
+                    },
+                    "mapGameId": "s1d6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-a-ponze-of-flesh-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010809",
+              "targetName": "Papana",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 5491454,
+                  "coordinates": {
+                    "x": 23,
+                    "y": 7.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 73.1265,
+                      "y": 33.0666,
+                      "z": -704.391
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-a-ponze-of-flesh-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "halatali-hard",
+                  "zoneName": "Halatali (Hard)",
+                  "territoryId": "territory-360",
+                  "mapId": "map-145",
+                  "sourceLevelRowId": 5495664,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 11.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -257.874,
+                      "y": 19.0746,
+                      "z": 18.2923
+                    },
+                    "mapGameId": "w1d7/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-a-ponze-of-flesh-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "snowcloak",
+                  "zoneName": "Snowcloak",
+                  "territoryId": "territory-1062",
+                  "mapId": "map-174",
+                  "sourceLevelRowId": 5495673,
+                  "coordinates": {
+                    "x": 11.3,
+                    "y": 12.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 1.55739,
+                      "y": 40.0677,
+                      "z": 66.5674
+                    },
+                    "mapGameId": "r1d3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-a-ponze-of-flesh-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010809",
+              "targetName": "Papana",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 5491454,
+                  "coordinates": {
+                    "x": 23,
+                    "y": 7.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 73.1265,
+                      "y": 33.0666,
+                      "z": -704.391
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-a-ponze-of-flesh-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010809",
+              "targetName": "Papana",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 5491454,
+                  "coordinates": {
+                    "x": 23,
+                    "y": 7.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 73.1265,
+                      "y": 33.0666,
+                      "z": -704.391
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-9506",
+                "itemName": "Book of Skylight",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "duties": [
+            {
+              "id": "duty-13",
+              "name": "Dzemael Darkhold",
+              "sourceRowId": 13,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 44,
+              "partySize": 4,
+              "levelSync": 46,
+              "extensions": {
+                "xivapi-instance-content-row": 13,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-20",
+              "name": "Brayflox's Longstop (Hard)",
+              "sourceRowId": 20,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 55,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-21",
+              "name": "Halatali (Hard)",
+              "sourceRowId": 21,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 55,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 21,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-27",
+              "name": "Snowcloak",
+              "sourceRowId": 27,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 80,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 27,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65893,
+              "internalId": "JobRel011_00357",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 7,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1010809,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 9539,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 9540,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM2",
+                  "argument": 9538,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001528,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 13,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM1",
+                  "argument": 2001529,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON1",
+                  "argument": 20,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM2",
+                  "argument": 2001530,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON2",
+                  "argument": 21,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM3",
+                  "argument": 2001531,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON3",
+                  "argument": 27,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "RITEM3",
+                  "argument": 9510,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM4",
+                  "argument": 9511,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "COMP_JOBREL011",
+                  "argument": 65893,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL012",
+                  "argument": 65894,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL013",
+                  "argument": 65895,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL014",
+                  "argument": 65896,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MOT_EVENT_TAKE_LOOK",
+                  "argument": 1061,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR1",
+                  "argument": 4697831,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR2",
+                  "argument": 4510673,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE1",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE2",
+                  "argument": 605,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 98,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 9539,
+                  "itemId": "item-9539",
+                  "quantity": 1,
+                  "name": "Bombard Core",
+                  "resolvedSheet": "Item",
+                  "iconId": 21261
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 9540,
+                  "itemId": "item-9540",
+                  "quantity": 1,
+                  "name": "Sacred Spring Water",
+                  "resolvedSheet": "Item",
+                  "iconId": 22614
+                },
+                {
+                  "sourceInstruction": "RITEM2",
+                  "itemSheet": "Item",
+                  "itemRowId": 9538,
+                  "itemId": "item-9538",
+                  "quantity": 1,
+                  "name": "Bronze Lake Crystal",
+                  "resolvedSheet": "Item",
+                  "iconId": 20020
+                },
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001528,
+                  "itemId": "event-item-2001528",
+                  "name": "Horn of the Beast",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 22204,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM1",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001529,
+                  "itemId": "event-item-2001529",
+                  "name": "Gobmachine Bangplate",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 20957,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM2",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001530,
+                  "itemId": "event-item-2001530",
+                  "name": "Narasimha Hide",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 21822,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM3",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001531,
+                  "itemId": "event-item-2001531",
+                  "name": "Sickle Fang",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 22303,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "RITEM3",
+                  "itemSheet": "Item",
+                  "itemRowId": 9510,
+                  "itemId": "item-9510",
+                  "quantity": 1,
+                  "name": "Furnace Ring",
+                  "resolvedSheet": "Item",
+                  "iconId": 54407
+                },
+                {
+                  "sourceInstruction": "RITEM4",
+                  "itemSheet": "Item",
+                  "itemRowId": 9511,
+                  "itemId": "item-9511",
+                  "quantity": 1,
+                  "name": "Perfect Firewood",
+                  "resolvedSheet": "Item",
+                  "iconId": 52113
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 13,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 20,
+                  "sourceInstruction": "INSTANCEDUNGEON1",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 21,
+                  "sourceInstruction": "INSTANCEDUNGEON2",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 27,
+                  "sourceInstruction": "INSTANCEDUNGEON3",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 5010000
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 5010000
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 10
+        },
+        {
+          "id": "zodiac-weapons-relic-labor-of-love-65894",
+          "name": "Labor of Love",
+          "isFeatureQuest": true,
+          "isRepeatable": true,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65894
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65894,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:12.107Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006971",
+            "npcName": "Guiding Star",
+            "sourceRowId": 1006971,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 22,
+              "y": 6.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "repeatability": {
+            "type": "repeatable",
+            "extensions": {
+              "repeatIntervalType": 0,
+              "dailyQuestPool": 0
+            }
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-wherefore-art-thou-zodiac-65892"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65892
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-9542",
+              "itemName": "Allagan Resin",
+              "sourceRowId": 9542,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "event-item-2001532",
+              "itemName": "Vale Bubo",
+              "sourceRowId": 2001532,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "event-item-2001533",
+              "itemName": "Voidweave",
+              "sourceRowId": 2001533,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM1"
+            },
+            {
+              "itemId": "event-item-2001534",
+              "itemName": "Amdapor Vellum",
+              "sourceRowId": 2001534,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM2"
+            },
+            {
+              "itemId": "event-item-2001535",
+              "itemName": "Indigo Pearl",
+              "sourceRowId": 2001535,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM3"
+            },
+            {
+              "itemId": "item-9512",
+              "itemName": "Perfect Mortar",
+              "sourceRowId": 9512,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            },
+            {
+              "itemId": "item-9513",
+              "itemName": "Perfect Pestle",
+              "sourceRowId": 9513,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM2"
+            },
+            {
+              "itemId": "item-9539",
+              "itemName": "Bombard Core",
+              "sourceRowId": 9539,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM3"
+            },
+            {
+              "itemId": "item-9540",
+              "itemName": "Sacred Spring Water",
+              "sourceRowId": 9540,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM4"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-labor-of-love-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006971",
+              "targetName": "Guiding Star",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4615598,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 6.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 24.3083,
+                      "y": 29.0217,
+                      "z": -726.856
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-labor-of-love-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "aurum-vale",
+                  "zoneName": "Aurum Vale",
+                  "territoryId": "territory-1331",
+                  "mapId": "map-38",
+                  "sourceLevelRowId": 5495708,
+                  "coordinates": {
+                    "x": 3.2,
+                    "y": 8.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -404.46,
+                      "y": -33.4513,
+                      "z": -127.943
+                    },
+                    "mapGameId": "r1r2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-labor-of-love-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "haukke-manor-hard",
+                  "zoneName": "Haukke Manor (Hard)",
+                  "territoryId": "territory-350",
+                  "mapId": "map-139",
+                  "sourceLevelRowId": 5495775,
+                  "coordinates": {
+                    "x": 11.3,
+                    "y": 11.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 2.87334,
+                      "y": -18.78,
+                      "z": 0.00926286
+                    },
+                    "mapGameId": "f1d4/03"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-labor-of-love-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006971",
+              "targetName": "Guiding Star",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4615598,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 6.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 24.3083,
+                      "y": 29.0217,
+                      "z": -726.856
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-labor-of-love-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-lost-city-of-amdapor",
+                  "zoneName": "The Lost City of Amdapor",
+                  "territoryId": "territory-363",
+                  "mapId": "map-152",
+                  "sourceLevelRowId": 5495836,
+                  "coordinates": {
+                    "x": 11.3,
+                    "y": 11.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0,
+                      "y": -280,
+                      "z": 0
+                    },
+                    "mapGameId": "f1d5/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-labor-of-love-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "sastasha-hard",
+                  "zoneName": "Sastasha (Hard)",
+                  "territoryId": "territory-387",
+                  "mapId": "map-169",
+                  "sourceLevelRowId": 5495998,
+                  "coordinates": {
+                    "x": 5,
+                    "y": 17.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -314.553,
+                      "y": 5.51929,
+                      "z": 319.737
+                    },
+                    "mapGameId": "s1d7/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-labor-of-love-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006971",
+              "targetName": "Guiding Star",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4615598,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 6.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 24.3083,
+                      "y": 29.0217,
+                      "z": -726.856
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-labor-of-love-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006971",
+              "targetName": "Guiding Star",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4615598,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 6.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 24.3083,
+                      "y": 29.0217,
+                      "z": -726.856
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-labor-of-love-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006971",
+              "targetName": "Guiding Star",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4615598,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 6.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 24.3083,
+                      "y": 29.0217,
+                      "z": -726.856
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-9507",
+                "itemName": "Zodium",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "duties": [
+            {
+              "id": "duty-5",
+              "name": "The Aurum Vale",
+              "sourceRowId": 5,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 47,
+              "partySize": 4,
+              "levelSync": 49,
+              "extensions": {
+                "xivapi-instance-content-row": 5,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-19",
+              "name": "Haukke Manor (Hard)",
+              "sourceRowId": 19,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 48,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 19,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-22",
+              "name": "The Lost City of Amdapor",
+              "sourceRowId": 22,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 55,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 22,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-28",
+              "name": "Sastasha (Hard)",
+              "sourceRowId": 28,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 80,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 28,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65894,
+              "internalId": "JobRel012_00358",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 8,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1006971,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 9542,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001532,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 5,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM1",
+                  "argument": 2001533,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON1",
+                  "argument": 19,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM2",
+                  "argument": 2001534,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON2",
+                  "argument": 22,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM3",
+                  "argument": 2001535,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON3",
+                  "argument": 28,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 9512,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM2",
+                  "argument": 9513,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM3",
+                  "argument": 9539,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM4",
+                  "argument": 9540,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "COMP_JOBREL011",
+                  "argument": 65893,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL012",
+                  "argument": 65894,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL013",
+                  "argument": 65895,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL014",
+                  "argument": 65896,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_SUBCTS808",
+                  "argument": 66959,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MOT_EVENT_TAKE_LOOK",
+                  "argument": 1061,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE1",
+                  "argument": 611,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE2",
+                  "argument": 605,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 241,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 105,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 9542,
+                  "itemId": "item-9542",
+                  "quantity": 1,
+                  "name": "Allagan Resin",
+                  "resolvedSheet": "Item",
+                  "iconId": 22638
+                },
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001532,
+                  "itemId": "event-item-2001532",
+                  "name": "Vale Bubo",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 21207,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM1",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001533,
+                  "itemId": "event-item-2001533",
+                  "name": "Voidweave",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 23003,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM2",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001534,
+                  "itemId": "event-item-2001534",
+                  "name": "Amdapor Vellum",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 26151,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM3",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001535,
+                  "itemId": "event-item-2001535",
+                  "name": "Indigo Pearl",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 21287,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 9512,
+                  "itemId": "item-9512",
+                  "quantity": 1,
+                  "name": "Perfect Mortar",
+                  "resolvedSheet": "Item",
+                  "iconId": 35652
+                },
+                {
+                  "sourceInstruction": "RITEM2",
+                  "itemSheet": "Item",
+                  "itemRowId": 9513,
+                  "itemId": "item-9513",
+                  "quantity": 1,
+                  "name": "Perfect Pestle",
+                  "resolvedSheet": "Item",
+                  "iconId": 23001
+                },
+                {
+                  "sourceInstruction": "RITEM3",
+                  "itemSheet": "Item",
+                  "itemRowId": 9539,
+                  "itemId": "item-9539",
+                  "quantity": 1,
+                  "name": "Bombard Core",
+                  "resolvedSheet": "Item",
+                  "iconId": 21261
+                },
+                {
+                  "sourceInstruction": "RITEM4",
+                  "itemSheet": "Item",
+                  "itemRowId": 9540,
+                  "itemId": "item-9540",
+                  "quantity": 1,
+                  "name": "Sacred Spring Water",
+                  "resolvedSheet": "Item",
+                  "iconId": 22614
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 5,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 19,
+                  "sourceInstruction": "INSTANCEDUNGEON1",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 22,
+                  "sourceInstruction": "INSTANCEDUNGEON2",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 28,
+                  "sourceInstruction": "INSTANCEDUNGEON3",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 5010000
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 5010000
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 11
+        },
+        {
+          "id": "zodiac-weapons-relic-method-in-his-malice-65895",
+          "name": "Method in His Malice",
+          "isFeatureQuest": true,
+          "isRepeatable": true,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65895
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65895,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:14.791Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1010810",
+            "npcName": "Adkin",
+            "sourceRowId": 1010810,
+            "zoneId": "central-thanalan",
+            "zoneName": "Central Thanalan",
+            "coordinates": {
+              "x": 23.7,
+              "y": 13.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "repeatability": {
+            "type": "repeatable",
+            "extensions": {
+              "repeatIntervalType": 0,
+              "dailyQuestPool": 0
+            }
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-wherefore-art-thou-zodiac-65892"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65892
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001536",
+              "itemName": "Tonberry King Blood",
+              "sourceRowId": 2001536,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "event-item-2001537",
+              "itemName": "Royal Gigant Blood",
+              "sourceRowId": 2001537,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM1"
+            },
+            {
+              "itemId": "event-item-2001538",
+              "itemName": "Kraken Blood",
+              "sourceRowId": 2001538,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM2"
+            },
+            {
+              "itemId": "event-item-2001539",
+              "itemName": "Vicegerent Blood",
+              "sourceRowId": 2001539,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM3"
+            },
+            {
+              "itemId": "item-9514",
+              "itemName": "Perfect Vellum",
+              "sourceRowId": 9514,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-9515",
+              "itemName": "Perfect Pounce",
+              "sourceRowId": 9515,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            },
+            {
+              "itemId": "item-9539",
+              "itemName": "Bombard Core",
+              "sourceRowId": 9539,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM2"
+            },
+            {
+              "itemId": "item-9540",
+              "itemName": "Sacred Spring Water",
+              "sourceRowId": 9540,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM3"
+            },
+            {
+              "itemId": "item-9543",
+              "itemName": "Furite Sand",
+              "sourceRowId": 9543,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM4"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-method-in-his-malice-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-wanderers-palace",
+                  "zoneName": "The Wanderer's Palace",
+                  "territoryId": "territory-159",
+                  "mapId": "map-32",
+                  "sourceLevelRowId": 5496207,
+                  "coordinates": {
+                    "x": 12.7,
+                    "y": 2.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 72.9591,
+                      "y": 6,
+                      "z": -446.829
+                    },
+                    "mapGameId": "s1d3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-method-in-his-malice-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010810",
+              "targetName": "Adkin",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 5491455,
+                  "coordinates": {
+                    "x": 23.7,
+                    "y": 13.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 109.488,
+                      "y": 31,
+                      "z": -388.829
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-method-in-his-malice-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "copperbell-mines-hard",
+                  "zoneName": "Copperbell Mines (Hard)",
+                  "territoryId": "territory-349",
+                  "mapId": "map-142",
+                  "sourceLevelRowId": 5496249,
+                  "coordinates": {
+                    "x": 9.2,
+                    "y": 11.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -100.727,
+                      "y": -58.0515,
+                      "z": 2.47256
+                    },
+                    "mapGameId": "w1d6/03"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-method-in-his-malice-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010810",
+              "targetName": "Adkin",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 5491455,
+                  "coordinates": {
+                    "x": 23.7,
+                    "y": 13.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 109.488,
+                      "y": 31,
+                      "z": -388.829
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-method-in-his-malice-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "hullbreaker-isle",
+                  "zoneName": "Hullbreaker Isle",
+                  "territoryId": "territory-361",
+                  "mapId": "map-168",
+                  "sourceLevelRowId": 5496268,
+                  "coordinates": {
+                    "x": 4.7,
+                    "y": 12
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -326.927,
+                      "y": 0,
+                      "z": 39.6612
+                    },
+                    "mapGameId": "s1d5/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-method-in-his-malice-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010810",
+              "targetName": "Adkin",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 5491455,
+                  "coordinates": {
+                    "x": 23.7,
+                    "y": 13.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 109.488,
+                      "y": 31,
+                      "z": -388.829
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-method-in-his-malice-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-sunken-temple-of-qarn-hard",
+                  "zoneName": "The Sunken Temple of Qarn (Hard)",
+                  "territoryId": "territory-367",
+                  "mapId": "map-182",
+                  "sourceLevelRowId": 5497084,
+                  "coordinates": {
+                    "x": 13.6,
+                    "y": 11.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 115.445,
+                      "y": -3.99824,
+                      "z": -0.116652
+                    },
+                    "mapGameId": "w1d8/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-method-in-his-malice-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010810",
+              "targetName": "Adkin",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 5491455,
+                  "coordinates": {
+                    "x": 23.7,
+                    "y": 13.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 109.488,
+                      "y": 31,
+                      "z": -388.829
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 8
+              }
+            },
+            {
+              "id": "adventurer-method-in-his-malice-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010810",
+              "targetName": "Adkin",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 5491455,
+                  "coordinates": {
+                    "x": 23.7,
+                    "y": 13.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 109.488,
+                      "y": 31,
+                      "z": -388.829
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9,
+                "completeSequence": 9
+              }
+            },
+            {
+              "id": "adventurer-method-in-his-malice-objective-10",
+              "sortOrder": 10,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010810",
+              "targetName": "Adkin",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 5491455,
+                  "coordinates": {
+                    "x": 23.7,
+                    "y": 13.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 109.488,
+                      "y": 31,
+                      "z": -388.829
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 10
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-9508",
+                "itemName": "Zodiac Scroll",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "duties": [
+            {
+              "id": "duty-10",
+              "name": "The Wanderer's Palace",
+              "sourceRowId": 10,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 45,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 10,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-18",
+              "name": "Copperbell Mines (Hard)",
+              "sourceRowId": 18,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 48,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 18,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-23",
+              "name": "Hullbreaker Isle",
+              "sourceRowId": 23,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 70,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 23,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-26",
+              "name": "The Sunken Temple of Qarn (Hard)",
+              "sourceRowId": 26,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 80,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 26,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65895,
+              "internalId": "JobRel013_00359",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 9,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1010810,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001536,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 10,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM1",
+                  "argument": 2001537,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON1",
+                  "argument": 18,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM2",
+                  "argument": 2001538,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON2",
+                  "argument": 23,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM3",
+                  "argument": 2001539,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON3",
+                  "argument": 26,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 9514,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 9515,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM2",
+                  "argument": 9539,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM3",
+                  "argument": 9540,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM4",
+                  "argument": 9543,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "COMP_JOBREL011",
+                  "argument": 65893,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL012",
+                  "argument": 65894,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL013",
+                  "argument": 65895,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL014",
+                  "argument": 65896,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MOT_EVENT_TAKE_LOOK",
+                  "argument": 1061,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE1",
+                  "argument": 611,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE2",
+                  "argument": 605,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 87,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001536,
+                  "itemId": "event-item-2001536",
+                  "name": "Tonberry King Blood",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 22601,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM1",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001537,
+                  "itemId": "event-item-2001537",
+                  "name": "Royal Gigant Blood",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 22601,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM2",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001538,
+                  "itemId": "event-item-2001538",
+                  "name": "Kraken Blood",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 20662,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM3",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001539,
+                  "itemId": "event-item-2001539",
+                  "name": "Vicegerent Blood",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 22601,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 9514,
+                  "itemId": "item-9514",
+                  "quantity": 1,
+                  "name": "Perfect Vellum",
+                  "resolvedSheet": "Item",
+                  "iconId": 26180
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 9515,
+                  "itemId": "item-9515",
+                  "quantity": 1,
+                  "name": "Perfect Pounce",
+                  "resolvedSheet": "Item",
+                  "iconId": 22649
+                },
+                {
+                  "sourceInstruction": "RITEM2",
+                  "itemSheet": "Item",
+                  "itemRowId": 9539,
+                  "itemId": "item-9539",
+                  "quantity": 1,
+                  "name": "Bombard Core",
+                  "resolvedSheet": "Item",
+                  "iconId": 21261
+                },
+                {
+                  "sourceInstruction": "RITEM3",
+                  "itemSheet": "Item",
+                  "itemRowId": 9540,
+                  "itemId": "item-9540",
+                  "quantity": 1,
+                  "name": "Sacred Spring Water",
+                  "resolvedSheet": "Item",
+                  "iconId": 22614
+                },
+                {
+                  "sourceInstruction": "RITEM4",
+                  "itemSheet": "Item",
+                  "itemRowId": 9543,
+                  "itemId": "item-9543",
+                  "quantity": 1,
+                  "name": "Furite Sand",
+                  "resolvedSheet": "Item",
+                  "iconId": 21204
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 10,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 18,
+                  "sourceInstruction": "INSTANCEDUNGEON1",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 23,
+                  "sourceInstruction": "INSTANCEDUNGEON2",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 26,
+                  "sourceInstruction": "INSTANCEDUNGEON3",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 5010000
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 5010000
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 12
+        },
+        {
+          "id": "zodiac-weapons-relic-a-treasured-mother-65896",
+          "name": "A Treasured Mother",
+          "isFeatureQuest": true,
+          "isRepeatable": true,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65896
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65896,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:20:17.476Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006981",
+            "npcName": "Brangwine",
+            "sourceRowId": 1006981,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 22,
+              "y": 6.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "repeatability": {
+            "type": "repeatable",
+            "extensions": {
+              "repeatIntervalType": 0,
+              "dailyQuestPool": 0
+            }
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "zodiac-weapons-relic-wherefore-art-thou-zodiac-65892",
+            "gridiana-black-shroud-sidequests-side-one-mans-trash-66676"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65892,
+              66676
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-9539",
+              "itemName": "Bombard Core",
+              "sourceRowId": 9539,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-9540",
+              "itemName": "Sacred Spring Water",
+              "sourceRowId": 9540,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            },
+            {
+              "itemId": "item-9544",
+              "itemName": "Brass Kettle",
+              "sourceRowId": 9544,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM2"
+            },
+            {
+              "itemId": "event-item-2001540",
+              "itemName": "Lost Treasure of Amdapor",
+              "sourceRowId": 2001540,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "event-item-2001541",
+              "itemName": "Lost Treasure of Pharos Sirius",
+              "sourceRowId": 2001541,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM1"
+            },
+            {
+              "itemId": "event-item-2001542",
+              "itemName": "Lost Treasure of the Tam-Tara Deepcroft",
+              "sourceRowId": 2001542,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM2"
+            },
+            {
+              "itemId": "event-item-2001543",
+              "itemName": "Lost Treasure of the Stone Vigil",
+              "sourceRowId": 2001543,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM3"
+            },
+            {
+              "itemId": "item-9516",
+              "itemName": "Tailor-made Eel Pie",
+              "sourceRowId": 9516,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM3"
+            },
+            {
+              "itemId": "item-9517",
+              "itemName": "Perfect Cloth",
+              "sourceRowId": 9517,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM4"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-treasured-mother-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006981",
+              "targetName": "Brangwine",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4797414,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 6.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 25.7269,
+                      "y": 29,
+                      "z": -738.206
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-a-treasured-mother-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010811",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 5491456,
+                  "coordinates": {
+                    "x": 34.4,
+                    "y": 32.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 645.282,
+                      "y": 5.63168,
+                      "z": 551.612
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-a-treasured-mother-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "amdapor-keep",
+                  "zoneName": "Amdapor Keep",
+                  "territoryId": "territory-167",
+                  "mapId": "map-85",
+                  "sourceLevelRowId": 4374654,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 11.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.423301,
+                      "y": 48.2028,
+                      "z": -0.650272
+                    },
+                    "mapGameId": "f1d3/03"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-a-treasured-mother-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "pharos-sirius",
+                  "zoneName": "Pharos Sirius",
+                  "territoryId": "territory-160",
+                  "mapId": "map-134",
+                  "sourceLevelRowId": 5497320,
+                  "coordinates": {
+                    "x": 11.3,
+                    "y": 11.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.0486203,
+                      "y": 194.1,
+                      "z": 0.0533833
+                    },
+                    "mapGameId": "s1d4/06"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-a-treasured-mother-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-tam-tara-deepcroft-hard",
+                  "zoneName": "The Tam-Tara Deepcroft (Hard)",
+                  "territoryId": "territory-373",
+                  "mapId": "map-165",
+                  "sourceLevelRowId": 5497329,
+                  "coordinates": {
+                    "x": 6.8,
+                    "y": 7.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -50.8306,
+                      "y": 14.055,
+                      "z": -12.2185
+                    },
+                    "mapGameId": "f1d6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-a-treasured-mother-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010811",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 5491456,
+                  "coordinates": {
+                    "x": 34.4,
+                    "y": 32.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 645.282,
+                      "y": 5.63168,
+                      "z": 551.612
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-a-treasured-mother-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-stone-vigil-hard",
+                  "zoneName": "The Stone Vigil (Hard)",
+                  "territoryId": "territory-365",
+                  "mapId": "map-157",
+                  "sourceLevelRowId": 5498185,
+                  "coordinates": {
+                    "x": 8.7,
+                    "y": 10.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -128.057,
+                      "y": -7.95012,
+                      "z": -55.9803
+                    },
+                    "mapGameId": "r1d2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-a-treasured-mother-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010811",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 5491456,
+                  "coordinates": {
+                    "x": 34.4,
+                    "y": 32.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 645.282,
+                      "y": 5.63168,
+                      "z": 551.612
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-a-treasured-mother-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006981",
+              "targetName": "Brangwine",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4797414,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 6.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 25.7269,
+                      "y": 29,
+                      "z": -738.206
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-9509",
+                "itemName": "Flawless Alexandrite",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "duties": [
+            {
+              "id": "duty-14",
+              "name": "Amdapor Keep",
+              "sourceRowId": 14,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 45,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 14,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-17",
+              "name": "Pharos Sirius",
+              "sourceRowId": 17,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 48,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 17,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-24",
+              "name": "The Tam–Tara Deepcroft (Hard)",
+              "sourceRowId": 24,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 70,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 24,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-25",
+              "name": "The Stone Vigil (Hard)",
+              "sourceRowId": 25,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 70,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 25,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:21:34.103Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65896,
+              "internalId": "JobRel014_00360",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Zodiac Weapons",
+              "eventIconType": 8,
+              "sortKey": 10,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1006981,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 9539,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 9540,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM2",
+                  "argument": 9544,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1010811,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001540,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 14,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM1",
+                  "argument": 2001541,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON1",
+                  "argument": 17,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM2",
+                  "argument": 2001542,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON2",
+                  "argument": 24,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM3",
+                  "argument": 2001543,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON3",
+                  "argument": 25,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "RITEM3",
+                  "argument": 9516,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM4",
+                  "argument": 9517,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "COMP_JOBREL011",
+                  "argument": 65893,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL012",
+                  "argument": 65894,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL013",
+                  "argument": 65895,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "COMP_JOBREL014",
+                  "argument": 65896,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MOT_EVENT_TAKE_LOOK",
+                  "argument": 1061,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE1",
+                  "argument": 611,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE2",
+                  "argument": 605,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 101,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 9539,
+                  "itemId": "item-9539",
+                  "quantity": 1,
+                  "name": "Bombard Core",
+                  "resolvedSheet": "Item",
+                  "iconId": 21261
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 9540,
+                  "itemId": "item-9540",
+                  "quantity": 1,
+                  "name": "Sacred Spring Water",
+                  "resolvedSheet": "Item",
+                  "iconId": 22614
+                },
+                {
+                  "sourceInstruction": "RITEM2",
+                  "itemSheet": "Item",
+                  "itemRowId": 9544,
+                  "itemId": "item-9544",
+                  "quantity": 1,
+                  "name": "Brass Kettle",
+                  "resolvedSheet": "Item",
+                  "iconId": 27601
+                },
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001540,
+                  "itemId": "event-item-2001540",
+                  "name": "Lost Treasure of Amdapor",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25916,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM1",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001541,
+                  "itemId": "event-item-2001541",
+                  "name": "Lost Treasure of Pharos Sirius",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25916,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM2",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001542,
+                  "itemId": "event-item-2001542",
+                  "name": "Lost Treasure of the Tam-Tara Deepcroft",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25916,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM3",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001543,
+                  "itemId": "event-item-2001543",
+                  "name": "Lost Treasure of the Stone Vigil",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25916,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "RITEM3",
+                  "itemSheet": "Item",
+                  "itemRowId": 9516,
+                  "itemId": "item-9516",
+                  "quantity": 1,
+                  "name": "Tailor-made Eel Pie",
+                  "resolvedSheet": "Item",
+                  "iconId": 24305
+                },
+                {
+                  "sourceInstruction": "RITEM4",
+                  "itemSheet": "Item",
+                  "itemRowId": 9517,
+                  "itemId": "item-9517",
+                  "quantity": 1,
+                  "name": "Perfect Cloth",
+                  "resolvedSheet": "Item",
+                  "iconId": 21612
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 14,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 17,
+                  "sourceInstruction": "INSTANCEDUNGEON1",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 24,
+                  "sourceInstruction": "INSTANCEDUNGEON2",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 25,
+                  "sourceInstruction": "INSTANCEDUNGEON3",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010811
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010811,
+                  "name": "Ealdwine",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 13
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6581 @@
+{
+  "schemaVersion": 1,
+  "id": "phantom-weapons",
+  "title": "Phantom Weapon Quests",
+  "category": "relic",
+  "generatedAt": "2026-08-08T13:19:20.527Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 13,
+    "branchCount": 0,
+    "convergenceCount": 0,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [],
+  "issues": [],
+  "quests": [
+    {
+      "id": "phantom-weapons-relic-arcane-artistry-70855",
+      "xivapiRowId": 70855,
+      "sortOrder": 1,
+      "name": "Arcane Artistry",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-arcane-artistry-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559008,
+              "coordinates": {
+                "x": 5.1,
+                "y": 7.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -52.8121,
+                  "y": 0,
+                  "z": 25.5183
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-arcane-artistry-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053906",
+          "targetName": "Lydirceil",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559006,
+              "coordinates": {
+                "x": 6.6,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 25.8305,
+                  "y": 0,
+                  "z": 13.3915
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-arcane-artistry-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053908",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559009,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8731,
+                  "y": 0,
+                  "z": 13.3573
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70847
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70855,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:04:43.422Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70855,
+          "internalId": "KinGkw001_05319",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 1,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053907,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_01",
+              "argument": 1444,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_02",
+              "argument": 1445,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_03",
+              "argument": 1446,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_ITEM_ATMA_1",
+              "argument": 47744,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_ITEM_ATMA_2",
+              "argument": 47745,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_ITEM_ATMA_3",
+              "argument": 47746,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_ITEM_ATMA_4",
+              "argument": 47747,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_ITEM_ATMA_5",
+              "argument": 47748,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_ITEM_ATMA_6",
+              "argument": 47749,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_USE_ATMA",
+              "argument": 3,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUEST_SUBWIL142",
+              "argument": 66241,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUEST_JOBREL100",
+              "argument": 67747,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUEST_STMBDY401",
+              "argument": 68614,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUEST_LUCKSA002",
+              "argument": 69371,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUEST_CHRHDY101",
+              "argument": 70188,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 11559006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 11559009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QSTSET_COMP_CHK_GEROLT",
+              "argument": 27,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_EOBJ_001",
+              "argument": 2014773,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "LOC_POS_MAKER_001",
+              "argument": 11797641,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_MAKER_002",
+              "argument": 11798167,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "QST_COMP_CHK_01",
+              "argument": 66971,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_EOBJ_002",
+              "argument": 2014781,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "LOC_ENPC_GERO_BUKINASHI",
+              "argument": 1016244,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_IDLE_DEEP_BREATH",
+              "argument": 4267,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BUKI_ACTION1",
+              "argument": 5753,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_NOTO",
+              "argument": 5718,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053907
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1053908
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053907,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70856
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-forging-the-phantasmal-70856"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 829,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-forging-the-phantasmal-70856",
+      "xivapiRowId": 70856,
+      "sortOrder": 2,
+      "name": "Forging the Phantasmal",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-47750",
+          "itemName": "Arcanite",
+          "sourceRowId": 47750,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-forging-the-phantasmal-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053909",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559023,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.5763,
+                  "y": 0,
+                  "z": 10.7985
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70855
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70856,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:04:45.193Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70856,
+          "internalId": "KinGkw002_05320",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 2,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1053909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 47750,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_MAIN",
+              "argument": 47869,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_SUB",
+              "argument": 47890,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MONK_WEAPON",
+              "argument": 47870,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WARRIOR_WEAPON",
+              "argument": 47871,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DRAGOON_WEAPON",
+              "argument": 47872,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON",
+              "argument": 47873,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WHITEMAGE_WEAPON",
+              "argument": 47874,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BLACKMAGE_WEAPON",
+              "argument": 47875,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SUMMONER_WEAPON",
+              "argument": 47876,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCHOLAR_WEAPON",
+              "argument": 47877,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NINJA_WEAPON",
+              "argument": 47878,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON",
+              "argument": 47880,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DARKKNIGHT_WEAPON",
+              "argument": 47879,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON",
+              "argument": 47881,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON",
+              "argument": 47882,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON",
+              "argument": 47883,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "GUNBREAKER_WEAPON",
+              "argument": 47884,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DANCER_WEAPON",
+              "argument": 47885,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAGE_WEAPON",
+              "argument": 47887,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REAPER_WEAPON",
+              "argument": 47886,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "VIPER_WEAPON",
+              "argument": 47888,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON",
+              "argument": 47889,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON_ORB",
+              "argument": 61,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON_PARETTE",
+              "argument": 62,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON_SUB",
+              "argument": 63,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON_SUB",
+              "argument": 57,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON_SUB",
+              "argument": 64,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON_SUB",
+              "argument": 65,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_01",
+              "argument": 90,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_02",
+              "argument": 187,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VFX_01",
+              "argument": 241,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 5706,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_02",
+              "argument": 241,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1053728,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1053729,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1053687,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 11559006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 11559009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 11660068,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "INVIS_ACTOR_01",
+              "argument": 1053806,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_02",
+              "argument": 1054005,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_03",
+              "argument": 1054296,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_ATAMA_KAKAERU",
+              "argument": 5754,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "HOW_TO_2",
+              "argument": 228,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_04",
+              "argument": 1053804,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 47750,
+              "itemId": "item-47750",
+              "quantity": 1,
+              "name": "Arcanite",
+              "resolvedSheet": "Item",
+              "iconId": 21209
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1053909
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1053728
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1053687
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1053909,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1053728,
+              "name": "Ermina",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1053687,
+              "name": "Archive",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70916
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-arcane-artistry-70855"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-keeping-the-old-ways-alive-70916"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 645,
+        "items": [
+          {
+            "itemId": "item-34",
+            "itemName": "Unresolved item 34",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-keeping-the-old-ways-alive-70916",
+      "xivapiRowId": 70916,
+      "sortOrder": 3,
+      "name": "Keeping the Old Ways Alive",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-46854",
+          "itemName": "Rroneek Glue",
+          "sourceRowId": 46854,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        },
+        {
+          "itemId": "item-46852",
+          "itemName": "Ut'ohmu Siderite",
+          "sourceRowId": 46852,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM1"
+        },
+        {
+          "itemId": "item-46855",
+          "itemName": "Synthetic Dark Matter Alpha",
+          "sourceRowId": 46855,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM2"
+        },
+        {
+          "itemId": "item-46856",
+          "itemName": "Synthetic Dark Matter Beta",
+          "sourceRowId": 46856,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM3"
+        },
+        {
+          "itemId": "item-46857",
+          "itemName": "Synthetic Dark Matter Gamma",
+          "sourceRowId": 46857,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM4"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-keeping-the-old-ways-alive-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039456",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11665644,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8731,
+                  "y": 0,
+                  "z": 13.3573
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-keeping-the-old-ways-alive-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053908",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559009,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8731,
+                  "y": 0,
+                  "z": 13.3573
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-keeping-the-old-ways-alive-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12033811,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.14293,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-keeping-the-old-ways-alive-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12033811,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.14293,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-keeping-the-old-ways-alive-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12033811,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.14293,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-keeping-the-old-ways-alive-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12033811,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.14293,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-keeping-the-old-ways-alive-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12033811,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.14293,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-keeping-the-old-ways-alive-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2014937",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11944997,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 27.6083,
+                  "y": 0,
+                  "z": 11.7458
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70856
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70916,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:04:47.250Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70916,
+          "internalId": "KinGkw101_05380",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 11,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1039457,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1039456,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 46854,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM1",
+              "argument": 46852,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM2",
+              "argument": 46855,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM3",
+              "argument": 46856,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM4",
+              "argument": 46857,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1056001,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1056003,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1056004,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1056005,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1056006,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2014937,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1039458,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1053728,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1053729,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1053687,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_EOBJ0",
+              "argument": 2014872,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 11665645,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 11665644,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR2",
+              "argument": 11559029,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR3",
+              "argument": 11559006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR4",
+              "argument": 11559009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR5",
+              "argument": 11944992,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR6",
+              "argument": 12086801,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 11660068,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR1",
+              "argument": 11861024,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "INVIS_ACTOR_01",
+              "argument": 1053806,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_02",
+              "argument": 1054005,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_03",
+              "argument": 1053905,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_04",
+              "argument": 1053904,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_05",
+              "argument": 1053804,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_COMP_CHK_01",
+              "argument": 65742,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_COMP_CHK_02",
+              "argument": 67932,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_KAJI",
+              "argument": 187,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_HQ",
+              "argument": 90,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_WIPE_CLOTH",
+              "argument": 215,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_USE_ITEM",
+              "argument": 1,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_KINGKW101",
+              "argument": 70916,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_OK",
+              "argument": 1604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_NG",
+              "argument": 1608,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM0",
+              "argument": 20197,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_06",
+              "argument": 1054000,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 46854,
+              "itemId": "item-46854",
+              "quantity": 1,
+              "name": "Rroneek Glue",
+              "resolvedSheet": "Item",
+              "iconId": 22607
+            },
+            {
+              "sourceInstruction": "RITEM1",
+              "itemSheet": "Item",
+              "itemRowId": 46852,
+              "itemId": "item-46852",
+              "quantity": 1,
+              "name": "Ut'ohmu Siderite",
+              "resolvedSheet": "Item",
+              "iconId": 21202
+            },
+            {
+              "sourceInstruction": "RITEM2",
+              "itemSheet": "Item",
+              "itemRowId": 46855,
+              "itemId": "item-46855",
+              "quantity": 1,
+              "name": "Synthetic Dark Matter Alpha",
+              "resolvedSheet": "Item",
+              "iconId": 21465
+            },
+            {
+              "sourceInstruction": "RITEM3",
+              "itemSheet": "Item",
+              "itemRowId": 46856,
+              "itemId": "item-46856",
+              "quantity": 1,
+              "name": "Synthetic Dark Matter Beta",
+              "resolvedSheet": "Item",
+              "iconId": 21466
+            },
+            {
+              "sourceInstruction": "RITEM4",
+              "itemSheet": "Item",
+              "itemRowId": 46857,
+              "itemId": "item-46857",
+              "quantity": 1,
+              "name": "Synthetic Dark Matter Gamma",
+              "resolvedSheet": "Item",
+              "iconId": 22610
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039456
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1056001
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1056003
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1056004
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1056005
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1056006
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1053906
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1039458
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1053728
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1053687
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039456,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1056001
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1056003
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1056004
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1056005
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1056006
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1053906,
+              "name": "Lydirceil",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1039458,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1053728,
+              "name": "Ermina",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1053687,
+              "name": "Archive",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70917
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-forging-the-phantasmal-70856"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-aether-aether-everywhere-70917"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 855,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1039457
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-aether-aether-everywhere-70917",
+      "xivapiRowId": 70917,
+      "sortOrder": 4,
+      "name": "Aether, Aether, Everywhere",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003766",
+          "itemName": "Aetherwell Array",
+          "sourceRowId": 2003766,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-aether-aether-everywhere-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053908",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559009,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8731,
+                  "y": 0,
+                  "z": 13.3573
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70916
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70917,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:04:50.796Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70917,
+          "internalId": "KinGkw102_05381",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 12,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003766,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "CUT_SCENE_N_01",
+              "argument": 3767,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_01",
+              "argument": 1487,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_02",
+              "argument": 1488,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1053728,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1053729,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1053687,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 11559006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 11559009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR2",
+              "argument": 11559029,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_EOBJ0",
+              "argument": 2014872,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 11660068,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR1",
+              "argument": 11861024,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "INVIS_ACTOR_01",
+              "argument": 1053806,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_02",
+              "argument": 1054005,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_03",
+              "argument": 1053905,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_04",
+              "argument": 1053904,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_KINGKW102",
+              "argument": 70917,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_OK",
+              "argument": 1604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_NG",
+              "argument": 1608,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM0",
+              "argument": 20196,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOG_MSG_EVENT",
+              "argument": 2031,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_PICTRUE_KINGKW102_001",
+              "argument": 1547,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003766,
+              "itemId": "event-item-2003766",
+              "name": "Aetherwell Array",
+              "resolvedSheet": "EventItem",
+              "iconId": 26083,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1053728
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1053687
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1053728,
+              "name": "Ermina",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1053687,
+              "name": "Archive",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70918
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-keeping-the-old-ways-alive-70916"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-wrought-by-hands-phantasmal-70918"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 735,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-wrought-by-hands-phantasmal-70918",
+      "xivapiRowId": 70918,
+      "sortOrder": 5,
+      "name": "Wrought by Hands Phantasmal",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-46850",
+          "itemName": "Waxing Arcanite",
+          "sourceRowId": 46850,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-wrought-by-hands-phantasmal-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053905",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559029,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.5763,
+                  "y": 0,
+                  "z": 10.7985
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70917
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70918,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:04:52.874Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70918,
+          "internalId": "KinGkw103_05382",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 13,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1053905,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 46850,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_MAIN",
+              "argument": 47006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_SUB",
+              "argument": 47027,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MONK_WEAPON",
+              "argument": 47007,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WARRIOR_WEAPON",
+              "argument": 47008,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DRAGOON_WEAPON",
+              "argument": 47009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON",
+              "argument": 47010,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WHITEMAGE_WEAPON",
+              "argument": 47011,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BLACKMAGE_WEAPON",
+              "argument": 47012,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SUMMONER_WEAPON",
+              "argument": 47013,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCHOLAR_WEAPON",
+              "argument": 47014,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NINJA_WEAPON",
+              "argument": 47015,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON",
+              "argument": 47017,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DARKKNIGHT_WEAPON",
+              "argument": 47016,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON",
+              "argument": 47018,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON",
+              "argument": 47019,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON",
+              "argument": 47020,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "GUNBREAKER_WEAPON",
+              "argument": 47021,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DANCER_WEAPON",
+              "argument": 47022,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAGE_WEAPON",
+              "argument": 47024,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REAPER_WEAPON",
+              "argument": 47023,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "VIPER_WEAPON",
+              "argument": 47025,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON",
+              "argument": 47026,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON_ORB",
+              "argument": 69,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON_PARETTE",
+              "argument": 70,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON_SUB",
+              "argument": 71,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON_SUB",
+              "argument": 57,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON_SUB",
+              "argument": 72,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON_SUB",
+              "argument": 73,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_PALADIN_WEAPON_MAIN",
+              "argument": 47869,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_PALADIN_WEAPON_SUB",
+              "argument": 47890,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_MONK_WEAPON",
+              "argument": 47870,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_WARRIOR_WEAPON",
+              "argument": 47871,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_DRAGOON_WEAPON",
+              "argument": 47872,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_BARD_WEAPON",
+              "argument": 47873,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_WHITEMAGE_WEAPON",
+              "argument": 47874,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_BLACKMAGE_WEAPON",
+              "argument": 47875,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SUMMONER_WEAPON",
+              "argument": 47876,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SCHOLAR_WEAPON",
+              "argument": 47877,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_NINJA_WEAPON",
+              "argument": 47878,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_MACHINIST_WEAPON",
+              "argument": 47880,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_DARKKNIGHT_WEAPON",
+              "argument": 47879,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_ASTROLOGIAN_WEAPON",
+              "argument": 47881,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SAMURAI_WEAPON",
+              "argument": 47882,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_REDMAGE_WEAPON",
+              "argument": 47883,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_GUNBREAKER_WEAPON",
+              "argument": 47884,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_DANCER_WEAPON",
+              "argument": 47885,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 46850,
+              "itemId": "item-46850",
+              "quantity": 1,
+              "name": "Waxing Arcanite",
+              "resolvedSheet": "Item",
+              "iconId": 21221
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1053905
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1053905,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70990
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-aether-aether-everywhere-70917"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-timeworn-techniques-70990"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 691,
+        "items": [
+          {
+            "itemId": "item-35",
+            "itemName": "Unresolved item 35",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-timeworn-techniques-70990",
+      "xivapiRowId": 70990,
+      "sortOrder": 6,
+      "name": "Timeworn Techniques",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-50054",
+          "itemName": "Umbral Clay",
+          "sourceRowId": 50054,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        },
+        {
+          "itemId": "item-50055",
+          "itemName": "Aspected Aether Agglomerate",
+          "sourceRowId": 50055,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM1"
+        },
+        {
+          "itemId": "item-50056",
+          "itemName": "Aspected Aetheroconductor",
+          "sourceRowId": 50056,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM2"
+        },
+        {
+          "itemId": "item-50057",
+          "itemName": "Aspected Aetherocatalyst",
+          "sourceRowId": 50057,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM3"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-timeworn-techniques-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039456",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11665644,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8731,
+                  "y": 0,
+                  "z": 13.3573
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-timeworn-techniques-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1058068",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12223525,
+              "coordinates": {
+                "x": 5,
+                "y": 7.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -56.2762,
+                  "y": 5,
+                  "z": 23.4149
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-timeworn-techniques-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053908",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559009,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8731,
+                  "y": 0,
+                  "z": 13.3573
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-timeworn-techniques-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039458",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11944992,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.6126,
+                  "y": 0,
+                  "z": 12.2067
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-timeworn-techniques-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12221978,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.1429,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-timeworn-techniques-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12221978,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.1429,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-timeworn-techniques-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12221978,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.1429,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-timeworn-techniques-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12221978,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.1429,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-timeworn-techniques-objective-9",
+          "sortOrder": 9,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039458",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11944992,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.6126,
+                  "y": 0,
+                  "z": 12.2067
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 9
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70918
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70990,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:04:54.935Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70990,
+          "internalId": "KinGkw201_05454",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 21,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1039457,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1039456,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1058068,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2015111,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2015112,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2015113,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1039458,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 50054,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM1",
+              "argument": 50055,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM2",
+              "argument": 50056,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM3",
+              "argument": 50057,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1056001,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1056003,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1056004,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1056005,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1016244,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1053729,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1057949,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 11665645,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 11665644,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR2",
+              "argument": 11559029,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR3",
+              "argument": 11559006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR4",
+              "argument": 11559009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR5",
+              "argument": 12086801,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 11660068,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "INVIS_ACTOR_01",
+              "argument": 1053806,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_02",
+              "argument": 1054005,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_03",
+              "argument": 1053905,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_04",
+              "argument": 1053904,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_05",
+              "argument": 1053804,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_KAJI",
+              "argument": 187,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_HQ",
+              "argument": 90,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_WIPE_CLOTH",
+              "argument": 215,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_KINGKW201",
+              "argument": 70990,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_OK",
+              "argument": 1604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_NG",
+              "argument": 1608,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_USE_ITEM",
+              "argument": 1,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_JOBREL015",
+              "argument": 65897,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 50054,
+              "itemId": "item-50054",
+              "quantity": 1,
+              "name": "Umbral Clay",
+              "resolvedSheet": "Item",
+              "iconId": 20406
+            },
+            {
+              "sourceInstruction": "RITEM1",
+              "itemSheet": "Item",
+              "itemRowId": 50055,
+              "itemId": "item-50055",
+              "quantity": 1,
+              "name": "Aspected Aether Agglomerate",
+              "resolvedSheet": "Item",
+              "iconId": 26125
+            },
+            {
+              "sourceInstruction": "RITEM2",
+              "itemSheet": "Item",
+              "itemRowId": 50056,
+              "itemId": "item-50056",
+              "quantity": 1,
+              "name": "Aspected Aetheroconductor",
+              "resolvedSheet": "Item",
+              "iconId": 26124
+            },
+            {
+              "sourceInstruction": "RITEM3",
+              "itemSheet": "Item",
+              "itemRowId": 50057,
+              "itemId": "item-50057",
+              "quantity": 1,
+              "name": "Aspected Aetherocatalyst",
+              "resolvedSheet": "Item",
+              "iconId": 26126
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039456
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058068
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1053906
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039458
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1056001
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1056003
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1056004
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1056005
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1016244
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1057949
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039456,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058068,
+              "name": "expedition archaeologist",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1053906,
+              "name": "Lydirceil",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039458,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1056001
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1056003
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1056004
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1056005
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1016244,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1057949,
+              "name": "distinguished voidsent",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70991
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-wrought-by-hands-phantasmal-70918"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-in-pursuit-of-perfection-70991"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 1195,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1039457
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-in-pursuit-of-perfection-70991",
+      "xivapiRowId": 70991,
+      "sortOrder": 7,
+      "name": "In Pursuit of Perfection",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003765",
+          "itemName": "Phantom Glass",
+          "sourceRowId": 2003765,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "item-50059",
+          "itemName": "Crystal Paste",
+          "sourceRowId": 50059,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-in-pursuit-of-perfection-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039458",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11944992,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.6126,
+                  "y": 0,
+                  "z": 12.2067
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-in-pursuit-of-perfection-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039458",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11944992,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.6126,
+                  "y": 0,
+                  "z": 12.2067
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-in-pursuit-of-perfection-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039458",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11944992,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.6126,
+                  "y": 0,
+                  "z": 12.2067
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-in-pursuit-of-perfection-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039458",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11944992,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.6126,
+                  "y": 0,
+                  "z": 12.2067
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70990
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70991,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:04:58.208Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70991,
+          "internalId": "KinGkw202_05455",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 22,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003765,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1058143,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1039458,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 50059,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "CUT_SCENE_N_01",
+              "argument": 3845,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_01",
+              "argument": 1572,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_02",
+              "argument": 1573,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1016244,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1053729,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1053687,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_04",
+              "argument": 1057949,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_05",
+              "argument": 1057950,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_06",
+              "argument": 1057951,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_07",
+              "argument": 1057952,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 11559006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 11559009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR2",
+              "argument": 11559029,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR3",
+              "argument": 12264694,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR4",
+              "argument": 12086801,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 11660068,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "INVIS_ACTOR_01",
+              "argument": 1053806,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_02",
+              "argument": 1054005,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_03",
+              "argument": 1053905,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_04",
+              "argument": 1053904,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_KINGKW202",
+              "argument": 70991,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_JOBREL007",
+              "argument": 65742,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_OK",
+              "argument": 1604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_NG",
+              "argument": 1608,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOG_MSG_EVENT",
+              "argument": 2031,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_USE_ITEM_SEQ1",
+              "argument": 100,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_USE_ITEM_SEQ2",
+              "argument": 200,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_USE_ITEM_SEQ3",
+              "argument": 300,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_USE_ITEM_SEQ4",
+              "argument": 600,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_ALCHEMIST_WARK",
+              "argument": 416,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_PICTRUE_KINGKW202_001",
+              "argument": 1601,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM0",
+              "argument": 20197,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_SPIRIT",
+              "argument": 417,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_05",
+              "argument": 1054000,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003765,
+              "itemId": "event-item-2003765",
+              "name": "Phantom Glass",
+              "resolvedSheet": "EventItem",
+              "iconId": 25986,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 50059,
+              "itemId": "item-50059",
+              "quantity": 1,
+              "name": "Crystal Paste",
+              "resolvedSheet": "Item",
+              "iconId": 21494
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058143
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039458
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1016244
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1053687
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1057949
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_05",
+              "actorRowId": 1057950
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_06",
+              "actorRowId": 1057951
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_07",
+              "actorRowId": 1057952
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058143,
+              "name": "distinguished voidsent",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039458,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1016244,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1053687,
+              "name": "Archive",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1057949,
+              "name": "distinguished voidsent",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_05",
+              "actorRowId": 1057950,
+              "name": "distinguished voidsent",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_06",
+              "actorRowId": 1057951,
+              "name": "distinguished voidsent",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_07",
+              "actorRowId": 1057952,
+              "name": "distinguished voidsent",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              70992
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-timeworn-techniques-70990"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-a-phantom-reborn-70992"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 1287,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-a-phantom-reborn-70992",
+      "xivapiRowId": 70992,
+      "sortOrder": 8,
+      "name": "A Phantom Reborn",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-50058",
+          "itemName": "Waning Arcanite",
+          "sourceRowId": 50058,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-a-phantom-reborn-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053905",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559029,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.5763,
+                  "y": 0,
+                  "z": 10.7985
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70991
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 70992,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:05:00.559Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 70992,
+          "internalId": "KinGkw203_05456",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 23,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1058158,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1053905,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 50058,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_MAIN",
+              "argument": 50032,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_SUB",
+              "argument": 50053,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MONK_WEAPON",
+              "argument": 50033,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WARRIOR_WEAPON",
+              "argument": 50034,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DRAGOON_WEAPON",
+              "argument": 50035,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON",
+              "argument": 50036,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WHITEMAGE_WEAPON",
+              "argument": 50037,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BLACKMAGE_WEAPON",
+              "argument": 50038,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SUMMONER_WEAPON",
+              "argument": 50039,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCHOLAR_WEAPON",
+              "argument": 50040,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NINJA_WEAPON",
+              "argument": 50041,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON",
+              "argument": 50043,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DARKKNIGHT_WEAPON",
+              "argument": 50042,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON",
+              "argument": 50044,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON",
+              "argument": 50045,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON",
+              "argument": 50046,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "GUNBREAKER_WEAPON",
+              "argument": 50047,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DANCER_WEAPON",
+              "argument": 50048,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAGE_WEAPON",
+              "argument": 50050,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REAPER_WEAPON",
+              "argument": 50049,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "VIPER_WEAPON",
+              "argument": 50051,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON",
+              "argument": 50052,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON_ORB",
+              "argument": 75,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON_PARETTE",
+              "argument": 76,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON_SUB",
+              "argument": 77,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON_SUB",
+              "argument": 57,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON_SUB",
+              "argument": 78,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON_SUB",
+              "argument": 79,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_PALADIN_WEAPON_MAIN",
+              "argument": 47006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_PALADIN_WEAPON_SUB",
+              "argument": 47027,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_MONK_WEAPON",
+              "argument": 47007,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_WARRIOR_WEAPON",
+              "argument": 47008,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_DRAGOON_WEAPON",
+              "argument": 47009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_BARD_WEAPON",
+              "argument": 47010,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_WHITEMAGE_WEAPON",
+              "argument": 47011,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_BLACKMAGE_WEAPON",
+              "argument": 47012,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SUMMONER_WEAPON",
+              "argument": 47013,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SCHOLAR_WEAPON",
+              "argument": 47014,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_NINJA_WEAPON",
+              "argument": 47015,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_MACHINIST_WEAPON",
+              "argument": 47017,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_DARKKNIGHT_WEAPON",
+              "argument": 47016,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_ASTROLOGIAN_WEAPON",
+              "argument": 47018,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SAMURAI_WEAPON",
+              "argument": 47019,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_REDMAGE_WEAPON",
+              "argument": 47020,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_GUNBREAKER_WEAPON",
+              "argument": 47021,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 50058,
+              "itemId": "item-50058",
+              "quantity": 1,
+              "name": "Waning Arcanite",
+              "resolvedSheet": "Item",
+              "iconId": 21208
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058158
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1053905
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058158,
+              "name": "Brigid",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1053905,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              71038
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-in-pursuit-of-perfection-70991"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-under-no-illusion-71038"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 691,
+        "items": [
+          {
+            "itemId": "item-37",
+            "itemName": "Unresolved item 37",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-under-no-illusion-71038",
+      "xivapiRowId": 71038,
+      "sortOrder": 9,
+      "name": "Under No Illusion",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-50970",
+          "itemName": "Monarch Whetstone",
+          "sourceRowId": 50970,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        },
+        {
+          "itemId": "item-50972",
+          "itemName": "Ancestral Alloy Ingot",
+          "sourceRowId": 50972,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM1"
+        },
+        {
+          "itemId": "item-50971",
+          "itemName": "Ascendant Twine",
+          "sourceRowId": 50971,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM2"
+        },
+        {
+          "itemId": "item-50973",
+          "itemName": "Majestic Polish",
+          "sourceRowId": 50973,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM3"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-under-no-illusion-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039456",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11665644,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8731,
+                  "y": 0,
+                  "z": 13.3573
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-under-no-illusion-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053908",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559009,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8731,
+                  "y": 0,
+                  "z": 13.3573
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-under-no-illusion-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1059757",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12740559,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.7955,
+                  "y": 0,
+                  "z": 13.4147
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-under-no-illusion-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12592294,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.1429,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-under-no-illusion-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12592294,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.1429,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-under-no-illusion-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12592294,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.1429,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-under-no-illusion-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12592294,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8621,
+                  "y": -5.1429,
+                  "z": 13.3517
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-under-no-illusion-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1059757",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12740559,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.7955,
+                  "y": 0,
+                  "z": 13.4147
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70992
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 71038,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:05:02.590Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 71038,
+          "internalId": "KinGkw301_05502",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 31,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1039457,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1039456,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1058053,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1058158,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1059757,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 50970,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM1",
+              "argument": 50972,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM2",
+              "argument": 50971,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM3",
+              "argument": 50973,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1056001,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1056003,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1056004,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1056005,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_MAIN",
+              "argument": 50032,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_SUB",
+              "argument": 50053,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MONK_WEAPON",
+              "argument": 50033,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WARRIOR_WEAPON",
+              "argument": 50034,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DRAGOON_WEAPON",
+              "argument": 50035,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON",
+              "argument": 50036,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WHITEMAGE_WEAPON",
+              "argument": 50037,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BLACKMAGE_WEAPON",
+              "argument": 50038,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SUMMONER_WEAPON",
+              "argument": 50039,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCHOLAR_WEAPON",
+              "argument": 50040,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NINJA_WEAPON",
+              "argument": 50041,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON",
+              "argument": 50043,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DARKKNIGHT_WEAPON",
+              "argument": 50042,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON",
+              "argument": 50044,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON",
+              "argument": 50045,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON",
+              "argument": 50046,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "GUNBREAKER_WEAPON",
+              "argument": 50047,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DANCER_WEAPON",
+              "argument": 50048,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAGE_WEAPON",
+              "argument": 50050,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REAPER_WEAPON",
+              "argument": 50049,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "VIPER_WEAPON",
+              "argument": 50051,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON",
+              "argument": 50052,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_KINGKW301",
+              "argument": 71038,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_OK",
+              "argument": 1604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_NG",
+              "argument": 1608,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_USE_ITEM",
+              "argument": 1,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_EOBJ_001",
+              "argument": 2012876,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "LOC_SE_01",
+              "argument": 208,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_02",
+              "argument": 187,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SE_03",
+              "argument": 301,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 5521,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "QST_LOC_ACTION_HOHO",
+              "argument": 9214,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR1",
+              "argument": 11861024,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 11660068,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_BRG",
+              "argument": 12787127,
+              "referenceType": "level"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 50970,
+              "itemId": "item-50970",
+              "quantity": 1,
+              "name": "Monarch Whetstone",
+              "resolvedSheet": "Item",
+              "iconId": 21485
+            },
+            {
+              "sourceInstruction": "RITEM1",
+              "itemSheet": "Item",
+              "itemRowId": 50972,
+              "itemId": "item-50972",
+              "quantity": 1,
+              "name": "Ancestral Alloy Ingot",
+              "resolvedSheet": "Item",
+              "iconId": 21020
+            },
+            {
+              "sourceInstruction": "RITEM2",
+              "itemSheet": "Item",
+              "itemRowId": 50971,
+              "itemId": "item-50971",
+              "quantity": 1,
+              "name": "Ascendant Twine",
+              "resolvedSheet": "Item",
+              "iconId": 22030
+            },
+            {
+              "sourceInstruction": "RITEM3",
+              "itemSheet": "Item",
+              "itemRowId": 50973,
+              "itemId": "item-50973",
+              "quantity": 1,
+              "name": "Majestic Polish",
+              "resolvedSheet": "Item",
+              "iconId": 22671
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039456
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058053
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1053906
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1058158
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1059757
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1056001
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1056003
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1056004
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1056005
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039456,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058053,
+              "name": "Brigid",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1053906,
+              "name": "Lydirceil",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1058158,
+              "name": "Brigid",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1059757,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1056001
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1056003
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1056004
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1056005
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              71039
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-a-phantom-reborn-70992"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-phantoms-to-fillet-71039"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 1058,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1039457
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-phantoms-to-fillet-71039",
+      "xivapiRowId": 71039,
+      "sortOrder": 10,
+      "name": "Phantoms to Fillet",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-50974",
+          "itemName": "Phantom Dispeller α",
+          "sourceRowId": 50974,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        },
+        {
+          "itemId": "item-50975",
+          "itemName": "Phantom Dispeller β",
+          "sourceRowId": 50975,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM1"
+        },
+        {
+          "itemId": "item-50976",
+          "itemName": "Phantom Dispeller γ",
+          "sourceRowId": 50976,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM2"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-phantoms-to-fillet-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039458",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11944992,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.6126,
+                  "y": 0,
+                  "z": 12.2067
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          71038
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 71039,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:05:05.814Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 71039,
+          "internalId": "KinGkw302_05503",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 32,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1058158,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1039458,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 50974,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM1",
+              "argument": 50975,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM2",
+              "argument": 50976,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "CUT_SCENE_N_01",
+              "argument": 3962,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1016244,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1053729,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1056453,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 11559006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 11559009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR2",
+              "argument": 12086801,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR3",
+              "argument": 12268042,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR4",
+              "argument": 11559029,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 11660068,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "INVIS_ACTOR_01",
+              "argument": 1053806,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_02",
+              "argument": 1054005,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_03",
+              "argument": 1053905,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_04",
+              "argument": 1053904,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_05",
+              "argument": 1053804,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_06",
+              "argument": 1054000,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_01",
+              "argument": 1633,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_02",
+              "argument": 1634,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "COST_USE_ITEM",
+              "argument": 100,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_KINGKW302",
+              "argument": 71039,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_OK",
+              "argument": 1604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_NG",
+              "argument": 1608,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_LOC_ACTION_HOHO",
+              "argument": 9214,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 50974,
+              "itemId": "item-50974",
+              "quantity": 1,
+              "name": "Phantom Dispeller α",
+              "resolvedSheet": "Item",
+              "iconId": 26229
+            },
+            {
+              "sourceInstruction": "RITEM1",
+              "itemSheet": "Item",
+              "itemRowId": 50975,
+              "itemId": "item-50975",
+              "quantity": 1,
+              "name": "Phantom Dispeller β",
+              "resolvedSheet": "Item",
+              "iconId": 26231
+            },
+            {
+              "sourceInstruction": "RITEM2",
+              "itemSheet": "Item",
+              "itemRowId": 50976,
+              "itemId": "item-50976",
+              "quantity": 1,
+              "name": "Phantom Dispeller γ",
+              "resolvedSheet": "Item",
+              "iconId": 26230
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058158
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039458
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1016244
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1056453
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058158,
+              "name": "Brigid",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039458,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1016244,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1056453,
+              "name": "Brigid",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              71040
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-under-no-illusion-71038"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-a-phantom-unveiled-71040"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 829,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-a-phantom-unveiled-71040",
+      "xivapiRowId": 71040,
+      "sortOrder": 11,
+      "name": "A Phantom Unveiled",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-50977",
+          "itemName": "Ecliptic Arcanite",
+          "sourceRowId": 50977,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-a-phantom-unveiled-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053905",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559029,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 29.5763,
+                  "y": 0,
+                  "z": 10.7985
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          71039
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 71040,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:05:07.866Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 71040,
+          "internalId": "KinGkw303_05504",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 33,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1058158,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1053905,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 50977,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_MAIN",
+              "argument": 50978,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_SUB",
+              "argument": 50999,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MONK_WEAPON",
+              "argument": 50979,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WARRIOR_WEAPON",
+              "argument": 50980,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DRAGOON_WEAPON",
+              "argument": 50981,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON",
+              "argument": 50982,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WHITEMAGE_WEAPON",
+              "argument": 50983,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BLACKMAGE_WEAPON",
+              "argument": 50984,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SUMMONER_WEAPON",
+              "argument": 50985,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCHOLAR_WEAPON",
+              "argument": 50986,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NINJA_WEAPON",
+              "argument": 50987,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON",
+              "argument": 50989,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DARKKNIGHT_WEAPON",
+              "argument": 50988,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON",
+              "argument": 50990,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON",
+              "argument": 50991,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON",
+              "argument": 50992,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "GUNBREAKER_WEAPON",
+              "argument": 50993,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DANCER_WEAPON",
+              "argument": 50994,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAGE_WEAPON",
+              "argument": 50996,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REAPER_WEAPON",
+              "argument": 50995,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "VIPER_WEAPON",
+              "argument": 50997,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON",
+              "argument": 50998,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON_ORB",
+              "argument": 80,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON_PARETTE",
+              "argument": 81,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON_SUB",
+              "argument": 82,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON_SUB",
+              "argument": 57,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON_SUB",
+              "argument": 83,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON_SUB",
+              "argument": 84,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_PALADIN_WEAPON_MAIN",
+              "argument": 50032,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_PALADIN_WEAPON_SUB",
+              "argument": 50053,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_MONK_WEAPON",
+              "argument": 50033,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_WARRIOR_WEAPON",
+              "argument": 50034,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_DRAGOON_WEAPON",
+              "argument": 50035,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_BARD_WEAPON",
+              "argument": 50036,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_WHITEMAGE_WEAPON",
+              "argument": 50037,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_BLACKMAGE_WEAPON",
+              "argument": 50038,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SUMMONER_WEAPON",
+              "argument": 50039,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SCHOLAR_WEAPON",
+              "argument": 50040,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_NINJA_WEAPON",
+              "argument": 50041,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_MACHINIST_WEAPON",
+              "argument": 50043,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_DARKKNIGHT_WEAPON",
+              "argument": 50042,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_ASTROLOGIAN_WEAPON",
+              "argument": 50044,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SAMURAI_WEAPON",
+              "argument": 50045,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_REDMAGE_WEAPON",
+              "argument": 50046,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_GUNBREAKER_WEAPON",
+              "argument": 50047,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 50977,
+              "itemId": "item-50977",
+              "quantity": 1,
+              "name": "Ecliptic Arcanite",
+              "resolvedSheet": "Item",
+              "iconId": 21212
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058158
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1053905
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058158,
+              "name": "Brigid",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1053905,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              71041
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-phantoms-to-fillet-71039"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-final-phantasm-71041"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 691,
+        "items": [
+          {
+            "itemId": "item-38",
+            "itemName": "Unresolved item 38",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-final-phantasm-71041",
+      "xivapiRowId": 71041,
+      "sortOrder": 12,
+      "name": "Final Phantasm",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003836",
+          "itemName": "Knowledge Crystal",
+          "sourceRowId": 2003836,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-final-phantasm-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053908",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559009,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.8731,
+                  "y": 0,
+                  "z": 13.3573
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          71040
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 71041,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:05:09.888Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 71041,
+          "internalId": "KinGkw304_05505",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 34,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003836,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1058158,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "QST_KINGKW304",
+              "argument": 71041,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_OK",
+              "argument": 1604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMSG_QUESTCANCEL_NG",
+              "argument": 1608,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_MAIN",
+              "argument": 51000,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PALADIN_WEAPON_SUB",
+              "argument": 51021,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MONK_WEAPON",
+              "argument": 51001,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WARRIOR_WEAPON",
+              "argument": 51002,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DRAGOON_WEAPON",
+              "argument": 51003,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON",
+              "argument": 51004,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WHITEMAGE_WEAPON",
+              "argument": 51005,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BLACKMAGE_WEAPON",
+              "argument": 51006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SUMMONER_WEAPON",
+              "argument": 51007,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCHOLAR_WEAPON",
+              "argument": 51008,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NINJA_WEAPON",
+              "argument": 51009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON",
+              "argument": 51011,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DARKKNIGHT_WEAPON",
+              "argument": 51010,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON",
+              "argument": 51012,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON",
+              "argument": 51013,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON",
+              "argument": 51014,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "GUNBREAKER_WEAPON",
+              "argument": 51015,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "DANCER_WEAPON",
+              "argument": 51016,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAGE_WEAPON",
+              "argument": 51018,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REAPER_WEAPON",
+              "argument": 51017,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "VIPER_WEAPON",
+              "argument": 51019,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON",
+              "argument": 51020,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "REDMAGE_WEAPON_ORB",
+              "argument": 85,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PICTOMANCER_WEAPON_PARETTE",
+              "argument": 86,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BARD_WEAPON_SUB",
+              "argument": 82,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "MACHINIST_WEAPON_SUB",
+              "argument": 57,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ASTROLOGIAN_WEAPON_SUB",
+              "argument": 83,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SAMURAI_WEAPON_SUB",
+              "argument": 84,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_PALADIN_WEAPON_MAIN",
+              "argument": 50978,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_PALADIN_WEAPON_SUB",
+              "argument": 50999,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_MONK_WEAPON",
+              "argument": 50979,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_WARRIOR_WEAPON",
+              "argument": 50980,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_DRAGOON_WEAPON",
+              "argument": 50981,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_BARD_WEAPON",
+              "argument": 50982,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_WHITEMAGE_WEAPON",
+              "argument": 50983,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_BLACKMAGE_WEAPON",
+              "argument": 50984,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SUMMONER_WEAPON",
+              "argument": 50985,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SCHOLAR_WEAPON",
+              "argument": 50986,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_NINJA_WEAPON",
+              "argument": 50987,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_MACHINIST_WEAPON",
+              "argument": 50989,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_DARKKNIGHT_WEAPON",
+              "argument": 50988,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_ASTROLOGIAN_WEAPON",
+              "argument": 50990,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BASE_SAMURAI_WEAPON",
+              "argument": 50991,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003836,
+              "itemId": "event-item-2003836",
+              "name": "Knowledge Crystal",
+              "resolvedSheet": "EventItem",
+              "iconId": 26087,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058158
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1058158,
+              "name": "Brigid",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              71042
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-a-phantom-unveiled-71040"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "phantom-weapons-relic-all-too-fleeting-71042"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 829,
+        "items": [
+          {
+            "itemId": "item-39",
+            "itemName": "Unresolved item 39",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "phantom-weapons-relic-all-too-fleeting-71042",
+      "xivapiRowId": 71042,
+      "sortOrder": 13,
+      "name": "All Too Fleeting",
+      "level": 100,
+      "category": "relic",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 100
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 100
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-all-too-fleeting-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2015436",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 12600974,
+              "coordinates": {
+                "x": 6.7,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 27.2428,
+                  "y": 0,
+                  "z": 11.2162
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-all-too-fleeting-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1053906",
+          "targetName": "Lydirceil",
+          "locations": [
+            {
+              "zoneId": "phantom-village",
+              "zoneName": "Phantom Village",
+              "territoryId": "territory-1278",
+              "mapId": "map-1025",
+              "sourceLevelRowId": 11559006,
+              "coordinates": {
+                "x": 6.6,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 25.8305,
+                  "y": 0,
+                  "z": 13.3915
+                },
+                "mapGameId": "o6e1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          71041
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 71042,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T13:05:11.964Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 71042,
+          "internalId": "KinGkw305_05506",
+          "expansion": "Dawntrail",
+          "journalGenre": "Phantom Weapons",
+          "eventIconType": 8,
+          "sortKey": 35,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1053906,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1053908,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2015436,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1059815,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "CUT_SCENE_N_01",
+              "argument": 3963,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1016244,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1053729,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1056453,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_04",
+              "argument": 1053728,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_05",
+              "argument": 1059457,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 11559006,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 11559009,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR2",
+              "argument": 11559029,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 11660068,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "INVIS_ACTOR_01",
+              "argument": 1053806,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_02",
+              "argument": 1054005,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_03",
+              "argument": 1053905,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_04",
+              "argument": 1053904,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_05",
+              "argument": 1053804,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_06",
+              "argument": 1054000,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 4201,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "INVIS_ACTOR_10",
+              "argument": 1059526,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_11",
+              "argument": 1059815,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_KINGKD108",
+              "argument": 71054,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1059815
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1016244
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1056453
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1053728
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_05",
+              "actorRowId": 1059457
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1053908,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1059815,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1016244,
+              "name": "Gerolt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1053729,
+              "name": "Dodokkuli",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1056453,
+              "name": "Brigid",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1053728,
+              "name": "Ermina",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_05",
+              "actorRowId": 1059457,
+              "name": "expedition metallurgist",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "phantom-weapons-relic-final-phantasm-71041"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 966,
+        "items": [
+          {
+            "itemId": "item-52582",
+            "itemName": "Phantom Philleter",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lydirceil",
+          "xivapiRowId": 1053906
+        },
+        "location": {
+          "zone": "Phantom Village",
+          "x": 6.6,
+          "y": 7.2
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

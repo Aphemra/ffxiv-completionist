@@ -10,6 +10,8 @@ import * as z from 'zod';
 
 import { delayBetweenRequests, requestXivapi } from './client';
 
+import { isExcludedQuestRowId } from './excludedQuestRows';
+
 import { readXivapiPins } from './pins';
 
 import { xivapiSheetResponseSchema } from './schemas';
@@ -771,6 +773,10 @@ function isEligibleQuest(
   quest: QuestIndexEntry,
   category: QuestCategory,
 ): boolean {
+  if (isExcludedQuestRowId(quest.rowId)) {
+    return false;
+  }
+
   if (category === 'msq') {
     return quest.isMainScenario;
   }
@@ -3063,6 +3069,12 @@ async function main(): Promise<void> {
       )
       .filter((id): id is string => id !== undefined);
 
+    const reviewDraft = asObject(review.questDraft);
+
+    const rawRelations = asObject(reviewDraft?.rawRelations);
+
+    const previousQuestJoin = readInteger(rawRelations?.previousQuestJoin);
+
     const previousAlternativeCompletionGroupIds = new Set(
       previousRowIds
         .map((rowId) => alternativeCompletionGroupIdByRowId.get(rowId))
@@ -3078,7 +3090,9 @@ async function main(): Promise<void> {
 
     const previousQuestMode =
       previousQuestIds.length > 1 &&
-      (category === 'msq' || allPreviousQuestsShareAlternativeCompletionGroup)
+      (category === 'msq' ||
+        previousQuestJoin === 2 ||
+        allPreviousQuestsShareAlternativeCompletionGroup)
         ? 'any'
         : 'all';
 

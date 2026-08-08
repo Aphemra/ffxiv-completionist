@@ -15,6 +15,8 @@ import {
   type QuestCollection,
 } from '../src/modules/quests/data/questSchemas';
 
+import { isExcludedQuestRowId } from './xivapi/excludedQuestRows';
+
 type ValidationSeverity = 'error' | 'warning';
 
 interface ValidationMessage {
@@ -188,6 +190,19 @@ function validateCollectionMetadata(loadedCollection: LoadedCollection): void {
     );
 
     for (const quest of group.quests) {
+      const xivapiQuestRowId = quest.externalIds?.['xivapi-quest-row'];
+
+      if (isExcludedQuestRowId(xivapiQuestRowId)) {
+        addMessage(
+          'error',
+          source,
+          [
+            `Quest "${quest.id}" uses excluded XIVAPI Quest row`,
+            `${String(xivapiQuestRowId)} and must not be published.`,
+          ].join(' '),
+        );
+      }
+
       if (quest.category !== collection.category) {
         addMessage(
           'error',

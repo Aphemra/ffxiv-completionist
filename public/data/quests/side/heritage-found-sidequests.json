@@ -1,0 +1,4515 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "heritage-found-sidequests-quests-70696",
+      "title": "Aunty Knows Best Questline",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "heritage-found-sidequests-side-aunty-knows-best-70696",
+          "name": "Aunty Knows Best",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70696
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70696,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:56.943Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1050805",
+            "npcName": "Nakente",
+            "sourceRowId": 1050805,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 18.4,
+              "y": 9.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "heritage-found-sidequests-side-yyupyes-dirt-70697"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70467
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-aunty-knows-best-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553720,
+                  "coordinates": {
+                    "x": 26.3,
+                    "y": 15.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 240.661,
+                      "y": 73.996,
+                      "z": -290.166
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-aunty-knows-best-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050803",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553658,
+                  "coordinates": {
+                    "x": 25.9,
+                    "y": 15.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 217.578,
+                      "y": 92.3933,
+                      "z": -296.193
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-aunty-knows-best-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050946",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10596175,
+                  "coordinates": {
+                    "x": 18.4,
+                    "y": 9.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.076,
+                      "y": 35,
+                      "z": -581.015
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 872,
+            "items": [
+              {
+                "itemId": "item-44097",
+                "itemName": "Mesquite Juice",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70696,
+              "internalId": "KinGzf201_05160",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 8,
+              "sortKey": 6051,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1050805,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 10553675,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 10590960,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014034,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050803,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1050804,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 34,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1050946,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1050945,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ENPC_SHAL",
+                  "argument": 1050797,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_NAKE",
+                  "argument": 1050798,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_SHALOACI",
+                  "argument": 10596174,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INVIS_ACTOR_01",
+                  "argument": 1049447,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050803
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050804
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050946
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1050945
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050803,
+                  "name": "Shaloaci",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050804
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050946,
+                  "name": "Nakente",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1050945,
+                  "name": "Shaloaci",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70697
+                ]
+              }
+            }
+          },
+          "sortOrder": 12
+        },
+        {
+          "id": "heritage-found-sidequests-side-yyupyes-dirt-70697",
+          "name": "Yyupye's Dirt",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70697
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70697,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:58.988Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1050806",
+            "npcName": "Shaloaci",
+            "sourceRowId": 1050806,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 18.5,
+              "y": 9.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "heritage-found-sidequests-side-aunty-knows-best-70696"
+          ],
+          "nextQuestIds": [
+            "heritage-found-sidequests-side-what-she-left-behind-70698"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70696
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-yyupyes-dirt-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050802",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553657,
+                  "coordinates": {
+                    "x": 18.4,
+                    "y": 9.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.076,
+                      "y": 35,
+                      "z": -581.015
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-yyupyes-dirt-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050807",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553738,
+                  "coordinates": {
+                    "x": 18.2,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -165.969,
+                      "y": 25.9797,
+                      "z": -502.788
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-yyupyes-dirt-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 3,
+              "targetId": "actor-2014035",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553755,
+                  "coordinates": {
+                    "x": 20.3,
+                    "y": 15.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -61.4522,
+                      "y": 35.3559,
+                      "z": -294.738
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553760,
+                  "coordinates": {
+                    "x": 19.5,
+                    "y": 16.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -99.5289,
+                      "y": 36.9346,
+                      "z": -233.459
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553765,
+                  "coordinates": {
+                    "x": 20.7,
+                    "y": 17.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -38.3146,
+                      "y": 38,
+                      "z": -221.568
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-yyupyes-dirt-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050802",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553657,
+                  "coordinates": {
+                    "x": 18.4,
+                    "y": 9.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.076,
+                      "y": 35,
+                      "z": -581.015
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 915
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70697,
+              "internalId": "KinGzf202_05161",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6052,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1050806,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050802,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1050807,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014035,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 3,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014036,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2014037,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1050808,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 10674762,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_SHAL",
+                  "argument": 1050797,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_NAKE",
+                  "argument": 1050798,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_01",
+                  "argument": 10553657,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MAKER_PC",
+                  "argument": 10638072,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_ALARM",
+                  "argument": 289,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_DIG",
+                  "argument": 93,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_PAPER",
+                  "argument": 137,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_FADEIN_ALARM",
+                  "argument": 366,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050802
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050807
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050808
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050802,
+                  "name": "Nakente",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050807,
+                  "name": "Shaloaci",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050808,
+                  "name": "Shaloaci",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70698
+                ]
+              }
+            }
+          },
+          "sortOrder": 13
+        },
+        {
+          "id": "heritage-found-sidequests-side-what-she-left-behind-70698",
+          "name": "What She Left Behind",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70698
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70698,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:41:00.735Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1050802",
+            "npcName": "Nakente",
+            "sourceRowId": 1050802,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 18.4,
+              "y": 9.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "heritage-found-sidequests-side-yyupyes-dirt-70697"
+          ],
+          "nextQuestIds": [
+            "heritage-found-sidequests-side-all-that-she-carried-70699"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70697
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-what-she-left-behind-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050809",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553899,
+                  "coordinates": {
+                    "x": 20.3,
+                    "y": 8.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -59.3609,
+                      "y": 42.9997,
+                      "z": -637.244
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-what-she-left-behind-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050810",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553904,
+                  "coordinates": {
+                    "x": 20.6,
+                    "y": 15.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -44.4586,
+                      "y": 33.4951,
+                      "z": -306.988
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-what-she-left-behind-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050810",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553904,
+                  "coordinates": {
+                    "x": 20.6,
+                    "y": 15.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -44.4586,
+                      "y": 33.4951,
+                      "z": -306.988
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10554164,
+                  "coordinates": {
+                    "x": 31.9,
+                    "y": 26.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 517.103,
+                      "y": 136.462,
+                      "z": 240.267
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-what-she-left-behind-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050806",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10553699,
+                  "coordinates": {
+                    "x": 18.5,
+                    "y": 9.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -151.995,
+                      "y": 35,
+                      "z": -581.201
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 915,
+            "optionalItems": [
+              {
+                "itemId": "item-44086",
+                "itemName": "Creamy Hot Chocolate",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-44102",
+                "itemName": "Wild Banana Blend",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-44089",
+                "itemName": "Tender Shortcake",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-44100",
+                "itemName": "Fruit and Aloe Jelly",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-27994",
+                "itemName": "Nightworld Silver Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70698,
+              "internalId": "KinGzf203_05162",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6053,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1050802,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050809,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1050810,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 10553907,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE1",
+                  "argument": 10553914,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE2",
+                  "argument": 10554138,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE3",
+                  "argument": 10554588,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE4",
+                  "argument": 10590054,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014038,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014039,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2014040,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2014062,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2014097,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 10591906,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1050806,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "SEQEV_SHALOACI_ACCOMANY",
+                  "argument": 221,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_SHALOACI_TUREARUKI",
+                  "argument": 10553904,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_SHAL",
+                  "argument": 1050797,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_NAKE",
+                  "argument": 1050798,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_POS_ACCOMANY_SEQ3",
+                  "argument": 10657922,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_BGM_EX5_BACKTHEME_PIANO",
+                  "argument": 20027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ET_DOUKOU",
+                  "argument": 5,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050809
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050810
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050806
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050809,
+                  "name": "Shaloaci",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050810,
+                  "name": "Shaloaci",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050806,
+                  "name": "Shaloaci",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70699
+                ]
+              }
+            }
+          },
+          "sortOrder": 14
+        },
+        {
+          "id": "heritage-found-sidequests-side-all-that-she-carried-70699",
+          "name": "All That She Carried",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70699
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70699,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:41:02.485Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1050806",
+            "npcName": "Shaloaci",
+            "sourceRowId": 1050806,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 18.5,
+              "y": 9.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "heritage-found-sidequests-side-what-she-left-behind-70698"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70698
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-all-that-she-carried-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050957",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10609689,
+                  "coordinates": {
+                    "x": 20.3,
+                    "y": 8.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -59.3609,
+                      "y": 42.9997,
+                      "z": -637.244
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-all-that-she-carried-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 2,
+              "targetId": "actor-2014063",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10554621,
+                  "coordinates": {
+                    "x": 22.4,
+                    "y": 13.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 46.021,
+                      "y": 34.0184,
+                      "z": -411.31
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10558273,
+                  "coordinates": {
+                    "x": 21.1,
+                    "y": 16.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -22.0995,
+                      "y": 34.6762,
+                      "z": -268.933
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-all-that-she-carried-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050811",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10554179,
+                  "coordinates": {
+                    "x": 19.6,
+                    "y": 12.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -97.0932,
+                      "y": 28.7969,
+                      "z": -446.708
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 829,
+            "items": [
+              {
+                "itemId": "item-44320",
+                "itemName": "Desertwalkers Orchestrion Roll",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "orchestrion-roll",
+              "targetId": "orchestrion-roll-683",
+              "sourceRowId": 44320,
+              "name": "Desertwalkers Orchestrion Roll",
+              "notes": "Using Desertwalkers Orchestrion Roll adds this orchestrion roll."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70699,
+              "internalId": "KinGzf204_05163",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6054,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1050806,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050802,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1050957,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014063,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 10589868,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 10589869,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 10589870,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014077,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY3",
+                  "argument": 10589878,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY4",
+                  "argument": 10589879,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY5",
+                  "argument": 10589880,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1050811,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1050812,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ENPC_SHAL",
+                  "argument": 1050797,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_NAKE",
+                  "argument": 1050798,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_01",
+                  "argument": 10553657,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_02",
+                  "argument": 10554180,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_NINE_TELECOM",
+                  "argument": 367,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050802
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050957
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050811
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1050812
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050802,
+                  "name": "Nakente",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050957,
+                  "name": "Shaloaci",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050811,
+                  "name": "Shaloaci",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1050812,
+                  "name": "Nakente",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 15
+        }
+      ]
+    },
+    {
+      "id": "heritage-found-sidequests-quests-standalone",
+      "title": "Standalone Quests",
+      "sortOrder": 2,
+      "quests": [
+        {
+          "id": "heritage-found-sidequests-side-gwok-away-70685",
+          "name": "Gwok Away",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70685
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70685,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:35.810Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1049442",
+            "npcName": "Uaauashe",
+            "sourceRowId": 1049442,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 16,
+              "y": 9.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70465
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2003594",
+              "itemName": "Extra-strength Debugifier",
+              "sourceRowId": 2003594,
+              "sourceSheet": "event-item",
+              "quantity": 3,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-gwok-away-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 3,
+              "targetId": "actor-2014078",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653595,
+                  "coordinates": {
+                    "x": 16,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -272.81,
+                      "y": 37.8624,
+                      "z": -504.888
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653601,
+                  "coordinates": {
+                    "x": 17.2,
+                    "y": 9.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -213.215,
+                      "y": 30.8625,
+                      "z": -618.024
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653603,
+                  "coordinates": {
+                    "x": 14.5,
+                    "y": 9.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -349.096,
+                      "y": 37.8625,
+                      "z": -610.583
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-gwok-away-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1049442",
+              "targetName": "Uaauashe",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612081,
+                  "coordinates": {
+                    "x": 16,
+                    "y": 9.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -272.236,
+                      "y": 29.9848,
+                      "z": -577.598
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 699,
+            "optionalItems": [
+              {
+                "itemId": "item-52254",
+                "itemName": "Standard Spectrum Dye",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-27994",
+                "itemName": "Nightworld Silver Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70685,
+              "internalId": "KinGzf001_05149",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6001,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1049442,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2003594,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014078,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014079,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2014080,
+                  "referenceType": "event-object"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2003594,
+                  "itemId": "event-item-2003594",
+                  "name": "Extra-strength Debugifier",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 20661,
+                  "quantity": 3
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "heritage-found-sidequests-side-natural-selection-70686",
+          "name": "Natural Selection",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70686
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70686,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:37.586Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1049465",
+            "npcName": "Pawkwena",
+            "sourceRowId": 1049465,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 14.8,
+              "y": 8.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70465
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2003595",
+              "itemName": "Veggie Sack",
+              "sourceRowId": 2003595,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-natural-selection-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1049475",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612226,
+                  "coordinates": {
+                    "x": 20.1,
+                    "y": 17.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -69.8711,
+                      "y": 36.5676,
+                      "z": -217.395
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-natural-selection-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2014084",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653613,
+                  "coordinates": {
+                    "x": 20.1,
+                    "y": 17.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -69.688,
+                      "y": 37,
+                      "z": -215.717
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653614,
+                  "coordinates": {
+                    "x": 20.1,
+                    "y": 17.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -71.5171,
+                      "y": 37.0098,
+                      "z": -213.005
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653615,
+                  "coordinates": {
+                    "x": 20.1,
+                    "y": 17.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -70.831,
+                      "y": 37,
+                      "z": -214.528
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-natural-selection-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1049465",
+              "targetName": "Pawkwena",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10625252,
+                  "coordinates": {
+                    "x": 14.8,
+                    "y": 8.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -333.378,
+                      "y": 43.5027,
+                      "z": -643.629
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 785,
+            "items": [
+              {
+                "itemId": "item-44101",
+                "itemName": "Tart Turali Tart",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70686,
+              "internalId": "KinGzf002_05150",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6002,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1049465,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1049475,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014081,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014082,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2014083,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2014084,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2014085,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT5",
+                  "argument": 2014086,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2003595,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "BIND_ACTOR_01",
+                  "argument": 10612226,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2003595,
+                  "itemId": "event-item-2003595",
+                  "name": "Veggie Sack",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25991,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1049475
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1049475,
+                  "name": "Shepimenye",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "heritage-found-sidequests-side-the-miracle-of-electrope-70687",
+          "name": "The Miracle of Electrope",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70687
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70687,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:39.656Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1050659",
+            "npcName": "electrope enthusiast",
+            "sourceRowId": 1050659,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 17.2,
+              "y": 11.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70465
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-miracle-of-electrope-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050659",
+              "targetName": "electrope enthusiast",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612208,
+                  "coordinates": {
+                    "x": 17.2,
+                    "y": 11.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -215.193,
+                      "y": 37,
+                      "z": -497.842
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-miracle-of-electrope-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050659",
+              "targetName": "electrope enthusiast",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612208,
+                  "coordinates": {
+                    "x": 17.2,
+                    "y": 11.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -215.193,
+                      "y": 37,
+                      "z": -497.842
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10807920,
+                  "coordinates": {
+                    "x": 17.8,
+                    "y": 11.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -184.932,
+                      "y": 26.7469,
+                      "z": -514.195
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-miracle-of-electrope-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050659",
+              "targetName": "electrope enthusiast",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612208,
+                  "coordinates": {
+                    "x": 17.2,
+                    "y": 11.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -215.193,
+                      "y": 37,
+                      "z": -497.842
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10807921,
+                  "coordinates": {
+                    "x": 17.6,
+                    "y": 8.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -196.906,
+                      "y": 30.7338,
+                      "z": -643.631
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-the-miracle-of-electrope-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050659",
+              "targetName": "electrope enthusiast",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612208,
+                  "coordinates": {
+                    "x": 17.2,
+                    "y": 11.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -215.193,
+                      "y": 37,
+                      "z": -497.842
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10807922,
+                  "coordinates": {
+                    "x": 18.2,
+                    "y": 7.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -166.549,
+                      "y": 35.4293,
+                      "z": -706.495
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-the-miracle-of-electrope-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050659",
+              "targetName": "electrope enthusiast",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612208,
+                  "coordinates": {
+                    "x": 17.2,
+                    "y": 11.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -215.193,
+                      "y": 37,
+                      "z": -497.842
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 958
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70687,
+              "internalId": "KinGzf003_05151",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6003,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1050659,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 10653807,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE1",
+                  "argument": 10653813,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014087,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014090,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTRANGE2",
+                  "argument": 10653810,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2014088,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTRANGE3",
+                  "argument": 10653811,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2014089,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "BIND_ADAPTER_TUREARUKI",
+                  "argument": 10612208,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SEQEV_ADAPTER_ACCOMANY",
+                  "argument": 253,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_ADAPTER",
+                  "argument": 1051484,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MAKER_01",
+                  "argument": 10807580,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MAKER_02",
+                  "argument": 10807586,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MAKER_03",
+                  "argument": 10807596,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ET_DOUKOU",
+                  "argument": 5,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "heritage-found-sidequests-side-fear-and-lightning-in-the-thunderyards-70688",
+          "name": "Fear and Lightning in the Thunderyards",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70688
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70688,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:41.028Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1050660",
+            "npcName": "veteran hunter",
+            "sourceRowId": 1050660,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 29.9,
+              "y": 12
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70467
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-fear-and-lightning-in-the-thunderyards-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10875880,
+                  "coordinates": {
+                    "x": 18.8,
+                    "y": 10.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -133.937,
+                      "y": 17.9954,
+                      "z": -536.653
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-fear-and-lightning-in-the-thunderyards-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050661",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653628,
+                  "coordinates": {
+                    "x": 18.8,
+                    "y": 11.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -136.092,
+                      "y": 26.0682,
+                      "z": -509.382
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-fear-and-lightning-in-the-thunderyards-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050662",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653629,
+                  "coordinates": {
+                    "x": 24.5,
+                    "y": 12.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 149.764,
+                      "y": 48.3541,
+                      "z": -463.559
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-fear-and-lightning-in-the-thunderyards-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050727",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10803023,
+                  "coordinates": {
+                    "x": 27.7,
+                    "y": 12
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 309.68,
+                      "y": 71.3887,
+                      "z": -473.676
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-fear-and-lightning-in-the-thunderyards-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050660",
+              "targetName": "veteran hunter",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653624,
+                  "coordinates": {
+                    "x": 29.9,
+                    "y": 12
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 421.895,
+                      "y": 90,
+                      "z": -476.655
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 958,
+            "items": [
+              {
+                "itemId": "item-44100",
+                "itemName": "Fruit and Aloe Jelly",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70688,
+              "internalId": "KinGzf004_05152",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6004,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1050660,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050661,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1050662,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1050727,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1050721,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR_01",
+                  "argument": 10654794,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_DIGGY",
+                  "argument": 4260,
+                  "referenceType": "action"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050661
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050662
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050727
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1050721
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050661,
+                  "name": "trainee hunter",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050662,
+                  "name": "trainee hunter",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050727,
+                  "name": "trainee hunter",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1050721,
+                  "name": "trainee hunter",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "heritage-found-sidequests-side-stressed-testing-70689",
+          "name": "Stressed Testing",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70689
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70689,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:42.774Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1049443",
+            "npcName": "Dorian",
+            "sourceRowId": 1049443,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 17.9,
+              "y": 9.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70467
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-stressed-testing-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653788,
+                  "coordinates": {
+                    "x": 28.4,
+                    "y": 14.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 347.062,
+                      "y": 69.9513,
+                      "z": -368.975
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-stressed-testing-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050664",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653761,
+                  "coordinates": {
+                    "x": 28.6,
+                    "y": 14.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 354.36,
+                      "y": 82.0422,
+                      "z": -355.761
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-stressed-testing-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1049443",
+              "targetName": "Dorian",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612083,
+                  "coordinates": {
+                    "x": 17.9,
+                    "y": 9.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -177.539,
+                      "y": 30,
+                      "z": -601.129
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 785
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70689,
+              "internalId": "KinGzf005_05153",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 8,
+              "sortKey": 6005,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1049443,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 10653803,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 10653785,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050664,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1050665,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014212,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 34,
+                  "referenceType": "action"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050664
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050665
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050664,
+                  "name": "ill-fated hunter",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050665
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "heritage-found-sidequests-side-refined-tastes-70690",
+          "name": "Refined Tastes",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70690
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70690,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:44.826Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1051378",
+            "npcName": "Cornservant",
+            "sourceRowId": 1051378,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 17.8,
+              "y": 9.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "shaaloani-sidequests-side-tastes-like-home-70670"
+          ],
+          "nextQuestIds": [
+            "solution-nine-sidequests-side-tasteful-memories-70709"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70467,
+              70670
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-refined-tastes-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051379",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10765181,
+                  "coordinates": {
+                    "x": 15,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -324.51,
+                      "y": 37,
+                      "z": -553.985
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-refined-tastes-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051380",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10765182,
+                  "coordinates": {
+                    "x": 15,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -323.703,
+                      "y": 37.0303,
+                      "z": -555.837
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-43981",
+                "itemName": "Turali Corn",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70690,
+              "internalId": "KinGzf006_05154",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6006,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1051378,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1051379,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1051380,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 10765182,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVT_ACTION0",
+                  "argument": 963,
+                  "referenceType": "action"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1051379
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1051380
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1051379,
+                  "name": "hungry Milalla",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1051380,
+                  "name": "Cornservant",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70709
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "heritage-found-sidequests-side-history-reforged-70691",
+          "name": "History Reforged",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70691
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70691,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:46.576Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1049500",
+            "npcName": "Wezetonyi",
+            "sourceRowId": 1049500,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 9.7,
+              "y": 11.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70476
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2003596",
+              "itemName": "Silver Necklace",
+              "sourceRowId": 2003596,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-history-reforged-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653835,
+                  "coordinates": {
+                    "x": 6.7,
+                    "y": 19.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -738.617,
+                      "y": 2.95256,
+                      "z": -121.769
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653838,
+                  "coordinates": {
+                    "x": 5.8,
+                    "y": 20.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -782.377,
+                      "y": 0.19162,
+                      "z": -61.8199
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653841,
+                  "coordinates": {
+                    "x": 8.4,
+                    "y": 22
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -654.385,
+                      "y": 6.79075,
+                      "z": 25.6837
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-history-reforged-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1049500",
+              "targetName": "Wezetonyi",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612269,
+                  "coordinates": {
+                    "x": 9.7,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -591.76,
+                      "y": -2.50383,
+                      "z": -502.098
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 699,
+            "items": [
+              {
+                "itemId": "item-43525",
+                "itemName": "Ra'Kaznar Ring Coffer (IL 675)",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70691,
+              "internalId": "KinGzf101_05155",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6101,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1049500,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014091,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 22,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014092,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION1",
+                  "argument": 21,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2014093,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2003596,
+                  "referenceType": "event-item"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2003596,
+                  "itemId": "event-item-2003596",
+                  "name": "Silver Necklace",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 55012,
+                  "quantity": 1
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 7
+        },
+        {
+          "id": "heritage-found-sidequests-side-phyt-for-survival-70692",
+          "name": "Phyt for Survival",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70692
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70692,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:48.314Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1049501",
+            "npcName": "Yyopya",
+            "sourceRowId": 1049501,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 9.6,
+              "y": 11.7
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70476
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-phyt-for-survival-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10863783,
+                  "coordinates": {
+                    "x": 12.2,
+                    "y": 16.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -462.525,
+                      "y": 29.6258,
+                      "z": -270.455
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-phyt-for-survival-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1049501",
+              "targetName": "Yyopya",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612270,
+                  "coordinates": {
+                    "x": 9.6,
+                    "y": 11.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -592.703,
+                      "y": -2.47978,
+                      "z": -489.273
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10653852,
+                  "coordinates": {
+                    "x": 12.6,
+                    "y": 16.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -446.79,
+                      "y": 37.1432,
+                      "z": -266.61
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-phyt-for-survival-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1049501",
+              "targetName": "Yyopya",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612270,
+                  "coordinates": {
+                    "x": 9.6,
+                    "y": 11.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -592.703,
+                      "y": -2.47978,
+                      "z": -489.273
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 785
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70692,
+              "internalId": "KinGzf102_05156",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 8,
+              "sortKey": 6102,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1049501,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050666,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 10653855,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOGMESSAGE0",
+                  "argument": 3703,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 10653859,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 10653872,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE1",
+                  "argument": 10822838,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 10822839,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_01",
+                  "argument": 1050932,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ET_GOEI",
+                  "argument": 10,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050666
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050666,
+                  "name": "passionate phytologist",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 8
+        },
+        {
+          "id": "heritage-found-sidequests-side-a-well-oiled-machine-70693",
+          "name": "A Well-oiled Machine",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70693
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70693,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:50.071Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1049488",
+            "npcName": "Zilekke",
+            "sourceRowId": 1049488,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 17.6,
+              "y": 24.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70476
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-well-oiled-machine-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050667",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10654246,
+                  "coordinates": {
+                    "x": 20.5,
+                    "y": 25.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -51.4535,
+                      "y": 66.8839,
+                      "z": 180.101
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-a-well-oiled-machine-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1049488",
+              "targetName": "Zilekke",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612258,
+                  "coordinates": {
+                    "x": 17.6,
+                    "y": 24.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -195.214,
+                      "y": 31,
+                      "z": 142.93
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 699,
+            "items": [
+              {
+                "itemId": "item-43522",
+                "itemName": "Ra'Kaznar Earring Coffer (IL 675)",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70693,
+              "internalId": "KinGzf103_05157",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6103,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1049488,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050667,
+                  "referenceType": "actor"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050667
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050667,
+                  "name": "captivated courier",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 9
+        },
+        {
+          "id": "heritage-found-sidequests-side-storms-traces-70694",
+          "name": "Storm's Traces",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70694
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70694,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:51.812Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1049489",
+            "npcName": "Cinnabar",
+            "sourceRowId": 1049489,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 16.5,
+              "y": 24.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70476
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-storms-traces-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 3,
+              "targetId": "actor-5000000",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10654845,
+                  "coordinates": {
+                    "x": 14.4,
+                    "y": 20.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -352.529,
+                      "y": 39.8108,
+                      "z": -44.8158
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-storms-traces-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 2,
+              "targetId": "actor-5000000",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10654855,
+                  "coordinates": {
+                    "x": 18,
+                    "y": 26.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -173.602,
+                      "y": 31.4489,
+                      "z": 268.604
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-storms-traces-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1049489",
+              "targetName": "Cinnabar",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10612259,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 24.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -250.031,
+                      "y": 31,
+                      "z": 134.742
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 699
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70694,
+              "internalId": "KinGzf104_05158",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 1,
+              "sortKey": 6104,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1049489,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 10654845,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 10654444,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 10654452,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 10654459,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE1",
+                  "argument": 10654855,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY3",
+                  "argument": 10654517,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY4",
+                  "argument": 10654519,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014215,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050722,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1050723,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1050724,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014216,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1050725,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1050726,
+                  "referenceType": "actor"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050722
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050723
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050724
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1050725
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1050726
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050722
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050723
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1050724
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1050725
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1050726
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 10
+        },
+        {
+          "id": "heritage-found-sidequests-side-he-who-remembers-70695",
+          "name": "He Who Remembers",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70695
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70695,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T12:40:55.218Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1049505",
+            "npcName": "Ui'she",
+            "sourceRowId": 1049505,
+            "zoneId": "heritage-found",
+            "zoneName": "Heritage Found",
+            "coordinates": {
+              "x": 17.3,
+              "y": 33.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70476
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-he-who-remembers-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050668",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10654639,
+                  "coordinates": {
+                    "x": 25.4,
+                    "y": 34.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 195.109,
+                      "y": 88.5652,
+                      "z": 669.386
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-he-who-remembers-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 4,
+              "targetId": "actor-2014094",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10654645,
+                  "coordinates": {
+                    "x": 25.8,
+                    "y": 34.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 216.467,
+                      "y": 89.1834,
+                      "z": 657.399
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10654646,
+                  "coordinates": {
+                    "x": 25.9,
+                    "y": 33.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 218.368,
+                      "y": 88.8278,
+                      "z": 621.78
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10654647,
+                  "coordinates": {
+                    "x": 26.4,
+                    "y": 34.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 246.871,
+                      "y": 90.7354,
+                      "z": 646.81
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                },
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10654861,
+                  "coordinates": {
+                    "x": 26.2,
+                    "y": 33.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 232.482,
+                      "y": 89.9824,
+                      "z": 614.52
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-he-who-remembers-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050668",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 10654639,
+                  "coordinates": {
+                    "x": 25.4,
+                    "y": 34.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 195.109,
+                      "y": 88.5652,
+                      "z": 669.386
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 372960,
+            "gil": 785
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T12:59:35.889Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70695,
+              "internalId": "KinGzf105_05159",
+              "expansion": "Dawntrail",
+              "journalGenre": "Heritage Found Sidequests",
+              "eventIconType": 8,
+              "sortKey": 6105,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1049505,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050668,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014094,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 16,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014095,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2014096,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2014217,
+                  "referenceType": "event-object"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050668
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050668,
+                  "name": "graveyard visitor",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 11
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import { readdir } from 'node:fs/promises';
 
 import path from 'node:path';
 
-import { isSupportedCollectibleItemActionRowId } from './interpretQuestUnlocks';
+import { isSupportedCollectibleReward } from './interpretQuestUnlocks';
 
 import {
   projectRoot,
@@ -47,8 +47,14 @@ const ignoredItemCategoryNames = new Set(['Meal', 'Medicine']);
  */
 const ignoredItemActionRowIds = new Set([
   816, // Crafting EXP manuals
+  852, // Seasonal fireworks
+  944, // Seasonal Magicked Prisms
+  2120, // Seasonal gift boxes and consumable event items
+  3292, // Thavnairian Onion
+  3800, // MGP Vouchers and MGP Cards
   4647, // Level/weapon coffers
   9994, // Vesper Bay Aetheryte Ticket
+  19743, // Bozjan Field Notes
 ]);
 
 function readOption(optionName: string): string | undefined {
@@ -258,7 +264,7 @@ async function auditRewardActions(
           continue;
         }
 
-        if (isSupportedCollectibleItemActionRowId(entry.actionRowId)) {
+        if (isSupportedCollectibleReward(entry.actionRowId, entry.itemRowId)) {
           supportedEntries.push(entry);
           continue;
         }

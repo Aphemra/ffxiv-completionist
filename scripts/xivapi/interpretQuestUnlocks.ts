@@ -152,13 +152,25 @@ function createDutyUnlock(value: unknown): InterpretedQuestUnlock | undefined {
 }
 
 const supportedCollectibleItemActionRowIds = new Set<number>([
-  853, 1322, 2633, 3357, 20086, 25183,
+  853, 1322, 2633, 3357, 20086, 25183, 37312,
 ]);
 
-export function isSupportedCollectibleItemActionRowId(
+const chocoboBardingItemRowIds = new Set<number>([
+  7550, // Egg Harness
+  14081, // Egg Hunter Barding
+  44496, // Starlight Stalls Barding
+  10082, // Paramour Barding
+  36013, // Postmoogle Barding
+]);
+
+export function isSupportedCollectibleReward(
   actionRowId: number,
+  itemRowId: number,
 ): boolean {
-  return supportedCollectibleItemActionRowIds.has(actionRowId);
+  return (
+    supportedCollectibleItemActionRowIds.has(actionRowId) ||
+    (actionRowId === 1013 && chocoboBardingItemRowIds.has(itemRowId))
+  );
 }
 
 function createCollectibleRewardUnlock(
@@ -185,6 +197,16 @@ function createCollectibleRewardUnlock(
   const additionalDataRowId = relationRowId(itemFields.AdditionalData);
 
   const relatedRowId = dataRowId ?? additionalDataRowId;
+
+  if (actionRowId === 1013 && chocoboBardingItemRowIds.has(itemRowId)) {
+    return {
+      type: 'chocobo-barding',
+      targetId: `chocobo-barding-${itemRowId}`,
+      sourceRowId: itemRowId,
+      name: itemName,
+      notes: `Obtaining ${itemName} adds this chocobo barding.`,
+    };
+  }
 
   if (relatedRowId === undefined) {
     return undefined;
@@ -229,6 +251,12 @@ function createCollectibleRewardUnlock(
       type = 'fashion-accessory';
       targetId = `fashion-accessory-${relatedRowId}`;
       notes = `Using ${itemName} unlocks this fashion accessory.`;
+      break;
+
+    case 37312:
+      type = 'facewear';
+      targetId = `facewear-${relatedRowId}`;
+      notes = `Using ${itemName} unlocks this facewear.`;
       break;
 
     default:

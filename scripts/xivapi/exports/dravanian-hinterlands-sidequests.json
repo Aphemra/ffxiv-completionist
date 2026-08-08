@@ -1,0 +1,5502 @@
+{
+  "schemaVersion": 1,
+  "id": "dravanian-hinterlands-sidequests",
+  "title": "Dravanian Hinterlands Sidequests",
+  "category": "side",
+  "generatedAt": "2026-08-08T11:58:33.532Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 19,
+    "branchCount": 1,
+    "convergenceCount": 1,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [
+    {
+      "questId": "dravanian-hinterlands-sidequests-side-saro-roggos-common-life-67502",
+      "questName": "Saro Roggo's Common Life",
+      "relatedQuestIds": [
+        "dravanian-hinterlands-sidequests-side-a-straightforward-fancy-67503",
+        "dravanian-hinterlands-sidequests-side-a-statuesque-interest-67504",
+        "dravanian-hinterlands-sidequests-side-a-self-possessed-pastime-67505"
+      ]
+    }
+  ],
+  "convergences": [
+    {
+      "questId": "dravanian-hinterlands-sidequests-side-the-magic-word-67506",
+      "questName": "The Magic Word",
+      "relatedQuestIds": [
+        "dravanian-hinterlands-sidequests-side-a-straightforward-fancy-67503",
+        "dravanian-hinterlands-sidequests-side-a-statuesque-interest-67504",
+        "dravanian-hinterlands-sidequests-side-a-self-possessed-pastime-67505"
+      ]
+    }
+  ],
+  "issues": [],
+  "quests": [
+    {
+      "id": "dravanian-hinterlands-sidequests-side-feltsmox-needs-bait-67469",
+      "xivapiRowId": 67469,
+      "sortOrder": 1,
+      "name": "Feltsmox Needs Bait",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001691",
+          "itemName": "Wildebeest Eye",
+          "sourceRowId": 2001691,
+          "sourceSheet": "event-item",
+          "quantity": 3,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-feltsmox-needs-bait-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891902,
+              "coordinates": {
+                "x": 37.7,
+                "y": 22.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 753.902,
+                  "y": 124.397,
+                  "z": 16.763
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-feltsmox-needs-bait-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013643",
+          "targetName": "Feltsmox",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891900,
+              "coordinates": {
+                "x": 38.7,
+                "y": 25.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 803.969,
+                  "y": 150.136,
+                  "z": 164.73
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67191
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67469,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:26.470Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67469,
+          "internalId": "HeaVnz803_01933",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5803,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1013643,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4028,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001691,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001691,
+              "itemId": "event-item-2001691",
+              "name": "Wildebeest Eye",
+              "resolvedSheet": "EventItem",
+              "iconId": 21280,
+              "quantity": 3
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67470
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "dravanian-hinterlands-sidequests-side-feltsmoxs-reel-problems-67470"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 507,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Feltsmox",
+          "xivapiRowId": 1013643
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 38.7,
+          "y": 25.9
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-feltsmoxs-reel-problems-67470",
+      "xivapiRowId": 67470,
+      "sortOrder": 2,
+      "name": "Feltsmox's Reel Problems",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-feltsmoxs-reel-problems-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 5,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891904,
+              "coordinates": {
+                "x": 24.1,
+                "y": 23.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 77.4087,
+                  "y": 66.3954,
+                  "z": 45.1358
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-feltsmoxs-reel-problems-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013644",
+          "targetName": "Feltsmox",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891903,
+              "coordinates": {
+                "x": 24.4,
+                "y": 18.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 91.1867,
+                  "y": 65.0586,
+                  "z": -184.659
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67192,
+          67469
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67470,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:29.470Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67470,
+          "internalId": "HeaVnz804_01934",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5804,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1013644,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4061,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67479
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "dravanian-hinterlands-sidequests-side-feltsmox-needs-bait-67469"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "idyllshire-sidequests-side-feltsmox-switches-bait-67479"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 539,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-10702",
+            "itemName": "Adamantite Chain Hose of Fending",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-10744",
+            "itemName": "Adamantite Chain Hose of Maiming",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-10786",
+            "itemName": "Chimerical Felt Hose of Striking",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-10870",
+            "itemName": "Chimerical Felt Hose of Scouting",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 5,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Feltsmox",
+          "xivapiRowId": 1013644
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 24.4,
+          "y": 18.9
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-louder-than-words-67472",
+      "xivapiRowId": 67472,
+      "sortOrder": 3,
+      "name": "Louder than Words",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-louder-than-words-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891909,
+              "coordinates": {
+                "x": 24.2,
+                "y": 18.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 78.7051,
+                  "y": 57.2966,
+                  "z": -218.278
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-louder-than-words-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891909,
+              "coordinates": {
+                "x": 24.2,
+                "y": 18.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 78.7051,
+                  "y": 57.2966,
+                  "z": -218.278
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-louder-than-words-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012287",
+          "targetName": "Tapklix",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5873405,
+              "coordinates": {
+                "x": 22,
+                "y": 18.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -28.3962,
+                  "y": 100.969,
+                  "z": -186.404
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67191
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67472,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:31.463Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67472,
+          "internalId": "HeaVnz806_01936",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 8,
+          "sortKey": 5801,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012287,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 5891907,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 5891966,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 5891967,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 5891968,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2005868,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENTRANGE1",
+              "argument": 5891908,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY3",
+              "argument": 5891969,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY4",
+              "argument": 5891970,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY5",
+              "argument": 5891971,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2005869,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 539,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Tapklix",
+          "xivapiRowId": 1012287
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 22,
+          "y": 18.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-uncoordinated-defense-67473",
+      "xivapiRowId": 67473,
+      "sortOrder": 4,
+      "name": "Uncoordinated Defense",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-uncoordinated-defense-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910222,
+              "coordinates": {
+                "x": 24.5,
+                "y": 19.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 97.1361,
+                  "y": 57.2905,
+                  "z": -150.183
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910223,
+              "coordinates": {
+                "x": 25.7,
+                "y": 17
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 156.679,
+                  "y": 53.0093,
+                  "z": -277.372
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910224,
+              "coordinates": {
+                "x": 20.5,
+                "y": 16.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -104.199,
+                  "y": 95.3458,
+                  "z": -307.022
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-uncoordinated-defense-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012287",
+          "targetName": "Tapklix",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5873405,
+              "coordinates": {
+                "x": 22,
+                "y": 18.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -28.3962,
+                  "y": 100.969,
+                  "z": -186.404
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-uncoordinated-defense-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012097",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 5864082,
+              "coordinates": {
+                "x": 7.6,
+                "y": 6.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 73.368,
+                  "y": 205.873,
+                  "z": 23.4836
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67193,
+          67471
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67473,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:34.104Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67473,
+          "internalId": "HeaVnz807_01937",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5811,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012287,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1014326,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1014328,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1014330,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1014327,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1014329,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1014331,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1012097,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 5864082,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 5873405,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR2",
+              "argument": 5910217,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR3",
+              "argument": 5910226,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR4",
+              "argument": 5910218,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR5",
+              "argument": 5910227,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR6",
+              "argument": 5910220,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR7",
+              "argument": 5910228,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1014326
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1014328
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1014330
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1014327
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1014329
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1014331
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1012097
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1014326,
+              "name": "wide-eyed watchguard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1014328,
+              "name": "wide-eyed watchguard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1014330,
+              "name": "wide-eyed watchguard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1014327,
+              "name": "wide-eyed watchguard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1014329,
+              "name": "wide-eyed watchguard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1014331,
+              "name": "wide-eyed watchguard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1012097,
+              "name": "Slowfix",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67478
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "idyllshire-sidequests-side-the-pick-of-the-bunch-67471"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "idyllshire-sidequests-side-administrative-difficulties-67478"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 602,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Tapklix",
+          "xivapiRowId": 1012287
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 22,
+          "y": 18.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-the-missing-logbook-67480",
+      "xivapiRowId": 67480,
+      "sortOrder": 5,
+      "name": "The Missing Logbook",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001770",
+          "itemName": "Dripwix's Log",
+          "sourceRowId": 2001770,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-the-missing-logbook-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 2,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910250,
+              "coordinates": {
+                "x": 26.9,
+                "y": 22.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 214.914,
+                  "y": 62.4708,
+                  "z": -2.1122
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910255,
+              "coordinates": {
+                "x": 31.1,
+                "y": 20.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 426.425,
+                  "y": 64.6813,
+                  "z": -120.433
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910256,
+              "coordinates": {
+                "x": 32.4,
+                "y": 24.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 490.182,
+                  "y": 67.5375,
+                  "z": 115.759
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-missing-logbook-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910250,
+              "coordinates": {
+                "x": 26.9,
+                "y": 22.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 214.914,
+                  "y": 62.4708,
+                  "z": -2.1122
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910255,
+              "coordinates": {
+                "x": 31.1,
+                "y": 20.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 426.425,
+                  "y": 64.6813,
+                  "z": -120.433
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910256,
+              "coordinates": {
+                "x": 32.4,
+                "y": 24.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 490.182,
+                  "y": 67.5375,
+                  "z": 115.759
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-missing-logbook-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1014332",
+          "targetName": "Dripwix",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5910236,
+              "coordinates": {
+                "x": 28.6,
+                "y": 19.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 302.478,
+                  "y": 68.2588,
+                  "z": -151.692
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-missing-logbook-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1014335",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 5910280,
+              "coordinates": {
+                "x": 7.6,
+                "y": 6.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 72.3259,
+                  "y": 205.988,
+                  "z": 22.3532
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67193,
+          67478
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67480,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:36.507Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67480,
+          "internalId": "HeaVnz814_01944",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5812,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1014332,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4033,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001770,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1014335,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1012097,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 5864082,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR1",
+              "argument": 5910236,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR2",
+              "argument": 5910280,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001770,
+              "itemId": "event-item-2001770",
+              "name": "Dripwix's Log",
+              "resolvedSheet": "EventItem",
+              "iconId": 26166,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1014335
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1012097
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1014335,
+              "name": "Dripwix",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1012097,
+              "name": "Slowfix",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67484
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "idyllshire-sidequests-side-administrative-difficulties-67478"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "idyllshire-sidequests-side-red-tape-67484"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 765,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Dripwix",
+          "xivapiRowId": 1014332
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 28.6,
+          "y": 19.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-a-bum-rap-67483",
+      "xivapiRowId": 67483,
+      "sortOrder": 6,
+      "name": "A Bum Rap",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-bum-rap-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891944,
+              "coordinates": {
+                "x": 28.9,
+                "y": 26.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 314.002,
+                  "y": 59.6576,
+                  "z": 200.607
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-bum-rap-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012287",
+          "targetName": "Tapklix",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5873405,
+              "coordinates": {
+                "x": 22,
+                "y": 18.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -28.3962,
+                  "y": 100.969,
+                  "z": -186.404
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67193
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67483,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:39.655Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67483,
+          "internalId": "HeaVnz817_01947",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5802,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012287,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4020,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 507,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Tapklix",
+          "xivapiRowId": 1012287
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 22,
+          "y": 18.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-a-slimier-stymier-67494",
+      "xivapiRowId": 67494,
+      "sortOrder": 7,
+      "name": "A Slimier Stymier",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-slimier-stymier-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 5,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891952,
+              "coordinates": {
+                "x": 11.2,
+                "y": 24.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -567.223,
+                  "y": 141.96,
+                  "z": 77.9395
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-slimier-stymier-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013646",
+          "targetName": "Boomshox",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891950,
+              "coordinates": {
+                "x": 12.7,
+                "y": 17.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -491.235,
+                  "y": 156.249,
+                  "z": -238.297
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67194,
+          67493
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67494,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:41.761Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67494,
+          "internalId": "HeaVnz828_01958",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5807,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1013646,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4027,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67495
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "idyllshire-sidequests-side-many-hands-make-light-checkwork-67493"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "dravanian-hinterlands-sidequests-side-mission-unpossible-67495"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 697,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Boomshox",
+          "xivapiRowId": 1013646
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 12.7,
+          "y": 17.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-mission-unpossible-67495",
+      "xivapiRowId": 67495,
+      "sortOrder": 8,
+      "name": "Mission Unpossible",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001697",
+          "itemName": "Orn Kite Feather",
+          "sourceRowId": 2001697,
+          "sourceSheet": "event-item",
+          "quantity": 5,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-mission-unpossible-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 5,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891953,
+              "coordinates": {
+                "x": 15.1,
+                "y": 25.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -372.827,
+                  "y": 147.006,
+                  "z": 154.059
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-mission-unpossible-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013646",
+          "targetName": "Boomshox",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891950,
+              "coordinates": {
+                "x": 12.7,
+                "y": 17.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -491.235,
+                  "y": 156.249,
+                  "z": -238.297
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-mission-unpossible-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012132",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 5864095,
+              "coordinates": {
+                "x": 7,
+                "y": 7.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 43.0156,
+                  "y": 206.033,
+                  "z": 56.5204
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67194,
+          67494
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67495,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:43.744Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67495,
+          "internalId": "HeaVnz829_01959",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5808,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1013646,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 386,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001697,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1012132,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001697,
+              "itemId": "event-item-2001697",
+              "name": "Orn Kite Feather",
+              "resolvedSheet": "EventItem",
+              "iconId": 21901,
+              "quantity": 5
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1012132
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1012132,
+              "name": "Drydox",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "dravanian-hinterlands-sidequests-side-a-slimier-stymier-67494"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 670,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-10986",
+            "itemName": "Griffin Talon Ring of Fending",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-11010",
+            "itemName": "Griffin Talon Ring of Slaying",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-11034",
+            "itemName": "Griffin Talon Ring of Aiming",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-11058",
+            "itemName": "Griffin Talon Ring of Healing",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-11082",
+            "itemName": "Griffin Talon Ring of Casting",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Boomshox",
+          "xivapiRowId": 1013646
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 12.7,
+          "y": 17.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-feltsmox-cant-bear-it-67496",
+      "xivapiRowId": 67496,
+      "sortOrder": 9,
+      "name": "Feltsmox Can't Bear It",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001698",
+          "itemName": "Sun Bear Meat",
+          "sourceRowId": 2001698,
+          "sourceSheet": "event-item",
+          "quantity": 5,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-feltsmox-cant-bear-it-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 5,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891955,
+              "coordinates": {
+                "x": 8.6,
+                "y": 28.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -699.627,
+                  "y": 160.27,
+                  "z": 294.914
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-feltsmox-cant-bear-it-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013647",
+          "targetName": "Feltsmox",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891954,
+              "coordinates": {
+                "x": 9.5,
+                "y": 31
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -651.218,
+                  "y": 140.706,
+                  "z": 422.221
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67194,
+          67479
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67496,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:46.662Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67496,
+          "internalId": "HeaVnz830_01960",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5805,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1013647,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4029,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001698,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001698,
+              "itemId": "event-item-2001698",
+              "name": "Sun Bear Meat",
+              "resolvedSheet": "EventItem",
+              "iconId": 25153,
+              "quantity": 5
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67497
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "idyllshire-sidequests-side-feltsmox-switches-bait-67479"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "dravanian-hinterlands-sidequests-side-feltsmox-tackles-the-morbols-67497"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 539,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Feltsmox",
+          "xivapiRowId": 1013647
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 9.5,
+          "y": 31
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-feltsmox-tackles-the-morbols-67497",
+      "xivapiRowId": 67497,
+      "sortOrder": 10,
+      "name": "Feltsmox Tackles the Morbols",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-feltsmox-tackles-the-morbols-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013647",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891954,
+              "coordinates": {
+                "x": 9.5,
+                "y": 31
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -651.218,
+                  "y": 140.706,
+                  "z": 422.221
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-feltsmox-tackles-the-morbols-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "targetId": "actor-1013649",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891958,
+              "coordinates": {
+                "x": 10,
+                "y": 22.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -629.461,
+                  "y": 149.899,
+                  "z": 12.3697
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-feltsmox-tackles-the-morbols-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013649",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891958,
+              "coordinates": {
+                "x": 10,
+                "y": 22.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -629.461,
+                  "y": 149.899,
+                  "z": 12.3697
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-feltsmox-tackles-the-morbols-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013648",
+          "targetName": "salvaging goblin",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5891959,
+              "coordinates": {
+                "x": 12,
+                "y": 21.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -527.62,
+                  "y": 153.492,
+                  "z": -35.6478
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67194,
+          67496
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67497,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:49.021Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67497,
+          "internalId": "HeaVnz831_01961",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5806,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1013648,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1013647,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1013649,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 5891960,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 5891961,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 5891962,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1013647
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1013649
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1013647,
+              "name": "Feltsmox",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1013649,
+              "name": "Feltsmox",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "dravanian-hinterlands-sidequests-side-feltsmox-cant-bear-it-67496"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 507,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "salvaging goblin",
+          "xivapiRowId": 1013648
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 12,
+          "y": 21.9
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-what-the-boat-brought-in-67500",
+      "xivapiRowId": 67500,
+      "sortOrder": 11,
+      "name": "What the Boat Brought In",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-what-the-boat-brought-in-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013655",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5892006,
+              "coordinates": {
+                "x": 9.2,
+                "y": 26.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -669.895,
+                  "y": 154.337,
+                  "z": 191.112
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-what-the-boat-brought-in-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 2,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5892095,
+              "coordinates": {
+                "x": 4.7,
+                "y": 26
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -894.324,
+                  "y": 204.852,
+                  "z": 171.239
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-what-the-boat-brought-in-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013655",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5892006,
+              "coordinates": {
+                "x": 9.2,
+                "y": 26.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -669.895,
+                  "y": 154.337,
+                  "z": 191.112
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67194,
+          67499
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67500,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:52.057Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67500,
+          "internalId": "HeaVnz834_01964",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5809,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1013651,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1013655,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 5892002,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 5892003,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 5892005,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2005887,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1013655
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1013655,
+              "name": "Midnight Dew",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67501
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "idyllshire-sidequests-side-taking-stock-67499"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "dravanian-hinterlands-sidequests-side-over-my-dead-gobbie-67501"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 539,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-10709",
+            "itemName": "Adamantite Sabatons of Fending",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-10751",
+            "itemName": "Adamantite Sabatons of Maiming",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-10793",
+            "itemName": "Serpentskin Boots of Striking",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-10877",
+            "itemName": "Serpentskin Boots of Scouting",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 5,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Midnight Dew",
+          "xivapiRowId": 1013651
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 13.1,
+          "y": 18.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-over-my-dead-gobbie-67501",
+      "xivapiRowId": 67501,
+      "sortOrder": 12,
+      "name": "Over My Dead Gobbie",
+      "level": 58,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 58
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 58
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-over-my-dead-gobbie-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013656",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5892016,
+              "coordinates": {
+                "x": 10.2,
+                "y": 29.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -617.866,
+                  "y": 150.379,
+                  "z": 327.2
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-over-my-dead-gobbie-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 2,
+          "targetId": "actor-1013659",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5892019,
+              "coordinates": {
+                "x": 10.2,
+                "y": 29.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -617.761,
+                  "y": 153.826,
+                  "z": 349.358
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-over-my-dead-gobbie-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013659",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5892019,
+              "coordinates": {
+                "x": 10.2,
+                "y": 29.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -617.761,
+                  "y": 153.826,
+                  "z": 349.358
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-over-my-dead-gobbie-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013656",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5892016,
+              "coordinates": {
+                "x": 10.2,
+                "y": 29.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -617.866,
+                  "y": 150.379,
+                  "z": 327.2
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-over-my-dead-gobbie-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012133",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 5864096,
+              "coordinates": {
+                "x": 5.6,
+                "y": 6.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -26.8102,
+                  "y": 206.47,
+                  "z": 28.6716
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67194,
+          67500
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67501,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:54.509Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67501,
+          "internalId": "HeaVnz835_01965",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5810,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1013655,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1013656,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1013659,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1013657,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1013658,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2005888,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 5892024,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 5892025,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1012133,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_TALK_DEMIHUMAN",
+              "argument": 949,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_BOW",
+              "argument": 957,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_BASEMOTION",
+              "argument": 819,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1013656
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1013659
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1013657
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1013658
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1012133
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1013656,
+              "name": "Midnight Dew",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1013659,
+              "name": "head wastrel",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1013657,
+              "name": "scathed goblin",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1013658,
+              "name": "scathed goblin",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1012133,
+              "name": "Midnight Dew",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "dravanian-hinterlands-sidequests-side-what-the-boat-brought-in-67500"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13260,
+        "gil": 570,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-10835",
+            "itemName": "Serpentskin Boots of Aiming",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-10919",
+            "itemName": "Serpentskin Thighboots of Healing",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-10961",
+            "itemName": "Serpentskin Thighboots of Casting",
+            "quantity": 1,
+            "quality": "high-quality",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 5,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Midnight Dew",
+          "xivapiRowId": 1013655
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 9.2,
+          "y": 26.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-saro-roggos-common-life-67502",
+      "xivapiRowId": 67502,
+      "sortOrder": 13,
+      "name": "Saro Roggo's Common Life",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-saro-roggos-common-life-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908226,
+              "coordinates": {
+                "x": 13.1,
+                "y": 36.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -475.528,
+                  "y": 133.454,
+                  "z": 693.51
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908226,
+              "coordinates": {
+                "x": 13.1,
+                "y": 36.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -475.528,
+                  "y": 133.454,
+                  "z": 693.51
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908226,
+              "coordinates": {
+                "x": 13.1,
+                "y": 36.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -475.528,
+                  "y": 133.454,
+                  "z": 693.51
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-saro-roggos-common-life-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012141",
+          "targetName": "Saro Roggo",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851085,
+              "coordinates": {
+                "x": 6.8,
+                "y": 6.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 35.7081,
+                  "y": 38.4297,
+                  "z": 13.0011
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67195
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67502,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:31:58.051Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67502,
+          "internalId": "HeaVnz901_01966",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 8,
+          "sortKey": 5901,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012141,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2006061,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEEK_UPPER_SHORT",
+              "argument": 53,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 5908222,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2006062,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 5908223,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2006063,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 5908224,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION0",
+              "argument": 953,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION1",
+              "argument": 966,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67503,
+              67504,
+              67505
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "dravanian-hinterlands-sidequests-side-a-straightforward-fancy-67503",
+        "dravanian-hinterlands-sidequests-side-a-statuesque-interest-67504",
+        "dravanian-hinterlands-sidequests-side-a-self-possessed-pastime-67505"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 577,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Saro Roggo",
+          "xivapiRowId": 1012141
+        },
+        "location": {
+          "zone": "Matoya's Cave",
+          "x": 6.8,
+          "y": 6.4
+        }
+      },
+      "graphRole": "branch"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-a-straightforward-fancy-67503",
+      "xivapiRowId": 67503,
+      "sortOrder": 14,
+      "name": "A Straightforward Fancy",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001767",
+          "itemName": "Aetheryte Shard",
+          "sourceRowId": 2001767,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-a-straightforward-fancy-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-straightforward-fancy-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012139",
+          "targetName": "straightforward broom",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851083,
+              "coordinates": {
+                "x": 6.4,
+                "y": 6.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 15.7866,
+                  "y": 38.4297,
+                  "z": 18.1888
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67195,
+          67502
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67503,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:32:00.066Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67503,
+          "internalId": "HeaVnz902_01967",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5902,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012139,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2006064,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_LEVEL_SQUAT_MIDDLE",
+              "argument": 21,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2006065,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2006066,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2006067,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2006068,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT5",
+              "argument": 2006069,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT6",
+              "argument": 2006070,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT7",
+              "argument": 2006071,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001767,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EVENT_ACTION0",
+              "argument": 953,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION1",
+              "argument": 966,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001767,
+              "itemId": "event-item-2001767",
+              "name": "Aetheryte Shard",
+              "resolvedSheet": "EventItem",
+              "iconId": 20009,
+              "quantity": 1
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67506
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "dravanian-hinterlands-sidequests-side-saro-roggos-common-life-67502"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "dravanian-hinterlands-sidequests-side-the-magic-word-67506"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 577,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "straightforward broom",
+          "xivapiRowId": 1012139
+        },
+        "location": {
+          "zone": "Matoya's Cave",
+          "x": 6.4,
+          "y": 6.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-a-statuesque-interest-67504",
+      "xivapiRowId": 67504,
+      "sortOrder": 15,
+      "name": "A Statuesque Interest",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001768",
+          "itemName": "Cool Spring Water",
+          "sourceRowId": 2001768,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-a-statuesque-interest-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-statuesque-interest-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012140",
+          "targetName": "statuesque broom",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851084,
+              "coordinates": {
+                "x": 6.1,
+                "y": 6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.43521,
+                  "y": 37.4297,
+                  "z": -6.60358
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-a-statuesque-interest-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012140",
+          "targetName": "statuesque broom",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851084,
+              "coordinates": {
+                "x": 6.1,
+                "y": 6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.43521,
+                  "y": 37.4297,
+                  "z": -6.60358
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67195,
+          67502
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67504,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:32:02.493Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67504,
+          "internalId": "HeaVnz903_01968",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5903,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012140,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2006072,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_LEVEL_SQUAT_MIDDLE",
+              "argument": 21,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2006073,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2006074,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2006075,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2006076,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001768,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EVENT_ACTION0",
+              "argument": 953,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION1",
+              "argument": 966,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001768,
+              "itemId": "event-item-2001768",
+              "name": "Cool Spring Water",
+              "resolvedSheet": "EventItem",
+              "iconId": 22637,
+              "quantity": 1
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67506
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "dravanian-hinterlands-sidequests-side-saro-roggos-common-life-67502"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "dravanian-hinterlands-sidequests-side-the-magic-word-67506"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 577,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "statuesque broom",
+          "xivapiRowId": 1012140
+        },
+        "location": {
+          "zone": "Matoya's Cave",
+          "x": 6.1,
+          "y": 6
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-a-self-possessed-pastime-67505",
+      "xivapiRowId": 67505,
+      "sortOrder": 16,
+      "name": "A Self-possessed Pastime",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-self-possessed-pastime-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-self-possessed-pastime-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908243,
+              "coordinates": {
+                "x": 5.7,
+                "y": 29.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -843.795,
+                  "y": 206.81,
+                  "z": 360.665
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-a-self-possessed-pastime-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013711",
+          "targetName": "self-possessed broom",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5900082,
+              "coordinates": {
+                "x": 6.1,
+                "y": 6.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.07311,
+                  "y": 38.4289,
+                  "z": 9.24209
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67195,
+          67502
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67505,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:32:04.868Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67505,
+          "internalId": "HeaVnz904_01969",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5904,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1013711,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 5908241,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2006077,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_LEVEL_SQUAT_MIDDLE",
+              "argument": 21,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION0",
+              "argument": 953,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION1",
+              "argument": 966,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67506
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "dravanian-hinterlands-sidequests-side-saro-roggos-common-life-67502"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "dravanian-hinterlands-sidequests-side-the-magic-word-67506"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 641,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "self-possessed broom",
+          "xivapiRowId": 1013711
+        },
+        "location": {
+          "zone": "Matoya's Cave",
+          "x": 6.1,
+          "y": 6.3
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-the-magic-word-67506",
+      "xivapiRowId": 67506,
+      "sortOrder": 17,
+      "name": "The Magic Word",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-the-magic-word-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012139",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851083,
+              "coordinates": {
+                "x": 6.4,
+                "y": 6.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 15.7866,
+                  "y": 38.4297,
+                  "z": 18.1888
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-magic-word-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012140",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851084,
+              "coordinates": {
+                "x": 6.1,
+                "y": 6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.43521,
+                  "y": 37.4297,
+                  "z": -6.60358
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-magic-word-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1013711",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5900082,
+              "coordinates": {
+                "x": 6.1,
+                "y": 6.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.07311,
+                  "y": 38.4289,
+                  "z": 9.24209
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-magic-word-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012141",
+          "targetName": "Saro Roggo",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851085,
+              "coordinates": {
+                "x": 6.8,
+                "y": 6.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 35.7081,
+                  "y": 38.4297,
+                  "z": 13.0011
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-magic-word-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908249,
+              "coordinates": {
+                "x": 21,
+                "y": 37.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -79.285,
+                  "y": 140.507,
+                  "z": 747.86
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908249,
+              "coordinates": {
+                "x": 21,
+                "y": 37.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -79.285,
+                  "y": 140.507,
+                  "z": 747.86
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-the-magic-word-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908249,
+              "coordinates": {
+                "x": 21,
+                "y": 37.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -79.285,
+                  "y": 140.507,
+                  "z": 747.86
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "adventurer-the-magic-word-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012141",
+          "targetName": "Saro Roggo",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851085,
+              "coordinates": {
+                "x": 6.8,
+                "y": 6.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 35.7081,
+                  "y": 38.4297,
+                  "z": 13.0011
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67503,
+          67504,
+          67505
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67506,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:32:06.837Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67506,
+          "internalId": "HeaVnz905_01970",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5905,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012141,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1012139,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1012140,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1013711,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2006080,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1014289,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION0",
+              "argument": 953,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION1",
+              "argument": 966,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1012139
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1012140
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1013711
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1014289
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1012139,
+              "name": "straightforward broom",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1012140,
+              "name": "statuesque broom",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1013711,
+              "name": "self-possessed broom",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1014289,
+              "name": "serendipitous broom",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67507
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "dravanian-hinterlands-sidequests-side-a-straightforward-fancy-67503",
+        "dravanian-hinterlands-sidequests-side-a-statuesque-interest-67504",
+        "dravanian-hinterlands-sidequests-side-a-self-possessed-pastime-67505"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "dravanian-hinterlands-sidequests-side-have-i-toad-you-lately-67507"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 609,
+        "items": [
+          {
+            "itemId": "item-7776",
+            "itemName": "Broombush",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-7775",
+            "itemName": "Glazenut",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5414",
+            "itemName": "Rosewood Branch",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-7606",
+            "itemName": "Ancient Lumber",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Saro Roggo",
+          "xivapiRowId": 1012141
+        },
+        "location": {
+          "zone": "Matoya's Cave",
+          "x": 6.8,
+          "y": 6.4
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-have-i-toad-you-lately-67507",
+      "xivapiRowId": 67507,
+      "sortOrder": 18,
+      "name": "Have I Toad You Lately",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-have-i-toad-you-lately-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908255,
+              "coordinates": {
+                "x": 15,
+                "y": 35
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -377.875,
+                  "y": 124.535,
+                  "z": 622.549
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908255,
+              "coordinates": {
+                "x": 15,
+                "y": 35
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -377.875,
+                  "y": 124.535,
+                  "z": 622.549
+                },
+                "mapGameId": "d2f2/00"
+              }
+            },
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 5908255,
+              "coordinates": {
+                "x": 15,
+                "y": 35
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -377.875,
+                  "y": 124.535,
+                  "z": 622.549
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-have-i-toad-you-lately-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012141",
+          "targetName": "Saro Roggo",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851085,
+              "coordinates": {
+                "x": 6.8,
+                "y": 6.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 35.7081,
+                  "y": 38.4297,
+                  "z": 13.0011
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-have-i-toad-you-lately-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012141",
+          "targetName": "Saro Roggo",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851085,
+              "coordinates": {
+                "x": 6.8,
+                "y": 6.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 35.7081,
+                  "y": 38.4297,
+                  "z": 13.0011
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-have-i-toad-you-lately-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012138",
+          "locations": [
+            {
+              "zoneId": "matoyas-cave",
+              "zoneName": "Matoya's Cave",
+              "territoryId": "territory-463",
+              "mapId": "map-253",
+              "sourceLevelRowId": 5851082,
+              "coordinates": {
+                "x": 6.5,
+                "y": 6.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 19.2809,
+                  "y": 38.4297,
+                  "z": 15.8606
+                },
+                "mapGameId": "d2e3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67195,
+          67506
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67507,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:32:09.233Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67507,
+          "internalId": "HeaVnz906_01971",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5906,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012141,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2006081,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING_SHOR",
+              "argument": 11,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 5908263,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2006082,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING2_MIDDLE",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 5908264,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2006083,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING3_LONG",
+              "argument": 13,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 5908265,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1012138,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION0",
+              "argument": 953,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION1",
+              "argument": 966,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "QUEST_COMPLETE0",
+              "argument": 67195,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUEST_ACCEPT0",
+              "argument": 67197,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CREATE_ACTOR0",
+              "argument": 1015306,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_SIGH",
+              "argument": 4229,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENT_ACTION_DIRECTION",
+              "argument": 971,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1012138
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1012138,
+              "name": "Matoya",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "dravanian-hinterlands-sidequests-side-the-magic-word-67506"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 705,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-5682",
+            "itemName": "Battledance Materia IV",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5717",
+            "itemName": "Quickarm Materia IV",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5722",
+            "itemName": "Quicktongue Materia IV",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Saro Roggo",
+          "xivapiRowId": 1012141
+        },
+        "location": {
+          "zone": "Matoya's Cave",
+          "x": 6.8,
+          "y": 6.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "dravanian-hinterlands-sidequests-side-an-overgrown-ambition-67738",
+      "xivapiRowId": 67738,
+      "sortOrder": 19,
+      "name": "An Overgrown Ambition",
+      "level": 60,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 60
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 60
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-an-overgrown-ambition-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1016109",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 6082733,
+              "coordinates": {
+                "x": 10.2,
+                "y": 23.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -617.273,
+                  "y": 147.112,
+                  "z": 62.3026
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-an-overgrown-ambition-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "saint-mociannes-arboretum",
+              "zoneName": "Saint Mocianne's Arboretum",
+              "territoryId": "territory-511",
+              "mapId": "map-273",
+              "sourceLevelRowId": 6082973,
+              "coordinates": {
+                "x": 12.4,
+                "y": 11.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 0.136373,
+                  "y": -349.967,
+                  "z": -0.107524
+                },
+                "mapGameId": "d2d4/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-an-overgrown-ambition-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1016109",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 6082733,
+              "coordinates": {
+                "x": 10.2,
+                "y": 23.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -617.273,
+                  "y": 147.112,
+                  "z": 62.3026
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-an-overgrown-ambition-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1016110",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 6082956,
+              "coordinates": {
+                "x": 5.7,
+                "y": 6.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -19.3333,
+                  "y": 206.5,
+                  "z": 31.7539
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67205
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67738,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:32:11.573Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67738,
+          "internalId": "HeaVny004_02202",
+          "expansion": "Heavensward",
+          "journalGenre": "Dravanian Hinterlands Sidequests",
+          "eventIconType": 8,
+          "sortKey": 6010,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1016112,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1016109,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "INSTANCEDUNGEON0",
+              "argument": 41,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 5010000,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 6084427,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1016110,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1012133,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_DUNGEON",
+              "argument": 192,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+              "argument": 3702,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1016111,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 5864096,
+              "referenceType": "actor"
+            }
+          ],
+          "dutyReferences": [
+            {
+              "instanceContentRowId": 41,
+              "sourceInstruction": "INSTANCEDUNGEON0",
+              "relationship": "unlocked"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1016109
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 5010000
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1016110
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1012133
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1016111
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 5864096
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1016109,
+              "name": "Sawney",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 5010000
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1016110,
+              "name": "Sawney",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1012133,
+              "name": "Midnight Dew",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1016111,
+              "name": "Sawney",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 5864096
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68678
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [
+        {
+          "id": "duty-41",
+          "sourceRowId": 41,
+          "contentRowId": 41,
+          "name": "Saint Mocianne's Arboretum",
+          "type": "dungeon",
+          "relationship": "unlocked",
+          "level": 60,
+          "minimumItemLevel": 170,
+          "partySize": 4,
+          "levelSync": 60,
+          "highEnd": false
+        }
+      ],
+      "unlocks": [
+        {
+          "type": "dungeon",
+          "id": "duty-41",
+          "sourceRowId": 41,
+          "name": "Saint Mocianne's Arboretum"
+        }
+      ],
+      "rewards": {
+        "experience": 0,
+        "gil": 5000,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "tetchy treasure hunter",
+          "xivapiRowId": 1016112
+        },
+        "location": {
+          "zone": "The Dravanian Hinterlands",
+          "x": 12.4,
+          "y": 19.6
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

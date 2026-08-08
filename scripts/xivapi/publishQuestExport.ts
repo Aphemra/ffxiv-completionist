@@ -794,7 +794,7 @@ function createAutomaticQuestGroups(
     });
 
     groups.push({
-      id: slugify(`${fallbackGroupId}-${rootQuest.id}`),
+      id: slugify(`${fallbackGroupId}-${rootQuest.xivapiRowId}`),
       title: `${rootQuest.name} Questline`,
       sortOrder: groups.length + 1,
       quests: componentQuests,

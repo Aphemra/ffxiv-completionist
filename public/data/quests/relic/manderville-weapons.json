@@ -1,0 +1,3413 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "manderville-weapons-quests",
+      "title": "Manderville Weapons",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "manderville-weapons-relic-make-it-a-manderville-70188",
+          "name": "Make It a Manderville",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70188
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70188,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:04:24.847Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1043950",
+            "npcName": "House Manderville manservant",
+            "sourceRowId": 1043950,
+            "zoneId": "radz-at-han",
+            "zoneName": "Radz-at-Han",
+            "coordinates": {
+              "x": 11.8,
+              "y": 11.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "manderville-weapons-relic-make-another-manderville-70189",
+            "manderville-weapons-relic-well-oiled-70261"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70178
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-38420",
+              "itemName": "Manderium Meteorite",
+              "sourceRowId": 38420,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-make-it-a-manderville-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1043949",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9349443,
+                  "coordinates": {
+                    "x": 12.1,
+                    "y": 7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 40.885,
+                      "y": -24.6934,
+                      "z": -210.659
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-make-it-a-manderville-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1044227",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9442755,
+                  "coordinates": {
+                    "x": 12.2,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 48.3303,
+                      "y": 0,
+                      "z": -12.7965
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-make-it-a-manderville-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1043954",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9360825,
+                  "coordinates": {
+                    "x": 12,
+                    "y": 7.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 38.0238,
+                      "y": -24.6934,
+                      "z": -205.499
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-23",
+                "itemName": "Unresolved item 23",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:19:16.643Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70188,
+              "internalId": "ChrHdy101_04652",
+              "expansion": "Endwalker",
+              "journalGenre": "Manderville Weapons",
+              "eventIconType": 8,
+              "sortKey": 101,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1043950,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1043949,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1044227,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1043954,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 38420,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_MAIN",
+                  "argument": 38400,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_SUB",
+                  "argument": 38419,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MONK_WEAPON",
+                  "argument": 38401,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WARRIOR_WEAPON",
+                  "argument": 38402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DRAGOON_WEAPON",
+                  "argument": 38403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BARD_WEAPON",
+                  "argument": 38404,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WHITEMAGE_WEAPON",
+                  "argument": 38408,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BLACKMAGE_WEAPON",
+                  "argument": 38409,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SUMMONER_WEAPON",
+                  "argument": 38410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCHOLAR_WEAPON",
+                  "argument": 38411,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NINJA_WEAPON",
+                  "argument": 38405,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MACHINIST_WEAPON",
+                  "argument": 38407,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DARKKNIGHT_WEAPON",
+                  "argument": 38406,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ASTROLOGIAN_WEAPON",
+                  "argument": 38412,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAMURAI_WEAPON",
+                  "argument": 38413,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON",
+                  "argument": 38414,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GUNBREAKER_WEAPON",
+                  "argument": 38415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DANCER_WEAPON",
+                  "argument": 38416,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAGE_WEAPON",
+                  "argument": 38417,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REAPER_WEAPON",
+                  "argument": 38418,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON_ORB",
+                  "argument": 52,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1005513,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1016244,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1043752,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_04",
+                  "argument": 1016756,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "MANDERVILLE_WEAPON_START",
+                  "argument": 1124,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 90,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX_01",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5706,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 241,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "CUT_SCENE_N_01",
+                  "argument": 2961,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUEST_SUBWIL142",
+                  "argument": 66241,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUEST_JOBREL100",
+                  "argument": 67747,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUEST_STMBDY401",
+                  "argument": 68614,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUEST_LUCKSA002",
+                  "argument": 69371,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 9414395,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_ACTION_03",
+                  "argument": 1072,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INVIS_ACTOR0",
+                  "argument": 1043076,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INVIS_ACTOR1",
+                  "argument": 1043077,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOWTO_01",
+                  "argument": 228,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 38420,
+                  "itemId": "item-38420",
+                  "quantity": 1,
+                  "name": "Manderium Meteorite",
+                  "resolvedSheet": "Item",
+                  "iconId": 21225
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1043949
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1044227
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1043954
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1005513
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1016244
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1043752
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1016756
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1043949,
+                  "name": "House Manderville manservant",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1044227,
+                  "name": "Jubrunnah",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1043954,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1005513,
+                  "name": "Godbert",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1016244,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1043752,
+                  "name": "House Manderville artisan",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1016756,
+                  "name": "Godbert",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70189,
+                  70261
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "manderville-weapons-relic-make-another-manderville-70189",
+          "name": "Make Another Manderville",
+          "isFeatureQuest": true,
+          "isRepeatable": true,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70189
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70189,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:04:26.911Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1043891",
+            "npcName": "House Manderville artisan",
+            "sourceRowId": 1043891,
+            "zoneId": "radz-at-han",
+            "zoneName": "Radz-at-Han",
+            "coordinates": {
+              "x": 12.1,
+              "y": 7.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "repeatability": {
+            "type": "repeatable",
+            "extensions": {
+              "repeatIntervalType": 0,
+              "dailyQuestPool": 0
+            }
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "manderville-weapons-relic-make-it-a-manderville-70188"
+          ],
+          "nextQuestIds": [
+            "manderville-weapons-relic-the-next-mander-level-70262"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70188
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-38420",
+              "itemName": "Manderium Meteorite",
+              "sourceRowId": 38420,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-make-another-manderville-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1043891",
+              "targetName": "House Manderville artisan",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9333869,
+                  "coordinates": {
+                    "x": 12.1,
+                    "y": 7.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 41.3478,
+                      "y": -24.6934,
+                      "z": -201.654
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-23",
+                "itemName": "Unresolved item 23",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:19:16.643Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70189,
+              "internalId": "ChrHdy151_04653",
+              "expansion": "Endwalker",
+              "journalGenre": "Manderville Weapons",
+              "eventIconType": 8,
+              "sortKey": 151,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1043891,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 38420,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_MAIN",
+                  "argument": 38400,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_SUB",
+                  "argument": 38419,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MONK_WEAPON",
+                  "argument": 38401,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WARRIOR_WEAPON",
+                  "argument": 38402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DRAGOON_WEAPON",
+                  "argument": 38403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BARD_WEAPON",
+                  "argument": 38404,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WHITEMAGE_WEAPON",
+                  "argument": 38408,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BLACKMAGE_WEAPON",
+                  "argument": 38409,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SUMMONER_WEAPON",
+                  "argument": 38410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCHOLAR_WEAPON",
+                  "argument": 38411,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NINJA_WEAPON",
+                  "argument": 38405,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MACHINIST_WEAPON",
+                  "argument": 38407,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DARKKNIGHT_WEAPON",
+                  "argument": 38406,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ASTROLOGIAN_WEAPON",
+                  "argument": 38412,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAMURAI_WEAPON",
+                  "argument": 38413,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON",
+                  "argument": 38414,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GUNBREAKER_WEAPON",
+                  "argument": 38415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DANCER_WEAPON",
+                  "argument": 38416,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAGE_WEAPON",
+                  "argument": 38417,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REAPER_WEAPON",
+                  "argument": 38418,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON_ORB",
+                  "argument": 52,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1005513,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1016244,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1043752,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 90,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX_01",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5706,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 241,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INVIS_ACTOR0",
+                  "argument": 1043890,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUEST_CHRHDY151",
+                  "argument": 70189,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 9414395,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_ACTION_03",
+                  "argument": 1072,
+                  "referenceType": "action"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 38420,
+                  "itemId": "item-38420",
+                  "quantity": 1,
+                  "name": "Manderium Meteorite",
+                  "resolvedSheet": "Item",
+                  "iconId": 21225
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1005513
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1016244
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1043752
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1005513,
+                  "name": "Godbert",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1016244,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1043752,
+                  "name": "House Manderville artisan",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70262
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "manderville-weapons-relic-well-oiled-70261",
+          "name": "Well-oiled",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70261
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70261,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:04:28.971Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1043890",
+            "npcName": "Gerolt",
+            "sourceRowId": 1043890,
+            "zoneId": "radz-at-han",
+            "zoneName": "Radz-at-Han",
+            "coordinates": {
+              "x": 12,
+              "y": 7.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "manderville-weapons-relic-make-it-a-manderville-70188"
+          ],
+          "nextQuestIds": [
+            "manderville-weapons-relic-the-next-mander-level-70262",
+            "manderville-weapons-relic-a-spirited-reforging-70307"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70255,
+              70188
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-38940",
+              "itemName": "Complementary Chondrite",
+              "sourceRowId": 38940,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-well-oiled-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2013276",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9612808,
+                  "coordinates": {
+                    "x": 7.4,
+                    "y": 12.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -191.77,
+                      "y": 36,
+                      "z": 59.6494
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-well-oiled-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1043890",
+              "targetName": "Gerolt",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9333868,
+                  "coordinates": {
+                    "x": 12,
+                    "y": 7.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 38.0238,
+                      "y": -24.6934,
+                      "z": -205.499
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-24",
+                "itemName": "Unresolved item 24",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:19:16.643Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70261,
+              "internalId": "ChrHdy201_04725",
+              "expansion": "Endwalker",
+              "journalGenre": "Manderville Weapons",
+              "eventIconType": 8,
+              "sortKey": 201,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1043890,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2013276,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 38940,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_MAIN",
+                  "argument": 39144,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_SUB",
+                  "argument": 39163,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MONK_WEAPON",
+                  "argument": 39145,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WARRIOR_WEAPON",
+                  "argument": 39146,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DRAGOON_WEAPON",
+                  "argument": 39147,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BARD_WEAPON",
+                  "argument": 39148,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WHITEMAGE_WEAPON",
+                  "argument": 39152,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BLACKMAGE_WEAPON",
+                  "argument": 39153,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SUMMONER_WEAPON",
+                  "argument": 39154,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCHOLAR_WEAPON",
+                  "argument": 39155,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NINJA_WEAPON",
+                  "argument": 39149,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MACHINIST_WEAPON",
+                  "argument": 39151,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DARKKNIGHT_WEAPON",
+                  "argument": 39150,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ASTROLOGIAN_WEAPON",
+                  "argument": 39156,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAMURAI_WEAPON",
+                  "argument": 39157,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON",
+                  "argument": 39158,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GUNBREAKER_WEAPON",
+                  "argument": 39159,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DANCER_WEAPON",
+                  "argument": 39160,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAGE_WEAPON",
+                  "argument": 39161,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REAPER_WEAPON",
+                  "argument": 39162,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON_ORB",
+                  "argument": 53,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_MAIN",
+                  "argument": 38400,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_SUB",
+                  "argument": 38419,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MONK_WEAPON",
+                  "argument": 38401,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WARRIOR_WEAPON",
+                  "argument": 38402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DRAGOON_WEAPON",
+                  "argument": 38403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BARD_WEAPON",
+                  "argument": 38404,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WHITEMAGE_WEAPON",
+                  "argument": 38408,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BLACKMAGE_WEAPON",
+                  "argument": 38409,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SUMMONER_WEAPON",
+                  "argument": 38410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SCHOLAR_WEAPON",
+                  "argument": 38411,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_NINJA_WEAPON",
+                  "argument": 38405,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MACHINIST_WEAPON",
+                  "argument": 38407,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DARKKNIGHT_WEAPON",
+                  "argument": 38406,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_ASTROLOGIAN_WEAPON",
+                  "argument": 38412,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAMURAI_WEAPON",
+                  "argument": 38413,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REDMAGE_WEAPON",
+                  "argument": 38414,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_GUNBREAKER_WEAPON",
+                  "argument": 38415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DANCER_WEAPON",
+                  "argument": 38416,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAGE_WEAPON",
+                  "argument": 38417,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REAPER_WEAPON",
+                  "argument": 38418,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5706,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 241,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_03",
+                  "argument": 1072,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 90,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX_01",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 38940,
+                  "itemId": "item-38940",
+                  "quantity": 1,
+                  "name": "Complementary Chondrite",
+                  "resolvedSheet": "Item",
+                  "iconId": 21243
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70262,
+                  70307
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "manderville-weapons-relic-the-next-mander-level-70262",
+          "name": "The Next Mander-level",
+          "isFeatureQuest": true,
+          "isRepeatable": true,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70262
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70262,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:04:30.715Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1043891",
+            "npcName": "House Manderville artisan",
+            "sourceRowId": 1043891,
+            "zoneId": "radz-at-han",
+            "zoneName": "Radz-at-Han",
+            "coordinates": {
+              "x": 12.1,
+              "y": 7.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "repeatability": {
+            "type": "repeatable",
+            "extensions": {
+              "repeatIntervalType": 0,
+              "dailyQuestPool": 0
+            }
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "manderville-weapons-relic-well-oiled-70261",
+            "manderville-weapons-relic-make-another-manderville-70189"
+          ],
+          "nextQuestIds": [
+            "manderville-weapons-relic-in-need-of-adjustment-70308"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70261,
+              70189
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-38940",
+              "itemName": "Complementary Chondrite",
+              "sourceRowId": 38940,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-next-mander-level-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1043891",
+              "targetName": "House Manderville artisan",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9333869,
+                  "coordinates": {
+                    "x": 12.1,
+                    "y": 7.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 41.3478,
+                      "y": -24.6934,
+                      "z": -201.654
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-24",
+                "itemName": "Unresolved item 24",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:19:16.643Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70262,
+              "internalId": "ChrHdy251_04726",
+              "expansion": "Endwalker",
+              "journalGenre": "Manderville Weapons",
+              "eventIconType": 8,
+              "sortKey": 251,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1043891,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 38940,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_MAIN",
+                  "argument": 39144,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_SUB",
+                  "argument": 39163,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MONK_WEAPON",
+                  "argument": 39145,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WARRIOR_WEAPON",
+                  "argument": 39146,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DRAGOON_WEAPON",
+                  "argument": 39147,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BARD_WEAPON",
+                  "argument": 39148,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WHITEMAGE_WEAPON",
+                  "argument": 39152,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BLACKMAGE_WEAPON",
+                  "argument": 39153,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SUMMONER_WEAPON",
+                  "argument": 39154,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCHOLAR_WEAPON",
+                  "argument": 39155,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NINJA_WEAPON",
+                  "argument": 39149,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MACHINIST_WEAPON",
+                  "argument": 39151,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DARKKNIGHT_WEAPON",
+                  "argument": 39150,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ASTROLOGIAN_WEAPON",
+                  "argument": 39156,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAMURAI_WEAPON",
+                  "argument": 39157,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON",
+                  "argument": 39158,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GUNBREAKER_WEAPON",
+                  "argument": 39159,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DANCER_WEAPON",
+                  "argument": 39160,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAGE_WEAPON",
+                  "argument": 39161,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REAPER_WEAPON",
+                  "argument": 39162,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON_ORB",
+                  "argument": 53,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_MAIN",
+                  "argument": 38400,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_SUB",
+                  "argument": 38419,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MONK_WEAPON",
+                  "argument": 38401,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WARRIOR_WEAPON",
+                  "argument": 38402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DRAGOON_WEAPON",
+                  "argument": 38403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BARD_WEAPON",
+                  "argument": 38404,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WHITEMAGE_WEAPON",
+                  "argument": 38408,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BLACKMAGE_WEAPON",
+                  "argument": 38409,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SUMMONER_WEAPON",
+                  "argument": 38410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SCHOLAR_WEAPON",
+                  "argument": 38411,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_NINJA_WEAPON",
+                  "argument": 38405,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MACHINIST_WEAPON",
+                  "argument": 38407,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DARKKNIGHT_WEAPON",
+                  "argument": 38406,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_ASTROLOGIAN_WEAPON",
+                  "argument": 38412,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAMURAI_WEAPON",
+                  "argument": 38413,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REDMAGE_WEAPON",
+                  "argument": 38414,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_GUNBREAKER_WEAPON",
+                  "argument": 38415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DANCER_WEAPON",
+                  "argument": 38416,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAGE_WEAPON",
+                  "argument": 38417,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REAPER_WEAPON",
+                  "argument": 38418,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 90,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX_01",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5706,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 241,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_03",
+                  "argument": 1072,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 9414395,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "INVIS_ACTOR0",
+                  "argument": 1043890,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 38940,
+                  "itemId": "item-38940",
+                  "quantity": 1,
+                  "name": "Complementary Chondrite",
+                  "resolvedSheet": "Item",
+                  "iconId": 21243
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70308
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "manderville-weapons-relic-a-spirited-reforging-70307",
+          "name": "A Spirited Reforging",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70307
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70307,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:04:32.491Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1043890",
+            "npcName": "Gerolt",
+            "sourceRowId": 1043890,
+            "zoneId": "radz-at-han",
+            "zoneName": "Radz-at-Han",
+            "coordinates": {
+              "x": 12,
+              "y": 7.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "manderville-weapons-relic-well-oiled-70261"
+          ],
+          "nextQuestIds": [
+            "manderville-weapons-relic-in-need-of-adjustment-70308",
+            "manderville-weapons-relic-resonating-with-perfection-70342"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70291,
+              70261
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-40322",
+              "itemName": "Amplifying Achondrite",
+              "sourceRowId": 40322,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-spirited-reforging-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2013384",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9899287,
+                  "coordinates": {
+                    "x": 10.8,
+                    "y": 7.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -22.9096,
+                      "y": 1.51,
+                      "z": -192.963
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-a-spirited-reforging-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1043890",
+              "targetName": "Gerolt",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9333868,
+                  "coordinates": {
+                    "x": 12,
+                    "y": 7.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 38.0238,
+                      "y": -24.6934,
+                      "z": -205.499
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-28",
+                "itemName": "Unresolved item 28",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:19:16.643Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70307,
+              "internalId": "ChrHdy301_04771",
+              "expansion": "Endwalker",
+              "journalGenre": "Manderville Weapons",
+              "eventIconType": 8,
+              "sortKey": 301,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1043890,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2013384,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 40322,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_MAIN",
+                  "argument": 39920,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_SUB",
+                  "argument": 39939,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MONK_WEAPON",
+                  "argument": 39921,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WARRIOR_WEAPON",
+                  "argument": 39922,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DRAGOON_WEAPON",
+                  "argument": 39923,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BARD_WEAPON",
+                  "argument": 39924,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WHITEMAGE_WEAPON",
+                  "argument": 39928,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BLACKMAGE_WEAPON",
+                  "argument": 39929,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SUMMONER_WEAPON",
+                  "argument": 39930,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCHOLAR_WEAPON",
+                  "argument": 39931,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NINJA_WEAPON",
+                  "argument": 39925,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MACHINIST_WEAPON",
+                  "argument": 39927,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DARKKNIGHT_WEAPON",
+                  "argument": 39926,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ASTROLOGIAN_WEAPON",
+                  "argument": 39932,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAMURAI_WEAPON",
+                  "argument": 39933,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON",
+                  "argument": 39934,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GUNBREAKER_WEAPON",
+                  "argument": 39935,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DANCER_WEAPON",
+                  "argument": 39936,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAGE_WEAPON",
+                  "argument": 39937,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REAPER_WEAPON",
+                  "argument": 39938,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON_ORB",
+                  "argument": 54,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_MAIN",
+                  "argument": 39144,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_SUB",
+                  "argument": 39163,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MONK_WEAPON",
+                  "argument": 39145,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WARRIOR_WEAPON",
+                  "argument": 39146,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DRAGOON_WEAPON",
+                  "argument": 39147,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BARD_WEAPON",
+                  "argument": 39148,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WHITEMAGE_WEAPON",
+                  "argument": 39152,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BLACKMAGE_WEAPON",
+                  "argument": 39153,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SUMMONER_WEAPON",
+                  "argument": 39154,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SCHOLAR_WEAPON",
+                  "argument": 39155,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_NINJA_WEAPON",
+                  "argument": 39149,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MACHINIST_WEAPON",
+                  "argument": 39151,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DARKKNIGHT_WEAPON",
+                  "argument": 39150,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_ASTROLOGIAN_WEAPON",
+                  "argument": 39156,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAMURAI_WEAPON",
+                  "argument": 39157,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REDMAGE_WEAPON",
+                  "argument": 39158,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_GUNBREAKER_WEAPON",
+                  "argument": 39159,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DANCER_WEAPON",
+                  "argument": 39160,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAGE_WEAPON",
+                  "argument": 39161,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REAPER_WEAPON",
+                  "argument": 39162,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5706,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_03",
+                  "argument": 1072,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 90,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_02",
+                  "argument": 187,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX_01",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 40322,
+                  "itemId": "item-40322",
+                  "quantity": 1,
+                  "name": "Amplifying Achondrite",
+                  "resolvedSheet": "Item",
+                  "iconId": 21210
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70308,
+                  70342
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "manderville-weapons-relic-in-need-of-adjustment-70308",
+          "name": "In Need of Adjustment",
+          "isFeatureQuest": true,
+          "isRepeatable": true,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70308
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70308,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:04:34.224Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1043891",
+            "npcName": "House Manderville artisan",
+            "sourceRowId": 1043891,
+            "zoneId": "radz-at-han",
+            "zoneName": "Radz-at-Han",
+            "coordinates": {
+              "x": 12.1,
+              "y": 7.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "repeatability": {
+            "type": "repeatable",
+            "extensions": {
+              "repeatIntervalType": 0,
+              "dailyQuestPool": 0
+            }
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "manderville-weapons-relic-a-spirited-reforging-70307",
+            "manderville-weapons-relic-the-next-mander-level-70262"
+          ],
+          "nextQuestIds": [
+            "manderville-weapons-relic-positively-mandervillous-70343"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70307,
+              70262
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-40322",
+              "itemName": "Amplifying Achondrite",
+              "sourceRowId": 40322,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-in-need-of-adjustment-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1043891",
+              "targetName": "House Manderville artisan",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9333869,
+                  "coordinates": {
+                    "x": 12.1,
+                    "y": 7.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 41.3478,
+                      "y": -24.6934,
+                      "z": -201.654
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-28",
+                "itemName": "Unresolved item 28",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:19:16.643Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70308,
+              "internalId": "ChrHdy351_04772",
+              "expansion": "Endwalker",
+              "journalGenre": "Manderville Weapons",
+              "eventIconType": 8,
+              "sortKey": 351,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1043891,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 40322,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_MAIN",
+                  "argument": 39920,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_SUB",
+                  "argument": 39939,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MONK_WEAPON",
+                  "argument": 39921,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WARRIOR_WEAPON",
+                  "argument": 39922,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DRAGOON_WEAPON",
+                  "argument": 39923,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BARD_WEAPON",
+                  "argument": 39924,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WHITEMAGE_WEAPON",
+                  "argument": 39928,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BLACKMAGE_WEAPON",
+                  "argument": 39929,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SUMMONER_WEAPON",
+                  "argument": 39930,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCHOLAR_WEAPON",
+                  "argument": 39931,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NINJA_WEAPON",
+                  "argument": 39925,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MACHINIST_WEAPON",
+                  "argument": 39927,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DARKKNIGHT_WEAPON",
+                  "argument": 39926,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ASTROLOGIAN_WEAPON",
+                  "argument": 39932,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAMURAI_WEAPON",
+                  "argument": 39933,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON",
+                  "argument": 39934,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GUNBREAKER_WEAPON",
+                  "argument": 39935,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DANCER_WEAPON",
+                  "argument": 39936,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAGE_WEAPON",
+                  "argument": 39937,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REAPER_WEAPON",
+                  "argument": 39938,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON_ORB",
+                  "argument": 54,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_MAIN",
+                  "argument": 39144,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_SUB",
+                  "argument": 39163,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MONK_WEAPON",
+                  "argument": 39145,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WARRIOR_WEAPON",
+                  "argument": 39146,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DRAGOON_WEAPON",
+                  "argument": 39147,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BARD_WEAPON",
+                  "argument": 39148,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WHITEMAGE_WEAPON",
+                  "argument": 39152,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BLACKMAGE_WEAPON",
+                  "argument": 39153,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SUMMONER_WEAPON",
+                  "argument": 39154,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SCHOLAR_WEAPON",
+                  "argument": 39155,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_NINJA_WEAPON",
+                  "argument": 39149,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MACHINIST_WEAPON",
+                  "argument": 39151,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DARKKNIGHT_WEAPON",
+                  "argument": 39150,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_ASTROLOGIAN_WEAPON",
+                  "argument": 39156,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAMURAI_WEAPON",
+                  "argument": 39157,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REDMAGE_WEAPON",
+                  "argument": 39158,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_GUNBREAKER_WEAPON",
+                  "argument": 39159,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DANCER_WEAPON",
+                  "argument": 39160,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAGE_WEAPON",
+                  "argument": 39161,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REAPER_WEAPON",
+                  "argument": 39162,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 90,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_02",
+                  "argument": 187,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX_01",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5706,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_03",
+                  "argument": 1072,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 9414395,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "INVIS_ACTOR0",
+                  "argument": 1043890,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 40322,
+                  "itemId": "item-40322",
+                  "quantity": 1,
+                  "name": "Amplifying Achondrite",
+                  "resolvedSheet": "Item",
+                  "iconId": 21210
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70343
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "manderville-weapons-relic-resonating-with-perfection-70342",
+          "name": "Resonating with Perfection",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70342
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70342,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:04:35.946Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1043890",
+            "npcName": "Gerolt",
+            "sourceRowId": 1043890,
+            "zoneId": "radz-at-han",
+            "zoneName": "Radz-at-Han",
+            "coordinates": {
+              "x": 12,
+              "y": 7.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "manderville-weapons-relic-a-spirited-reforging-70307"
+          ],
+          "nextQuestIds": [
+            "manderville-weapons-relic-positively-mandervillous-70343"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70336,
+              70307
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-41032",
+              "itemName": "Cosmic Crystallite",
+              "sourceRowId": 41032,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-resonating-with-perfection-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1043890",
+              "targetName": "Gerolt",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9333868,
+                  "coordinates": {
+                    "x": 12,
+                    "y": 7.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 38.0238,
+                      "y": -24.6934,
+                      "z": -205.499
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-31",
+                "itemName": "Unresolved item 31",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:19:16.643Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70342,
+              "internalId": "ChrHdy401_04806",
+              "expansion": "Endwalker",
+              "journalGenre": "Manderville Weapons",
+              "eventIconType": 8,
+              "sortKey": 401,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1043890,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 41032,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_MAIN",
+                  "argument": 40932,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_SUB",
+                  "argument": 40951,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MONK_WEAPON",
+                  "argument": 40933,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WARRIOR_WEAPON",
+                  "argument": 40934,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DRAGOON_WEAPON",
+                  "argument": 40935,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BARD_WEAPON",
+                  "argument": 40936,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WHITEMAGE_WEAPON",
+                  "argument": 40940,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BLACKMAGE_WEAPON",
+                  "argument": 40941,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SUMMONER_WEAPON",
+                  "argument": 40942,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCHOLAR_WEAPON",
+                  "argument": 40943,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NINJA_WEAPON",
+                  "argument": 40937,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MACHINIST_WEAPON",
+                  "argument": 40939,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DARKKNIGHT_WEAPON",
+                  "argument": 40938,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ASTROLOGIAN_WEAPON",
+                  "argument": 40944,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAMURAI_WEAPON",
+                  "argument": 40945,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON",
+                  "argument": 40946,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GUNBREAKER_WEAPON",
+                  "argument": 40947,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DANCER_WEAPON",
+                  "argument": 40948,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAGE_WEAPON",
+                  "argument": 40949,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REAPER_WEAPON",
+                  "argument": 40950,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON_ORB",
+                  "argument": 55,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BARD_WEAPON_SUB",
+                  "argument": 56,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MACHINIST_WEAPON_SUB",
+                  "argument": 57,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ASTROLOGIAN_WEAPON_SUB",
+                  "argument": 58,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAMURAI_WEAPON_SUB",
+                  "argument": 59,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_MAIN",
+                  "argument": 39920,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_SUB",
+                  "argument": 39939,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MONK_WEAPON",
+                  "argument": 39921,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WARRIOR_WEAPON",
+                  "argument": 39922,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DRAGOON_WEAPON",
+                  "argument": 39923,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BARD_WEAPON",
+                  "argument": 39924,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WHITEMAGE_WEAPON",
+                  "argument": 39928,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BLACKMAGE_WEAPON",
+                  "argument": 39929,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SUMMONER_WEAPON",
+                  "argument": 39930,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SCHOLAR_WEAPON",
+                  "argument": 39931,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_NINJA_WEAPON",
+                  "argument": 39925,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MACHINIST_WEAPON",
+                  "argument": 39927,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DARKKNIGHT_WEAPON",
+                  "argument": 39926,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_ASTROLOGIAN_WEAPON",
+                  "argument": 39932,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAMURAI_WEAPON",
+                  "argument": 39933,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REDMAGE_WEAPON",
+                  "argument": 39934,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_GUNBREAKER_WEAPON",
+                  "argument": 39935,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DANCER_WEAPON",
+                  "argument": 39936,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAGE_WEAPON",
+                  "argument": 39937,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REAPER_WEAPON",
+                  "argument": 39938,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5706,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_03",
+                  "argument": 1072,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_VFX_01",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 41032,
+                  "itemId": "item-41032",
+                  "quantity": 1,
+                  "name": "Cosmic Crystallite",
+                  "resolvedSheet": "Item",
+                  "iconId": 21228
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70343
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        },
+        {
+          "id": "manderville-weapons-relic-positively-mandervillous-70343",
+          "name": "Positively Mandervillous",
+          "isFeatureQuest": true,
+          "isRepeatable": true,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70343
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70343,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:04:37.709Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1043891",
+            "npcName": "House Manderville artisan",
+            "sourceRowId": 1043891,
+            "zoneId": "radz-at-han",
+            "zoneName": "Radz-at-Han",
+            "coordinates": {
+              "x": 12.1,
+              "y": 7.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "repeatability": {
+            "type": "repeatable",
+            "extensions": {
+              "repeatIntervalType": 0,
+              "dailyQuestPool": 0
+            }
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "manderville-weapons-relic-resonating-with-perfection-70342",
+            "manderville-weapons-relic-in-need-of-adjustment-70308"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70342,
+              70308
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-41032",
+              "itemName": "Cosmic Crystallite",
+              "sourceRowId": 41032,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-positively-mandervillous-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1043891",
+              "targetName": "House Manderville artisan",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 9333869,
+                  "coordinates": {
+                    "x": 12.1,
+                    "y": 7.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 41.3478,
+                      "y": -24.6934,
+                      "z": -201.654
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-31",
+                "itemName": "Unresolved item 31",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:19:16.643Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70343,
+              "internalId": "ChrHdy451_04807",
+              "expansion": "Endwalker",
+              "journalGenre": "Manderville Weapons",
+              "eventIconType": 8,
+              "sortKey": 451,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1043891,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 41032,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_MAIN",
+                  "argument": 40932,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "PALADIN_WEAPON_SUB",
+                  "argument": 40951,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MONK_WEAPON",
+                  "argument": 40933,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WARRIOR_WEAPON",
+                  "argument": 40934,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DRAGOON_WEAPON",
+                  "argument": 40935,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BARD_WEAPON",
+                  "argument": 40936,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "WHITEMAGE_WEAPON",
+                  "argument": 40940,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BLACKMAGE_WEAPON",
+                  "argument": 40941,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SUMMONER_WEAPON",
+                  "argument": 40942,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCHOLAR_WEAPON",
+                  "argument": 40943,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NINJA_WEAPON",
+                  "argument": 40937,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "MACHINIST_WEAPON",
+                  "argument": 40939,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DARKKNIGHT_WEAPON",
+                  "argument": 40938,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ASTROLOGIAN_WEAPON",
+                  "argument": 40944,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAMURAI_WEAPON",
+                  "argument": 40945,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON",
+                  "argument": 40946,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GUNBREAKER_WEAPON",
+                  "argument": 40947,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DANCER_WEAPON",
+                  "argument": 40948,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SAGE_WEAPON",
+                  "argument": 40949,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REAPER_WEAPON",
+                  "argument": 40950,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REDMAGE_WEAPON_ORB",
+                  "argument": 55,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_MAIN",
+                  "argument": 39920,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_PALADIN_WEAPON_SUB",
+                  "argument": 39939,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MONK_WEAPON",
+                  "argument": 39921,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WARRIOR_WEAPON",
+                  "argument": 39922,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DRAGOON_WEAPON",
+                  "argument": 39923,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BARD_WEAPON",
+                  "argument": 39924,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_WHITEMAGE_WEAPON",
+                  "argument": 39928,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_BLACKMAGE_WEAPON",
+                  "argument": 39929,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SUMMONER_WEAPON",
+                  "argument": 39930,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SCHOLAR_WEAPON",
+                  "argument": 39931,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_NINJA_WEAPON",
+                  "argument": 39925,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_MACHINIST_WEAPON",
+                  "argument": 39927,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DARKKNIGHT_WEAPON",
+                  "argument": 39926,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_ASTROLOGIAN_WEAPON",
+                  "argument": 39932,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAMURAI_WEAPON",
+                  "argument": 39933,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REDMAGE_WEAPON",
+                  "argument": 39934,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_GUNBREAKER_WEAPON",
+                  "argument": 39935,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_DANCER_WEAPON",
+                  "argument": 39936,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_SAGE_WEAPON",
+                  "argument": 39937,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BASE_REAPER_WEAPON",
+                  "argument": 39938,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 90,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_02",
+                  "argument": 187,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX_01",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5706,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 576,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_03",
+                  "argument": 1072,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 9414395,
+                  "referenceType": "level"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 41032,
+                  "itemId": "item-41032",
+                  "quantity": 1,
+                  "name": "Cosmic Crystallite",
+                  "resolvedSheet": "Item",
+                  "iconId": 21228
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 8
+        }
+      ]
+    }
+  ]
+}

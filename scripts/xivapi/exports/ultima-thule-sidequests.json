@@ -1,0 +1,5386 @@
+{
+  "schemaVersion": 1,
+  "id": "ultima-thule-sidequests",
+  "title": "Ultima Thule Sidequests",
+  "category": "side",
+  "generatedAt": "2026-08-08T12:39:59.894Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 20,
+    "branchCount": 0,
+    "convergenceCount": 0,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [],
+  "issues": [],
+  "quests": [
+    {
+      "id": "ultima-thule-sidequests-side-futures-lost-69873",
+      "xivapiRowId": 69873,
+      "sortOrder": 1,
+      "name": "Futures Lost",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-futures-lost-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 2,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953875,
+              "coordinates": {
+                "x": 20.4,
+                "y": 37
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -52.7425,
+                  "y": 45.7966,
+                  "z": 774.872
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-futures-lost-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038008",
+          "targetName": "Kohm Noskh",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867088,
+              "coordinates": {
+                "x": 9.4,
+                "y": 27.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -603.906,
+                  "y": 78.6382,
+                  "z": 303.883
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69873,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:23.102Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69873,
+          "internalId": "AktKzj001_04337",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9120,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038008,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 8953872,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 8953868,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 8953869,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1040873,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1040874,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012304,
+              "referenceType": "event-object"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040873
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1040874
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040873
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1040874
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 655,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Kohm Noskh",
+          "xivapiRowId": 1038008
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 9.4,
+          "y": 27.6
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-that-once-rang-clear-69874",
+      "xivapiRowId": 69874,
+      "sortOrder": 2,
+      "name": "That Once Rang Clear",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-that-once-rang-clear-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1040875",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953890,
+              "coordinates": {
+                "x": 7.1,
+                "y": 19.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -717.588,
+                  "y": 67.0015,
+                  "z": -121.658
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-that-once-rang-clear-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1040875",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953890,
+              "coordinates": {
+                "x": 7.1,
+                "y": 19.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -717.588,
+                  "y": 67.0015,
+                  "z": -121.658
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-that-once-rang-clear-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038013",
+          "targetName": "Kohl Ahleh",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867093,
+              "coordinates": {
+                "x": 10.5,
+                "y": 26.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -551.836,
+                  "y": 72.5776,
+                  "z": 232.684
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69874,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:25.437Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69874,
+          "internalId": "AktKzj002_04338",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9130,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038013,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1040875,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EMOTE0",
+              "argument": 105,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040875
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040875,
+              "name": "pale dragon",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 735,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Kohl Ahleh",
+          "xivapiRowId": 1038013
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 10.5,
+          "y": 26.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-the-sound-of-fear-69875",
+      "xivapiRowId": 69875,
+      "sortOrder": 3,
+      "name": "The Sound of Fear",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-the-sound-of-fear-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 4,
+          "targetId": "actor-2012305",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953895,
+              "coordinates": {
+                "x": 13.5,
+                "y": 27.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -398.329,
+                  "y": 88.8589,
+                  "z": 314.465
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953896,
+              "coordinates": {
+                "x": 8.7,
+                "y": 30.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -641.84,
+                  "y": 78.9653,
+                  "z": 445.212
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953897,
+              "coordinates": {
+                "x": 7.9,
+                "y": 23.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -677.986,
+                  "y": 72.0743,
+                  "z": 119.063
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953898,
+              "coordinates": {
+                "x": 8.8,
+                "y": 22.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -635.482,
+                  "y": 77.4317,
+                  "z": 46.6222
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-sound-of-fear-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1040883",
+          "targetName": "overwrought dragon",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8954096,
+              "coordinates": {
+                "x": 8.4,
+                "y": 26.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -653.366,
+                  "y": 73.7128,
+                  "z": 244.334
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69990
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69875,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:27.179Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69875,
+          "internalId": "AktKzj003_04339",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9110,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1040883,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012305,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 50,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2012306,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2012307,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2012308,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1042094,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1042150,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BGM0",
+              "argument": 893,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM1",
+              "argument": 843,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM2",
+              "argument": 837,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM3",
+              "argument": 314,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 997,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "QST_COMP_CHK_115",
+              "argument": 70000,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1042094
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1042150
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1042094,
+              "name": "Sehth Toskh",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1042150
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 655,
+        "items": [
+          {
+            "itemId": "item-36065",
+            "itemName": "Sykon Compote",
+            "quantity": 2,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "overwrought dragon",
+          "xivapiRowId": 1040883
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 8.4,
+          "y": 26.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-stars-like-gems-69876",
+      "xivapiRowId": 69876,
+      "sortOrder": 4,
+      "name": "Stars Like Gems",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003257",
+          "itemName": "Dragonstar Rougeblossom",
+          "sourceRowId": 2003257,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2003258",
+          "itemName": "Dragonstar Paleblossom",
+          "sourceRowId": 2003258,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-stars-like-gems-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953924,
+              "coordinates": {
+                "x": 15.1,
+                "y": 27.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -321.867,
+                  "y": 72.4182,
+                  "z": 299.47
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953924,
+              "coordinates": {
+                "x": 15.1,
+                "y": 27.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -321.867,
+                  "y": 72.4182,
+                  "z": 299.47
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953924,
+              "coordinates": {
+                "x": 15.1,
+                "y": 27.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -321.867,
+                  "y": 72.4182,
+                  "z": 299.47
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-stars-like-gems-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038010",
+          "targetName": "Seih Loskh",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867090,
+              "coordinates": {
+                "x": 11.1,
+                "y": 28.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -517.906,
+                  "y": 72.5291,
+                  "z": 332.235
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69876,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:29.222Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69876,
+          "internalId": "AktKzj004_04340",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9140,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038010,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012309,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 15,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003257,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2012310,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 14,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2003258,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2012312,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION2",
+              "argument": 50,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003257,
+              "itemId": "event-item-2003257",
+              "name": "Dragonstar Rougeblossom",
+              "resolvedSheet": "EventItem",
+              "iconId": 25633,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003258,
+              "itemId": "event-item-2003258",
+              "name": "Dragonstar Paleblossom",
+              "resolvedSheet": "EventItem",
+              "iconId": 25634,
+              "quantity": 1
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 655,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Seih Loskh",
+          "xivapiRowId": 1038010
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 11.1,
+          "y": 28.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-aimless-protector-69877",
+      "xivapiRowId": 69877,
+      "sortOrder": 5,
+      "name": "Aimless Protector",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-aimless-protector-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2012311",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953926,
+              "coordinates": {
+                "x": 6.5,
+                "y": 21.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -746.949,
+                  "y": 63.1955,
+                  "z": 7.25143
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-aimless-protector-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038009",
+          "targetName": "Nesh Ohr",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867089,
+              "coordinates": {
+                "x": 9.5,
+                "y": 26.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -597.223,
+                  "y": 76.9893,
+                  "z": 268.086
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69990
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69877,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:30.942Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69877,
+          "internalId": "AktKzj005_04341",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9150,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038009,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012311,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 8953927,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 1,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 735,
+        "items": [
+          {
+            "itemId": "item-36066",
+            "itemName": "Sykon Bavarois",
+            "quantity": 2,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Nesh Ohr",
+          "xivapiRowId": 1038009
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 9.5,
+          "y": 26.9
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-ending-as-one-69878",
+      "xivapiRowId": 69878,
+      "sortOrder": 6,
+      "name": "Ending as One",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-ending-as-one-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953947,
+              "coordinates": {
+                "x": 19.9,
+                "y": 10.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -78.6777,
+                  "y": 270.845,
+                  "z": -534.732
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953947,
+              "coordinates": {
+                "x": 19.9,
+                "y": 10.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -78.6777,
+                  "y": 270.845,
+                  "z": -534.732
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-ending-as-one-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1040876",
+          "targetName": "thinking Ea",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8954095,
+              "coordinates": {
+                "x": 22.5,
+                "y": 11
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 49.4366,
+                  "y": 269.257,
+                  "z": -523.226
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69994
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69878,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:32.322Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69878,
+          "internalId": "AktKzj006_04342",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 8,
+          "sortKey": 9210,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1040876,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 13315,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 8953949,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 735,
+        "items": [
+          {
+            "itemId": "item-52254",
+            "itemName": "Standard Spectrum Dye",
+            "quantity": 2,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "thinking Ea",
+          "xivapiRowId": 1040876
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 22.5,
+          "y": 11
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-final-words-final-thoughts-69879",
+      "xivapiRowId": 69879,
+      "sortOrder": 7,
+      "name": "Final Words, Final Thoughts",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-final-words-final-thoughts-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038026",
+          "targetName": "Row-rooth",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867106,
+              "coordinates": {
+                "x": 24.7,
+                "y": 8.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 161.422,
+                  "y": 269.029,
+                  "z": -664.773
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-final-words-final-thoughts-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "targetId": "actor-2012318",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9016392,
+              "coordinates": {
+                "x": 25.1,
+                "y": 8.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 179.35,
+                  "y": 271.073,
+                  "z": -660.009
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9016393,
+              "coordinates": {
+                "x": 25.7,
+                "y": 8.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 209.959,
+                  "y": 270.764,
+                  "z": -656.722
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9016394,
+              "coordinates": {
+                "x": 25.5,
+                "y": 7.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 200.131,
+                  "y": 271.007,
+                  "z": -677.395
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867106,
+              "coordinates": {
+                "x": 24.7,
+                "y": 8.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 161.422,
+                  "y": 269.029,
+                  "z": -664.773
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-final-words-final-thoughts-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038026",
+          "targetName": "Row-rooth",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867106,
+              "coordinates": {
+                "x": 24.7,
+                "y": 8.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 161.422,
+                  "y": 269.029,
+                  "z": -664.773
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-final-words-final-thoughts-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2012321",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9016400,
+              "coordinates": {
+                "x": 29.7,
+                "y": 10.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 410.024,
+                  "y": 312.697,
+                  "z": -534.491
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867106,
+              "coordinates": {
+                "x": 24.7,
+                "y": 8.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 161.422,
+                  "y": 269.029,
+                  "z": -664.773
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-final-words-final-thoughts-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038026",
+          "targetName": "Row-rooth",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867106,
+              "coordinates": {
+                "x": 24.7,
+                "y": 8.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 161.422,
+                  "y": 269.029,
+                  "z": -664.773
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69994
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69879,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:33.691Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69879,
+          "internalId": "AktKzj007_04343",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9220,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038026,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTEFFECTRANGE0",
+              "argument": 9016796,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012318,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2012319,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2012320,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2012321,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "QST_COMP_CHK_115",
+              "argument": 70000,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ET_HENSIN",
+              "argument": 8,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 975,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Row-rooth",
+          "xivapiRowId": 1038026
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 24.7,
+          "y": 8.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-come-back-to-us-69880",
+      "xivapiRowId": 69880,
+      "sortOrder": 8,
+      "name": "Come Back to Us",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-come-back-to-us-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2012313",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8954061,
+              "coordinates": {
+                "x": 28.6,
+                "y": 8.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 356.051,
+                  "y": 282.276,
+                  "z": -628.642
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-come-back-to-us-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1040877",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953960,
+              "coordinates": {
+                "x": 29.5,
+                "y": 6.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 398.565,
+                  "y": 281.776,
+                  "z": -739.186
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-come-back-to-us-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038030",
+          "targetName": "Jaw-jaadg",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867110,
+              "coordinates": {
+                "x": 23.4,
+                "y": 9.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 92.8706,
+                  "y": 270.128,
+                  "z": -597.096
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69880,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:35.047Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69880,
+          "internalId": "AktKzj008_04344",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9230,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038030,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012313,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1040877,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040877
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040877,
+              "name": "lingering Ea",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 815,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Jaw-jaadg",
+          "xivapiRowId": 1038030
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 23.4,
+          "y": 9.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-eat-like-an-ea-69881",
+      "xivapiRowId": 69881,
+      "sortOrder": 9,
+      "name": "Eat Like an Ea",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-eat-like-an-ea-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1040878",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8953979,
+              "coordinates": {
+                "x": 33.1,
+                "y": 11.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 581.292,
+                  "y": 286.081,
+                  "z": -520.288
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-eat-like-an-ea-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038031",
+          "targetName": "Ceh-ceeth",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867111,
+              "coordinates": {
+                "x": 22.4,
+                "y": 8.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 43.7501,
+                  "y": 269,
+                  "z": -666.432
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69881,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:36.803Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69881,
+          "internalId": "AktKzj009_04345",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9240,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038031,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1040878,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 8953980,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040878
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040878,
+              "name": "weary Ea",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 735,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Ceh-ceeth",
+          "xivapiRowId": 1038031
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 22.4,
+          "y": 8.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-a-most-stimulating-discussion-69882",
+      "xivapiRowId": 69882,
+      "sortOrder": 10,
+      "name": "A Most Stimulating Discussion",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-most-stimulating-discussion-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "targetId": "actor-1040879",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8954054,
+              "coordinates": {
+                "x": 17.8,
+                "y": 15.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -184.513,
+                  "y": 267.469,
+                  "z": -292.647
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8954056,
+              "coordinates": {
+                "x": 19.3,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -110.159,
+                  "y": 269.206,
+                  "z": -713.517
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8954057,
+              "coordinates": {
+                "x": 17.5,
+                "y": 12.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -201.838,
+                  "y": 288.669,
+                  "z": -466.314
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-most-stimulating-discussion-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038016",
+          "targetName": "Noh-nookh",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867096,
+              "coordinates": {
+                "x": 23.6,
+                "y": 12.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 105.425,
+                  "y": 269.295,
+                  "z": -454.307
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69994
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69882,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:38.548Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69882,
+          "internalId": "AktKzj010_04346",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 8,
+          "sortKey": 10001,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038016,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1040879,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1040880,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1040881,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040879
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1040880
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1040881
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1040879,
+              "name": "meditating Ea",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1040880,
+              "name": "inquisitive Ea",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1040881,
+              "name": "laid-back Ea",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 735,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Noh-nookh",
+          "xivapiRowId": 1038016
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 23.6,
+          "y": 12.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-the-body-beautiful-69883",
+      "xivapiRowId": 69883,
+      "sortOrder": 11,
+      "name": "The Body Beautiful",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003255",
+          "itemName": "Luminion Core",
+          "sourceRowId": 2003255,
+          "sourceSheet": "event-item",
+          "quantity": 2,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-the-body-beautiful-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 2,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8954059,
+              "coordinates": {
+                "x": 26,
+                "y": 10.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 225.082,
+                  "y": 263.834,
+                  "z": -537.484
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8954059,
+              "coordinates": {
+                "x": 26,
+                "y": 10.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 225.082,
+                  "y": 263.834,
+                  "z": -537.484
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8954059,
+              "coordinates": {
+                "x": 26,
+                "y": 10.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 225.082,
+                  "y": 263.834,
+                  "z": -537.484
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-body-beautiful-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1040882",
+          "targetName": "yearning Ea",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8996708,
+              "coordinates": {
+                "x": 22.8,
+                "y": 12.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 65.7187,
+                  "y": 270.086,
+                  "z": -448.959
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69883,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:40.299Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69883,
+          "internalId": "AktKzj011_04347",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 10010,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1040882,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 13327,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 13328,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 13329,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003255,
+              "referenceType": "event-item"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003255,
+              "itemId": "event-item-2003255",
+              "name": "Luminion Core",
+              "resolvedSheet": "EventItem",
+              "iconId": 21263,
+              "quantity": 2
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 735,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "yearning Ea",
+          "xivapiRowId": 1040882
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 22.8,
+          "y": 12.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-left-alive-69884",
+      "xivapiRowId": 69884,
+      "sortOrder": 12,
+      "name": "Left Alive",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-left-alive-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 2,
+          "targetId": "actor-1038013",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867093,
+              "coordinates": {
+                "x": 10.5,
+                "y": 26.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -551.836,
+                  "y": 72.5776,
+                  "z": 232.684
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867092,
+              "coordinates": {
+                "x": 8.4,
+                "y": 27.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -655.94,
+                  "y": 70.9681,
+                  "z": 302.937
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-left-alive-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9026802,
+              "coordinates": {
+                "x": 19.4,
+                "y": 32.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -106.389,
+                  "y": 40.7311,
+                  "z": 534.366
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-left-alive-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1041058",
+          "targetName": "Sehth Toskh",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025868,
+              "coordinates": {
+                "x": 10,
+                "y": 28
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -574.294,
+                  "y": 77.2911,
+                  "z": 324.348
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69884,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:42.047Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69884,
+          "internalId": "AktKzj012_04348",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9160,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1041058,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1038013,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1038012,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012685,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "QST_COMP_STMBDR205",
+              "argument": 68571,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SEHTH",
+              "argument": 1042094,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 9031386,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_BGM0",
+              "argument": 893,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM1",
+              "argument": 843,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM2",
+              "argument": 837,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM3",
+              "argument": 314,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 997,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1038013
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1038012
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1038013,
+              "name": "Kohl Ahleh",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1038012,
+              "name": "Ehsk Kan",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 855,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Sehth Toskh",
+          "xivapiRowId": 1041058
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 10,
+          "y": 28
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-loud-and-proud-69885",
+      "xivapiRowId": 69885,
+      "sortOrder": 13,
+      "name": "Loud and Proud",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-loud-and-proud-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025256,
+              "coordinates": {
+                "x": 9.6,
+                "y": 22.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -594.157,
+                  "y": 49.4377,
+                  "z": 54.3177
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-loud-and-proud-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2012686",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025254,
+              "coordinates": {
+                "x": 10.3,
+                "y": 26.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -560.365,
+                  "y": 71.9637,
+                  "z": 242.528
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025259,
+              "coordinates": {
+                "x": 9.3,
+                "y": 22.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -609.138,
+                  "y": 70.9995,
+                  "z": 57.205
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-loud-and-proud-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2012687",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025255,
+              "coordinates": {
+                "x": 11,
+                "y": 27.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -524.02,
+                  "y": 71.8769,
+                  "z": 288.395
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025259,
+              "coordinates": {
+                "x": 9.3,
+                "y": 22.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -609.138,
+                  "y": 70.9995,
+                  "z": 57.205
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-loud-and-proud-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1042067",
+          "targetName": "old wyrm",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025258,
+              "coordinates": {
+                "x": 10.2,
+                "y": 27.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -564.541,
+                  "y": 72.3485,
+                  "z": 281.346
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69885,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:43.791Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69885,
+          "internalId": "AktKzj013_04349",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9170,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1042067,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1042068,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "MOUNT0",
+              "argument": 88,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012686,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTION0",
+              "argument": 6293,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2012687,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 9032556,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1042069,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1042076,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 9032557,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_BGM0",
+              "argument": 893,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM1",
+              "argument": 843,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM2",
+              "argument": 837,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM3",
+              "argument": 314,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 997,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION1",
+              "argument": 4228,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_BGM_URA_PIANO",
+              "argument": 832,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1042068
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1042069
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1042076
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1042068,
+              "name": "bloodthirsty dragon",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1042069,
+              "name": "bloodthirsty dragon",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1042076,
+              "name": "old wyrm",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 935,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "old wyrm",
+          "xivapiRowId": 1042067
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 10.2,
+          "y": 27.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-a-parents-love-69886",
+      "xivapiRowId": 69886,
+      "sortOrder": 14,
+      "name": "A Parent's Love",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-parents-love-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025260,
+              "coordinates": {
+                "x": 6.4,
+                "y": 20.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -754.72,
+                  "y": 55.1874,
+                  "z": -29.3365
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-parents-love-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1042070",
+          "targetName": "unmourning mother",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025861,
+              "coordinates": {
+                "x": 9.3,
+                "y": 26.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -610.164,
+                  "y": 77.8913,
+                  "z": 229.184
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-a-parents-love-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1042072",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025864,
+              "coordinates": {
+                "x": 12.2,
+                "y": 26.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -464.498,
+                  "y": 79.1718,
+                  "z": 247.113
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-a-parents-love-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1042071",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025862,
+              "coordinates": {
+                "x": 6.4,
+                "y": 20.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -754.685,
+                  "y": 67.5719,
+                  "z": -32.5165
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-a-parents-love-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1042072",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025864,
+              "coordinates": {
+                "x": 12.2,
+                "y": 26.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -464.498,
+                  "y": 79.1718,
+                  "z": 247.113
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69886,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:45.600Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69886,
+          "internalId": "AktKzj014_04350",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 9180,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1042070,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1042071,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1042072,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1042073,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BGM0",
+              "argument": 893,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM1",
+              "argument": 843,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM2",
+              "argument": 837,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM3",
+              "argument": 314,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 9025863,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_URA_PIANO",
+              "argument": 832,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_BGM_WORLD_ANSWER",
+              "argument": 652,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1042071
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1042072
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1042073
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1042071,
+              "name": "empty-eyed dragon",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1042072,
+              "name": "stoic consort",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1042073,
+              "name": "unmourning mother",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 1015,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "unmourning mother",
+          "xivapiRowId": 1042070
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 9.3,
+          "y": 26.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-remember-me-69887",
+      "xivapiRowId": 69887,
+      "sortOrder": 15,
+      "name": "Remember Me",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003386",
+          "itemName": "Psychosuppressive Rope",
+          "sourceRowId": 2003386,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2003387",
+          "itemName": "Lost Ea",
+          "sourceRowId": 2003387,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-remember-me-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8956156,
+              "coordinates": {
+                "x": 20.6,
+                "y": 12.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -43.1347,
+                  "y": 258.509,
+                  "z": -453.336
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-remember-me-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038025",
+          "targetName": "Boph-bookh",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867105,
+              "coordinates": {
+                "x": 25.3,
+                "y": 7.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 191.516,
+                  "y": 268.914,
+                  "z": -689.174
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69887,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:47.341Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69887,
+          "internalId": "AktKzj015_04351",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 10050,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038025,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003386,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012333,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 50,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 8956154,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2003387,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1042151,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_IDLE_01",
+              "argument": 4267,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_01",
+              "argument": 837,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_HAKIDASU",
+              "argument": 5702,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOGMESSAGE0",
+              "argument": 10450,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003386,
+              "itemId": "event-item-2003386",
+              "name": "Psychosuppressive Rope",
+              "resolvedSheet": "EventItem",
+              "iconId": 26103,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003387,
+              "itemId": "event-item-2003387",
+              "name": "Lost Ea",
+              "resolvedSheet": "EventItem",
+              "iconId": 26111,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1042151
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1042151,
+              "name": "the anxious Ea's friend",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 775,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Boph-bookh",
+          "xivapiRowId": 1038025
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 25.3,
+          "y": 7.7
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-bodily-curiosity-69888",
+      "xivapiRowId": 69888,
+      "sortOrder": 16,
+      "name": "Bodily Curiosity",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-bodily-curiosity-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1042074",
+          "targetName": "envious Ea",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025869,
+              "coordinates": {
+                "x": 24,
+                "y": 11.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 124.111,
+                  "y": 269.373,
+                  "z": -509.683
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-bodily-curiosity-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1042074",
+          "targetName": "envious Ea",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025869,
+              "coordinates": {
+                "x": 24,
+                "y": 11.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 124.111,
+                  "y": 269.373,
+                  "z": -509.683
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69888,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:49.622Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69888,
+          "internalId": "AktKzj016_04352",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 10060,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1042074,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1042136,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 4235,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_02",
+              "argument": 5566,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_IDLE_01",
+              "argument": 1013,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_IDLE_02",
+              "argument": 5483,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_IDLE_03",
+              "argument": 942,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1042136
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1042136,
+              "name": "envious Ea",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 775,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "envious Ea",
+          "xivapiRowId": 1042074
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 24,
+          "y": 11.3
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-a-life-of-regret-69889",
+      "xivapiRowId": 69889,
+      "sortOrder": 17,
+      "name": "A Life of Regret",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003385",
+          "itemName": "Nerve Tissue",
+          "sourceRowId": 2003385,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-a-life-of-regret-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2012688",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025872,
+              "coordinates": {
+                "x": 21.6,
+                "y": 7.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 6.75813,
+                  "y": 272.348,
+                  "z": -685.423
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-life-of-regret-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1042075",
+          "targetName": "anxious Ea",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025871,
+              "coordinates": {
+                "x": 21.6,
+                "y": 7.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 3.77302,
+                  "y": 269.758,
+                  "z": -679.625
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-a-life-of-regret-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9028262,
+              "coordinates": {
+                "x": 14.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -355.569,
+                  "y": 243.545,
+                  "z": -422.697
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-a-life-of-regret-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1042075",
+          "targetName": "anxious Ea",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9025871,
+              "coordinates": {
+                "x": 21.6,
+                "y": 7.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 3.77302,
+                  "y": 269.758,
+                  "z": -679.625
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69889,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:51.675Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69889,
+          "internalId": "AktKzj017_04353",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 10070,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1042075,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012688,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 19,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 13330,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003385,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1042151,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_IDLE_01",
+              "argument": 936,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_TALKSHAPE_01",
+              "argument": 2,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_HAKIDASU",
+              "argument": 5702,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003385,
+              "itemId": "event-item-2003385",
+              "name": "Nerve Tissue",
+              "resolvedSheet": "EventItem",
+              "iconId": 29181,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1042151
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1042151,
+              "name": "the anxious Ea's friend",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 935,
+        "items": [
+          {
+            "itemId": "item-52254",
+            "itemName": "Standard Spectrum Dye",
+            "quantity": 2,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "anxious Ea",
+          "xivapiRowId": 1042075
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 21.6,
+          "y": 7.9
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-combat-evolved-69890",
+      "xivapiRowId": 69890,
+      "sortOrder": 18,
+      "name": "Combat Evolved",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003273",
+          "itemName": "Level Checker Mini",
+          "sourceRowId": 2003273,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2003274",
+          "itemName": "Beeping Level Checker Mini",
+          "sourceRowId": 2003274,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-combat-evolved-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8957732,
+              "coordinates": {
+                "x": 34.5,
+                "y": 27.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 651.725,
+                  "y": 425.748,
+                  "z": 293.662
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-combat-evolved-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1038043",
+          "targetName": "N-4486",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 8867126,
+              "coordinates": {
+                "x": 30.9,
+                "y": 27.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 470.42,
+                  "y": 437.002,
+                  "z": 315.816
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69995
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69890,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:54.028Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69890,
+          "internalId": "AktKzk001_04354",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 8,
+          "sortKey": 10101,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1038043,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003273,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 8956049,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2003274,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 9047798,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1041655,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012734,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1041659,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "PLANDEF_FWINEDX_U2_ROLE",
+              "argument": 1,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PLANDEF_FWVALUE_DEFAULT",
+              "argument": 0,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PLANDEF_FWVALUE_MELEE",
+              "argument": 1,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PLANDEF_FWVALUE_RANGE",
+              "argument": 2,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "PLANDEF_FWVALUE_CASTER",
+              "argument": 3,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_01",
+              "argument": 479,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_02",
+              "argument": 190,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMESSAGE0",
+              "argument": 10450,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003273,
+              "itemId": "event-item-2003273",
+              "name": "Level Checker Mini",
+              "resolvedSheet": "EventItem",
+              "iconId": 53266,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003274,
+              "itemId": "event-item-2003274",
+              "name": "Beeping Level Checker Mini",
+              "resolvedSheet": "EventItem",
+              "iconId": 53266,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1041655
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1041659
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1041655,
+              "name": "Omicron aggressor",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1041659,
+              "name": "My Beloved",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 775,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "N-4486",
+          "xivapiRowId": 1038043
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 30.9,
+          "y": 27.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-learn-to-love-69891",
+      "xivapiRowId": 69891,
+      "sortOrder": 19,
+      "name": "Learn to Love",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2003331",
+          "itemName": "My Beloved",
+          "sourceRowId": 2003331,
+          "sourceSheet": "event-item",
+          "quantity": 2,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-learn-to-love-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2012560",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9007362,
+              "coordinates": {
+                "x": 31.7,
+                "y": 27.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 510.353,
+                  "y": 437,
+                  "z": 307.213
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-learn-to-love-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 2,
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9007364,
+              "coordinates": {
+                "x": 35.4,
+                "y": 28.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 694.465,
+                  "y": 429.977,
+                  "z": 357.434
+                },
+                "mapGameId": "u5f2/00"
+              }
+            },
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9007364,
+              "coordinates": {
+                "x": 35.4,
+                "y": 28.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 694.465,
+                  "y": 429.977,
+                  "z": 357.434
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-learn-to-love-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1041656",
+          "targetName": "inquisitive Omicron",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9007360,
+              "coordinates": {
+                "x": 31.7,
+                "y": 27.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 510.324,
+                  "y": 437,
+                  "z": 307.183
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69995
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69891,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:56.084Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69891,
+          "internalId": "AktKzk002_04355",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 8,
+          "sortKey": 10110,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1041656,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2012560,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2012752,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 16,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2012753,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2003331,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1041658,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1041659,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_SE_01",
+              "argument": 313,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BGM_EX2_EVENT_MYSTERY_SPACE_01",
+              "argument": 573,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BGM_EX2_EVENT_OMEGA_EVMAP",
+              "argument": 479,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2003331,
+              "itemId": "event-item-2003331",
+              "name": "My Beloved",
+              "resolvedSheet": "EventItem",
+              "iconId": 20973,
+              "quantity": 2
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1041658
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1041659
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1041658,
+              "name": "inquisitive Omicron",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1041659,
+              "name": "My Beloved",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 855,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "inquisitive Omicron",
+          "xivapiRowId": 1041656
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 31.7,
+          "y": 27.6
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "ultima-thule-sidequests-side-work-woes-69892",
+      "xivapiRowId": 69892,
+      "sortOrder": 20,
+      "name": "Work Woes",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-work-woes-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1041660",
+          "targetName": "Omicron guard",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9007366,
+              "coordinates": {
+                "x": 31.2,
+                "y": 27.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 482.365,
+                  "y": 437.001,
+                  "z": 311.945
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-work-woes-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1041661",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9007367,
+              "coordinates": {
+                "x": 33.9,
+                "y": 29.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 618.8,
+                  "y": 440.463,
+                  "z": 381.421
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-work-woes-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1041660",
+          "targetName": "Omicron guard",
+          "locations": [
+            {
+              "zoneId": "ultima-thule",
+              "zoneName": "Ultima Thule",
+              "territoryId": "territory-960",
+              "mapId": "map-699",
+              "sourceLevelRowId": 9007366,
+              "coordinates": {
+                "x": 31.2,
+                "y": 27.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 482.365,
+                  "y": 437.001,
+                  "z": 311.945
+                },
+                "mapGameId": "u5f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          70000
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69892,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:39:58.112Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69892,
+          "internalId": "AktKzk003_04356",
+          "expansion": "Endwalker",
+          "journalGenre": "Ultima Thule Sidequests",
+          "eventIconType": 1,
+          "sortKey": 10120,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1041660,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1041661,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1041662,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1041663,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR_01",
+              "argument": 9007368,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_02",
+              "argument": 9007369,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1041659,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 4235,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1041661
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1041662
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1041663
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1041659
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1041661,
+              "name": "Omicron guard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1041662
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1041663
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1041659,
+              "name": "My Beloved",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 168300,
+        "gil": 775,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-36062",
+            "itemName": "Elpis Deipnon",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-36063",
+            "itemName": "Baked Alien Soup",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-36064",
+            "itemName": "Sykon Salad",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-36065",
+            "itemName": "Sykon Compote",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-36066",
+            "itemName": "Sykon Bavarois",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Omicron guard",
+          "xivapiRowId": 1041660
+        },
+        "location": {
+          "zone": "Ultima Thule",
+          "x": 31.2,
+          "y": 27.7
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

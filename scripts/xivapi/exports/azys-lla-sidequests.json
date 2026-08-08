@@ -1,0 +1,2899 @@
+{
+  "schemaVersion": 1,
+  "id": "azys-lla-sidequests",
+  "title": "Azys Lla Sidequests",
+  "category": "side",
+  "generatedAt": "2026-08-08T11:58:20.861Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 14,
+    "branchCount": 0,
+    "convergenceCount": 0,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [],
+  "issues": [],
+  "quests": [
+    {
+      "id": "azys-lla-sidequests-side-basic-training-67515",
+      "xivapiRowId": 67515,
+      "sortOrder": 1,
+      "name": "Basic Training",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-basic-training-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 6,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892034,
+              "coordinates": {
+                "x": 13.5,
+                "y": 13.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -455.24,
+                  "y": -171.187,
+                  "z": -431.027
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-basic-training-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012145",
+          "targetName": "training node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5820196,
+              "coordinates": {
+                "x": 10.4,
+                "y": 12
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -607.746,
+                  "y": -176.471,
+                  "z": -527.541
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67200
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67515,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:14:43.868Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67515,
+          "internalId": "HeaVnz914_01979",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5901,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012145,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4093,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 545,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "training node",
+          "xivapiRowId": 1012145
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 10.4,
+          "y": 12
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-good-clean-fun-67516",
+      "xivapiRowId": 67516,
+      "sortOrder": 2,
+      "name": "Good Clean Fun",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-good-clean-fun-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 5,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892036,
+              "coordinates": {
+                "x": 13.4,
+                "y": 9.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -456.909,
+                  "y": -207.934,
+                  "z": -671.326
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-good-clean-fun-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012146",
+          "targetName": "sterilization node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5820198,
+              "coordinates": {
+                "x": 9.7,
+                "y": 12
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -643.763,
+                  "y": -176.501,
+                  "z": -527.398
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67200
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67516,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:14:46.301Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67516,
+          "internalId": "HeaVnz915_01980",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5902,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012146,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4092,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 673,
+        "items": [
+          {
+            "itemId": "item-52254",
+            "itemName": "Standard Spectrum Dye",
+            "quantity": 5,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "sterilization node",
+          "xivapiRowId": 1012146
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 9.7,
+          "y": 12
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-general-protection-fault-67517",
+      "xivapiRowId": 67517,
+      "sortOrder": 3,
+      "name": "General Protection Fault",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-general-protection-fault-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892037,
+              "coordinates": {
+                "x": 12.2,
+                "y": 11.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -519.435,
+                  "y": -156.867,
+                  "z": -571.75
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-general-protection-fault-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012147",
+          "targetName": "safeguard node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5820202,
+              "coordinates": {
+                "x": 14,
+                "y": 16
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -426.623,
+                  "y": -162.178,
+                  "z": -328.573
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67200
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67517,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:14:48.407Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67517,
+          "internalId": "HeaVnz916_01981",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5903,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012147,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 5892090,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 5892091,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2005908,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 577,
+        "items": [
+          {
+            "itemId": "item-12860",
+            "itemName": "Deep-fried Okeanis",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-9332",
+            "itemName": "Flint Caviar",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4695",
+            "itemName": "Black Truffle Risotto",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4648",
+            "itemName": "Sauteed Coeurl",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "safeguard node",
+          "xivapiRowId": 1012147
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 14,
+          "y": 16
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-excessive-force-67518",
+      "xivapiRowId": 67518,
+      "sortOrder": 4,
+      "name": "Excessive Force",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-excessive-force-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892040,
+              "coordinates": {
+                "x": 17,
+                "y": 12.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -278.453,
+                  "y": -165.134,
+                  "z": -492.567
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-excessive-force-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892040,
+              "coordinates": {
+                "x": 17,
+                "y": 12.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -278.453,
+                  "y": -165.134,
+                  "z": -492.567
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-excessive-force-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012148",
+          "targetName": "suppression node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5820207,
+              "coordinates": {
+                "x": 19.1,
+                "y": 12.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -173.253,
+                  "y": -162.021,
+                  "z": -510.383
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67200
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67518,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:14:50.423Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67518,
+          "internalId": "HeaVnz917_01982",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5904,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012148,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4091,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 4090,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 545,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "suppression node",
+          "xivapiRowId": 1012148
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 19.1,
+          "y": 12.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-chimerical-abominations-67519",
+      "xivapiRowId": 67519,
+      "sortOrder": 5,
+      "name": "Chimerical Abominations",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-chimerical-abominations-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 5,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892041,
+              "coordinates": {
+                "x": 31.1,
+                "y": 7.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 426.147,
+                  "y": -58.5374,
+                  "z": -765.245
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-chimerical-abominations-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012289",
+          "targetName": "research node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874017,
+              "coordinates": {
+                "x": 27.2,
+                "y": 10.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 231.207,
+                  "y": -72.937,
+                  "z": -603.142
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67201
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67519,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:14:52.410Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67519,
+          "internalId": "HeaVnz918_01983",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5905,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012289,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4141,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 705,
+        "items": [
+          {
+            "itemId": "item-21800",
+            "itemName": "Glamour Prism",
+            "quantity": 5,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "research node",
+          "xivapiRowId": 1012289
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 27.2,
+          "y": 10.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-pollution-solution-67520",
+      "xivapiRowId": 67520,
+      "sortOrder": 6,
+      "name": "Pollution Solution",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-pollution-solution-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 5,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892042,
+              "coordinates": {
+                "x": 35.8,
+                "y": 7.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 659.789,
+                  "y": -99.7877,
+                  "z": -766.635
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-pollution-solution-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012290",
+          "targetName": "life support node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874018,
+              "coordinates": {
+                "x": 37.8,
+                "y": 11
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 760.529,
+                  "y": -30.3078,
+                  "z": -579.664
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67201
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67520,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:14:54.402Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67520,
+          "internalId": "HeaVnz919_01984",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5906,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012290,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4046,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 545,
+        "items": [
+          {
+            "itemId": "item-21800",
+            "itemName": "Glamour Prism",
+            "quantity": 5,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "life support node",
+          "xivapiRowId": 1012290
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 37.8,
+          "y": 11
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-good-hunting-67521",
+      "xivapiRowId": 67521,
+      "sortOrder": 7,
+      "name": "Good Hunting",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-good-hunting-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 4,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892043,
+              "coordinates": {
+                "x": 30.8,
+                "y": 12.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 412.092,
+                  "y": -52.6689,
+                  "z": -522.333
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-good-hunting-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012291",
+          "targetName": "tracking node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874019,
+              "coordinates": {
+                "x": 38.7,
+                "y": 12
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 804.101,
+                  "y": -26.3249,
+                  "z": -527.459
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67201
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67521,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:14:56.375Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67521,
+          "internalId": "HeaVnz920_01985",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5907,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012291,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4072,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 801,
+        "items": [
+          {
+            "itemId": "item-12847",
+            "itemName": "Marron Glace",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-9330",
+            "itemName": "Triple Cream Coffee",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4734",
+            "itemName": "Pineapple Ponzecake",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4656",
+            "itemName": "Apkallu Omelette",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "tracking node",
+          "xivapiRowId": 1012291
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 38.7,
+          "y": 12
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-defense-protocols-67522",
+      "xivapiRowId": 67522,
+      "sortOrder": 8,
+      "name": "Defense Protocols",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-defense-protocols-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 10,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892044,
+              "coordinates": {
+                "x": 38,
+                "y": 25.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 769.759,
+                  "y": -13.9945,
+                  "z": 160.149
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892044,
+              "coordinates": {
+                "x": 38,
+                "y": 25.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 769.759,
+                  "y": -13.9945,
+                  "z": 160.149
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892044,
+              "coordinates": {
+                "x": 38,
+                "y": 25.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 769.759,
+                  "y": -13.9945,
+                  "z": 160.149
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892044,
+              "coordinates": {
+                "x": 38,
+                "y": 25.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 769.759,
+                  "y": -13.9945,
+                  "z": 160.149
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892044,
+              "coordinates": {
+                "x": 38,
+                "y": 25.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 769.759,
+                  "y": -13.9945,
+                  "z": 160.149
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-defense-protocols-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012292",
+          "targetName": "expulsion node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874020,
+              "coordinates": {
+                "x": 34.3,
+                "y": 24.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 583.998,
+                  "y": 10.9293,
+                  "z": 100.037
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67202
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67522,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:14:58.487Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67522,
+          "internalId": "HeaVnz921_01986",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5908,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012292,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4669,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 4670,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 4671,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY3",
+              "argument": 4672,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY4",
+              "argument": 4673,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 737,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "expulsion node",
+          "xivapiRowId": 1012292
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 34.3,
+          "y": 24.6
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-snikt-67523",
+      "xivapiRowId": 67523,
+      "sortOrder": 9,
+      "name": "Snikt",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-snikt-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 5,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892045,
+              "coordinates": {
+                "x": 31.3,
+                "y": 33.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 435.118,
+                  "y": 19.9431,
+                  "z": 564.977
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-snikt-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012293",
+          "targetName": "logistics node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874021,
+              "coordinates": {
+                "x": 34.1,
+                "y": 29.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 573.447,
+                  "y": 13.0696,
+                  "z": 329.272
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67202
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67523,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:15:00.913Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67523,
+          "internalId": "HeaVnz922_01987",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5909,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012293,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4083,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 737,
+        "items": [
+          {
+            "itemId": "item-12854",
+            "itemName": "Morel Salad",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-7572",
+            "itemName": "Roast Canard",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4704",
+            "itemName": "Finger Sandwich",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4655",
+            "itemName": "Deviled Eggs",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "logistics node",
+          "xivapiRowId": 1012293
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 34.1,
+          "y": 29.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-a-crude-facsimile-67524",
+      "xivapiRowId": 67524,
+      "sortOrder": 10,
+      "name": "A Crude Facsimile",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001711",
+          "itemName": "Cermet Container",
+          "sourceRowId": 2001711,
+          "sourceSheet": "event-item",
+          "quantity": 5,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-a-crude-facsimile-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 5,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892052,
+              "coordinates": {
+                "x": 33.9,
+                "y": 37.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 564.846,
+                  "y": 15.0895,
+                  "z": 751.227
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892052,
+              "coordinates": {
+                "x": 33.9,
+                "y": 37.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 564.846,
+                  "y": 15.0895,
+                  "z": 751.227
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892052,
+              "coordinates": {
+                "x": 33.9,
+                "y": 37.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 564.846,
+                  "y": 15.0895,
+                  "z": 751.227
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892052,
+              "coordinates": {
+                "x": 33.9,
+                "y": 37.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 564.846,
+                  "y": 15.0895,
+                  "z": 751.227
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892052,
+              "coordinates": {
+                "x": 33.9,
+                "y": 37.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 564.846,
+                  "y": 15.0895,
+                  "z": 751.227
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-a-crude-facsimile-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012294",
+          "targetName": "auditing node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874022,
+              "coordinates": {
+                "x": 29.9,
+                "y": 37.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 366.443,
+                  "y": 20.1896,
+                  "z": 756.72
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67202
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67524,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:15:02.918Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67524,
+          "internalId": "HeaVnz923_01988",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5910,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012294,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2005899,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH_SHORT",
+              "argument": 2,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001711,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2005900,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2005901,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2005902,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH_MIDDLE",
+              "argument": 3,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2005903,
+              "referenceType": "event-object"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001711,
+              "itemId": "event-item-2001711",
+              "name": "Cermet Container",
+              "resolvedSheet": "EventItem",
+              "iconId": 21002,
+              "quantity": 5
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 705,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "auditing node",
+          "xivapiRowId": 1012294
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 29.9,
+          "y": 37.7
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-recycling-67525",
+      "xivapiRowId": 67525,
+      "sortOrder": 11,
+      "name": "Recycling",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-recycling-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892046,
+              "coordinates": {
+                "x": 24.8,
+                "y": 29
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 109.288,
+                  "y": -9.76926,
+                  "z": 320.376
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-recycling-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012295",
+          "targetName": "assembly node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874023,
+              "coordinates": {
+                "x": 26.9,
+                "y": 33.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 214.657,
+                  "y": 13.7339,
+                  "z": 536.99
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67202
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67525,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:15:05.294Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67525,
+          "internalId": "HeaVnz924_01989",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5911,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012295,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4630,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 577,
+        "items": [
+          {
+            "itemId": "item-12864",
+            "itemName": "Clam Chowder",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-9333",
+            "itemName": "Shark Fin Soup",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-7574",
+            "itemName": "Chilled Popoto Soup",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4720",
+            "itemName": "Fish Soup",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "assembly node",
+          "xivapiRowId": 1012295
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 26.9,
+          "y": 33.3
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-inadequate-safety-measures-67526",
+      "xivapiRowId": 67526,
+      "sortOrder": 12,
+      "name": "Inadequate Safety Measures",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-inadequate-safety-measures-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892053,
+              "coordinates": {
+                "x": 11.2,
+                "y": 26
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -570.447,
+                  "y": -106.65,
+                  "z": 172.783
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-inadequate-safety-measures-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892054,
+              "coordinates": {
+                "x": 16,
+                "y": 29.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -329.884,
+                  "y": -93.597,
+                  "z": 330.31
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-inadequate-safety-measures-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012296",
+          "targetName": "restrainment node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874025,
+              "coordinates": {
+                "x": 9.4,
+                "y": 36.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -658.313,
+                  "y": -75.4895,
+                  "z": 699.175
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67203
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67526,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:15:07.314Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67526,
+          "internalId": "HeaVnz925_01990",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5912,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012296,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4668,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 4075,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 737,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "restrainment node",
+          "xivapiRowId": 1012296
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 9.4,
+          "y": 36.6
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-environmental-unbalance-67527",
+      "xivapiRowId": 67527,
+      "sortOrder": 13,
+      "name": "Environmental Unbalance",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-environmental-unbalance-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 6,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892061,
+              "coordinates": {
+                "x": 8.8,
+                "y": 32.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -687.304,
+                  "y": -53.2521,
+                  "z": 517.43
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-environmental-unbalance-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012297",
+          "targetName": "administrative node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874026,
+              "coordinates": {
+                "x": 11.5,
+                "y": 38
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -554.937,
+                  "y": -89.3454,
+                  "z": 771.899
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67203
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67527,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:15:09.316Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67527,
+          "internalId": "HeaVnz926_01991",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5913,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012297,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4095,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 673,
+        "items": [
+          {
+            "itemId": "item-12868",
+            "itemName": "Stuffed Chysahl",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-9334",
+            "itemName": "Haddock Dip",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4715",
+            "itemName": "Trapper's Quiche",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4687",
+            "itemName": "Stuffed Artichoke",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "administrative node",
+          "xivapiRowId": 1012297
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 11.5,
+          "y": 38
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "azys-lla-sidequests-side-elevated-aggression-levels-67528",
+      "xivapiRowId": 67528,
+      "sortOrder": 14,
+      "name": "Elevated Aggression Levels",
+      "level": 59,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 59
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 59
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-elevated-aggression-levels-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892075,
+              "coordinates": {
+                "x": 15.4,
+                "y": 36.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -357.451,
+                  "y": -112.554,
+                  "z": 716.255
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892075,
+              "coordinates": {
+                "x": 15.4,
+                "y": 36.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -357.451,
+                  "y": -112.554,
+                  "z": 716.255
+                },
+                "mapGameId": "a2f2/00"
+              }
+            },
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5892075,
+              "coordinates": {
+                "x": 15.4,
+                "y": 36.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -357.451,
+                  "y": -112.554,
+                  "z": 716.255
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-elevated-aggression-levels-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012298",
+          "targetName": "enhancement node",
+          "locations": [
+            {
+              "zoneId": "azys-lla",
+              "zoneName": "Azys Lla",
+              "territoryId": "territory-402",
+              "mapId": "map-216",
+              "sourceLevelRowId": 5874027,
+              "coordinates": {
+                "x": 18.7,
+                "y": 32.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -192.645,
+                  "y": -102.75,
+                  "z": 477.012
+                },
+                "mapGameId": "a2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67203
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67528,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T11:15:11.309Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67528,
+          "internalId": "HeaVnz927_01992",
+          "expansion": "Heavensward",
+          "journalGenre": "Azys Lla Sidequests",
+          "eventIconType": 1,
+          "sortKey": 5914,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1012298,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 5892072,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 5892076,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENTRANGE1",
+              "argument": 5892073,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 5892077,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENTRANGE2",
+              "argument": 5892074,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 5892078,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2005904,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2005905,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2005906,
+              "referenceType": "event-object"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 13455,
+        "gil": 577,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "enhancement node",
+          "xivapiRowId": 1012298
+        },
+        "location": {
+          "zone": "Azys Lla",
+          "x": 18.7,
+          "y": 32.1
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "eureka-weapons-quests",
+      "title": "Eureka Weapons",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "eureka-weapons-relic-and-we-shall-call-it-eureka-68614",
+          "name": "And We Shall Call It Eureka",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 70,
+          "externalIds": {
+            "xivapi-quest-row": 68614
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68614,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T13:04:17.986Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1019459",
+            "npcName": "Galiena",
+            "sourceRowId": 1019459,
+            "zoneId": "rhalgrs-reach",
+            "zoneName": "Rhalgr's Reach",
+            "coordinates": {
+              "x": 9.8,
+              "y": 12.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68089
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 70
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-and-we-shall-call-it-eureka-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1019002",
+              "locations": [
+                {
+                  "zoneId": "kugane",
+                  "zoneName": "Kugane",
+                  "territoryId": "territory-628",
+                  "mapId": "map-370",
+                  "sourceLevelRowId": 6654205,
+                  "coordinates": {
+                    "x": 10.3,
+                    "y": 10.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -48.0507,
+                      "y": -2.9,
+                      "z": -50.248
+                    },
+                    "mapGameId": "e3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-and-we-shall-call-it-eureka-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1025233",
+              "locations": [
+                {
+                  "zoneId": "kugane",
+                  "zoneName": "Kugane",
+                  "territoryId": "territory-628",
+                  "mapId": "map-370",
+                  "sourceLevelRowId": 7244849,
+                  "coordinates": {
+                    "x": 8.7,
+                    "y": 14.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -129.176,
+                      "y": -5,
+                      "z": 145.379
+                    },
+                    "mapGameId": "e3t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 2000
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T13:19:12.789Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68614,
+              "internalId": "StmBdy401_03078",
+              "expansion": "Stormblood",
+              "journalGenre": "The Forbidden Land, Eureka",
+              "eventIconType": 8,
+              "sortKey": 10,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1019459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1019002,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 7317389,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1025233,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1025234,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 595,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUT_SCENE_N_01",
+                  "argument": 1748,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1019084,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1018496,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1015833,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_04",
+                  "argument": 1025200,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_05",
+                  "argument": 1025201,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_06",
+                  "argument": 1025202,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_07",
+                  "argument": 1024485,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 7316084,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_02",
+                  "argument": 7316197,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_03",
+                  "argument": 7316204,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_04",
+                  "argument": 7316205,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_05",
+                  "argument": 7316703,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_06",
+                  "argument": 7316704,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_07",
+                  "argument": 7317671,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDLE_01",
+                  "argument": 911,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDLE_02",
+                  "argument": 855,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDLE_03",
+                  "argument": 5493,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDLE_04",
+                  "argument": 1065,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ITEM_01",
+                  "argument": 13775,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUEST_01",
+                  "argument": 66241,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUEST_02",
+                  "argument": 67747,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1019002
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1025233
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1025234
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1019084
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1018496
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1015833
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1025200
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_05",
+                  "actorRowId": 1025201
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_06",
+                  "actorRowId": 1025202
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_07",
+                  "actorRowId": 1024485
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1019002,
+                  "name": "Kotokaze",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1025233,
+                  "name": "Gerolt",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1025234,
+                  "name": "incorrigible youth",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1019084,
+                  "name": "Hancock",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1018496,
+                  "name": "Rowena",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1015833,
+                  "name": "Krile",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1025200
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_05",
+                  "actorRowId": 1025201
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_06",
+                  "actorRowId": 1025202
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_07",
+                  "actorRowId": 1024485
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 1
+        }
+      ]
+    }
+  ]
+}

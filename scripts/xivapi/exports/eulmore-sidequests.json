@@ -1,0 +1,3980 @@
+{
+  "schemaVersion": 1,
+  "id": "eulmore-sidequests",
+  "title": "Eulmore Sidequests",
+  "category": "side",
+  "generatedAt": "2026-08-08T12:20:48.166Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 14,
+    "branchCount": 0,
+    "convergenceCount": 0,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [],
+  "issues": [],
+  "quests": [
+    {
+      "id": "eulmore-sidequests-side-my-heart-will-not-go-on-69052",
+      "xivapiRowId": 69052,
+      "sortOrder": 1,
+      "name": "My Heart Will (Not) Go On",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-my-heart-will-not-go-on-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944688,
+              "coordinates": {
+                "x": 12.2,
+                "y": 13.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 46.1398,
+                  "y": -25.7836,
+                  "z": 131.376
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-my-heart-will-not-go-on-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1030455",
+          "targetName": "Queen Bee",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-555",
+              "sourceLevelRowId": 7944690,
+              "coordinates": {
+                "x": 12.3,
+                "y": 9.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 54.1147,
+                  "y": 83.0011,
+                  "z": -74.5253
+                },
+                "mapGameId": "n4t2/03"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-my-heart-will-not-go-on-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1030457",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944686,
+              "coordinates": {
+                "x": 12.5,
+                "y": 14.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 63.3814,
+                  "y": -4.16415,
+                  "z": 143.948
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69168
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69052,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:22.103Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69052,
+          "internalId": "LucKzh006_03516",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 1,
+          "sortKey": 7201,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1030455,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1030456,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1030457,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 7944685,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1030456
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1030457
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1030456,
+              "name": "Solina",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1030457,
+              "name": "Queen Bee",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              69053
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "eulmore-sidequests-side-near-far-wherever-you-are-69053"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 679,
+        "items": [
+          {
+            "itemId": "item-27877",
+            "itemName": "Paella",
+            "quantity": 2,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Queen Bee",
+          "xivapiRowId": 1030455
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 12.3,
+          "y": 9.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-near-far-wherever-you-are-69053",
+      "xivapiRowId": 69053,
+      "sortOrder": 2,
+      "name": "Near, Far, Wherever You Are",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-near-far-wherever-you-are-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "kholusia",
+              "zoneName": "Kholusia",
+              "territoryId": "territory-814",
+              "mapId": "map-492",
+              "sourceLevelRowId": 7944125,
+              "coordinates": {
+                "x": 29.1,
+                "y": 33.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 378.646,
+                  "y": -8.13266,
+                  "z": 580.519
+                },
+                "mapGameId": "n4f2/00"
+              }
+            },
+            {
+              "zoneId": "kholusia",
+              "zoneName": "Kholusia",
+              "territoryId": "territory-814",
+              "mapId": "map-492",
+              "sourceLevelRowId": 7944155,
+              "coordinates": {
+                "x": 24.3,
+                "y": 34.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 142.165,
+                  "y": 27.6398,
+                  "z": 658.563
+                },
+                "mapGameId": "n4f2/00"
+              }
+            },
+            {
+              "zoneId": "kholusia",
+              "zoneName": "Kholusia",
+              "territoryId": "territory-814",
+              "mapId": "map-492",
+              "sourceLevelRowId": 7944151,
+              "coordinates": {
+                "x": 35.2,
+                "y": 26.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 682.13,
+                  "y": 21.6206,
+                  "z": 253.54
+                },
+                "mapGameId": "n4f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-near-far-wherever-you-are-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1030458",
+          "locations": [
+            {
+              "zoneId": "kholusia",
+              "zoneName": "Kholusia",
+              "territoryId": "territory-814",
+              "mapId": "map-492",
+              "sourceLevelRowId": 7943917,
+              "coordinates": {
+                "x": 29.1,
+                "y": 33.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 379.843,
+                  "y": 5.36372,
+                  "z": 600.397
+                },
+                "mapGameId": "n4f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-near-far-wherever-you-are-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1030463",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944230,
+              "coordinates": {
+                "x": 11,
+                "y": 8.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -14.8457,
+                  "y": -6.98647,
+                  "z": -124.402
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69052
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69053,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:23.914Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69053,
+          "internalId": "LucKzh007_03517",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 1,
+          "sortKey": 7210,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1030456,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 7944158,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 7943963,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 7943959,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1030461,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1030462,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2010113,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1030459,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1030460,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1030458,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 35,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1030463,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1030464,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 7944226,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_BLUE_SEQ255",
+              "argument": 7944230,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1030461
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1030462
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1030459
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1030460
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1030458
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1030463
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1030464
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1030461,
+              "name": "youthful elf",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1030462,
+              "name": "kind-faced elf",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1030459
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1030460
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1030458,
+              "name": "silky-haired elf",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1030463,
+              "name": "silky-haired elf",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1030464,
+              "name": "Solina",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "eulmore-sidequests-side-my-heart-will-not-go-on-69052"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 1035,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Solina",
+          "xivapiRowId": 1030456
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 12.5,
+          "y": 14.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-the-invisible-hand-69054",
+      "xivapiRowId": 69054,
+      "sortOrder": 3,
+      "name": "The Invisible Hand",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-the-invisible-hand-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 2,
+          "targetId": "actor-1029980",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7929671,
+              "coordinates": {
+                "x": 9.6,
+                "y": 12.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -81.59,
+                  "y": -0.808777,
+                  "z": 40.8789
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7797463,
+              "coordinates": {
+                "x": 12.8,
+                "y": 10.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 76.3328,
+                  "y": -8.13306,
+                  "z": -46.2014
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7797721,
+              "coordinates": {
+                "x": 10.2,
+                "y": 9.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -50.248,
+                  "y": -4.82097,
+                  "z": -94.6213
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-invisible-hand-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1029983",
+          "targetName": "Zoi-Chorr",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7929702,
+              "coordinates": {
+                "x": 10.1,
+                "y": 9.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -56.5653,
+                  "y": -4.821,
+                  "z": -88.0599
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69168
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69054,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:26.275Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69054,
+          "internalId": "LucKzh008_03518",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 1,
+          "sortKey": 7220,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1029983,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1029980,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1027604,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1027606,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1029980
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1027604
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1027606
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1029980,
+              "name": "Zia-Bostt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1027604,
+              "name": "Mathisol",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1027606,
+              "name": "Bosta-Loe",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 606,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Zoi-Chorr",
+          "xivapiRowId": 1029983
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 10.1,
+          "y": 9.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-scattered-to-the-winds-69055",
+      "xivapiRowId": 69055,
+      "sortOrder": 4,
+      "name": "Scattered to the Winds",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2002599",
+          "itemName": "Tearstained Letter",
+          "sourceRowId": 2002599,
+          "sourceSheet": "event-item",
+          "quantity": 3,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-scattered-to-the-winds-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944280,
+              "coordinates": {
+                "x": 12.5,
+                "y": 12.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 62.6223,
+                  "y": -23.0312,
+                  "z": 59.3674
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944285,
+              "coordinates": {
+                "x": 11.2,
+                "y": 13.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.99982,
+                  "y": -25.4004,
+                  "z": 107.689
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944273,
+              "coordinates": {
+                "x": 13,
+                "y": 10.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 87.975,
+                  "y": -26.8692,
+                  "z": -38.2285
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-scattered-to-the-winds-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1027550",
+          "targetName": "Aarner",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-555",
+              "sourceLevelRowId": 7796154,
+              "coordinates": {
+                "x": 12.3,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 52.5496,
+                  "y": 82.9349,
+                  "z": 13.5987
+                },
+                "mapGameId": "n4t2/03"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69168
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69055,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:28.034Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69055,
+          "internalId": "LucKzh009_03519",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 1,
+          "sortKey": 7230,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1027550,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2010114,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 6,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2010115,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2010116,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2002599,
+              "referenceType": "event-item"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2002599,
+              "itemId": "event-item-2002599",
+              "name": "Tearstained Letter",
+              "resolvedSheet": "EventItem",
+              "iconId": 25918,
+              "quantity": 3
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 606,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Aarner",
+          "xivapiRowId": 1027550
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 12.3,
+          "y": 11.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-one-good-meal-69056",
+      "xivapiRowId": 69056,
+      "sortOrder": 5,
+      "name": "One Good Meal",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2002600",
+          "itemName": "Note Concerning Voeburt Muffins",
+          "sourceRowId": 2002600,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2002602",
+          "itemName": "Note Concerning Kholusian Stew",
+          "sourceRowId": 2002602,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        },
+        {
+          "itemId": "event-item-2002601",
+          "itemName": "Note Concerning Novelty Dishes",
+          "sourceRowId": 2002601,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM2"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-one-good-meal-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "targetId": "actor-1027554",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-555",
+              "sourceLevelRowId": 7796189,
+              "coordinates": {
+                "x": 11.8,
+                "y": 11.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 27.5592,
+                  "y": 82.7802,
+                  "z": 32.3329
+                },
+                "mapGameId": "n4t2/03"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7797436,
+              "coordinates": {
+                "x": 12.8,
+                "y": 12.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 78.111,
+                  "y": -10.6821,
+                  "z": 73.2891
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-554",
+              "sourceLevelRowId": 7796037,
+              "coordinates": {
+                "x": 11.2,
+                "y": 11.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.95215,
+                  "y": 23.1,
+                  "z": 27.1458
+                },
+                "mapGameId": "n4t2/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-one-good-meal-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1030465",
+          "targetName": "Eulmoran soldier",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-554",
+              "sourceLevelRowId": 7943328,
+              "coordinates": {
+                "x": 11.6,
+                "y": 11.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 19.3005,
+                  "y": 36,
+                  "z": -4.39694
+                },
+                "mapGameId": "n4t2/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69168
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69056,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:29.823Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69056,
+          "internalId": "LucKzh010_03520",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 1,
+          "sortKey": 7240,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1030465,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1027554,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2002600,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1027593,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2002602,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1027537,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM2",
+              "argument": 2002601,
+              "referenceType": "event-item"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2002600,
+              "itemId": "event-item-2002600",
+              "name": "Note Concerning Voeburt Muffins",
+              "resolvedSheet": "EventItem",
+              "iconId": 26572,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2002602,
+              "itemId": "event-item-2002602",
+              "name": "Note Concerning Kholusian Stew",
+              "resolvedSheet": "EventItem",
+              "iconId": 26572,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM2",
+              "itemSheet": "EventItem",
+              "itemRowId": 2002601,
+              "itemId": "event-item-2002601",
+              "name": "Note Concerning Novelty Dishes",
+              "resolvedSheet": "EventItem",
+              "iconId": 26572,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1027554
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1027593
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1027537
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1027554,
+              "name": "Tatcha-Roi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1027593,
+              "name": "Moshei-Lea",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1027537,
+              "name": "Chaddric",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 606,
+        "items": [
+          {
+            "itemId": "item-27879",
+            "itemName": "Ovim Cordon Bleu",
+            "quantity": 2,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Eulmoran soldier",
+          "xivapiRowId": 1030465
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 11.6,
+          "y": 11.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-little-and-late-69057",
+      "xivapiRowId": 69057,
+      "sortOrder": 6,
+      "name": "Little and Late",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-little-and-late-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944368,
+              "coordinates": {
+                "x": 12.5,
+                "y": 12.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 63.3362,
+                  "y": -28.1463,
+                  "z": 61.3988
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944366,
+              "coordinates": {
+                "x": 12.2,
+                "y": 8.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 46.2223,
+                  "y": -29.875,
+                  "z": -130.8
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944368,
+              "coordinates": {
+                "x": 12.5,
+                "y": 12.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 63.3362,
+                  "y": -28.1463,
+                  "z": 61.3988
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-little-and-late-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1030467",
+          "targetName": "forlorn free citizen",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944319,
+              "coordinates": {
+                "x": 11.2,
+                "y": 10.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -4.31836,
+                  "y": 6,
+                  "z": -30.3197
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69168
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69057,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:31.896Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69057,
+          "internalId": "LucKzh011_03521",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 1,
+          "sortKey": 7250,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1030467,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1031309,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1031310,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1030466,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "MOTION_FACE",
+              "argument": 4674,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1031309
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1031310
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1030466
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1031309,
+              "name": "long-haired Hume",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1031310,
+              "name": "would-be bodyguard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1030466,
+              "name": "Mystel manservant",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 606,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "forlorn free citizen",
+          "xivapiRowId": 1030467
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 11.2,
+          "y": 10.6
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-children-of-the-derelicts-69058",
+      "xivapiRowId": 69058,
+      "sortOrder": 7,
+      "name": "Children of the Derelicts",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-children-of-the-derelicts-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 4,
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7943360,
+              "coordinates": {
+                "x": 12.2,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 45.7937,
+                  "y": -36.8288,
+                  "z": 84.4811
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7943359,
+              "coordinates": {
+                "x": 9.4,
+                "y": 10.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -91.8497,
+                  "y": -30.9411,
+                  "z": -59.5519
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7943358,
+              "coordinates": {
+                "x": 13,
+                "y": 10.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 89.5283,
+                  "y": -30.7216,
+                  "z": -52.2725
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7943358,
+              "coordinates": {
+                "x": 13,
+                "y": 10.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 89.5283,
+                  "y": -30.7216,
+                  "z": -52.2725
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-children-of-the-derelicts-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1027617",
+          "targetName": "Sristialla",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7797960,
+              "coordinates": {
+                "x": 12.2,
+                "y": 8.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 45.9685,
+                  "y": -13.7956,
+                  "z": -118.086
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69168
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69058,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:33.670Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69058,
+          "internalId": "LucKzh012_03522",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 1,
+          "sortKey": 7260,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1027617,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1030468,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1030469,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1030470,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1030471,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1030468
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1030469
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1030470
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1030471
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1030468,
+              "name": "carefree boy",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1030469,
+              "name": "quiet girl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1030470,
+              "name": "determined boy",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1030471,
+              "name": "nervous girl",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 606,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-52254",
+            "itemName": "Standard Spectrum Dye",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-27994",
+            "itemName": "Nightworld Silver Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Sristialla",
+          "xivapiRowId": 1027617
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 12.2,
+          "y": 8.9
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-rebuild-reuse-recycle-69059",
+      "xivapiRowId": 69059,
+      "sortOrder": 8,
+      "name": "Rebuild, Reuse, Recycle",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2002603",
+          "itemName": "Ship's Lumber",
+          "sourceRowId": 2002603,
+          "sourceSheet": "event-item",
+          "quantity": 4,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2002604",
+          "itemName": "Tarnished Ring",
+          "sourceRowId": 2002604,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-rebuild-reuse-recycle-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 4,
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7943336,
+              "coordinates": {
+                "x": 12.1,
+                "y": 13.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 43.5949,
+                  "y": -27.9522,
+                  "z": 132.74
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7943336,
+              "coordinates": {
+                "x": 12.1,
+                "y": 13.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 43.5949,
+                  "y": -27.9522,
+                  "z": 132.74
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7943336,
+              "coordinates": {
+                "x": 12.1,
+                "y": 13.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 43.5949,
+                  "y": -27.9522,
+                  "z": 132.74
+                },
+                "mapGameId": "n4t2/01"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7943336,
+              "coordinates": {
+                "x": 12.1,
+                "y": 13.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 43.5949,
+                  "y": -27.9522,
+                  "z": 132.74
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-rebuild-reuse-recycle-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1027595",
+          "targetName": "Tui-Shirr",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7797454,
+              "coordinates": {
+                "x": 12.1,
+                "y": 9.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 41.5808,
+                  "y": -7.64,
+                  "z": -109.575
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69168
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69059,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:35.461Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69059,
+          "internalId": "LucKzh013_03523",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 1,
+          "sortKey": 7270,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1027595,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2010117,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 7,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2002603,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2010120,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2002604,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2010118,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2010119,
+              "referenceType": "event-object"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2002603,
+              "itemId": "event-item-2002603",
+              "name": "Ship's Lumber",
+              "resolvedSheet": "EventItem",
+              "iconId": 22453,
+              "quantity": 4
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2002604,
+              "itemId": "event-item-2002604",
+              "name": "Tarnished Ring",
+              "resolvedSheet": "EventItem",
+              "iconId": 54407,
+              "quantity": 1
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 606,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Tui-Shirr",
+          "xivapiRowId": 1027595
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 12.1,
+          "y": 9.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-of-legacies-lost-and-reclaimed-69060",
+      "xivapiRowId": 69060,
+      "sortOrder": 9,
+      "name": "Of Legacies Lost and Reclaimed",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2002605",
+          "itemName": "Emblazoned Tiara",
+          "sourceRowId": 2002605,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2002606",
+          "itemName": "Engraved Necklace",
+          "sourceRowId": 2002606,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        },
+        {
+          "itemId": "event-item-2002607",
+          "itemName": "Amethyst Ring",
+          "sourceRowId": 2002607,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM2"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-of-legacies-lost-and-reclaimed-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-555",
+              "sourceLevelRowId": 7944452,
+              "coordinates": {
+                "x": 11.1,
+                "y": 10.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -5.5485,
+                  "y": 75.2197,
+                  "z": -35.4242
+                },
+                "mapGameId": "n4t2/03"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-554",
+              "sourceLevelRowId": 7944448,
+              "coordinates": {
+                "x": 11,
+                "y": 11.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -14.1082,
+                  "y": 32.9853,
+                  "z": 33.9277
+                },
+                "mapGameId": "n4t2/02"
+              }
+            },
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944446,
+              "coordinates": {
+                "x": 10.1,
+                "y": 10.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -56.0611,
+                  "y": -20.1628,
+                  "z": -46.6014
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-of-legacies-lost-and-reclaimed-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1030472",
+          "targetName": "debonair dame",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 7944439,
+              "coordinates": {
+                "x": 11.2,
+                "y": 12.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.53514,
+                  "y": 6.8,
+                  "z": 47.5313
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69168
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69060,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:37.221Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69060,
+          "internalId": "LucKzh014_03524",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 1,
+          "sortKey": 7280,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1030472,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2010121,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 2,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2002605,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2010122,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2002606,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2010123,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM2",
+              "argument": 2002607,
+              "referenceType": "event-item"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2002605,
+              "itemId": "event-item-2002605",
+              "name": "Emblazoned Tiara",
+              "resolvedSheet": "EventItem",
+              "iconId": 40789,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2002606,
+              "itemId": "event-item-2002606",
+              "name": "Engraved Necklace",
+              "resolvedSheet": "EventItem",
+              "iconId": 54928,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM2",
+              "itemSheet": "EventItem",
+              "itemRowId": 2002607,
+              "itemId": "event-item-2002607",
+              "name": "Amethyst Ring",
+              "resolvedSheet": "EventItem",
+              "iconId": 54624,
+              "quantity": 1
+            }
+          ],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 606,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "debonair dame",
+          "xivapiRowId": 1030472
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 11.2,
+          "y": 12.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-akadaemia-anyder-69132",
+      "xivapiRowId": 69132,
+      "sortOrder": 10,
+      "name": "Akadaemia Anyder",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-akadaemia-anyder-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1027772",
+          "locations": [
+            {
+              "zoneId": "the-tempest",
+              "zoneName": "The Tempest",
+              "territoryId": "territory-818",
+              "mapId": "map-496",
+              "sourceLevelRowId": 7823536,
+              "coordinates": {
+                "x": 21.6,
+                "y": 26.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 5.39113,
+                  "y": -276.906,
+                  "z": 271.617
+                },
+                "mapGameId": "n4f6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-akadaemia-anyder-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1028056",
+          "locations": [
+            {
+              "zoneId": "the-tempest",
+              "zoneName": "The Tempest",
+              "territoryId": "territory-818",
+              "mapId": "map-496",
+              "sourceLevelRowId": 8004872,
+              "coordinates": {
+                "x": 20.1,
+                "y": 33.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -68.3452,
+                  "y": -274.332,
+                  "z": 579.343
+                },
+                "mapGameId": "n4f6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-akadaemia-anyder-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "akadaemia-anyder",
+              "zoneName": "Akadaemia Anyder",
+              "territoryId": "territory-841",
+              "mapId": "map-539",
+              "sourceLevelRowId": 8030158,
+              "coordinates": {
+                "x": 11.2,
+                "y": 11.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -0.0562349,
+                  "y": 285.755,
+                  "z": -378.706
+                },
+                "mapGameId": "n4d8/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-akadaemia-anyder-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1028056",
+          "locations": [
+            {
+              "zoneId": "the-tempest",
+              "zoneName": "The Tempest",
+              "territoryId": "territory-818",
+              "mapId": "map-496",
+              "sourceLevelRowId": 8004872,
+              "coordinates": {
+                "x": 20.1,
+                "y": 33.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -68.3452,
+                  "y": -274.332,
+                  "z": 579.343
+                },
+                "mapGameId": "n4f6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-akadaemia-anyder-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1031144",
+          "targetName": "overwrought Ondo",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-498",
+              "sourceLevelRowId": 8010629,
+              "coordinates": {
+                "x": 12.9,
+                "y": 12.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 84.3365,
+                  "y": -10.3304,
+                  "z": 59.4949
+                },
+                "mapGameId": "n4t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69190
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69132,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:39.054Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69132,
+          "internalId": "LucKya002_03596",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 8,
+          "sortKey": 30010,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1031144,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1027772,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1028056,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "INSTANCEDUNGEON0",
+              "argument": 71,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 8025558,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 5010000,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "SCREENIMAGE0",
+              "argument": 748,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 5627,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_VOICE_01",
+              "argument": 203,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VOICE_02",
+              "argument": 204,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VOICE_03",
+              "argument": 205,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VOICE_04",
+              "argument": 206,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VOICE_05",
+              "argument": 207,
+              "referenceType": "script-value"
+            }
+          ],
+          "dutyReferences": [
+            {
+              "instanceContentRowId": 71,
+              "sourceInstruction": "INSTANCEDUNGEON0",
+              "relationship": "required"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1027772
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1028056
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 5010000
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1027772,
+              "name": "administrative clerk",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1028056,
+              "name": "Akadaemia academic",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 5010000
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [
+        {
+          "id": "duty-661",
+          "sourceRowId": 661,
+          "contentRowId": 71,
+          "name": "Akadaemia Anyder",
+          "type": "dungeon",
+          "relationship": "required",
+          "level": 80,
+          "minimumItemLevel": 410,
+          "partySize": 4,
+          "levelSync": 80,
+          "highEnd": false
+        }
+      ],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 4917,
+        "items": [
+          {
+            "itemId": "item-25197",
+            "itemName": "Quickarm Materia VII",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-25190",
+            "itemName": "Battledance Materia VII",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "overwrought Ondo",
+          "xivapiRowId": 1031144
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 12.9,
+          "y": 12.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-yet-another-striking-opportunity-69137",
+      "xivapiRowId": 69137,
+      "sortOrder": 11,
+      "name": "Yet Another Striking Opportunity",
+      "level": 80,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-yet-another-striking-opportunity-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1030409",
+          "locations": [
+            {
+              "zoneId": "kholusia",
+              "zoneName": "Kholusia",
+              "territoryId": "territory-814",
+              "mapId": "map-492",
+              "sourceLevelRowId": 7935458,
+              "coordinates": {
+                "x": 23.8,
+                "y": 37.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 116.559,
+                  "y": 55.3127,
+                  "z": 816.723
+                },
+                "mapGameId": "n4f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69190,
+          67654
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69137,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:41.398Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69137,
+          "internalId": "LucKyb005_03601",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 8,
+          "sortKey": 20040,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1030408,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1030409,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1030409
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1030409,
+              "name": "soft-faced bloke",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "idyllshire-sidequests-side-a-striking-opportunity-67654"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 575,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "weary dockworker",
+          "xivapiRowId": 1030408
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 9.2,
+          "y": 10
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-oh-beehive-yourself-69265",
+      "xivapiRowId": 69265,
+      "sortOrder": 12,
+      "name": "Oh, Beehive Yourself",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-oh-beehive-yourself-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2010842",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-555",
+              "sourceLevelRowId": 8141737,
+              "coordinates": {
+                "x": 11.8,
+                "y": 10.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 27.4567,
+                  "y": 82.712,
+                  "z": -45.4314
+                },
+                "mapGameId": "n4t2/03"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-oh-beehive-yourself-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1031801",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-555",
+              "sourceLevelRowId": 8139756,
+              "coordinates": {
+                "x": 12.3,
+                "y": 9.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 52.83,
+                  "y": 82.9938,
+                  "z": -65.385
+                },
+                "mapGameId": "n4t2/03"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69217,
+          69139
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69265,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:43.151Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69265,
+          "internalId": "SubCts640_03729",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 8,
+          "sortKey": 8001,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1031781,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2010842,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1031801,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1027570,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1031802,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "SCREENIMAGE_01",
+              "argument": 840,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1028121,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1029480,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1029488,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR3",
+              "argument": 1029489,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR4",
+              "argument": 1029490,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR5",
+              "argument": 1029491,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 8154980,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ENPC0",
+              "argument": 1031124,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC1",
+              "argument": 1027570,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 4280,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "QUEST_0",
+              "argument": 69217,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUEST_1",
+              "argument": 69218,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1031801
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1027570
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1031802
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1028121
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1029480
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1029488
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1029489
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1029490
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1029491
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1031801,
+              "name": "Kai-Shirr",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1027570,
+              "name": "Anfrigg",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1031802,
+              "name": "Bosta-Zia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1028121,
+              "name": "Kai-Shirr",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1029480,
+              "name": "Mowen",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1029488,
+              "name": "Kai-Shirr",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1029489,
+              "name": "Anfrigg",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1029490,
+              "name": "Bosta-Zia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1029491,
+              "name": "Queen Bee",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              69266
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "eulmore-sidequests-side-commercially-flyable-69266"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-27864",
+            "itemName": "Blood Tomato Salad",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-27865",
+            "itemName": "Mushroom Saute",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Kai-Shirr",
+          "xivapiRowId": 1031781
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 11.7,
+          "y": 11.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-commercially-flyable-69266",
+      "xivapiRowId": 69266,
+      "sortOrder": 13,
+      "name": "Commercially Flyable",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-commercially-flyable-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1031801",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-555",
+              "sourceLevelRowId": 8139756,
+              "coordinates": {
+                "x": 12.3,
+                "y": 9.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 52.83,
+                  "y": 82.9938,
+                  "z": -65.385
+                },
+                "mapGameId": "n4t2/03"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-commercially-flyable-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1029978",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-554",
+              "sourceLevelRowId": 7929640,
+              "coordinates": {
+                "x": 11.1,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -7.52277,
+                  "y": 22.9953,
+                  "z": 14.7859
+                },
+                "mapGameId": "n4t2/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-commercially-flyable-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1031801",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-555",
+              "sourceLevelRowId": 8139756,
+              "coordinates": {
+                "x": 12.3,
+                "y": 9.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 52.83,
+                  "y": 82.9938,
+                  "z": -65.385
+                },
+                "mapGameId": "n4t2/03"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69265
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69266,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:44.927Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69266,
+          "internalId": "SubCts641_03730",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 8,
+          "sortKey": 8002,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1031802,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1031801,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1027570,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1029978,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1029488,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1029489,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1029490,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR3",
+              "argument": 1028120,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR4",
+              "argument": 1029513,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ENPC0",
+              "argument": 1031124,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ENPC1",
+              "argument": 1027570,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 6261,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION1",
+              "argument": 5665,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1031801
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1027570
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1029978
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1029488
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1029489
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1029490
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1028120
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1029513
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1031801,
+              "name": "Kai-Shirr",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1027570,
+              "name": "Anfrigg",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1029978,
+              "name": "Colden",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1029488,
+              "name": "Kai-Shirr",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1029489,
+              "name": "Anfrigg",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1029490,
+              "name": "Bosta-Zia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1028120,
+              "name": "Chai-Nuzz",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1029513,
+              "name": "fledgling vocalist",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              69267
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "eulmore-sidequests-side-oh-beehive-yourself-69265"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "eulmore-sidequests-side-a-ship-on-his-shoulder-69267"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-27876",
+            "itemName": "Blood Bouillabaisse",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-27878",
+            "itemName": "Coffee Biscuit",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Bosta-Zia",
+          "xivapiRowId": 1031802
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 12.2,
+          "y": 10.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "eulmore-sidequests-side-a-ship-on-his-shoulder-69267",
+      "xivapiRowId": 69267,
+      "sortOrder": 14,
+      "name": "A Ship on His Shoulder",
+      "level": 70,
+      "category": "side",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-ship-on-his-shoulder-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1031118",
+          "locations": [
+            {
+              "zoneId": "eulmore",
+              "zoneName": "Eulmore",
+              "territoryId": "territory-820",
+              "mapId": "map-555",
+              "sourceLevelRowId": 8228122,
+              "coordinates": {
+                "x": 11.2,
+                "y": 9.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -2.3017,
+                  "y": 85.5337,
+                  "z": -82.6493
+                },
+                "mapGameId": "n4t2/03"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69266
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69267,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T12:20:46.680Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69267,
+          "internalId": "SubCts642_03731",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Eulmore Sidequests",
+          "eventIconType": 8,
+          "sortKey": 8003,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1027570,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1031118,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1031118
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1031118,
+              "name": "Lereberd",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "eulmore-sidequests-side-commercially-flyable-69266"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 533,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Anfrigg",
+          "xivapiRowId": 1027570
+        },
+        "location": {
+          "zone": "Eulmore",
+          "x": 12.2,
+          "y": 9.7
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}
