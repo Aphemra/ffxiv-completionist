@@ -167,6 +167,18 @@ export function createAvailableQuestCatalog(
           availableQuestIds.has(questId),
         );
 
+        const prerequisiteRelationshipsChanged =
+          quest.prerequisiteQuestIds !== undefined &&
+          prerequisiteQuestIds?.length !== quest.prerequisiteQuestIds.length;
+
+        const nextRelationshipsChanged =
+          quest.nextQuestIds !== undefined &&
+          nextQuestIds?.length !== quest.nextQuestIds.length;
+
+        if (!prerequisiteRelationshipsChanged && !nextRelationshipsChanged) {
+          return quest;
+        }
+
         return {
           ...quest,
 

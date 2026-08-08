@@ -197,16 +197,20 @@ export function QuestLogPage() {
     profile.currentGrandCompany,
   ]);
 
-  const automaticCurrentQuestId = useMemo(
-    () =>
-      catalog
-        ? getAutomaticCurrentQuestId(
-            catalog.collections,
-            profile.completedQuestIds,
-          )
-        : null,
-    [catalog, profile.completedQuestIds],
-  );
+  const automaticCurrentQuestId = useMemo(() => {
+    if (!catalog) {
+      return null;
+    }
+
+    const currentQuestCollections = catalog.collections.filter((collection) =>
+      questCategoryMatchesFamily(collection.category, categoryFilter),
+    );
+
+    return getAutomaticCurrentQuestId(
+      currentQuestCollections,
+      profile.completedQuestIds,
+    );
+  }, [catalog, categoryFilter, profile.completedQuestIds]);
 
   const questsByPatchSectionId = useMemo(() => {
     const questsBySectionId = new Map<string, Quest[]>();

@@ -15,6 +15,11 @@ import { readXivapiPins } from './pins';
 import { xivapiSheetResponseSchema } from './schemas';
 
 import {
+  questCategorySchema,
+  type QuestCategory,
+} from '../../src/modules/quests/data/questSchemas';
+
+import {
   isReviewedSystemReward,
   readSystemRewardValues,
 } from './questUnlockCatalog';
@@ -62,7 +67,7 @@ interface ParamGrowExperienceData {
 const positiveRowIdSchema = z.number().int().positive();
 
 interface QuestSelectionFilter {
-  category: string;
+  category: QuestCategory;
 
   journalGenreNames: readonly string[];
   journalCategoryNames: readonly string[];
@@ -655,12 +660,21 @@ async function readResolvedReview(filePath: string): Promise<ResolvedReview> {
   return resolvedReviewSchema.parse(await readJsonFile(filePath));
 }
 
-function isEligibleQuest(quest: QuestIndexEntry, category: string): boolean {
+function isEligibleQuest(
+  quest: QuestIndexEntry,
+  category: QuestCategory,
+): boolean {
   if (category === 'msq') {
     return quest.isMainScenario;
   }
 
-  return true;
+  /*
+   * Main-scenario status is authoritative in the durable quest index.
+   *
+   * A broad class/job, journal-genre, or journal-category filter must never
+   * silently publish an MSQ row into another canonical category.
+   */
+  return !quest.isMainScenario;
 }
 
 function matchesQuestSelection(
@@ -994,7 +1008,7 @@ async function readKnownQuestIds(
 function createQuestBaseId(
   quest: QuestIndexEntry,
   expansionId: string,
-  category: string,
+  category: QuestCategory,
 ): string {
   return [slugify(expansionId), slugify(category), slugify(quest.name)].join(
     '-',
@@ -1004,7 +1018,7 @@ function createQuestBaseId(
 function createQuestIds(
   quests: readonly QuestIndexEntry[],
   expansionId: string,
-  category: string,
+  category: QuestCategory,
   knownQuestIdsByRowId: ReadonlyMap<number, string>,
 ): Map<number, string> {
   const questIdsByRowId = new Map<number, string>();
@@ -1040,7 +1054,7 @@ function resolveRelatedQuestId(
   knownQuestIdsByRowId: ReadonlyMap<number, string>,
   questsByRowId: ReadonlyMap<number, QuestIndexEntry>,
   expansionId: string,
-  category: string,
+  category: QuestCategory,
 ): string | undefined {
   const exportedQuestId = questIdsByRowId.get(rowId);
 
@@ -2109,7 +2123,7 @@ function createQuestEntry(
   nextQuestIds: string[],
   expansionId: string | undefined,
   patch: string | undefined,
-  category: string,
+  category: QuestCategory,
   resolvedDuties: readonly ResolvedQuestDuty[],
   issues: ExportIssue[],
   issueKeys: Set<string>,
@@ -2291,7 +2305,9 @@ async function main(): Promise<void> {
     throw new Error('Chain exports require both "--start" and "--end".');
   }
 
-  const category = slugify(requireOption('--category'));
+  const category = questCategorySchema.parse(
+    slugify(requireOption('--category')),
+  );
 
   const rawExpansionId = readOption('--expansion');
   const expansionId = rawExpansionId ? slugify(rawExpansionId) : undefined;
