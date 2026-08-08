@@ -1,0 +1,4673 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "primal-quests-quests-66583",
+      "title": "A Recurring Problem Questline",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "primal-quests-side-story-a-recurring-problem-66583",
+          "name": "A Recurring Problem",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66583
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66583,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:29.047Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006693",
+            "npcName": "Minfilia",
+            "sourceRowId": 1006693,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.9,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "primal-quests-side-story-ifrit-bleeds-we-can-kill-it-66584"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70058
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-recurring-problem-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1007478",
+              "locations": [
+                {
+                  "zoneId": "the-waking-sands",
+                  "zoneName": "The Waking Sands",
+                  "territoryId": "territory-212",
+                  "mapId": "map-107",
+                  "sourceLevelRowId": 4330030,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.823,
+                      "y": -3,
+                      "z": -56.2248
+                    },
+                    "mapGameId": "w1e6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66583,
+              "internalId": "GaiUsd001_01047",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 1,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1006693,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1002275,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1002276,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1003782,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR3",
+                  "argument": 1003781,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR4",
+                  "argument": 1003784,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_FACE0",
+                  "argument": 604,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE1",
+                  "argument": 605,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE2",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 97,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1007478
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002275
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1002276
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1003782
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1003781
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1003784
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1007478,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002275,
+                  "name": "Yda",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1002276,
+                  "name": "Papalymo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1003782,
+                  "name": "Y'shtola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1003781,
+                  "name": "Thancred",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1003784,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66584
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "primal-quests-side-story-ifrit-bleeds-we-can-kill-it-66584",
+          "name": "Ifrit Bleeds, We Can Kill It",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66584
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66584,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:30.869Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007534",
+            "npcName": "Thancred",
+            "sourceRowId": 1007534,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.2,
+              "y": 5.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-a-recurring-problem-66583"
+          ],
+          "nextQuestIds": [
+            "primal-quests-side-story-in-for-garuda-awakening-66693"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66583
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-ifrit-bleeds-we-can-kill-it-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1004576",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4101490,
+                  "coordinates": {
+                    "x": 8.4,
+                    "y": 9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -141.637,
+                      "y": 4.09995,
+                      "z": -114.663
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-ifrit-bleeds-we-can-kill-it-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-2002581",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4330430,
+                  "coordinates": {
+                    "x": 35.4,
+                    "y": 19.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 694.383,
+                      "y": 7.94344,
+                      "z": -80.1396
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0
+          },
+          "unlocks": [
+            {
+              "type": "trials",
+              "targetId": "duty-59",
+              "sourceRowId": 59,
+              "name": "the Bowl of Embers (Hard)",
+              "notes": "Content Finder row 59."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66584,
+              "internalId": "GaiUsd002_01048",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 1,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007534,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1004576,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2002581,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SYMPATHY",
+                  "argument": 19,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 113,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1004576
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1004576,
+                  "name": "Swift",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66693
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "primal-quests-side-story-in-for-garuda-awakening-66693",
+          "name": "In for Garuda Awakening",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66693
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66693,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:32.697Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007531",
+            "npcName": "Papalymo",
+            "sourceRowId": 1007531,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-ifrit-bleeds-we-can-kill-it-66584"
+          ],
+          "nextQuestIds": [
+            "primal-quests-side-story-in-a-titan-spot-66694"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66584
+            ],
+            "instanceContentRowIds": [
+              20004
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-in-for-garuda-awakening-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1000168",
+              "locations": [
+                {
+                  "zoneId": "new-gridania",
+                  "zoneName": "New Gridania",
+                  "territoryId": "territory-132",
+                  "mapId": "map-2",
+                  "sourceLevelRowId": 1141151,
+                  "coordinates": {
+                    "x": 9.7,
+                    "y": 11.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -75.4815,
+                      "y": -0.501378,
+                      "z": -5.07031
+                    },
+                    "mapGameId": "f1t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-in-for-garuda-awakening-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-2002582",
+              "locations": [
+                {
+                  "zoneId": "coerthas-central-highlands",
+                  "zoneName": "Coerthas Central Highlands",
+                  "territoryId": "territory-155",
+                  "mapId": "map-53",
+                  "sourceLevelRowId": 4330471,
+                  "coordinates": {
+                    "x": 34.5,
+                    "y": 25
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 649.779,
+                      "y": 292.462,
+                      "z": 175.348
+                    },
+                    "mapGameId": "r1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0
+          },
+          "unlocks": [
+            {
+              "type": "trials",
+              "targetId": "duty-61",
+              "sourceRowId": 61,
+              "name": "the Howling Eye (Hard)",
+              "notes": "Content Finder row 61."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66693,
+              "internalId": "GaiUsd003_01157",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 2,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007531,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1000168,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2002582,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SYMPATHY",
+                  "argument": 19,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 116,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000168
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000168,
+                  "name": "Vorsaile Heuloix",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66694
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "primal-quests-side-story-in-a-titan-spot-66694",
+          "name": "In a Titan Spot",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66694
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66694,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:34.456Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007533",
+            "npcName": "Y'shtola",
+            "sourceRowId": 1007533,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-in-for-garuda-awakening-66693"
+          ],
+          "nextQuestIds": [
+            "bahamut-quests-side-story-primal-awakening-66695",
+            "primal-quests-side-story-primal-nature-66730"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66693
+            ],
+            "instanceContentRowIds": [
+              20006
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-in-a-titan-spot-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1003281",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4101423,
+                  "coordinates": {
+                    "x": 13.2,
+                    "y": 12.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 97.5204,
+                      "y": 40.238,
+                      "z": 81.1322
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-in-a-titan-spot-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-2002583",
+              "locations": [
+                {
+                  "zoneId": "outer-la-noscea",
+                  "zoneName": "Outer La Noscea",
+                  "territoryId": "territory-180",
+                  "mapId": "map-30",
+                  "sourceLevelRowId": 4330486,
+                  "coordinates": {
+                    "x": 24.4,
+                    "y": 9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 144.421,
+                      "y": 29.0555,
+                      "z": -622.461
+                    },
+                    "mapGameId": "s1f6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0
+          },
+          "unlocks": [
+            {
+              "type": "trials",
+              "targetId": "duty-60",
+              "sourceRowId": 60,
+              "name": "the Navel (Hard)",
+              "notes": "Content Finder row 60."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66694,
+              "internalId": "GaiUsd004_01158",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 2,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007533,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003281,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2002583,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SYMPATHY",
+                  "argument": 19,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 112,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003281
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003281,
+                  "name": "R'ashaht Rhiki",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66695,
+                  66730
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "primal-quests-side-story-primal-nature-66730",
+          "name": "Primal Nature",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66730
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66730,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:36.573Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-in-a-titan-spot-66694"
+          ],
+          "nextQuestIds": [
+            "primal-quests-side-story-gale-force-warning-66731"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66694
+            ],
+            "instanceContentRowIds": [
+              20005
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-primal-nature-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1000168",
+              "locations": [
+                {
+                  "zoneId": "new-gridania",
+                  "zoneName": "New Gridania",
+                  "territoryId": "territory-132",
+                  "mapId": "map-2",
+                  "sourceLevelRowId": 1141151,
+                  "coordinates": {
+                    "x": 9.7,
+                    "y": 11.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -75.4815,
+                      "y": -0.501378,
+                      "z": -5.07031
+                    },
+                    "mapGameId": "f1t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 939,
+            "optionalItems": [
+              {
+                "itemId": "item-4554",
+                "itemName": "X-Potion",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4558",
+                "itemName": "X-Ether",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-4560",
+                "itemName": "Hi-Elixir",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66730,
+              "internalId": "GaiUsd011_01194",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 3,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1000168,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "QUEST_ID",
+                  "argument": 66714,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000168
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000168,
+                  "name": "Vorsaile Heuloix",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66731
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        },
+        {
+          "id": "primal-quests-side-story-gale-force-warning-66731",
+          "name": "Gale-force Warning",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66731
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66731,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:38.306Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000168",
+            "npcName": "Vorsaile Heuloix",
+            "sourceRowId": 1000168,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 9.7,
+              "y": 11.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-primal-nature-66730"
+          ],
+          "nextQuestIds": [
+            "primal-quests-side-story-quake-me-up-before-you-oghomoro-66732"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66730
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001139",
+              "itemName": "Vortex Ritual Focus",
+              "sourceRowId": 2001139,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-gale-force-warning-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-2003456",
+              "locations": [
+                {
+                  "zoneId": "coerthas-central-highlands",
+                  "zoneName": "Coerthas Central Highlands",
+                  "territoryId": "territory-155",
+                  "mapId": "map-53",
+                  "sourceLevelRowId": 4588208,
+                  "coordinates": {
+                    "x": 34.5,
+                    "y": 25
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 649.779,
+                      "y": 292.462,
+                      "z": 175.348
+                    },
+                    "mapGameId": "r1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-gale-force-warning-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "the-howling-eye",
+                  "zoneName": "The Howling Eye",
+                  "territoryId": "territory-297",
+                  "mapId": "map-39",
+                  "sourceLevelRowId": 4511218,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.0991,
+                      "y": -1.7973,
+                      "z": -0.3503
+                    },
+                    "mapGameId": "r1fa/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-gale-force-warning-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "coerthas-central-highlands",
+                  "zoneName": "Coerthas Central Highlands",
+                  "territoryId": "territory-155",
+                  "mapId": "map-53",
+                  "sourceLevelRowId": 10166927,
+                  "coordinates": {
+                    "x": 34.3,
+                    "y": 24.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 639.931,
+                      "y": 279.114,
+                      "z": 169.015
+                    },
+                    "mapGameId": "r1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-gale-force-warning-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "targetId": "actor-1000168",
+              "targetName": "Vorsaile Heuloix",
+              "locations": [
+                {
+                  "zoneId": "new-gridania",
+                  "zoneName": "New Gridania",
+                  "territoryId": "territory-132",
+                  "mapId": "map-2",
+                  "sourceLevelRowId": 1141151,
+                  "coordinates": {
+                    "x": 9.7,
+                    "y": 11.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -75.4815,
+                      "y": -0.501378,
+                      "z": -5.07031
+                    },
+                    "mapGameId": "f1t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-gale-force-warning-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "targetId": "actor-1007478",
+              "locations": [
+                {
+                  "zoneId": "the-waking-sands",
+                  "zoneName": "The Waking Sands",
+                  "territoryId": "territory-212",
+                  "mapId": "map-107",
+                  "sourceLevelRowId": 4330030,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.823,
+                      "y": -3,
+                      "z": -56.2248
+                    },
+                    "mapGameId": "w1e6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 2908
+          },
+          "duties": [
+            {
+              "id": "duty-65",
+              "name": "The Howling Eye (Extreme)",
+              "sourceRowId": 65,
+              "type": "extreme-trial",
+              "relationship": "unlocked",
+              "level": 50,
+              "minimumItemLevel": 65,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20010,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "extreme-trial",
+              "targetId": "duty-65",
+              "sourceRowId": 65,
+              "name": "The Howling Eye (Extreme)"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66731,
+              "internalId": "GaiUsd012_01195",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 3,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000168,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2003456,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SYMPATHY",
+                  "argument": 19,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20010,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001139,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 4498508,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 155,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1008267,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1008268,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 4500887,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR2",
+                  "argument": 4500888,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_VFX1",
+                  "argument": 252,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_DUNGEON_GARUDA_SUPERHARD",
+                  "argument": 146,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_TALKSHAPE1",
+                  "argument": 8,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR10",
+                  "argument": 4588463,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR11",
+                  "argument": 4588380,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR12",
+                  "argument": 4588381,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "CUT_BOSGAR00115",
+                  "argument": 458,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SOUND01",
+                  "argument": 52,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001139,
+                  "itemId": "event-item-2001139",
+                  "name": "Vortex Ritual Focus",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20010,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "unlocked"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1007478
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1008267
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1008268
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1007478,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1008267,
+                  "name": "Ascian of the Twelfth Staff",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1008268,
+                  "name": "Ascian of the Twelfth Sword",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66732
+                ]
+              }
+            }
+          },
+          "sortOrder": 8
+        },
+        {
+          "id": "primal-quests-side-story-quake-me-up-before-you-oghomoro-66732",
+          "name": "Quake Me Up Before You O'Ghomoro",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66732
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66732,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:40.457Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-gale-force-warning-66731"
+          ],
+          "nextQuestIds": [
+            "primal-quests-side-story-ifrit-aint-broke-66733"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66731
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001140",
+              "itemName": "Crag Ritual Focus",
+              "sourceRowId": 2001140,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-quake-me-up-before-you-oghomoro-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1003281",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4101423,
+                  "coordinates": {
+                    "x": 13.2,
+                    "y": 12.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 97.5204,
+                      "y": 40.238,
+                      "z": 81.1322
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-quake-me-up-before-you-oghomoro-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-2003457",
+              "locations": [
+                {
+                  "zoneId": "outer-la-noscea",
+                  "zoneName": "Outer La Noscea",
+                  "territoryId": "territory-180",
+                  "mapId": "map-30",
+                  "sourceLevelRowId": 4588207,
+                  "coordinates": {
+                    "x": 24.4,
+                    "y": 9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 144.421,
+                      "y": 29.0555,
+                      "z": -622.461
+                    },
+                    "mapGameId": "s1f6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-quake-me-up-before-you-oghomoro-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "the-navel",
+                  "zoneName": "The Navel",
+                  "territoryId": "territory-296",
+                  "mapId": "map-403",
+                  "sourceLevelRowId": 4511223,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.0883,
+                      "y": 0,
+                      "z": 0.2393
+                    },
+                    "mapGameId": "s1fa/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-quake-me-up-before-you-oghomoro-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "outer-la-noscea",
+                  "zoneName": "Outer La Noscea",
+                  "territoryId": "territory-180",
+                  "mapId": "map-30",
+                  "sourceLevelRowId": 10167081,
+                  "coordinates": {
+                    "x": 24.4,
+                    "y": 8.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 144.252,
+                      "y": 23.3813,
+                      "z": -632.137
+                    },
+                    "mapGameId": "s1f6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-quake-me-up-before-you-oghomoro-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "targetId": "actor-1003281",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4101423,
+                  "coordinates": {
+                    "x": 13.2,
+                    "y": 12.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 97.5204,
+                      "y": 40.238,
+                      "z": 81.1322
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-quake-me-up-before-you-oghomoro-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "targetId": "actor-1007478",
+              "targetName": "Urianger",
+              "locations": [
+                {
+                  "zoneId": "the-waking-sands",
+                  "zoneName": "The Waking Sands",
+                  "territoryId": "territory-212",
+                  "mapId": "map-107",
+                  "sourceLevelRowId": 4330030,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.823,
+                      "y": -3,
+                      "z": -56.2248
+                    },
+                    "mapGameId": "w1e6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 2908
+          },
+          "duties": [
+            {
+              "id": "duty-64",
+              "name": "The Navel (Extreme)",
+              "sourceRowId": 64,
+              "type": "extreme-trial",
+              "relationship": "unlocked",
+              "level": 50,
+              "minimumItemLevel": 67,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20009,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "extreme-trial",
+              "targetId": "duty-64",
+              "sourceRowId": 64,
+              "name": "The Navel (Extreme)"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66732,
+              "internalId": "GaiUsd013_01196",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 3,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003281,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2003457,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SYMPATHY",
+                  "argument": 19,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20009,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001140,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 4498512,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 180,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1008269,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1008270,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 4500892,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR2",
+                  "argument": 4500893,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_VFX1",
+                  "argument": 252,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_DUNGEON_TITAN_SUPERHARD",
+                  "argument": 140,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_TALKSHAPE1",
+                  "argument": 8,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SOUND01",
+                  "argument": 52,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001140,
+                  "itemId": "event-item-2001140",
+                  "name": "Crag Ritual Focus",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20009,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "unlocked"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003281
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1008269
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1008270
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003281,
+                  "name": "R'ashaht Rhiki",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1008269,
+                  "name": "Ascian of the Twelfth Staff",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1008270,
+                  "name": "Ascian of the Twelfth Sword",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66733
+                ]
+              }
+            }
+          },
+          "sortOrder": 9
+        },
+        {
+          "id": "primal-quests-side-story-ifrit-aint-broke-66733",
+          "name": "Ifrit Ain't Broke",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66733
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66733,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:42.524Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-quake-me-up-before-you-oghomoro-66732"
+          ],
+          "nextQuestIds": [
+            "primal-quests-side-story-to-tussle-with-gods-66734"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66732
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001141",
+              "itemName": "Inferno Ritual Focus",
+              "sourceRowId": 2001141,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-ifrit-aint-broke-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1004576",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4101490,
+                  "coordinates": {
+                    "x": 8.4,
+                    "y": 9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -141.637,
+                      "y": 4.09995,
+                      "z": -114.663
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-ifrit-aint-broke-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-2003458",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4588206,
+                  "coordinates": {
+                    "x": 35.4,
+                    "y": 19.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 694.383,
+                      "y": 7.9434,
+                      "z": -80.1396
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-ifrit-aint-broke-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "bowl-of-embers",
+                  "zoneName": "Bowl of Embers",
+                  "territoryId": "territory-295",
+                  "mapId": "map-401",
+                  "sourceLevelRowId": 4511228,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.1003,
+                      "y": 0,
+                      "z": -0.3097
+                    },
+                    "mapGameId": "w1fa/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-ifrit-aint-broke-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 10167163,
+                  "coordinates": {
+                    "x": 35.4,
+                    "y": 19.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 696.231,
+                      "y": -1.34278,
+                      "z": -79.6637
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-ifrit-aint-broke-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "targetId": "actor-1004576",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4101490,
+                  "coordinates": {
+                    "x": 8.4,
+                    "y": 9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -141.637,
+                      "y": 4.09995,
+                      "z": -114.663
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-ifrit-aint-broke-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "targetId": "actor-1007478",
+              "targetName": "Urianger",
+              "locations": [
+                {
+                  "zoneId": "the-waking-sands",
+                  "zoneName": "The Waking Sands",
+                  "territoryId": "territory-212",
+                  "mapId": "map-107",
+                  "sourceLevelRowId": 4330030,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.823,
+                      "y": -3,
+                      "z": -56.2248
+                    },
+                    "mapGameId": "w1e6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 2908
+          },
+          "duties": [
+            {
+              "id": "duty-63",
+              "name": "The Bowl of Embers (Extreme)",
+              "sourceRowId": 63,
+              "type": "extreme-trial",
+              "relationship": "unlocked",
+              "level": 50,
+              "minimumItemLevel": 70,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20008,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "extreme-trial",
+              "targetId": "duty-63",
+              "sourceRowId": 63,
+              "name": "The Bowl of Embers (Extreme)"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66733,
+              "internalId": "GaiUsd014_01197",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 3,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1004576,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2003458,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SYMPATHY",
+                  "argument": 19,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20008,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001141,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 4500840,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 146,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_DUNGEON_EMBERS_SUPERHARD",
+                  "argument": 142,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUT_GAIUSD01410",
+                  "argument": 447,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001141,
+                  "itemId": "event-item-2001141",
+                  "name": "Inferno Ritual Focus",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20008,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "unlocked"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1004576
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1004576,
+                  "name": "Swift",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66734
+                ]
+              }
+            }
+          },
+          "sortOrder": 10
+        },
+        {
+          "id": "primal-quests-side-story-to-tussle-with-gods-66734",
+          "name": "To Tussle with Gods",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66734
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66734,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:44.713Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-ifrit-aint-broke-66733"
+          ],
+          "nextQuestIds": [
+            "primal-quests-side-story-primal-focus-66845"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66733
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001142",
+              "itemName": "Vortex Ritual Focus",
+              "sourceRowId": 2001142,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "event-item-2001143",
+              "itemName": "Crag Ritual Focus",
+              "sourceRowId": 2001143,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM1"
+            },
+            {
+              "itemId": "event-item-2001144",
+              "itemName": "Inferno Ritual Focus",
+              "sourceRowId": 2001144,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM2"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-to-tussle-with-gods-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1001304",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4374262,
+                  "coordinates": {
+                    "x": 22,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 25.5894,
+                      "y": 28.9768,
+                      "z": -825.376
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-to-tussle-with-gods-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-1006951",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4510673,
+                  "coordinates": {
+                    "x": 23,
+                    "y": 7.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 73.7884,
+                      "y": 33.1199,
+                      "z": -709.768
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1220,
+            "items": [
+              {
+                "itemId": "item-7004",
+                "itemName": "Rowena's Token",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66734,
+              "internalId": "GaiUsd015_01198",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 3,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001142,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ITEM1",
+                  "argument": 2001143,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ITEM2",
+                  "argument": 2001144,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1001304,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1006951,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 4374262,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001142,
+                  "itemId": "event-item-2001142",
+                  "name": "Vortex Ritual Focus",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM1",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001143,
+                  "itemId": "event-item-2001143",
+                  "name": "Crag Ritual Focus",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM2",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001144,
+                  "itemId": "event-item-2001144",
+                  "name": "Inferno Ritual Focus",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1001304
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1006951
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1001304,
+                  "name": "Rowena",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1006951,
+                  "name": "Laraina",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66845
+                ]
+              }
+            }
+          },
+          "sortOrder": 11
+        },
+        {
+          "id": "primal-quests-side-story-primal-focus-66845",
+          "name": "Primal Focus",
+          "isFeatureQuest": true,
+          "isRepeatable": true,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66845
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66845,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:46.945Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1006951",
+            "npcName": "Laraina",
+            "sourceRowId": 1006951,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 23,
+              "y": 7.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "repeatability": {
+            "type": "repeatable",
+            "extensions": {
+              "repeatIntervalType": 0,
+              "dailyQuestPool": 0
+            }
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-to-tussle-with-gods-66734"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66734
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001145",
+              "itemName": "Vortex Ritual Focus",
+              "sourceRowId": 2001145,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "event-item-2001146",
+              "itemName": "Crag Ritual Focus",
+              "sourceRowId": 2001146,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM1"
+            },
+            {
+              "itemId": "event-item-2001147",
+              "itemName": "Inferno Ritual Focus",
+              "sourceRowId": 2001147,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM2"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-primal-focus-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "the-howling-eye",
+                  "zoneName": "The Howling Eye",
+                  "territoryId": "territory-297",
+                  "mapId": "map-39",
+                  "sourceLevelRowId": 4511220,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.0991,
+                      "y": -1.7973,
+                      "z": -0.3503
+                    },
+                    "mapGameId": "r1fa/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-primal-focus-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "the-navel",
+                  "zoneName": "The Navel",
+                  "territoryId": "territory-296",
+                  "mapId": "map-403",
+                  "sourceLevelRowId": 4511226,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.0883,
+                      "y": 0,
+                      "z": 0.2393
+                    },
+                    "mapGameId": "s1fa/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-primal-focus-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "bowl-of-embers",
+                  "zoneName": "Bowl of Embers",
+                  "territoryId": "territory-295",
+                  "mapId": "map-401",
+                  "sourceLevelRowId": 4511229,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.1003,
+                      "y": 0,
+                      "z": -0.3097
+                    },
+                    "mapGameId": "w1fa/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-primal-focus-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "targetId": "actor-1006951",
+              "targetName": "Laraina",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4510673,
+                  "coordinates": {
+                    "x": 23,
+                    "y": 7.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 73.7884,
+                      "y": 33.1199,
+                      "z": -709.768
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-7004",
+                "itemName": "Rowena's Token",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "duties": [
+            {
+              "id": "duty-65",
+              "name": "The Howling Eye (Extreme)",
+              "sourceRowId": 65,
+              "type": "extreme-trial",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 65,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20010,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-64",
+              "name": "The Navel (Extreme)",
+              "sourceRowId": 64,
+              "type": "extreme-trial",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 67,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20009,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-63",
+              "name": "The Bowl of Embers (Extreme)",
+              "sourceRowId": 63,
+              "type": "extreme-trial",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 70,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20008,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66845,
+              "internalId": "GaiUsd016_01309",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 4,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1006951,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001145,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20010,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM1",
+                  "argument": 2001146,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON1",
+                  "argument": 20009,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM2",
+                  "argument": 2001147,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON2",
+                  "argument": 20008,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 4510673,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR02",
+                  "argument": 4374262,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001145,
+                  "itemId": "event-item-2001145",
+                  "name": "Vortex Ritual Focus",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM1",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001146,
+                  "itemId": "event-item-2001146",
+                  "name": "Crag Ritual Focus",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM2",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001147,
+                  "itemId": "event-item-2001147",
+                  "name": "Inferno Ritual Focus",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20010,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 20009,
+                  "sourceInstruction": "INSTANCEDUNGEON1",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 20008,
+                  "sourceInstruction": "INSTANCEDUNGEON2",
+                  "relationship": "required"
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 12
+        }
+      ]
+    },
+    {
+      "id": "primal-quests-quests-standalone",
+      "title": "Standalone Quests",
+      "sortOrder": 2,
+      "quests": [
+        {
+          "id": "primal-quests-side-story-drop-dead-shiva-65626",
+          "name": "Drop Dead Shiva",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65626
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65626,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:22.880Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65625
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-drop-dead-shiva-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006444",
+              "locations": [
+                {
+                  "zoneId": "coerthas-central-highlands",
+                  "zoneName": "Coerthas Central Highlands",
+                  "territoryId": "territory-155",
+                  "mapId": "map-53",
+                  "sourceLevelRowId": 4261568,
+                  "coordinates": {
+                    "x": 12.8,
+                    "y": 17.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -432.944,
+                      "y": 233.448,
+                      "z": -199.634
+                    },
+                    "mapGameId": "r1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-drop-dead-shiva-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010054",
+              "locations": [
+                {
+                  "zoneId": "coerthas-central-highlands",
+                  "zoneName": "Coerthas Central Highlands",
+                  "territoryId": "territory-155",
+                  "mapId": "map-53",
+                  "sourceLevelRowId": 5041719,
+                  "coordinates": {
+                    "x": 3.1,
+                    "y": 21.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -916.655,
+                      "y": 229.328,
+                      "z": -6.3936
+                    },
+                    "mapGameId": "r1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-drop-dead-shiva-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "akh-afah-amphitheatre",
+                  "zoneName": "Akh Afah Amphitheatre",
+                  "territoryId": "territory-378",
+                  "mapId": "map-173",
+                  "sourceLevelRowId": 7022013,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.0504413,
+                      "y": 0,
+                      "z": 0.433466
+                    },
+                    "mapGameId": "r1fc/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-drop-dead-shiva-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006444",
+              "locations": [
+                {
+                  "zoneId": "coerthas-central-highlands",
+                  "zoneName": "Coerthas Central Highlands",
+                  "territoryId": "territory-155",
+                  "mapId": "map-53",
+                  "sourceLevelRowId": 4261568,
+                  "coordinates": {
+                    "x": 12.8,
+                    "y": 17.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -432.944,
+                      "y": 233.448,
+                      "z": -199.634
+                    },
+                    "mapGameId": "r1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-drop-dead-shiva-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1007478",
+              "targetName": "Urianger",
+              "locations": [
+                {
+                  "zoneId": "the-waking-sands",
+                  "zoneName": "The Waking Sands",
+                  "territoryId": "territory-212",
+                  "mapId": "map-107",
+                  "sourceLevelRowId": 4330030,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.823,
+                      "y": -3,
+                      "z": -56.2248
+                    },
+                    "mapGameId": "w1e6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 3000
+          },
+          "duties": [
+            {
+              "id": "duty-80",
+              "name": "The Akh Afah Amphitheatre (Extreme)",
+              "sourceRowId": 80,
+              "type": "extreme-trial",
+              "relationship": "unlocked",
+              "level": 50,
+              "minimumItemLevel": 95,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20025,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "extreme-trial",
+              "targetId": "duty-80",
+              "sourceRowId": 80,
+              "name": "The Akh Afah Amphitheatre (Extreme)"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65626,
+              "internalId": "GaiUsd020_00090",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 7,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1006444,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1010054,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20025,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 256,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_01",
+                  "argument": 66548,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_02",
+                  "argument": 66734,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_03",
+                  "argument": 66948,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_04",
+                  "argument": 66949,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_05",
+                  "argument": 67066,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_06",
+                  "argument": 65579,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_07",
+                  "argument": 68684,
+                  "referenceType": "script-value"
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20025,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "unlocked"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1006444
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010054
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 5010000
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1006444,
+                  "name": "Drillemont",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010054,
+                  "name": "stalwart Temple Knight",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 5010000
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "primal-quests-side-story-fear-and-odin-in-the-shroud-65969",
+          "name": "Fear and Odin in the Shroud",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65969
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65969,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:25.435Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009294",
+            "npcName": "Scarlet",
+            "sourceRowId": 1009294,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 10,
+              "y": 11.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "gridiana-black-shroud-sidequests-side-all-you-wanted-to-know-about-odin-66548"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70058,
+              66548
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-fear-and-odin-in-the-shroud-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1011250",
+              "locations": [
+                {
+                  "zoneId": "south-shroud",
+                  "zoneName": "South Shroud",
+                  "territoryId": "territory-153",
+                  "mapId": "map-6",
+                  "sourceLevelRowId": 5584741,
+                  "coordinates": {
+                    "x": 33.8,
+                    "y": 23.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 616.536,
+                      "y": 22.2918,
+                      "z": 85.2476
+                    },
+                    "mapGameId": "f1f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-fear-and-odin-in-the-shroud-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "south-shroud",
+                  "zoneName": "South Shroud",
+                  "territoryId": "territory-394",
+                  "mapId": "map-187",
+                  "sourceLevelRowId": 5584960,
+                  "coordinates": {
+                    "x": 34,
+                    "y": 23.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 622.479,
+                      "y": 16.4071,
+                      "z": 79.4502
+                    },
+                    "mapGameId": "default/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-fear-and-odin-in-the-shroud-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1011250",
+              "locations": [
+                {
+                  "zoneId": "south-shroud",
+                  "zoneName": "South Shroud",
+                  "territoryId": "territory-153",
+                  "mapId": "map-6",
+                  "sourceLevelRowId": 5584741,
+                  "coordinates": {
+                    "x": 33.8,
+                    "y": 23.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 616.536,
+                      "y": 22.2918,
+                      "z": 85.2476
+                    },
+                    "mapGameId": "f1f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 2908
+          },
+          "duties": [
+            {
+              "id": "duty-82",
+              "name": "Urth's Fount",
+              "sourceRowId": 82,
+              "type": "trial",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 95,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20027,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65969,
+              "internalId": "SubCts902_00433",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 8,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009294,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1011250,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1011251,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1011252,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1011253,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1011254,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR1",
+                  "argument": 1011255,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR2",
+                  "argument": 1011256,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR3",
+                  "argument": 1011257,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 5584743,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR1",
+                  "argument": 5584744,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR2",
+                  "argument": 5584745,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5593134,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5593136,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 5593146,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5593150,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_CLSCNJ000",
+                  "argument": 65558,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_CLSCNJ100",
+                  "argument": 65747,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_CLSCNJ006",
+                  "argument": 65977,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 268,
+                  "referenceType": "script-value"
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20027,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1011250
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1011251
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1011252
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1011253
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 5010000
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1011250,
+                  "name": "O-App-Pesi",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1011251
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1011252
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1011253
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 5010000
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "primal-quests-side-story-the-king-lives-66948",
+          "name": "The King Lives",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66948
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66948,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:48.845Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66727
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-king-lives-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1000168",
+              "locations": [
+                {
+                  "zoneId": "new-gridania",
+                  "zoneName": "New Gridania",
+                  "territoryId": "territory-132",
+                  "mapId": "map-2",
+                  "sourceLevelRowId": 1141151,
+                  "coordinates": {
+                    "x": 9.7,
+                    "y": 11.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -75.4815,
+                      "y": -0.501378,
+                      "z": -5.07031
+                    },
+                    "mapGameId": "f1t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-king-lives-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-1008544",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 4629275,
+                  "coordinates": {
+                    "x": 15.2,
+                    "y": 20.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -316.413,
+                      "y": 12.0477,
+                      "z": -35.3638
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1220
+          },
+          "unlocks": [
+            {
+              "type": "trials",
+              "targetId": "duty-67",
+              "sourceRowId": 67,
+              "name": "Thornmarch (Extreme)",
+              "notes": "Content Finder row 67."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66948,
+              "internalId": "GaiUsd017_01412",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 5,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1000168,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1008544,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1008545,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004032,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 187,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK1",
+                  "argument": 66733,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1008001,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 4629276,
+                  "referenceType": "level"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000168
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1008544
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1008545
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1008001
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000168,
+                  "name": "Vorsaile Heuloix",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1008544,
+                  "name": "Kuplo Kopp",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1008545,
+                  "name": "Keeper of the Entwined Serpents",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1008001
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 13
+        },
+        {
+          "id": "primal-quests-side-story-whorl-of-a-time-66949",
+          "name": "Whorl of a Time",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66949
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66949,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:50.965Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66899
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-whorl-of-a-time-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1003281",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4101423,
+                  "coordinates": {
+                    "x": 13.2,
+                    "y": 12.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 97.5204,
+                      "y": 40.238,
+                      "z": 81.1322
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-whorl-of-a-time-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-1005409",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4629182,
+                  "coordinates": {
+                    "x": 24.7,
+                    "y": 33.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 159.629,
+                      "y": 8.97408,
+                      "z": 582.78
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1220
+          },
+          "unlocks": [
+            {
+              "type": "trials",
+              "targetId": "duty-73",
+              "sourceRowId": 73,
+              "name": "the Whorleater (Extreme)",
+              "notes": "Content Finder row 73."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66949,
+              "internalId": "GaiUsd018_01413",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 5,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003281,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1005409,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 183,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK1",
+                  "argument": 66732,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003281
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1005409
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003281,
+                  "name": "R'ashaht Rhiki",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1005409,
+                  "name": "Styrnlona",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 14
+        },
+        {
+          "id": "primal-quests-side-story-judgment-bolts-and-lightning-67066",
+          "name": "Judgment Bolts and Lightning",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 67066
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67066,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:01:52.927Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009294",
+            "npcName": "Scarlet",
+            "sourceRowId": 1009294,
+            "zoneId": "new-gridania",
+            "zoneName": "New Gridania",
+            "coordinates": {
+              "x": 10,
+              "y": 11.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66996
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-judgment-bolts-and-lightning-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000587",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 1146523,
+                  "coordinates": {
+                    "x": 21.4,
+                    "y": 26.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -7.21756,
+                      "y": -8.37725,
+                      "z": 268.238
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-judgment-bolts-and-lightning-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004430",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 4879190,
+                  "coordinates": {
+                    "x": 25.5,
+                    "y": 17.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 198.296,
+                      "y": -29.8039,
+                      "z": -220.439
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-judgment-bolts-and-lightning-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-striking-tree",
+                  "zoneName": "The Striking Tree",
+                  "territoryId": "territory-375",
+                  "mapId": "map-166",
+                  "sourceLevelRowId": 5473423,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.656445,
+                      "y": 75.0916,
+                      "z": -0.214256
+                    },
+                    "mapGameId": "f1fb/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-judgment-bolts-and-lightning-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1007478",
+              "locations": [
+                {
+                  "zoneId": "the-waking-sands",
+                  "zoneName": "The Waking Sands",
+                  "territoryId": "territory-212",
+                  "mapId": "map-107",
+                  "sourceLevelRowId": 4330030,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.823,
+                      "y": -3,
+                      "z": -56.2248
+                    },
+                    "mapGameId": "w1e6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 2445
+          },
+          "duties": [
+            {
+              "id": "duty-78",
+              "name": "The Striking Tree (Extreme)",
+              "sourceRowId": 78,
+              "type": "extreme-trial",
+              "relationship": "unlocked",
+              "level": 50,
+              "minimumItemLevel": 85,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20023,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "extreme-trial",
+              "targetId": "duty-78",
+              "sourceRowId": 78,
+              "name": "The Striking Tree (Extreme)"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:26.252Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67066,
+              "internalId": "GaiUsd019_01530",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 6,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009294,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1000587,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004430,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SYMPATHY",
+                  "argument": 19,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20023,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1005163,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 945,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 954,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION2",
+                  "argument": 605,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION3",
+                  "argument": 953,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTOR_POS0",
+                  "argument": 4891556,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTION4",
+                  "argument": 962,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION5",
+                  "argument": 950,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 223,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_01",
+                  "argument": 66548,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_02",
+                  "argument": 66734,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_03",
+                  "argument": 66948,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_04",
+                  "argument": 66949,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_05",
+                  "argument": 65579,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_06",
+                  "argument": 65626,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_URI_CHECK_07",
+                  "argument": 68684,
+                  "referenceType": "script-value"
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20023,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "unlocked"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000587
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1007478
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1005163
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_POS0",
+                  "actorRowId": 4891556
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000587,
+                  "name": "Dellexia",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1007478,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1005163,
+                  "name": "Frixio",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_POS0",
+                  "actorRowId": 4891556
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 15
+        }
+      ]
+    }
+  ]
+}

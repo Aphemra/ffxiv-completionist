@@ -152,7 +152,7 @@ function createDutyUnlock(value: unknown): InterpretedQuestUnlock | undefined {
 }
 
 const supportedCollectibleItemActionRowIds = new Set<number>([
-  853, 1322, 2633, 3357, 20086, 25183, 37312,
+  853, 1322, 2633, 3357, 20086, 25183, 37312, 29459,
 ]);
 
 const chocoboBardingItemRowIds = new Set<number>([
@@ -251,6 +251,12 @@ function createCollectibleRewardUnlock(
       type = 'fashion-accessory';
       targetId = `fashion-accessory-${relatedRowId}`;
       notes = `Using ${itemName} unlocks this fashion accessory.`;
+      break;
+
+    case 29459:
+      type = 'framer-kit';
+      targetId = `framer-kit-${itemRowId}`;
+      notes = `Using ${itemName} unlocks this Framer's Kit.`;
       break;
 
     case 37312:

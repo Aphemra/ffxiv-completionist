@@ -1,0 +1,1774 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "bahamut-quests-quests",
+      "title": "The Binding Coil of Bahamut",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "bahamut-quests-side-story-primal-awakening-66695",
+          "name": "Primal Awakening",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66695
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66695,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T14:52:33.676Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "primal-quests-side-story-in-a-titan-spot-66694"
+          ],
+          "nextQuestIds": [
+            "bahamut-quests-side-story-alisaies-pledge-66696"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66694
+            ],
+            "instanceContentRowIds": [
+              20005
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-primal-awakening-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1007685",
+              "locations": [
+                {
+                  "zoneId": "eastern-la-noscea",
+                  "zoneName": "Eastern La Noscea",
+                  "territoryId": "territory-137",
+                  "mapId": "map-17",
+                  "sourceLevelRowId": 4332196,
+                  "coordinates": {
+                    "x": 21.1,
+                    "y": 21.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -18.5181,
+                      "y": 70.4813,
+                      "z": 17.772
+                    },
+                    "mapGameId": "s1f3/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-primal-awakening-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-2002609",
+              "locations": [
+                {
+                  "zoneId": "eastern-la-noscea",
+                  "zoneName": "Eastern La Noscea",
+                  "territoryId": "territory-137",
+                  "mapId": "map-17",
+                  "sourceLevelRowId": 4332170,
+                  "coordinates": {
+                    "x": 28.6,
+                    "y": 19.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 356.991,
+                      "y": 77.7431,
+                      "z": -99.8197
+                    },
+                    "mapGameId": "s1f3/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-primal-awakening-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "targetId": "actor-1007627",
+              "locations": [
+                {
+                  "zoneId": "eastern-la-noscea",
+                  "zoneName": "Eastern La Noscea",
+                  "territoryId": "territory-137",
+                  "mapId": "map-17",
+                  "sourceLevelRowId": 4323553,
+                  "coordinates": {
+                    "x": 21.8,
+                    "y": 22.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 13.2837,
+                      "y": 65.0388,
+                      "z": 43.8302
+                    },
+                    "mapGameId": "s1f3/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1659
+          },
+          "unlocks": [
+            {
+              "type": "raids",
+              "targetId": "duty-93",
+              "sourceRowId": 93,
+              "name": "the Binding Coil of Bahamut - Turn 1",
+              "notes": "Content Finder row 93."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:12:52.018Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66695,
+              "internalId": "GaiUsd101_01159",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Bahamut Quests",
+              "eventIconType": 8,
+              "sortKey": 1,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1007685,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2002609,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_PROCESS_UPPER_MIDDLE",
+                  "argument": 32,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1007627,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 118,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1007685
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1007627
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1007685,
+                  "name": "Alisaie",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1007627,
+                  "name": "J'brohka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66696
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "bahamut-quests-side-story-alisaies-pledge-66696",
+          "name": "Alisaie's Pledge",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66696
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66696,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T14:52:35.680Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "bahamut-quests-side-story-primal-awakening-66695"
+          ],
+          "nextQuestIds": [
+            "bahamut-quests-side-story-another-turn-in-the-coil-66849"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66695
+            ],
+            "instanceContentRowIds": [
+              30006
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-alisaies-pledge-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1007684",
+              "locations": [
+                {
+                  "zoneId": "the-waking-sands",
+                  "zoneName": "The Waking Sands",
+                  "territoryId": "territory-212",
+                  "mapId": "map-107",
+                  "sourceLevelRowId": 4332190,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.95137,
+                      "y": -3,
+                      "z": -55.0786
+                    },
+                    "mapGameId": "w1e6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 3752
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:12:52.018Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66696,
+              "internalId": "GaiUsd102_01160",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Bahamut Quests",
+              "eventIconType": 8,
+              "sortKey": 2,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1007684,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1008180,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 4330030,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 93,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_01",
+                  "argument": 376,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_02",
+                  "argument": 377,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_03",
+                  "argument": 386,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_04",
+                  "argument": 389,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_05",
+                  "argument": 390,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1007684
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1008180
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1007684,
+                  "name": "Alisaie",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1008180,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66849
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "bahamut-quests-side-story-another-turn-in-the-coil-66849",
+          "name": "Another Turn in the Coil",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66849
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66849,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T14:52:37.520Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "bahamut-quests-side-story-alisaies-pledge-66696"
+          ],
+          "nextQuestIds": [
+            "bahamut-quests-side-story-alisaies-resolve-66850"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66696
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-another-turn-in-the-coil-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1008538",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4618354,
+                  "coordinates": {
+                    "x": 20.8,
+                    "y": 27.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -35.2474,
+                      "y": -45.5453,
+                      "z": 295.385
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-another-turn-in-the-coil-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-1008539",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4618353,
+                  "coordinates": {
+                    "x": 16.8,
+                    "y": 30
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -236.732,
+                      "y": -75.7064,
+                      "z": 423.108
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-another-turn-in-the-coil-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "targetId": "actor-1008538",
+              "locations": [
+                {
+                  "zoneId": "north-shroud",
+                  "zoneName": "North Shroud",
+                  "territoryId": "territory-154",
+                  "mapId": "map-7",
+                  "sourceLevelRowId": 4618354,
+                  "coordinates": {
+                    "x": 20.8,
+                    "y": 27.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -35.2474,
+                      "y": -45.5453,
+                      "z": 295.385
+                    },
+                    "mapGameId": "f1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 2064
+          },
+          "unlocks": [
+            {
+              "type": "raids",
+              "targetId": "duty-98",
+              "sourceRowId": 98,
+              "name": "the Second Coil of Bahamut - Turn 1",
+              "notes": "Content Finder row 98."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:12:52.018Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66849,
+              "internalId": "GaiUsd301_01313",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Bahamut Quests",
+              "eventIconType": 8,
+              "sortKey": 3,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1008538,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1008539,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 190,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1004145,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1004146,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_CAM1",
+                  "argument": 4666843,
+                  "referenceType": "level"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1008538
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1008539
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1004145
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1004146
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1008538,
+                  "name": "Anaelle",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1008539,
+                  "name": "sharp-eyed serpent private",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1004145,
+                  "name": "Alphinaud",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1004146,
+                  "name": "Alisaie",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66850
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "bahamut-quests-side-story-alisaies-resolve-66850",
+          "name": "Alisaie's Resolve",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 66850
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66850,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T14:52:39.526Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1008540",
+            "npcName": "Alisaie",
+            "sourceRowId": 1008540,
+            "zoneId": "northern-thanalan",
+            "zoneName": "Northern Thanalan",
+            "coordinates": {
+              "x": 20.3,
+              "y": 17.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "bahamut-quests-side-story-another-turn-in-the-coil-66849"
+          ],
+          "nextQuestIds": [
+            "bahamut-quests-side-story-fragments-of-truth-65579"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66849
+            ],
+            "instanceContentRowIds": [
+              30010
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-alisaies-resolve-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-1007478",
+              "locations": [
+                {
+                  "zoneId": "the-waking-sands",
+                  "zoneName": "The Waking Sands",
+                  "territoryId": "territory-212",
+                  "mapId": "map-107",
+                  "sourceLevelRowId": 4330030,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.823,
+                      "y": -3,
+                      "z": -56.2248
+                    },
+                    "mapGameId": "w1e6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 3752
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:12:52.018Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66850,
+              "internalId": "GaiUsd302_01314",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Bahamut Quests",
+              "eventIconType": 8,
+              "sortKey": 4,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1008540,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1004145,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1004146,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 4667120,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 4667123,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 93,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_FOREST_1",
+                  "argument": 491,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_FOREST_2",
+                  "argument": 492,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_01",
+                  "argument": 477,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_02",
+                  "argument": 480,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_03",
+                  "argument": 485,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_04",
+                  "argument": 489,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1007478
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1004145
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1004146
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1007478,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1004145,
+                  "name": "Alphinaud",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1004146,
+                  "name": "Alisaie",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65579
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "bahamut-quests-side-story-fragments-of-truth-65579",
+          "name": "Fragments of Truth",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65579
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65579,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T14:52:41.290Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1007478",
+            "npcName": "Urianger",
+            "sourceRowId": 1007478,
+            "zoneId": "the-waking-sands",
+            "zoneName": "The Waking Sands",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "bahamut-quests-side-story-alisaies-resolve-66850"
+          ],
+          "nextQuestIds": [
+            "bahamut-quests-side-story-alisaies-path-65580"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66850
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-fragments-of-truth-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009769",
+              "locations": [
+                {
+                  "zoneId": "eastern-thanalan",
+                  "zoneName": "Eastern Thanalan",
+                  "territoryId": "territory-145",
+                  "mapId": "map-22",
+                  "sourceLevelRowId": 4999847,
+                  "coordinates": {
+                    "x": 30.1,
+                    "y": 24.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 430.692,
+                      "y": 3.26474,
+                      "z": 171.6
+                    },
+                    "mapGameId": "w1f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-fragments-of-truth-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 5335723,
+                  "coordinates": {
+                    "x": 31.1,
+                    "y": 5.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 479.991,
+                      "y": -17.6177,
+                      "z": -805.389
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-fragments-of-truth-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009771",
+              "locations": [
+                {
+                  "zoneId": "northern-thanalan",
+                  "zoneName": "Northern Thanalan",
+                  "territoryId": "territory-147",
+                  "mapId": "map-24",
+                  "sourceLevelRowId": 4999993,
+                  "coordinates": {
+                    "x": 20.1,
+                    "y": 20.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -71.5928,
+                      "y": 48.9481,
+                      "z": -52.037
+                    },
+                    "mapGameId": "w1f5/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-fragments-of-truth-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009772",
+              "locations": [
+                {
+                  "zoneId": "northern-thanalan",
+                  "zoneName": "Northern Thanalan",
+                  "territoryId": "territory-147",
+                  "mapId": "map-24",
+                  "sourceLevelRowId": 4999997,
+                  "coordinates": {
+                    "x": 20.2,
+                    "y": 17.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -67.1245,
+                      "y": 71.2748,
+                      "z": -190.936
+                    },
+                    "mapGameId": "w1f5/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-fragments-of-truth-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009768",
+              "locations": [
+                {
+                  "zoneId": "northern-thanalan",
+                  "zoneName": "Northern Thanalan",
+                  "territoryId": "territory-147",
+                  "mapId": "map-24",
+                  "sourceLevelRowId": 5000230,
+                  "coordinates": {
+                    "x": 19.4,
+                    "y": 20.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -103.854,
+                      "y": 51.8695,
+                      "z": -58.3615
+                    },
+                    "mapGameId": "w1f5/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1018
+          },
+          "unlocks": [
+            {
+              "type": "raids",
+              "targetId": "duty-107",
+              "sourceRowId": 107,
+              "name": "the Final Coil of Bahamut - Turn 1",
+              "notes": "Content Finder row 107."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:12:52.018Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65579,
+              "internalId": "GaiUsd501_00043",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Bahamut Quests",
+              "eventIconType": 8,
+              "sortKey": 5,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1007478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1009769,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1009770,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_ACTION_RESCUE_UPPER_MIDDLE",
+                  "argument": 39,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1009771,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1010765,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1009772,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1009773,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004607,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1009774,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1009775,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1009768,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DUNGEON",
+                  "argument": 257,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+                  "argument": 3702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJECT0",
+                  "argument": 2004609,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1004145,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1004146,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1008180,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "FACIAL_SPEWING",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_POS_CAM1",
+                  "argument": 5349079,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_CAM2",
+                  "argument": 5358070,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "FACIAL_F_SORRY",
+                  "argument": 613,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR3",
+                  "argument": 1009768,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 1002,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_TALKSHAPE1",
+                  "argument": 6,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE1",
+                  "argument": 42,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EMOTE_LOOKOUT_ADD",
+                  "argument": 665,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "FACIAL_WHAT",
+                  "argument": 619,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "FACIAL_SMILE",
+                  "argument": 605,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_ARMS",
+                  "argument": 1041,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJECT0_POS",
+                  "argument": 5000001,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 4999998,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_POS_CAM3",
+                  "argument": 5375026,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "FACIAL_ANGRY_STRONG",
+                  "argument": 610,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EMOTE_ANGRY_ADD",
+                  "argument": 639,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_EVENT_FUAN01",
+                  "argument": 130,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_FIELD_SANDHOME_01",
+                  "argument": 66,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_EVENT_THEME_FACE_WAR",
+                  "argument": 83,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_EVENT_THEME_SECRET",
+                  "argument": 97,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_BASE_KNEE_SUFFERING",
+                  "argument": 936,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009769
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1009770
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1009771
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010765
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1009772
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1009773
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1009774
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1009775
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1009768
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1004145
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1004146
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1008180
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1009768
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009769,
+                  "name": "Alisaie's assistant",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1009770,
+                  "name": "Alisaie's assistant",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1009771,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010765,
+                  "name": "Alisaie's assistant",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1009772,
+                  "name": "Alisaie",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1009773,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1009774
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1009775
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1009768,
+                  "name": "Erkenrad",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1004145,
+                  "name": "Alphinaud",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1004146,
+                  "name": "Alisaie",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1008180,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1009768,
+                  "name": "Erkenrad",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65580
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "bahamut-quests-side-story-alisaies-path-65580",
+          "name": "Alisaie's Path",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 50,
+          "externalIds": {
+            "xivapi-quest-row": 65580
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65580,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T14:52:43.767Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009777",
+            "npcName": "Alisaie",
+            "sourceRowId": 1009777,
+            "zoneId": "northern-thanalan",
+            "zoneName": "Northern Thanalan",
+            "coordinates": {
+              "x": 20.3,
+              "y": 17.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "bahamut-quests-side-story-fragments-of-truth-65579"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65579
+            ],
+            "instanceContentRowIds": [
+              30019
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 50
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-alisaies-path-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009771",
+              "locations": [
+                {
+                  "zoneId": "northern-thanalan",
+                  "zoneName": "Northern Thanalan",
+                  "territoryId": "territory-147",
+                  "mapId": "map-24",
+                  "sourceLevelRowId": 4999993,
+                  "coordinates": {
+                    "x": 20.1,
+                    "y": 20.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -71.5928,
+                      "y": 48.9481,
+                      "z": -52.037
+                    },
+                    "mapGameId": "w1f5/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 5000
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:12:52.018Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65580,
+              "internalId": "GaiUsd502_00044",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Bahamut Quests",
+              "eventIconType": 8,
+              "sortKey": 6,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009777,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1009776,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1009771,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "NCUT_EVENT_GAIUSD502_1",
+                  "argument": 640,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_EVENT_GAIUSD502_2",
+                  "argument": 641,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_WILD_1",
+                  "argument": 635,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_WILD_2",
+                  "argument": 636,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_WILD_3",
+                  "argument": 637,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_01",
+                  "argument": 631,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_02",
+                  "argument": 632,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_03",
+                  "argument": 633,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_04",
+                  "argument": 634,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_05",
+                  "argument": 638,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_QREDO_06",
+                  "argument": 639,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009776
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1009771
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009776,
+                  "name": "Alphinaud",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1009771,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 6
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3935 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "warring-triad-quests-quests",
+      "title": "The Warring Triad Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "warring-triad-quests-side-story-gods-of-eld-67650",
+          "name": "Gods of Eld",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67650
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67650,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:30.754Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1012217",
+            "npcName": "Torsefers",
+            "sourceRowId": 1012217,
+            "zoneId": "the-pillars",
+            "zoneName": "The Pillars",
+            "coordinates": {
+              "x": 11.8,
+              "y": 11.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "warring-triad-quests-side-story-the-diabolical-bismarck-67651",
+            "warring-triad-quests-side-story-thok-around-the-clock-67652",
+            "warring-triad-quests-side-story-when-the-bough-wakes-67766"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67205
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-gods-of-eld-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2006287",
+              "locations": [
+                {
+                  "zoneId": "the-rising-stones",
+                  "zoneName": "The Rising Stones",
+                  "territoryId": "territory-351",
+                  "mapId": "map-136",
+                  "sourceLevelRowId": 5921870,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.0248239,
+                      "y": -1.99573,
+                      "z": -40.9014
+                    },
+                    "mapGameId": "l1e1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 5000
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67650,
+              "internalId": "HeaVny201_02114",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16001,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1012217,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2006287,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_WAITING2_MIDDLE",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1014566,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR1",
+                  "argument": 1008180,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 39,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  67651,
+                  67652,
+                  67766
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "warring-triad-quests-side-story-the-diabolical-bismarck-67651",
+          "name": "The Diabolical Bismarck",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67651
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67651,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:32.252Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1014565",
+            "npcName": "Unukalhai",
+            "sourceRowId": 1014565,
+            "zoneId": "the-rising-stones",
+            "zoneName": "The Rising Stones",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "warring-triad-quests-side-story-gods-of-eld-67650"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67205,
+              67650
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001810",
+              "itemName": "Weeping Eye of the Manukmanai",
+              "sourceRowId": 2001810,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-diabolical-bismarck-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1012064",
+              "locations": [
+                {
+                  "zoneId": "the-sea-of-clouds",
+                  "zoneName": "The Sea of Clouds",
+                  "territoryId": "territory-401",
+                  "mapId": "map-215",
+                  "sourceLevelRowId": 5814369,
+                  "coordinates": {
+                    "x": 11.7,
+                    "y": 14.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -542.773,
+                      "y": -37.1163,
+                      "z": -386.685
+                    },
+                    "mapGameId": "a2f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-diabolical-bismarck-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1014623",
+              "locations": [
+                {
+                  "zoneId": "the-sea-of-clouds",
+                  "zoneName": "The Sea of Clouds",
+                  "territoryId": "territory-401",
+                  "mapId": "map-215",
+                  "sourceLevelRowId": 5938129,
+                  "coordinates": {
+                    "x": 6.4,
+                    "y": 25.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -808.861,
+                      "y": -57.7616,
+                      "z": 159.57
+                    },
+                    "mapGameId": "a2f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-diabolical-bismarck-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-sea-of-clouds",
+                  "zoneName": "The Sea of Clouds",
+                  "territoryId": "territory-401",
+                  "mapId": "map-215",
+                  "sourceLevelRowId": 5921846,
+                  "coordinates": {
+                    "x": 29.7,
+                    "y": 27.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 357.966,
+                      "y": 129.169,
+                      "z": 255.656
+                    },
+                    "mapGameId": "a2f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-the-diabolical-bismarck-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-limitless-blue",
+                  "zoneName": "The Limitless Blue",
+                  "territoryId": "territory-447",
+                  "mapId": "map-407",
+                  "sourceLevelRowId": 5921913,
+                  "coordinates": {
+                    "x": 5.8,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -14.8266,
+                      "y": 0,
+                      "z": 0.1435
+                    },
+                    "mapGameId": "a2fa/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-the-diabolical-bismarck-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1012064",
+              "locations": [
+                {
+                  "zoneId": "the-sea-of-clouds",
+                  "zoneName": "The Sea of Clouds",
+                  "territoryId": "territory-401",
+                  "mapId": "map-215",
+                  "sourceLevelRowId": 5814369,
+                  "coordinates": {
+                    "x": 11.7,
+                    "y": 14.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -542.773,
+                      "y": -37.1163,
+                      "z": -386.685
+                    },
+                    "mapGameId": "a2f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-the-diabolical-bismarck-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1014565",
+              "targetName": "Unukalhai",
+              "locations": [
+                {
+                  "zoneId": "the-rising-stones",
+                  "zoneName": "The Rising Stones",
+                  "territoryId": "territory-351",
+                  "mapId": "map-136",
+                  "sourceLevelRowId": 5921043,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.45971,
+                      "y": -1.99573,
+                      "z": -43.2109
+                    },
+                    "mapGameId": "l1e1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 5000
+          },
+          "duties": [
+            {
+              "id": "duty-89",
+              "name": "The Limitless Blue (Extreme)",
+              "sourceRowId": 89,
+              "type": "extreme-trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 165,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20034,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67651,
+              "internalId": "HeaVny202_02115",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16101,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1014565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001810,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1012064,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1014623,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2006411,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2006288,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SYMPATHY",
+                  "argument": 19,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 315,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_HEAVNY_203",
+                  "argument": 67652,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_AND_DPS",
+                  "argument": 3710,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DPS_CHALLENGE_OPEN_QUEST",
+                  "argument": 67654,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001810,
+                  "itemId": "event-item-2001810",
+                  "name": "Weeping Eye of the Manukmanai",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 20244,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20034,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1012064
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1014623
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 5010000
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1012064,
+                  "name": "Sonu Vanu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1014623,
+                  "name": "Cid",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 5010000
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "warring-triad-quests-side-story-thok-around-the-clock-67652",
+          "name": "Thok Around the Clock",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67652
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67652,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:35.129Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1014565",
+            "npcName": "Unukalhai",
+            "sourceRowId": 1014565,
+            "zoneId": "the-rising-stones",
+            "zoneName": "The Rising Stones",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "warring-triad-quests-side-story-gods-of-eld-67650"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67205,
+              67650
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001811",
+              "itemName": "Burning Eye of Ravana",
+              "sourceRowId": 2001811,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-thok-around-the-clock-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1011928",
+              "locations": [
+                {
+                  "zoneId": "the-dravanian-forelands",
+                  "zoneName": "The Dravanian Forelands",
+                  "territoryId": "territory-398",
+                  "mapId": "map-212",
+                  "sourceLevelRowId": 5802613,
+                  "coordinates": {
+                    "x": 24,
+                    "y": 19.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 73.2041,
+                      "y": -49.1958,
+                      "z": -139.04
+                    },
+                    "mapGameId": "d2f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-thok-around-the-clock-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-dravanian-forelands",
+                  "zoneName": "The Dravanian Forelands",
+                  "territoryId": "territory-398",
+                  "mapId": "map-212",
+                  "sourceLevelRowId": 5921856,
+                  "coordinates": {
+                    "x": 27.8,
+                    "y": 40.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 260.267,
+                      "y": -120.067,
+                      "z": 917.301
+                    },
+                    "mapGameId": "d2f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-thok-around-the-clock-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "thok-ast-thok",
+                  "zoneName": "Thok ast Thok",
+                  "territoryId": "territory-446",
+                  "mapId": "map-404",
+                  "sourceLevelRowId": 5921920,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.217894,
+                      "y": -0.375932,
+                      "z": -0.0183265
+                    },
+                    "mapGameId": "d2fa/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-thok-around-the-clock-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1011928",
+              "locations": [
+                {
+                  "zoneId": "the-dravanian-forelands",
+                  "zoneName": "The Dravanian Forelands",
+                  "territoryId": "territory-398",
+                  "mapId": "map-212",
+                  "sourceLevelRowId": 5802613,
+                  "coordinates": {
+                    "x": 24,
+                    "y": 19.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 73.2041,
+                      "y": -49.1958,
+                      "z": -139.04
+                    },
+                    "mapGameId": "d2f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-thok-around-the-clock-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1014565",
+              "targetName": "Unukalhai",
+              "locations": [
+                {
+                  "zoneId": "the-rising-stones",
+                  "zoneName": "The Rising Stones",
+                  "territoryId": "territory-351",
+                  "mapId": "map-136",
+                  "sourceLevelRowId": 5921043,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.45971,
+                      "y": -1.99573,
+                      "z": -43.2109
+                    },
+                    "mapGameId": "l1e1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 5000
+          },
+          "duties": [
+            {
+              "id": "duty-87",
+              "name": "Thok ast Thok (Extreme)",
+              "sourceRowId": 87,
+              "type": "extreme-trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 175,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20032,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67652,
+              "internalId": "HeaVny203_02116",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16102,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1014565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001811,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1011928,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2006289,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SYMPATHY",
+                  "argument": 19,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20032,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 313,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_HEAVNY_202",
+                  "argument": 67651,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001811,
+                  "itemId": "event-item-2001811",
+                  "name": "Burning Eye of Ravana",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 20248,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20032,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1011928
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1011928,
+                  "name": "Vath storyteller",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "warring-triad-quests-side-story-when-the-bough-wakes-67766",
+          "name": "When the Bough Wakes",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67766
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67766,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:37.892Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1014565",
+            "npcName": "Unukalhai",
+            "sourceRowId": 1014565,
+            "zoneId": "the-rising-stones",
+            "zoneName": "The Rising Stones",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "warring-triad-quests-side-story-gods-of-eld-67650"
+          ],
+          "nextQuestIds": [
+            "warring-triad-quests-side-story-a-fiendish-likeness-67817",
+            "warring-triad-quests-side-story-the-fate-of-stars-67824"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67650,
+              67699
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-when-the-bough-wakes-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1016631",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 6250731,
+                  "coordinates": {
+                    "x": 26.8,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 209.153,
+                      "y": 256.373,
+                      "z": -4.3624
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-when-the-bough-wakes-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "containment-bay-s1t7",
+                  "zoneName": "Containment Bay S1T7",
+                  "territoryId": "territory-517",
+                  "mapId": "map-283",
+                  "sourceLevelRowId": 6203634,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.00663662,
+                      "y": 0.0433807,
+                      "z": -0.00873947
+                    },
+                    "mapGameId": "a2fd/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-when-the-bough-wakes-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 10187277,
+                  "coordinates": {
+                    "x": 27.3,
+                    "y": 22.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 234.956,
+                      "y": 253.418,
+                      "z": -0.273104
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-when-the-bough-wakes-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1014565",
+              "targetName": "Unukalhai",
+              "locations": [
+                {
+                  "zoneId": "the-rising-stones",
+                  "zoneName": "The Rising Stones",
+                  "territoryId": "territory-351",
+                  "mapId": "map-136",
+                  "sourceLevelRowId": 5921043,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.45971,
+                      "y": -1.99573,
+                      "z": -43.2109
+                    },
+                    "mapGameId": "l1e1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 3722
+          },
+          "duties": [
+            {
+              "id": "duty-134",
+              "name": "Containment Bay S1T7",
+              "sourceRowId": 134,
+              "type": "trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 190,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20037,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67766,
+              "internalId": "HeaVny211_02230",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16002,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1014565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1016631,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20037,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 6250161,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE1",
+                  "argument": 6215485,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1016633,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1016632,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1016634,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1016760,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR3",
+                  "argument": 1008180,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR4",
+                  "argument": 1011889,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR5",
+                  "argument": 1015833,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR6",
+                  "argument": 1011863,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 6211051,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUT_SCENE_N_01",
+                  "argument": 1164,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20037,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_POINT",
+                  "argument": 720,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_GOODBYE",
+                  "argument": 705,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_FACIAL_01",
+                  "argument": 611,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_FACIAL_02",
+                  "argument": 605,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_THINK",
+                  "argument": 669,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_ME",
+                  "argument": 715,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_BOW",
+                  "argument": 694,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_MUSIC_0",
+                  "argument": 85,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_1",
+                  "argument": 114,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_2",
+                  "argument": 97,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 377,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 39,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACT_EVENT_LINK",
+                  "argument": 1002,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER0",
+                  "argument": 6250160,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_THINK",
+                  "argument": 736,
+                  "referenceType": "action"
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20037,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1016631
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1016633
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1016632
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1016634
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1016760
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1008180
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1011889
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR5",
+                  "actorRowId": 1015833
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR6",
+                  "actorRowId": 1011863
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1016631,
+                  "name": "Unukalhai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1016633,
+                  "name": "verification node",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1016632,
+                  "name": "Unukalhai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1016634,
+                  "name": "verification node",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1016760,
+                  "name": "Krile",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1008180,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1011889,
+                  "name": "Y'shtola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR5",
+                  "actorRowId": 1015833,
+                  "name": "Krile",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR6",
+                  "actorRowId": 1011863,
+                  "name": "Regula van Hydrus",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  67817,
+                  67824
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "warring-triad-quests-side-story-a-fiendish-likeness-67817",
+          "name": "A Fiendish Likeness",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67817
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67817,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:41.163Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1014565",
+            "npcName": "Unukalhai",
+            "sourceRowId": 1014565,
+            "zoneId": "the-rising-stones",
+            "zoneName": "The Rising Stones",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "warring-triad-quests-side-story-when-the-bough-wakes-67766"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67766
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001969",
+              "itemName": "Allagan Tomestone of Theology",
+              "sourceRowId": 2001969,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-fiendish-likeness-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1016633",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 6211051,
+                  "coordinates": {
+                    "x": 25.6,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 152.292,
+                      "y": 245.1,
+                      "z": -6.26253
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 934
+          },
+          "duties": [
+            {
+              "id": "duty-135",
+              "name": "Containment Bay S1T7 (Extreme)",
+              "sourceRowId": 135,
+              "type": "extreme-trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 205,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20038,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "trials",
+              "targetId": "duty-135",
+              "sourceRowId": 135,
+              "name": "Containment Bay S1T7 (Extreme)",
+              "notes": "Content Finder row 135."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67817,
+              "internalId": "HeaVny212_02281",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16103,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1014565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001969,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1016633,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20038,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 378,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_AND_DPS",
+                  "argument": 3710,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DPS_CHALLENGE_OPEN_QUEST",
+                  "argument": 67654,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_RF",
+                  "argument": 3726,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_RF_AND_DPS",
+                  "argument": 3727,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001969,
+                  "itemId": "event-item-2001969",
+                  "name": "Allagan Tomestone of Theology",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25931,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20038,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1016633
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1016633,
+                  "name": "verification node",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "warring-triad-quests-side-story-the-fate-of-stars-67824",
+          "name": "The Fate of Stars",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67824
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67824,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:43.392Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1014565",
+            "npcName": "Unukalhai",
+            "sourceRowId": 1014565,
+            "zoneId": "the-rising-stones",
+            "zoneName": "The Rising Stones",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "warring-triad-quests-side-story-when-the-bough-wakes-67766"
+          ],
+          "nextQuestIds": [
+            "warring-triad-quests-side-story-balance-unto-all-67868"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67766
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-fate-of-stars-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1017115",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 6244278,
+                  "coordinates": {
+                    "x": 21.4,
+                    "y": 22.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -59.6476,
+                      "y": 271.229,
+                      "z": 4.01312
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-fate-of-stars-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2005564",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 5889597,
+                  "coordinates": {
+                    "x": 21.4,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -58.1048,
+                      "y": 271.229,
+                      "z": -4.0995
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-fate-of-stars-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 10202323,
+                  "coordinates": {
+                    "x": 21.3,
+                    "y": 22.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -62.069,
+                      "y": 271.233,
+                      "z": 0.0543514
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-the-fate-of-stars-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1017167",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 6255140,
+                  "coordinates": {
+                    "x": 21.2,
+                    "y": 22.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -66.9092,
+                      "y": 271.229,
+                      "z": 4.01312
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-the-fate-of-stars-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1014565",
+              "targetName": "Unukalhai",
+              "locations": [
+                {
+                  "zoneId": "the-rising-stones",
+                  "zoneName": "The Rising Stones",
+                  "territoryId": "territory-351",
+                  "mapId": "map-136",
+                  "sourceLevelRowId": 5921043,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.45971,
+                      "y": -1.99573,
+                      "z": -43.2109
+                    },
+                    "mapGameId": "l1e1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1935
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67824,
+              "internalId": "HeaVny221_02288",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16003,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1014565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1017115,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2005564,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 560,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 5002,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2007308,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "TERRITORYTYPE1",
+                  "argument": 402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1017167,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1016760,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1011889,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1016779,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR3",
+                  "argument": 1011863,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "CUT_SCENE_N_01",
+                  "argument": 1214,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACT_EVENT_LINK",
+                  "argument": 1002,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SE_EVENT_LINK",
+                  "argument": 42,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_POINT",
+                  "argument": 720,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_GOODBYE",
+                  "argument": 705,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_GOODBYE_ST",
+                  "argument": 706,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_THINK",
+                  "argument": 669,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_ME",
+                  "argument": 715,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_BOW",
+                  "argument": 694,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_HUH",
+                  "argument": 707,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_SHOCKED",
+                  "argument": 729,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "BIND_OBJ0",
+                  "argument": 2007021,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_0",
+                  "argument": 85,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_1",
+                  "argument": 83,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_2",
+                  "argument": 97,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 6244281,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 121,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 120,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_BASE_THINK",
+                  "argument": 4193,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EMOTE_LAUGH",
+                  "argument": 685,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_EAT",
+                  "argument": 963,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_SE2",
+                  "argument": 122,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INVIS_ENPC_0",
+                  "argument": 1015104,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INVIS_ENPC_1",
+                  "argument": 1015105,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1017115
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1017167
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1016760
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1011889
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1016779
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1011863
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1017115,
+                  "name": "Unukalhai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1017167,
+                  "name": "Unukalhai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1016760,
+                  "name": "Krile",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1011889,
+                  "name": "Y'shtola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1016779,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1011863,
+                  "name": "Regula van Hydrus",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  67868
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "warring-triad-quests-side-story-balance-unto-all-67868",
+          "name": "Balance unto All",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67868
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67868,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:45.143Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1014565",
+            "npcName": "Unukalhai",
+            "sourceRowId": 1014565,
+            "zoneId": "the-rising-stones",
+            "zoneName": "The Rising Stones",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "warring-triad-quests-side-story-the-fate-of-stars-67824"
+          ],
+          "nextQuestIds": [
+            "warring-triad-quests-side-story-a-deific-simulacrum-67869",
+            "warring-triad-quests-side-story-the-last-pillar-to-fall-67930"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67824
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-balance-unto-all-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1017674",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 6425138,
+                  "coordinates": {
+                    "x": 26.8,
+                    "y": 22.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 210.009,
+                      "y": 256.373,
+                      "z": 5.92442
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-balance-unto-all-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "containment-bay-p1t6",
+                  "zoneName": "Containment Bay P1T6",
+                  "territoryId": "territory-576",
+                  "mapId": "map-334",
+                  "sourceLevelRowId": 6425416,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.00826073,
+                      "y": 0.592464,
+                      "z": -0.547834
+                    },
+                    "mapGameId": "a2fe/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-balance-unto-all-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 10187747,
+                  "coordinates": {
+                    "x": 25.7,
+                    "y": 22.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 157.073,
+                      "y": 244.122,
+                      "z": 0.0490816
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-balance-unto-all-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1014565",
+              "targetName": "Unukalhai",
+              "locations": [
+                {
+                  "zoneId": "the-rising-stones",
+                  "zoneName": "The Rising Stones",
+                  "territoryId": "territory-351",
+                  "mapId": "map-136",
+                  "sourceLevelRowId": 5921043,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.45971,
+                      "y": -1.99573,
+                      "z": -43.2109
+                    },
+                    "mapGameId": "l1e1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 5000
+          },
+          "duties": [
+            {
+              "id": "duty-183",
+              "name": "Containment Bay P1T6",
+              "sourceRowId": 183,
+              "type": "trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 220,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20041,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67868,
+              "internalId": "HeaVny231_02332",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16004,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1014565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1017674,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20041,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 6425149,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE1",
+                  "argument": 6425158,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 448,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_01",
+                  "argument": 1272,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1016758,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1016760,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1016779,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR3",
+                  "argument": 1016632,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 39,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE2",
+                  "argument": 135,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER0",
+                  "argument": 6427260,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER1",
+                  "argument": 6425158,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 6211051,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_0",
+                  "argument": 78,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_1",
+                  "argument": 97,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MUSIC_2",
+                  "argument": 65,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "FACIAL_FREEZE",
+                  "argument": 615,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "FACIAL_SPEWING",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_ACTION_TOUCH_ACTION_LOOP",
+                  "argument": 173,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EVENT_ACTION_TOUCH_ACTION_START",
+                  "argument": 172,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EVENT_ACTION_TALK_FINGER",
+                  "argument": 4194,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTOR4",
+                  "argument": 1016634,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MARKER2",
+                  "argument": 6536243,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1011887,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 1017687,
+                  "referenceType": "actor"
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20041,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1017674
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1016758
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1016760
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1016779
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1016632
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1016634
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1011887
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1017687
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1017674,
+                  "name": "Unukalhai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1016758,
+                  "name": "Y'shtola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1016760,
+                  "name": "Krile",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1016779,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1016632,
+                  "name": "Unukalhai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1016634,
+                  "name": "verification node",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1011887,
+                  "name": "Alphinaud",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1017687,
+                  "name": "Alisaie",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  67869,
+                  67930
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        },
+        {
+          "id": "warring-triad-quests-side-story-a-deific-simulacrum-67869",
+          "name": "A Deific Simulacrum",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67869
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67869,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:48.793Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1014565",
+            "npcName": "Unukalhai",
+            "sourceRowId": 1014565,
+            "zoneId": "the-rising-stones",
+            "zoneName": "The Rising Stones",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "warring-triad-quests-side-story-balance-unto-all-67868"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67868
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2002009",
+              "itemName": "Allagan Tomestone of Divinity",
+              "sourceRowId": 2002009,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-deific-simulacrum-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1016633",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 6211051,
+                  "coordinates": {
+                    "x": 25.6,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 152.292,
+                      "y": 245.1,
+                      "z": -6.26253
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 934
+          },
+          "duties": [
+            {
+              "id": "duty-184",
+              "name": "Containment Bay P1T6 (Extreme)",
+              "sourceRowId": 184,
+              "type": "extreme-trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 235,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20042,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "trials",
+              "targetId": "duty-184",
+              "sourceRowId": 184,
+              "name": "Containment Bay P1T6 (Extreme)",
+              "notes": "Content Finder row 184."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67869,
+              "internalId": "HeaVny232_02333",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16104,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1014565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2002009,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1016633,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20042,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 449,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_AND_DPS",
+                  "argument": 3710,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DPS_CHALLENGE_OPEN_QUEST",
+                  "argument": 67654,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_RF",
+                  "argument": 3726,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_RF_AND_DPS",
+                  "argument": 3727,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2002009,
+                  "itemId": "event-item-2002009",
+                  "name": "Allagan Tomestone of Divinity",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25931,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20042,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1016633
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1016633,
+                  "name": "verification node",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 8
+        },
+        {
+          "id": "warring-triad-quests-side-story-the-last-pillar-to-fall-67930",
+          "name": "The Last Pillar to Fall",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67930
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67930,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:51.142Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1014565",
+            "npcName": "Unukalhai",
+            "sourceRowId": 1014565,
+            "zoneId": "the-rising-stones",
+            "zoneName": "The Rising Stones",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "warring-triad-quests-side-story-balance-unto-all-67868"
+          ],
+          "nextQuestIds": [
+            "warring-triad-quests-side-story-a-demonic-duplicate-67931"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67868
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-last-pillar-to-fall-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2007560",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 6584553,
+                  "coordinates": {
+                    "x": 26.9,
+                    "y": 22.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 216.115,
+                      "y": 256.373,
+                      "z": 10.7637
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-last-pillar-to-fall-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1017675",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 6584551,
+                  "coordinates": {
+                    "x": 25.5,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 148.126,
+                      "y": 245.1,
+                      "z": -4.14637
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-last-pillar-to-fall-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "central-azys-lla",
+                  "zoneName": "Central Azys Lla",
+                  "territoryId": "territory-507",
+                  "mapId": "map-261",
+                  "sourceLevelRowId": 5963435,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.0627327,
+                      "y": 0,
+                      "z": 0.034964
+                    },
+                    "mapGameId": "a2e2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-the-last-pillar-to-fall-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1018511",
+              "locations": [
+                {
+                  "zoneId": "central-azys-lla",
+                  "zoneName": "Central Azys Lla",
+                  "territoryId": "territory-507",
+                  "mapId": "map-261",
+                  "sourceLevelRowId": 6606350,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.42236,
+                      "y": 0,
+                      "z": 5.28131
+                    },
+                    "mapGameId": "a2e2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-the-last-pillar-to-fall-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "containment-bay-z1t9",
+                  "zoneName": "Containment Bay Z1T9",
+                  "territoryId": "territory-637",
+                  "mapId": "map-353",
+                  "sourceLevelRowId": 6639205,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.0429675,
+                      "y": 0,
+                      "z": 0.13307
+                    },
+                    "mapGameId": "a2fg/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-the-last-pillar-to-fall-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 10187818,
+                  "coordinates": {
+                    "x": 25.7,
+                    "y": 22.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 157.073,
+                      "y": 244.122,
+                      "z": 0.0491
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-the-last-pillar-to-fall-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1014565",
+              "targetName": "Unukalhai",
+              "locations": [
+                {
+                  "zoneId": "the-rising-stones",
+                  "zoneName": "The Rising Stones",
+                  "territoryId": "territory-351",
+                  "mapId": "map-136",
+                  "sourceLevelRowId": 5921043,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 5.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 0.45971,
+                      "y": -1.99573,
+                      "z": -43.2109
+                    },
+                    "mapGameId": "l1e1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 5000
+          },
+          "duties": [
+            {
+              "id": "duty-183",
+              "name": "Containment Bay P1T6",
+              "sourceRowId": 183,
+              "type": "trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 220,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20041,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-223",
+              "name": "Containment Bay Z1T9",
+              "sourceRowId": 223,
+              "type": "trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 235,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20043,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67930,
+              "internalId": "HeaVny241_02394",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16005,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1014565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2007560,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 11,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20041,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 6584552,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1017675,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE1",
+                  "argument": 6588680,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 507,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1016633,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1018511,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON1",
+                  "argument": 20043,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE2",
+                  "argument": 6588687,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1018446,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1018447,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1018512,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1018513,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1018514,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1018515,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2006421,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "TERRITORYTYPE1",
+                  "argument": 402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR11",
+                  "argument": 1018707,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1016758,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1016760,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1016779,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR3",
+                  "argument": 1016632,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR4",
+                  "argument": 1011863,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR5",
+                  "argument": 1012927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR6",
+                  "argument": 1012929,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MARKER0",
+                  "argument": 6586970,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER1",
+                  "argument": 6621268,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 473,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_01",
+                  "argument": 1350,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_02",
+                  "argument": 1351,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUEST0",
+                  "argument": 67885,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_CORPSE",
+                  "argument": 4304,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_GIRD_UP",
+                  "argument": 1022,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_KNEEL",
+                  "argument": 4199,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_TIMELINE_EVENT_HURT",
+                  "argument": 4204,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_BGM_01",
+                  "argument": 76,
+                  "referenceType": "script-value"
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20041,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 20043,
+                  "sourceInstruction": "INSTANCEDUNGEON1",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1017675
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1016633
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1018511
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1018446
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1018447
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1018512
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1018513
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1018514
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1018515
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1018707
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1016758
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1016760
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1016779
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1016632
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1011863
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR5",
+                  "actorRowId": 1012927
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR6",
+                  "actorRowId": 1012929
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1017675,
+                  "name": "Unukalhai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1016633,
+                  "name": "verification node",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1018511,
+                  "name": "Unukalhai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1018446,
+                  "name": "6th Legion decurion",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1018447,
+                  "name": "6th Legion soldier",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1018512,
+                  "name": "Y'shtola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1018513,
+                  "name": "Krile",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1018514,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1018515
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1018707,
+                  "name": "Krile",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1016758,
+                  "name": "Y'shtola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1016760,
+                  "name": "Krile",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1016779,
+                  "name": "Urianger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1016632,
+                  "name": "Unukalhai",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR4",
+                  "actorRowId": 1011863,
+                  "name": "Regula van Hydrus",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR5",
+                  "actorRowId": 1012927
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR6",
+                  "actorRowId": 1012929
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  67931
+                ]
+              }
+            }
+          },
+          "sortOrder": 9
+        },
+        {
+          "id": "warring-triad-quests-side-story-a-demonic-duplicate-67931",
+          "name": "A Demonic Duplicate",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 60,
+          "externalIds": {
+            "xivapi-quest-row": 67931
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67931,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:07:55.835Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1014565",
+            "npcName": "Unukalhai",
+            "sourceRowId": 1014565,
+            "zoneId": "the-rising-stones",
+            "zoneName": "The Rising Stones",
+            "coordinates": {
+              "x": 6.1,
+              "y": 5.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "warring-triad-quests-side-story-the-last-pillar-to-fall-67930"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              67930
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 60
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2002033",
+              "itemName": "Allagan Tomestone of Eikonology",
+              "sourceRowId": 2002033,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-demonic-duplicate-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1016633",
+              "locations": [
+                {
+                  "zoneId": "azys-lla",
+                  "zoneName": "Azys Lla",
+                  "territoryId": "territory-402",
+                  "mapId": "map-216",
+                  "sourceLevelRowId": 6211051,
+                  "coordinates": {
+                    "x": 25.6,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 152.292,
+                      "y": 245.1,
+                      "z": -6.26253
+                    },
+                    "mapGameId": "a2f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 934
+          },
+          "duties": [
+            {
+              "id": "duty-224",
+              "name": "Containment Bay Z1T9 (Extreme)",
+              "sourceRowId": 224,
+              "type": "extreme-trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 250,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20044,
+                "xivapi-high-end-duty": false
+              }
+            },
+            {
+              "id": "duty-183",
+              "name": "Containment Bay P1T6",
+              "sourceRowId": 183,
+              "type": "trial",
+              "relationship": "required",
+              "level": 60,
+              "minimumItemLevel": 220,
+              "partySize": 8,
+              "levelSync": 60,
+              "extensions": {
+                "xivapi-instance-content-row": 20041,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
+          "unlocks": [
+            {
+              "type": "trials",
+              "targetId": "duty-224",
+              "sourceRowId": 224,
+              "name": "Containment Bay Z1T9 (Extreme)",
+              "notes": "Content Finder row 224."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:13:43.368Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67931,
+              "internalId": "HeaVny242_02395",
+              "expansion": "Heavensward",
+              "journalGenre": "Heavensward Primal Quests",
+              "eventIconType": 8,
+              "sortKey": 16105,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1014565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2002033,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1016633,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 20044,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON1",
+                  "argument": 20041,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE0",
+                  "argument": 474,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_AND_DPS",
+                  "argument": 3710,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "DPS_CHALLENGE_OPEN_QUEST",
+                  "argument": 67654,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_RF",
+                  "argument": 3726,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_RF_AND_DPS",
+                  "argument": 3727,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2002033,
+                  "itemId": "event-item-2002033",
+                  "name": "Allagan Tomestone of Eikonology",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25931,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20044,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                },
+                {
+                  "instanceContentRowId": 20041,
+                  "sourceInstruction": "INSTANCEDUNGEON1",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1016633
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1016633,
+                  "name": "verification node",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 10
+        }
+      ]
+    }
+  ]
+}

@@ -65,6 +65,8 @@ export const excludedQuestRowIds: ReadonlySet<number> = new Set([
   66034, // The Gift of the Archmagus — removed in 6.3
   67653, // I Believe I Can Fly — removed in 5.3
   67819, // A Seat at the Feast — removed in 6.1
+  68629, // Makin' Bacon (Bread) — retired in Patch 6.2
+  68727, // Wok on By — retired in Patch 6.2
 ]);
 
 export function isExcludedQuestRowId(value: unknown): boolean {
