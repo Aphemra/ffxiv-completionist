@@ -14,12 +14,36 @@ import {
 
 import { questIndexFileSchema } from './questIndexSchemas';
 
+const QUEST_CLASSIFICATION_FIELDS = [
+  'isFeatureQuest',
+  'isRepeatable',
+  'isSeasonalQuest',
+] as const;
+
+type QuestClassificationField = (typeof QUEST_CLASSIFICATION_FIELDS)[number];
+
 interface PublishedOccurrence {
   rowId: number;
   questId: string;
   questName: string;
   collectionId: string;
   collectionTitle: string;
+
+  isFeatureQuest: boolean;
+  isRepeatable: boolean;
+  isSeasonalQuest: boolean;
+}
+
+interface PublishedClassificationMismatch {
+  rowId: number;
+  questId: string;
+  questName: string;
+  collectionId: string;
+
+  field: QuestClassificationField;
+
+  indexedValue: boolean;
+  publishedValue: boolean;
 }
 
 interface AllowedDuplicate {
@@ -122,6 +146,10 @@ async function main(): Promise<void> {
           questName: quest.name,
           collectionId: manifestEntry.id,
           collectionTitle: manifestEntry.title,
+
+          isFeatureQuest: quest.isFeatureQuest,
+          isRepeatable: quest.isRepeatable,
+          isSeasonalQuest: quest.isSeasonalQuest,
         };
 
         const existingOccurrences = occurrencesByRowId.get(rowId);
@@ -180,6 +208,40 @@ async function main(): Promise<void> {
     occurrencesByRowId.keys(),
   ).filter((rowId) => !indexRowsById.has(rowId));
 
+  const publishedClassificationMismatches: PublishedClassificationMismatch[] =
+    [];
+
+  for (const [rowId, occurrences] of occurrencesByRowId) {
+    const indexedQuest = indexRowsById.get(rowId);
+
+    if (!indexedQuest) {
+      continue;
+    }
+
+    for (const occurrence of occurrences) {
+      for (const field of QUEST_CLASSIFICATION_FIELDS) {
+        const indexedValue = indexedQuest[field];
+        const publishedValue = occurrence[field];
+
+        if (indexedValue === publishedValue) {
+          continue;
+        }
+
+        publishedClassificationMismatches.push({
+          rowId,
+          questId: occurrence.questId,
+          questName: occurrence.questName,
+          collectionId: occurrence.collectionId,
+
+          field,
+
+          indexedValue,
+          publishedValue,
+        });
+      }
+    }
+  }
+
   const unpublishedQuests = questIndex.quests.filter(
     (quest) => !occurrencesByRowId.has(quest.rowId),
   );
@@ -227,6 +289,9 @@ async function main(): Promise<void> {
 
       questsMissingXivapiRowIds: questsMissingRowIds.length,
       publishedRowsMissingFromIndex: publishedRowsMissingFromIndex.length,
+
+      publishedClassificationMismatches:
+        publishedClassificationMismatches.length,
     },
 
     missingByJournalCategory,
@@ -237,6 +302,8 @@ async function main(): Promise<void> {
 
     questsMissingRowIds,
     publishedRowsMissingFromIndex,
+
+    publishedClassificationMismatches,
   };
 
   const reportPath = path.join(xivapiCacheRoot, 'quest-coverage.json');
@@ -264,8 +331,28 @@ async function main(): Promise<void> {
   console.log(
     `Published rows absent from index: ${report.summary.publishedRowsMissingFromIndex}`,
   );
+  console.log(
+    `Published classification mismatches: ${report.summary.publishedClassificationMismatches}`,
+  );
 
   console.log('');
+  if (publishedClassificationMismatches.length > 0) {
+    console.log('');
+    console.log('Published classification mismatches');
+
+    for (const mismatch of publishedClassificationMismatches) {
+      console.log(
+        [
+          `- Row ${mismatch.rowId}`,
+          mismatch.questName,
+          mismatch.collectionId,
+          mismatch.field,
+          `index=${mismatch.indexedValue}`,
+          `published=${mismatch.publishedValue}`,
+        ].join(' | '),
+      );
+    }
+  }
   console.log('Largest unpublished journal categories');
 
   for (const category of missingByJournalCategory.slice(0, 15)) {
@@ -278,7 +365,8 @@ async function main(): Promise<void> {
   const hasIntegrityErrors =
     unexpectedDuplicates.length > 0 ||
     questsMissingRowIds.length > 0 ||
-    publishedRowsMissingFromIndex.length > 0;
+    publishedRowsMissingFromIndex.length > 0 ||
+    publishedClassificationMismatches.length > 0;
 
   if (hasIntegrityErrors || (requireComplete && unpublishedQuests.length > 0)) {
     process.exitCode = 1;
