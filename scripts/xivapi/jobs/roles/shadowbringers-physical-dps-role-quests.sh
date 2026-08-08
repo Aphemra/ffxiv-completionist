@@ -19,7 +19,7 @@ SECONDARY_FACET_ID="physical-dps"
 SECONDARY_FACET_NAME="Physical DPS"
 
 COLLECTION_ID="shadowbringers-physical-dps-role-quests"
-COLLECTION_TITLE="Shadowbringers Tank Role Quests"
+COLLECTION_TITLE="Shadowbringers Physical DPS Role Quests"
 COLLECTION_DESCRIPTION="The Shadowbringers Physical DPS role questline."
 COLLECTION_SORT_ORDER="3000"
 

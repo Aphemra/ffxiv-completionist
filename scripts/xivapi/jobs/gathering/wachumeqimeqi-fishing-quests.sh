@@ -22,7 +22,7 @@ PRIMARY_FACET_NAME="Gathering"
 SECONDARY_FACET_ID="fish-fancies-donuhanu"
 SECONDARY_FACET_NAME="Fish Fancies Donuhanu"
 
-COLLECTION_ID="wachumeqimeqi-gishing-quests"
+COLLECTION_ID="wachumeqimeqi-fishing-quests"
 COLLECTION_TITLE="Fish Fancies Donuhanu Quests"
 COLLECTION_DESCRIPTION="The Fish Fancies Donuhanu questline."
 COLLECTION_SORT_ORDER="4540"

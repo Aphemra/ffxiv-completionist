@@ -6,7 +6,7 @@ TITLE="Crystalline Mean Shared Quests"
 CATEGORY="crafting"
 
 SELECTION_MODE="filter"
-COLLECTION_FORMAT="linear"
+COLLECTION_FORMAT="standard"
 
 JOURNAL_CATEGORIES=(
   "Crystalline Mean Quests"

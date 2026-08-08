@@ -6,7 +6,7 @@ TITLE="Wachumeqimeqi Shared Quests"
 CATEGORY="crafting"
 
 SELECTION_MODE="filter"
-COLLECTION_FORMAT="linear"
+COLLECTION_FORMAT="standard"
 
 JOURNAL_CATEGORIES=(
   "Wachumeqimeqi Quests"
@@ -19,7 +19,7 @@ JOURNAL_GENRES=(
 PRIMARY_FACET_ID="shared"
 PRIMARY_FACET_NAME="Shared Crafting & Gathering"
 
-SECONDARY_FACET_ID="studium-quests"
+SECONDARY_FACET_ID="wachumeqimeqi"
 SECONDARY_FACET_NAME="Wachumeqimeqi"
 
 COLLECTION_ID="wachumeqimeqi-shared-quests"

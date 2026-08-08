@@ -13,7 +13,7 @@ JOURNAL_GENRES=(
 )
 
 PRIMARY_FACET_ID="limited job"
-PRIMARY_FACET_NAME="Limited Job"
+PRIMARY_FACET_NAME="limited-job"
 
 SECONDARY_FACET_ID="blue-mage"
 SECONDARY_FACET_NAME="Blue Mage"
