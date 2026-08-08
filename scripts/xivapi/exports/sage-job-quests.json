@@ -1,0 +1,3156 @@
+{
+  "schemaVersion": 1,
+  "id": "sage-job-quests",
+  "title": "Sage Quests",
+  "category": "job",
+  "generatedAt": "2026-08-08T07:33:32.274Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 6,
+    "branchCount": 0,
+    "convergenceCount": 0,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [],
+  "issues": [],
+  "quests": [
+    {
+      "id": "sage-job-quests-job-sages-path-69603",
+      "xivapiRowId": 69603,
+      "sortOrder": 1,
+      "name": "Sage's Path",
+      "level": 70,
+      "category": "job",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-sages-path-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039265",
+          "locations": [
+            {
+              "zoneId": "middle-la-noscea",
+              "zoneName": "Middle La Noscea",
+              "territoryId": "territory-134",
+              "mapId": "map-15",
+              "sourceLevelRowId": 9012516,
+              "coordinates": {
+                "x": 20.9,
+                "y": 24.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -27.5387,
+                  "y": 42.5977,
+                  "z": 163.774
+                },
+                "mapGameId": "s1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-sages-path-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039265",
+          "locations": [
+            {
+              "zoneId": "middle-la-noscea",
+              "zoneName": "Middle La Noscea",
+              "territoryId": "territory-134",
+              "mapId": "map-15",
+              "sourceLevelRowId": 9012516,
+              "coordinates": {
+                "x": 20.9,
+                "y": 24.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -27.5387,
+                  "y": 42.5977,
+                  "z": 163.774
+                },
+                "mapGameId": "s1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69603,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T07:33:16.220Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69603,
+          "internalId": "AktKbb101_04067",
+          "expansion": "Endwalker",
+          "journalGenre": "Sage Quests",
+          "eventIconType": 8,
+          "sortKey": 700,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "CLASSJOB",
+              "argument": 40,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR0",
+              "argument": 1039243,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1039265,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT_EVENT_AKTKBB101_01",
+              "argument": 2530,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1036101,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1036105,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 5521,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "JOBSTONE_MODEL",
+              "argument": 50,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_CLASS",
+              "argument": 1015,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SUB_MODEL",
+              "argument": 25,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_CLASS_CHANGE",
+              "argument": 10,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_JOB",
+              "argument": 94,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_JOBCHANGE",
+              "argument": 1207,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039265
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036105
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039265,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036105,
+              "name": "Faldrinet",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              69604
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "sage-job-quests-job-sages-focus-69604"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 108000,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-33355",
+            "itemName": "Soul of the Sage",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-35873",
+            "itemName": "Bookwyrm's Attire Coffer (IL 385)",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-35778",
+            "itemName": "Stonegold Milpreves",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Sharlayan maiden",
+          "xivapiRowId": 1039243
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 9.4,
+          "y": 13
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "sage-job-quests-job-sages-focus-69604",
+      "xivapiRowId": 69604,
+      "sortOrder": 2,
+      "name": "Sage's Focus",
+      "level": 70,
+      "category": "job",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "sage"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "sage",
+          "classJobName": "Sage",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "sage-sages-focus-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039244",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 8907201,
+              "coordinates": {
+                "x": 7.4,
+                "y": 7.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 62.0825,
+                  "y": 207,
+                  "z": 49.3565
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "sage-sages-focus-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2011759",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 8907274,
+              "coordinates": {
+                "x": 6.5,
+                "y": 4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 20.0854,
+                  "y": 215.45,
+                  "z": -108.141
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "sage-sages-focus-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039246",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 8907279,
+              "coordinates": {
+                "x": 7.6,
+                "y": 3.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 71.6685,
+                  "y": 213.034,
+                  "z": -110.71
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "sage-sages-focus-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039247",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 8907284,
+              "coordinates": {
+                "x": 7.5,
+                "y": 3.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 68.7402,
+                  "y": 212.847,
+                  "z": -109.947
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "sage-sages-focus-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039248",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 8907352,
+              "coordinates": {
+                "x": 10.3,
+                "y": 23.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -612.27,
+                  "y": 146.868,
+                  "z": 42.4434
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "sage-sages-focus-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039248",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 8907352,
+              "coordinates": {
+                "x": 10.3,
+                "y": 23.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -612.27,
+                  "y": 146.868,
+                  "z": 42.4434
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "sage-sages-focus-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 8917997,
+              "coordinates": {
+                "x": 10.3,
+                "y": 23.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -615.709,
+                  "y": 144.584,
+                  "z": 46.9531
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "sage-sages-focus-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039248",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 8907352,
+              "coordinates": {
+                "x": 10.3,
+                "y": 23.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -612.27,
+                  "y": 146.868,
+                  "z": 42.4434
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8,
+            "completeSequence": 8
+          }
+        },
+        {
+          "id": "sage-sages-focus-objective-9",
+          "sortOrder": 9,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039249",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 8907320,
+              "coordinates": {
+                "x": 6.1,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 0.370117,
+                  "y": 211,
+                  "z": -17.7265
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 9
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69603
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69604,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T07:33:18.762Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69604,
+          "internalId": "AktKbb102_04068",
+          "expansion": "Endwalker",
+          "journalGenre": "Sage Quests",
+          "eventIconType": 8,
+          "sortKey": 701,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1039265,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1039244,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2011759,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 50,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 8907277,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1039246,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 35,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1039245,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1039247,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1039248,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 1022,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 5052,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2011760,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "TERRITORYTYPE1",
+              "argument": 399,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1039249,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT_EVENT_AKTKBB102_01",
+              "argument": 2792,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1036101,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT_EVENT_AKTKBB102_02",
+              "argument": 2791,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_EVENT_AKTKBB102_03",
+              "argument": 2530,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QST_HEAVNA609",
+              "argument": 67194,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1036105,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 5717,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_02",
+              "argument": 5718,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_03",
+              "argument": 5538,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_BGM_01",
+              "argument": 882,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039244
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1039246
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039245
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039247
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039248
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1039249
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036105
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039244,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1039246,
+              "name": "refined man",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039245,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039247,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039248,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1039249,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036105,
+              "name": "Faldrinet",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              69605
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "sage-job-quests-job-sages-path-69603"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "sage-job-quests-job-sands-of-despair-69605"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 216000,
+        "gil": 2383,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lalah Jinjahl",
+          "xivapiRowId": 1039265
+        },
+        "location": {
+          "zone": "Middle La Noscea",
+          "x": 20.9,
+          "y": 24.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "sage-job-quests-job-sands-of-despair-69605",
+      "xivapiRowId": 69605,
+      "sortOrder": 3,
+      "name": "Sands of Despair",
+      "level": 73,
+      "category": "job",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "sage"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 73
+        },
+        {
+          "type": "class-job",
+          "classJobId": "sage",
+          "classJobName": "Sage",
+          "level": 73
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "sage-sands-of-despair-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039250",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 8911653,
+              "coordinates": {
+                "x": 20.9,
+                "y": 18.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -29.2277,
+                  "y": -2.05762,
+                  "z": -161.086
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "sage-sands-of-despair-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039256",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 8911672,
+              "coordinates": {
+                "x": 22.7,
+                "y": 17
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 59.0371,
+                  "y": 2.95014,
+                  "z": -225.971
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "sage-sands-of-despair-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 8911832,
+              "coordinates": {
+                "x": 25.1,
+                "y": 18.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 182.008,
+                  "y": -7.88141,
+                  "z": -130.614
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "sage-sands-of-despair-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039263",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 8911749,
+              "coordinates": {
+                "x": 25.2,
+                "y": 19
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 185.282,
+                  "y": -4.12861,
+                  "z": -126.762
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "sage-sands-of-despair-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039258",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 8911684,
+              "coordinates": {
+                "x": 24,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 122.728,
+                  "y": 0.111843,
+                  "z": -215.229
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "sage-sands-of-despair-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039271",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 8911868,
+              "coordinates": {
+                "x": 24,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 122.841,
+                  "y": 0.100709,
+                  "z": -215.256
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "sage-sands-of-despair-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039271",
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 8911868,
+              "coordinates": {
+                "x": 24,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 122.841,
+                  "y": 0.100709,
+                  "z": -215.256
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "sage-sands-of-despair-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039249",
+          "targetName": "Lalah Jinjahl",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 8907320,
+              "coordinates": {
+                "x": 6.1,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 0.370117,
+                  "y": 211,
+                  "z": -17.7265
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69604
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69605,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T07:33:21.248Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69605,
+          "internalId": "AktKbb111_04069",
+          "expansion": "Endwalker",
+          "journalGenre": "Sage Quests",
+          "eventIconType": 8,
+          "sortKey": 730,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1039249,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1039250,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 8911662,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1039256,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1039257,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE1",
+              "argument": 8911912,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 8911768,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 8911813,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1039258,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1039263,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1039259,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2011762,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1039260,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1039261,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1039262,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1039264,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 34,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1039266,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1039271,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1039272,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR14",
+              "argument": 1039273,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT_EVENT_AKTKBB111_01",
+              "argument": 2531,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 6236,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_02",
+              "argument": 6237,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "BIND_ACTOR_01",
+              "argument": 8911673,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_02",
+              "argument": 8911884,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1036101,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1036102,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1036103,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_04",
+              "argument": 1036104,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_05",
+              "argument": 1036105,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_06",
+              "argument": 1036107,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_MARKER_01",
+              "argument": 8911657,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_01",
+              "argument": 1001454,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "INVIS_ACTOR_02",
+              "argument": 1006026,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_03",
+              "argument": 9013,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_04",
+              "argument": 9048,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_05",
+              "argument": 5717,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_06",
+              "argument": 5718,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_07",
+              "argument": 5538,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039250
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1039256
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039257
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039258
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039263
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1039259
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1039260
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1039261
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1039262
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1039264
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1039266
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1039271
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1039272
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1039273
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036102
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1036103
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1036104
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_05",
+              "actorRowId": 1036105
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_06",
+              "actorRowId": 1036107
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039250,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1039256,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039257,
+              "name": "tattooed apothecary",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039258,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039263,
+              "name": "Faldrinet",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1039259,
+              "name": "tattooed apothecary",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1039260,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1039261,
+              "name": "Mahaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1039262,
+              "name": "Ancel",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1039264
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1039266,
+              "name": "Faldrinet",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1039271,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1039272,
+              "name": "Faldrinet",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1039273,
+              "name": "tattooed apothecary",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036102,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1036103,
+              "name": "Mahaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1036104,
+              "name": "Ancel",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_05",
+              "actorRowId": 1036105,
+              "name": "Faldrinet",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_06",
+              "actorRowId": 1036107,
+              "name": "tattooed apothecary",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              69606
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "sage-job-quests-job-sages-focus-69604"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "sage-job-quests-job-a-poisoned-gift-69606"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 220320,
+        "gil": 2678,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lalah Jinjahl",
+          "xivapiRowId": 1039249
+        },
+        "location": {
+          "zone": "Idyllshire",
+          "x": 6.1,
+          "y": 5.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "sage-job-quests-job-a-poisoned-gift-69606",
+      "xivapiRowId": 69606,
+      "sortOrder": 4,
+      "name": "A Poisoned Gift",
+      "level": 75,
+      "category": "job",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "sage"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 75
+        },
+        {
+          "type": "class-job",
+          "classJobId": "sage",
+          "classJobName": "Sage",
+          "level": 75
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "sage-a-poisoned-gift-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039274",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 8911920,
+              "coordinates": {
+                "x": 26.4,
+                "y": 26.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 246.964,
+                  "y": -24.9958,
+                  "z": 235.447
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "sage-a-poisoned-gift-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039275",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 8911921,
+              "coordinates": {
+                "x": 26.2,
+                "y": 25.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 237.011,
+                  "y": -24.7324,
+                  "z": 202.597
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "sage-a-poisoned-gift-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039276",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 8911922,
+              "coordinates": {
+                "x": 26.3,
+                "y": 25.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 239.798,
+                  "y": -24.7204,
+                  "z": 205.363
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "sage-a-poisoned-gift-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039279",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 8911932,
+              "coordinates": {
+                "x": 26.3,
+                "y": 25.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 239.918,
+                  "y": -24.7238,
+                  "z": 205.249
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "sage-a-poisoned-gift-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039249",
+          "targetName": "Lalah Jinjahl",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 8907320,
+              "coordinates": {
+                "x": 6.1,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 0.370117,
+                  "y": 211,
+                  "z": -17.7265
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69605
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69606,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T07:33:24.207Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69606,
+          "internalId": "AktKbb121_04070",
+          "expansion": "Endwalker",
+          "journalGenre": "Sage Quests",
+          "eventIconType": 8,
+          "sortKey": 750,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1039249,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1039274,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1039275,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1039276,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1039277,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTION0",
+              "argument": 24284,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1039279,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1039278,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1039280,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT_EVENT_AKTKBB121_01",
+              "argument": 2532,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_01",
+              "argument": 8911931,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_02",
+              "argument": 8911934,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1036101,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1036102,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1036109,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_04",
+              "argument": 1036110,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 981,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_02",
+              "argument": 67,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_BGM_01",
+              "argument": 90,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039274
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1039275
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039276
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039277
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039279
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1039278
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1039280
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036102
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1036109
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1036110
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039274,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1039275,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039276,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039277
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039279,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1039278,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1039280,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036102,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1036109,
+              "name": "Yellowjacket sentry",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1036110
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              69607
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "sage-job-quests-job-sands-of-despair-69605"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "sage-job-quests-job-pledge-of-hope-69607"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 223200,
+        "gil": 1807,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lalah Jinjahl",
+          "xivapiRowId": 1039249
+        },
+        "location": {
+          "zone": "Idyllshire",
+          "x": 6.1,
+          "y": 5.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "sage-job-quests-job-pledge-of-hope-69607",
+      "xivapiRowId": 69607,
+      "sortOrder": 5,
+      "name": "Pledge of Hope",
+      "level": 78,
+      "category": "job",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "sage"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 78
+        },
+        {
+          "type": "class-job",
+          "classJobId": "sage",
+          "classJobName": "Sage",
+          "level": 78
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "sage-pledge-of-hope-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1012133",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 5864096,
+              "coordinates": {
+                "x": 5.6,
+                "y": 6.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -26.8102,
+                  "y": 206.47,
+                  "z": 28.6716
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "sage-pledge-of-hope-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 8916551,
+              "coordinates": {
+                "x": 12.3,
+                "y": 18.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -514.326,
+                  "y": 142.064,
+                  "z": -201.41
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "sage-pledge-of-hope-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039282",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 8915508,
+              "coordinates": {
+                "x": 12.5,
+                "y": 18.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -504.851,
+                  "y": 147.533,
+                  "z": -199.161
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "sage-pledge-of-hope-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 2,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 8916552,
+              "coordinates": {
+                "x": 15.2,
+                "y": 23.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -367.427,
+                  "y": 142.702,
+                  "z": 59.6155
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "sage-pledge-of-hope-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039284",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-hinterlands",
+              "zoneName": "The Dravanian Hinterlands",
+              "territoryId": "territory-399",
+              "mapId": "map-213",
+              "sourceLevelRowId": 8916536,
+              "coordinates": {
+                "x": 14.9,
+                "y": 23.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -382.492,
+                  "y": 147.971,
+                  "z": 47.5442
+                },
+                "mapGameId": "d2f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "sage-pledge-of-hope-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039249",
+          "targetName": "Lalah Jinjahl",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 8907320,
+              "coordinates": {
+                "x": 6.1,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 0.370117,
+                  "y": 211,
+                  "z": -17.7265
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69606
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69607,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T07:33:27.292Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69607,
+          "internalId": "AktKbb131_04071",
+          "expansion": "Endwalker",
+          "journalGenre": "Sage Quests",
+          "eventIconType": 8,
+          "sortKey": 780,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1039249,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1039280,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1012133,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 8916156,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 8916545,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1039281,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1039282,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2011763,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1039283,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTION0",
+              "argument": 24284,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENTRANGE1",
+              "argument": 8916541,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 8916546,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 8916547,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1039284,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1039285,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2011764,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1039286,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1039287,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR_01",
+              "argument": 8911934,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_02",
+              "argument": 8915507,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_03",
+              "argument": 8916537,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1036101,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1036102,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 812,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_02",
+              "argument": 9036,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_03",
+              "argument": 9037,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_VFX_01",
+              "argument": 1147,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_IDLE_01",
+              "argument": 5538,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_04",
+              "argument": 5718,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1012495,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039280
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1012133
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039281
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039282
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039283
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1039284
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1039285
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1039286
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1039287
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036102
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1012495
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039280,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1012133,
+              "name": "Midnight Dew",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039281,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039282,
+              "name": "wounded treasure hunter",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039283
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1039284,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1039285,
+              "name": "wounded treasure hunter",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1039286
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1039287
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036102,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1012495,
+              "name": "Midnight Dew",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              69608
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "sage-job-quests-job-a-poisoned-gift-69606"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "sage-job-quests-job-life-ephemeral-path-eternal-69608"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 227520,
+        "gil": 1179,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lalah Jinjahl",
+          "xivapiRowId": 1039249
+        },
+        "location": {
+          "zone": "Idyllshire",
+          "x": 6.1,
+          "y": 5.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "sage-job-quests-job-life-ephemeral-path-eternal-69608",
+      "xivapiRowId": 69608,
+      "sortOrder": 6,
+      "name": "Life Ephemeral, Path Eternal",
+      "level": 80,
+      "category": "job",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "sage"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "sage",
+          "classJobName": "Sage",
+          "level": 80
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "sage-life-ephemeral-path-eternal-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039288",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-forelands",
+              "zoneName": "The Dravanian Forelands",
+              "territoryId": "territory-398",
+              "mapId": "map-212",
+              "sourceLevelRowId": 8916557,
+              "coordinates": {
+                "x": 26.8,
+                "y": 6.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 212.976,
+                  "y": 52.2135,
+                  "z": -787.501
+                },
+                "mapGameId": "d2f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "sage-life-ephemeral-path-eternal-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-dravanian-forelands",
+              "zoneName": "The Dravanian Forelands",
+              "territoryId": "territory-398",
+              "mapId": "map-212",
+              "sourceLevelRowId": 8916561,
+              "coordinates": {
+                "x": 26.8,
+                "y": 6.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 213.049,
+                  "y": 44.2722,
+                  "z": -787.429
+                },
+                "mapGameId": "d2f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "sage-life-ephemeral-path-eternal-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039288",
+          "locations": [
+            {
+              "zoneId": "the-dravanian-forelands",
+              "zoneName": "The Dravanian Forelands",
+              "territoryId": "territory-398",
+              "mapId": "map-212",
+              "sourceLevelRowId": 8916557,
+              "coordinates": {
+                "x": 26.8,
+                "y": 6.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 212.976,
+                  "y": 52.2135,
+                  "z": -787.501
+                },
+                "mapGameId": "d2f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "sage-life-ephemeral-path-eternal-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1039280",
+          "locations": [
+            {
+              "zoneId": "idyllshire",
+              "zoneName": "Idyllshire",
+              "territoryId": "territory-478",
+              "mapId": "map-257",
+              "sourceLevelRowId": 8911934,
+              "coordinates": {
+                "x": 6.1,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 1.23486,
+                  "y": 211,
+                  "z": -16.4939
+                },
+                "mapGameId": "d2t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69607
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 69608,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T07:33:30.664Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 69608,
+          "internalId": "AktKbb141_04072",
+          "expansion": "Endwalker",
+          "journalGenre": "Sage Quests",
+          "eventIconType": 8,
+          "sortKey": 800,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1039249,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1039280,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1039288,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 1023,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 5056,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2011765,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "TERRITORYTYPE1",
+              "argument": 398,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1039289,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1039290,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1039291,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT_EVENT_AKTKBB141_01",
+              "argument": 2533,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_EVENT_AKTKBB141_02",
+              "argument": 2535,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_01",
+              "argument": 8911934,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1036101,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1036102,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_03",
+              "argument": 1036103,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_04",
+              "argument": 1036104,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_05",
+              "argument": 1036106,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_MARKER_01",
+              "argument": 8957134,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_01",
+              "argument": 979,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "WS_GET_ACTION",
+              "argument": 5501,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "WS_GET_LOG",
+              "argument": 5411,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WS_GET_SKILL",
+              "argument": 24311,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "JOBSTONE_MODEL",
+              "argument": 50,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "WS_GET_VFX1",
+              "argument": 1145,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION_02",
+              "argument": 801,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "BIND_ACTOR_02",
+              "argument": 8916570,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR_03",
+              "argument": 8916571,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM_01",
+              "argument": 91,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039280
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1039288
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039289
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039290
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039291
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036102
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1036103
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1036104
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_05",
+              "actorRowId": 1036106
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1039280,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1039288,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1039289,
+              "name": "Guildivain",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1039290,
+              "name": "Mahaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1039291,
+              "name": "Ancel",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1036101,
+              "name": "Lalah Jinjahl",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1036102,
+              "name": "Loifa",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_03",
+              "actorRowId": 1036103,
+              "name": "Mahaud",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_04",
+              "actorRowId": 1036104,
+              "name": "Ancel",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_05",
+              "actorRowId": 1036106,
+              "name": "Guildivain",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "sage-job-quests-job-pledge-of-hope-69607"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "action",
+          "id": "action-24311",
+          "sourceRowId": 24311,
+          "name": "Panhaima"
+        }
+      ],
+      "rewards": {
+        "experience": 448800,
+        "gil": 3031,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Lalah Jinjahl",
+          "xivapiRowId": 1039249
+        },
+        "location": {
+          "zone": "Idyllshire",
+          "x": 6.1,
+          "y": 5.8
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}
