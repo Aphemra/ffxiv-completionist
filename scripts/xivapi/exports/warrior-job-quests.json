@@ -3,7 +3,7 @@
   "id": "warrior-job-quests",
   "title": "Warrior Quests",
   "category": "job",
-  "generatedAt": "2026-08-08T07:36:19.075Z",
+  "generatedAt": "2026-08-08T08:49:58.179Z",
   "source": {
     "provider": "xivapi",
     "version": "7583112015aaef5d",
@@ -12,11 +12,20 @@
   "summary": {
     "questCount": 19,
     "branchCount": 0,
-    "convergenceCount": 0,
+    "convergenceCount": 1,
     "unresolvedIssueCount": 0
   },
   "branches": [],
-  "convergences": [],
+  "convergences": [
+    {
+      "questId": "warrior-job-quests-job-once-twice-three-times-a-warrior-68748",
+      "questName": "Once, Twice, Three Times a Warrior",
+      "relatedQuestIds": [
+        "warrior-job-quests-job-the-heart-of-the-problem-68440",
+        "shadowbringers-tank-role-quests-role-to-have-loved-and-lost-68784"
+      ]
+    }
+  ],
   "issues": [],
   "quests": [
     {
@@ -10088,7 +10097,8 @@
         }
       },
       "previousQuestIds": [
-        "warrior-job-quests-job-the-heart-of-the-problem-68440"
+        "warrior-job-quests-job-the-heart-of-the-problem-68440",
+        "shadowbringers-tank-role-quests-role-to-have-loved-and-lost-68784"
       ],
       "previousQuestMode": "all",
       "nextQuestIds": [],
@@ -10130,7 +10140,7 @@
           "y": 23
         }
       },
-      "graphRole": "linear"
+      "graphRole": "convergence"
     }
   ]
 }

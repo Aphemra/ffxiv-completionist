@@ -3,7 +3,7 @@
   "id": "endwalker-finale-role-quests",
   "title": "Endwalker Finale Role Quests",
   "category": "role",
-  "generatedAt": "2026-08-08T07:40:54.052Z",
+  "generatedAt": "2026-08-08T08:50:39.195Z",
   "source": {
     "provider": "xivapi",
     "version": "7583112015aaef5d",
@@ -12,11 +12,21 @@
   "summary": {
     "questCount": 4,
     "branchCount": 0,
-    "convergenceCount": 0,
+    "convergenceCount": 1,
     "unresolvedIssueCount": 0
   },
   "branches": [],
-  "convergences": [],
+  "convergences": [
+    {
+      "questId": "endwalker-finale-role-quests-role-bitter-snow-70115",
+      "questName": "Bitter Snow",
+      "relatedQuestIds": [
+        "endwalker-tank-role-quests-role-a-path-unveiled-69643",
+        "endwalker-healer-role-quests-role-the-gift-of-mercy-69649",
+        "endwalker-melee-dps-role-quests-role-to-calmer-seas-69655"
+      ]
+    }
+  ],
   "issues": [],
   "quests": [
     {
@@ -420,7 +430,11 @@
           }
         }
       },
-      "previousQuestIds": [],
+      "previousQuestIds": [
+        "endwalker-tank-role-quests-role-a-path-unveiled-69643",
+        "endwalker-healer-role-quests-role-the-gift-of-mercy-69649",
+        "endwalker-melee-dps-role-quests-role-to-calmer-seas-69655"
+      ],
       "previousQuestMode": "all",
       "nextQuestIds": [
         "endwalker-finale-role-quests-role-frozen-hope-70116"
@@ -444,7 +458,7 @@
           "y": 9.4
         }
       },
-      "graphRole": "linear"
+      "graphRole": "convergence"
     },
     {
       "id": "endwalker-finale-role-quests-role-frozen-hope-70116",

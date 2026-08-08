@@ -3,7 +3,7 @@
   "id": "red-mage-job-quests",
   "title": "Red Mage Quests",
   "category": "job",
-  "generatedAt": "2026-08-08T07:33:10.842Z",
+  "generatedAt": "2026-08-08T08:49:25.974Z",
   "source": {
     "provider": "xivapi",
     "version": "7583112015aaef5d",
@@ -12,11 +12,20 @@
   "summary": {
     "questCount": 13,
     "branchCount": 0,
-    "convergenceCount": 0,
+    "convergenceCount": 1,
     "unresolvedIssueCount": 0
   },
   "branches": [],
-  "convergences": [],
+  "convergences": [
+    {
+      "questId": "red-mage-job-quests-job-succession-of-steel-68760",
+      "questName": "Succession of Steel",
+      "relatedQuestIds": [
+        "red-mage-job-quests-job-with-heart-and-steel-68123",
+        "shadowbringers-magical-ranged-dps-role-quests-role-a-tearful-reunion-69164"
+      ]
+    }
+  ],
   "issues": [],
   "quests": [
     {
@@ -9016,7 +9025,8 @@
         }
       },
       "previousQuestIds": [
-        "red-mage-job-quests-job-with-heart-and-steel-68123"
+        "red-mage-job-quests-job-with-heart-and-steel-68123",
+        "shadowbringers-magical-ranged-dps-role-quests-role-a-tearful-reunion-69164"
       ],
       "previousQuestMode": "all",
       "nextQuestIds": [],
@@ -9058,7 +9068,7 @@
           "y": 8
         }
       },
-      "graphRole": "linear"
+      "graphRole": "convergence"
     }
   ]
 }

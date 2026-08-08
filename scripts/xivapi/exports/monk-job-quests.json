@@ -3,7 +3,7 @@
   "id": "monk-job-quests",
   "title": "Monk Quests",
   "category": "job",
-  "generatedAt": "2026-08-08T07:28:16.628Z",
+  "generatedAt": "2026-08-08T08:48:59.914Z",
   "source": {
     "provider": "xivapi",
     "version": "7583112015aaef5d",
@@ -12,11 +12,20 @@
   "summary": {
     "questCount": 18,
     "branchCount": 0,
-    "convergenceCount": 0,
+    "convergenceCount": 1,
     "unresolvedIssueCount": 0
   },
   "branches": [],
-  "convergences": [],
+  "convergences": [
+    {
+      "questId": "monk-job-quests-job-a-monks-legacy-68747",
+      "questName": "A Monk's Legacy",
+      "relatedQuestIds": [
+        "monk-job-quests-job-the-power-to-protect-67966",
+        "shadowbringers-physical-dps-role-quests-role-courage-born-of-fear-68814"
+      ]
+    }
+  ],
   "issues": [],
   "quests": [
     {
@@ -9581,7 +9590,8 @@
         }
       },
       "previousQuestIds": [
-        "monk-job-quests-job-the-power-to-protect-67966"
+        "monk-job-quests-job-the-power-to-protect-67966",
+        "shadowbringers-physical-dps-role-quests-role-courage-born-of-fear-68814"
       ],
       "previousQuestMode": "all",
       "nextQuestIds": [],
@@ -9623,7 +9633,7 @@
           "y": 13.2
         }
       },
-      "graphRole": "linear"
+      "graphRole": "convergence"
     }
   ]
 }

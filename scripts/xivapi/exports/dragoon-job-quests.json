@@ -3,7 +3,7 @@
   "id": "dragoon-job-quests",
   "title": "Dragoon Quests",
   "category": "job",
-  "generatedAt": "2026-08-08T07:25:07.782Z",
+  "generatedAt": "2026-08-08T08:48:43.424Z",
   "source": {
     "provider": "xivapi",
     "version": "7583112015aaef5d",
@@ -12,11 +12,20 @@
   "summary": {
     "questCount": 19,
     "branchCount": 0,
-    "convergenceCount": 0,
+    "convergenceCount": 1,
     "unresolvedIssueCount": 0
   },
   "branches": [],
-  "convergences": [],
+  "convergences": [
+    {
+      "questId": "dragoon-job-quests-job-gone-but-not-forgiven-68749",
+      "questName": "Gone but Not Forgiven",
+      "relatedQuestIds": [
+        "dragoon-job-quests-job-dragon-sound-68450",
+        "shadowbringers-physical-dps-role-quests-role-courage-born-of-fear-68814"
+      ]
+    }
+  ],
   "issues": [],
   "quests": [
     {
@@ -7901,7 +7910,8 @@
         }
       },
       "previousQuestIds": [
-        "dragoon-job-quests-job-dragon-sound-68450"
+        "dragoon-job-quests-job-dragon-sound-68450",
+        "shadowbringers-physical-dps-role-quests-role-courage-born-of-fear-68814"
       ],
       "previousQuestMode": "all",
       "nextQuestIds": [],
@@ -7943,7 +7953,7 @@
           "y": 28.4
         }
       },
-      "graphRole": "linear"
+      "graphRole": "convergence"
     }
   ]
 }
