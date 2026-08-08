@@ -1,0 +1,674 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "heaven-on-high-quests-quests",
+      "title": "Heaven-on-High",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "heaven-on-high-quests-side-story-knocking-on-heavens-door-68667",
+          "name": "Knocking on Heaven's Door",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 61,
+          "externalIds": {
+            "xivapi-quest-row": 68667
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68667,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:43:19.983Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1019239",
+            "npcName": "Hamakaze",
+            "sourceRowId": 1019239,
+            "zoneId": "the-ruby-sea",
+            "zoneName": "The Ruby Sea",
+            "coordinates": {
+              "x": 6.2,
+              "y": 11.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "heaven-on-high-quests-side-story-on-the-shoulders-of-giants-68668"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68026
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 61
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-knocking-on-heavens-door-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "the-ruby-sea",
+                  "zoneName": "The Ruby Sea",
+                  "territoryId": "territory-613",
+                  "mapId": "map-371",
+                  "sourceLevelRowId": 7405228,
+                  "coordinates": {
+                    "x": 21.8,
+                    "y": 9.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 14.3425,
+                      "y": 1.06588,
+                      "z": -599.773
+                    },
+                    "mapGameId": "e3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-knocking-on-heavens-door-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2009514",
+              "locations": [
+                {
+                  "zoneId": "the-ruby-sea",
+                  "zoneName": "The Ruby Sea",
+                  "territoryId": "territory-613",
+                  "mapId": "map-371",
+                  "sourceLevelRowId": 7403535,
+                  "coordinates": {
+                    "x": 21.2,
+                    "y": 8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -14.5362,
+                      "y": 61.345,
+                      "z": -676.381
+                    },
+                    "mapGameId": "e3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-knocking-on-heavens-door-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1025846",
+              "locations": [
+                {
+                  "zoneId": "the-ruby-sea",
+                  "zoneName": "The Ruby Sea",
+                  "territoryId": "territory-613",
+                  "mapId": "map-371",
+                  "sourceLevelRowId": 7397070,
+                  "coordinates": {
+                    "x": 21.5,
+                    "y": 9.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.00187,
+                      "y": 3.03082,
+                      "z": -611.336
+                    },
+                    "mapGameId": "e3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 25250,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:43:23.159Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68667,
+              "internalId": "StmBdy701_03131",
+              "expansion": "Stormblood",
+              "journalGenre": "Heaven-on-High",
+              "eventIconType": 8,
+              "sortKey": 110,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1019239,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1025846,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1021505,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2009514,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 5464,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 5465,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1018975,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1025850,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 7405356,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DD2",
+                  "argument": 606,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION2",
+                  "argument": 6228,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION3",
+                  "argument": 624,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "REWARD_DD1_50F_COMP",
+                  "argument": 320,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1025846
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1021505
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1018975
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1025850
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1025846,
+                  "name": "Kyusei",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1021505,
+                  "name": "Rasho",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1018975,
+                  "name": "Rasho",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1025850,
+                  "name": "Kyusei",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68668
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "heaven-on-high-quests-side-story-on-the-shoulders-of-giants-68668",
+          "name": "On the Shoulders of Giants",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 61,
+          "externalIds": {
+            "xivapi-quest-row": 68668
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68668,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T15:43:21.833Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1025846",
+            "npcName": "Kyusei",
+            "sourceRowId": 1025846,
+            "zoneId": "the-ruby-sea",
+            "zoneName": "The Ruby Sea",
+            "coordinates": {
+              "x": 21.5,
+              "y": 9.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "heaven-on-high-quests-side-story-knocking-on-heavens-door-68667"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68667
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 61
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-on-the-shoulders-of-giants-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2009515",
+              "locations": [
+                {
+                  "zoneId": "the-ruby-sea",
+                  "zoneName": "The Ruby Sea",
+                  "territoryId": "territory-613",
+                  "mapId": "map-371",
+                  "sourceLevelRowId": 7403856,
+                  "coordinates": {
+                    "x": 24,
+                    "y": 6.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 123.561,
+                      "y": 4.5389,
+                      "z": -738.615
+                    },
+                    "mapGameId": "e3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-on-the-shoulders-of-giants-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2009516",
+              "locations": [
+                {
+                  "zoneId": "the-ruby-sea",
+                  "zoneName": "The Ruby Sea",
+                  "territoryId": "territory-613",
+                  "mapId": "map-371",
+                  "sourceLevelRowId": 7403860,
+                  "coordinates": {
+                    "x": 17.2,
+                    "y": 4.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -214.266,
+                      "y": 31.7235,
+                      "z": -850.389
+                    },
+                    "mapGameId": "e3f1/00"
+                  }
+                },
+                {
+                  "zoneId": "the-ruby-sea",
+                  "zoneName": "The Ruby Sea",
+                  "territoryId": "territory-613",
+                  "mapId": "map-371",
+                  "sourceLevelRowId": 7514312,
+                  "coordinates": {
+                    "x": 17.9,
+                    "y": 3.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -178.025,
+                      "y": 1.72418,
+                      "z": -891.597
+                    },
+                    "mapGameId": "e3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-on-the-shoulders-of-giants-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1025846",
+              "targetName": "Kyusei",
+              "locations": [
+                {
+                  "zoneId": "the-ruby-sea",
+                  "zoneName": "The Ruby Sea",
+                  "territoryId": "territory-613",
+                  "mapId": "map-371",
+                  "sourceLevelRowId": 7397070,
+                  "coordinates": {
+                    "x": 21.5,
+                    "y": 9.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -2.00187,
+                      "y": 3.03082,
+                      "z": -611.336
+                    },
+                    "mapGameId": "e3f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 25250,
+            "gil": 754
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T15:43:23.159Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68668,
+              "internalId": "StmBdy702_03132",
+              "expansion": "Stormblood",
+              "journalGenre": "Heaven-on-High",
+              "eventIconType": 8,
+              "sortKey": 120,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1025846,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2009515,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1021505,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2009516,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION1",
+                  "argument": 54,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2009572,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 613,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 7514314,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1018975,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1025851,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1025852,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR3",
+                  "argument": 1025853,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "CUT_SCENE_N_01",
+                  "argument": 1772,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_DD2_HIGHER",
+                  "argument": 607,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 5464,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 5465,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 7405352,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 7405353,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR2",
+                  "argument": 7510301,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_ACTION2",
+                  "argument": 6226,
+                  "referenceType": "action"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1021505
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1018975
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1025851
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1025852
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1025853
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1021505,
+                  "name": "Rasho",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1018975,
+                  "name": "Rasho",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1025851,
+                  "name": "Kyusei",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1025852,
+                  "name": "Confederate appraiser",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR3",
+                  "actorRowId": 1025853,
+                  "name": "Confederate custodian",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 2
+        }
+      ]
+    }
+  ]
+}

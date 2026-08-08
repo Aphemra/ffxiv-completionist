@@ -64,6 +64,15 @@ const ALLOWED_DUPLICATE_ROWS: ReadonlyMap<number, AllowedDuplicate> = new Map([
   ],
 ]);
 
+/*
+ * "Sephiroth Missions" is XIVAPI's fallback journal bucket for quests
+ * without normal journal placement. It contains duplicate, internal,
+ * superseded, and otherwise non-publishable quest rows.
+ */
+const COVERAGE_IGNORED_JOURNAL_CATEGORIES = new Set<string>([
+  'Sephiroth Missions',
+]);
+
 function readQuestRowId(value: unknown): number | undefined {
   if (typeof value === 'number' && Number.isInteger(value) && value > 0) {
     return value;
@@ -256,10 +265,18 @@ async function main(): Promise<void> {
     }
   }
 
+  const coverageIgnoredQuests = questIndex.quests.filter(
+    (quest) =>
+      !isExcludedQuestRowId(quest.rowId) &&
+      !occurrencesByRowId.has(quest.rowId) &&
+      COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(quest.journalCategoryName ?? ''),
+  );
+
   const unpublishedQuests = questIndex.quests.filter(
     (quest) =>
       !isExcludedQuestRowId(quest.rowId) &&
-      !occurrencesByRowId.has(quest.rowId),
+      !occurrencesByRowId.has(quest.rowId) &&
+      !COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(quest.journalCategoryName ?? ''),
   );
 
   const missingCountsByJournalCategory = new Map<string, number>();
@@ -297,6 +314,7 @@ async function main(): Promise<void> {
     summary: {
       indexedQuestRows: questIndex.quests.length,
       excludedQuestRows: excludedIndexQuests.length,
+      coverageIgnoredQuestRows: coverageIgnoredQuests.length,
 
       publishedQuestOccurrences: publishedOccurrenceCount,
       publishedUniqueQuestRows: occurrencesByRowId.size,
@@ -315,6 +333,7 @@ async function main(): Promise<void> {
 
     missingByJournalCategory,
     unpublishedQuests,
+    coverageIgnoredQuests,
 
     allowedDuplicates,
     unexpectedDuplicates,
@@ -335,6 +354,9 @@ async function main(): Promise<void> {
   console.log('');
   console.log(`Indexed quest rows: ${report.summary.indexedQuestRows}`);
   console.log(`Curated excluded rows: ${report.summary.excludedQuestRows}`);
+  console.log(
+    `Coverage-ignored journal rows: ${report.summary.coverageIgnoredQuestRows}`,
+  );
   console.log(
     `Published occurrences: ${report.summary.publishedQuestOccurrences}`,
   );

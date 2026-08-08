@@ -1,0 +1,930 @@
+{
+  "schemaVersion": 1,
+  "id": "palace-of-the-dead-quests",
+  "title": "Palace of the Dead Quests",
+  "category": "side-story",
+  "generatedAt": "2026-08-08T15:46:11.829Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 3,
+    "branchCount": 0,
+    "convergenceCount": 0,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [],
+  "issues": [],
+  "quests": [
+    {
+      "id": "palace-of-the-dead-quests-side-story-the-house-that-death-built-67092",
+      "xivapiRowId": 67092,
+      "sortOrder": 1,
+      "name": "The House That Death Built",
+      "level": 17,
+      "category": "side-story",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 17
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 17
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-the-house-that-death-built-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1017255",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 6268767,
+              "coordinates": {
+                "x": 17.5,
+                "y": 22.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -199.019,
+                  "y": 6.87514,
+                  "z": 30.5596
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-house-that-death-built-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1017323",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 6286408,
+              "coordinates": {
+                "x": 25.3,
+                "y": 20.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 187.551,
+                  "y": 7.20832,
+                  "z": -39.2524
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          66196
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67092,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T15:46:06.234Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67092,
+          "internalId": "SubCts701_01556",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Palace of the Dead",
+          "eventIconType": 8,
+          "sortKey": 171,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000389,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1017255,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1000438,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1000439,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1000375,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1017323,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "QST_COMP0",
+              "argument": 66060,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR0",
+              "argument": 1144298,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREENIMAGE0",
+              "argument": 406,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1017255
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000438
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1000439
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1000375
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1017323
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1017255,
+              "name": "Wood Wailer expeditionary",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000438,
+              "name": "Irielle",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1000439,
+              "name": "Rolandaix",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1000375,
+              "name": "Eral",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1017323,
+              "name": "Wood Wailer expeditionary captain",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67923
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 1560,
+        "gil": 566,
+        "items": [],
+        "choices": [
+          {
+            "itemId": "item-4097",
+            "itemName": "Hard Leather Wristbands",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4311",
+            "itemName": "Fang Necklace",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Nojiro Marujiro",
+          "xivapiRowId": 1000389
+        },
+        "location": {
+          "zone": "New Gridania",
+          "x": 12.1,
+          "y": 13.2
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "palace-of-the-dead-quests-side-story-the-nightmares-end-67093",
+      "xivapiRowId": 67093,
+      "sortOrder": 2,
+      "name": "The Nightmare's End",
+      "level": 50,
+      "category": "side-story",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001975",
+          "itemName": "Avere's Ring",
+          "sourceRowId": 2001975,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-the-nightmares-end-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 6277404,
+              "coordinates": {
+                "x": 18.1,
+                "y": 20
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -170.348,
+                  "y": -0.692888,
+                  "z": -73.4884
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-nightmares-end-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1017257",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 6277387,
+              "coordinates": {
+                "x": 19.1,
+                "y": 20.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -121.965,
+                  "y": 3.61633,
+                  "z": -59.4949
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-nightmares-end-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 6277388,
+              "coordinates": {
+                "x": 19.5,
+                "y": 20.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -100.381,
+                  "y": -8.16154,
+                  "z": -35.8784
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-nightmares-end-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1017258",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 6277386,
+              "coordinates": {
+                "x": 19.3,
+                "y": 20.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -111.498,
+                  "y": 2.02942,
+                  "z": -67.3992
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-nightmares-end-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1017259",
+          "locations": [
+            {
+              "zoneId": "middle-la-noscea",
+              "zoneName": "Middle La Noscea",
+              "territoryId": "territory-134",
+              "mapId": "map-15",
+              "sourceLevelRowId": 6277391,
+              "coordinates": {
+                "x": 16.5,
+                "y": 18.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -249.104,
+                  "y": 40.0243,
+                  "z": -164.843
+                },
+                "mapGameId": "s1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67060
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67093,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T15:46:07.990Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67093,
+          "internalId": "SubCts702_01557",
+          "expansion": "Heavensward",
+          "journalGenre": "Palace of the Dead",
+          "eventIconType": 8,
+          "sortKey": 500,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000334,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1017256,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2007069,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2007070,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1017257,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2007071,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001975,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1017258,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1017259,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_CAM0",
+              "argument": 6351430,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 742,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION1",
+              "argument": 815,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_SE0",
+              "argument": 78,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1004617,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_WEATHER",
+              "argument": 1,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001975,
+              "itemId": "event-item-2001975",
+              "name": "Avere's Ring",
+              "resolvedSheet": "EventItem",
+              "iconId": 54421,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1017256
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1017257
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1017258
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1017259
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1004617
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1017256,
+              "name": "Paiyo Reiyo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1017257,
+              "name": "Paiyo Reiyo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1017258,
+              "name": "Paiyo Reiyo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1017259,
+              "name": "Paiyo Reiyo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1004617,
+              "name": "Paiyo Reiyo",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67924
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "uldah-thanalan-sidequests-side-corpse-groom-67060"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "palace-of-the-dead-quests-side-story-dead-but-not-gone-67924"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 11700,
+        "gil": 1131,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Balan",
+          "xivapiRowId": 1000334
+        },
+        "location": {
+          "zone": "South Shroud",
+          "x": 25,
+          "y": 20.6
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "palace-of-the-dead-quests-side-story-dead-but-not-gone-67924",
+      "xivapiRowId": 67924,
+      "sortOrder": 3,
+      "name": "Dead but Not Gone",
+      "level": 60,
+      "category": "side-story",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 60
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 60
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-dead-but-not-gone-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1017325",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 6487986,
+              "coordinates": {
+                "x": 17.6,
+                "y": 22
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -195.651,
+                  "y": 6.89674,
+                  "z": 24.9987
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67093
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67924,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T15:46:10.055Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67924,
+          "internalId": "SubCts712_02388",
+          "expansion": "Heavensward",
+          "journalGenre": "Palace of the Dead",
+          "eventIconType": 8,
+          "sortKey": 520,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1017324,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1017325,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1017326,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1017558,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "CUT_SCENE_N_0",
+              "argument": 1346,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_N_1",
+              "argument": 1347,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1017715,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1017716,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 1041,
+              "referenceType": "action"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1017325
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1017326
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1017558
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1017715
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1017716
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1017325,
+              "name": "expeditionary",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1017326
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1017558
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1017715,
+              "name": "E-Una-Kotor",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1017716,
+              "name": "expeditionary",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "palace-of-the-dead-quests-side-story-the-nightmares-end-67093"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 648,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Wood Wailer expeditionary",
+          "xivapiRowId": 1017324
+        },
+        "location": {
+          "zone": "South Shroud",
+          "x": 25,
+          "y": 20.5
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}
