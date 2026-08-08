@@ -3,7 +3,7 @@
   "id": "manderville-weapons",
   "title": "Manderville Weapon Quests",
   "category": "relic",
-  "generatedAt": "2026-08-08T13:19:16.643Z",
+  "generatedAt": "2026-08-08T16:06:38.474Z",
   "source": {
     "provider": "xivapi",
     "version": "7583112015aaef5d",
@@ -12,7 +12,7 @@
   "summary": {
     "questCount": 8,
     "branchCount": 3,
-    "convergenceCount": 3,
+    "convergenceCount": 6,
     "unresolvedIssueCount": 0
   },
   "branches": [
@@ -43,6 +43,14 @@
   ],
   "convergences": [
     {
+      "questId": "manderville-weapons-relic-well-oiled-70261",
+      "questName": "Well-oiled",
+      "relatedQuestIds": [
+        "somehow-further-hildibrand-adventures-side-story-generational-bonding-70255",
+        "manderville-weapons-relic-make-it-a-manderville-70188"
+      ]
+    },
+    {
       "questId": "manderville-weapons-relic-the-next-mander-level-70262",
       "questName": "The Next Mander-level",
       "relatedQuestIds": [
@@ -51,11 +59,27 @@
       ]
     },
     {
+      "questId": "manderville-weapons-relic-a-spirited-reforging-70307",
+      "questName": "A Spirited Reforging",
+      "relatedQuestIds": [
+        "somehow-further-hildibrand-adventures-side-story-not-from-around-here-70291",
+        "manderville-weapons-relic-well-oiled-70261"
+      ]
+    },
+    {
       "questId": "manderville-weapons-relic-in-need-of-adjustment-70308",
       "questName": "In Need of Adjustment",
       "relatedQuestIds": [
         "manderville-weapons-relic-a-spirited-reforging-70307",
         "manderville-weapons-relic-the-next-mander-level-70262"
+      ]
+    },
+    {
+      "questId": "manderville-weapons-relic-resonating-with-perfection-70342",
+      "questName": "Resonating with Perfection",
+      "relatedQuestIds": [
+        "somehow-further-hildibrand-adventures-side-story-gentlemen-at-heart-70336",
+        "manderville-weapons-relic-a-spirited-reforging-70307"
       ]
     },
     {
@@ -555,7 +579,9 @@
           }
         }
       },
-      "previousQuestIds": [],
+      "previousQuestIds": [
+        "somehow-further-hildibrand-adventures-side-story-the-imperfect-gentleman-70178"
+      ],
       "previousQuestMode": "all",
       "nextQuestIds": [
         "manderville-weapons-relic-make-another-manderville-70189",
@@ -1364,6 +1390,7 @@
         }
       },
       "previousQuestIds": [
+        "somehow-further-hildibrand-adventures-side-story-generational-bonding-70255",
         "manderville-weapons-relic-make-it-a-manderville-70188"
       ],
       "previousQuestMode": "all",
@@ -1397,7 +1424,7 @@
           "y": 7.1
         }
       },
-      "graphRole": "branch"
+      "graphRole": "branch-and-convergence"
     },
     {
       "id": "manderville-weapons-relic-the-next-mander-level-70262",
@@ -2223,6 +2250,7 @@
         }
       },
       "previousQuestIds": [
+        "somehow-further-hildibrand-adventures-side-story-not-from-around-here-70291",
         "manderville-weapons-relic-well-oiled-70261"
       ],
       "previousQuestMode": "all",
@@ -2256,7 +2284,7 @@
           "y": 7.1
         }
       },
-      "graphRole": "branch"
+      "graphRole": "branch-and-convergence"
     },
     {
       "id": "manderville-weapons-relic-in-need-of-adjustment-70308",
@@ -3048,6 +3076,7 @@
         }
       },
       "previousQuestIds": [
+        "somehow-further-hildibrand-adventures-side-story-gentlemen-at-heart-70336",
         "manderville-weapons-relic-a-spirited-reforging-70307"
       ],
       "previousQuestMode": "all",
@@ -3080,7 +3109,7 @@
           "y": 7.1
         }
       },
-      "graphRole": "linear"
+      "graphRole": "convergence"
     },
     {
       "id": "manderville-weapons-relic-positively-mandervillous-70343",

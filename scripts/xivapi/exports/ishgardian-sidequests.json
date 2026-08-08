@@ -3,7 +3,7 @@
   "id": "ishgardian-sidequests",
   "title": "Ishgardian Sidequests",
   "category": "side",
-  "generatedAt": "2026-08-08T11:58:41.889Z",
+  "generatedAt": "2026-08-08T16:21:29.126Z",
   "source": {
     "provider": "xivapi",
     "version": "7583112015aaef5d",
@@ -11,8 +11,8 @@
   },
   "summary": {
     "questCount": 23,
-    "branchCount": 3,
-    "convergenceCount": 0,
+    "branchCount": 5,
+    "convergenceCount": 1,
     "unresolvedIssueCount": 0
   },
   "branches": [
@@ -55,9 +55,44 @@
         "abalathian-sidequests-side-hatching-ideas-67439",
         "abalathian-sidequests-side-a-tall-order-to-fill-67440"
       ]
+    },
+    {
+      "questId": "ishgardian-sidequests-side-inscrutable-tastes-67631",
+      "questName": "Inscrutable Tastes",
+      "relatedQuestIds": [
+        "mor-dhona-sidequests-side-go-west-craftsman-67634",
+        "kugane-sidequests-side-the-seaweed-is-always-greener-68675",
+        "ishgardian-restoration-sidequests-side-story-o-crafter-my-crafter-69425",
+        "ishgardian-restoration-sidequests-side-story-you-can-count-on-it-69615",
+        "old-sharlayan-sidequests-side-of-mothers-and-merchants-70059",
+        "crystarium-sidequests-side-thats-so-anden-70251",
+        "old-sharlayan-sidequests-side-a-request-of-ones-own-70351",
+        "tuliyollal-sidequests-side-laying-new-tracks-70775",
+        "tuliyollal-sidequests-side-taco-time-70996"
+      ]
+    },
+    {
+      "questId": "ishgardian-sidequests-side-elite-and-dangerous-67658",
+      "questName": "Elite and Dangerous",
+      "relatedQuestIds": [
+        "kugane-sidequests-side-one-star-veteran-clan-hunt-68472",
+        "crystarium-sidequests-side-nuts-to-you-69133",
+        "old-sharlayan-sidequests-side-the-hunt-for-specimens-69712",
+        "tuliyollal-sidequests-side-a-new-dawn-a-new-hunt-70545"
+      ]
     }
   ],
-  "convergences": [],
+  "convergences": [
+    {
+      "questId": "ishgardian-sidequests-side-let-the-clan-hunt-begin-67655",
+      "questName": "Let the Clan Hunt Begin",
+      "relatedQuestIds": [
+        "maelstrom-grand-company-quests-side-story-let-the-hunt-begin-maelstrom-67100",
+        "twin-adder-grand-company-quests-side-story-let-the-hunt-begin-twin-adder-67099",
+        "immortal-flames-grand-company-quests-side-story-let-the-hunt-begin-immortal-flames-67101"
+      ]
+    }
+  ],
   "issues": [],
   "quests": [
     {
@@ -5272,7 +5307,15 @@
       "previousQuestIds": [],
       "previousQuestMode": "all",
       "nextQuestIds": [
-        "mor-dhona-sidequests-side-go-west-craftsman-67634"
+        "mor-dhona-sidequests-side-go-west-craftsman-67634",
+        "kugane-sidequests-side-the-seaweed-is-always-greener-68675",
+        "ishgardian-restoration-sidequests-side-story-o-crafter-my-crafter-69425",
+        "ishgardian-restoration-sidequests-side-story-you-can-count-on-it-69615",
+        "old-sharlayan-sidequests-side-of-mothers-and-merchants-70059",
+        "crystarium-sidequests-side-thats-so-anden-70251",
+        "old-sharlayan-sidequests-side-a-request-of-ones-own-70351",
+        "tuliyollal-sidequests-side-laying-new-tracks-70775",
+        "tuliyollal-sidequests-side-taco-time-70996"
       ],
       "duties": [],
       "unlocks": [],
@@ -5293,7 +5336,7 @@
           "y": 10.5
         }
       },
-      "graphRole": "linear"
+      "graphRole": "branch"
     },
     {
       "id": "ishgardian-sidequests-side-do-it-for-gilly-67649",
@@ -5855,8 +5898,12 @@
           }
         }
       },
-      "previousQuestIds": [],
-      "previousQuestMode": "all",
+      "previousQuestIds": [
+        "maelstrom-grand-company-quests-side-story-let-the-hunt-begin-maelstrom-67100",
+        "twin-adder-grand-company-quests-side-story-let-the-hunt-begin-twin-adder-67099",
+        "immortal-flames-grand-company-quests-side-story-let-the-hunt-begin-immortal-flames-67101"
+      ],
+      "previousQuestMode": "any",
       "nextQuestIds": [
         "ishgardian-sidequests-side-better-bill-hunting-67656"
       ],
@@ -5879,7 +5926,7 @@
           "y": 11.9
         }
       },
-      "graphRole": "linear"
+      "graphRole": "convergence"
     },
     {
       "id": "ishgardian-sidequests-side-better-bill-hunting-67656",
@@ -6202,7 +6249,12 @@
         "idyllshire-sidequests-side-top-marks-67657"
       ],
       "previousQuestMode": "all",
-      "nextQuestIds": [],
+      "nextQuestIds": [
+        "kugane-sidequests-side-one-star-veteran-clan-hunt-68472",
+        "crystarium-sidequests-side-nuts-to-you-69133",
+        "old-sharlayan-sidequests-side-the-hunt-for-specimens-69712",
+        "tuliyollal-sidequests-side-a-new-dawn-a-new-hunt-70545"
+      ],
       "duties": [],
       "unlocks": [],
       "rewards": {
@@ -6223,7 +6275,7 @@
           "y": 11.9
         }
       },
-      "graphRole": "linear"
+      "graphRole": "branch"
     },
     {
       "id": "ishgardian-sidequests-side-ascending-to-empyreum-69708",

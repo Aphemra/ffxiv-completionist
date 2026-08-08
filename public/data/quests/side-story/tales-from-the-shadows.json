@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "tales-from-the-shadows-quests",
+      "title": "Tales from the Shadows",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "tales-from-the-shadows-side-story-one-final-journey-69286",
+          "name": "One Final Journey",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 80,
+          "externalIds": {
+            "xivapi-quest-row": 69286
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69286,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T16:17:26.054Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1018433",
+            "npcName": "F'lhaminn",
+            "sourceRowId": 1018433,
+            "zoneId": "mor-dhona",
+            "zoneName": "Mor Dhona",
+            "coordinates": {
+              "x": 22.5,
+              "y": 6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69218
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 80
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-one-final-journey-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2009865",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-thal",
+                  "zoneName": "Ul'dah - Steps of Thal",
+                  "territoryId": "territory-131",
+                  "mapId": "map-14",
+                  "sourceLevelRowId": 8158066,
+                  "coordinates": {
+                    "x": 10.2,
+                    "y": 12.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -52.7536,
+                      "y": 18,
+                      "z": 48.9129
+                    },
+                    "mapGameId": "w1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-one-final-journey-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1006355",
+              "locations": [
+                {
+                  "zoneId": "eastern-thanalan",
+                  "zoneName": "Eastern Thanalan",
+                  "territoryId": "territory-145",
+                  "mapId": "map-22",
+                  "sourceLevelRowId": 4260832,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 21.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -512.474,
+                      "y": -16.4645,
+                      "z": -7.52277
+                    },
+                    "mapGameId": "w1f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-one-final-journey-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1030875",
+              "locations": [
+                {
+                  "zoneId": "eastern-thanalan",
+                  "zoneName": "Eastern Thanalan",
+                  "territoryId": "territory-145",
+                  "mapId": "map-22",
+                  "sourceLevelRowId": 8158078,
+                  "coordinates": {
+                    "x": 12.3,
+                    "y": 23.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -458.62,
+                      "y": -28.1966,
+                      "z": 110.65
+                    },
+                    "mapGameId": "w1f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1373
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T16:17:27.234Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69286,
+              "internalId": "LucKzk991_03750",
+              "expansion": "Shadowbringers",
+              "journalGenre": "Tales from the Shadows",
+              "eventIconType": 1,
+              "sortKey": 10,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1018433,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2009865,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 11,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1006355,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1029568,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1030875,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_FLHAMINN",
+                  "argument": 1017695,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_POPOKKULI",
+                  "argument": 1007163,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_SESERUKKA",
+                  "argument": 1007164,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_BIND_ACTOR0",
+                  "argument": 8158076,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_ACTOR1",
+                  "argument": 4260832,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_CHK_CLSMIN500",
+                  "argument": 66182,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_CHK_SUBCTS108",
+                  "argument": 65632,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_CHK_CLSALC680",
+                  "argument": 67975,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_LUCKZK991_001",
+                  "argument": 852,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_LUCKZK991_002",
+                  "argument": 853,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 5522,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "BGM_MUSIC_EVENT_WIL_IMAGE01",
+                  "argument": 72,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_ID_EVENT_CAT_EYE_STONE",
+                  "argument": 246,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1006355
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1029568
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1030875
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_FLHAMINN",
+                  "actorRowId": 1017695
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_POPOKKULI",
+                  "actorRowId": 1007163
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SESERUKKA",
+                  "actorRowId": 1007164
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1006355,
+                  "name": "Iliud",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1029568,
+                  "name": "F'lhaminn",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1030875,
+                  "name": "F'lhaminn",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_FLHAMINN",
+                  "actorRowId": 1017695,
+                  "name": "F'lhaminn",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_POPOKKULI",
+                  "actorRowId": 1007163,
+                  "name": "Popokkuli",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SESERUKKA",
+                  "actorRowId": 1007164,
+                  "name": "Seserukka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 1
+        }
+      ]
+    }
+  ]
+}

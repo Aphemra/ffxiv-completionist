@@ -1,0 +1,1194 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "special-quests-quests",
+      "title": "Special Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "special-quests-side-story-the-ties-that-bind-67114",
+          "name": "The Ties That Bind",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 1,
+          "externalIds": {
+            "xivapi-quest-row": 67114
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 67114,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T16:17:17.037Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009761",
+            "npcName": "Claribel",
+            "sourceRowId": 1009761,
+            "zoneId": "east-shroud",
+            "zoneName": "East Shroud",
+            "coordinates": {
+              "x": 17.6,
+              "y": 18.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66045
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-7005",
+              "itemName": "Jandelaine's Token",
+              "sourceRowId": 7005,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-8697",
+              "itemName": "Flawless Band",
+              "sourceRowId": 8697,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            },
+            {
+              "itemId": "event-item-2001353",
+              "itemName": "Divine Band",
+              "sourceRowId": 2001353,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "event-item-2001473",
+              "itemName": "Blessed Band",
+              "sourceRowId": 2001473,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-ties-that-bind-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009762",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 4982903,
+                  "coordinates": {
+                    "x": 17.8,
+                    "y": 18.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -186.914,
+                      "y": 58.0566,
+                      "z": -159.955
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009761",
+              "targetName": "Claribel",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 4982902,
+                  "coordinates": {
+                    "x": 17.6,
+                    "y": 18.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -195.888,
+                      "y": 58.1593,
+                      "z": -159.812
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002280",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-thal",
+                  "zoneName": "Ul'dah - Steps of Thal",
+                  "territoryId": "territory-131",
+                  "mapId": "map-14",
+                  "sourceLevelRowId": 3643124,
+                  "coordinates": {
+                    "x": 10.5,
+                    "y": 13.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -35.3552,
+                      "y": 13.5957,
+                      "z": 97.2457
+                    },
+                    "mapGameId": "w1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009761",
+              "targetName": "Claribel",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 4982902,
+                  "coordinates": {
+                    "x": 17.6,
+                    "y": 18.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -195.888,
+                      "y": 58.1593,
+                      "z": -159.812
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004588",
+              "locations": [
+                {
+                  "zoneId": "old-gridania",
+                  "zoneName": "Old Gridania",
+                  "territoryId": "territory-133",
+                  "mapId": "map-3",
+                  "sourceLevelRowId": 4982370,
+                  "coordinates": {
+                    "x": 8,
+                    "y": 10.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -160.591,
+                      "y": 4.98275,
+                      "z": -18.4841
+                    },
+                    "mapGameId": "f1t2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004589",
+              "locations": [
+                {
+                  "zoneId": "south-shroud",
+                  "zoneName": "South Shroud",
+                  "territoryId": "territory-153",
+                  "mapId": "map-6",
+                  "sourceLevelRowId": 4982804,
+                  "coordinates": {
+                    "x": 15.9,
+                    "y": 27.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -279.112,
+                      "y": 4.76025,
+                      "z": 297.795
+                    },
+                    "mapGameId": "f1f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004590",
+              "locations": [
+                {
+                  "zoneId": "south-shroud",
+                  "zoneName": "South Shroud",
+                  "territoryId": "territory-153",
+                  "mapId": "map-6",
+                  "sourceLevelRowId": 4982805,
+                  "coordinates": {
+                    "x": 23.7,
+                    "y": 25.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 112.312,
+                      "y": 25.2423,
+                      "z": 180.342
+                    },
+                    "mapGameId": "f1f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004591",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4982807,
+                  "coordinates": {
+                    "x": 7.5,
+                    "y": 14.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -189.307,
+                      "y": 41.928,
+                      "z": 172.457
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004592",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4982814,
+                  "coordinates": {
+                    "x": 26.5,
+                    "y": 37.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 251.633,
+                      "y": 7.44846,
+                      "z": 782.909
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-10",
+              "sortOrder": 10,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004593",
+              "locations": [
+                {
+                  "zoneId": "outer-la-noscea",
+                  "zoneName": "Outer La Noscea",
+                  "territoryId": "territory-180",
+                  "mapId": "map-30",
+                  "sourceLevelRowId": 4982830,
+                  "coordinates": {
+                    "x": 25.3,
+                    "y": 18.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 188.135,
+                      "y": 62.2751,
+                      "z": -156.654
+                    },
+                    "mapGameId": "s1f6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 10,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-11",
+              "sortOrder": 11,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004594",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4982836,
+                  "coordinates": {
+                    "x": 7,
+                    "y": 12.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -211.853,
+                      "y": 19.6201,
+                      "z": 74.7921
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 11,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-12",
+              "sortOrder": 12,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004595",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4982858,
+                  "coordinates": {
+                    "x": 19.8,
+                    "y": 14.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -83.7347,
+                      "y": 40.4548,
+                      "z": -332.109
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 12,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-13",
+              "sortOrder": 13,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004596",
+              "locations": [
+                {
+                  "zoneId": "eastern-thanalan",
+                  "zoneName": "Eastern Thanalan",
+                  "territoryId": "territory-145",
+                  "mapId": "map-22",
+                  "sourceLevelRowId": 4982865,
+                  "coordinates": {
+                    "x": 24.5,
+                    "y": 29.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 148.872,
+                      "y": -3.65441,
+                      "z": 408.649
+                    },
+                    "mapGameId": "w1f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 13,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-14",
+              "sortOrder": 14,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004597",
+              "locations": [
+                {
+                  "zoneId": "coerthas-central-highlands",
+                  "zoneName": "Coerthas Central Highlands",
+                  "territoryId": "territory-155",
+                  "mapId": "map-53",
+                  "sourceLevelRowId": 4982870,
+                  "coordinates": {
+                    "x": 7.6,
+                    "y": 31.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -692.434,
+                      "y": 254.3,
+                      "z": 503.48
+                    },
+                    "mapGameId": "r1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 14,
+                "completeSequence": 8
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-15",
+              "sortOrder": 15,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004598",
+              "locations": [
+                {
+                  "zoneId": "coerthas-central-highlands",
+                  "zoneName": "Coerthas Central Highlands",
+                  "territoryId": "territory-155",
+                  "mapId": "map-53",
+                  "sourceLevelRowId": 4982877,
+                  "coordinates": {
+                    "x": 22.8,
+                    "y": 8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 64.6006,
+                      "y": 376.351,
+                      "z": -672.704
+                    },
+                    "mapGameId": "r1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 15,
+                "completeSequence": 8
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-16",
+              "sortOrder": 16,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004599",
+              "locations": [
+                {
+                  "zoneId": "mor-dhona",
+                  "zoneName": "Mor Dhona",
+                  "territoryId": "territory-156",
+                  "mapId": "map-25",
+                  "sourceLevelRowId": 4982893,
+                  "coordinates": {
+                    "x": 18.6,
+                    "y": 17.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -143.084,
+                      "y": 46.1223,
+                      "z": -188.529
+                    },
+                    "mapGameId": "l1f1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 16,
+                "completeSequence": 9
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-17",
+              "sortOrder": 17,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009761",
+              "targetName": "Claribel",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 4982902,
+                  "coordinates": {
+                    "x": 17.6,
+                    "y": 18.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -195.888,
+                      "y": 58.1593,
+                      "z": -159.812
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 17,
+                "completeSequence": 10
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-18",
+              "sortOrder": 18,
+              "type": "unknown",
+              "targetId": "actor-1009763",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-393",
+                  "mapId": "map-180",
+                  "sourceLevelRowId": 5039526,
+                  "coordinates": {
+                    "x": 11.3,
+                    "y": 9.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 4.08685,
+                      "y": 2.625,
+                      "z": -97.304
+                    },
+                    "mapGameId": "f1e6/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 18,
+                "completeSequence": 11
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-19",
+              "sortOrder": 19,
+              "type": "unknown",
+              "targetId": "actor-1009764",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 4982905,
+                  "coordinates": {
+                    "x": 17.8,
+                    "y": 15.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -185.87,
+                      "y": 60.742,
+                      "z": -287.735
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                },
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 5035505,
+                  "coordinates": {
+                    "x": 17.6,
+                    "y": 15.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -197.104,
+                      "y": 60.7419,
+                      "z": -297.975
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 19,
+                "completeSequence": 12
+              }
+            },
+            {
+              "id": "adventurer-the-ties-that-bind-objective-20",
+              "sortOrder": 20,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009761",
+              "targetName": "Claribel",
+              "locations": [
+                {
+                  "zoneId": "east-shroud",
+                  "zoneName": "East Shroud",
+                  "territoryId": "territory-152",
+                  "mapId": "map-5",
+                  "sourceLevelRowId": 4982902,
+                  "coordinates": {
+                    "x": 17.6,
+                    "y": 18.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -195.888,
+                      "y": 58.1593,
+                      "z": -159.812
+                    },
+                    "mapGameId": "f1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 20
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-8791",
+                "itemName": "Eternity Cake",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-9541",
+                "itemName": "Magicked Prism (Wings)",
+                "quantity": 99,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-23855",
+                "itemName": "Magicked Prism (Glassy Wings)",
+                "quantity": 99,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T16:17:20.501Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 67114,
+              "internalId": "SubCts999_01578",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Special Quests",
+              "eventIconType": 1,
+              "sortKey": 1,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009761,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1009762,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 7005,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "REWARD0",
+                  "argument": 229,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1002280,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 8697,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001353,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004588,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2004589,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2004590,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2004591,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2004592,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT5",
+                  "argument": 2004593,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT6",
+                  "argument": 2004594,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT7",
+                  "argument": 2004595,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT8",
+                  "argument": 2004596,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT9",
+                  "argument": 2004597,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT10",
+                  "argument": 2004598,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT11",
+                  "argument": 2004599,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ITEM1",
+                  "argument": 2001473,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1009763,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1010146,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 393,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 5039523,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INSTANCEDUNGEON0",
+                  "argument": 65000,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1009764,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE1",
+                  "argument": 392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE1",
+                  "argument": 5038252,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NEST_EVENT_HANDLER_SHOP",
+                  "argument": 262486,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "PUBLICCONTENT0",
+                  "argument": 1,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_CAMERA_BASE",
+                  "argument": 1010402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_STYLE_2_1",
+                  "argument": 666,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_STYLE_2_2",
+                  "argument": 667,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_STYLE_2_3",
+                  "argument": 668,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUTSCENE_STYLE_1",
+                  "argument": 671,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE_ACCEPTED",
+                  "argument": 260,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SCREENIMAGE_COMPLETE",
+                  "argument": 261,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS_CAM1",
+                  "argument": 5419810,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS_CAM2",
+                  "argument": 5419811,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR1",
+                  "argument": 4982903,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM1",
+                  "argument": 98,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NEST_EVENT_HANDLER_WARP",
+                  "argument": 131176,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_CAMPOS_GLD1",
+                  "argument": 2617105,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM_BALLOON",
+                  "argument": 9505,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS_CAM3",
+                  "argument": 5448857,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "RESERVE0",
+                  "argument": 0,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_WEDDING_BEFOR",
+                  "argument": 194,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOCAL_EMOTE1",
+                  "argument": 3757,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "REWARD_WEDDING_BEAUTY_SALON",
+                  "argument": 228,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 7005,
+                  "itemId": "item-7005",
+                  "quantity": 1,
+                  "name": "Jandelaine's Token",
+                  "resolvedSheet": "Item",
+                  "iconId": 25918
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 8697,
+                  "itemId": "item-8697",
+                  "quantity": 1,
+                  "name": "Flawless Band",
+                  "resolvedSheet": "Item",
+                  "iconId": 54562
+                },
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001353,
+                  "itemId": "event-item-2001353",
+                  "name": "Divine Band",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 54563,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM1",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001473,
+                  "itemId": "event-item-2001473",
+                  "name": "Blessed Band",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 54564,
+                  "quantity": 1
+                }
+              ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 65000,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009762
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002280
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1009763
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010146
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1009764
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009762,
+                  "name": "ceremony outfitter",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002280,
+                  "name": "Jemime",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1009763,
+                  "name": "Raitmeaux",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010146,
+                  "name": "ceremony usher",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1009764,
+                  "name": "Etoinelle",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 1
+        }
+      ]
+    }
+  ]
+}

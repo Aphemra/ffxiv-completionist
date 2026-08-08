@@ -161,6 +161,7 @@ const chocoboBardingItemRowIds = new Set<number>([
   44496, // Starlight Stalls Barding
   10082, // Paramour Barding
   36013, // Postmoogle Barding
+  41470, // Wayfarer's Barding
 ]);
 
 export function isSupportedCollectibleReward(

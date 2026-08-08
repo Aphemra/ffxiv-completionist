@@ -1,0 +1,1107 @@
+{
+  "schemaVersion": 1,
+  "id": "twin-adder-grand-company-quests",
+  "title": "Order of the Twin Adder Grand Company Quests",
+  "category": "side-story",
+  "generatedAt": "2026-08-08T16:21:12.883Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 5,
+    "branchCount": 1,
+    "convergenceCount": 1,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [
+    {
+      "questId": "twin-adder-grand-company-quests-side-story-a-pup-no-longer-twin-adder-66641",
+      "questName": "A Pup No Longer (Twin Adder)",
+      "relatedQuestIds": [
+        "twin-adder-grand-company-quests-side-story-like-civilized-men-and-women-twin-adder-67063",
+        "maelstrom-grand-company-quests-side-story-like-civilized-men-and-women-maelstrom-67064",
+        "immortal-flames-grand-company-quests-side-story-like-civilized-men-and-women-immortal-flames-67065",
+        "limsa-lominsa-la-noscea-sidequests-side-earning-your-wings-68543",
+        "limsa-lominsa-la-noscea-sidequests-side-the-crystal-lines-call-70121"
+      ]
+    }
+  ],
+  "convergences": [
+    {
+      "questId": "twin-adder-grand-company-quests-side-story-like-civilized-men-and-women-twin-adder-67063",
+      "questName": "Like Civilized Men and Women (Twin Adder)",
+      "relatedQuestIds": [
+        "twin-adder-grand-company-quests-side-story-a-pup-no-longer-twin-adder-66641",
+        "immortal-flames-grand-company-quests-side-story-a-pup-no-longer-immortal-flames-66642",
+        "maelstrom-grand-company-quests-side-story-a-pup-no-longer-maelstrom-66640"
+      ]
+    }
+  ],
+  "issues": [],
+  "quests": [
+    {
+      "id": "twin-adder-grand-company-quests-side-story-a-pup-no-longer-twin-adder-66641",
+      "xivapiRowId": 66641,
+      "sortOrder": 1,
+      "name": "A Pup No Longer (Twin Adder)",
+      "level": 30,
+      "category": "side-story",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 30
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 30
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-a-pup-no-longer-twin-adder-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "targetId": "actor-1005184",
+          "locations": [
+            {
+              "zoneId": "wolves-den-pier",
+              "zoneName": "Wolves' Den Pier",
+              "territoryId": "territory-250",
+              "mapId": "map-51",
+              "sourceLevelRowId": 4256835,
+              "coordinates": {
+                "x": 4.6,
+                "y": 5.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 0.0395907,
+                  "y": 3.58368,
+                  "z": -30.3542
+                },
+                "mapGameId": "s1p1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "lockedByQuestRowIds": [
+          66640,
+          66642
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 66641,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T16:18:05.725Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 66641,
+          "internalId": "ComGrd001_01105",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Order of the Twin Adder Quests",
+          "eventIconType": 8,
+          "sortKey": 300,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000168,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1005184,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "SCREENIMAGE0",
+              "argument": 1100,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_001",
+              "argument": 130,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+              "argument": 3702,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_01",
+              "argument": 1167,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREENIMAGE1",
+              "argument": 1101,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005184
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005184,
+              "name": "Berkoeya Loetahlsyn",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67063,
+              67064,
+              67065,
+              67819,
+              68543,
+              70121
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "twin-adder-grand-company-quests-side-story-like-civilized-men-and-women-twin-adder-67063",
+        "maelstrom-grand-company-quests-side-story-like-civilized-men-and-women-maelstrom-67064",
+        "immortal-flames-grand-company-quests-side-story-like-civilized-men-and-women-immortal-flames-67065",
+        "limsa-lominsa-la-noscea-sidequests-side-earning-your-wings-68543",
+        "limsa-lominsa-la-noscea-sidequests-side-the-crystal-lines-call-70121"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 0,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Vorsaile Heuloix",
+          "title": "Serpent Commander",
+          "xivapiRowId": 1000168
+        },
+        "location": {
+          "zone": "New Gridania",
+          "x": 9.7,
+          "y": 11.1
+        }
+      },
+      "graphRole": "branch"
+    },
+    {
+      "id": "twin-adder-grand-company-quests-side-story-shadows-uncast-twin-adder-66665",
+      "xivapiRowId": 66665,
+      "sortOrder": 2,
+      "name": "Shadows Uncast (Twin Adder)",
+      "level": 44,
+      "category": "side-story",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 44
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 44
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-shadows-uncast-twin-adder-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "targetId": "actor-1006516",
+          "locations": [
+            {
+              "zoneId": "coerthas-central-highlands",
+              "zoneName": "Coerthas Central Highlands",
+              "territoryId": "territory-155",
+              "mapId": "map-53",
+              "sourceLevelRowId": 4273881,
+              "coordinates": {
+                "x": 19.8,
+                "y": 27.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -82.6778,
+                  "y": 233.237,
+                  "z": 317.214
+                },
+                "mapGameId": "r1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-shadows-uncast-twin-adder-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "dzemael-darkhold",
+              "zoneName": "Dzemael Darkhold",
+              "territoryId": "territory-1330",
+              "mapId": "map-86",
+              "sourceLevelRowId": 4374660,
+              "coordinates": {
+                "x": 12.9,
+                "y": 7.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 83.1764,
+                  "y": -38.4482,
+                  "z": -167.622
+                },
+                "mapGameId": "r1r1/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-shadows-uncast-twin-adder-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "targetId": "actor-1000168",
+          "targetName": "Vorsaile Heuloix",
+          "locations": [
+            {
+              "zoneId": "new-gridania",
+              "zoneName": "New Gridania",
+              "territoryId": "territory-132",
+              "mapId": "map-2",
+              "sourceLevelRowId": 1141151,
+              "coordinates": {
+                "x": 9.7,
+                "y": 11.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -75.4815,
+                  "y": -0.501378,
+                  "z": -5.07031
+                },
+                "mapGameId": "f1t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 66665,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T16:18:07.510Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 66665,
+          "internalId": "ComGrd010_01129",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Order of the Twin Adder Quests",
+          "eventIconType": 8,
+          "sortKey": 440,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000168,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1006516,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "INSTANCEDUNGEON0",
+              "argument": 13,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_DUNGEON",
+              "argument": 83,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+              "argument": 3702,
+              "referenceType": "script-value"
+            }
+          ],
+          "dutyReferences": [
+            {
+              "instanceContentRowId": 13,
+              "sourceInstruction": "INSTANCEDUNGEON0",
+              "relationship": "unlocked"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1006516
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1006516,
+              "name": "Ophelie",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              66668
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "twin-adder-grand-company-quests-side-story-gilding-the-bilious-twin-adder-66668"
+      ],
+      "duties": [
+        {
+          "id": "duty-13",
+          "sourceRowId": 13,
+          "contentRowId": 13,
+          "name": "Dzemael Darkhold",
+          "type": "dungeon",
+          "relationship": "unlocked",
+          "level": 44,
+          "partySize": 4,
+          "levelSync": 46,
+          "highEnd": false
+        }
+      ],
+      "unlocks": [
+        {
+          "type": "dungeon",
+          "id": "duty-13",
+          "sourceRowId": 13,
+          "name": "Dzemael Darkhold"
+        }
+      ],
+      "rewards": {
+        "experience": 5830,
+        "gil": 0,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Vorsaile Heuloix",
+          "title": "Serpent Commander",
+          "xivapiRowId": 1000168
+        },
+        "location": {
+          "zone": "New Gridania",
+          "x": 9.7,
+          "y": 11.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "twin-adder-grand-company-quests-side-story-gilding-the-bilious-twin-adder-66668",
+      "xivapiRowId": 66668,
+      "sortOrder": 3,
+      "name": "Gilding the Bilious (Twin Adder)",
+      "level": 47,
+      "category": "side-story",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 47
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 47
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-gilding-the-bilious-twin-adder-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "targetId": "actor-1007625",
+          "locations": [
+            {
+              "zoneId": "coerthas-central-highlands",
+              "zoneName": "Coerthas Central Highlands",
+              "territoryId": "territory-155",
+              "mapId": "map-53",
+              "sourceLevelRowId": 4323577,
+              "coordinates": {
+                "x": 14.4,
+                "y": 35.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -354.177,
+                  "y": 214.999,
+                  "z": 692.653
+                },
+                "mapGameId": "r1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-gilding-the-bilious-twin-adder-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "aurum-vale",
+              "zoneName": "Aurum Vale",
+              "territoryId": "territory-1331",
+              "mapId": "map-38",
+              "sourceLevelRowId": 4407153,
+              "coordinates": {
+                "x": 3.2,
+                "y": 8.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -400.126,
+                  "y": -32.8459,
+                  "z": -134.641
+                },
+                "mapGameId": "r1r2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-gilding-the-bilious-twin-adder-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "targetId": "actor-1000168",
+          "targetName": "Vorsaile Heuloix",
+          "locations": [
+            {
+              "zoneId": "new-gridania",
+              "zoneName": "New Gridania",
+              "territoryId": "territory-132",
+              "mapId": "map-2",
+              "sourceLevelRowId": 1141151,
+              "coordinates": {
+                "x": 9.7,
+                "y": 11.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -75.4815,
+                  "y": -0.501378,
+                  "z": -5.07031
+                },
+                "mapGameId": "f1t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          66665
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 66668,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T16:18:09.306Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 66668,
+          "internalId": "ComGrd011_01132",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Order of the Twin Adder Quests",
+          "eventIconType": 8,
+          "sortKey": 470,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000168,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1007625,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "INSTANCEDUNGEON0",
+              "argument": 5,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_DUNGEON",
+              "argument": 82,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+              "argument": 3702,
+              "referenceType": "script-value"
+            }
+          ],
+          "dutyReferences": [
+            {
+              "instanceContentRowId": 5,
+              "sourceInstruction": "INSTANCEDUNGEON0",
+              "relationship": "unlocked"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1007625
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1007625,
+              "name": "Willielmus",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "twin-adder-grand-company-quests-side-story-shadows-uncast-twin-adder-66665"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [
+        {
+          "id": "duty-5",
+          "sourceRowId": 5,
+          "contentRowId": 5,
+          "name": "The Aurum Vale",
+          "type": "dungeon",
+          "relationship": "unlocked",
+          "level": 47,
+          "partySize": 4,
+          "levelSync": 49,
+          "highEnd": false
+        }
+      ],
+      "unlocks": [
+        {
+          "type": "dungeon",
+          "id": "duty-5",
+          "sourceRowId": 5,
+          "name": "The Aurum Vale"
+        }
+      ],
+      "rewards": {
+        "experience": 0,
+        "gil": 0,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Vorsaile Heuloix",
+          "title": "Serpent Commander",
+          "xivapiRowId": 1000168
+        },
+        "location": {
+          "zone": "New Gridania",
+          "x": 9.7,
+          "y": 11.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "twin-adder-grand-company-quests-side-story-like-civilized-men-and-women-twin-adder-67063",
+      "xivapiRowId": 67063,
+      "sortOrder": 4,
+      "name": "Like Civilized Men and Women (Twin Adder)",
+      "level": 30,
+      "category": "side-story",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 30
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 30
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-like-civilized-men-and-women-twin-adder-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009235",
+          "locations": [
+            {
+              "zoneId": "new-gridania",
+              "zoneName": "New Gridania",
+              "territoryId": "territory-132",
+              "mapId": "map-2",
+              "sourceLevelRowId": 4769224,
+              "coordinates": {
+                "x": 11.7,
+                "y": 13.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 21.3212,
+                  "y": -19.0281,
+                  "z": 110.88
+                },
+                "mapGameId": "f1t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          66641,
+          66642,
+          66640
+        ],
+        "lockedByQuestRowIds": [
+          67065,
+          67064
+        ],
+        "previousQuestJoin": 2,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67063,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T16:18:11.302Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67063,
+          "internalId": "ComGrd002_01527",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Order of the Twin Adder Quests",
+          "eventIconType": 8,
+          "sortKey": 300,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1009294,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1009235,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "QUEST0",
+              "argument": 66060,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREENIMAGE0",
+              "argument": 217,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_001",
+              "argument": 176,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_ADD_NEW_CONTENT_TO_CF",
+              "argument": 3702,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT0",
+              "argument": 541,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1009235
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1009235,
+              "name": "Yellow Serpent flyer",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "twin-adder-grand-company-quests-side-story-a-pup-no-longer-twin-adder-66641",
+        "immortal-flames-grand-company-quests-side-story-a-pup-no-longer-immortal-flames-66642",
+        "maelstrom-grand-company-quests-side-story-a-pup-no-longer-maelstrom-66640"
+      ],
+      "previousQuestMode": "any",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "pvp",
+          "id": "duty-127",
+          "sourceRowId": 127,
+          "name": "the Borderland Ruins (Secure)",
+          "details": "Content Finder row 127."
+        }
+      ],
+      "rewards": {
+        "experience": 0,
+        "gil": 367,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Scarlet",
+          "title": "Serpent Lieutenant",
+          "xivapiRowId": 1009294
+        },
+        "location": {
+          "zone": "New Gridania",
+          "x": 10,
+          "y": 11.5
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "twin-adder-grand-company-quests-side-story-let-the-hunt-begin-twin-adder-67099",
+      "xivapiRowId": 67099,
+      "sortOrder": 5,
+      "name": "Let the Hunt Begin (Twin Adder)",
+      "level": 50,
+      "category": "side-story",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-let-the-hunt-begin-twin-adder-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009152",
+          "locations": [
+            {
+              "zoneId": "new-gridania",
+              "zoneName": "New Gridania",
+              "territoryId": "territory-132",
+              "mapId": "map-2",
+              "sourceLevelRowId": 4742785,
+              "coordinates": {
+                "x": 9.8,
+                "y": 11.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -74.4508,
+                  "y": -0.503604,
+                  "z": 3.25074
+                },
+                "mapGameId": "f1t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "lockedByQuestRowIds": [
+          67100,
+          67101
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67099,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T16:18:13.087Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67099,
+          "internalId": "ComGrd003_01563",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Order of the Twin Adder Quests",
+          "eventIconType": 8,
+          "sortKey": 500,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            99
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1009294,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1009152,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_MOT_01",
+              "argument": 727,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_ALLIANCE_BADGE",
+              "argument": 179,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_MOBHUNT",
+              "argument": 216,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOG_MOBHUNT_ORDER_UNLOCK",
+              "argument": 3709,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1009152
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1009152,
+              "name": "Hunt billmaster",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67655
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "ishgardian-sidequests-side-let-the-clan-hunt-begin-67655"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 433,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Scarlet",
+          "title": "Serpent Lieutenant",
+          "xivapiRowId": 1009294
+        },
+        "location": {
+          "zone": "New Gridania",
+          "x": 10,
+          "y": 11.5
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

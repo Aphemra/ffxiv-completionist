@@ -73,6 +73,15 @@ const COVERAGE_IGNORED_JOURNAL_CATEGORIES = new Set<string>([
   'Sephiroth Missions',
 ]);
 
+/*
+ * The app consolidates each city's class-specific "Close to Home" rows
+ * into one representative opening quest. These five additional XIVAPI
+ * rows describe the same player-facing quests for other starting classes.
+ */
+const COVERAGE_IGNORED_QUEST_ROW_IDS = new Set<number>([
+  65645, 65659, 65660, 66105, 66106,
+]);
+
 function readQuestRowId(value: unknown): number | undefined {
   if (typeof value === 'number' && Number.isInteger(value) && value > 0) {
     return value;
@@ -269,14 +278,20 @@ async function main(): Promise<void> {
     (quest) =>
       !isExcludedQuestRowId(quest.rowId) &&
       !occurrencesByRowId.has(quest.rowId) &&
-      COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(quest.journalCategoryName ?? ''),
+      (COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(
+        quest.journalCategoryName ?? '',
+      ) ||
+        COVERAGE_IGNORED_QUEST_ROW_IDS.has(quest.rowId)),
   );
 
   const unpublishedQuests = questIndex.quests.filter(
     (quest) =>
       !isExcludedQuestRowId(quest.rowId) &&
       !occurrencesByRowId.has(quest.rowId) &&
-      !COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(quest.journalCategoryName ?? ''),
+      !COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(
+        quest.journalCategoryName ?? '',
+      ) &&
+      !COVERAGE_IGNORED_QUEST_ROW_IDS.has(quest.rowId),
   );
 
   const missingCountsByJournalCategory = new Map<string, number>();
