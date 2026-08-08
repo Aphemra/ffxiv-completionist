@@ -193,7 +193,7 @@
   flex: 0 0 auto;
 }
 
-.quest-details__action:hover {
+button.quest-details__action:hover {
   border-color: var(--color-border-strong);
   color: var(--color-text-primary);
   background: var(--color-surface-hover);
@@ -208,6 +208,13 @@
 
 .quest-details__action--status {
   cursor: default;
+}
+
+.quest-details__action--reference {
+  cursor: default;
+
+  color: var(--color-text-secondary);
+  background: rgb(255 255 255 / 3%);
 }
 
 .quest-details__summary {

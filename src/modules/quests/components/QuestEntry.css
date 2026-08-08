@@ -65,6 +65,28 @@
   opacity: 0;
 }
 
+.quest-entry__reference-icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: 0 0 1.35rem;
+
+  display: grid;
+  place-items: center;
+
+  margin-top: 0.08rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 0.3rem;
+
+  color: var(--color-text-muted);
+  background: rgb(255 255 255 / 3%);
+}
+
+.quest-entry__reference-icon svg {
+  width: 0.78rem;
+  height: 0.78rem;
+}
+
 .quest-entry__custom-check {
   position: absolute;
   inset: 0;
@@ -179,6 +201,32 @@
 }
 
 .quest-entry__current-indicator svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex: 0 0 auto;
+}
+
+.quest-entry__reference-indicator {
+  min-height: 1.8rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+
+  padding: 0.25rem 0.45rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 0.35rem;
+
+  color: var(--color-text-muted);
+  background: rgb(255 255 255 / 3%);
+
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
+.quest-entry__reference-indicator svg {
   width: 0.85rem;
   height: 0.85rem;
   flex: 0 0 auto;

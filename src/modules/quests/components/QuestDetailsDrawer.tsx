@@ -11,6 +11,7 @@ import {
   Crosshair,
   Gift,
   GitBranch,
+  Info,
   MapPin,
   Package,
   ShieldCheck,
@@ -21,6 +22,8 @@ import {
   X,
   type LucideIcon,
 } from 'lucide-react';
+
+import { isQuestCompletionEligible } from '../utilities/questCompletion';
 
 import { AnimatedCollapse } from '../../../shared/components/AnimatedCollapse';
 
@@ -349,6 +352,12 @@ export function QuestDetailsDrawer({
 
   const [noteMessage, setNoteMessage] = useState('');
 
+  const isCompletable = isQuestCompletionEligible(quest);
+
+  const referenceLabel = quest.isSeasonalQuest
+    ? 'Seasonal reference'
+    : 'Repeatable reference';
+
   useEffect(() => {
     onCloseRef.current = onClose;
   }, [onClose]);
@@ -574,21 +583,32 @@ export function QuestDetailsDrawer({
         </header>
 
         <div className="quest-details__actions">
-          <button
-            className={[
-              'quest-details__action',
-              isCompleted ? 'quest-details__action--active' : '',
-            ]
-              .filter(Boolean)
-              .join(' ')}
-            type="button"
-            aria-pressed={isCompleted}
-            onClick={onToggleCompletion}
-          >
-            <CheckCircle2 aria-hidden="true" />
+          {isCompletable ? (
+            <button
+              className={[
+                'quest-details__action',
+                isCompleted ? 'quest-details__action--active' : '',
+              ]
+                .filter(Boolean)
+                .join(' ')}
+              type="button"
+              aria-pressed={isCompleted}
+              onClick={onToggleCompletion}
+            >
+              <CheckCircle2 aria-hidden="true" />
 
-            <span>{isCompleted ? 'Completed' : 'Mark complete'}</span>
-          </button>
+              <span>{isCompleted ? 'Completed' : 'Mark complete'}</span>
+            </button>
+          ) : (
+            <span
+              className="quest-details__action quest-details__action--reference"
+              title="This quest is provided for reference and does not count toward completion."
+            >
+              <Info aria-hidden="true" />
+
+              <span>{referenceLabel}</span>
+            </span>
+          )}
 
           {isCurrent && (
             <span className="quest-details__action quest-details__action--active quest-details__action--status">

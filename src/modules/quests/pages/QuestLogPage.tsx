@@ -20,6 +20,8 @@ import { QuestEntry } from '../components/QuestEntry';
 
 import { useQuestFilterStore } from '../state/questFilterStore';
 
+import { isQuestCompletionEligible } from '../utilities/questCompletion';
+
 import type {
   Quest,
   QuestCategory,
@@ -65,10 +67,17 @@ function getQuestSectionId(
   ].join(':');
 }
 
-function collectionHasFeatureQuests(collection: QuestCollection): boolean {
+function collectionHasMatchingQuests(
+  collection: QuestCollection,
+  family: QuestFamily,
+): boolean {
   return collection.groups.some((group) =>
-    group.quests.some((quest) => quest.isFeatureQuest),
+    group.quests.some((quest) => questMatchesFamily(quest, family)),
   );
+}
+
+function usesQuestTypeCollectionFilters(family: QuestFamily): boolean {
+  return family === 'feature' || family === 'repeatable';
 }
 
 function formatPatchTitle(
@@ -276,8 +285,8 @@ export function QuestLogPage() {
     const options = new Map<string, string>();
 
     for (const collection of catalog.collections) {
-      if (categoryFilter === 'feature') {
-        if (!collectionHasFeatureQuests(collection)) {
+      if (usesQuestTypeCollectionFilters(categoryFilter)) {
+        if (!collectionHasMatchingQuests(collection, categoryFilter)) {
           continue;
         }
 
@@ -289,7 +298,12 @@ export function QuestLogPage() {
         continue;
       }
 
-      if (!questCategoryMatchesFamily(collection.category, categoryFilter)) {
+      const collectionMatchesFamily =
+        categoryFilter === 'seasonal'
+          ? collectionHasMatchingQuests(collection, categoryFilter)
+          : questCategoryMatchesFamily(collection.category, categoryFilter);
+
+      if (!collectionMatchesFamily) {
         continue;
       }
 
@@ -316,10 +330,10 @@ export function QuestLogPage() {
     const options = new Map<string, string>();
 
     for (const collection of catalog.collections) {
-      if (categoryFilter === 'feature') {
+      if (usesQuestTypeCollectionFilters(categoryFilter)) {
         if (
           collection.category !== primaryFilter ||
-          !collectionHasFeatureQuests(collection)
+          !collectionHasMatchingQuests(collection, categoryFilter)
         ) {
           continue;
         }
@@ -329,8 +343,13 @@ export function QuestLogPage() {
         continue;
       }
 
+      const collectionMatchesFamily =
+        categoryFilter === 'seasonal'
+          ? collectionHasMatchingQuests(collection, categoryFilter)
+          : questCategoryMatchesFamily(collection.category, categoryFilter);
+
       if (
-        !questCategoryMatchesFamily(collection.category, categoryFilter) ||
+        !collectionMatchesFamily ||
         collection.filterFacets?.primary.id !== primaryFilter
       ) {
         continue;
@@ -374,7 +393,7 @@ export function QuestLogPage() {
                 primaryFilter === 'all' ||
                 (categoryFilter === 'msq'
                   ? quest.expansionId === primaryFilter
-                  : categoryFilter === 'feature'
+                  : usesQuestTypeCollectionFilters(categoryFilter)
                     ? quest.category === primaryFilter
                     : collection.filterFacets?.primary.id === primaryFilter);
 
@@ -382,7 +401,7 @@ export function QuestLogPage() {
                 secondaryFilter === 'all' ||
                 (categoryFilter === 'msq'
                   ? quest.patch === secondaryFilter
-                  : categoryFilter === 'feature'
+                  : usesQuestTypeCollectionFilters(categoryFilter)
                     ? collection.id === secondaryFilter
                     : collection.filterFacets?.secondary.id ===
                       secondaryFilter);
@@ -390,7 +409,9 @@ export function QuestLogPage() {
               const matchesSearch = questMatchesSearch(quest, searchQuery);
 
               const matchesCompletion =
-                showCompleted || !completedQuestIdSet.has(quest.id);
+                showCompleted ||
+                !isQuestCompletionEligible(quest) ||
+                !completedQuestIdSet.has(quest.id);
 
               return (
                 matchesCategory &&
@@ -485,14 +506,26 @@ export function QuestLogPage() {
     [filteredCollections],
   );
 
+  const completableQuestCount = useMemo(() => {
+    if (!catalog) {
+      return 0;
+    }
+
+    return Array.from(catalog.questsById.values()).filter(
+      isQuestCompletionEligible,
+    ).length;
+  }, [catalog]);
+
   const loadedCompletedCount = useMemo(() => {
     if (!catalog) {
       return 0;
     }
 
-    return profile.completedQuestIds.filter((questId) =>
-      catalog.questsById.has(questId),
-    ).length;
+    return profile.completedQuestIds.filter((questId) => {
+      const quest = catalog.questsById.get(questId);
+
+      return quest !== undefined && isQuestCompletionEligible(quest);
+    }).length;
   }, [catalog, profile.completedQuestIds]);
 
   const selectedQuest =
@@ -543,6 +576,10 @@ export function QuestLogPage() {
   }
 
   function handleToggleQuestCompletion(quest: Quest): void {
+    if (!isQuestCompletionEligible(quest)) {
+      return;
+    }
+
     if (!catalog || completedQuestIdSet.has(quest.id)) {
       toggleQuestCompletion(quest.id);
       return;
@@ -562,8 +599,13 @@ export function QuestLogPage() {
       <QuestEntry
         key={quest.id}
         quest={quest}
-        isCompleted={completedQuestIdSet.has(quest.id)}
-        isCurrent={automaticCurrentQuestId === quest.id}
+        isCompleted={
+          isQuestCompletionEligible(quest) && completedQuestIdSet.has(quest.id)
+        }
+        isCurrent={
+          isQuestCompletionEligible(quest) &&
+          automaticCurrentQuestId === quest.id
+        }
         onToggleCompletion={() => {
           handleToggleQuestCompletion(quest);
         }}
@@ -605,7 +647,7 @@ export function QuestLogPage() {
 
           {state.status === 'success' &&
             catalog &&
-            `${loadedCompletedCount.toLocaleString()} / ${catalog.questCount.toLocaleString()} complete`}
+            `${loadedCompletedCount.toLocaleString()} / ${completableQuestCount.toLocaleString()} trackable quests complete`}
         </div>
       </header>
 
@@ -821,13 +863,21 @@ export function QuestLogPage() {
                 const sectionQuests =
                   questsByPatchSectionId.get(section.id) ?? [];
 
-                const completedSectionCount = sectionQuests.filter((quest) =>
-                  completedQuestIdSet.has(quest.id),
+                const completableSectionQuests = sectionQuests.filter(
+                  isQuestCompletionEligible,
+                );
+
+                const completedSectionCount = completableSectionQuests.filter(
+                  (quest) => completedQuestIdSet.has(quest.id),
                 ).length;
 
-                const isPatchComplete =
+                const isReferenceOnlySection =
                   sectionQuests.length > 0 &&
-                  completedSectionCount === sectionQuests.length;
+                  completableSectionQuests.length === 0;
+
+                const isPatchComplete =
+                  completableSectionQuests.length > 0 &&
+                  completedSectionCount === completableSectionQuests.length;
 
                 const visibleSectionCount = section.ranges.reduce(
                   (rangeTotal, { groups }) =>
@@ -915,8 +965,9 @@ export function QuestLogPage() {
                         </p>
 
                         <p className="quest-collection__progress">
-                          {completedSectionCount} of {sectionQuests.length}{' '}
-                          complete
+                          {isReferenceOnlySection
+                            ? 'Reference collection · not counted toward completion'
+                            : `${completedSectionCount} of ${completableSectionQuests.length} complete`}
                         </p>
                       </div>
 
@@ -991,13 +1042,23 @@ export function QuestLogPage() {
 
                               const visibleRangeQuests = quests;
 
-                              const completedRangeCount = rangeQuests.filter(
-                                (quest) => completedQuestIdSet.has(quest.id),
-                              ).length;
+                              const completableRangeQuests = rangeQuests.filter(
+                                isQuestCompletionEligible,
+                              );
+
+                              const completedRangeCount =
+                                completableRangeQuests.filter((quest) =>
+                                  completedQuestIdSet.has(quest.id),
+                                ).length;
+
+                              const isReferenceOnlyRange =
+                                rangeQuests.length > 0 &&
+                                completableRangeQuests.length === 0;
 
                               const isRangeComplete =
-                                rangeQuests.length > 0 &&
-                                completedRangeCount === rangeQuests.length;
+                                completableRangeQuests.length > 0 &&
+                                completedRangeCount ===
+                                  completableRangeQuests.length;
 
                               const isRangeExpanded =
                                 shouldAutoExpandMatches ||
@@ -1046,8 +1107,9 @@ export function QuestLogPage() {
                                       )}
 
                                       <span>
-                                        {completedRangeCount} /{' '}
-                                        {rangeQuests.length} complete
+                                        {isReferenceOnlyRange
+                                          ? 'Reference only'
+                                          : `${completedRangeCount} / ${completableRangeQuests.length} complete`}
                                       </span>
 
                                       {visibleRangeQuests.length !==
@@ -1119,8 +1181,14 @@ export function QuestLogPage() {
           key={selectedQuest.id}
           quest={selectedQuest}
           questsById={catalog.questsById}
-          isCompleted={completedQuestIdSet.has(selectedQuest.id)}
-          isCurrent={automaticCurrentQuestId === selectedQuest.id}
+          isCompleted={
+            isQuestCompletionEligible(selectedQuest) &&
+            completedQuestIdSet.has(selectedQuest.id)
+          }
+          isCurrent={
+            isQuestCompletionEligible(selectedQuest) &&
+            automaticCurrentQuestId === selectedQuest.id
+          }
           personalNote={profile.questNotes[selectedQuest.id] ?? ''}
           onClose={() => {
             setSelectedQuestId(null);

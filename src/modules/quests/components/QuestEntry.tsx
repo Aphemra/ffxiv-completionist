@@ -1,6 +1,7 @@
 import type { KeyboardEvent, MouseEvent } from 'react';
 
 import {
+  BookOpen,
   Coins,
   Crosshair,
   Gauge,
@@ -14,6 +15,8 @@ import {
 } from 'lucide-react';
 
 import type { Quest } from '../data/questSchemas';
+
+import { isQuestCompletionEligible } from '../utilities/questCompletion';
 
 import { formatQuestCategory } from '../utilities/questPresentation';
 
@@ -85,6 +88,12 @@ export function QuestEntry({
   onToggleCompletion,
   onOpenDetails,
 }: QuestEntryProps) {
+  const isCompletable = isQuestCompletionEligible(quest);
+
+  const referenceLabel = quest.isSeasonalQuest
+    ? 'Seasonal reference'
+    : 'Repeatable reference';
+
   const experience = quest.rewards?.experience;
   const gil = quest.rewards?.gil;
 
@@ -124,6 +133,7 @@ export function QuestEntry({
         'quest-entry',
         isCompleted ? 'quest-entry--complete' : '',
         isCurrent ? 'quest-entry--current' : '',
+        !isCompletable ? 'quest-entry--reference' : '',
       ]
         .filter(Boolean)
         .join(' ')}
@@ -134,16 +144,26 @@ export function QuestEntry({
       onKeyDown={handleKeyDown}
     >
       <div className="quest-entry__main">
-        <label className="quest-entry__check">
-          <input
-            type="checkbox"
-            checked={isCompleted}
-            aria-label={`Mark ${quest.name} complete`}
-            onChange={onToggleCompletion}
-          />
+        {isCompletable ? (
+          <label className="quest-entry__check">
+            <input
+              type="checkbox"
+              checked={isCompleted}
+              aria-label={`Mark ${quest.name} complete`}
+              onChange={onToggleCompletion}
+            />
 
-          <span className="quest-entry__custom-check" aria-hidden="true" />
-        </label>
+            <span className="quest-entry__custom-check" aria-hidden="true" />
+          </label>
+        ) : (
+          <span
+            className="quest-entry__reference-icon"
+            title="Reference-only quest"
+            aria-label="Reference-only quest"
+          >
+            <BookOpen aria-hidden="true" />
+          </span>
+        )}
 
         <div className="quest-entry__content">
           <div className="quest-entry__heading">
@@ -155,13 +175,23 @@ export function QuestEntry({
               </p>
             </div>
 
-            {isCurrent && (
+            {(isCurrent || !isCompletable) && (
               <div className="quest-entry__actions">
-                <span className="quest-entry__current-indicator">
-                  <Crosshair aria-hidden="true" />
+                {!isCompletable && (
+                  <span className="quest-entry__reference-indicator">
+                    <BookOpen aria-hidden="true" />
 
-                  <span>Current</span>
-                </span>
+                    <span>{referenceLabel}</span>
+                  </span>
+                )}
+
+                {isCurrent && (
+                  <span className="quest-entry__current-indicator">
+                    <Crosshair aria-hidden="true" />
+
+                    <span>Current</span>
+                  </span>
+                )}
               </div>
             )}
           </div>

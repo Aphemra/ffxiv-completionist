@@ -1,5 +1,7 @@
 import type { Quest, QuestCollection } from '../data/questSchemas';
 
+import { isQuestCompletionEligible } from './questCompletion';
+
 function getTraversablePrerequisiteQuestIds(
   quest: Quest,
   completedQuestIds: ReadonlySet<string>,
@@ -77,7 +79,10 @@ export function getPreviousQuestIds(
 
     activeTraversal.delete(currentQuestId);
     completedTraversal.add(currentQuestId);
-    previousQuestIds.push(currentQuestId);
+
+    if (isQuestCompletionEligible(currentQuest)) {
+      previousQuestIds.push(currentQuestId);
+    }
   }
 
   const prerequisiteQuestIds = getTraversablePrerequisiteQuestIds(
@@ -192,7 +197,19 @@ export function getAutomaticCurrentQuestId(
 
   const completedQuestIdSet = new Set(completedQuestIds);
 
+  const linearQuestsById = new Map(
+    orderedLinearQuests.map((quest) => [quest.id, quest]),
+  );
+
   return (
-    activePath.find((questId) => !completedQuestIdSet.has(questId)) ?? null
+    activePath.find((questId) => {
+      const quest = linearQuestsById.get(questId);
+
+      return (
+        quest !== undefined &&
+        isQuestCompletionEligible(quest) &&
+        !completedQuestIdSet.has(questId)
+      );
+    }) ?? null
   );
 }

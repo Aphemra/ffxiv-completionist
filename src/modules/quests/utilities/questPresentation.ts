@@ -68,6 +68,8 @@ export type QuestFamily =
   | 'msq'
   | 'side'
   | 'feature'
+  | 'seasonal'
+  | 'repeatable'
   | 'jobs'
   | 'role'
   | 'side-story'
@@ -102,6 +104,20 @@ export const QUEST_FAMILY_OPTIONS: readonly QuestFamilyOption[] = [
   {
     value: 'feature',
     label: 'Feature Quests',
+    categories: [],
+    primaryFilterLabel: 'Quest Type',
+    secondaryFilterLabel: 'Collection',
+  },
+  {
+    value: 'seasonal',
+    label: 'Seasonal Events',
+    categories: [],
+    primaryFilterLabel: 'Event Series',
+    secondaryFilterLabel: 'Event',
+  },
+  {
+    value: 'repeatable',
+    label: 'Repeatable Quests',
     categories: [],
     primaryFilterLabel: 'Quest Type',
     secondaryFilterLabel: 'Collection',
@@ -159,8 +175,24 @@ export function questCategoryMatchesFamily(
 }
 
 export function questMatchesFamily(quest: Quest, family: QuestFamily): boolean {
+  if (family === 'seasonal') {
+    return quest.isSeasonalQuest;
+  }
+
+  /*
+   * Seasonal quests are deliberately exclusive to the Seasonal Events view,
+   * even when they are also feature or repeatable quests.
+   */
+  if (quest.isSeasonalQuest) {
+    return false;
+  }
+
   if (family === 'feature') {
     return quest.isFeatureQuest;
+  }
+
+  if (family === 'repeatable') {
+    return quest.isRepeatable;
   }
 
   return questCategoryMatchesFamily(quest.category, family);
