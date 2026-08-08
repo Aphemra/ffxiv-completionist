@@ -1,0 +1,2797 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "dawntrail-shared-role-quests-quests-dawntrail-shared-role-quests-role-picking-up-the-torch-70724",
+      "title": "Picking Up the Torch Questline",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "dawntrail-shared-role-quests-role-picking-up-the-torch-70724",
+          "name": "Picking Up the Torch",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 100,
+          "externalIds": {
+            "xivapi-quest-row": 70724
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70724,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:39:46.534Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1050871",
+            "npcName": "Rral Majun",
+            "sourceRowId": 1050871,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 12.4,
+              "y": 14.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "dawntrail-healer-role-quests-role-an-antidote-for-anarchy-70365",
+            "dawntrail-melee-dps-role-quests-role-a-hunter-true-70371"
+          ],
+          "nextQuestIds": [
+            "dawntrail-shared-role-quests-role-imposing-views-70725"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70359,
+              70365,
+              70371
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 100
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2003706",
+              "itemName": "Audition Handbill",
+              "sourceRowId": 2003706,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-picking-up-the-torch-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 3,
+              "targetId": "actor-1051655",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-thal",
+                  "zoneName": "Ul'dah - Steps of Thal",
+                  "territoryId": "territory-131",
+                  "mapId": "map-14",
+                  "sourceLevelRowId": 10953270,
+                  "coordinates": {
+                    "x": 14,
+                    "y": 11.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 137.143,
+                      "y": 4,
+                      "z": 4.62369
+                    },
+                    "mapGameId": "w1t2/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-thal",
+                  "zoneName": "Ul'dah - Steps of Thal",
+                  "territoryId": "territory-131",
+                  "mapId": "map-14",
+                  "sourceLevelRowId": 4265637,
+                  "coordinates": {
+                    "x": 14.1,
+                    "y": 10.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 140.398,
+                      "y": 4,
+                      "z": -54.1543
+                    },
+                    "mapGameId": "w1t2/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-thal",
+                  "zoneName": "Ul'dah - Steps of Thal",
+                  "territoryId": "territory-131",
+                  "mapId": "map-14",
+                  "sourceLevelRowId": 2654303,
+                  "coordinates": {
+                    "x": 13.1,
+                    "y": 10.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 94.8347,
+                      "y": 7.98047,
+                      "z": -34.0125
+                    },
+                    "mapGameId": "w1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-picking-up-the-torch-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-thal",
+                  "zoneName": "Ul'dah - Steps of Thal",
+                  "territoryId": "territory-131",
+                  "mapId": "map-14",
+                  "sourceLevelRowId": 11158466,
+                  "coordinates": {
+                    "x": 14.2,
+                    "y": 10.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 146.319,
+                      "y": -0.118376,
+                      "z": -23.5662
+                    },
+                    "mapGameId": "w1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-picking-up-the-torch-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051656",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-thal",
+                  "zoneName": "Ul'dah - Steps of Thal",
+                  "territoryId": "territory-131",
+                  "mapId": "map-14",
+                  "sourceLevelRowId": 10953483,
+                  "coordinates": {
+                    "x": 12.4,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 56.4483,
+                      "y": 10,
+                      "z": 5.95186
+                    },
+                    "mapGameId": "w1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-picking-up-the-torch-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "hall-of-the-unbound",
+                  "zoneName": "Hall of the Unbound",
+                  "territoryId": "territory-1255",
+                  "mapId": "map-957",
+                  "sourceLevelRowId": 11157848,
+                  "coordinates": {
+                    "x": 3.6,
+                    "y": 3.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -0.105295,
+                      "y": -15.4,
+                      "z": -0.182086
+                    },
+                    "mapGameId": "w1em/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-picking-up-the-torch-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051656",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-thal",
+                  "zoneName": "Ul'dah - Steps of Thal",
+                  "territoryId": "territory-131",
+                  "mapId": "map-14",
+                  "sourceLevelRowId": 10953483,
+                  "coordinates": {
+                    "x": 12.4,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 56.4483,
+                      "y": 10,
+                      "z": 5.95186
+                    },
+                    "mapGameId": "w1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1000
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:40:03.153Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70724,
+              "internalId": "KinGbz001_05188",
+              "expansion": "Dawntrail",
+              "journalGenre": "Role Quests (Dawntrail)",
+              "eventIconType": 1,
+              "sortKey": 600,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1050871,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1051655,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1006440,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1001657,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1052466,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 5010000,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 11158462,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2003706,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014418,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1051656,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 10957590,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 1255,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_EVENT_KINGBZ001_01",
+                  "argument": 3563,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PIC_KinGbz001_001",
+                  "argument": 1370,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_APAHI",
+                  "argument": 1050857,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_01",
+                  "argument": 1051649,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BURUKEBU",
+                  "argument": 1049604,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_NPC_HIDE_01",
+                  "argument": 1046521,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_NPC_HIDE_02",
+                  "argument": 1052466,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDLE_GUARD_01",
+                  "argument": 808,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_POS_PC",
+                  "argument": 11167692,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_EOBJ_VFX",
+                  "argument": 2014418,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "BIND_EOBJ_VFX",
+                  "argument": 10953367,
+                  "referenceType": "event-object"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2003706,
+                  "itemId": "event-item-2003706",
+                  "name": "Audition Handbill",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 26151,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1051655
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1006440
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1001657
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1052466
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1051656
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1051655,
+                  "name": "perturbed woman",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1006440,
+                  "name": "Sibold",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1001657,
+                  "name": "Landebert",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1052466
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 5010000
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1051656,
+                  "name": "Unbound agent",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70725
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "dawntrail-shared-role-quests-role-imposing-views-70725",
+          "name": "Imposing Views",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 100,
+          "externalIds": {
+            "xivapi-quest-row": 70725
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70725,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:39:51.195Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1051656",
+            "npcName": "Unbound agent",
+            "sourceRowId": 1051656,
+            "zoneId": "uldah-steps-of-thal",
+            "zoneName": "Ul'dah - Steps of Thal",
+            "coordinates": {
+              "x": 12.4,
+              "y": 11.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "dawntrail-shared-role-quests-role-picking-up-the-torch-70724"
+          ],
+          "nextQuestIds": [
+            "dawntrail-shared-role-quests-role-enforcing-freedom-70726"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70724
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 100
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-imposing-views-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2014419",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 10953564,
+                  "coordinates": {
+                    "x": 18.3,
+                    "y": 31.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -158.847,
+                      "y": 7.50997,
+                      "z": 493.915
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-imposing-views-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051661",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 10953570,
+                  "coordinates": {
+                    "x": 21.5,
+                    "y": 33.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 1.80013,
+                      "y": 19.0261,
+                      "z": 581.653
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-imposing-views-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 3,
+              "targetId": "actor-1051663",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 10953574,
+                  "coordinates": {
+                    "x": 22.5,
+                    "y": 35.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 51.6823,
+                      "y": 0.762999,
+                      "z": 711.574
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-imposing-views-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051663",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 10953574,
+                  "coordinates": {
+                    "x": 22.5,
+                    "y": 35.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 51.6823,
+                      "y": 0.762999,
+                      "z": 711.574
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-imposing-views-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051668",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 10953579,
+                  "coordinates": {
+                    "x": 24.9,
+                    "y": 39.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 170.457,
+                      "y": 15.948,
+                      "z": 897.958
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-imposing-views-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051668",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 10953579,
+                  "coordinates": {
+                    "x": 24.9,
+                    "y": 39.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 170.457,
+                      "y": 15.948,
+                      "z": 897.958
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1000
+          },
+          "unlocks": [
+            {
+              "type": "emote",
+              "targetId": "emote-282",
+              "sourceRowId": 282,
+              "name": "Pose of the Unbound"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:40:03.153Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70725,
+              "internalId": "KinGbz002_05189",
+              "expansion": "Dawntrail",
+              "journalGenre": "Role Quests (Dawntrail)",
+              "eventIconType": 1,
+              "sortKey": 610,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1051656,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014419,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 50,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 10957874,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1051661,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1051662,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1051663,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 10957870,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 10957871,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 10957872,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1051665,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1051666,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1051667,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1051664,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1051668,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1051669,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "NCUT_EVENT_KINGBZ002_01",
+                  "argument": 3564,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_EVENT_KINGBZ002_02",
+                  "argument": 3565,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_MUSH_01",
+                  "argument": 10953572,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_MUSH_02",
+                  "argument": 10953575,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_MUSH_03",
+                  "argument": 10953580,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1051661
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1051662
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1051663
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1051665
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1051666
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1051667
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1051664
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1051668
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1051669
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1051661,
+                  "name": "Apyaahi",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1051662
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1051663,
+                  "name": "Apyaahi",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1051665
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1051666
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1051667
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1051664
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1051668,
+                  "name": "Apyaahi",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1051669
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70726
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "dawntrail-shared-role-quests-role-enforcing-freedom-70726",
+          "name": "Enforcing Freedom",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 100,
+          "externalIds": {
+            "xivapi-quest-row": 70726
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70726,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:39:56.212Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1051668",
+            "npcName": "Apyaahi",
+            "sourceRowId": 1051668,
+            "zoneId": "southern-thanalan",
+            "zoneName": "Southern Thanalan",
+            "coordinates": {
+              "x": 24.9,
+              "y": 39.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "dawntrail-shared-role-quests-role-imposing-views-70725"
+          ],
+          "nextQuestIds": [
+            "dawntrail-shared-role-quests-role-bar-the-passage-70727"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70725
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 100
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-enforcing-freedom-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050871",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10567461,
+                  "coordinates": {
+                    "x": 12.4,
+                    "y": 14.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -51.8921,
+                      "y": -17.9729,
+                      "z": 182.729
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-enforcing-freedom-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051670",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10953625,
+                  "coordinates": {
+                    "x": 13.1,
+                    "y": 15.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -15.9482,
+                      "y": -19.9314,
+                      "z": 224.93
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-enforcing-freedom-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051675",
+              "locations": [
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10953696,
+                  "coordinates": {
+                    "x": 28.7,
+                    "y": 30.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 358.258,
+                      "y": 5.95719,
+                      "z": 428.371
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-enforcing-freedom-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051677",
+              "locations": [
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10953699,
+                  "coordinates": {
+                    "x": 28.9,
+                    "y": 30
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 371.446,
+                      "y": 5.95725,
+                      "z": 425.504
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10953696,
+                  "coordinates": {
+                    "x": 28.7,
+                    "y": 30.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 358.258,
+                      "y": 5.95719,
+                      "z": 428.371
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-enforcing-freedom-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051677",
+              "locations": [
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10953699,
+                  "coordinates": {
+                    "x": 28.9,
+                    "y": 30
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 371.446,
+                      "y": 5.95725,
+                      "z": 425.504
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10953696,
+                  "coordinates": {
+                    "x": 28.7,
+                    "y": 30.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 358.258,
+                      "y": 5.95719,
+                      "z": 428.371
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-enforcing-freedom-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051682",
+              "locations": [
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10953707,
+                  "coordinates": {
+                    "x": 29.3,
+                    "y": 30
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 387.526,
+                      "y": -0.601018,
+                      "z": 427.007
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-enforcing-freedom-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051684",
+              "locations": [
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10953710,
+                  "coordinates": {
+                    "x": 30,
+                    "y": 31
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 426.047,
+                      "y": 0.746193,
+                      "z": 472.312
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-enforcing-freedom-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050871",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10567461,
+                  "coordinates": {
+                    "x": 12.4,
+                    "y": 14.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -51.8921,
+                      "y": -17.9729,
+                      "z": 182.729
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1000
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:40:03.153Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70726,
+              "internalId": "KinGbz003_05190",
+              "expansion": "Dawntrail",
+              "journalGenre": "Role Quests (Dawntrail)",
+              "eventIconType": 1,
+              "sortKey": 620,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1051668,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1051669,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1050871,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1051670,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1051671,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1051675,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTEFFECTRANGE0",
+                  "argument": 10953765,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1051676,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1051677,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1051678,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1051679,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EMOTE0",
+                  "argument": 282,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 10953721,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 1051682,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR11",
+                  "argument": 1051683,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR12",
+                  "argument": 1051680,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR13",
+                  "argument": 1051681,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR14",
+                  "argument": 1051684,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR15",
+                  "argument": 1051685,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR16",
+                  "argument": 1051686,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR17",
+                  "argument": 1051687,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR18",
+                  "argument": 1051688,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR19",
+                  "argument": 1052285,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "NCUT_EVENT_KINGBZ003_01",
+                  "argument": 3566,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_NPC_HIDE_01",
+                  "argument": 1046521,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_NPC_HIDE_02",
+                  "argument": 1048410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_MUSH_01",
+                  "argument": 10953580,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_SETO_01",
+                  "argument": 10953626,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_SETO_02",
+                  "argument": 10953698,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_SETO_03",
+                  "argument": 10953707,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_KWIKKI_01",
+                  "argument": 10953708,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_KWIKKI_02",
+                  "argument": 10953625,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_APAHI",
+                  "argument": 1050857,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BURUKEBU",
+                  "argument": 1049604,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_TEPEKE",
+                  "argument": 1049730,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SETO",
+                  "argument": 1049622,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_KWIIKKI",
+                  "argument": 1049608,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOASHKANA",
+                  "argument": 1046408,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_TENTOWA",
+                  "argument": 1047318,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_GLASSES",
+                  "argument": 4676,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PIC_KinGbz003_001",
+                  "argument": 1371,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_01",
+                  "argument": 77,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ET_HENSIN",
+                  "argument": 8,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1051669
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050871
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1051670
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1051671
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1051675
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1051676
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1051677
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1051678
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1051679
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1051682
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1051683
+                },
+                {
+                  "sourceInstruction": "ACTOR12",
+                  "actorRowId": 1051680
+                },
+                {
+                  "sourceInstruction": "ACTOR13",
+                  "actorRowId": 1051681
+                },
+                {
+                  "sourceInstruction": "ACTOR14",
+                  "actorRowId": 1051684
+                },
+                {
+                  "sourceInstruction": "ACTOR15",
+                  "actorRowId": 1051685
+                },
+                {
+                  "sourceInstruction": "ACTOR16",
+                  "actorRowId": 1051686
+                },
+                {
+                  "sourceInstruction": "ACTOR17",
+                  "actorRowId": 1051687
+                },
+                {
+                  "sourceInstruction": "ACTOR18",
+                  "actorRowId": 1051688
+                },
+                {
+                  "sourceInstruction": "ACTOR19",
+                  "actorRowId": 1052285
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1051669
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1050871,
+                  "name": "Rral Majun",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1051670,
+                  "name": "Kuiyki",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1051671,
+                  "name": "Ceetol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1051675,
+                  "name": "Kuiyki",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1051676,
+                  "name": "Ceetol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1051677,
+                  "name": "Unbound enforcer",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1051678
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1051679
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1051682,
+                  "name": "Ceetol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1051683,
+                  "name": "Kuiyki",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR12",
+                  "actorRowId": 1051680,
+                  "name": "Apyaahi",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR13",
+                  "actorRowId": 1051681
+                },
+                {
+                  "sourceInstruction": "ACTOR14",
+                  "actorRowId": 1051684,
+                  "name": "Tentoawa",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR15",
+                  "actorRowId": 1051685,
+                  "name": "Loashkana",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR16",
+                  "actorRowId": 1051686,
+                  "name": "Tepeke",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR17",
+                  "actorRowId": 1051687,
+                  "name": "Kuiyki",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR18",
+                  "actorRowId": 1051688,
+                  "name": "Ceetol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR19",
+                  "actorRowId": 1052285,
+                  "name": "Tentoawa",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70727
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "dawntrail-shared-role-quests-role-bar-the-passage-70727",
+          "name": "Bar the Passage",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 100,
+          "externalIds": {
+            "xivapi-quest-row": 70727
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70727,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:40:00.557Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1050871",
+            "npcName": "Rral Majun",
+            "sourceRowId": 1050871,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 12.4,
+              "y": 14.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "dawntrail-shared-role-quests-role-enforcing-freedom-70726"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70726
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 100
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-bar-the-passage-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051689",
+              "locations": [
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10954007,
+                  "coordinates": {
+                    "x": 27,
+                    "y": 36.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 273.347,
+                      "y": 16,
+                      "z": 740.664
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-bar-the-passage-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10992330,
+                  "coordinates": {
+                    "x": 27,
+                    "y": 36.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 273.032,
+                      "y": 0.323475,
+                      "z": 740.642
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-bar-the-passage-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051691",
+              "locations": [
+                {
+                  "zoneId": "shaaloani",
+                  "zoneName": "Shaaloani",
+                  "territoryId": "territory-1190",
+                  "mapId": "map-860",
+                  "sourceLevelRowId": 10954009,
+                  "coordinates": {
+                    "x": 27,
+                    "y": 36.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 273.869,
+                      "y": 16,
+                      "z": 738.302
+                    },
+                    "mapGameId": "x6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-bar-the-passage-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050871",
+              "targetName": "Rral Majun",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10567461,
+                  "coordinates": {
+                    "x": 12.4,
+                    "y": 14.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -51.8921,
+                      "y": -17.9729,
+                      "z": 182.729
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-bar-the-passage-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051672",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10953627,
+                  "coordinates": {
+                    "x": 13.1,
+                    "y": 15.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -14.7951,
+                      "y": -19.8831,
+                      "z": 223.318
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-bar-the-passage-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051673",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10953628,
+                  "coordinates": {
+                    "x": 13.1,
+                    "y": 15.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -15.2277,
+                      "y": -19.7635,
+                      "z": 221.73
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-bar-the-passage-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051670",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10953625,
+                  "coordinates": {
+                    "x": 13.1,
+                    "y": 15.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -15.9482,
+                      "y": -19.9314,
+                      "z": 224.93
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-bar-the-passage-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051671",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10953626,
+                  "coordinates": {
+                    "x": 13,
+                    "y": 15.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -17.9432,
+                      "y": -19.7865,
+                      "z": 224.197
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 8
+              }
+            },
+            {
+              "id": "adventurer-bar-the-passage-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1051674",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10953629,
+                  "coordinates": {
+                    "x": 13.1,
+                    "y": 15.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -16.6123,
+                      "y": -19.7537,
+                      "z": 222.663
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9,
+                "completeSequence": 9
+              }
+            },
+            {
+              "id": "adventurer-bar-the-passage-objective-10",
+              "sortOrder": 10,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1046521",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10312605,
+                  "coordinates": {
+                    "x": 12.5,
+                    "y": 14.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -46.6042,
+                      "y": -17.9729,
+                      "z": 180.345
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 10
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 3000,
+            "items": [
+              {
+                "itemId": "item-45018",
+                "itemName": "Bright Bustle Orchestrion Roll",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "orchestrion-roll",
+              "targetId": "orchestrion-roll-704",
+              "sourceRowId": 45018,
+              "name": "Bright Bustle Orchestrion Roll",
+              "notes": "Using Bright Bustle Orchestrion Roll adds this orchestrion roll."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:40:03.153Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70727,
+              "internalId": "KinGbz004_05191",
+              "expansion": "Dawntrail",
+              "journalGenre": "Role Quests (Dawntrail)",
+              "eventIconType": 1,
+              "sortKey": 630,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1050871,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1052285,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1051677,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1051678,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1051679,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1051680,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1051681,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1051689,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 1246,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 5082,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1051690,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1051691,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 1051692,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR11",
+                  "argument": 1051693,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014420,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "TERRITORYTYPE1",
+                  "argument": 1190,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR12",
+                  "argument": 1051670,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR13",
+                  "argument": 1051671,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR14",
+                  "argument": 1051672,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR15",
+                  "argument": 1051673,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR16",
+                  "argument": 1051674,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR17",
+                  "argument": 1046521,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "NCUT_EVENT_KINGBZ004_01",
+                  "argument": 3567,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_EVENT_KINGBZ004_02",
+                  "argument": 3568,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_EVENT_KINGBZ004_03",
+                  "argument": 3569,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_EVENT_KINGBZ004_04",
+                  "argument": 3570,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_LOAH",
+                  "argument": 10954007,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_KWIKKI",
+                  "argument": 10954008,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_SETO",
+                  "argument": 10954009,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_TENTO",
+                  "argument": 10954010,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_TEPEKE",
+                  "argument": 10954011,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_KWIKKI_02",
+                  "argument": 10953625,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_SETO_02",
+                  "argument": 10953626,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_TENTO_02",
+                  "argument": 10953627,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_LOAH_02",
+                  "argument": 10953628,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR_TEPEKE_02",
+                  "argument": 10953629,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BURUKEBU",
+                  "argument": 1049604,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_APAHI",
+                  "argument": 1050857,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_NPC_HIDE_01",
+                  "argument": 1046521,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_NPC_HIDE_02",
+                  "argument": 1048410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOGMES_01",
+                  "argument": 3744,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1052285
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1051677
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1051678
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1051679
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1051680
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1051681
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1051689
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1051690
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1051691
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1051692
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1051693
+                },
+                {
+                  "sourceInstruction": "ACTOR12",
+                  "actorRowId": 1051670
+                },
+                {
+                  "sourceInstruction": "ACTOR13",
+                  "actorRowId": 1051671
+                },
+                {
+                  "sourceInstruction": "ACTOR14",
+                  "actorRowId": 1051672
+                },
+                {
+                  "sourceInstruction": "ACTOR15",
+                  "actorRowId": 1051673
+                },
+                {
+                  "sourceInstruction": "ACTOR16",
+                  "actorRowId": 1051674
+                },
+                {
+                  "sourceInstruction": "ACTOR17",
+                  "actorRowId": 1046521
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1052285,
+                  "name": "Tentoawa",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1051677,
+                  "name": "Unbound enforcer",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1051678
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1051679
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1051680,
+                  "name": "Apyaahi",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1051681
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1051689,
+                  "name": "Loashkana",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1051690,
+                  "name": "Kuiyki",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1051691,
+                  "name": "Ceetol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1051692,
+                  "name": "Tentoawa",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1051693,
+                  "name": "Tepeke",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR12",
+                  "actorRowId": 1051670,
+                  "name": "Kuiyki",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR13",
+                  "actorRowId": 1051671,
+                  "name": "Ceetol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR14",
+                  "actorRowId": 1051672,
+                  "name": "Tentoawa",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR15",
+                  "actorRowId": 1051673,
+                  "name": "Loashkana",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR16",
+                  "actorRowId": 1051674,
+                  "name": "Tepeke",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR17",
+                  "actorRowId": 1046521,
+                  "name": "Br'uk Evu",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 5
+        }
+      ]
+    },
+    {
+      "id": "dawntrail-shared-role-quests-quests-standalone",
+      "title": "Standalone Quests",
+      "sortOrder": 2,
+      "quests": [
+        {
+          "id": "dawntrail-shared-role-quests-role-uncouth-customers-70353",
+          "name": "Uncouth Customers",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70353
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70353,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:39:43.950Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1046521",
+            "npcName": "Br'uk Evu",
+            "sourceRowId": 1046521,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 12.5,
+              "y": 14.6
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "dawntrail-healer-role-quests-role-in-the-sting-of-things-70360",
+            "dawntrail-melee-dps-role-quests-role-the-hunter-and-the-hunted-70366",
+            "dawntrail-physical-ranged-dps-role-quests-role-to-steal-a-steelhog-70372",
+            "dawntrail-magical-ranged-dps-role-quests-role-power-forgotten-70378"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70418
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-uncouth-customers-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2014140",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10570900,
+                  "coordinates": {
+                    "x": 12.8,
+                    "y": 14.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -30.9449,
+                      "y": -17.4649,
+                      "z": 191.375
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-uncouth-customers-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1050871",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10567461,
+                  "coordinates": {
+                    "x": 12.4,
+                    "y": 14.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -51.8921,
+                      "y": -17.9729,
+                      "z": 182.729
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 994560,
+            "gil": 1000
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:40:03.153Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70353,
+              "internalId": "KinGba001_04817",
+              "expansion": "Dawntrail",
+              "journalGenre": "Role Quests (Dawntrail)",
+              "eventIconType": 8,
+              "sortKey": 100,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1046521,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014140,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1050871,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "NCUT_EVENT_KINGBA001",
+                  "argument": 3434,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_YELLOW",
+                  "argument": 1046409,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_RAHO",
+                  "argument": 1050911,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_RAHO_HIDE",
+                  "argument": 1048308,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050871
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1050871,
+                  "name": "Rral Majun",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70354,
+                  70360,
+                  70366,
+                  70372,
+                  70378
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        }
+      ]
+    }
+  ]
+}
