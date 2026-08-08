@@ -34,6 +34,8 @@ SELECTION_MODE="${SELECTION_MODE:-chain}"
 
 COLLECTION_FORMAT="${COLLECTION_FORMAT:-linear}"
 
+COLLECTION_LAYOUT="${COLLECTION_LAYOUT:-}"
+
 AUTO_GROUPS="${AUTO_GROUPS:-}"
 
 if [[ -z "$AUTO_GROUPS" ]]; then
@@ -474,6 +476,10 @@ publish_export() {
       --secondary-facet-id "$SECONDARY_FACET_ID"
       --secondary-facet-name "$SECONDARY_FACET_NAME"
     )
+  fi
+
+  if [[ -n "$COLLECTION_LAYOUT" ]]; then
+    publish_arguments+=(--layout "$COLLECTION_LAYOUT")
   fi
 
   if [[ "$AUTO_GROUPS" == "true" ]]; then

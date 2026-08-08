@@ -57,7 +57,7 @@ const ALLOWED_DUPLICATE_ROWS: ReadonlyMap<number, AllowedDuplicate> = new Map([
   [
     66210,
     {
-      collectionIds: ['arr-2-0-gridania-opening', 'arr-2-0-limsa-opening'],
+      collectionIds: ['arr-2-0-msq'],
       reason:
         'Call of the Sea is shared by the Gridania and Limsa opening routes.',
     },
@@ -71,15 +71,6 @@ const ALLOWED_DUPLICATE_ROWS: ReadonlyMap<number, AllowedDuplicate> = new Map([
  */
 const COVERAGE_IGNORED_JOURNAL_CATEGORIES = new Set<string>([
   'Sephiroth Missions',
-]);
-
-/*
- * The app consolidates each city's class-specific "Close to Home" rows
- * into one representative opening quest. These five additional XIVAPI
- * rows describe the same player-facing quests for other starting classes.
- */
-const COVERAGE_IGNORED_QUEST_ROW_IDS = new Set<number>([
-  65645, 65659, 65660, 66105, 66106,
 ]);
 
 function readQuestRowId(value: unknown): number | undefined {
@@ -278,20 +269,14 @@ async function main(): Promise<void> {
     (quest) =>
       !isExcludedQuestRowId(quest.rowId) &&
       !occurrencesByRowId.has(quest.rowId) &&
-      (COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(
-        quest.journalCategoryName ?? '',
-      ) ||
-        COVERAGE_IGNORED_QUEST_ROW_IDS.has(quest.rowId)),
+      COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(quest.journalCategoryName ?? ''),
   );
 
   const unpublishedQuests = questIndex.quests.filter(
     (quest) =>
       !isExcludedQuestRowId(quest.rowId) &&
       !occurrencesByRowId.has(quest.rowId) &&
-      !COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(
-        quest.journalCategoryName ?? '',
-      ) &&
-      !COVERAGE_IGNORED_QUEST_ROW_IDS.has(quest.rowId),
+      !COVERAGE_IGNORED_JOURNAL_CATEGORIES.has(quest.journalCategoryName ?? ''),
   );
 
   const missingCountsByJournalCategory = new Map<string, number>();

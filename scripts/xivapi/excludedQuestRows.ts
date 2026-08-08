@@ -1,12 +1,22 @@
 /**
- * XIVAPI Quest rows that still exist in the game data but cannot currently
- * be accepted or completed.
+ * XIVAPI Quest rows that remain in the raw game data but should not be
+ * represented as standalone quests in the app.
  *
  * Keep this catalog row-ID-only. These rows remain in the raw XIVAPI quest
  * index for historical comparison, but they must never be exported or
- * published by the app.
+ * published by the app. This includes retired quests and duplicate internal
+ * rows that the app intentionally consolidates into one player-facing quest.
  */
 export const excludedQuestRowIds: ReadonlySet<number> = new Set([
+  // Class-specific duplicates of the three ARR "Close to Home" quests.
+  // One representative row per city is published; starting-class route
+  // availability handles the differences without duplicate quest entries.
+  65645, // Limsa Lominsa; represented by row 65644.
+  65659, // Gridania; represented by row 65621.
+  65660, // Gridania; represented by row 65621.
+  66105, // Ul'dah; represented by row 66104.
+  66106, // Ul'dah; represented by row 66104.
+
   // Removed during the Patch 5.3 ARR MSQ overhaul.
   65616, // Doman Connection
   65692, // Ruffled Feathers

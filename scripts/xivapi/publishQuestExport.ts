@@ -19,6 +19,22 @@ import { projectRoot, writeJsonFile } from './paths';
 
 type RouteId = 'gridania' | 'limsa' | 'uldah';
 
+const ARR_20_LAYOUT = 'arr-2.0';
+
+const ARR_GRIDANIA_LIMSA_CALL_OF_THE_SEA_ID = 'arr-msq-call-of-the-sea-66210';
+
+const ARR_ULDAH_CALL_OF_THE_SEA_ID = 'arr-msq-call-of-the-sea-66209';
+
+const LEGACY_ARR_20_COLLECTION_IDS = new Set([
+  'arr-2-0-gridania-opening',
+  'arr-2-0-limsa-opening',
+  'arr-2-0-uldah-opening',
+  'arr-2-0-shared-15-20',
+  'arr-2-0-shared-21-30',
+  'arr-2-0-shared-31-40',
+  'arr-2-0-shared-41-50',
+]);
+
 interface TargetDefinition {
   path: string;
   sourceQuests: QuestExportEntry[];
@@ -230,11 +246,11 @@ async function readJson(filePath: string): Promise<unknown> {
 }
 
 function routeQuestId(questId: string, routeId: RouteId): string {
-  if (questId === 'arr-msq-call-of-the-sea') {
+  if (questId === ARR_GRIDANIA_LIMSA_CALL_OF_THE_SEA_ID) {
     return `arr-msq-${routeId}-call-of-the-sea`;
   }
 
-  if (questId === 'arr-msq-call-of-the-sea-uldah') {
+  if (questId === ARR_ULDAH_CALL_OF_THE_SEA_ID) {
     return 'arr-msq-uldah-call-of-the-sea';
   }
 
@@ -246,18 +262,33 @@ function mapRelationIds(questId: string, routeId?: RouteId): string[] {
     return [routeQuestId(questId, routeId)];
   }
 
-  if (questId === 'arr-msq-call-of-the-sea') {
+  if (questId === ARR_GRIDANIA_LIMSA_CALL_OF_THE_SEA_ID) {
     return [
       'arr-msq-gridania-call-of-the-sea',
       'arr-msq-limsa-call-of-the-sea',
     ];
   }
 
-  if (questId === 'arr-msq-call-of-the-sea-uldah') {
+  if (questId === ARR_ULDAH_CALL_OF_THE_SEA_ID) {
     return ['arr-msq-uldah-call-of-the-sea'];
   }
 
   return [questId];
+}
+
+function routeStartingCityId(
+  routeId: RouteId,
+): 'gridania' | 'limsa-lominsa' | 'uldah' {
+  switch (routeId) {
+    case 'gridania':
+      return 'gridania';
+
+    case 'limsa':
+      return 'limsa-lominsa';
+
+    case 'uldah':
+      return 'uldah';
+  }
 }
 
 function collectRouteQuests(
@@ -390,6 +421,14 @@ function convertQuest(
     mapRelationIds(id, routeId),
   );
 
+  const availability =
+    routeId === undefined
+      ? quest.availability
+      : {
+          ...(quest.availability ?? {}),
+          startingCityIds: [routeStartingCityId(routeId)],
+        };
+
   return {
     id: routeId ? routeQuestId(quest.id, routeId) : quest.id,
     name: quest.name,
@@ -433,7 +472,7 @@ function convertQuest(
           ? { x: location.x, y: location.y }
           : undefined,
     },
-    availability: quest.availability ?? undefined,
+    availability: availability ?? undefined,
     repeatability: quest.repeatability,
     prerequisiteQuestMode:
       prerequisiteQuestIds.length < 2 ? 'all' : quest.previousQuestMode,
@@ -638,6 +677,191 @@ interface PublishedQuestGroup {
   title: string;
   sortOrder: number;
   quests: ConvertedQuest[];
+}
+
+function requireExportQuestByRowId(
+  exportData: QuestChainExport,
+  rowId: number,
+): QuestExportEntry {
+  const quest = exportData.quests.find(
+    (candidate) => candidate.xivapiRowId === rowId,
+  );
+
+  if (!quest) {
+    throw new Error(`ARR 2.0 layout requires Quest row ${rowId}.`);
+  }
+
+  return quest;
+}
+
+function createArr20QuestGroups(
+  exportData: QuestChainExport,
+): PublishedQuestGroup[] {
+  if (
+    exportData.expansionId !== 'arr' ||
+    exportData.patch !== '2.0' ||
+    exportData.category !== 'msq'
+  ) {
+    throw new Error(
+      'The "arr-2.0" collection layout requires the ARR Patch 2.0 MSQ export.',
+    );
+  }
+
+  const sharedStartQuest = requireExportQuestByRowId(exportData, 65781);
+
+  const routeDefinitions: Array<{
+    routeId: RouteId;
+    startRowId: number;
+    groupId: string;
+    groupTitle: string;
+    expectedQuestCount: number;
+  }> = [
+    {
+      routeId: 'gridania',
+      startRowId: 65621,
+      groupId: 'arr-2-0-levels-1-14-gridania-start',
+      groupTitle: 'A Realm Reborn - Levels 1-14 (Gridania Start)',
+      expectedQuestCount: 23,
+    },
+    {
+      routeId: 'limsa',
+      startRowId: 65644,
+      groupId: 'arr-2-0-levels-1-14-limsa-start',
+      groupTitle: 'A Realm Reborn - Levels 1-14 (Limsa Lominsa Start)',
+      expectedQuestCount: 23,
+    },
+    {
+      routeId: 'uldah',
+      startRowId: 66104,
+      groupId: 'arr-2-0-levels-1-14-uldah-start',
+      groupTitle: "A Realm Reborn - Levels 1-14 (Ul'dah Start)",
+      expectedQuestCount: 24,
+    },
+  ];
+
+  const openingSourceIds = new Set<string>();
+
+  const groups: PublishedQuestGroup[] = routeDefinitions.map(
+    (definition, index) => {
+      const startQuest = requireExportQuestByRowId(
+        exportData,
+        definition.startRowId,
+      );
+
+      const sourceQuests = collectRouteQuests(
+        exportData,
+        startQuest.id,
+        sharedStartQuest.id,
+      );
+
+      if (sourceQuests.length !== definition.expectedQuestCount) {
+        throw new Error(
+          [
+            `${definition.groupTitle} expected`,
+            `${definition.expectedQuestCount} quests,`,
+            `but received ${sourceQuests.length}.`,
+          ].join(' '),
+        );
+      }
+
+      sourceQuests.forEach((quest) => openingSourceIds.add(quest.id));
+
+      const routeSourceIds = new Set(sourceQuests.map((quest) => quest.id));
+
+      return {
+        id: definition.groupId,
+        title: definition.groupTitle,
+        sortOrder: index + 1,
+
+        quests: sourceQuests.map((quest) =>
+          convertQuest(quest, exportData, definition.routeId, routeSourceIds),
+        ),
+      };
+    },
+  );
+
+  const sharedQuests = exportData.quests.filter(
+    (quest) => !openingSourceIds.has(quest.id),
+  );
+
+  const sharedDefinitions = [
+    {
+      id: 'arr-levels-15-20',
+      title: 'Levels 15-20',
+      minimumLevel: 15,
+      maximumLevel: 20,
+      expectedQuestCount: 26,
+    },
+    {
+      id: 'arr-levels-21-30',
+      title: 'Levels 21-30',
+      minimumLevel: 21,
+      maximumLevel: 30,
+      expectedQuestCount: 45,
+    },
+    {
+      id: 'arr-levels-31-40',
+      title: 'Levels 31-40',
+      minimumLevel: 31,
+      maximumLevel: 40,
+      expectedQuestCount: 37,
+    },
+    {
+      id: 'arr-levels-41-50',
+      title: 'Levels 41-50',
+      minimumLevel: 41,
+      maximumLevel: 50,
+      expectedQuestCount: 33,
+    },
+  ];
+
+  for (const definition of sharedDefinitions) {
+    const sourceQuests = sharedQuests.filter(
+      (quest) =>
+        quest.level >= definition.minimumLevel &&
+        quest.level <= definition.maximumLevel,
+    );
+
+    if (sourceQuests.length !== definition.expectedQuestCount) {
+      throw new Error(
+        [
+          `${definition.title} expected`,
+          `${definition.expectedQuestCount} quests,`,
+          `but received ${sourceQuests.length}.`,
+        ].join(' '),
+      );
+    }
+
+    groups.push({
+      id: definition.id,
+      title: definition.title,
+      sortOrder: groups.length + 1,
+
+      quests: sourceQuests.map((quest) => convertQuest(quest, exportData)),
+    });
+  }
+
+  const publishedQuestCount = groups.reduce(
+    (total, group) => total + group.quests.length,
+    0,
+  );
+
+  /*
+   * Quest row 66210 is intentionally published once for Gridania and once
+   * for Limsa Lominsa, producing 211 entries from 210 unique XIVAPI rows.
+   */
+  const expectedPublishedQuestCount = exportData.quests.length + 1;
+
+  if (publishedQuestCount !== expectedPublishedQuestCount) {
+    throw new Error(
+      [
+        `ARR 2.0 layout expected ${expectedPublishedQuestCount}`,
+        `published entries, but received ${publishedQuestCount}.`,
+      ].join(' '),
+    );
+  }
+
+  return groups;
 }
 
 function findConnectedQuestComponents(
@@ -969,6 +1193,25 @@ async function publishGenericCollection(
 
   const automaticGroups = process.argv.includes('--auto-groups');
 
+  const collectionLayout = readOption('--layout');
+
+  if (collectionLayout !== undefined && collectionLayout !== ARR_20_LAYOUT) {
+    throw new Error(`Unknown collection layout "${collectionLayout}".`);
+  }
+
+  if (collectionLayout === ARR_20_LAYOUT && collectionFormat !== 'linear') {
+    throw new Error('The ARR 2.0 layout must use the linear format.');
+  }
+
+  if (
+    collectionLayout === ARR_20_LAYOUT &&
+    (automaticGroups || questGroupDefinitions.length > 0)
+  ) {
+    throw new Error(
+      'The ARR 2.0 layout cannot be combined with automatic or named groups.',
+    );
+  }
+
   const primaryFacetId = readOption('--primary-facet-id');
   const primaryFacetName = readOption('--primary-facet-name');
 
@@ -1036,19 +1279,24 @@ async function publishGenericCollection(
     .split(path.sep)
     .join('/');
 
-  const quests = exportData.quests.map((quest) =>
+  const convertedQuests = exportData.quests.map((quest) =>
     convertQuest(quest, exportData),
   );
 
-  const groups = createQuestGroups(
-    exportData.quests,
-    quests,
-    questGroupDefinitions,
-    groupId,
-    groupTitle,
-    automaticGroups,
-    collectionFormat,
-  );
+  const groups =
+    collectionLayout === ARR_20_LAYOUT
+      ? createArr20QuestGroups(exportData)
+      : createQuestGroups(
+          exportData.quests,
+          convertedQuests,
+          questGroupDefinitions,
+          groupId,
+          groupTitle,
+          automaticGroups,
+          collectionFormat,
+        );
+
+  const quests = groups.flatMap((group) => group.quests);
 
   const publishedQuestIds = new Set(quests.map((quest) => quest.id));
 
@@ -1096,12 +1344,19 @@ async function publishGenericCollection(
 
   const manifest = questManifestSchema.parse(await readJson(manifestPath));
 
-  const existingManifestEntry = manifest.collections.find(
+  const manifestCollections =
+    collectionLayout === ARR_20_LAYOUT
+      ? manifest.collections.filter(
+          (entry) => !LEGACY_ARR_20_COLLECTION_IDS.has(entry.id),
+        )
+      : manifest.collections;
+
+  const existingManifestEntry = manifestCollections.find(
     (entry) => entry.id === collectionId,
   );
 
   const nextAvailableSortOrder =
-    manifest.collections.reduce(
+    manifestCollections.reduce(
       (highestSortOrder, entry) => Math.max(highestSortOrder, entry.sortOrder),
       -10,
     ) + 10;
@@ -1143,16 +1398,16 @@ async function publishGenericCollection(
     );
   }
 
-  const existingEntryIndex = manifest.collections.findIndex(
+  const existingEntryIndex = manifestCollections.findIndex(
     (entry) => entry.id === manifestEntry.id,
   );
 
   const collections =
     existingEntryIndex >= 0
-      ? manifest.collections.map((entry, index) =>
+      ? manifestCollections.map((entry, index) =>
           index === existingEntryIndex ? manifestEntry : entry,
         )
-      : [...manifest.collections, manifestEntry];
+      : [...manifestCollections, manifestEntry];
 
   collections.sort(
     (left, right) =>

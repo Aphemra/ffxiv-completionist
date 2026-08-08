@@ -16,6 +16,9 @@
         {
           "id": "arr-msq-good-intentions-65899",
           "name": "Good Intentions",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
           "level": 50,
           "externalIds": {
             "xivapi-quest-row": 65899
@@ -25,10 +28,10 @@
               "provider": "xivapi",
               "sheet": "Quest",
               "rowId": 65899,
-              "gameVersion": "7583112015aaef5d",
+              "gameVersion": "c3f948214b90e498",
               "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
               "language": "en",
-              "importedAt": "2026-08-05T21:36:02.703Z"
+              "importedAt": "2026-08-08T17:33:25.537Z"
             }
           ],
           "start": {
@@ -148,7 +151,7 @@
           "tags": [
             "xivapi-import"
           ],
-          "lastVerifiedAt": "2026-08-06T09:22:31.263Z",
+          "lastVerifiedAt": "2026-08-08T17:34:08.311Z",
           "sourceData": {
             "xivapi": {
               "rowId": 65899,
@@ -240,7 +243,7 @@
                   "actorRowId": 5580789
                 }
               ],
-              "requiredItemReferences": [],
+              "questItemReferences": [],
               "resolvedActorReferences": [
                 {
                   "sourceInstruction": "ACTOR1",
@@ -285,11 +288,15 @@
                 ]
               }
             }
-          }
+          },
+          "sortOrder": 1
         },
         {
           "id": "arr-msq-bait-and-switch-65900",
           "name": "Bait and Switch",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
           "level": 50,
           "externalIds": {
             "xivapi-quest-row": 65900
@@ -299,10 +306,10 @@
               "provider": "xivapi",
               "sheet": "Quest",
               "rowId": 65900,
-              "gameVersion": "7583112015aaef5d",
+              "gameVersion": "c3f948214b90e498",
               "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
               "language": "en",
-              "importedAt": "2026-08-05T21:36:07.194Z"
+              "importedAt": "2026-08-08T17:33:29.100Z"
             }
           ],
           "start": {
@@ -481,7 +488,7 @@
           "tags": [
             "xivapi-import"
           ],
-          "lastVerifiedAt": "2026-08-06T09:22:31.263Z",
+          "lastVerifiedAt": "2026-08-08T17:34:08.311Z",
           "sourceData": {
             "xivapi": {
               "rowId": 65900,
@@ -636,7 +643,7 @@
                   "actorRowId": 5580514
                 }
               ],
-              "requiredItemReferences": [],
+              "questItemReferences": [],
               "resolvedActorReferences": [
                 {
                   "sourceInstruction": "ACTOR1",
@@ -689,11 +696,15 @@
                 ]
               }
             }
-          }
+          },
+          "sortOrder": 2
         },
         {
           "id": "arr-msq-best-laid-schemes-65901",
           "name": "Best-laid Schemes",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
           "level": 50,
           "externalIds": {
             "xivapi-quest-row": 65901
@@ -703,10 +714,10 @@
               "provider": "xivapi",
               "sheet": "Quest",
               "rowId": 65901,
-              "gameVersion": "7583112015aaef5d",
+              "gameVersion": "c3f948214b90e498",
               "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
               "language": "en",
-              "importedAt": "2026-08-05T21:36:11.830Z"
+              "importedAt": "2026-08-08T17:33:32.962Z"
             }
           ],
           "start": {
@@ -897,7 +908,7 @@
           "tags": [
             "xivapi-import"
           ],
-          "lastVerifiedAt": "2026-08-06T09:22:31.263Z",
+          "lastVerifiedAt": "2026-08-08T17:34:08.311Z",
           "sourceData": {
             "xivapi": {
               "rowId": 65901,
@@ -1074,7 +1085,7 @@
                   "referenceType": "script-value"
                 }
               ],
-              "requiredItemReferences": [
+              "questItemReferences": [
                 {
                   "sourceInstruction": "ITEM0",
                   "itemSheet": "EventItem",
@@ -1246,11 +1257,15 @@
                 ]
               }
             }
-          }
+          },
+          "sortOrder": 3
         },
         {
           "id": "arr-msq-the-rising-chorus-65902",
           "name": "The Rising Chorus",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
           "level": 50,
           "externalIds": {
             "xivapi-quest-row": 65902
@@ -1260,10 +1275,10 @@
               "provider": "xivapi",
               "sheet": "Quest",
               "rowId": 65902,
-              "gameVersion": "7583112015aaef5d",
+              "gameVersion": "c3f948214b90e498",
               "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
               "language": "en",
-              "importedAt": "2026-08-05T21:36:18.123Z"
+              "importedAt": "2026-08-08T17:33:38.248Z"
             }
           ],
           "start": {
@@ -1538,10 +1553,27 @@
             "experience": 2340,
             "gil": 2486
           },
+          "duties": [
+            {
+              "id": "duty-32",
+              "name": "The Keeper of the Lake",
+              "sourceRowId": 32,
+              "type": "dungeon",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 90,
+              "partySize": 4,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 32,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
           "tags": [
             "xivapi-import"
           ],
-          "lastVerifiedAt": "2026-08-06T09:22:31.263Z",
+          "lastVerifiedAt": "2026-08-08T17:34:08.311Z",
           "sourceData": {
             "xivapi": {
               "rowId": 65902,
@@ -1718,6 +1750,13 @@
                   "referenceType": "script-value"
                 }
               ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 32,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
               "unresolvedActorReferences": [
                 {
                   "sourceInstruction": "ACTOR1",
@@ -1784,7 +1823,7 @@
                   "actorRowId": 5578574
                 }
               ],
-              "requiredItemReferences": [],
+              "questItemReferences": [],
               "resolvedActorReferences": [
                 {
                   "sourceInstruction": "ACTOR1",
@@ -1878,11 +1917,15 @@
                 ]
               }
             }
-          }
+          },
+          "sortOrder": 4
         },
         {
           "id": "arr-msq-aether-on-demand-69424",
           "name": "Aether on Demand",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
           "level": 50,
           "externalIds": {
             "xivapi-quest-row": 69424
@@ -1892,10 +1935,10 @@
               "provider": "xivapi",
               "sheet": "Quest",
               "rowId": 69424,
-              "gameVersion": "7583112015aaef5d",
+              "gameVersion": "c3f948214b90e498",
               "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
               "language": "en",
-              "importedAt": "2026-08-05T21:36:25.500Z"
+              "importedAt": "2026-08-08T17:33:44.700Z"
             }
           ],
           "start": {
@@ -2110,7 +2153,7 @@
           "tags": [
             "xivapi-import"
           ],
-          "lastVerifiedAt": "2026-08-06T09:22:31.263Z",
+          "lastVerifiedAt": "2026-08-08T17:34:08.311Z",
           "sourceData": {
             "xivapi": {
               "rowId": 69424,
@@ -2369,7 +2412,7 @@
                   "actorRowId": 4269938
                 }
               ],
-              "requiredItemReferences": [],
+              "questItemReferences": [],
               "resolvedActorReferences": [
                 {
                   "sourceInstruction": "ACTOR1",
@@ -2514,11 +2557,15 @@
                 ]
               }
             }
-          }
+          },
+          "sortOrder": 5
         },
         {
           "id": "arr-msq-on-the-counteroffensive-65904",
           "name": "On the Counteroffensive",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
           "level": 50,
           "externalIds": {
             "xivapi-quest-row": 65904
@@ -2528,10 +2575,10 @@
               "provider": "xivapi",
               "sheet": "Quest",
               "rowId": 65904,
-              "gameVersion": "7583112015aaef5d",
+              "gameVersion": "c3f948214b90e498",
               "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
               "language": "en",
-              "importedAt": "2026-08-05T21:36:33.302Z"
+              "importedAt": "2026-08-08T17:33:51.432Z"
             }
           ],
           "start": {
@@ -2777,7 +2824,7 @@
           "tags": [
             "xivapi-import"
           ],
-          "lastVerifiedAt": "2026-08-06T09:22:31.263Z",
+          "lastVerifiedAt": "2026-08-08T17:34:08.311Z",
           "sourceData": {
             "xivapi": {
               "rowId": 65904,
@@ -3081,7 +3128,7 @@
                   "actorRowId": 5580234
                 }
               ],
-              "requiredItemReferences": [],
+              "questItemReferences": [],
               "resolvedActorReferences": [
                 {
                   "sourceInstruction": "ACTOR1",
@@ -3210,11 +3257,15 @@
                 ]
               }
             }
-          }
+          },
+          "sortOrder": 6
         },
         {
           "id": "arr-msq-an-uninvited-ascian-65905",
           "name": "An Uninvited Ascian",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
           "level": 50,
           "externalIds": {
             "xivapi-quest-row": 65905
@@ -3224,10 +3275,10 @@
               "provider": "xivapi",
               "sheet": "Quest",
               "rowId": 65905,
-              "gameVersion": "7583112015aaef5d",
+              "gameVersion": "c3f948214b90e498",
               "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
               "language": "en",
-              "importedAt": "2026-08-05T21:36:44.260Z"
+              "importedAt": "2026-08-08T17:34:01.246Z"
             }
           ],
           "start": {
@@ -3461,10 +3512,27 @@
               }
             ]
           },
+          "duties": [
+            {
+              "id": "duty-84",
+              "name": "The Chrysalis",
+              "sourceRowId": 84,
+              "type": "trial",
+              "relationship": "required",
+              "level": 50,
+              "minimumItemLevel": 90,
+              "partySize": 8,
+              "levelSync": 50,
+              "extensions": {
+                "xivapi-instance-content-row": 20029,
+                "xivapi-high-end-duty": false
+              }
+            }
+          ],
           "tags": [
             "xivapi-import"
           ],
-          "lastVerifiedAt": "2026-08-06T09:22:31.263Z",
+          "lastVerifiedAt": "2026-08-08T17:34:08.311Z",
           "sourceData": {
             "xivapi": {
               "rowId": 65905,
@@ -3621,6 +3689,13 @@
                   "referenceType": "script-value"
                 }
               ],
+              "dutyReferences": [
+                {
+                  "instanceContentRowId": 20029,
+                  "sourceInstruction": "INSTANCEDUNGEON0",
+                  "relationship": "required"
+                }
+              ],
               "unresolvedActorReferences": [
                 {
                   "sourceInstruction": "ACTOR1",
@@ -3687,7 +3762,7 @@
                   "actorRowId": 5580860
                 }
               ],
-              "requiredItemReferences": [],
+              "questItemReferences": [],
               "resolvedActorReferences": [
                 {
                   "sourceInstruction": "ACTOR1",
@@ -3782,11 +3857,15 @@
                 ]
               }
             }
-          }
+          },
+          "sortOrder": 7
         },
         {
           "id": "arr-msq-in-memory-of-moenbryda-65965",
           "name": "In Memory of Moenbryda",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
           "level": 50,
           "externalIds": {
             "xivapi-quest-row": 65965
@@ -3796,10 +3875,10 @@
               "provider": "xivapi",
               "sheet": "Quest",
               "rowId": 65965,
-              "gameVersion": "7583112015aaef5d",
+              "gameVersion": "c3f948214b90e498",
               "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
               "language": "en",
-              "importedAt": "2026-08-05T21:36:50.810Z"
+              "importedAt": "2026-08-08T17:34:06.768Z"
             }
           ],
           "start": {
@@ -3914,7 +3993,7 @@
           "tags": [
             "xivapi-import"
           ],
-          "lastVerifiedAt": "2026-08-06T09:22:31.263Z",
+          "lastVerifiedAt": "2026-08-08T17:34:08.311Z",
           "sourceData": {
             "xivapi": {
               "rowId": 65965,
@@ -4038,7 +4117,7 @@
                   "actorRowId": 1011654
                 }
               ],
-              "requiredItemReferences": [],
+              "questItemReferences": [],
               "resolvedActorReferences": [
                 {
                   "sourceInstruction": "ACTOR1",
@@ -4107,7 +4186,8 @@
                 ]
               }
             }
-          }
+          },
+          "sortOrder": 8
         }
       ]
     }
