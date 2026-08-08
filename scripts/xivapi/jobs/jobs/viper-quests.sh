@@ -21,6 +21,7 @@ SECONDARY_FACET_NAME="Viper"
 COLLECTION_ID="viper-job-quests"
 COLLECTION_TITLE="Viper Quests"
 COLLECTION_DESCRIPTION="The complete Viper job questline."
+COLLECTION_SORT_ORDER="2190"
 
 VERIFICATION_STATUS="verified"
 
