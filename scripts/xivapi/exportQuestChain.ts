@@ -3010,45 +3010,45 @@ async function main(): Promise<void> {
       throw new Error(`Quest row ${quest.rowId} could not be exported.`);
     }
 
-    const internalPreviousRowIds = quest.previousQuestRowIds.filter((rowId) =>
-      discoveredRowIds.has(rowId),
-    );
+    const previousRowIds = quest.previousQuestRowIds.filter((rowId) => {
+      if (excludedRowIds.has(rowId)) {
+        return false;
+      }
 
-    const previousRowIds =
-      internalPreviousRowIds.length > 0
-        ? internalPreviousRowIds
-        : quest.previousQuestRowIds.filter((rowId) => {
-            const previousQuest = questsByRowId.get(rowId);
+      if (discoveredRowIds.has(rowId)) {
+        return true;
+      }
 
-            return (
-              !excludedRowIds.has(rowId) &&
-              previousQuest !== undefined &&
-              isEligibleQuest(previousQuest, category) &&
-              (knownQuestIdsByRowId.has(rowId) ||
-                !usesFilterSelection ||
-                matchesQuestSelection(previousQuest, selection))
-            );
-          });
+      const previousQuest = questsByRowId.get(rowId);
 
-    const internalNextRowIds = quest.nextQuestRowIds.filter((rowId) =>
-      discoveredRowIds.has(rowId),
-    );
+      return (
+        previousQuest !== undefined &&
+        isEligibleQuest(previousQuest, category) &&
+        (knownQuestIdsByRowId.has(rowId) ||
+          !usesFilterSelection ||
+          matchesQuestSelection(previousQuest, selection))
+      );
+    });
 
-    const nextRowIds =
-      internalNextRowIds.length > 0
-        ? internalNextRowIds
-        : quest.nextQuestRowIds.filter((rowId) => {
-            const nextQuest = questsByRowId.get(rowId);
+    const nextRowIds = quest.nextQuestRowIds.filter((rowId) => {
+      if (excludedRowIds.has(rowId)) {
+        return false;
+      }
 
-            return (
-              !excludedRowIds.has(rowId) &&
-              nextQuest !== undefined &&
-              isEligibleQuest(nextQuest, category) &&
-              (knownQuestIdsByRowId.has(rowId) ||
-                !usesFilterSelection ||
-                matchesQuestSelection(nextQuest, selection))
-            );
-          });
+      if (discoveredRowIds.has(rowId)) {
+        return true;
+      }
+
+      const nextQuest = questsByRowId.get(rowId);
+
+      return (
+        nextQuest !== undefined &&
+        isEligibleQuest(nextQuest, category) &&
+        (knownQuestIdsByRowId.has(rowId) ||
+          !usesFilterSelection ||
+          matchesQuestSelection(nextQuest, selection))
+      );
+    });
 
     const previousQuestIds = previousRowIds
       .map((rowId) =>

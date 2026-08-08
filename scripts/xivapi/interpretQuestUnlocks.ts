@@ -152,7 +152,7 @@ function createDutyUnlock(value: unknown): InterpretedQuestUnlock | undefined {
 }
 
 const supportedCollectibleItemActionRowIds = new Set<number>([
-  853, 1322, 3357, 20086, 25183,
+  853, 1322, 2633, 3357, 20086, 25183,
 ]);
 
 export function isSupportedCollectibleItemActionRowId(
@@ -205,6 +205,12 @@ function createCollectibleRewardUnlock(
       type = 'minion';
       targetId = `minion-${relatedRowId}`;
       notes = `Using ${itemName} unlocks this minion.`;
+      break;
+
+    case 2633:
+      type = 'emote';
+      targetId = `emote-${relatedRowId}`;
+      notes = `Using ${itemName} unlocks this emote.`;
       break;
 
     case 3357:

@@ -3,7 +3,7 @@
   "id": "astrologian-job-quests",
   "title": "Astrologian Quests",
   "category": "job",
-  "generatedAt": "2026-08-08T07:18:42.781Z",
+  "generatedAt": "2026-08-08T08:41:41.637Z",
   "source": {
     "provider": "xivapi",
     "version": "7583112015aaef5d",
@@ -12,12 +12,28 @@
   "summary": {
     "questCount": 20,
     "branchCount": 0,
-    "convergenceCount": 0,
-    "unresolvedIssueCount": 0
+    "convergenceCount": 1,
+    "unresolvedIssueCount": 1
   },
   "branches": [],
-  "convergences": [],
-  "issues": [],
+  "convergences": [
+    {
+      "questId": "astrologian-job-quests-job-love-astrologically-68758",
+      "questName": "Love, Astrologically",
+      "relatedQuestIds": [
+        "astrologian-job-quests-job-foxfire-67949",
+        "shadowbringers-healer-role-quests-role-the-soul-of-temperance-68808"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "questId": "astrologian-job-quests-job-conviction-67558",
+      "questName": "Conviction",
+      "field": "unlocks.systemReward",
+      "message": "Quest row 67558 has unreviewed SystemReward value 187."
+    }
+  ],
   "quests": [
     {
       "id": "astrologian-job-quests-job-stairway-to-the-heavens-67548",
@@ -10195,7 +10211,8 @@
         }
       },
       "previousQuestIds": [
-        "astrologian-job-quests-job-foxfire-67949"
+        "astrologian-job-quests-job-foxfire-67949",
+        "shadowbringers-healer-role-quests-role-the-soul-of-temperance-68808"
       ],
       "previousQuestMode": "all",
       "nextQuestIds": [],
@@ -10237,7 +10254,7 @@
           "y": 10.1
         }
       },
-      "graphRole": "linear"
+      "graphRole": "convergence"
     }
   ]
 }
