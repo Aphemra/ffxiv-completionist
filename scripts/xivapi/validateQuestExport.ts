@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 
 import path from 'node:path';
 
@@ -75,6 +75,46 @@ async function readJsonFile(filePath: string): Promise<unknown> {
   const fileText = await readFile(filePath, 'utf8');
 
   return JSON.parse(fileText) as unknown;
+}
+
+async function readSiblingExportQuestIds(
+  currentFilePath: string,
+): Promise<Set<string>> {
+  const exportDirectory = path.dirname(currentFilePath);
+
+  const currentResolvedPath = path.resolve(currentFilePath);
+
+  const directoryEntries = await readdir(exportDirectory, {
+    withFileTypes: true,
+  });
+
+  const questIds = new Set<string>();
+
+  for (const directoryEntry of directoryEntries) {
+    if (!directoryEntry.isFile() || !directoryEntry.name.endsWith('.json')) {
+      continue;
+    }
+
+    const exportPath = path.join(exportDirectory, directoryEntry.name);
+
+    if (path.resolve(exportPath) === currentResolvedPath) {
+      continue;
+    }
+
+    const exportResult = questChainExportSchema.safeParse(
+      await readJsonFile(exportPath),
+    );
+
+    if (!exportResult.success) {
+      continue;
+    }
+
+    for (const quest of exportResult.data.quests) {
+      questIds.add(quest.id);
+    }
+  }
+
+  return questIds;
 }
 
 function formatSchemaPath(pathParts: readonly PropertyKey[]): string {
@@ -519,6 +559,7 @@ function validateIntegrity(
   exportData: QuestChainExport,
   derivedGraphData: DerivedGraphData,
   unresolvedIssues: readonly QuestExportIssue[],
+  knownExternalQuestIds: ReadonlySet<string>,
   allowDisconnected: boolean,
 ): IntegrityResult {
   const errors: string[] = [];
@@ -668,7 +709,10 @@ function validateIntegrity(
       const previousQuest = questsById.get(previousQuestId);
 
       if (!previousQuest) {
-        if (!hasInternalPreviousQuest) {
+        if (
+          knownExternalQuestIds.has(previousQuestId) ||
+          !hasInternalPreviousQuest
+        ) {
           continue;
         }
 
@@ -696,7 +740,7 @@ function validateIntegrity(
       const nextQuest = questsById.get(nextQuestId);
 
       if (!nextQuest) {
-        if (!hasInternalNextQuest) {
+        if (knownExternalQuestIds.has(nextQuestId) || !hasInternalNextQuest) {
           continue;
         }
 
@@ -984,10 +1028,13 @@ async function main(): Promise<void> {
 
   const derivedGraphData = deriveGraphData(exportData);
 
+  const knownExternalQuestIds = await readSiblingExportQuestIds(filePath);
+
   const integrityResult = validateIntegrity(
     exportData,
     derivedGraphData,
     unresolvedIssues,
+    knownExternalQuestIds,
     allowDisconnected,
   );
 
