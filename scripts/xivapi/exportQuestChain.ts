@@ -2153,6 +2153,8 @@ function createQuestEntry(
     category: slugify(category),
 
     isFeatureQuest: quest.isFeatureQuest,
+    isRepeatable: quest.isRepeatable,
+    isSeasonalQuest: quest.isSeasonalQuest,
 
     availability: extractAvailability(reviewObject, draft, quest.name),
 

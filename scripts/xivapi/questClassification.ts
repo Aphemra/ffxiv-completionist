@@ -17,3 +17,14 @@ export function isFeatureQuestEventIconType(
     FEATURE_QUEST_EVENT_ICON_TYPE_ROW_IDS.has(eventIconTypeRowId)
   );
 }
+
+export const SEASONAL_QUEST_JOURNAL_CATEGORY_NAME = 'Seasonal Events';
+
+export function isSeasonalQuestJournalCategory(
+  journalCategoryName: string | undefined,
+): boolean {
+  return (
+    journalCategoryName?.trim().toLowerCase() ===
+    SEASONAL_QUEST_JOURNAL_CATEGORY_NAME.toLowerCase()
+  );
+}

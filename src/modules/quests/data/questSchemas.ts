@@ -501,6 +501,8 @@ export const questSchema = z.strictObject({
   category: questCategorySchema,
 
   isFeatureQuest: z.boolean().default(false),
+  isRepeatable: z.boolean().default(false),
+  isSeasonalQuest: z.boolean().default(false),
 
   expansionId: gameDataIdSchema.optional(),
   patch: patchVersionSchema.optional(),

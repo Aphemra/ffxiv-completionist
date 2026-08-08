@@ -15,7 +15,10 @@ import {
 
 import { xivapiSheetResponseSchema } from './schemas';
 
-import { isFeatureQuestEventIconType } from './questClassification';
+import {
+  isFeatureQuestEventIconType,
+  isSeasonalQuestJournalCategory,
+} from './questClassification';
 
 import {
   questIndexFileSchema,
@@ -119,7 +122,29 @@ function populateReverseRelationships(quests: QuestIndexEntry[]): void {
 
 async function readExistingQuestIndex(): Promise<QuestIndexFile | undefined> {
   try {
-    return questIndexFileSchema.parse(await readJsonFile(questIndexPath));
+    const rawIndex = await readJsonFile(questIndexPath);
+    const rawIndexObject = asObject(rawIndex);
+
+    if (rawIndexObject?.indexVersion === 5) {
+      const upgradedQuests = asArray(rawIndexObject.quests).map((rawQuest) => {
+        const questObject = asObject(rawQuest);
+
+        return questObject
+          ? {
+              ...questObject,
+              isSeasonalQuest: false,
+            }
+          : rawQuest;
+      });
+
+      return questIndexFileSchema.parse({
+        ...rawIndexObject,
+        indexVersion: 6,
+        quests: upgradedQuests,
+      });
+    }
+
+    return questIndexFileSchema.parse(rawIndex);
   } catch (error) {
     if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
       return undefined;
@@ -211,6 +236,9 @@ async function main(): Promise<void> {
         relationFields(row.fields.BeastTribe)?.Name,
       );
 
+      const isSeasonalQuest =
+        isSeasonalQuestJournalCategory(journalCategoryName);
+
       const isRepeatable = readBoolean(row.fields.IsRepeatable) ?? false;
 
       const questEntry: QuestIndexEntry = {
@@ -220,6 +248,8 @@ async function main(): Promise<void> {
         isMainScenario: isMainScenarioCategory(journalCategoryName),
 
         isFeatureQuest: isFeatureQuestEventIconType(eventIconTypeRowId),
+
+        isSeasonalQuest,
 
         isRepeatable,
 
@@ -280,8 +310,16 @@ async function main(): Promise<void> {
     (quest) => quest.isMainScenario,
   ).length;
 
+  const repeatableCount = questEntries.filter(
+    (quest) => quest.isRepeatable,
+  ).length;
+
+  const seasonalCount = questEntries.filter(
+    (quest) => quest.isSeasonalQuest,
+  ).length;
+
   const output: QuestIndexFile = {
-    indexVersion: 5,
+    indexVersion: 6,
 
     source: {
       provider: 'xivapi',
@@ -330,6 +368,20 @@ async function main(): Promise<void> {
       mainScenarioCount.toLocaleString(),
       'main-scenario quest rows.',
     ].join(' '),
+  );
+
+  console.log(
+    [
+      'Classified',
+      repeatableCount.toLocaleString(),
+      'repeatable quest rows.',
+    ].join(' '),
+  );
+
+  console.log(
+    ['Classified', seasonalCount.toLocaleString(), 'seasonal quest rows.'].join(
+      ' ',
+    ),
   );
 
   console.log('Calculated reverse next-quest relationships.');

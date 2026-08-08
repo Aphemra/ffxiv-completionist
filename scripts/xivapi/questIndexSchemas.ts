@@ -20,6 +20,7 @@ export const questIndexEntrySchema = z.strictObject({
 
   isMainScenario: z.boolean(),
   isFeatureQuest: z.boolean(),
+  isSeasonalQuest: z.boolean(),
   isRepeatable: z.boolean(),
 
   previousQuestRowIds: z.array(positiveRowIdSchema),
@@ -27,7 +28,7 @@ export const questIndexEntrySchema = z.strictObject({
 });
 
 export const questIndexFileSchema = z.strictObject({
-  indexVersion: z.literal(5),
+  indexVersion: z.literal(6),
 
   source: z.strictObject({
     provider: z.literal('xivapi'),

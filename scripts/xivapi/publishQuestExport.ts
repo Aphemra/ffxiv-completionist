@@ -397,6 +397,8 @@ function convertQuest(
     sortOrder: quest.sortOrder,
 
     isFeatureQuest: quest.isFeatureQuest,
+    isRepeatable: quest.isRepeatable,
+    isSeasonalQuest: quest.isSeasonalQuest,
 
     externalIds: {
       'xivapi-quest-row': quest.xivapiRowId,
