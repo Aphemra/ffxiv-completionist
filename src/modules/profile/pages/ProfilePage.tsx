@@ -2,7 +2,9 @@ import { useState, type FormEvent } from 'react';
 
 import {
   STARTING_CITY_OPTIONS,
+  STARTING_CLASS_JOB_OPTIONS,
   type StartingCityId,
+  type StartingClassJobId,
 } from '../../../core/game/gameSchemas';
 
 import {
@@ -31,6 +33,9 @@ export function ProfilePage() {
     profile.startingCity,
   );
 
+  const [startingClassJob, setStartingClassJob] =
+    useState<StartingClassJobId | null>(profile.startingClassJob);
+
   const [initialGrandCompany, setInitialGrandCompany] =
     useState<GrandCompanyId | null>(profile.initialGrandCompany);
 
@@ -49,6 +54,7 @@ export function ProfilePage() {
     updateProfileMetadata({
       characterName,
       startingCity,
+      startingClassJob,
       initialGrandCompany,
       currentGrandCompany,
       dataCenter,
@@ -130,6 +136,7 @@ export function ProfilePage() {
                     value.length > 0 ? (value as StartingCityId) : null,
                   );
 
+                  setStartingClassJob(null);
                   setSaveMessage('');
                 }}
               >
@@ -144,6 +151,42 @@ export function ProfilePage() {
 
               <span className="profile-field__hint">
                 Used to select the correct early ARR main scenario route.
+              </span>
+            </label>
+
+            <label className="profile-field">
+              <span className="profile-field__label">Starting class</span>
+
+              <select
+                value={startingClassJob ?? ''}
+                disabled={startingCity === null}
+                onChange={(event) => {
+                  const value = event.target.value;
+
+                  setStartingClassJob(
+                    value.length > 0 ? (value as StartingClassJobId) : null,
+                  );
+
+                  setSaveMessage('');
+                }}
+              >
+                <option value="">
+                  {startingCity === null
+                    ? 'Select a starting city first'
+                    : 'Select your starting class'}
+                </option>
+
+                {STARTING_CLASS_JOB_OPTIONS.filter(
+                  (option) => option.startingCityId === startingCity,
+                ).map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+
+              <span className="profile-field__hint">
+                Selects the correct starter-specific class quest route.
               </span>
             </label>
 

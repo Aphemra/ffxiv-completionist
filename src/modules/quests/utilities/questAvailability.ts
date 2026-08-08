@@ -1,4 +1,7 @@
-import type { StartingCityId } from '../../../core/game/gameSchemas';
+import type {
+  StartingCityId,
+  StartingClassJobId,
+} from '../../../core/game/gameSchemas';
 
 import type { GrandCompanyId } from '../../../domain/grandCompanies';
 
@@ -12,6 +15,8 @@ import type { QuestCatalog } from '../data/questRepository';
 
 export interface QuestAvailabilityContext {
   startingCity: StartingCityId | null;
+
+  startingClassJob: StartingClassJobId | null;
 
   initialGrandCompany: GrandCompanyId | null;
 
@@ -40,6 +45,21 @@ function evaluateRestriction<TValue extends string>(
   return allowedValues.includes(selectedValue) ? 'matches' : 'mismatch';
 }
 
+function evaluateExcludedRestriction<TValue extends string>(
+  excludedValues: readonly TValue[] | undefined,
+  selectedValue: TValue | null,
+): RestrictionResult {
+  if (!excludedValues || excludedValues.length === 0) {
+    return 'matches';
+  }
+
+  if (selectedValue === null) {
+    return 'undecided';
+  }
+
+  return excludedValues.includes(selectedValue) ? 'mismatch' : 'matches';
+}
+
 function evaluateAvailability(
   availability: QuestAvailability | undefined,
   context: QuestAvailabilityContext,
@@ -50,6 +70,16 @@ function evaluateAvailability(
 
   const restrictionResults: RestrictionResult[] = [
     evaluateRestriction(availability.startingCityIds, context.startingCity),
+
+    evaluateRestriction(
+      availability.startingClassJobIds,
+      context.startingClassJob,
+    ),
+
+    evaluateExcludedRestriction(
+      availability.excludedStartingClassJobIds,
+      context.startingClassJob,
+    ),
 
     evaluateRestriction(
       availability.initialGrandCompanyIds,

@@ -12,6 +12,8 @@ JOURNAL_GENRES=(
   "Dragoon Quests"
 )
 
+EXCLUDED_QUEST_ROWS="66658"
+
 PRIMARY_FACET_ID="melee-dps"
 PRIMARY_FACET_NAME="Melee DPS"
 

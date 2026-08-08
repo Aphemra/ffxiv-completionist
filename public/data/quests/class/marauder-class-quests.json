@@ -1,0 +1,4544 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "continuesToQuestIds": [
+    "warrior-job-quests-job-pride-and-duty-will-take-you-from-the-mountain-66585"
+  ],
+  "groups": [
+    {
+      "id": "marauder-class-quests-quests",
+      "title": "Marauder Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "marauder-class-quests-class-way-of-the-marauder-65846",
+          "name": "Way of the Marauder",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 1,
+          "externalIds": {
+            "xivapi-quest-row": 65846
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65846,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:07.048Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000926",
+            "npcName": "Blauthota",
+            "sourceRowId": 1000926,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11,
+              "y": 6.3
+            }
+          },
+          "availability": {
+            "excludedStartingClassJobIds": [
+              "marauder"
+            ],
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "marauder-class-quests-class-my-first-axe-65848"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65715
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-way-of-the-marauder-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000927",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1749",
+                "itemName": "Weathered War Axe",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65846,
+              "internalId": "ClsExc011_00310",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 10,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "CLASSJOB",
+                  "argument": 3,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000926,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_CLASS_EXC",
+                  "argument": 44,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+                  "argument": 1015,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_CLASS_CHANGE",
+                  "argument": 10,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GEARSET_UNLOCK",
+                  "argument": 1905,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_JOB",
+                  "argument": 94,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000927
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000927,
+                  "name": "Wyrnzoen",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65848
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "marauder-class-quests-class-way-of-the-marauder-65847",
+          "name": "Way of the Marauder",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 1,
+          "externalIds": {
+            "xivapi-quest-row": 65847
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65847,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:10.174Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000926",
+            "npcName": "Blauthota",
+            "sourceRowId": 1000926,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11,
+              "y": 6.3
+            }
+          },
+          "availability": {
+            "startingClassJobIds": [
+              "marauder"
+            ],
+            "classJobIds": [
+              "marauder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "marauder-class-quests-class-axe-in-the-stone-65849",
+            "marauder-class-quests-class-wake-of-destruction-65850"
+          ],
+          "rawRelations": {
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "marauder",
+              "classJobName": "Marauder",
+              "level": 1
+            }
+          ],
+          "objectives": [
+            {
+              "id": "marauder-way-of-the-marauder-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 2,
+              "targetId": "actor-1000927",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-way-of-the-marauder-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 2,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4011508,
+                  "coordinates": {
+                    "x": 21.8,
+                    "y": 23.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 15.8781,
+                      "y": 33.4138,
+                      "z": 117.421
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-way-of-the-marauder-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 2,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4011542,
+                  "coordinates": {
+                    "x": 22.6,
+                    "y": 25.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 54.3969,
+                      "y": 35.0201,
+                      "z": 208.101
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-way-of-the-marauder-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4011545,
+                  "coordinates": {
+                    "x": 23.4,
+                    "y": 24.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 96.0045,
+                      "y": 32.7031,
+                      "z": 166.061
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-way-of-the-marauder-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "targetId": "actor-1000927",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-4639",
+                "itemName": "Marmot Steak",
+                "quantity": 5,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "class-job",
+              "targetId": "class-job-3",
+              "sourceRowId": 3,
+              "name": "Marauder"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65847,
+              "internalId": "ClsExc020_00311",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 11,
+              "questLevelOffset": 0,
+              "systemRewards": [
+                21
+              ],
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000926,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 347,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 338,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 49,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_MONSTER_NOTE",
+                  "argument": 32,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_MONSTER_NOTE",
+                  "argument": 45,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+                  "argument": 1015,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000927
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1000927,
+                  "name": "Wyrnzoen",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65849,
+                  65850
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "marauder-class-quests-class-my-first-axe-65848",
+          "name": "My First Axe",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 1,
+          "externalIds": {
+            "xivapi-quest-row": 65848
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65848,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:12.597Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000927",
+            "npcName": "Wyrnzoen",
+            "sourceRowId": 1000927,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.2,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "excludedStartingClassJobIds": [
+              "marauder"
+            ],
+            "classJobIds": [
+              "marauder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "marauder-class-quests-class-way-of-the-marauder-65846"
+          ],
+          "nextQuestIds": [
+            "marauder-class-quests-class-axe-in-the-stone-65849",
+            "marauder-class-quests-class-wake-of-destruction-65851"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65846
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "marauder",
+              "classJobName": "Marauder",
+              "level": 1
+            }
+          ],
+          "objectives": [
+            {
+              "id": "marauder-my-first-axe-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 2,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4011508,
+                  "coordinates": {
+                    "x": 21.8,
+                    "y": 23.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 15.8781,
+                      "y": 33.4138,
+                      "z": 117.421
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-my-first-axe-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 2,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4011542,
+                  "coordinates": {
+                    "x": 22.6,
+                    "y": 25.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 54.3969,
+                      "y": 35.0201,
+                      "z": 208.101
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-my-first-axe-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 2,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4011545,
+                  "coordinates": {
+                    "x": 23.4,
+                    "y": 24.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 96.0045,
+                      "y": 32.7031,
+                      "z": 166.061
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-my-first-axe-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 115
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65848,
+              "internalId": "ClsExc021_00312",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 12,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 347,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 338,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 49,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65849,
+                  65851
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "marauder-class-quests-class-axe-in-the-stone-65849",
+          "name": "Axe in the Stone",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 5,
+          "externalIds": {
+            "xivapi-quest-row": 65849
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65849,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:14.623Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000927",
+            "npcName": "Wyrnzoen",
+            "sourceRowId": 1000927,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.2,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "marauder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "marauder-class-quests-class-way-of-the-marauder-65847",
+            "marauder-class-quests-class-my-first-axe-65848"
+          ],
+          "nextQuestIds": [
+            "marauder-class-quests-class-wake-of-destruction-65850",
+            "marauder-class-quests-class-wake-of-destruction-65851"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65847,
+              65848
+            ],
+            "previousQuestJoin": 2,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "marauder",
+              "classJobName": "Marauder",
+              "level": 5
+            }
+          ],
+          "objectives": [
+            {
+              "id": "marauder-axe-in-the-stone-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002680",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4029236,
+                  "coordinates": {
+                    "x": 11.3,
+                    "y": 6.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 1.48004,
+                      "y": 30.4723,
+                      "z": -242.206
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002108",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 3633132,
+                  "coordinates": {
+                    "x": 20.4,
+                    "y": 22.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -57.2324,
+                      "y": 43.8298,
+                      "z": 45.3394
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4013507,
+                  "coordinates": {
+                    "x": 20.3,
+                    "y": 21.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -60.4204,
+                      "y": 36.2266,
+                      "z": 10.9236
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                },
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4013507,
+                  "coordinates": {
+                    "x": 20.3,
+                    "y": 21.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -60.4204,
+                      "y": 36.2266,
+                      "z": 10.9236
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                },
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4013507,
+                  "coordinates": {
+                    "x": 20.3,
+                    "y": 21.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -60.4204,
+                      "y": 36.2266,
+                      "z": 10.9236
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002108",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 3633132,
+                  "coordinates": {
+                    "x": 20.4,
+                    "y": 22.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -57.2324,
+                      "y": 43.8298,
+                      "z": 45.3394
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4013518,
+                  "coordinates": {
+                    "x": 21.3,
+                    "y": 21.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -7.91404,
+                      "y": 38.2926,
+                      "z": 17.6171
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                },
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4013518,
+                  "coordinates": {
+                    "x": 21.3,
+                    "y": 21.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -7.91404,
+                      "y": 38.2926,
+                      "z": 17.6171
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                },
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4013518,
+                  "coordinates": {
+                    "x": 21.3,
+                    "y": 21.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -7.91404,
+                      "y": 38.2926,
+                      "z": 17.6171
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002108",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 3633132,
+                  "coordinates": {
+                    "x": 20.4,
+                    "y": 22.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -57.2324,
+                      "y": 43.8298,
+                      "z": 45.3394
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002679",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4029235,
+                  "coordinates": {
+                    "x": 11.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -5.21965,
+                      "y": 31.4756,
+                      "z": -256.956
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 8
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4021392,
+                  "coordinates": {
+                    "x": 24,
+                    "y": 22.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 125.685,
+                      "y": 26.785,
+                      "z": 37.3418
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9,
+                "completeSequence": 9
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-10",
+              "sortOrder": 10,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4021393,
+                  "coordinates": {
+                    "x": 24.7,
+                    "y": 23.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 157.936,
+                      "y": 25.3739,
+                      "z": 90.4359
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 10,
+                "completeSequence": 10
+              }
+            },
+            {
+              "id": "marauder-axe-in-the-stone-objective-11",
+              "sortOrder": 11,
+              "type": "unknown",
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 11
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 1400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1750",
+                "itemName": "Bronze War Axe",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3005",
+                "itemName": "Custom-made Cuirass",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2653",
+                "itemName": "Leather Eyepatch",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-3530",
+                "itemName": "Fingerless Leather Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-27634",
+                "itemName": "Altered Thighboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-5823",
+                "itemName": "Allagan Tin Piece",
+                "quantity": 5,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65849,
+              "internalId": "ClsExc050_00313",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 50,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1002680,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1002108,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2001490,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2001493,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2001480,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTION0",
+                  "argument": 31,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2001481,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2001482,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT5",
+                  "argument": 2001483,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTION1",
+                  "argument": 31,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT6",
+                  "argument": 2001484,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT7",
+                  "argument": 2001485,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1002679,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT8",
+                  "argument": 2000284,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_PROCESS_MIDDLE",
+                  "argument": 16,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 4021195,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1002673,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1002675,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1002676,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1002677,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT9",
+                  "argument": 2001731,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT10",
+                  "argument": 2002717,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 262,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 25,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1002696,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1002112,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1002680,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 961,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_FACE0",
+                  "argument": 604,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE1",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002680
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002108
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1002679
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1002673
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1002675
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1002676
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1002677
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002696
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1002112
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1002680
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002680,
+                  "name": "Broenbhar",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002108,
+                  "name": "Rhotgeim",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1002679,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1002673,
+                  "name": "Sighard",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1002675
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1002676
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1002677
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002696,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1002112,
+                  "name": "Neddard",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1002680,
+                  "name": "Broenbhar",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65850,
+                  65851
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "marauder-class-quests-class-wake-of-destruction-65850",
+          "name": "Wake of Destruction",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65850
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65850,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:18.250Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000927",
+            "npcName": "Wyrnzoen",
+            "sourceRowId": 1000927,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.2,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "startingClassJobIds": [
+              "marauder"
+            ],
+            "classJobIds": [
+              "marauder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "marauder-class-quests-class-way-of-the-marauder-65847",
+            "marauder-class-quests-class-axe-in-the-stone-65849"
+          ],
+          "nextQuestIds": [
+            "marauder-class-quests-class-brutal-strength-65852"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65847,
+              65849
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "marauder",
+              "classJobName": "Marauder",
+              "level": 10
+            }
+          ],
+          "objectives": [
+            {
+              "id": "marauder-wake-of-destruction-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4089253,
+                  "coordinates": {
+                    "x": 29.7,
+                    "y": 14.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 410.849,
+                      "y": 60.7197,
+                      "z": -332.128
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-wake-of-destruction-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-wake-of-destruction-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4088329,
+                  "coordinates": {
+                    "x": 19.8,
+                    "y": 15.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -83.0359,
+                      "y": 34.049,
+                      "z": -302.277
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "marauder-wake-of-destruction-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1752",
+                "itemName": "Cloud Axe",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3016",
+                "itemName": "Leather Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-2662",
+                "itemName": "Bronze Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-3539",
+                "itemName": "Hempen Bracers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-3770",
+                "itemName": "Leather Jackboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-55",
+                "notes": "Stain: Nophica Green"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65850,
+              "internalId": "ClsExc100_00314",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 100,
+              "questLevelOffset": 0,
+              "systemRewards": [
+                6
+              ],
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 5,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2000286,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_PROCESS_MIDDLE",
+                  "argument": 16,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 3633023,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 4087070,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY3",
+                  "argument": 4087071,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY4",
+                  "argument": 4087072,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_CLASS_CANGE",
+                  "argument": 22,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_GEAR_SET",
+                  "argument": 38,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_GEAR_SET",
+                  "argument": 29,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65852
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "marauder-class-quests-class-wake-of-destruction-65851",
+          "name": "Wake of Destruction",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65851
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65851,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:20.291Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000927",
+            "npcName": "Wyrnzoen",
+            "sourceRowId": 1000927,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.2,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "excludedStartingClassJobIds": [
+              "marauder"
+            ],
+            "classJobIds": [
+              "marauder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "marauder-class-quests-class-my-first-axe-65848",
+            "marauder-class-quests-class-axe-in-the-stone-65849"
+          ],
+          "nextQuestIds": [
+            "marauder-class-quests-class-brutal-strength-65852"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65848,
+              65849
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "marauder",
+              "classJobName": "Marauder",
+              "level": 10
+            }
+          ],
+          "objectives": [
+            {
+              "id": "marauder-wake-of-destruction-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4089254,
+                  "coordinates": {
+                    "x": 29.7,
+                    "y": 14.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 410.849,
+                      "y": 60.7197,
+                      "z": -332.128
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-wake-of-destruction-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-wake-of-destruction-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4088330,
+                  "coordinates": {
+                    "x": 19.8,
+                    "y": 15.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -83.0359,
+                      "y": 34.049,
+                      "z": -302.277
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "marauder-wake-of-destruction-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1752",
+                "itemName": "Cloud Axe",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3016",
+                "itemName": "Leather Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-2662",
+                "itemName": "Bronze Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-3539",
+                "itemName": "Hempen Bracers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-11",
+                "notes": "Stain: Rust Red"
+              },
+              {
+                "itemId": "item-3770",
+                "itemName": "Leather Jackboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-55",
+                "notes": "Stain: Nophica Green"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65851,
+              "internalId": "ClsExc101_00315",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 100,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 5,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2000287,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_PROCESS_MIDDLE",
+                  "argument": 16,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 3633026,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 4087073,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY3",
+                  "argument": 4087074,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY4",
+                  "argument": 4087075,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65852
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "marauder-class-quests-class-brutal-strength-65852",
+          "name": "Brutal Strength",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 15,
+          "externalIds": {
+            "xivapi-quest-row": 65852
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65852,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:22.780Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000927",
+            "npcName": "Wyrnzoen",
+            "sourceRowId": 1000927,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.2,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "marauder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "marauder-class-quests-class-wake-of-destruction-65850",
+            "marauder-class-quests-class-wake-of-destruction-65851"
+          ],
+          "nextQuestIds": [
+            "marauder-class-quests-class-the-mountain-that-strides-65853"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65850,
+              65851
+            ],
+            "previousQuestJoin": 2,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "marauder",
+              "classJobName": "Marauder",
+              "level": 15
+            }
+          ],
+          "objectives": [
+            {
+              "id": "marauder-brutal-strength-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002110",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 3633570,
+                  "coordinates": {
+                    "x": 27.9,
+                    "y": 27
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 319.875,
+                      "y": -31.8456,
+                      "z": 273.518
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-brutal-strength-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2000288",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 3633634,
+                  "coordinates": {
+                    "x": 23.5,
+                    "y": 24.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 99.2314,
+                      "y": -14.2974,
+                      "z": 141.886
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-brutal-strength-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "marauder-brutal-strength-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002111",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 3633143,
+                  "coordinates": {
+                    "x": 17.4,
+                    "y": 20.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -206.784,
+                      "y": 41.7598,
+                      "z": -39.6245
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "marauder-brutal-strength-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 4031429,
+                  "coordinates": {
+                    "x": 17.1,
+                    "y": 20.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -217.917,
+                      "y": 32.0766,
+                      "z": -41.5406
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "marauder-brutal-strength-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "targetId": "actor-1002111",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 3633143,
+                  "coordinates": {
+                    "x": 17.4,
+                    "y": 20.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -206.784,
+                      "y": 41.7598,
+                      "z": -39.6245
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "marauder-brutal-strength-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 5760,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1754",
+                "itemName": "Iron War Axe",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3026",
+                "itemName": "Bronze Cuirass",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-74",
+                "notes": "Stain: Midnight Blue"
+              },
+              {
+                "itemId": "item-3544",
+                "itemName": "Bronze Gauntlets",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-74",
+                "notes": "Stain: Midnight Blue"
+              },
+              {
+                "itemId": "item-3325",
+                "itemName": "Padded Hempen Trousers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-74",
+                "notes": "Stain: Midnight Blue"
+              },
+              {
+                "itemId": "item-3775",
+                "itemName": "Bronze Sabatons",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 5,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "action",
+              "targetId": "action-46",
+              "sourceRowId": 46,
+              "name": "Tomahawk"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65852,
+              "internalId": "ClsExc150_00316",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 150,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1002110,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2000288,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_",
+                  "argument": 30,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 3633691,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1002111,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2001494,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2001486,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTION0",
+                  "argument": 31,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 995,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_WS",
+                  "argument": 46,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002110
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002111
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002110,
+                  "name": "Reynfred",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002111,
+                  "name": "Skapfghim",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65853
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        },
+        {
+          "id": "marauder-class-quests-class-the-mountain-that-strides-65853",
+          "name": "The Mountain That Strides",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 65853
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65853,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:25.304Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000927",
+            "npcName": "Wyrnzoen",
+            "sourceRowId": 1000927,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.2,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "marauder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "marauder-class-quests-class-brutal-strength-65852"
+          ],
+          "nextQuestIds": [
+            "marauder-class-quests-class-bleeder-of-the-pack-65854"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65852
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "marauder",
+              "classJobName": "Marauder",
+              "level": 20
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2000525",
+              "itemName": "Sighard's Waterskin",
+              "sourceRowId": 2000525,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "event-item-2000526",
+              "itemName": "Sighard's Satchel",
+              "sourceRowId": 2000526,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "marauder-the-mountain-that-strides-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002682",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4031448,
+                  "coordinates": {
+                    "x": 9.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -86.9228,
+                      "y": 41,
+                      "z": -153.9
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-the-mountain-that-strides-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002112",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 3636824,
+                  "coordinates": {
+                    "x": 32.7,
+                    "y": 19.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 561.672,
+                      "y": 89.783,
+                      "z": -81.5093
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-the-mountain-that-strides-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002683",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4037179,
+                  "coordinates": {
+                    "x": 32.7,
+                    "y": 19.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 559.648,
+                      "y": 89.783,
+                      "z": -80.1463
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "marauder-the-mountain-that-strides-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002113",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 3634860,
+                  "coordinates": {
+                    "x": 27.8,
+                    "y": 25.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 312.459,
+                      "y": -24.4868,
+                      "z": 212.878
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "marauder-the-mountain-that-strides-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 2,
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 4039814,
+                  "coordinates": {
+                    "x": 28.3,
+                    "y": 25
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 337.92,
+                      "y": -27.9071,
+                      "z": 172.97
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                },
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 4039817,
+                  "coordinates": {
+                    "x": 27.3,
+                    "y": 24.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 290.389,
+                      "y": -23.8165,
+                      "z": 140.105
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "marauder-the-mountain-that-strides-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 4039818,
+                  "coordinates": {
+                    "x": 27.5,
+                    "y": 23.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 298.971,
+                      "y": -9.15503,
+                      "z": 90.1588
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "marauder-the-mountain-that-strides-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002112",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 3636824,
+                  "coordinates": {
+                    "x": 32.7,
+                    "y": 19.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 561.672,
+                      "y": 89.783,
+                      "z": -81.5093
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "marauder-the-mountain-that-strides-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1758",
+                "itemName": "Inferno Axe",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3045",
+                "itemName": "Iron Cuirass",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-36",
+                "notes": "Stain: Desert Yellow"
+              },
+              {
+                "itemId": "item-2712",
+                "itemName": "Iron Celata",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-36",
+                "notes": "Stain: Desert Yellow"
+              },
+              {
+                "itemId": "item-3563",
+                "itemName": "Iron Gauntlets",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-36",
+                "notes": "Stain: Desert Yellow"
+              },
+              {
+                "itemId": "item-3793",
+                "itemName": "Iron Sabatons",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 5,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65853,
+              "internalId": "ClsExc200_00317",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 200,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1002682,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1002112,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1002683,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1002113,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2000289,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_PROCESS_MIDDLE",
+                  "argument": 16,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 3633780,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 3633781,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2000525,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2000290,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 3633884,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY3",
+                  "argument": 3633885,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM1",
+                  "argument": 2000526,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1002684,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2000294,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2001732,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1003546,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1003547,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1003548,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 263,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 26,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1002674,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1002696,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 981,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION2",
+                  "argument": 837,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 4098676,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "ACTION_OLD_PERSON_TALK1",
+                  "argument": 1018,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTION_OLD_PERSON_TALK2",
+                  "argument": 1019,
+                  "referenceType": "action"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2000525,
+                  "itemId": "event-item-2000525",
+                  "name": "Sighard's Waterskin",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 24454,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "ITEM1",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2000526,
+                  "itemId": "event-item-2000526",
+                  "name": "Sighard's Satchel",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 23001,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002682
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002112
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1002683
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1002113
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1002684
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1003546
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1003547
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1003548
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002674
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1002696
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002682,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002112,
+                  "name": "Neddard",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1002683,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1002113,
+                  "name": "Pfarstym",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1002684,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1003546,
+                  "name": "Sighard",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1003547,
+                  "name": "Wyrnzoen",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1003548,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002674,
+                  "name": "Sighard",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1002696,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65854
+                ]
+              }
+            }
+          },
+          "sortOrder": 8
+        },
+        {
+          "id": "marauder-class-quests-class-bleeder-of-the-pack-65854",
+          "name": "Bleeder of the Pack",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 25,
+          "externalIds": {
+            "xivapi-quest-row": 65854
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65854,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:28.627Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000927",
+            "npcName": "Wyrnzoen",
+            "sourceRowId": 1000927,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.2,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "marauder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "marauder-class-quests-class-the-mountain-that-strides-65853"
+          ],
+          "nextQuestIds": [
+            "marauder-class-quests-class-bringing-down-the-mountain-65855"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65853
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "marauder",
+              "classJobName": "Marauder",
+              "level": 25
+            }
+          ],
+          "objectives": [
+            {
+              "id": "marauder-bleeder-of-the-pack-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002682",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4031448,
+                  "coordinates": {
+                    "x": 9.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -86.9228,
+                      "y": 41,
+                      "z": -153.9
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-bleeder-of-the-pack-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002685",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4038134,
+                  "coordinates": {
+                    "x": 16.8,
+                    "y": 35
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -235.337,
+                      "y": -0.282603,
+                      "z": 675.367
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-bleeder-of-the-pack-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 8160,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1766",
+                "itemName": "Thunderstorm Axe",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3068",
+                "itemName": "Heavy Iron Armor",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-48",
+                "notes": "Stain: Olive Green"
+              },
+              {
+                "itemId": "item-3579",
+                "itemName": "Heavy Iron Gauntlets",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-48",
+                "notes": "Stain: Olive Green"
+              },
+              {
+                "itemId": "item-3352",
+                "itemName": "Heavy Iron Flanchard",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-48",
+                "notes": "Stain: Olive Green"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65854,
+              "internalId": "ClsExc250_00318",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 250,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1002682,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1002685,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2001733,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 264,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 27,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 961,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION2",
+                  "argument": 824,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION3",
+                  "argument": 795,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION4",
+                  "argument": 934,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1002696,
+                  "referenceType": "actor"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002682
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002685
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002696
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002682,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002685,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002696,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65855
+                ]
+              }
+            }
+          },
+          "sortOrder": 9
+        },
+        {
+          "id": "marauder-class-quests-class-bringing-down-the-mountain-65855",
+          "name": "Bringing Down the Mountain",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 30,
+          "externalIds": {
+            "xivapi-quest-row": 65855
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65855,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:31.225Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1000927",
+            "npcName": "Wyrnzoen",
+            "sourceRowId": 1000927,
+            "zoneId": "limsa-lominsa-upper-decks",
+            "zoneName": "Limsa Lominsa Upper Decks",
+            "coordinates": {
+              "x": 11.2,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "marauder"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "marauder-class-quests-class-bleeder-of-the-pack-65854"
+          ],
+          "nextQuestIds": [
+            "warrior-job-quests-job-pride-and-duty-will-take-you-from-the-mountain-66585"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65854
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "marauder",
+              "classJobName": "Marauder",
+              "level": 30
+            }
+          ],
+          "objectives": [
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002115",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 3637200,
+                  "coordinates": {
+                    "x": 32.8,
+                    "y": 19.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 562.348,
+                      "y": 89.8803,
+                      "z": -80.2167
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002686",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4037153,
+                  "coordinates": {
+                    "x": 32.6,
+                    "y": 20.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 554.296,
+                      "y": 89.7831,
+                      "z": -72.4141
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1002713",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4104708,
+                  "coordinates": {
+                    "x": 32.6,
+                    "y": 20.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 554.412,
+                      "y": 89.783,
+                      "z": -67.979
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4101786,
+                  "coordinates": {
+                    "x": 32.9,
+                    "y": 17.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 570.557,
+                      "y": 57.0528,
+                      "z": -208.571
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4101788,
+                  "coordinates": {
+                    "x": 33.5,
+                    "y": 16
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 597.97,
+                      "y": 62.6988,
+                      "z": -273.251
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4101848,
+                  "coordinates": {
+                    "x": 33.2,
+                    "y": 14.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 581.938,
+                      "y": 76.4104,
+                      "z": -330.101
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4101852,
+                  "coordinates": {
+                    "x": 33,
+                    "y": 13.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 573.097,
+                      "y": 80.5853,
+                      "z": -419.434
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "targetId": "actor-1002689",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4056584,
+                  "coordinates": {
+                    "x": 32.9,
+                    "y": 14.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 569.635,
+                      "y": 86.2286,
+                      "z": -363.943
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "targetId": "actor-1002714",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4104709,
+                  "coordinates": {
+                    "x": 33,
+                    "y": 14.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 572.605,
+                      "y": 86.3638,
+                      "z": -365.34
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-10",
+              "sortOrder": 10,
+              "type": "unknown",
+              "targetId": "actor-1002715",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 4104711,
+                  "coordinates": {
+                    "x": 32.8,
+                    "y": 14.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 566.436,
+                      "y": 86.2928,
+                      "z": -364.93
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 10,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "marauder-bringing-down-the-mountain-objective-11",
+              "sortOrder": 11,
+              "type": "unknown",
+              "targetId": "actor-1000927",
+              "targetName": "Wyrnzoen",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 1673098,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.18483,
+                      "y": 44.9683,
+                      "z": -255.865
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 11
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 12480,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1769",
+                "itemName": "Spiked Steel Labrys",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3102",
+                "itemName": "Steel Cuirass",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-2755",
+                "itemName": "Steel Celata",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-3599",
+                "itemName": "Steel Gauntlets",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-3825",
+                "itemName": "Steel Sabatons",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "action",
+              "targetId": "action-40",
+              "sourceRowId": 40,
+              "name": "Thrill of Battle"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:45:32.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65855,
+              "internalId": "ClsExc300_00319",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Marauder Quests",
+              "eventIconType": 8,
+              "sortKey": 300,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1000927,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1002115,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1002686,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1002713,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2000296,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_PROCESS_MIDDLE",
+                  "argument": 16,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 3631814,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2000297,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 3631816,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2000298,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 3631818,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2000299,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2001661,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1002689,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1002714,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1002715,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 265,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 28,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE0",
+                  "argument": 604,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE1",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1002112,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1002696,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1002680,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 3636824,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 995,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_WS",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002115
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002686
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1002713
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1002689
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1002714
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1002715
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002112
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1002696
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1002680
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1002115,
+                  "name": "Sighard",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1002686,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1002713,
+                  "name": "Broenbhar",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1002689,
+                  "name": "Wyrnzoen",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1002714,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1002715,
+                  "name": "Broenbhar",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1002112,
+                  "name": "Neddard",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1002696,
+                  "name": "Solkwyb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1002680,
+                  "name": "Broenbhar",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66585
+                ]
+              }
+            }
+          },
+          "sortOrder": 10
+        }
+      ]
+    }
+  ]
+}

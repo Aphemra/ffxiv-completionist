@@ -1,6 +1,9 @@
 import * as z from 'zod';
 
-import { startingCityIdSchema } from '../game/gameSchemas';
+import {
+  startingCityIdSchema,
+  startingClassJobIdSchema,
+} from '../game/gameSchemas';
 
 import { grandCompanyIdSchema } from '../../domain/grandCompanies';
 
@@ -21,6 +24,8 @@ export const playerProgressSchema = z.strictObject({
   characterName: z.string().trim().max(80),
 
   startingCity: startingCityIdSchema.nullable().default(null),
+
+  startingClassJob: startingClassJobIdSchema.nullable().default(null),
 
   initialGrandCompany: grandCompanyIdSchema.nullable().default(null),
 
@@ -47,6 +52,7 @@ export type ProfileMetadata = Pick<
   PlayerProgress,
   | 'characterName'
   | 'startingCity'
+  | 'startingClassJob'
   | 'initialGrandCompany'
   | 'currentGrandCompany'
   | 'dataCenter'

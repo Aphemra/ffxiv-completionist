@@ -61,6 +61,10 @@ const questEndpointSchema = z.strictObject({
 const questAvailabilitySchema = z.strictObject({
   startingCityIds: z.array(gameDataIdSchema).optional(),
 
+  startingClassJobIds: z.array(gameDataIdSchema).optional(),
+
+  excludedStartingClassJobIds: z.array(gameDataIdSchema).optional(),
+
   initialGrandCompanyIds: z.array(grandCompanyIdSchema).optional(),
 
   currentGrandCompanyIds: z.array(grandCompanyIdSchema).optional(),
@@ -185,6 +189,8 @@ export const questExportEntrySchema = z.strictObject({
   isFeatureQuest: z.boolean().default(false),
   isRepeatable: z.boolean().default(false),
   isSeasonalQuest: z.boolean().default(false),
+
+  alternativeCompletionGroupId: gameDataIdSchema.optional(),
 
   availability: questAvailabilitySchema.nullable(),
 

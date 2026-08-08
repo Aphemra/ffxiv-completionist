@@ -80,7 +80,10 @@ export function getPreviousQuestIds(
     activeTraversal.delete(currentQuestId);
     completedTraversal.add(currentQuestId);
 
-    if (isQuestCompletionEligible(currentQuest)) {
+    if (
+      isQuestCompletionEligible(currentQuest) &&
+      !completedQuestIds.has(currentQuestId)
+    ) {
       previousQuestIds.push(currentQuestId);
     }
   }

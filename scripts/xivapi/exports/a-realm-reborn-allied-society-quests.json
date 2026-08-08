@@ -1,0 +1,3857 @@
+{
+  "schemaVersion": 1,
+  "id": "a-realm-reborn-allied-society-quests",
+  "title": "A Realm Reborn Allied Society Quests",
+  "category": "tribal",
+  "generatedAt": "2026-08-08T05:05:38.821Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 9,
+    "branchCount": 0,
+    "convergenceCount": 1,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [
+    {
+      "questId": "a-realm-reborn-allied-society-quests-tribal-little-sylphs-lost-67004",
+      "questName": "Little Sylphs Lost",
+      "relatedQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-call-of-the-wild-twin-adder-67001",
+        "a-realm-reborn-allied-society-quests-tribal-call-of-the-wild-maelstrom-67002",
+        "a-realm-reborn-allied-society-quests-tribal-call-of-the-wild-immortal-flames-67003"
+      ]
+    }
+  ],
+  "issues": [],
+  "quests": [
+    {
+      "id": "a-realm-reborn-allied-society-quests-tribal-call-of-the-wild-twin-adder-67001",
+      "xivapiRowId": 67001,
+      "sortOrder": 1,
+      "name": "Call of the Wild (Twin Adder)",
+      "level": 50,
+      "category": "tribal",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "alternativeCompletionGroupId": "arr-allied-call-of-the-wild",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-call-of-the-wild-twin-adder-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000193",
+          "locations": [
+            {
+              "zoneId": "new-gridania",
+              "zoneName": "New Gridania",
+              "territoryId": "territory-132",
+              "mapId": "map-2",
+              "sourceLevelRowId": 1369401,
+              "coordinates": {
+                "x": 10.1,
+                "y": 11.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -56.7508,
+                  "y": -1.71721,
+                  "z": 7.90794
+                },
+                "mapGameId": "f1t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "lockedByQuestRowIds": [
+          67002,
+          67003
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67001,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T05:05:14.054Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67001,
+          "internalId": "BanAll010_01465",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "A Realm Reborn Allied Society Quests",
+          "eventIconType": 1,
+          "sortKey": 1,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1009294,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000193,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_MOT_01",
+              "argument": 727,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000193
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000193,
+              "name": "Gavin",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67004
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-little-sylphs-lost-67004"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 525,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Scarlet",
+          "title": "Serpent Lieutenant",
+          "xivapiRowId": 1009294
+        },
+        "location": {
+          "zone": "New Gridania",
+          "x": 10,
+          "y": 11.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "a-realm-reborn-allied-society-quests-tribal-call-of-the-wild-maelstrom-67002",
+      "xivapiRowId": 67002,
+      "sortOrder": 2,
+      "name": "Call of the Wild (Maelstrom)",
+      "level": 50,
+      "category": "tribal",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "alternativeCompletionGroupId": "arr-allied-call-of-the-wild",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-call-of-the-wild-maelstrom-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000193",
+          "locations": [
+            {
+              "zoneId": "new-gridania",
+              "zoneName": "New Gridania",
+              "territoryId": "territory-132",
+              "mapId": "map-2",
+              "sourceLevelRowId": 1369401,
+              "coordinates": {
+                "x": 10.1,
+                "y": 11.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -56.7508,
+                  "y": -1.71721,
+                  "z": 7.90794
+                },
+                "mapGameId": "f1t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "lockedByQuestRowIds": [
+          67001,
+          67003
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67002,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T05:05:16.443Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67002,
+          "internalId": "BanAll011_01466",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "A Realm Reborn Allied Society Quests",
+          "eventIconType": 1,
+          "sortKey": 2,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1003550,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000193,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_MOT_01",
+              "argument": 726,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000193
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000193,
+              "name": "Gavin",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67004
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-little-sylphs-lost-67004"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 525,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Trachraet",
+          "title": "Storm Lieutenant",
+          "xivapiRowId": 1003550
+        },
+        "location": {
+          "zone": "Limsa Lominsa Upper Decks",
+          "x": 12.8,
+          "y": 12.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "a-realm-reborn-allied-society-quests-tribal-call-of-the-wild-immortal-flames-67003",
+      "xivapiRowId": 67003,
+      "sortOrder": 3,
+      "name": "Call of the Wild (Immortal Flames)",
+      "level": 50,
+      "category": "tribal",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "alternativeCompletionGroupId": "arr-allied-call-of-the-wild",
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-call-of-the-wild-immortal-flames-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000193",
+          "locations": [
+            {
+              "zoneId": "new-gridania",
+              "zoneName": "New Gridania",
+              "territoryId": "territory-132",
+              "mapId": "map-2",
+              "sourceLevelRowId": 1369401,
+              "coordinates": {
+                "x": 10.1,
+                "y": 11.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -56.7508,
+                  "y": -1.71721,
+                  "z": 7.90794
+                },
+                "mapGameId": "f1t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "lockedByQuestRowIds": [
+          67002,
+          67001
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67003,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T05:05:18.883Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67003,
+          "internalId": "BanAll012_01467",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "A Realm Reborn Allied Society Quests",
+          "eventIconType": 1,
+          "sortKey": 3,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1001634,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000193,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_MOT_01",
+              "argument": 728,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000193
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000193,
+              "name": "Gavin",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67004
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-little-sylphs-lost-67004"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 525,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Mimio Mio",
+          "title": "Flame Lieutenant",
+          "xivapiRowId": 1001634
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 8.6,
+          "y": 9.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "a-realm-reborn-allied-society-quests-tribal-little-sylphs-lost-67004",
+      "xivapiRowId": 67004,
+      "sortOrder": 4,
+      "name": "Little Sylphs Lost",
+      "level": 50,
+      "category": "tribal",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-little-sylphs-lost-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005565",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 4494860,
+              "coordinates": {
+                "x": 22,
+                "y": 26.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 22.4921,
+                  "y": -6.20406,
+                  "z": 252.559
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-little-sylphs-lost-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2004254",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 4745343,
+              "coordinates": {
+                "x": 26.7,
+                "y": 20
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 260.837,
+                  "y": -9.08251,
+                  "z": -77.3791
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-little-sylphs-lost-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005565",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 4494860,
+              "coordinates": {
+                "x": 22,
+                "y": 26.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 22.4921,
+                  "y": -6.20406,
+                  "z": 252.559
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67001,
+          67002,
+          67003
+        ],
+        "previousQuestJoin": 2,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67004,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T05:05:21.280Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67004,
+          "internalId": "BanAll020_01468",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "A Realm Reborn Allied Society Quests",
+          "eventIconType": 1,
+          "sortKey": 4,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000193,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1005565,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2004254,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_LOOKOUT_LONG",
+              "argument": 41,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1005577,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_MOT_01",
+              "argument": 727,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1005766,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1009172,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION1",
+              "argument": 1014,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOCAL_QUEST0",
+              "argument": 67001,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005565
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005577
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1005766
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1009172
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005565,
+              "name": "Voyce",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005577,
+              "name": "Frixio",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1005766,
+              "name": "Frixio",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1009172,
+              "name": "Sylvie",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67005
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-call-of-the-wild-twin-adder-67001",
+        "a-realm-reborn-allied-society-quests-tribal-call-of-the-wild-maelstrom-67002",
+        "a-realm-reborn-allied-society-quests-tribal-call-of-the-wild-immortal-flames-67003"
+      ],
+      "previousQuestMode": "any",
+      "nextQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-clutching-at-straws-67005"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 760,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Gavin",
+          "xivapiRowId": 1000193
+        },
+        "location": {
+          "zone": "New Gridania",
+          "x": 10.1,
+          "y": 11.4
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "a-realm-reborn-allied-society-quests-tribal-clutching-at-straws-67005",
+      "xivapiRowId": 67005,
+      "sortOrder": 5,
+      "name": "Clutching at Straws",
+      "level": 50,
+      "category": "tribal",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001316",
+          "itemName": "Letter to Guston",
+          "sourceRowId": 2001316,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2001317",
+          "itemName": "Juicy Oranges",
+          "sourceRowId": 2001317,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-clutching-at-straws-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009197",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-upper-decks",
+              "zoneName": "Limsa Lominsa Upper Decks",
+              "territoryId": "territory-128",
+              "mapId": "map-11",
+              "sourceLevelRowId": 4745424,
+              "coordinates": {
+                "x": 11.2,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -3.42852,
+                  "y": 39.5176,
+                  "z": 11.4853
+                },
+                "mapGameId": "s1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-clutching-at-straws-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009154",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 4745368,
+              "coordinates": {
+                "x": 6.5,
+                "y": 14.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -239.704,
+                  "y": 6,
+                  "z": 175.982
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-clutching-at-straws-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005937",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4618737,
+              "coordinates": {
+                "x": 16.7,
+                "y": 22.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -238.024,
+                  "y": -40.8283,
+                  "z": 68.2947
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-clutching-at-straws-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 2,
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4746420,
+              "coordinates": {
+                "x": 5.1,
+                "y": 34.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -819.038,
+                  "y": -47.6469,
+                  "z": 666.009
+                },
+                "mapGameId": "s1f4/00"
+              }
+            },
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4618960,
+              "coordinates": {
+                "x": 16.7,
+                "y": 21.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -239.267,
+                  "y": -42.1074,
+                  "z": 15.2418
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-clutching-at-straws-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005937",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4618737,
+              "coordinates": {
+                "x": 16.7,
+                "y": 22.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -238.024,
+                  "y": -40.8283,
+                  "z": 68.2947
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67004
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67005,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T05:05:23.729Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67005,
+          "internalId": "BanAll030_01469",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "A Realm Reborn Allied Society Quests",
+          "eventIconType": 1,
+          "sortKey": 5,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1005565,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001316,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1009197,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1009154,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2001317,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1005937,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 4745347,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2004255,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_LOOKOUT_LONG",
+              "argument": 41,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4745351,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 4745352,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2004256,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1005946,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 138,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 4629125,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1005940,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "CUT_SCENE_01",
+              "argument": 557,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1008930,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT01",
+              "argument": 524,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM1",
+              "argument": 114,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001316,
+              "itemId": "event-item-2001316",
+              "name": "Letter to Guston",
+              "resolvedSheet": "EventItem",
+              "iconId": 25918,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001317,
+              "itemId": "event-item-2001317",
+              "name": "Juicy Oranges",
+              "resolvedSheet": "EventItem",
+              "iconId": 25312,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1009197
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1009154
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005937
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005946
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005940
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1008930
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1009197,
+              "name": "Guston",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1009154,
+              "name": "Robyn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005937,
+              "name": "Novv",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005946,
+              "name": "Pahh",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005940,
+              "name": "Seww",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1008930,
+              "name": "Seww",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67006
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-little-sylphs-lost-67004"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-digging-for-answers-67006"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 1502,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Voyce",
+          "xivapiRowId": 1005565
+        },
+        "location": {
+          "zone": "East Shroud",
+          "x": 22,
+          "y": 26.6
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "a-realm-reborn-allied-society-quests-tribal-digging-for-answers-67006",
+      "xivapiRowId": 67006,
+      "sortOrder": 6,
+      "name": "Digging for Answers",
+      "level": 50,
+      "category": "tribal",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-digging-for-answers-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4745742,
+              "coordinates": {
+                "x": 27.5,
+                "y": 28.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 299.098,
+                  "y": -49.5946,
+                  "z": 370.804
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-digging-for-answers-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000972",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-upper-decks",
+              "zoneName": "Limsa Lominsa Upper Decks",
+              "territoryId": "territory-128",
+              "mapId": "map-11",
+              "sourceLevelRowId": 1673081,
+              "coordinates": {
+                "x": 11.7,
+                "y": 11.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 20.2978,
+                  "y": 40.1999,
+                  "z": -6.1024
+                },
+                "mapGameId": "s1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-digging-for-answers-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1003550",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-upper-decks",
+              "zoneName": "Limsa Lominsa Upper Decks",
+              "territoryId": "territory-128",
+              "mapId": "map-11",
+              "sourceLevelRowId": 4167110,
+              "coordinates": {
+                "x": 12.8,
+                "y": 12.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 76.872,
+                  "y": 39.9963,
+                  "z": 79.0158
+                },
+                "mapGameId": "s1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-digging-for-answers-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005931",
+          "locations": [
+            {
+              "zoneId": "outer-la-noscea",
+              "zoneName": "Outer La Noscea",
+              "territoryId": "territory-180",
+              "mapId": "map-30",
+              "sourceLevelRowId": 4618728,
+              "coordinates": {
+                "x": 21.5,
+                "y": 18.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 0.80337,
+                  "y": 16.1817,
+                  "z": -171.486
+                },
+                "mapGameId": "s1f6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-digging-for-answers-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "outer-la-noscea",
+              "zoneName": "Outer La Noscea",
+              "territoryId": "territory-180",
+              "mapId": "map-30",
+              "sourceLevelRowId": 4745703,
+              "coordinates": {
+                "x": 25.2,
+                "y": 16.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 185.632,
+                  "y": 53.7622,
+                  "z": -253.136
+                },
+                "mapGameId": "s1f6/00"
+              }
+            },
+            {
+              "zoneId": "outer-la-noscea",
+              "zoneName": "Outer La Noscea",
+              "territoryId": "territory-180",
+              "mapId": "map-30",
+              "sourceLevelRowId": 4745703,
+              "coordinates": {
+                "x": 25.2,
+                "y": 16.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 185.632,
+                  "y": 53.7622,
+                  "z": -253.136
+                },
+                "mapGameId": "s1f6/00"
+              }
+            },
+            {
+              "zoneId": "outer-la-noscea",
+              "zoneName": "Outer La Noscea",
+              "territoryId": "territory-180",
+              "mapId": "map-30",
+              "sourceLevelRowId": 4745703,
+              "coordinates": {
+                "x": 25.2,
+                "y": 16.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 185.632,
+                  "y": 53.7622,
+                  "z": -253.136
+                },
+                "mapGameId": "s1f6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-digging-for-answers-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "outer-la-noscea",
+              "zoneName": "Outer La Noscea",
+              "territoryId": "territory-180",
+              "mapId": "map-30",
+              "sourceLevelRowId": 4745702,
+              "coordinates": {
+                "x": 25.3,
+                "y": 18.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 187.867,
+                  "y": 53.0861,
+                  "z": -157.276
+                },
+                "mapGameId": "s1f6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "adventurer-digging-for-answers-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005931",
+          "locations": [
+            {
+              "zoneId": "outer-la-noscea",
+              "zoneName": "Outer La Noscea",
+              "territoryId": "territory-180",
+              "mapId": "map-30",
+              "sourceLevelRowId": 4618728,
+              "coordinates": {
+                "x": 21.5,
+                "y": 18.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 0.80337,
+                  "y": 16.1817,
+                  "z": -171.486
+                },
+                "mapGameId": "s1f6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67005
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67006,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T05:05:26.429Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67006,
+          "internalId": "BanAll040_01470",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "A Realm Reborn Allied Society Quests",
+          "eventIconType": 1,
+          "sortKey": 6,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1005937,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2004278,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH_MIDDLE",
+              "argument": 3,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2004279,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2004280,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2004258,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2004259,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT5",
+              "argument": 2004260,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000972,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1003550,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1005931,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1009155,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1009156,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1009157,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1005927,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1009299,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_RESCUE_UNDER_MIDDLE",
+              "argument": 35,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1009300,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION_TIMELINE_EVENT_GIVE",
+              "argument": 960,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION_TIMELINE_EVENT_JOY",
+              "argument": 953,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTION_TIMELINE_GOB_EVENT_TROUBLE",
+              "argument": 944,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTION_TIMELINE_KNEE_SUFFERING",
+              "argument": 936,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1009172,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 4618729,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR1",
+              "argument": 4768199,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_BGM1",
+              "argument": 130,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM2",
+              "argument": 78,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000972
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1003550
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005931
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1009155
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1009156
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1009157
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005927
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1009299
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1009300
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1009172
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000972,
+              "name": "Baderon",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1003550,
+              "name": "Trachraet",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005931,
+              "name": "Skaetswys",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1009155,
+              "name": "175th Order quarryman",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1009156,
+              "name": "175th Order alchemist",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1009157,
+              "name": "175th Order priest",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005927,
+              "name": "789th Order Pickman Gi Gu",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1009299,
+              "name": "Sylvie",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1009300,
+              "name": "Sylvie",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1009172,
+              "name": "Sylvie",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67007
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-clutching-at-straws-67005"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-rattled-in-ehcatl-67007"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 1190,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Novv",
+          "title": "Clutchfather",
+          "xivapiRowId": 1005937
+        },
+        "location": {
+          "zone": "Western La Noscea",
+          "x": 16.7,
+          "y": 22.9
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "a-realm-reborn-allied-society-quests-tribal-rattled-in-ehcatl-67007",
+      "xivapiRowId": 67007,
+      "sortOrder": 7,
+      "name": "Rattled in Ehcatl",
+      "level": 50,
+      "category": "tribal",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001318",
+          "itemName": "Airship Fragment",
+          "sourceRowId": 2001318,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-rattled-in-ehcatl-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1006325",
+          "locations": [
+            {
+              "zoneId": "outer-la-noscea",
+              "zoneName": "Outer La Noscea",
+              "territoryId": "territory-180",
+              "mapId": "map-30",
+              "sourceLevelRowId": 4260378,
+              "coordinates": {
+                "x": 18.7,
+                "y": 17.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -141.558,
+                  "y": 64.5914,
+                  "z": -212.268
+                },
+                "mapGameId": "s1f6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-rattled-in-ehcatl-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2004257",
+          "locations": [
+            {
+              "zoneId": "outer-la-noscea",
+              "zoneName": "Outer La Noscea",
+              "territoryId": "territory-180",
+              "mapId": "map-30",
+              "sourceLevelRowId": 4768311,
+              "coordinates": {
+                "x": 19.2,
+                "y": 16.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -113.594,
+                  "y": 67.4028,
+                  "z": -240.719
+                },
+                "mapGameId": "s1f6/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-rattled-in-ehcatl-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009199",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 4753811,
+              "coordinates": {
+                "x": 24.5,
+                "y": 23.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 149.439,
+                  "y": -18.143,
+                  "z": 99.2297
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-rattled-in-ehcatl-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 4746512,
+              "coordinates": {
+                "x": 27.6,
+                "y": 21.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 304.059,
+                  "y": -15.3809,
+                  "z": -9.89036
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-rattled-in-ehcatl-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009204",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 4753819,
+              "coordinates": {
+                "x": 24.5,
+                "y": 23.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 151.958,
+                  "y": -18.4194,
+                  "z": 100.727
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67006
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67007,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T05:05:28.884Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67007,
+          "internalId": "BanAll050_01471",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "A Realm Reborn Allied Society Quests",
+          "eventIconType": 1,
+          "sortKey": 7,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1005931,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1006325,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1005927,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2004257,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_TOUCH_SHORT",
+              "argument": 45,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1009199,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2004261,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH_MIDDLE",
+              "argument": 3,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2004262,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2004263,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2004347,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT5",
+              "argument": 2004348,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001318,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1009204,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTION_TIMELINE_GOB_EVENT_TROUBLE",
+              "argument": 944,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1009173,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1009708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1009204,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_BGM1",
+              "argument": 114,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001318,
+              "itemId": "event-item-2001318",
+              "name": "Airship Fragment",
+              "resolvedSheet": "EventItem",
+              "iconId": 20951,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1006325
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005927
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1009199
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1009204
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1009173
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1009708
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1009204
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1006325,
+              "name": "Bloeidin",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005927,
+              "name": "789th Order Pickman Gi Gu",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1009199,
+              "name": "Sezul Totoloc",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1009204,
+              "name": "Tataramu",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1009173,
+              "name": "Tataramu",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1009708,
+              "name": "Sezul Totoloc",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1009204,
+              "name": "Tataramu",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67008
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-digging-for-answers-67006"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-ash-not-what-your-brotherhood-can-do-for-you-67008"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 1024,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Skaetswys",
+          "title": "Storm Lieutenant",
+          "xivapiRowId": 1005931
+        },
+        "location": {
+          "zone": "Outer La Noscea",
+          "x": 21.5,
+          "y": 18.1
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "a-realm-reborn-allied-society-quests-tribal-ash-not-what-your-brotherhood-can-do-for-you-67008",
+      "xivapiRowId": 67008,
+      "sortOrder": 8,
+      "name": "Ash Not What Your Brotherhood Can Do for You",
+      "level": 50,
+      "category": "tribal",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-ash-not-what-your-brotherhood-can-do-for-you-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009230",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-70",
+              "sourceLevelRowId": 4753864,
+              "coordinates": {
+                "x": 11,
+                "y": 11
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -12.8258,
+                  "y": 83,
+                  "z": -11.6954
+                },
+                "mapGameId": "w1t1/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-ash-not-what-your-brotherhood-can-do-for-you-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 4755384,
+              "coordinates": {
+                "x": 10.6,
+                "y": 9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -30.5597,
+                  "y": 0.850257,
+                  "z": -110.413
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-ash-not-what-your-brotherhood-can-do-for-you-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005553",
+          "locations": [
+            {
+              "zoneId": "southern-thanalan",
+              "zoneName": "Southern Thanalan",
+              "territoryId": "territory-146",
+              "mapId": "map-23",
+              "sourceLevelRowId": 4496986,
+              "coordinates": {
+                "x": 24,
+                "y": 14.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 122.606,
+                  "y": 16.3853,
+                  "z": -362.085
+                },
+                "mapGameId": "w1f4/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67007
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67008,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T05:05:31.581Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67008,
+          "internalId": "BanAll060_01472",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "A Realm Reborn Allied Society Quests",
+          "eventIconType": 1,
+          "sortKey": 8,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1009204,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1009230,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1009199,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1009159,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1009160,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1009161,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1009162,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1009163,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1009164,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1009165,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1009198,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1009229,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1005553,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1005552,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_LINK_ACT",
+              "argument": 1002,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1009709,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1009710,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1009711,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR3",
+              "argument": 1009172,
+              "referenceType": "actor"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1009230
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1009199
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1009159
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1009160
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1009161
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1009162
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1009163
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1009164
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1009165
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1009198
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1009229
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1005553
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1005552
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1009709
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1009710
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1009711
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1009172
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1009230,
+              "name": "Colson",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1009199,
+              "name": "Sezul Totoloc",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1009159,
+              "name": "Amalj'aa runagate",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1009160,
+              "name": "Brass Blade",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1009161,
+              "name": "Brass Blade",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1009162,
+              "name": "Brass Blade",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1009163,
+              "name": "Brass Blade",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1009164
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1009165
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1009198
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1009229
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1005553,
+              "name": "Hamujj Gah",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1005552,
+              "name": "Yadovv Gah",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1009709,
+              "name": "Brass Blade",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1009710,
+              "name": "Brass Blade",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1009711,
+              "name": "Brass Blade",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1009172,
+              "name": "Sylvie",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              67009
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-rattled-in-ehcatl-67007"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-friends-forever-67009"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 1161,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Tataramu",
+          "xivapiRowId": 1009204
+        },
+        "location": {
+          "zone": "North Shroud",
+          "x": 24.5,
+          "y": 23.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "a-realm-reborn-allied-society-quests-tribal-friends-forever-67009",
+      "xivapiRowId": 67009,
+      "sortOrder": 9,
+      "name": "Friends Forever",
+      "level": 50,
+      "category": "tribal",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 50
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 50
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2001336",
+          "itemName": "Elegant Dress",
+          "sourceRowId": 2001336,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2001319",
+          "itemName": "Smoldering Scalebomb",
+          "sourceRowId": 2001319,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-friends-forever-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005552",
+          "locations": [
+            {
+              "zoneId": "southern-thanalan",
+              "zoneName": "Southern Thanalan",
+              "territoryId": "territory-146",
+              "mapId": "map-23",
+              "sourceLevelRowId": 4496979,
+              "coordinates": {
+                "x": 23.2,
+                "y": 14.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 85.6442,
+                  "y": 15.2945,
+                  "z": -355.697
+                },
+                "mapGameId": "w1f4/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009192",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 4757317,
+              "coordinates": {
+                "x": 12,
+                "y": 8.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 39.9147,
+                  "y": 4,
+                  "z": -131.79
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009166",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-thal",
+              "zoneName": "Ul'dah - Steps of Thal",
+              "territoryId": "territory-131",
+              "mapId": "map-14",
+              "sourceLevelRowId": 4753868,
+              "coordinates": {
+                "x": 13.8,
+                "y": 11.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 129.389,
+                  "y": 4.0741,
+                  "z": 29.427
+                },
+                "mapGameId": "w1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001353",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3146810,
+              "coordinates": {
+                "x": 11.7,
+                "y": 9.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 21.0726,
+                  "y": 7.45,
+                  "z": -78.7823
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009167",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-70",
+              "sourceLevelRowId": 4772338,
+              "coordinates": {
+                "x": 11,
+                "y": 11.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -10.4311,
+                  "y": 83,
+                  "z": -3.62067
+                },
+                "mapGameId": "w1t1/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009168",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-thal",
+              "zoneName": "Ul'dah - Steps of Thal",
+              "territoryId": "territory-131",
+              "mapId": "map-73",
+              "sourceLevelRowId": 4772336,
+              "coordinates": {
+                "x": 9,
+                "y": 13.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -111.023,
+                  "y": 41.5,
+                  "z": 126.415
+                },
+                "mapGameId": "w1t2/02"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009169",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 4754105,
+              "coordinates": {
+                "x": 8.3,
+                "y": 9.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -147.158,
+                  "y": 4.1,
+                  "z": -99.8969
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009170",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 4754106,
+              "coordinates": {
+                "x": 9.5,
+                "y": 9.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -88.7923,
+                  "y": 4.95911,
+                  "z": -77.3175
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-9",
+          "sortOrder": 9,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009166",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-thal",
+              "zoneName": "Ul'dah - Steps of Thal",
+              "territoryId": "territory-131",
+              "mapId": "map-14",
+              "sourceLevelRowId": 4753868,
+              "coordinates": {
+                "x": 13.8,
+                "y": 11.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 129.389,
+                  "y": 4.0741,
+                  "z": 29.427
+                },
+                "mapGameId": "w1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 9,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-10",
+          "sortOrder": 10,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009170",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 4754106,
+              "coordinates": {
+                "x": 9.5,
+                "y": 9.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -88.7923,
+                  "y": 4.95911,
+                  "z": -77.3175
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 10,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-11",
+          "sortOrder": 11,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009194",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4754292,
+              "coordinates": {
+                "x": 14.4,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -352.715,
+                  "y": -10.1784,
+                  "z": -216.204
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 11,
+            "completeSequence": 8
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-12",
+          "sortOrder": 12,
+          "type": "unknown",
+          "quantity": 2,
+          "targetId": "actor-2004283",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4755209,
+              "coordinates": {
+                "x": 15,
+                "y": 16.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -323.506,
+                  "y": -9.72404,
+                  "z": -248.447
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 12,
+            "completeSequence": 9
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-13",
+          "sortOrder": 13,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009195",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4754294,
+              "coordinates": {
+                "x": 14.7,
+                "y": 16.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -340.174,
+                  "y": -12.0254,
+                  "z": -246.926
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 13,
+            "completeSequence": 10
+          }
+        },
+        {
+          "id": "adventurer-friends-forever-objective-14",
+          "sortOrder": 14,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1009166",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-thal",
+              "zoneName": "Ul'dah - Steps of Thal",
+              "territoryId": "territory-131",
+              "mapId": "map-14",
+              "sourceLevelRowId": 4753868,
+              "coordinates": {
+                "x": 13.8,
+                "y": 11.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 129.389,
+                  "y": 4.0741,
+                  "z": 29.427
+                },
+                "mapGameId": "w1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 14
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          67008
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 67009,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T05:05:35.211Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 67009,
+          "internalId": "BanAll070_01473",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "A Realm Reborn Allied Society Quests",
+          "eventIconType": 1,
+          "sortKey": 9,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1005553,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1005552,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1009192,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1009193,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1009166,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1001353,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1009167,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1009168,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1009169,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1009170,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1001646,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2001336,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2001319,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "POPRANGE0",
+              "argument": 4754113,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1009194,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1009188,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1009189,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR14",
+              "argument": 1009190,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR15",
+              "argument": 1009191,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR16",
+              "argument": 1009178,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR17",
+              "argument": 1009180,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR18",
+              "argument": 1009181,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR19",
+              "argument": 1009182,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2004264,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2004281,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "POPRANGE1",
+              "argument": 4755026,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 4755024,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2004283,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4755028,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 4755106,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2004265,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR20",
+              "argument": 1009195,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "NCUT_EVENT_001",
+              "argument": 558,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_EVENT_002",
+              "argument": 559,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_EVENT_003",
+              "argument": 560,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_ENPC01",
+              "argument": 1009174,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_ENPC02",
+              "argument": 1005519,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_ENPC03",
+              "argument": 1009171,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_ENPC04",
+              "argument": 1009172,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_ENPC05",
+              "argument": 1009173,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_ENPC06",
+              "argument": 1005548,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_ENPC07",
+              "argument": 1005966,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_ENPC08",
+              "argument": 1005766,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LCUT_ENPC09",
+              "argument": 1009176,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM1",
+              "argument": 82,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "NCUT_EVENT_004",
+              "argument": 604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM2",
+              "argument": 97,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM3",
+              "argument": 98,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SCREEN_IMAGE_FRIEND_RANKUP",
+              "argument": 149,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001336,
+              "itemId": "event-item-2001336",
+              "name": "Elegant Dress",
+              "resolvedSheet": "EventItem",
+              "iconId": 42374,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2001319,
+              "itemId": "event-item-2001319",
+              "name": "Smoldering Scalebomb",
+              "resolvedSheet": "EventItem",
+              "iconId": 26015,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005552
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1009192
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1009193
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1009166
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1001353
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1009167
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1009168
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1009169
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1009170
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1001646
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1009194
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1009188
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1009189
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1009190
+            },
+            {
+              "sourceInstruction": "ACTOR15",
+              "actorRowId": 1009191
+            },
+            {
+              "sourceInstruction": "ACTOR16",
+              "actorRowId": 1009178
+            },
+            {
+              "sourceInstruction": "ACTOR17",
+              "actorRowId": 1009180
+            },
+            {
+              "sourceInstruction": "ACTOR18",
+              "actorRowId": 1009181
+            },
+            {
+              "sourceInstruction": "ACTOR19",
+              "actorRowId": 1009182
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1009195
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005552,
+              "name": "Yadovv Gah",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1009192,
+              "name": "Sylvie",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1009193,
+              "name": "Loonh Gah",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1009166,
+              "name": "Sylvie",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1001353,
+              "name": "Momodi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1009167,
+              "name": "Tataramu",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1009168,
+              "name": "Voyce",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1009169,
+              "name": "Skaetswys",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1009170,
+              "name": "Loonh Gah",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1001646,
+              "name": "Essylt",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1009194,
+              "name": "Silbexio",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1009188
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1009189
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1009190
+            },
+            {
+              "sourceInstruction": "ACTOR15",
+              "actorRowId": 1009191
+            },
+            {
+              "sourceInstruction": "ACTOR16",
+              "actorRowId": 1009178,
+              "name": "Memeriga",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR17",
+              "actorRowId": 1009180
+            },
+            {
+              "sourceInstruction": "ACTOR18",
+              "actorRowId": 1009181
+            },
+            {
+              "sourceInstruction": "ACTOR19",
+              "actorRowId": 1009182
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1009195,
+              "name": "Silbexio",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "a-realm-reborn-allied-society-quests-tribal-ash-not-what-your-brotherhood-can-do-for-you-67008"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 3000,
+        "items": [
+          {
+            "itemId": "item-8562",
+            "itemName": "Sable Death Mask",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Hamujj Gah",
+          "xivapiRowId": 1005553
+        },
+        "location": {
+          "zone": "Southern Thanalan",
+          "x": 24,
+          "y": 14.3
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

@@ -1,0 +1,5474 @@
+{
+  "schemaVersion": 1,
+  "id": "arcanist-class-quests",
+  "title": "Arcanist Quests",
+  "category": "class",
+  "generatedAt": "2026-08-08T06:10:53.937Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 11,
+    "branchCount": 3,
+    "convergenceCount": 4,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [
+    {
+      "questId": "arcanist-class-quests-class-way-of-the-arcanist-65989",
+      "questName": "Way of the Arcanist",
+      "relatedQuestIds": [
+        "arcanist-class-quests-class-whats-in-the-box-65991",
+        "arcanist-class-quests-class-tactical-planning-65992"
+      ]
+    },
+    {
+      "questId": "arcanist-class-quests-class-my-first-grimoire-65990",
+      "questName": "My First Grimoire",
+      "relatedQuestIds": [
+        "arcanist-class-quests-class-whats-in-the-box-65991",
+        "arcanist-class-quests-class-tactical-planning-65993"
+      ]
+    },
+    {
+      "questId": "arcanist-class-quests-class-whats-in-the-box-65991",
+      "questName": "What's in the Box",
+      "relatedQuestIds": [
+        "arcanist-class-quests-class-tactical-planning-65992",
+        "arcanist-class-quests-class-tactical-planning-65993"
+      ]
+    }
+  ],
+  "convergences": [
+    {
+      "questId": "arcanist-class-quests-class-whats-in-the-box-65991",
+      "questName": "What's in the Box",
+      "relatedQuestIds": [
+        "arcanist-class-quests-class-way-of-the-arcanist-65989",
+        "arcanist-class-quests-class-my-first-grimoire-65990"
+      ]
+    },
+    {
+      "questId": "arcanist-class-quests-class-tactical-planning-65992",
+      "questName": "Tactical Planning",
+      "relatedQuestIds": [
+        "arcanist-class-quests-class-way-of-the-arcanist-65989",
+        "arcanist-class-quests-class-whats-in-the-box-65991"
+      ]
+    },
+    {
+      "questId": "arcanist-class-quests-class-tactical-planning-65993",
+      "questName": "Tactical Planning",
+      "relatedQuestIds": [
+        "arcanist-class-quests-class-my-first-grimoire-65990",
+        "arcanist-class-quests-class-whats-in-the-box-65991"
+      ]
+    },
+    {
+      "questId": "arcanist-class-quests-class-topaz-teachings-66639",
+      "questName": "Topaz Teachings",
+      "relatedQuestIds": [
+        "arcanist-class-quests-class-tactical-planning-65992",
+        "arcanist-class-quests-class-tactical-planning-65993"
+      ]
+    }
+  ],
+  "issues": [],
+  "quests": [
+    {
+      "id": "arcanist-class-quests-class-way-of-the-arcanist-65988",
+      "xivapiRowId": 65988,
+      "sortOrder": 1,
+      "name": "Way of the Arcanist",
+      "level": 1,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "excludedStartingClassJobIds": [
+          "arcanist"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 1
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 1
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-way-of-the-arcanist-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65987
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65988,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:25.146Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65988,
+          "internalId": "ClsAcn011_00452",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 10,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "CLASSJOB",
+              "argument": 26,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000895,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+              "argument": 1016,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_CLASS_ACN",
+              "argument": 45,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_CLASS_CHANGE",
+              "argument": 10,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "GEARSET_UNLOCK",
+              "argument": 1905,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_JOB",
+              "argument": 94,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000909
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000909,
+              "name": "Thubyrgeim",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65990
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-my-first-grimoire-65990"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2142",
+            "itemName": "Weathered Grimoire",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Murie",
+          "title": "Guild Receptionist",
+          "xivapiRowId": 1000895
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.5,
+          "y": 11.3
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "arcanist-class-quests-class-way-of-the-arcanist-65989",
+      "xivapiRowId": 65989,
+      "sortOrder": 2,
+      "name": "Way of the Arcanist",
+      "level": 1,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "startingClassJobIds": [
+          "arcanist"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 1
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 1
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-way-of-the-arcanist-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-arcanist-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4260919,
+              "coordinates": {
+                "x": 22.6,
+                "y": 23.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 57.4164,
+                  "y": 31.8986,
+                  "z": 104.261
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-arcanist-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4260920,
+              "coordinates": {
+                "x": 26.1,
+                "y": 22.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 232.202,
+                  "y": 28.9458,
+                  "z": 48.6121
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-arcanist-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4260920,
+              "coordinates": {
+                "x": 26.1,
+                "y": 22.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 232.202,
+                  "y": 28.9458,
+                  "z": 48.6121
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-arcanist-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65989,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:28.295Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65989,
+          "internalId": "ClsAcn020_00453",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 11,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            21
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000895,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 347,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 324,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 49,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_FACE1",
+              "argument": 605,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_FACE0",
+              "argument": 604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_MONSTER_NOTE",
+              "argument": 32,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_MONSTER_NOTE",
+              "argument": 45,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+              "argument": 1016,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000909
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000909,
+              "name": "Thubyrgeim",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65991,
+              65992
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-whats-in-the-box-65991",
+        "arcanist-class-quests-class-tactical-planning-65992"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "class-job",
+          "id": "class-job-26",
+          "sourceRowId": 26,
+          "name": "Arcanist"
+        }
+      ],
+      "rewards": {
+        "experience": 400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-4728",
+            "itemName": "Raisins",
+            "quantity": 5,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Murie",
+          "title": "Guild Receptionist",
+          "xivapiRowId": 1000895
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.5,
+          "y": 11.3
+        }
+      },
+      "graphRole": "branch"
+    },
+    {
+      "id": "arcanist-class-quests-class-my-first-grimoire-65990",
+      "xivapiRowId": 65990,
+      "sortOrder": 3,
+      "name": "My First Grimoire",
+      "level": 1,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "excludedStartingClassJobIds": [
+          "arcanist"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 1
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 1
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-my-first-grimoire-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4260919,
+              "coordinates": {
+                "x": 22.6,
+                "y": 23.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 57.4164,
+                  "y": 31.8986,
+                  "z": 104.261
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-my-first-grimoire-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4260920,
+              "coordinates": {
+                "x": 26.1,
+                "y": 22.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 232.202,
+                  "y": 28.9458,
+                  "z": 48.6121
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-my-first-grimoire-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4260920,
+              "coordinates": {
+                "x": 26.1,
+                "y": 22.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 232.202,
+                  "y": 28.9458,
+                  "z": 48.6121
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-my-first-grimoire-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65988
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65990,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:30.713Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65990,
+          "internalId": "ClsAcn021_00454",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 12,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 347,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 324,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 49,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65991,
+              65993
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "arcanist-class-quests-class-way-of-the-arcanist-65988"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-whats-in-the-box-65991",
+        "arcanist-class-quests-class-tactical-planning-65993"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 400,
+        "gil": 115,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Thubyrgeim",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000909
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.7,
+          "y": 11.5
+        }
+      },
+      "graphRole": "branch"
+    },
+    {
+      "id": "arcanist-class-quests-class-whats-in-the-box-65991",
+      "xivapiRowId": 65991,
+      "sortOrder": 4,
+      "name": "What's in the Box",
+      "level": 5,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "arcanist"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 5
+        },
+        {
+          "type": "class-job",
+          "classJobId": "arcanist",
+          "classJobName": "Arcanist",
+          "level": 5
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000796",
+          "itemName": "Practice Crate",
+          "sourceRowId": 2000796,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "arcanist-whats-in-the-box-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4260923,
+              "coordinates": {
+                "x": 29,
+                "y": 19.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 374.921,
+                  "y": 38.6574,
+                  "z": -98.8474
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-whats-in-the-box-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4260923,
+              "coordinates": {
+                "x": 29,
+                "y": 19.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 374.921,
+                  "y": 38.6574,
+                  "z": -98.8474
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-whats-in-the-box-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "arcanist-whats-in-the-box-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2002266",
+          "locations": [
+            {
+              "zoneId": "middle-la-noscea",
+              "zoneName": "Middle La Noscea",
+              "territoryId": "territory-134",
+              "mapId": "map-15",
+              "sourceLevelRowId": 4269210,
+              "coordinates": {
+                "x": 21.5,
+                "y": 25.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -0.112231,
+                  "y": 26.1032,
+                  "z": 196.542
+                },
+                "mapGameId": "s1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "arcanist-whats-in-the-box-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2002476",
+          "locations": [
+            {
+              "zoneId": "middle-la-noscea",
+              "zoneName": "Middle La Noscea",
+              "territoryId": "territory-134",
+              "mapId": "map-15",
+              "sourceLevelRowId": 4314044,
+              "coordinates": {
+                "x": 21.5,
+                "y": 25.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -0.0882414,
+                  "y": 25.9661,
+                  "z": 196.565
+                },
+                "mapGameId": "s1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "arcanist-whats-in-the-box-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65989,
+          65990
+        ],
+        "previousQuestJoin": 2,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65991,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:33.412Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65991,
+          "internalId": "ClsAcn050_00455",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 50,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 339,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 118,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2002266,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_PROCESS_UPPER_MIDDLE",
+              "argument": 32,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 4260926,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY3",
+              "argument": 4260927,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001889,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2002476,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000796,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "LOC_FACE1",
+              "argument": 605,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_FACE0",
+              "argument": 604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 4310134,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1005190,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR1",
+              "argument": 4314130,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "CUT_CLSACN05010",
+              "argument": 44,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000796,
+              "itemId": "event-item-2000796",
+              "name": "Practice Crate",
+              "resolvedSheet": "EventItem",
+              "iconId": 21003,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1005190
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1005190,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65992,
+              65993
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "arcanist-class-quests-class-way-of-the-arcanist-65989",
+        "arcanist-class-quests-class-my-first-grimoire-65990"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-tactical-planning-65992",
+        "arcanist-class-quests-class-tactical-planning-65993"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 1400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2143",
+            "itemName": "Leather Grimoire",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3007",
+            "itemName": "Custom-made Robe of Casting",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-2655",
+            "itemName": "Hempen Hat",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-9",
+            "stainName": "Rolanberry Red"
+          },
+          {
+            "itemId": "item-4421",
+            "itemName": "Bone Ring",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4091",
+            "itemName": "Copper Wristlets",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5823",
+            "itemName": "Allagan Tin Piece",
+            "quantity": 5,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Thubyrgeim",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000909
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.7,
+          "y": 11.5
+        }
+      },
+      "graphRole": "branch-and-convergence"
+    },
+    {
+      "id": "arcanist-class-quests-class-tactical-planning-65992",
+      "xivapiRowId": 65992,
+      "sortOrder": 5,
+      "name": "Tactical Planning",
+      "level": 10,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "startingClassJobIds": [
+          "arcanist"
+        ],
+        "classJobIds": [
+          "arcanist"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 10
+        },
+        {
+          "type": "class-job",
+          "classJobId": "arcanist",
+          "classJobName": "Arcanist",
+          "level": 10
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "arcanist-tactical-planning-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4330199,
+              "coordinates": {
+                "x": 36,
+                "y": 30.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 725.469,
+                  "y": 10.6157,
+                  "z": 434.452
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4330198,
+              "coordinates": {
+                "x": 35.1,
+                "y": 29.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 680.156,
+                  "y": 10.6157,
+                  "z": 382.305
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "targetId": "actor-1005199",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 4260826,
+              "coordinates": {
+                "x": 4.3,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -348.292,
+                  "y": -2.37447,
+                  "z": 11.9393
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "targetId": "actor-1005200",
+          "locations": [
+            {
+              "zoneId": "middle-la-noscea",
+              "zoneName": "Middle La Noscea",
+              "territoryId": "territory-134",
+              "mapId": "map-15",
+              "sourceLevelRowId": 4260871,
+              "coordinates": {
+                "x": 19.4,
+                "y": 16.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -106.779,
+                  "y": 45.6739,
+                  "z": -252.326
+                },
+                "mapGameId": "s1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "targetId": "actor-1005201",
+          "locations": [
+            {
+              "zoneId": "middle-la-noscea",
+              "zoneName": "Middle La Noscea",
+              "territoryId": "territory-134",
+              "mapId": "map-15",
+              "sourceLevelRowId": 4260872,
+              "coordinates": {
+                "x": 19.5,
+                "y": 16.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -98.4971,
+                  "y": 47.1656,
+                  "z": -262.318
+                },
+                "mapGameId": "s1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65989,
+          65991
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65992,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:36.373Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65992,
+          "internalId": "ClsAcn100_00456",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 100,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            6
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 22,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 138,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1005199,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1005200,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001890,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2002008,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1005202,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1005203,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1005204,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1005201,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1005205,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1005206,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1005207,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 285,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 50,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_GEAR_SET",
+              "argument": 38,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_GEAR_SET",
+              "argument": 29,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_CLASS_CANGE",
+              "argument": 22,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005199
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005200
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005202
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005203
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005204
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005201
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005205
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1005206
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1005207
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005199,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005200,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005202
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005203
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005204
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005201,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005205
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1005206
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1005207
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              66639
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "arcanist-class-quests-class-way-of-the-arcanist-65989",
+        "arcanist-class-quests-class-whats-in-the-box-65991"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-topaz-teachings-66639"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 3420,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2145",
+            "itemName": "Engraved Leather Grimoire",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3015",
+            "itemName": "Amateur's Dalmatica",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-2",
+            "stainName": "Ash Grey"
+          },
+          {
+            "itemId": "item-2661",
+            "itemName": "Amateur's Hempen Coif",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-2",
+            "stainName": "Ash Grey"
+          },
+          {
+            "itemId": "item-3538",
+            "itemName": "Hempen Dress Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-2",
+            "stainName": "Ash Grey"
+          },
+          {
+            "itemId": "item-3769",
+            "itemName": "Amateur's Duckbills",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-2",
+            "stainName": "Ash Grey"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Thubyrgeim",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000909
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.7,
+          "y": 11.5
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "arcanist-class-quests-class-tactical-planning-65993",
+      "xivapiRowId": 65993,
+      "sortOrder": 6,
+      "name": "Tactical Planning",
+      "level": 10,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "excludedStartingClassJobIds": [
+          "arcanist"
+        ],
+        "classJobIds": [
+          "arcanist"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 10
+        },
+        {
+          "type": "class-job",
+          "classJobId": "arcanist",
+          "classJobName": "Arcanist",
+          "level": 10
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "arcanist-tactical-planning-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4330199,
+              "coordinates": {
+                "x": 36,
+                "y": 30.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 725.469,
+                  "y": 10.6157,
+                  "z": 434.452
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4330198,
+              "coordinates": {
+                "x": 35.1,
+                "y": 29.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 680.156,
+                  "y": 10.6157,
+                  "z": 382.305
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "targetId": "actor-1005199",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 4260826,
+              "coordinates": {
+                "x": 4.3,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -348.292,
+                  "y": -2.37447,
+                  "z": 11.9393
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "targetId": "actor-1005200",
+          "locations": [
+            {
+              "zoneId": "middle-la-noscea",
+              "zoneName": "Middle La Noscea",
+              "territoryId": "territory-134",
+              "mapId": "map-15",
+              "sourceLevelRowId": 4260871,
+              "coordinates": {
+                "x": 19.4,
+                "y": 16.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -106.779,
+                  "y": 45.6739,
+                  "z": -252.326
+                },
+                "mapGameId": "s1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "targetId": "actor-1005201",
+          "locations": [
+            {
+              "zoneId": "middle-la-noscea",
+              "zoneName": "Middle La Noscea",
+              "territoryId": "territory-134",
+              "mapId": "map-15",
+              "sourceLevelRowId": 4260872,
+              "coordinates": {
+                "x": 19.5,
+                "y": 16.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -98.4971,
+                  "y": 47.1656,
+                  "z": -262.318
+                },
+                "mapGameId": "s1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "arcanist-tactical-planning-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65990,
+          65991
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65993,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:40.769Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65993,
+          "internalId": "ClsAcn101_00457",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 100,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 22,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 138,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1005199,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1005200,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2002267,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2002268,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1005202,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1005203,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1005204,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1005201,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1005205,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1005206,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1005207,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 285,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 50,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005199
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005200
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005202
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005203
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005204
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005201
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005205
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1005206
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1005207
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005199,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005200,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005202
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005203
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005204
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005201,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005205
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1005206
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1005207
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              66639
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "arcanist-class-quests-class-my-first-grimoire-65990",
+        "arcanist-class-quests-class-whats-in-the-box-65991"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-topaz-teachings-66639"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 3420,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2145",
+            "itemName": "Engraved Leather Grimoire",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3015",
+            "itemName": "Amateur's Dalmatica",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-2",
+            "stainName": "Ash Grey"
+          },
+          {
+            "itemId": "item-2661",
+            "itemName": "Amateur's Hempen Coif",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-2",
+            "stainName": "Ash Grey"
+          },
+          {
+            "itemId": "item-3538",
+            "itemName": "Hempen Dress Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-2",
+            "stainName": "Ash Grey"
+          },
+          {
+            "itemId": "item-3769",
+            "itemName": "Amateur's Duckbills",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-2",
+            "stainName": "Ash Grey"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Thubyrgeim",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000909
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.7,
+          "y": 11.5
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "arcanist-class-quests-class-topaz-teachings-66639",
+      "xivapiRowId": 66639,
+      "sortOrder": 7,
+      "name": "Topaz Teachings",
+      "level": 15,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "arcanist"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 15
+        },
+        {
+          "type": "class-job",
+          "classJobId": "arcanist",
+          "classJobName": "Arcanist",
+          "level": 15
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "arcanist-topaz-teachings-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "targetId": "actor-1005199",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 4260826,
+              "coordinates": {
+                "x": 4.3,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -348.292,
+                  "y": -2.37447,
+                  "z": 11.9393
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-topaz-teachings-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65992,
+          65993
+        ],
+        "previousQuestJoin": 2,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 66639,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:45.674Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 66639,
+          "internalId": "ClsAcn149_01103",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 150,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            466
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1005199,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION0_WSGET",
+              "argument": 995,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_WS",
+              "argument": 25803,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VFX",
+              "argument": 241,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005199
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005199,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65994
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "arcanist-class-quests-class-tactical-planning-65992",
+        "arcanist-class-quests-class-tactical-planning-65993"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-over-the-rails-65994"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "action",
+          "id": "action-25803",
+          "sourceRowId": 25803,
+          "name": "Summon Topaz"
+        }
+      ],
+      "rewards": {
+        "experience": 2880,
+        "gil": 0,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Thubyrgeim",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000909
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.7,
+          "y": 11.5
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "arcanist-class-quests-class-over-the-rails-65994",
+      "xivapiRowId": 65994,
+      "sortOrder": 8,
+      "name": "Over the Rails",
+      "level": 15,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "arcanist"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 15
+        },
+        {
+          "type": "class-job",
+          "classJobId": "arcanist",
+          "classJobName": "Arcanist",
+          "level": 15
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "arcanist-over-the-rails-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005208",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4260903,
+              "coordinates": {
+                "x": 27.8,
+                "y": 25.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 316.058,
+                  "y": -24.1329,
+                  "z": 211.228
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-over-the-rails-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005211",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4260906,
+              "coordinates": {
+                "x": 25.6,
+                "y": 27.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 204.273,
+                  "y": -36.4233,
+                  "z": 306.172
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "arcanist-over-the-rails-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005211",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4260906,
+              "coordinates": {
+                "x": 25.6,
+                "y": 27.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 204.273,
+                  "y": -36.4233,
+                  "z": 306.172
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "arcanist-over-the-rails-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2002009",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4265079,
+              "coordinates": {
+                "x": 25,
+                "y": 27.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 173.846,
+                  "y": -41.3641,
+                  "z": 280.723
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "arcanist-over-the-rails-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          66639
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65994,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:48.128Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65994,
+          "internalId": "ClsAcn150_00458",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 151,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1005208,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1005209,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1005210,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1005211,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4261265,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 4261272,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001896,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2002009,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING2_MIDDLE",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1005213,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1005214,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1005212,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 286,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 51,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1005193,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1005194,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 4311915,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR1",
+              "argument": 4311914,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR2",
+              "argument": 4311913,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR3",
+              "argument": 4312306,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR4",
+              "argument": 4312307,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR5",
+              "argument": 4314657,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR6",
+              "argument": 4314782,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR7",
+              "argument": 4317395,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1005190,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR8",
+              "argument": 4317709,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 995,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_WS",
+              "argument": 170,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VFX",
+              "argument": 241,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005208
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005209
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005210
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005211
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005213
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005214
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005212
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1005193
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1005194
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1005190
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005208,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005209,
+              "name": "Geissfryn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005210,
+              "name": "Aersthota",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005211,
+              "name": "steersman",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005213,
+              "name": "Geissfryn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005214,
+              "name": "Aersthota",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005212,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1005193,
+              "name": "Geissfryn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1005194,
+              "name": "Aersthota",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1005190,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65995
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "arcanist-class-quests-class-topaz-teachings-66639"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-pincer-maneuver-65995"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 2880,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2147",
+            "itemName": "Hard Leather Grimoire",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3024",
+            "itemName": "Cotton Cowl",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-9",
+            "stainName": "Rolanberry Red"
+          },
+          {
+            "itemId": "item-3547",
+            "itemName": "Hard Leather Ringbands",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-9",
+            "stainName": "Rolanberry Red"
+          },
+          {
+            "itemId": "item-3327",
+            "itemName": "Cotton Tights",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-9",
+            "stainName": "Rolanberry Red"
+          },
+          {
+            "itemId": "item-3777",
+            "itemName": "Hard Leather Boots",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-9",
+            "stainName": "Rolanberry Red"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Thubyrgeim",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000909
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.7,
+          "y": 11.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "arcanist-class-quests-class-pincer-maneuver-65995",
+      "xivapiRowId": 65995,
+      "sortOrder": 9,
+      "name": "Pincer Maneuver",
+      "level": 20,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "arcanist"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 20
+        },
+        {
+          "type": "class-job",
+          "classJobId": "arcanist",
+          "classJobName": "Arcanist",
+          "level": 20
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "arcanist-pincer-maneuver-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "targetId": "actor-1003505",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 4165335,
+              "coordinates": {
+                "x": 7.5,
+                "y": 12.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -186.175,
+                  "y": 16,
+                  "z": 56.9314
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-pincer-maneuver-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "targetId": "actor-1000938",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-upper-decks",
+              "zoneName": "Limsa Lominsa Upper Decks",
+              "territoryId": "territory-128",
+              "mapId": "map-11",
+              "sourceLevelRowId": 1673103,
+              "coordinates": {
+                "x": 11.2,
+                "y": 6.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -4.65169,
+                  "y": 45.0184,
+                  "z": -241.815
+                },
+                "mapGameId": "s1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "arcanist-pincer-maneuver-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "arcanist-pincer-maneuver-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "targetId": "actor-1005215",
+          "locations": [
+            {
+              "zoneId": "western-la-noscea",
+              "zoneName": "Western La Noscea",
+              "territoryId": "territory-138",
+              "mapId": "map-18",
+              "sourceLevelRowId": 4263459,
+              "coordinates": {
+                "x": 25.1,
+                "y": 26.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 178.682,
+                  "y": -41.14,
+                  "z": 261.616
+                },
+                "mapGameId": "s1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "arcanist-pincer-maneuver-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "targetId": "actor-1005217",
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4263516,
+              "coordinates": {
+                "x": 23.6,
+                "y": 28.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 103.761,
+                  "y": 68.1315,
+                  "z": 329.457
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "arcanist-pincer-maneuver-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "targetId": "actor-2002010",
+          "locations": [
+            {
+              "zoneId": "lower-la-noscea",
+              "zoneName": "Lower La Noscea",
+              "territoryId": "territory-135",
+              "mapId": "map-16",
+              "sourceLevelRowId": 4265088,
+              "coordinates": {
+                "x": 23.7,
+                "y": 28.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 108.412,
+                  "y": 68.1315,
+                  "z": 351.636
+                },
+                "mapGameId": "s1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "arcanist-pincer-maneuver-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65994
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65995,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:50.994Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65995,
+          "internalId": "ClsAcn200_00459",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 200,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1003505,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1000938,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1005215,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1005216,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1005217,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2002010,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING2_MIDDLE",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1005220,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1005221,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1005222,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1005223,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1005224,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1005225,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1005226,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1005257,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR14",
+              "argument": 1005258,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001891,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 287,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 52,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_FACE1",
+              "argument": 611,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1003505
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000938
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005215
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005216
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005217
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005220
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005221
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1005222
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1005223
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1005224
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1005225
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1005226
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1005257
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1005258
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1003505,
+              "name": "Dodozan",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000938,
+              "name": "Ginnade",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005215,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005216,
+              "name": "Qiqirn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005217,
+              "name": "Thubyrgeim",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005220,
+              "name": "Geissfryn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005221,
+              "name": "Aersthota",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1005222,
+              "name": "Qiqirn trader",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1005223
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1005224
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1005225
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1005226,
+              "name": "carriage chocobo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1005257
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1005258
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65996
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "arcanist-class-quests-class-over-the-rails-65994"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-grimoire-fandango-65996"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 6960,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2149",
+            "itemName": "Engraved Hard Leather Grimoire",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-27666",
+            "itemName": "Altered Cotton Dalmatica",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-6",
+            "stainName": "Soot Black"
+          },
+          {
+            "itemId": "item-2703",
+            "itemName": "Ash Mask (Lapis Lazuli)",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-6",
+            "stainName": "Soot Black"
+          },
+          {
+            "itemId": "item-3568",
+            "itemName": "Cotton Dress Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-6",
+            "stainName": "Soot Black"
+          },
+          {
+            "itemId": "item-3800",
+            "itemName": "Cotton Dress Shoes",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-6",
+            "stainName": "Soot Black"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 5,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Thubyrgeim",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000909
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.7,
+          "y": 11.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "arcanist-class-quests-class-grimoire-fandango-65996",
+      "xivapiRowId": 65996,
+      "sortOrder": 10,
+      "name": "Grimoire Fandango",
+      "level": 25,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "arcanist"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 25
+        },
+        {
+          "type": "class-job",
+          "classJobId": "arcanist",
+          "classJobName": "Arcanist",
+          "level": 25
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000883",
+          "itemName": "Torn Parchment Slip",
+          "sourceRowId": 2000883,
+          "sourceSheet": "event-item",
+          "quantity": 3,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2000884",
+          "itemName": "New Grimoire",
+          "sourceRowId": 2000884,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "arcanist-grimoire-fandango-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005227",
+          "locations": [
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4264014,
+              "coordinates": {
+                "x": 15.3,
+                "y": 24
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -311.329,
+                  "y": -1.45354,
+                  "z": 127.357
+                },
+                "mapGameId": "s1f5/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1006195",
+          "locations": [
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4250537,
+              "coordinates": {
+                "x": 12.4,
+                "y": 22.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -453.351,
+                  "y": 4.56238,
+                  "z": 71.5708
+                },
+                "mapGameId": "s1f5/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4264417,
+              "coordinates": {
+                "x": 12.2,
+                "y": 22.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -463.394,
+                  "y": 20.4181,
+                  "z": 62.23
+                },
+                "mapGameId": "s1f5/00"
+              }
+            },
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4264419,
+              "coordinates": {
+                "x": 13.5,
+                "y": 22.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -399.278,
+                  "y": 16.2127,
+                  "z": 47.2056
+                },
+                "mapGameId": "s1f5/00"
+              }
+            },
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4265900,
+              "coordinates": {
+                "x": 14,
+                "y": 21.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -375.125,
+                  "y": 32.6935,
+                  "z": -4.64537
+                },
+                "mapGameId": "s1f5/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1006195",
+          "locations": [
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4250537,
+              "coordinates": {
+                "x": 12.4,
+                "y": 22.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -453.351,
+                  "y": 4.56238,
+                  "z": 71.5708
+                },
+                "mapGameId": "s1f5/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2002478",
+          "locations": [
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4314621,
+              "coordinates": {
+                "x": 9.5,
+                "y": 20.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -600.599,
+                  "y": -3.16369,
+                  "z": -53.7778
+                },
+                "mapGameId": "s1f5/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2002478",
+          "locations": [
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4314621,
+              "coordinates": {
+                "x": 9.5,
+                "y": 20.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -600.599,
+                  "y": -3.16369,
+                  "z": -53.7778
+                },
+                "mapGameId": "s1f5/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2002478",
+          "locations": [
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4314621,
+              "coordinates": {
+                "x": 9.5,
+                "y": 20.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -600.599,
+                  "y": -3.16369,
+                  "z": -53.7778
+                },
+                "mapGameId": "s1f5/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005249",
+          "locations": [
+            {
+              "zoneId": "upper-la-noscea",
+              "zoneName": "Upper La Noscea",
+              "territoryId": "territory-139",
+              "mapId": "map-19",
+              "sourceLevelRowId": 4273866,
+              "coordinates": {
+                "x": 14.7,
+                "y": 24.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -337.295,
+                  "y": -2.17974,
+                  "z": 141.325
+                },
+                "mapGameId": "s1f5/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8,
+            "completeSequence": 8
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-9",
+          "sortOrder": 9,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005228",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-upper-decks",
+              "zoneName": "Limsa Lominsa Upper Decks",
+              "territoryId": "territory-128",
+              "mapId": "map-11",
+              "sourceLevelRowId": 4265958,
+              "coordinates": {
+                "x": 7.4,
+                "y": 14.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -190.322,
+                  "y": 41.2499,
+                  "z": 176.229
+                },
+                "mapGameId": "s1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 9,
+            "completeSequence": 9
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-10",
+          "sortOrder": 10,
+          "type": "unknown",
+          "targetId": "actor-1005228",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-upper-decks",
+              "zoneName": "Limsa Lominsa Upper Decks",
+              "territoryId": "territory-128",
+              "mapId": "map-11",
+              "sourceLevelRowId": 4265958,
+              "coordinates": {
+                "x": 7.4,
+                "y": 14.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -190.322,
+                  "y": 41.2499,
+                  "z": 176.229
+                },
+                "mapGameId": "s1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 10,
+            "completeSequence": 10
+          }
+        },
+        {
+          "id": "arcanist-grimoire-fandango-objective-11",
+          "sortOrder": 11,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 11
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65995
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65996,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:55.157Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65996,
+          "internalId": "ClsAcn250_00460",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 250,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1005227,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1006195,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001892,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH_MIDDLE",
+              "argument": 3,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000883,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001893,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2001894,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2002478,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2001895,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4264454,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 4264456,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 4264457,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1005249,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2000884,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1005228,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_FACE1",
+              "argument": 605,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_FACE0",
+              "argument": 604,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_CLSACN25010",
+              "argument": 47,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000883,
+              "itemId": "event-item-2000883",
+              "name": "Torn Parchment Slip",
+              "resolvedSheet": "EventItem",
+              "iconId": 25906,
+              "quantity": 3
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000884,
+              "itemId": "event-item-2000884",
+              "name": "New Grimoire",
+              "resolvedSheet": "EventItem",
+              "iconId": 26002,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005227
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1006195
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005249
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005228
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005227,
+              "name": "witness",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1006195,
+              "name": "Tanga Tonga",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005249,
+              "name": "Memeroon",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005228,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65997
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "arcanist-class-quests-class-pincer-maneuver-65995"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "arcanist-class-quests-class-sinking-doesmaga-65997"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 8160,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2151",
+            "itemName": "Yew Picatrix",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3050",
+            "itemName": "Cotton Halfrobe",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-48",
+            "stainName": "Olive Green"
+          },
+          {
+            "itemId": "item-3581",
+            "itemName": "Goatskin Ringbands",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-48",
+            "stainName": "Olive Green"
+          },
+          {
+            "itemId": "item-27667",
+            "itemName": "Altered Goatskin Moccasins",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-48",
+            "stainName": "Olive Green"
+          },
+          {
+            "itemId": "item-2728",
+            "itemName": "Silver Spectacles",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-48",
+            "stainName": "Olive Green"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Thubyrgeim",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000909
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.7,
+          "y": 11.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "arcanist-class-quests-class-sinking-doesmaga-65997",
+      "xivapiRowId": 65997,
+      "sortOrder": 11,
+      "name": "Sinking Doesmaga",
+      "level": 30,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "arcanist"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 30
+        },
+        {
+          "type": "class-job",
+          "classJobId": "arcanist",
+          "classJobName": "Arcanist",
+          "level": 30
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000885",
+          "itemName": "Directives List",
+          "sourceRowId": 2000885,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2000886",
+          "itemName": "Fresh Herring",
+          "sourceRowId": 2000886,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        },
+        {
+          "itemId": "event-item-2000887",
+          "itemName": "Homemade Eel Pie",
+          "sourceRowId": 2000887,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM2"
+        },
+        {
+          "itemId": "event-item-2000888",
+          "itemName": "Heavy Purse",
+          "sourceRowId": 2000888,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM3"
+        },
+        {
+          "itemId": "event-item-2000889",
+          "itemName": "Odd Leather Satchel",
+          "sourceRowId": 2000889,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM4"
+        },
+        {
+          "itemId": "event-item-2000890",
+          "itemName": "Well-worn Pareo",
+          "sourceRowId": 2000890,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM5"
+        },
+        {
+          "itemId": "event-item-2000891",
+          "itemName": "Vintage Wine",
+          "sourceRowId": 2000891,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM6"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "arcanist-sinking-doesmaga-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005251",
+          "locations": [
+            {
+              "zoneId": "eastern-la-noscea",
+              "zoneName": "Eastern La Noscea",
+              "territoryId": "territory-137",
+              "mapId": "map-17",
+              "sourceLevelRowId": 4277063,
+              "coordinates": {
+                "x": 32.5,
+                "y": 25.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 550.5,
+                  "y": 12.1309,
+                  "z": 220.966
+                },
+                "mapGameId": "s1f3/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "arcanist-sinking-doesmaga-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005252",
+          "locations": [
+            {
+              "zoneId": "eastern-la-noscea",
+              "zoneName": "Eastern La Noscea",
+              "territoryId": "territory-137",
+              "mapId": "map-17",
+              "sourceLevelRowId": 4277065,
+              "coordinates": {
+                "x": 33.2,
+                "y": 29
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 586.023,
+                  "y": 14.5723,
+                  "z": 376.211
+                },
+                "mapGameId": "s1f3/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "arcanist-sinking-doesmaga-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1006273",
+          "locations": [
+            {
+              "zoneId": "eastern-la-noscea",
+              "zoneName": "Eastern La Noscea",
+              "territoryId": "territory-137",
+              "mapId": "map-17",
+              "sourceLevelRowId": 4258385,
+              "coordinates": {
+                "x": 33.9,
+                "y": 30.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 619.017,
+                  "y": 23.8848,
+                  "z": 455.121
+                },
+                "mapGameId": "s1f3/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "arcanist-sinking-doesmaga-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005253",
+          "locations": [
+            {
+              "zoneId": "eastern-la-noscea",
+              "zoneName": "Eastern La Noscea",
+              "territoryId": "territory-137",
+              "mapId": "map-17",
+              "sourceLevelRowId": 4277067,
+              "coordinates": {
+                "x": 32.8,
+                "y": 31.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 564.355,
+                  "y": 20.6149,
+                  "z": 504.326
+                },
+                "mapGameId": "s1f3/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "arcanist-sinking-doesmaga-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005254",
+          "locations": [
+            {
+              "zoneId": "eastern-la-noscea",
+              "zoneName": "Eastern La Noscea",
+              "territoryId": "territory-137",
+              "mapId": "map-17",
+              "sourceLevelRowId": 4277068,
+              "coordinates": {
+                "x": 30.3,
+                "y": 28.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 442.016,
+                  "y": 15.7915,
+                  "z": 370.325
+                },
+                "mapGameId": "s1f3/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "arcanist-sinking-doesmaga-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005229",
+          "locations": [
+            {
+              "zoneId": "eastern-la-noscea",
+              "zoneName": "Eastern La Noscea",
+              "territoryId": "territory-137",
+              "mapId": "map-17",
+              "sourceLevelRowId": 4265597,
+              "coordinates": {
+                "x": 32,
+                "y": 30.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 522.911,
+                  "y": 17.4105,
+                  "z": 456.352
+                },
+                "mapGameId": "s1f3/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "arcanist-sinking-doesmaga-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1005235",
+          "locations": [
+            {
+              "zoneId": "eastern-la-noscea",
+              "zoneName": "Eastern La Noscea",
+              "territoryId": "territory-137",
+              "mapId": "map-17",
+              "sourceLevelRowId": 4265805,
+              "coordinates": {
+                "x": 35.2,
+                "y": 29.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 684.382,
+                  "y": 11.5815,
+                  "z": 411.951
+                },
+                "mapGameId": "s1f3/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "arcanist-sinking-doesmaga-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8,
+            "completeSequence": 8
+          }
+        },
+        {
+          "id": "arcanist-sinking-doesmaga-objective-9",
+          "sortOrder": 9,
+          "type": "unknown",
+          "targetId": "actor-1000909",
+          "targetName": "Thubyrgeim",
+          "locations": [
+            {
+              "zoneId": "limsa-lominsa-lower-decks",
+              "zoneName": "Limsa Lominsa Lower Decks",
+              "territoryId": "territory-129",
+              "mapId": "map-12",
+              "sourceLevelRowId": 2470123,
+              "coordinates": {
+                "x": 4.7,
+                "y": 11.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -326.361,
+                  "y": 12.8937,
+                  "z": 10.001
+                },
+                "mapGameId": "s1t2/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 9
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65996
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65997,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:03:58.242Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65997,
+          "internalId": "ClsAcn300_00461",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Arcanist Quests",
+          "eventIconType": 8,
+          "sortKey": 300,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            217
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000909,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000885,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1005251,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2000886,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1005229,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1005230,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1005231,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1005232,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1005233,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1005234,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1005252,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM2",
+              "argument": 2000887,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1006273,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM3",
+              "argument": 2000888,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1005253,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM4",
+              "argument": 2000889,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ITEM5",
+              "argument": 2000890,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1005254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM6",
+              "argument": 2000891,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1005235,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1005236,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR14",
+              "argument": 1005255,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR15",
+              "argument": 1005256,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001897,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2002012,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR16",
+              "argument": 1005237,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2002274,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 288,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 53,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 995,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_WS",
+              "argument": 172,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VFX",
+              "argument": 241,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR0",
+              "argument": 4329947,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1006271,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_FACE0",
+              "argument": 619,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1005191,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR1",
+              "argument": 4330016,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTION1",
+              "argument": 929,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_FACE1",
+              "argument": 605,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000885,
+              "itemId": "event-item-2000885",
+              "name": "Directives List",
+              "resolvedSheet": "EventItem",
+              "iconId": 25918,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000886,
+              "itemId": "event-item-2000886",
+              "name": "Fresh Herring",
+              "resolvedSheet": "EventItem",
+              "iconId": 29010,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM2",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000887,
+              "itemId": "event-item-2000887",
+              "name": "Homemade Eel Pie",
+              "resolvedSheet": "EventItem",
+              "iconId": 24305,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM3",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000888,
+              "itemId": "event-item-2000888",
+              "name": "Heavy Purse",
+              "resolvedSheet": "EventItem",
+              "iconId": 26001,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM4",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000889,
+              "itemId": "event-item-2000889",
+              "name": "Odd Leather Satchel",
+              "resolvedSheet": "EventItem",
+              "iconId": 25919,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM5",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000890,
+              "itemId": "event-item-2000890",
+              "name": "Well-worn Pareo",
+              "resolvedSheet": "EventItem",
+              "iconId": 23301,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM6",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000891,
+              "itemId": "event-item-2000891",
+              "name": "Vintage Wine",
+              "resolvedSheet": "EventItem",
+              "iconId": 25057,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005251
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005229
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005230
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005231
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005232
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005233
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005234
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1005252
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1006273
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1005253
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1005254
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1005235
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1005236
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1005255
+            },
+            {
+              "sourceInstruction": "ACTOR15",
+              "actorRowId": 1005256
+            },
+            {
+              "sourceInstruction": "ACTOR16",
+              "actorRowId": 1005237
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1006271
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1005191
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1005251,
+              "name": "Rhylzirn",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1005229,
+              "name": "Hirskskrat",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1005230
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1005231
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1005232,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1005233
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1005234
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1005252,
+              "name": "Opylona",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1006273,
+              "name": "Gegeruju",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1005253,
+              "name": "Ealdgyth",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1005254,
+              "name": "Drogo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1005235,
+              "name": "Hirskskrat",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1005236,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1005255
+            },
+            {
+              "sourceInstruction": "ACTOR15",
+              "actorRowId": 1005256
+            },
+            {
+              "sourceInstruction": "ACTOR16",
+              "actorRowId": 1005237,
+              "name": "Yellowjacket",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1006271,
+              "name": "P'ebaloh",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1005191,
+              "name": "K'lyhia",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              66627,
+              66633
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "arcanist-class-quests-class-grimoire-fandango-65996"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "action",
+          "id": "action-172",
+          "sourceRowId": 172,
+          "name": "Ruin II"
+        }
+      ],
+      "rewards": {
+        "experience": 12480,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2160",
+            "itemName": "Engraved Goatskin Grimoire",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-27669",
+            "itemName": "Velveteen Bliaud",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-61",
+            "stainName": "Sky Blue"
+          },
+          {
+            "itemId": "item-27671",
+            "itemName": "Altered Velveteen Hose",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-61",
+            "stainName": "Sky Blue"
+          },
+          {
+            "itemId": "item-27670",
+            "itemName": "Velveteen Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-61",
+            "stainName": "Sky Blue"
+          },
+          {
+            "itemId": "item-27672",
+            "itemName": "Toadskin Boots",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-61",
+            "stainName": "Sky Blue"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Thubyrgeim",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000909
+        },
+        "location": {
+          "zone": "Limsa Lominsa Lower Decks",
+          "x": 4.7,
+          "y": 11.5
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

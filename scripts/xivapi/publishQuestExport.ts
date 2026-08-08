@@ -400,6 +400,8 @@ function convertQuest(
     isRepeatable: quest.isRepeatable,
     isSeasonalQuest: quest.isSeasonalQuest,
 
+    alternativeCompletionGroupId: quest.alternativeCompletionGroupId,
+
     externalIds: {
       'xivapi-quest-row': quest.xivapiRowId,
     },
@@ -435,9 +437,15 @@ function convertQuest(
     repeatability: quest.repeatability,
     prerequisiteQuestMode:
       prerequisiteQuestIds.length < 2 ? 'all' : quest.previousQuestMode,
-    prerequisiteQuestIds:
-      prerequisiteQuestIds.length > 0 ? prerequisiteQuestIds : undefined,
-    nextQuestIds: nextQuestIds.length > 0 ? nextQuestIds : undefined,
+
+    /*
+     * Published XIVAPI exports carry authoritative graph relationships.
+     *
+     * Empty arrays must be retained so the linear collection loader does not
+     * manufacture sequential links between unrelated or alternative quests.
+     */
+    prerequisiteQuestIds,
+    nextQuestIds,
     rawRelations: quest.rawRelations,
     requirements: requirements.length > 0 ? requirements : undefined,
     questItems: quest.questItems.length > 0 ? quest.questItems : undefined,

@@ -1,6 +1,9 @@
 import * as z from 'zod';
 
-import { startingCityIdSchema } from '../../../core/game/gameSchemas';
+import {
+  startingCityIdSchema,
+  startingClassJobIdSchema,
+} from '../../../core/game/gameSchemas';
 import { grandCompanyIdSchema } from '../../../domain/grandCompanies';
 
 export const gameDataIdSchema = z
@@ -86,6 +89,13 @@ const uniqueGameDataIdArraySchema = z
     message: 'ID arrays cannot contain duplicate values.',
   });
 
+const uniqueStartingClassJobIdArraySchema = z
+  .array(startingClassJobIdSchema)
+  .min(1)
+  .refine((ids) => new Set(ids).size === ids.length, {
+    message: 'Starting-class restrictions cannot contain duplicate classes.',
+  });
+
 const uniqueGrandCompanyIdArraySchema = z
   .array(grandCompanyIdSchema)
   .min(1)
@@ -114,6 +124,10 @@ export const questAvailabilitySchema = z.strictObject({
       message: 'Starting-city restrictions cannot contain duplicate cities.',
     })
     .optional(),
+
+  startingClassJobIds: uniqueStartingClassJobIdArraySchema.optional(),
+
+  excludedStartingClassJobIds: uniqueStartingClassJobIdArraySchema.optional(),
 
   classJobIds: uniqueGameDataIdArraySchema.optional(),
   classJobCategoryIds: uniqueGameDataIdArraySchema.optional(),
@@ -503,6 +517,8 @@ export const questSchema = z.strictObject({
   isFeatureQuest: z.boolean().default(false),
   isRepeatable: z.boolean().default(false),
   isSeasonalQuest: z.boolean().default(false),
+
+  alternativeCompletionGroupId: gameDataIdSchema.optional(),
 
   expansionId: gameDataIdSchema.optional(),
   patch: patchVersionSchema.optional(),

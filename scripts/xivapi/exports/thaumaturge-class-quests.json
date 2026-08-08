@@ -1,0 +1,5216 @@
+{
+  "schemaVersion": 1,
+  "id": "thaumaturge-class-quests",
+  "title": "Thaumaturge Quests",
+  "category": "class",
+  "generatedAt": "2026-08-08T06:48:00.520Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 10,
+    "branchCount": 3,
+    "convergenceCount": 4,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [
+    {
+      "questId": "thaumaturge-class-quests-class-way-of-the-thaumaturge-65881",
+      "questName": "Way of the Thaumaturge",
+      "relatedQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-intimacy-65883",
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65884"
+      ]
+    },
+    {
+      "questId": "thaumaturge-class-quests-class-my-first-scepter-65882",
+      "questName": "My First Scepter",
+      "relatedQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-intimacy-65883",
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65885"
+      ]
+    },
+    {
+      "questId": "thaumaturge-class-quests-class-the-threat-of-intimacy-65883",
+      "questName": "The Threat of Intimacy",
+      "relatedQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65884",
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65885"
+      ]
+    }
+  ],
+  "convergences": [
+    {
+      "questId": "thaumaturge-class-quests-class-the-threat-of-intimacy-65883",
+      "questName": "The Threat of Intimacy",
+      "relatedQuestIds": [
+        "thaumaturge-class-quests-class-way-of-the-thaumaturge-65881",
+        "thaumaturge-class-quests-class-my-first-scepter-65882"
+      ]
+    },
+    {
+      "questId": "thaumaturge-class-quests-class-the-threat-of-paucity-65884",
+      "questName": "The Threat of Paucity",
+      "relatedQuestIds": [
+        "thaumaturge-class-quests-class-way-of-the-thaumaturge-65881",
+        "thaumaturge-class-quests-class-the-threat-of-intimacy-65883"
+      ]
+    },
+    {
+      "questId": "thaumaturge-class-quests-class-the-threat-of-paucity-65885",
+      "questName": "The Threat of Paucity",
+      "relatedQuestIds": [
+        "thaumaturge-class-quests-class-my-first-scepter-65882",
+        "thaumaturge-class-quests-class-the-threat-of-intimacy-65883"
+      ]
+    },
+    {
+      "questId": "thaumaturge-class-quests-class-the-threat-of-superiority-65886",
+      "questName": "The Threat of Superiority",
+      "relatedQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65884",
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65885"
+      ]
+    }
+  ],
+  "issues": [],
+  "quests": [
+    {
+      "id": "thaumaturge-class-quests-class-way-of-the-thaumaturge-65880",
+      "xivapiRowId": 65880,
+      "sortOrder": 1,
+      "name": "Way of the Thaumaturge",
+      "level": 1,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "excludedStartingClassJobIds": [
+          "thaumaturge"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 1
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 1
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-way-of-the-thaumaturge-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001709",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996616,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.474,
+                  "y": 18.7,
+                  "z": 85.6117
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65719
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65880,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:34.014Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65880,
+          "internalId": "ClsThm011_00344",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 10,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            21
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "CLASSJOB",
+              "argument": 7,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR0",
+              "argument": 1002279,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1001709,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR3",
+              "argument": 3996617,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR4",
+              "argument": 3996618,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR5",
+              "argument": 3996619,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1001709,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR3",
+              "argument": 1001710,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR4",
+              "argument": 1001711,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR5",
+              "argument": 1001712,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+              "argument": 1014,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_CLASS_THM",
+              "argument": 43,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_CLASS_CHANGE",
+              "argument": 10,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "GEARSET_UNLOCK",
+              "argument": 1905,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_JOB",
+              "argument": 94,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001709
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1001708
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1001709
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001709,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1001708,
+              "name": "Cocobuki",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1001709,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711,
+              "name": "Cocobezi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712,
+              "name": "Cocoboha",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65882
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "thaumaturge-class-quests-class-my-first-scepter-65882"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2055",
+            "itemName": "Weathered Scepter",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-2219",
+            "itemName": "Square Maple Shield",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Yayake",
+          "title": "Guild Receptionist",
+          "xivapiRowId": 1002279
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 7.3,
+          "y": 12.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "thaumaturge-class-quests-class-way-of-the-thaumaturge-65881",
+      "xivapiRowId": 65881,
+      "sortOrder": 2,
+      "name": "Way of the Thaumaturge",
+      "level": 1,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "startingClassJobIds": [
+          "thaumaturge"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 1
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 1
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-way-of-the-thaumaturge-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001709",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996616,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.474,
+                  "y": 18.7,
+                  "z": 85.6117
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-thaumaturge-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 4009256,
+              "coordinates": {
+                "x": 21.1,
+                "y": 27
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -20.0308,
+                  "y": -12.2231,
+                  "z": 273.294
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-thaumaturge-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 4009256,
+              "coordinates": {
+                "x": 21.1,
+                "y": 27
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -20.0308,
+                  "y": -12.2231,
+                  "z": 273.294
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-thaumaturge-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 4009256,
+              "coordinates": {
+                "x": 21.1,
+                "y": 27
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -20.0308,
+                  "y": -12.2231,
+                  "z": 273.294
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-thaumaturge-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001708",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3994611,
+              "coordinates": {
+                "x": 6.2,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -250.347,
+                  "y": 18,
+                  "z": 80.9036
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65881,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:36.420Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65881,
+          "internalId": "ClsThm020_00345",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 11,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            21
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1002279,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1001709,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 351,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 385,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 205,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR3",
+              "argument": 3996617,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR4",
+              "argument": 3996618,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR5",
+              "argument": 3996619,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1001709,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR3",
+              "argument": 1001710,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR4",
+              "argument": 1001711,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR5",
+              "argument": 1001712,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "HOW_TO_CLASS_CHANGE",
+              "argument": 10,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_MONSTER_NOTE",
+              "argument": 32,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_MONSTER_NOTE",
+              "argument": 45,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+              "argument": 1014,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001709
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1001708
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1001708
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1001709
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001709,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1001708,
+              "name": "Cocobuki",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1001708,
+              "name": "Cocobuki",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1001709,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711,
+              "name": "Cocobezi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712,
+              "name": "Cocoboha",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65883,
+              65884
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-intimacy-65883",
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65884"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "class-job",
+          "id": "class-job-7",
+          "sourceRowId": 7,
+          "name": "Thaumaturge"
+        }
+      ],
+      "rewards": {
+        "experience": 400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-4728",
+            "itemName": "Raisins",
+            "quantity": 5,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-2219",
+            "itemName": "Square Maple Shield",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Yayake",
+          "title": "Guild Receptionist",
+          "xivapiRowId": 1002279
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 7.3,
+          "y": 12.5
+        }
+      },
+      "graphRole": "branch"
+    },
+    {
+      "id": "thaumaturge-class-quests-class-my-first-scepter-65882",
+      "xivapiRowId": 65882,
+      "sortOrder": 3,
+      "name": "My First Scepter",
+      "level": 1,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "excludedStartingClassJobIds": [
+          "thaumaturge"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 1
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 1
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-my-first-scepter-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 4009257,
+              "coordinates": {
+                "x": 21.1,
+                "y": 27
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -20.0308,
+                  "y": -12.2231,
+                  "z": 273.294
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-my-first-scepter-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 4009257,
+              "coordinates": {
+                "x": 21.1,
+                "y": 27
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -20.0308,
+                  "y": -12.2231,
+                  "z": 273.294
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-my-first-scepter-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 4009257,
+              "coordinates": {
+                "x": 21.1,
+                "y": 27
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -20.0308,
+                  "y": -12.2231,
+                  "z": 273.294
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-my-first-scepter-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001708",
+          "targetName": "Cocobuki",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3994611,
+              "coordinates": {
+                "x": 6.2,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -250.347,
+                  "y": 18,
+                  "z": 80.9036
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65880
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65882,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:38.792Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65882,
+          "internalId": "ClsThm021_00346",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 12,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 351,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 385,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 205,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65883,
+              65885
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "thaumaturge-class-quests-class-way-of-the-thaumaturge-65880"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-intimacy-65883",
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65885"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 400,
+        "gil": 115,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Cocobuki",
+          "title": "Guildmaster",
+          "xivapiRowId": 1001708
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 6.2,
+          "y": 12.9
+        }
+      },
+      "graphRole": "branch"
+    },
+    {
+      "id": "thaumaturge-class-quests-class-the-threat-of-intimacy-65883",
+      "xivapiRowId": 65883,
+      "sortOrder": 4,
+      "name": "The Threat of Intimacy",
+      "level": 5,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 5
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 5
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000414",
+          "itemName": "Dried Fish",
+          "sourceRowId": 2000414,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2000415",
+          "itemName": "Vulture Breast",
+          "sourceRowId": 2000415,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-the-threat-of-intimacy-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001709",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996616,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.474,
+                  "y": 18.7,
+                  "z": 85.6117
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-intimacy-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2001468",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002288,
+              "coordinates": {
+                "x": 19.8,
+                "y": 27.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -87.3716,
+                  "y": 50.6299,
+                  "z": 315.605
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-intimacy-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2001469",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002293,
+              "coordinates": {
+                "x": 20,
+                "y": 28.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -74.9432,
+                  "y": 53.2558,
+                  "z": 336.807
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-intimacy-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002027",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 2826866,
+              "coordinates": {
+                "x": 16.4,
+                "y": 29.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -255.229,
+                  "y": 33.2336,
+                  "z": 407.295
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-intimacy-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001709",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996616,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.474,
+                  "y": 18.7,
+                  "z": 85.6117
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65881,
+          65882
+        ],
+        "previousQuestJoin": 2,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65883,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:40.805Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65883,
+          "internalId": "ClsThm050_00347",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 50,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1001709,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000414,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001468,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001469,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING_SHOR",
+              "argument": 11,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4002289,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2000415,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1002027,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR20",
+              "argument": 1001713,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "CUT_CLSTHM05010",
+              "argument": 50,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000414,
+              "itemId": "event-item-2000414",
+              "name": "Dried Fish",
+              "resolvedSheet": "EventItem",
+              "iconId": 25919,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000415,
+              "itemId": "event-item-2000415",
+              "name": "Vulture Breast",
+              "resolvedSheet": "EventItem",
+              "iconId": 25151,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001709
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1002027
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1001713
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001709,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1002027,
+              "name": "Fafafono",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1001713,
+              "name": "Cocobusi",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65884,
+              65885
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "thaumaturge-class-quests-class-way-of-the-thaumaturge-65881",
+        "thaumaturge-class-quests-class-my-first-scepter-65882"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65884",
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65885"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 1400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2106",
+            "itemName": "Bone Staff",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3007",
+            "itemName": "Custom-made Robe of Casting",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-2655",
+            "itemName": "Hempen Hat",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-5",
+            "stainName": "Charcoal Grey"
+          },
+          {
+            "itemId": "item-4421",
+            "itemName": "Bone Ring",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-4091",
+            "itemName": "Copper Wristlets",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5823",
+            "itemName": "Allagan Tin Piece",
+            "quantity": 5,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Cocobuki",
+          "title": "Guildmaster",
+          "xivapiRowId": 1001708
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 6.2,
+          "y": 12.9
+        }
+      },
+      "graphRole": "branch-and-convergence"
+    },
+    {
+      "id": "thaumaturge-class-quests-class-the-threat-of-paucity-65884",
+      "xivapiRowId": 65884,
+      "sortOrder": 5,
+      "name": "The Threat of Paucity",
+      "level": 10,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "startingClassJobIds": [
+          "thaumaturge"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 10
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 10
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000417",
+          "itemName": "Amalj'aa Blood",
+          "sourceRowId": 2000417,
+          "sourceSheet": "event-item",
+          "quantity": 2,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2000416",
+          "itemName": "Ether Crate",
+          "sourceRowId": 2000416,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001710",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996617,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.251,
+                  "y": 18.8,
+                  "z": 86.9167
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 4009261,
+              "coordinates": {
+                "x": 24.6,
+                "y": 17.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 153.113,
+                  "y": -9.84203,
+                  "z": -220.247
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001710",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996617,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.251,
+                  "y": 18.8,
+                  "z": 86.9167
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 5,
+          "targetId": "actor-2001511",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4074125,
+              "coordinates": {
+                "x": 14.2,
+                "y": 27.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -366.277,
+                  "y": -34.9833,
+                  "z": 293.58
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2001498",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4074124,
+              "coordinates": {
+                "x": 14.2,
+                "y": 27.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -366.277,
+                  "y": -34.9833,
+                  "z": 293.58
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001710",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996617,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.251,
+                  "y": 18.8,
+                  "z": 86.9167
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "targetId": "actor-1001708",
+          "targetName": "Cocobuki",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3994611,
+              "coordinates": {
+                "x": 6.2,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -250.347,
+                  "y": 18,
+                  "z": 80.9036
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65881,
+          65883
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65884,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:44.170Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65884,
+          "internalId": "ClsThm100_00348",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 100,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            6
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1001710,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 160,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001511,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 4074126,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 4184413,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000417,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001759,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2001498,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2000416,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR20",
+              "argument": 1001713,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR30",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_CLASS_CANGE",
+              "argument": 22,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_GEAR_SET",
+              "argument": 29,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_GEAR_SET",
+              "argument": 38,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000417,
+              "itemId": "event-item-2000417",
+              "name": "Amalj'aa Blood",
+              "resolvedSheet": "EventItem",
+              "iconId": 22601,
+              "quantity": 2
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000416,
+              "itemId": "event-item-2000416",
+              "name": "Ether Crate",
+              "resolvedSheet": "EventItem",
+              "iconId": 21003,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001710
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1001713
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001710,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1001713,
+              "name": "Cocobusi",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65886
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "thaumaturge-class-quests-class-way-of-the-thaumaturge-65881",
+        "thaumaturge-class-quests-class-the-threat-of-intimacy-65883"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-superiority-65886"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 3420,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2057",
+            "itemName": "Copper Scepter",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3015",
+            "itemName": "Amateur's Dalmatica",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-40",
+            "stainName": "Cream Yellow"
+          },
+          {
+            "itemId": "item-2661",
+            "itemName": "Amateur's Hempen Coif",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-40",
+            "stainName": "Cream Yellow"
+          },
+          {
+            "itemId": "item-3538",
+            "itemName": "Hempen Dress Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-40",
+            "stainName": "Cream Yellow"
+          },
+          {
+            "itemId": "item-3769",
+            "itemName": "Amateur's Duckbills",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-40",
+            "stainName": "Cream Yellow"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Cocobuki",
+          "title": "Guildmaster",
+          "xivapiRowId": 1001708
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 6.2,
+          "y": 12.9
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "thaumaturge-class-quests-class-the-threat-of-paucity-65885",
+      "xivapiRowId": 65885,
+      "sortOrder": 6,
+      "name": "The Threat of Paucity",
+      "level": 10,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "excludedStartingClassJobIds": [
+          "thaumaturge"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 10
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 10
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000419",
+          "itemName": "Amalj'aa Blood",
+          "sourceRowId": 2000419,
+          "sourceSheet": "event-item",
+          "quantity": 2,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2000418",
+          "itemName": "Ether Crate",
+          "sourceRowId": 2000418,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001710",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996617,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.251,
+                  "y": 18.8,
+                  "z": 86.9167
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "central-thanalan",
+              "zoneName": "Central Thanalan",
+              "territoryId": "territory-141",
+              "mapId": "map-21",
+              "sourceLevelRowId": 4009261,
+              "coordinates": {
+                "x": 24.6,
+                "y": 17.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 153.113,
+                  "y": -9.84203,
+                  "z": -220.247
+                },
+                "mapGameId": "w1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001710",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996617,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.251,
+                  "y": 18.8,
+                  "z": 86.9167
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 5,
+          "targetId": "actor-2001512",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4074135,
+              "coordinates": {
+                "x": 14.2,
+                "y": 27.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -366.277,
+                  "y": -34.9833,
+                  "z": 293.58
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2001499",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4074134,
+              "coordinates": {
+                "x": 14.2,
+                "y": 27.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -366.277,
+                  "y": -34.9833,
+                  "z": 293.58
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-paucity-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001710",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996617,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.251,
+                  "y": 18.8,
+                  "z": 86.9167
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65882,
+          65883
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65885,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:46.881Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65885,
+          "internalId": "ClsThm101_00349",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 100,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1001710,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 160,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001512,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 4074136,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 4184412,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000419,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001760,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2001499,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2000418,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR20",
+              "argument": 1001713,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR30",
+              "argument": 1001708,
+              "referenceType": "actor"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000419,
+              "itemId": "event-item-2000419",
+              "name": "Amalj'aa Blood",
+              "resolvedSheet": "EventItem",
+              "iconId": 22601,
+              "quantity": 2
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000418,
+              "itemId": "event-item-2000418",
+              "name": "Ether Crate",
+              "resolvedSheet": "EventItem",
+              "iconId": 21003,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001710
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1001713
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001710,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR20",
+              "actorRowId": 1001713,
+              "name": "Cocobusi",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65886
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "thaumaturge-class-quests-class-my-first-scepter-65882",
+        "thaumaturge-class-quests-class-the-threat-of-intimacy-65883"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-superiority-65886"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 3420,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2057",
+            "itemName": "Copper Scepter",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3015",
+            "itemName": "Amateur's Dalmatica",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-40",
+            "stainName": "Cream Yellow"
+          },
+          {
+            "itemId": "item-2661",
+            "itemName": "Amateur's Hempen Coif",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-40",
+            "stainName": "Cream Yellow"
+          },
+          {
+            "itemId": "item-3538",
+            "itemName": "Hempen Dress Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-40",
+            "stainName": "Cream Yellow"
+          },
+          {
+            "itemId": "item-3769",
+            "itemName": "Amateur's Duckbills",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-40",
+            "stainName": "Cream Yellow"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Cocobuki",
+          "title": "Guildmaster",
+          "xivapiRowId": 1001708
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 6.2,
+          "y": 12.9
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "thaumaturge-class-quests-class-the-threat-of-superiority-65886",
+      "xivapiRowId": 65886,
+      "sortOrder": 7,
+      "name": "The Threat of Superiority",
+      "level": 15,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 15
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 15
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-the-threat-of-superiority-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001711",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996618,
+              "coordinates": {
+                "x": 6.4,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -241.621,
+                  "y": 18.8,
+                  "z": 83.3564
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-superiority-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 5,
+          "targetId": "actor-1002300",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 4008057,
+              "coordinates": {
+                "x": 7.7,
+                "y": 12.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -176.924,
+                  "y": 17.9904,
+                  "z": 62.3882
+                },
+                "mapGameId": "w1t1/01"
+              }
+            },
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 4008059,
+              "coordinates": {
+                "x": 7.7,
+                "y": 12.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -178.201,
+                  "y": 17.9904,
+                  "z": 61.425
+                },
+                "mapGameId": "w1t1/01"
+              }
+            },
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 4008060,
+              "coordinates": {
+                "x": 7.7,
+                "y": 12.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -176.689,
+                  "y": 17.9904,
+                  "z": 64.3679
+                },
+                "mapGameId": "w1t1/01"
+              }
+            },
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 4082577,
+              "coordinates": {
+                "x": 7.7,
+                "y": 12.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -175.83,
+                  "y": 17.9904,
+                  "z": 65.9952
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-superiority-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001711",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996618,
+              "coordinates": {
+                "x": 6.4,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -241.621,
+                  "y": 18.8,
+                  "z": 83.3564
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-superiority-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2001470",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4009272,
+              "coordinates": {
+                "x": 21,
+                "y": 27.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -24.8654,
+                  "y": -25.333,
+                  "z": 321.962
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-superiority-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001711",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996618,
+              "coordinates": {
+                "x": 6.4,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -241.621,
+                  "y": 18.8,
+                  "z": 83.3564
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65884,
+          65885
+        ],
+        "previousQuestJoin": 2,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65886,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:50.326Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65886,
+          "internalId": "ClsThm150_00350",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 150,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1001711,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1002300,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1002301,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1002302,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001470,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING_SHOR",
+              "argument": 11,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 266,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 40,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR20",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 995,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_WS",
+              "argument": 156,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VFX",
+              "argument": 241,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001711
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1002300
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1002301
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1002302
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001711,
+              "name": "Cocobezi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1002300,
+              "name": "raging merchant",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1002301,
+              "name": "ranting merchant",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1002302,
+              "name": "raving merchant",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65887
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65884",
+        "thaumaturge-class-quests-class-the-threat-of-paucity-65885"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-perplexity-65887"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "action",
+          "id": "action-156",
+          "sourceRowId": 156,
+          "name": "Scathe"
+        }
+      ],
+      "rewards": {
+        "experience": 5760,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2059",
+            "itemName": "Brass Cudgel",
+            "quantity": 1,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-2233",
+            "itemName": "Square Ash Shield",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3024",
+            "itemName": "Cotton Cowl",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-55",
+            "stainName": "Nophica Green"
+          },
+          {
+            "itemId": "item-3547",
+            "itemName": "Hard Leather Ringbands",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-55",
+            "stainName": "Nophica Green"
+          },
+          {
+            "itemId": "item-3327",
+            "itemName": "Cotton Tights",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-55",
+            "stainName": "Nophica Green"
+          },
+          {
+            "itemId": "item-3777",
+            "itemName": "Hard Leather Boots",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-55",
+            "stainName": "Nophica Green"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Cocobuki",
+          "title": "Guildmaster",
+          "xivapiRowId": 1001708
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 6.2,
+          "y": 12.9
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "thaumaturge-class-quests-class-the-threat-of-perplexity-65887",
+      "xivapiRowId": 65887,
+      "sortOrder": 8,
+      "name": "The Threat of Perplexity",
+      "level": 20,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 20
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 20
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000420",
+          "itemName": "Bloody Scepter",
+          "sourceRowId": 2000420,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2000421",
+          "itemName": "Shredded Tome",
+          "sourceRowId": 2000421,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        },
+        {
+          "itemId": "event-item-2000433",
+          "itemName": "Bloody Bracelet",
+          "sourceRowId": 2000433,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM2"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-the-threat-of-perplexity-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001712",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996619,
+              "coordinates": {
+                "x": 6.4,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -241.474,
+                  "y": 19.5773,
+                  "z": 84.6417
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-perplexity-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002305",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002802,
+              "coordinates": {
+                "x": 21.8,
+                "y": 22.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 14.4262,
+                  "y": 22.1571,
+                  "z": 72.3293
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-perplexity-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 3,
+          "targetId": "actor-1002322",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4014040,
+              "coordinates": {
+                "x": 23.8,
+                "y": 21.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 116.925,
+                  "y": 17.6822,
+                  "z": 12.9736
+                },
+                "mapGameId": "w1f1/00"
+              }
+            },
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4014041,
+              "coordinates": {
+                "x": 24.2,
+                "y": 21.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 132.458,
+                  "y": 21.0277,
+                  "z": 9.02709
+                },
+                "mapGameId": "w1f1/00"
+              }
+            },
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4014143,
+              "coordinates": {
+                "x": 23.8,
+                "y": 22.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 112.831,
+                  "y": 17.8353,
+                  "z": 31.2994
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-perplexity-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002305",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002802,
+              "coordinates": {
+                "x": 21.8,
+                "y": 22.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 14.4262,
+                  "y": 22.1571,
+                  "z": 72.3293
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-perplexity-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2001472",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4003482,
+              "coordinates": {
+                "x": 24.5,
+                "y": 21.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 150.725,
+                  "y": 18.8051,
+                  "z": -5.74884
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-perplexity-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002305",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002802,
+              "coordinates": {
+                "x": 21.8,
+                "y": 22.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 14.4262,
+                  "y": 22.1571,
+                  "z": 72.3293
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-perplexity-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2001474",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4014193,
+              "coordinates": {
+                "x": 23.4,
+                "y": 25.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 96.2473,
+                  "y": 16.9753,
+                  "z": 188.861
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-perplexity-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001712",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996619,
+              "coordinates": {
+                "x": 6.4,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -241.474,
+                  "y": 19.5773,
+                  "z": 84.6417
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8,
+            "completeSequence": 8
+          }
+        },
+        {
+          "id": "adventurer-the-threat-of-perplexity-objective-9",
+          "sortOrder": 9,
+          "type": "unknown",
+          "targetId": "actor-1001708",
+          "targetName": "Cocobuki",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3994611,
+              "coordinates": {
+                "x": 6.2,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -250.347,
+                  "y": 18,
+                  "z": 80.9036
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 9
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65886
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65887,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:52.722Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65887,
+          "internalId": "ClsThm200_00351",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 200,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1001712,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1002305,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1002306,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1002322,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000420,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1002323,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2000421,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1002324,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM2",
+              "argument": 2000433,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001472,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING_SHOR",
+              "argument": 11,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001474,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH_SHORT",
+              "argument": 2,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 267,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 41,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR2",
+              "argument": 3996616,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR3",
+              "argument": 3996617,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR4",
+              "argument": 3996618,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1001709,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR3",
+              "argument": 1001710,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR4",
+              "argument": 1001711,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR5",
+              "argument": 1001712,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR6",
+              "argument": 1001713,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "CUT_CLSTHM20010",
+              "argument": 52,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000420,
+              "itemId": "event-item-2000420",
+              "name": "Bloody Scepter",
+              "resolvedSheet": "EventItem",
+              "iconId": 32806,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000421,
+              "itemId": "event-item-2000421",
+              "name": "Shredded Tome",
+              "resolvedSheet": "EventItem",
+              "iconId": 26002,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM2",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000433,
+              "itemId": "event-item-2000433",
+              "name": "Bloody Bracelet",
+              "resolvedSheet": "EventItem",
+              "iconId": 55601,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001712
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1002305
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1002306
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1002322
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1002323
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1002324
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1001709
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR6",
+              "actorRowId": 1001713
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001712,
+              "name": "Cocoboha",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1002305,
+              "name": "Cocobusi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1002306,
+              "name": "stalwart swordsman",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1002322,
+              "name": "thaumaturge corpse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1002323,
+              "name": "thaumaturge corpse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1002324,
+              "name": "thaumaturge corpse",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1001709,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711,
+              "name": "Cocobezi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712,
+              "name": "Cocoboha",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR6",
+              "actorRowId": 1001713,
+              "name": "Cocobusi",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65888
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-superiority-65886"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "thaumaturge-class-quests-class-the-hidden-chapter-65888"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 6960,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2111",
+            "itemName": "Staghorn Staff",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-27666",
+            "itemName": "Altered Cotton Dalmatica",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-68",
+            "stainName": "Ink Blue"
+          },
+          {
+            "itemId": "item-2703",
+            "itemName": "Ash Mask (Lapis Lazuli)",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-68",
+            "stainName": "Ink Blue"
+          },
+          {
+            "itemId": "item-3568",
+            "itemName": "Cotton Dress Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-68",
+            "stainName": "Ink Blue"
+          },
+          {
+            "itemId": "item-3800",
+            "itemName": "Cotton Dress Shoes",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-68",
+            "stainName": "Ink Blue"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 5,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Cocobuki",
+          "title": "Guildmaster",
+          "xivapiRowId": 1001708
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 6.2,
+          "y": 12.9
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "thaumaturge-class-quests-class-the-hidden-chapter-65888",
+      "xivapiRowId": 65888,
+      "sortOrder": 9,
+      "name": "The Hidden Chapter",
+      "level": 25,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 25
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 25
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000422",
+          "itemName": "Book of Mormo",
+          "sourceRowId": 2000422,
+          "sourceSheet": "event-item",
+          "quantity": 3,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2000425",
+          "itemName": "Book of Mormo",
+          "sourceRowId": 2000425,
+          "sourceSheet": "event-item",
+          "quantity": 3,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-the-hidden-chapter-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001708",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3994611,
+              "coordinates": {
+                "x": 6.2,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -250.347,
+                  "y": 18,
+                  "z": 80.9036
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-hidden-chapter-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4009277,
+              "coordinates": {
+                "x": 13.7,
+                "y": 24
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -391.465,
+                  "y": -70.3048,
+                  "z": 124.945
+                },
+                "mapGameId": "w1f3/00"
+              }
+            },
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4009277,
+              "coordinates": {
+                "x": 13.7,
+                "y": 24
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -391.465,
+                  "y": -70.3048,
+                  "z": 124.945
+                },
+                "mapGameId": "w1f3/00"
+              }
+            },
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4009277,
+              "coordinates": {
+                "x": 13.7,
+                "y": 24
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -391.465,
+                  "y": -70.3048,
+                  "z": 124.945
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-hidden-chapter-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001708",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3994611,
+              "coordinates": {
+                "x": 6.2,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -250.347,
+                  "y": 18,
+                  "z": 80.9036
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-hidden-chapter-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001709",
+          "targetName": "Cocobygo",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3996616,
+              "coordinates": {
+                "x": 6.4,
+                "y": 13
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -240.474,
+                  "y": 18.7,
+                  "z": 85.6117
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-hidden-chapter-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002310",
+          "locations": [
+            {
+              "zoneId": "eastern-thanalan",
+              "zoneName": "Eastern Thanalan",
+              "territoryId": "territory-145",
+              "mapId": "map-22",
+              "sourceLevelRowId": 4009278,
+              "coordinates": {
+                "x": 25.2,
+                "y": 14.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 184.92,
+                  "y": 3.18077,
+                  "z": -338.641
+                },
+                "mapGameId": "w1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-the-hidden-chapter-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001708",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3994611,
+              "coordinates": {
+                "x": 6.2,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -250.347,
+                  "y": 18,
+                  "z": 80.9036
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65887
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65888,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:55.955Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65888,
+          "internalId": "ClsThm250_00352",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 250,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1001709,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1002307,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1002308,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1002309,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000422,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2000425,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1002310,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1002311,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1002312,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1002313,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1002314,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001757,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 268,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 42,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR3",
+              "argument": 3996617,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR4",
+              "argument": 3996618,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_POS_ACTOR5",
+              "argument": 3996619,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR3",
+              "argument": 1001710,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR4",
+              "argument": 1001711,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR5",
+              "argument": 1001712,
+              "referenceType": "actor"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000422,
+              "itemId": "event-item-2000422",
+              "name": "Book of Mormo",
+              "resolvedSheet": "EventItem",
+              "iconId": 26002,
+              "quantity": 3
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000425,
+              "itemId": "event-item-2000425",
+              "name": "Book of Mormo",
+              "resolvedSheet": "EventItem",
+              "iconId": 26002,
+              "quantity": 3
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001708
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1002307
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1002308
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1002309
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1002310
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1002311
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1002312
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1002313
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1002314
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1001708
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001708,
+              "name": "Cocobuki",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1002307,
+              "name": "twitching voidmath",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1002308,
+              "name": "flustered voidmath",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1002309,
+              "name": "smirking voidmath",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1002310,
+              "name": "Cocobuki",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1002311,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1002312,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1002313,
+              "name": "Cocobezi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1002314,
+              "name": "Cocoboha",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1001708,
+              "name": "Cocobuki",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711,
+              "name": "Cocobezi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712,
+              "name": "Cocoboha",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65889
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "thaumaturge-class-quests-class-the-threat-of-perplexity-65887"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "thaumaturge-class-quests-class-facing-your-demons-65889"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 8160,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2118",
+            "itemName": "Toothed Staghorn Staff",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3050",
+            "itemName": "Cotton Halfrobe",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-81",
+            "stainName": "Grape Purple"
+          },
+          {
+            "itemId": "item-3581",
+            "itemName": "Goatskin Ringbands",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-81",
+            "stainName": "Grape Purple"
+          },
+          {
+            "itemId": "item-27667",
+            "itemName": "Altered Goatskin Moccasins",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-81",
+            "stainName": "Grape Purple"
+          },
+          {
+            "itemId": "item-2728",
+            "itemName": "Silver Spectacles",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-81",
+            "stainName": "Grape Purple"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Cocobygo",
+          "xivapiRowId": 1001709
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 6.4,
+          "y": 13
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "thaumaturge-class-quests-class-facing-your-demons-65889",
+      "xivapiRowId": 65889,
+      "sortOrder": 10,
+      "name": "Facing Your Demons",
+      "level": 30,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 30
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 30
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000426",
+          "itemName": "Cocobusi Report",
+          "sourceRowId": 2000426,
+          "sourceSheet": "event-item",
+          "quantity": 3,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-facing-your-demons-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002778,
+              "coordinates": {
+                "x": 12.7,
+                "y": 14.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -438.189,
+                  "y": 14.7831,
+                  "z": -359.961
+                },
+                "mapGameId": "w1f1/00"
+              }
+            },
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002778,
+              "coordinates": {
+                "x": 12.7,
+                "y": 14.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -438.189,
+                  "y": 14.7831,
+                  "z": -359.961
+                },
+                "mapGameId": "w1f1/00"
+              }
+            },
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002778,
+              "coordinates": {
+                "x": 12.7,
+                "y": 14.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -438.189,
+                  "y": 14.7831,
+                  "z": -359.961
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-facing-your-demons-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002316",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002775,
+              "coordinates": {
+                "x": 12.8,
+                "y": 14.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -436.714,
+                  "y": 23.7748,
+                  "z": -350.797
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-facing-your-demons-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002315",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002785,
+              "coordinates": {
+                "x": 13.6,
+                "y": 10.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -392.325,
+                  "y": 23.5446,
+                  "z": -546.99
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-facing-your-demons-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002315",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002785,
+              "coordinates": {
+                "x": 13.6,
+                "y": 10.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -392.325,
+                  "y": 23.5446,
+                  "z": -546.99
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-facing-your-demons-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002317",
+          "locations": [
+            {
+              "zoneId": "western-thanalan",
+              "zoneName": "Western Thanalan",
+              "territoryId": "territory-140",
+              "mapId": "map-20",
+              "sourceLevelRowId": 4002789,
+              "coordinates": {
+                "x": 16.1,
+                "y": 7.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -269.839,
+                  "y": 15.3479,
+                  "z": -718.119
+                },
+                "mapGameId": "w1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "adventurer-facing-your-demons-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001708",
+          "targetName": "Cocobuki",
+          "locations": [
+            {
+              "zoneId": "uldah-steps-of-nald",
+              "zoneName": "Ul'dah - Steps of Nald",
+              "territoryId": "territory-130",
+              "mapId": "map-13",
+              "sourceLevelRowId": 3994611,
+              "coordinates": {
+                "x": 6.2,
+                "y": 12.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -250.347,
+                  "y": 18,
+                  "z": 80.9036
+                },
+                "mapGameId": "w1t1/01"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65888
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65889,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:47:58.702Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65889,
+          "internalId": "ClsThm300_00353",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Thaumaturge Quests",
+          "eventIconType": 8,
+          "sortKey": 300,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000426,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1004070,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1004096,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1004094,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1002316,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1002318,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1002319,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR7",
+              "argument": 1002320,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR8",
+              "argument": 1002321,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR9",
+              "argument": 1002315,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 4184423,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR10",
+              "argument": 1002317,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR11",
+              "argument": 1004319,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR12",
+              "argument": 1004320,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR13",
+              "argument": 1004321,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR14",
+              "argument": 1004322,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2001758,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 269,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 43,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1001708,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR2",
+              "argument": 1001709,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR3",
+              "argument": 1001710,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR4",
+              "argument": 1001711,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR5",
+              "argument": 1001712,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR6",
+              "argument": 1001713,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTION1",
+              "argument": 934,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION2",
+              "argument": 787,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION3_0",
+              "argument": 791,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION3_1",
+              "argument": 794,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION3_2",
+              "argument": 795,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 995,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_WS",
+              "argument": 157,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VFX",
+              "argument": 241,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000426,
+              "itemId": "event-item-2000426",
+              "name": "Cocobusi Report",
+              "resolvedSheet": "EventItem",
+              "iconId": 25906,
+              "quantity": 3
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1004070
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1004096
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1004094
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1002316
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1002318
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1002319
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1002320
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1002321
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1002315
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1002317
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1004319
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1004320
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1004321
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1004322
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1001709
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR6",
+              "actorRowId": 1001713
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1004070,
+              "name": "Gebhard",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1004096,
+              "name": "Folclind",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1004094,
+              "name": "Bashful Geyser",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1002316,
+              "name": "Cocobuki",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1002318,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1002319,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR7",
+              "actorRowId": 1002320,
+              "name": "Cocobezi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR8",
+              "actorRowId": 1002321,
+              "name": "Cocoboha",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR9",
+              "actorRowId": 1002315,
+              "name": "maimed marauder",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR10",
+              "actorRowId": 1002317,
+              "name": "Cocobuki",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR11",
+              "actorRowId": 1004319,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR12",
+              "actorRowId": 1004320,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR13",
+              "actorRowId": 1004321,
+              "name": "Cocobezi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR14",
+              "actorRowId": 1004322,
+              "name": "Cocoboha",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR2",
+              "actorRowId": 1001709,
+              "name": "Cocobygo",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR3",
+              "actorRowId": 1001710,
+              "name": "Cocobani",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR4",
+              "actorRowId": 1001711,
+              "name": "Cocobezi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR5",
+              "actorRowId": 1001712,
+              "name": "Cocoboha",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR6",
+              "actorRowId": 1001713,
+              "name": "Cocobusi",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              66609
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "thaumaturge-class-quests-class-the-hidden-chapter-65888"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "action",
+          "id": "action-157",
+          "sourceRowId": 157,
+          "name": "Manaward"
+        }
+      ],
+      "rewards": {
+        "experience": 12480,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-2069",
+            "itemName": "Silver Scepter",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-27669",
+            "itemName": "Velveteen Bliaud",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-5",
+            "stainName": "Charcoal Grey"
+          },
+          {
+            "itemId": "item-27671",
+            "itemName": "Altered Velveteen Hose",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-5",
+            "stainName": "Charcoal Grey"
+          },
+          {
+            "itemId": "item-27670",
+            "itemName": "Velveteen Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-5",
+            "stainName": "Charcoal Grey"
+          },
+          {
+            "itemId": "item-27672",
+            "itemName": "Toadskin Boots",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-5",
+            "stainName": "Charcoal Grey"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Cocobuki",
+          "title": "Guildmaster",
+          "xivapiRowId": 1001708
+        },
+        "location": {
+          "zone": "Ul'dah - Steps of Nald",
+          "x": 6.2,
+          "y": 12.9
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

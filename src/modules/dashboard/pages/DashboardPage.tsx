@@ -2,6 +2,10 @@ import { useProgressStore } from '../../../core/progress/progressStore';
 import { useQuestCatalog } from '../../quests/hooks/useQuestCatalog';
 import { createAvailableQuestCatalog } from '../../quests/utilities/questAvailability';
 import { getAutomaticCurrentQuestId } from '../../quests/utilities/questProgression';
+import {
+  createSatisfiedQuestIdSet,
+  getQuestCompletionSummary,
+} from '../../quests/utilities/questCompletion';
 
 import './DashboardPage.css';
 
@@ -58,12 +62,12 @@ export function DashboardPage() {
 
   const profile = useProgressStore((state) => state.profile);
 
-  const completedQuestIdSet = new Set(profile.completedQuestIds);
-
   const availableQuestCatalog =
     questCatalogState.status === 'success'
       ? createAvailableQuestCatalog(questCatalogState.catalog, {
           startingCity: profile.startingCity,
+
+          startingClassJob: profile.startingClassJob,
 
           initialGrandCompany: profile.initialGrandCompany,
 
@@ -81,22 +85,30 @@ export function DashboardPage() {
     ['class', 'job', 'role', 'crafting', 'gathering'].includes(quest.category),
   );
 
-  const completedQuestCount = quests.filter((quest) =>
-    completedQuestIdSet.has(quest.id),
-  ).length;
+  const satisfiedQuestIdSet = createSatisfiedQuestIdSet(
+    quests,
+    profile.completedQuestIds,
+  );
 
-  const completedMainScenarioCount = mainScenarioQuests.filter((quest) =>
-    completedQuestIdSet.has(quest.id),
-  ).length;
+  const overallCompletion = getQuestCompletionSummary(
+    quests,
+    satisfiedQuestIdSet,
+  );
 
-  const completedClassAndJobCount = classAndJobQuests.filter((quest) =>
-    completedQuestIdSet.has(quest.id),
-  ).length;
+  const mainScenarioCompletion = getQuestCompletionSummary(
+    mainScenarioQuests,
+    satisfiedQuestIdSet,
+  );
+
+  const classAndJobCompletion = getQuestCompletionSummary(
+    classAndJobQuests,
+    satisfiedQuestIdSet,
+  );
 
   const automaticCurrentQuestId = availableQuestCatalog
     ? getAutomaticCurrentQuestId(
         availableQuestCatalog.collections,
-        profile.completedQuestIds,
+        Array.from(satisfiedQuestIdSet),
       )
     : null;
 
@@ -135,22 +147,22 @@ export function DashboardPage() {
       <section className="dashboard-progress" aria-label="Completion summaries">
         <ProgressCard
           title="Overall Progress"
-          completed={completedQuestCount}
-          total={quests.length}
+          completed={overallCompletion.completed}
+          total={overallCompletion.total}
           description="All currently loaded completion entries."
         />
 
         <ProgressCard
           title="Main Scenario"
-          completed={completedMainScenarioCount}
-          total={mainScenarioQuests.length}
+          completed={mainScenarioCompletion.completed}
+          total={mainScenarioCompletion.total}
           description="MSQ completion across every loaded expansion and patch."
         />
 
         <ProgressCard
           title="Class & Job Quests"
-          completed={completedClassAndJobCount}
-          total={classAndJobQuests.length}
+          completed={classAndJobCompletion.completed}
+          total={classAndJobCompletion.total}
           description="Combat, crafting, and gathering quest lines."
         />
       </section>
@@ -217,8 +229,9 @@ export function DashboardPage() {
                 <h3>Quest Log</h3>
 
                 <p>
-                  {completedQuestCount.toLocaleString()} of{' '}
-                  {quests.length.toLocaleString()} loaded quests complete.
+                  {overallCompletion.completed.toLocaleString()} of{' '}
+                  {overallCompletion.total.toLocaleString()} loaded completion
+                  requirements complete.
                 </p>
               </div>
 

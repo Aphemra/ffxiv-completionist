@@ -12,6 +12,8 @@ JOURNAL_GENRES=(
   "Black Mage Quests"
 )
 
+EXCLUDED_QUEST_ROWS="66659"
+
 PRIMARY_FACET_ID="magical-ranged-dps"
 PRIMARY_FACET_NAME="Magical Ranged DPS"
 

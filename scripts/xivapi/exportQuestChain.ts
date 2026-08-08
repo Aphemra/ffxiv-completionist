@@ -74,6 +74,16 @@ interface QuestSelectionFilter {
   classJobIds: readonly string[];
 }
 
+interface AlternativeCompletionGroupDefinition {
+  id: string;
+  rowIds: readonly number[];
+}
+
+interface StartingClassRouteAvailability {
+  startingClassJobIds?: readonly string[];
+  excludedStartingClassJobIds?: readonly string[];
+}
+
 const resolvedReviewSchema = z.looseObject({
   identity: z.looseObject({
     rowId: positiveRowIdSchema,
@@ -435,6 +445,97 @@ function readRowIdsOption(optionName: string): number[] {
   return Array.from(new Set(rowIds));
 }
 
+function readAlternativeCompletionGroups(): AlternativeCompletionGroupDefinition[] {
+  const definitions: AlternativeCompletionGroupDefinition[] = [];
+
+  const knownGroupIds = new Set<string>();
+  const groupIdByRowId = new Map<number, string>();
+
+  for (const rawDefinition of readOptions('--alternative-completion-group')) {
+    const separatorIndex = rawDefinition.indexOf(':');
+
+    if (
+      separatorIndex <= 0 ||
+      separatorIndex !== rawDefinition.lastIndexOf(':')
+    ) {
+      throw new Error(
+        [
+          'Alternative completion groups must use:',
+          '"group-id:row-id,row-id".',
+          `Received: ${rawDefinition}`,
+        ].join(' '),
+      );
+    }
+
+    const rawGroupId = rawDefinition.slice(0, separatorIndex).trim();
+    const rawRowIds = rawDefinition.slice(separatorIndex + 1);
+
+    const groupId = slugify(rawGroupId);
+
+    if (!rawGroupId || groupId === 'unknown') {
+      throw new Error(
+        `Alternative completion group "${rawDefinition}" has no valid ID.`,
+      );
+    }
+
+    if (knownGroupIds.has(groupId)) {
+      throw new Error(
+        `Alternative completion group "${groupId}" is declared more than once.`,
+      );
+    }
+
+    const rowIds = Array.from(
+      new Set(
+        rawRowIds.split(',').map((rawRowId) => {
+          const rowId = Number(rawRowId.trim());
+
+          if (!Number.isInteger(rowId) || rowId <= 0) {
+            throw new Error(
+              [
+                `Alternative completion group "${groupId}"`,
+                `contains invalid row ID "${rawRowId}".`,
+              ].join(' '),
+            );
+          }
+
+          return rowId;
+        }),
+      ),
+    );
+
+    if (rowIds.length < 2) {
+      throw new Error(
+        `Alternative completion group "${groupId}" requires at least two rows.`,
+      );
+    }
+
+    for (const rowId of rowIds) {
+      const existingGroupId = groupIdByRowId.get(rowId);
+
+      if (existingGroupId) {
+        throw new Error(
+          [
+            `Quest row ${rowId} belongs to multiple`,
+            'alternative completion groups:',
+            `"${existingGroupId}" and "${groupId}".`,
+          ].join(' '),
+        );
+      }
+
+      groupIdByRowId.set(rowId, groupId);
+    }
+
+    knownGroupIds.add(groupId);
+
+    definitions.push({
+      id: groupId,
+      rowIds,
+    });
+  }
+
+  return definitions;
+}
+
 function hasFlag(flagName: string): boolean {
   return process.argv.includes(flagName);
 }
@@ -511,7 +612,7 @@ async function runNpmScript(
     );
   }
 
-  const commandArguments = [npmEntryPoint, 'run', scriptName];
+  const commandArguments = [npmEntryPoint, '--silent', 'run', scriptName];
 
   if (argumentsList.length > 0) {
     commandArguments.push('--', ...argumentsList);
@@ -641,16 +742,22 @@ async function ensureResolvedReview(
    * refreshed, rebuild the entire inspection pipeline from the pinned source.
    * Reusing only part of a stale inspection chain could mix XIVAPI versions.
    */
-  await runNpmScript('xivapi:inspect:quest', ['--row', String(rowId)]);
+  await runNpmScript('xivapi:inspect:quest', [
+    '--row',
+    String(rowId),
+    '--quiet',
+  ]);
 
   await runNpmScript('xivapi:interpret:quest', [
     '--input',
     toProjectRelativePath(inspectionPaths.focused),
+    '--quiet',
   ]);
 
   await runNpmScript('xivapi:resolve:quest', [
     '--input',
     toProjectRelativePath(inspectionPaths.review),
+    '--concise',
   ]);
 
   return inspectionPaths.resolved;
@@ -1126,6 +1233,7 @@ function extractAvailability(
   review: JsonObject,
   draft: JsonObject,
   questName: string,
+  routeAvailability: StartingClassRouteAvailability = {},
 ): JsonObject | null {
   const availability =
     asObject(draft.availability) ?? asObject(review.availability);
@@ -1133,6 +1241,20 @@ function extractAvailability(
   const result: JsonObject = {};
 
   const startingCityIds = normalizeIdArray(availability?.startingCityIds);
+
+  const startingClassJobIds = Array.from(
+    new Set([
+      ...normalizeIdArray(availability?.startingClassJobIds),
+      ...(routeAvailability.startingClassJobIds ?? []),
+    ]),
+  );
+
+  const excludedStartingClassJobIds = Array.from(
+    new Set([
+      ...normalizeIdArray(availability?.excludedStartingClassJobIds),
+      ...(routeAvailability.excludedStartingClassJobIds ?? []),
+    ]),
+  );
 
   /*
    * grandCompanyIds is accepted here
@@ -1161,6 +1283,14 @@ function extractAvailability(
 
   if (startingCityIds.length > 0) {
     result.startingCityIds = startingCityIds;
+  }
+
+  if (startingClassJobIds.length > 0) {
+    result.startingClassJobIds = startingClassJobIds;
+  }
+
+  if (excludedStartingClassJobIds.length > 0) {
+    result.excludedStartingClassJobIds = excludedStartingClassJobIds;
   }
 
   if (initialGrandCompanyIds.length > 0) {
@@ -2119,7 +2249,10 @@ function createQuestEntry(
   calculatedExperience: number | undefined,
   sortOrder: number,
   questId: string,
+  alternativeCompletionGroupId: string | undefined,
+  startingClassRouteAvailability: StartingClassRouteAvailability,
   previousQuestIds: string[],
+  previousQuestMode: 'all' | 'any',
   nextQuestIds: string[],
   expansionId: string | undefined,
   patch: string | undefined,
@@ -2214,7 +2347,14 @@ function createQuestEntry(
     isRepeatable: quest.isRepeatable,
     isSeasonalQuest: quest.isSeasonalQuest,
 
-    availability: extractAvailability(reviewObject, draft, quest.name),
+    alternativeCompletionGroupId,
+
+    availability: extractAvailability(
+      reviewObject,
+      draft,
+      quest.name,
+      startingClassRouteAvailability,
+    ),
 
     repeatability: draft.repeatability,
 
@@ -2239,8 +2379,7 @@ function createQuestEntry(
 
     previousQuestIds,
 
-    previousQuestMode:
-      category === 'msq' && previousQuestIds.length > 1 ? 'any' : 'all',
+    previousQuestMode,
 
     nextQuestIds,
 
@@ -2270,6 +2409,58 @@ async function main(): Promise<void> {
   const exportId = slugify(requireOption('--id'));
 
   const explicitRowIds = readRowIdsOption('--rows');
+
+  const excludedRowIds = new Set(readRowIdsOption('--exclude-rows'));
+
+  const alternativeCompletionGroups = readAlternativeCompletionGroups();
+
+  const alternativeCompletionGroupIdByRowId = new Map(
+    alternativeCompletionGroups.flatMap((group) =>
+      group.rowIds.map((rowId) => [rowId, group.id] as const),
+    ),
+  );
+
+  const rawStartingClassJobId = readOption('--starting-class-job');
+
+  const startingClassJobId = rawStartingClassJobId
+    ? slugify(rawStartingClassJobId)
+    : undefined;
+
+  const startingClassQuestRowIds = new Set(
+    readRowIdsOption('--starting-class-rows'),
+  );
+
+  const nonstartingClassQuestRowIds = new Set(
+    readRowIdsOption('--nonstarting-class-rows'),
+  );
+
+  const startingClassRouteRowIds = new Set([
+    ...startingClassQuestRowIds,
+    ...nonstartingClassQuestRowIds,
+  ]);
+
+  if (startingClassRouteRowIds.size > 0 && startingClassJobId === undefined) {
+    throw new Error(
+      'Starting-class route rows require "--starting-class-job".',
+    );
+  }
+
+  if (startingClassJobId !== undefined && startingClassRouteRowIds.size === 0) {
+    throw new Error('"--starting-class-job" requires at least one route row.');
+  }
+
+  const overlappingStartingClassRowIds = Array.from(
+    startingClassQuestRowIds,
+  ).filter((rowId) => nonstartingClassQuestRowIds.has(rowId));
+
+  if (overlappingStartingClassRowIds.length > 0) {
+    throw new Error(
+      [
+        'Starting and nonstarting class routes cannot share rows.',
+        `Rows: ${overlappingStartingClassRowIds.join(', ')}`,
+      ].join('\n'),
+    );
+  }
 
   const startQuestName = readOption('--start');
   const endQuestName = readOption('--end');
@@ -2430,6 +2621,48 @@ async function main(): Promise<void> {
     questIndex.quests.map((quest) => [quest.rowId, quest]),
   );
 
+  const unknownExcludedRowIds = Array.from(excludedRowIds).filter(
+    (rowId) => !questsByRowId.has(rowId),
+  );
+
+  if (unknownExcludedRowIds.length > 0) {
+    throw new Error(
+      [
+        'Excluded quest rows are missing from the quest index.',
+        `Rows: ${unknownExcludedRowIds.join(', ')}`,
+      ].join('\n'),
+    );
+  }
+
+  const unknownStartingClassRouteRowIds = Array.from(
+    startingClassRouteRowIds,
+  ).filter((rowId) => !questsByRowId.has(rowId));
+
+  if (unknownStartingClassRouteRowIds.length > 0) {
+    throw new Error(
+      [
+        'Starting-class route rows are missing from the quest index.',
+        `Rows: ${unknownStartingClassRouteRowIds.join(', ')}`,
+      ].join('\n'),
+    );
+  }
+
+  for (const group of alternativeCompletionGroups) {
+    const unknownRowIds = group.rowIds.filter(
+      (rowId) => !questsByRowId.has(rowId),
+    );
+
+    if (unknownRowIds.length > 0) {
+      throw new Error(
+        [
+          `Alternative completion group "${group.id}"`,
+          'references rows missing from the quest index.',
+          `Rows: ${unknownRowIds.join(', ')}`,
+        ].join('\n'),
+      );
+    }
+  }
+
   const knownQuestIdsByRowId = await readKnownQuestIds(exportsDirectory);
 
   let discoveredRowIds: Set<number>;
@@ -2580,6 +2813,54 @@ async function main(): Promise<void> {
         );
       }
     }
+  }
+
+  const selectedExcludedRowIds = Array.from(excludedRowIds).filter((rowId) =>
+    discoveredRowIds.has(rowId),
+  );
+
+  for (const rowId of selectedExcludedRowIds) {
+    discoveredRowIds.delete(rowId);
+  }
+
+  if (discoveredRowIds.size === 0) {
+    throw new Error('Every selected quest row was excluded from the export.');
+  }
+
+  if (selectedExcludedRowIds.length > 0) {
+    console.log(
+      `Excluded ${selectedExcludedRowIds.length} selected quest row(s): ` +
+        selectedExcludedRowIds.join(', '),
+    );
+  }
+
+  for (const group of alternativeCompletionGroups) {
+    const unselectedRowIds = group.rowIds.filter(
+      (rowId) => !discoveredRowIds.has(rowId),
+    );
+
+    if (unselectedRowIds.length > 0) {
+      throw new Error(
+        [
+          `Alternative completion group "${group.id}"`,
+          'contains rows that were not selected for this export.',
+          `Rows: ${unselectedRowIds.join(', ')}`,
+        ].join('\n'),
+      );
+    }
+  }
+
+  const unselectedStartingClassRouteRowIds = Array.from(
+    startingClassRouteRowIds,
+  ).filter((rowId) => !discoveredRowIds.has(rowId));
+
+  if (unselectedStartingClassRouteRowIds.length > 0) {
+    throw new Error(
+      [
+        'Starting-class route rows were not selected for this export.',
+        `Rows: ${unselectedStartingClassRouteRowIds.join(', ')}`,
+      ].join('\n'),
+    );
   }
 
   const orderedQuests = topologicallySortQuests(
@@ -2740,8 +3021,12 @@ async function main(): Promise<void> {
             const previousQuest = questsByRowId.get(rowId);
 
             return (
+              !excludedRowIds.has(rowId) &&
               previousQuest !== undefined &&
-              isEligibleQuest(previousQuest, category)
+              isEligibleQuest(previousQuest, category) &&
+              (knownQuestIdsByRowId.has(rowId) ||
+                !usesFilterSelection ||
+                matchesQuestSelection(previousQuest, selection))
             );
           });
 
@@ -2756,7 +3041,12 @@ async function main(): Promise<void> {
             const nextQuest = questsByRowId.get(rowId);
 
             return (
-              nextQuest !== undefined && isEligibleQuest(nextQuest, category)
+              !excludedRowIds.has(rowId) &&
+              nextQuest !== undefined &&
+              isEligibleQuest(nextQuest, category) &&
+              (knownQuestIdsByRowId.has(rowId) ||
+                !usesFilterSelection ||
+                matchesQuestSelection(nextQuest, selection))
             );
           });
 
@@ -2772,6 +3062,25 @@ async function main(): Promise<void> {
         ),
       )
       .filter((id): id is string => id !== undefined);
+
+    const previousAlternativeCompletionGroupIds = new Set(
+      previousRowIds
+        .map((rowId) => alternativeCompletionGroupIdByRowId.get(rowId))
+        .filter((groupId): groupId is string => groupId !== undefined),
+    );
+
+    const allPreviousQuestsShareAlternativeCompletionGroup =
+      previousRowIds.length > 1 &&
+      previousAlternativeCompletionGroupIds.size === 1 &&
+      previousRowIds.every((rowId) =>
+        alternativeCompletionGroupIdByRowId.has(rowId),
+      );
+
+    const previousQuestMode =
+      previousQuestIds.length > 1 &&
+      (category === 'msq' || allPreviousQuestsShareAlternativeCompletionGroup)
+        ? 'any'
+        : 'all';
 
     const nextQuestIds = nextRowIds
       .map((rowId) =>
@@ -2812,6 +3121,23 @@ async function main(): Promise<void> {
       ];
     });
 
+    const startingClassRouteAvailability: StartingClassRouteAvailability =
+      startingClassJobId === undefined
+        ? {}
+        : {
+            ...(startingClassQuestRowIds.has(quest.rowId)
+              ? {
+                  startingClassJobIds: [startingClassJobId],
+                }
+              : {}),
+
+            ...(nonstartingClassQuestRowIds.has(quest.rowId)
+              ? {
+                  excludedStartingClassJobIds: [startingClassJobId],
+                }
+              : {}),
+          };
+
     exportedQuests.push(
       createQuestEntry(
         quest,
@@ -2819,7 +3145,10 @@ async function main(): Promise<void> {
         experienceByRowId.get(quest.rowId),
         index + 1,
         questId,
+        alternativeCompletionGroupIdByRowId.get(quest.rowId),
+        startingClassRouteAvailability,
         previousQuestIds,
+        previousQuestMode,
         nextQuestIds,
         expansionId,
         patch,
@@ -2851,9 +3180,16 @@ async function main(): Promise<void> {
       relatedQuestIds: quest.previousQuestIds,
     }));
 
+  const knownPublishedQuestIds = new Set(knownQuestIdsByRowId.values());
+
   for (const branch of branches) {
     for (const relatedQuestId of branch.relatedQuestIds) {
-      if (!questsById.has(relatedQuestId)) {
+      const isInternalQuest = questsById.has(relatedQuestId);
+
+      const isPublishedExternalQuest =
+        knownPublishedQuestIds.has(relatedQuestId);
+
+      if (!isInternalQuest && !isPublishedExternalQuest) {
         throw new Error(
           `Branch references missing quest ID: ${relatedQuestId}`,
         );

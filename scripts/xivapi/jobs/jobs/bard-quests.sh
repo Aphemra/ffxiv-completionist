@@ -12,6 +12,8 @@ JOURNAL_GENRES=(
   "Bard Quests"
 )
 
+EXCLUDED_QUEST_ROWS="66661"
+
 PRIMARY_FACET_ID="physical-ranged-dps"
 PRIMARY_FACET_NAME="Physical Ranged DPS"
 

@@ -1,0 +1,4682 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "groups": [
+    {
+      "id": "pugilist-class-quests-quests",
+      "title": "Pugilist Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "pugilist-class-quests-class-way-of-the-pugilist-66068",
+          "name": "Way of the Pugilist",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 1,
+          "externalIds": {
+            "xivapi-quest-row": 66068
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66068,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:54.426Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001286",
+            "npcName": "Gagaruna",
+            "sourceRowId": 1001286,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.5,
+              "y": 10.2
+            }
+          },
+          "availability": {
+            "excludedStartingClassJobIds": [
+              "pugilist"
+            ],
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "pugilist-class-quests-class-my-first-hora-66089"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65714
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-way-of-the-pugilist-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1680",
+                "itemName": "Weathered Hora",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66068,
+              "internalId": "ClsPgl011_00532",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 10,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "CLASSJOB",
+                  "argument": 2,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1001286,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_CLASS_PGL",
+                  "argument": 42,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_CLASS_CHANGE",
+                  "argument": 10,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_GEAR_SET",
+                  "argument": 29,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_GEAR_SET",
+                  "argument": 38,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 112,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION2",
+                  "argument": 113,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION3",
+                  "argument": 961,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+                  "argument": 1013,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_CLASS_CHANGE",
+                  "argument": 10,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GEARSET_UNLOCK",
+                  "argument": 1905,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_JOB",
+                  "argument": 94,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003817
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003817,
+                  "name": "Hamon",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66089
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "pugilist-class-quests-class-way-of-the-pugilist-66069",
+          "name": "Way of the Pugilist",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 1,
+          "externalIds": {
+            "xivapi-quest-row": 66069
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66069,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:56.824Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1001286",
+            "npcName": "Gagaruna",
+            "sourceRowId": 1001286,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.5,
+              "y": 10.2
+            }
+          },
+          "availability": {
+            "startingClassJobIds": [
+              "pugilist"
+            ],
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "pugilist-class-quests-class-harder-than-rock-66090",
+            "pugilist-class-quests-class-burning-up-the-quarter-malm-66091"
+          ],
+          "rawRelations": {
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-way-of-the-pugilist-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-way-of-the-pugilist-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3947239,
+                  "coordinates": {
+                    "x": 19,
+                    "y": 26.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -125.133,
+                      "y": -8.53955,
+                      "z": 242.937
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-way-of-the-pugilist-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3947239,
+                  "coordinates": {
+                    "x": 19,
+                    "y": 26.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -125.133,
+                      "y": -8.53955,
+                      "z": 242.937
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-way-of-the-pugilist-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3965209,
+                  "coordinates": {
+                    "x": 22.4,
+                    "y": 28
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 46.198,
+                      "y": -13.1826,
+                      "z": 323.085
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-way-of-the-pugilist-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-4639",
+                "itemName": "Marmot Steak",
+                "quantity": 5,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "class-job",
+              "targetId": "class-job-2",
+              "sourceRowId": 2,
+              "name": "Pugilist"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66069,
+              "internalId": "ClsPgl020_00533",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 11,
+              "questLevelOffset": 0,
+              "systemRewards": [
+                21
+              ],
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1001286,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 351,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 385,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 205,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_MONSTER_NOTE",
+                  "argument": 32,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_MONSTER_NOTE",
+                  "argument": 45,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION1",
+                  "argument": 112,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION2",
+                  "argument": 113,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION3",
+                  "argument": 961,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+                  "argument": 1013,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003817
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003817,
+                  "name": "Hamon",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66090,
+                  66091
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "pugilist-class-quests-class-my-first-hora-66089",
+          "name": "My First Hora",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 1,
+          "externalIds": {
+            "xivapi-quest-row": 66089
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66089,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:45:59.209Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003817",
+            "npcName": "Hamon",
+            "sourceRowId": 1003817,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.8,
+              "y": 10.4
+            }
+          },
+          "availability": {
+            "excludedStartingClassJobIds": [
+              "pugilist"
+            ],
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "pugilist-class-quests-class-way-of-the-pugilist-66068"
+          ],
+          "nextQuestIds": [
+            "pugilist-class-quests-class-harder-than-rock-66090",
+            "pugilist-class-quests-class-burning-up-the-quarter-malm-66234"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66068
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-my-first-hora-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3947239,
+                  "coordinates": {
+                    "x": 19,
+                    "y": 26.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -125.133,
+                      "y": -8.53955,
+                      "z": 242.937
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-my-first-hora-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3947239,
+                  "coordinates": {
+                    "x": 19,
+                    "y": 26.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -125.133,
+                      "y": -8.53955,
+                      "z": 242.937
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-my-first-hora-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3965209,
+                  "coordinates": {
+                    "x": 22.4,
+                    "y": 28
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 46.198,
+                      "y": -13.1826,
+                      "z": 323.085
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-my-first-hora-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 115
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66089,
+              "internalId": "ClsPgl021_00553",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 12,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 351,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 385,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 205,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66090,
+                  66234
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "pugilist-class-quests-class-harder-than-rock-66090",
+          "name": "Harder than Rock",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 5,
+          "externalIds": {
+            "xivapi-quest-row": 66090
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66090,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:01.200Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003817",
+            "npcName": "Hamon",
+            "sourceRowId": 1003817,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.8,
+              "y": 10.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "pugilist-class-quests-class-my-first-hora-66089",
+            "pugilist-class-quests-class-way-of-the-pugilist-66069"
+          ],
+          "nextQuestIds": [
+            "pugilist-class-quests-class-burning-up-the-quarter-malm-66091",
+            "pugilist-class-quests-class-burning-up-the-quarter-malm-66234"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66089,
+              66069
+            ],
+            "previousQuestJoin": 2,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 5
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2000423",
+              "itemName": "Faded Gil",
+              "sourceRowId": 2000423,
+              "sourceSheet": "event-item",
+              "quantity": 5,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-harder-than-rock-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 5,
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3948845,
+                  "coordinates": {
+                    "x": 8.1,
+                    "y": 12.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -155.186,
+                      "y": 7.2666,
+                      "z": 48.6624
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3948846,
+                  "coordinates": {
+                    "x": 6.3,
+                    "y": 12.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -249.29,
+                      "y": 8,
+                      "z": 80.427
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3948847,
+                  "coordinates": {
+                    "x": 10.8,
+                    "y": 9.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -23.4228,
+                      "y": 0.449479,
+                      "z": -92.8184
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3948848,
+                  "coordinates": {
+                    "x": 12.1,
+                    "y": 9.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 40.4693,
+                      "y": -2.31571,
+                      "z": -98.8938
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3948850,
+                  "coordinates": {
+                    "x": 9.4,
+                    "y": 9.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -90.0272,
+                      "y": -9.32254,
+                      "z": -67.4131
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-harder-than-rock-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-harder-than-rock-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 5,
+              "locations": [
+                {
+                  "zoneId": "western-thanalan",
+                  "zoneName": "Western Thanalan",
+                  "territoryId": "territory-140",
+                  "mapId": "map-20",
+                  "sourceLevelRowId": 3949816,
+                  "coordinates": {
+                    "x": 26.2,
+                    "y": 22.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 232.704,
+                      "y": 42.8912,
+                      "z": 46.0167
+                    },
+                    "mapGameId": "w1f1/00"
+                  }
+                },
+                {
+                  "zoneId": "western-thanalan",
+                  "zoneName": "Western Thanalan",
+                  "territoryId": "territory-140",
+                  "mapId": "map-20",
+                  "sourceLevelRowId": 3949816,
+                  "coordinates": {
+                    "x": 26.2,
+                    "y": 22.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 232.704,
+                      "y": 42.8912,
+                      "z": 46.0167
+                    },
+                    "mapGameId": "w1f1/00"
+                  }
+                },
+                {
+                  "zoneId": "western-thanalan",
+                  "zoneName": "Western Thanalan",
+                  "territoryId": "territory-140",
+                  "mapId": "map-20",
+                  "sourceLevelRowId": 3949816,
+                  "coordinates": {
+                    "x": 26.2,
+                    "y": 22.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 232.704,
+                      "y": 42.8912,
+                      "z": 46.0167
+                    },
+                    "mapGameId": "w1f1/00"
+                  }
+                },
+                {
+                  "zoneId": "western-thanalan",
+                  "zoneName": "Western Thanalan",
+                  "territoryId": "territory-140",
+                  "mapId": "map-20",
+                  "sourceLevelRowId": 3949816,
+                  "coordinates": {
+                    "x": 26.2,
+                    "y": 22.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 232.704,
+                      "y": 42.8912,
+                      "z": 46.0167
+                    },
+                    "mapGameId": "w1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-harder-than-rock-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 5,
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 1400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1681",
+                "itemName": "Bone Hora",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3002",
+                "itemName": "Custom-made Shirt",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2653",
+                "itemName": "Leather Eyepatch",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-3530",
+                "itemName": "Fingerless Leather Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-27634",
+                "itemName": "Altered Thighboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-14",
+                "notes": "Stain: Blood Red"
+              },
+              {
+                "itemId": "item-5823",
+                "itemName": "Allagan Tin Piece",
+                "quantity": 5,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66090,
+              "internalId": "ClsPgl050_00554",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 50,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2001280,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2000423,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2001281,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2001282,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2001283,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2001285,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT5",
+                  "argument": 2001541,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTION0",
+                  "argument": 53,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 4068746,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT6",
+                  "argument": 2001542,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 4068756,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT7",
+                  "argument": 2001543,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 4068761,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT8",
+                  "argument": 2001544,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY3",
+                  "argument": 4068766,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUT_CLSPGL05010",
+                  "argument": 163,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2000423,
+                  "itemId": "event-item-2000423",
+                  "name": "Faded Gil",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25917,
+                  "quantity": 5
+                }
+              ],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66091,
+                  66234
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "pugilist-class-quests-class-burning-up-the-quarter-malm-66091",
+          "name": "Burning Up the Quarter Malm",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 66091
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66091,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:03.564Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003817",
+            "npcName": "Hamon",
+            "sourceRowId": 1003817,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.8,
+              "y": 10.4
+            }
+          },
+          "availability": {
+            "startingClassJobIds": [
+              "pugilist"
+            ],
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "pugilist-class-quests-class-harder-than-rock-66090",
+            "pugilist-class-quests-class-way-of-the-pugilist-66069"
+          ],
+          "nextQuestIds": [
+            "pugilist-class-quests-class-the-spirit-is-willing-66094"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66090,
+              66069
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-burning-up-the-quarter-malm-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 8,
+              "targetId": "actor-2001718",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4148351,
+                  "coordinates": {
+                    "x": 9.1,
+                    "y": 9.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -108.202,
+                      "y": 4.98969,
+                      "z": -105.76
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4148352,
+                  "coordinates": {
+                    "x": 9.1,
+                    "y": 9.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -105.937,
+                      "y": 4.9655,
+                      "z": -107.862
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4148353,
+                  "coordinates": {
+                    "x": 9.7,
+                    "y": 8.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -77.8938,
+                      "y": 5.03421,
+                      "z": -129.178
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4148354,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 8.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.884,
+                      "y": 4.90252,
+                      "z": -130.976
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4148355,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 8.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -71.704,
+                      "y": 5.03877,
+                      "z": -132.641
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-burning-up-the-quarter-malm-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-burning-up-the-quarter-malm-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 4175221,
+                  "coordinates": {
+                    "x": 16.6,
+                    "y": 19.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -246.679,
+                      "y": 19.4772,
+                      "z": -105.581
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-burning-up-the-quarter-malm-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1683",
+                "itemName": "Ramhorn Claws",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3016",
+                "itemName": "Leather Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-2662",
+                "itemName": "Bronze Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-3539",
+                "itemName": "Hempen Bracers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-3770",
+                "itemName": "Leather Jackboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66091,
+              "internalId": "ClsPgl100_00555",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 100,
+              "questLevelOffset": 0,
+              "systemRewards": [
+                6
+              ],
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2001718,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTION0",
+                  "argument": 53,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2001719,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2001720,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2001721,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2001722,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1004382,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1004383,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1004384,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1004385,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1004386,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1004387,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1004388,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1004389,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1004390,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 1004391,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT5",
+                  "argument": 2001514,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT6",
+                  "argument": 2001515,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT7",
+                  "argument": 2001516,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT8",
+                  "argument": 2001517,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT9",
+                  "argument": 2001518,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR11",
+                  "argument": 1004392,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 771,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTION1",
+                  "argument": 56,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR20",
+                  "argument": 1003827,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "HOW_TO_GEAR_SET",
+                  "argument": 38,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_GEAR_SET",
+                  "argument": 29,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_CLASS_CANGE",
+                  "argument": 22,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1004382
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1004383
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1004384
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1004385
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1004386
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1004387
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1004388
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1004389
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1004390
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1004391
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1004392
+                },
+                {
+                  "sourceInstruction": "ACTOR20",
+                  "actorRowId": 1003827
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1004382
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1004383
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1004384
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1004385
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1004386
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1004387
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1004388
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1004389
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1004390
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1004391
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1004392
+                },
+                {
+                  "sourceInstruction": "ACTOR20",
+                  "actorRowId": 1003827,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66094
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "pugilist-class-quests-class-burning-up-the-quarter-malm-66234",
+          "name": "Burning Up the Quarter Malm",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 66234
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66234,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:09.286Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003817",
+            "npcName": "Hamon",
+            "sourceRowId": 1003817,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.8,
+              "y": 10.4
+            }
+          },
+          "availability": {
+            "excludedStartingClassJobIds": [
+              "pugilist"
+            ],
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "pugilist-class-quests-class-harder-than-rock-66090",
+            "pugilist-class-quests-class-my-first-hora-66089"
+          ],
+          "nextQuestIds": [
+            "pugilist-class-quests-class-the-spirit-is-willing-66094"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66090,
+              66089
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-burning-up-the-quarter-malm-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "targetId": "actor-2001798",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4175151,
+                  "coordinates": {
+                    "x": 9.1,
+                    "y": 9.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -107.902,
+                      "y": 4.98969,
+                      "z": -105.46
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4175152,
+                  "coordinates": {
+                    "x": 9.1,
+                    "y": 9.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -105.636,
+                      "y": 4.9655,
+                      "z": -107.562
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4175153,
+                  "coordinates": {
+                    "x": 9.7,
+                    "y": 8.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -77.5938,
+                      "y": 5.03421,
+                      "z": -128.878
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4175154,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 8.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5839,
+                      "y": 4.90252,
+                      "z": -130.676
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                },
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 4175155,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 8.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -71.4041,
+                      "y": 5.03877,
+                      "z": -132.34
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-burning-up-the-quarter-malm-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-burning-up-the-quarter-malm-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 4175221,
+                  "coordinates": {
+                    "x": 16.6,
+                    "y": 19.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -246.679,
+                      "y": 19.4772,
+                      "z": -105.581
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-burning-up-the-quarter-malm-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1683",
+                "itemName": "Ramhorn Claws",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3016",
+                "itemName": "Leather Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-2662",
+                "itemName": "Bronze Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-3539",
+                "itemName": "Hempen Bracers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-3770",
+                "itemName": "Leather Jackboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-9",
+                "notes": "Stain: Rolanberry Red"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66234,
+              "internalId": "ClsPgl101_00698",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 100,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2001798,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTION0",
+                  "argument": 53,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2001799,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2001800,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2001801,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1004382,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1004383,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1004384,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1004385,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1004386,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1004387,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1004388,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1004389,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1004390,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 1004391,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR11",
+                  "argument": 1004392,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2001790,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT5",
+                  "argument": 2001791,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT6",
+                  "argument": 2001792,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT7",
+                  "argument": 2001793,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT8",
+                  "argument": 2001794,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT9",
+                  "argument": 2001795,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT10",
+                  "argument": 2001802,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 771,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTION1",
+                  "argument": 56,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR20",
+                  "argument": 1003827,
+                  "referenceType": "actor"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1004382
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1004383
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1004384
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1004385
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1004386
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1004387
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1004388
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1004389
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1004390
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1004391
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1004392
+                },
+                {
+                  "sourceInstruction": "ACTOR20",
+                  "actorRowId": 1003827
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1004382
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1004383
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1004384
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1004385
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1004386
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1004387
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1004388
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1004389
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1004390
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1004391
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1004392
+                },
+                {
+                  "sourceInstruction": "ACTOR20",
+                  "actorRowId": 1003827,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66094
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "pugilist-class-quests-class-the-spirit-is-willing-66094",
+          "name": "The Spirit Is Willing",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 15,
+          "externalIds": {
+            "xivapi-quest-row": 66094
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66094,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:14.984Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003817",
+            "npcName": "Hamon",
+            "sourceRowId": 1003817,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.8,
+              "y": 10.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "pugilist-class-quests-class-burning-up-the-quarter-malm-66091",
+            "pugilist-class-quests-class-burning-up-the-quarter-malm-66234"
+          ],
+          "nextQuestIds": [
+            "pugilist-class-quests-class-keeping-the-spirit-alive-66098"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66091,
+              66234
+            ],
+            "previousQuestJoin": 2,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 15
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2000408",
+              "itemName": "Toxic Toad Leg",
+              "sourceRowId": 2000408,
+              "sourceSheet": "event-item",
+              "quantity": 5,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-spirit-is-willing-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 5,
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3955173,
+                  "coordinates": {
+                    "x": 27.6,
+                    "y": 19.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 306.47,
+                      "y": -27.0135,
+                      "z": -116.04
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-spirit-is-willing-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003822",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3955440,
+                  "coordinates": {
+                    "x": 21,
+                    "y": 18.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -27.3702,
+                      "y": -2.05996,
+                      "z": -146.899
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-spirit-is-willing-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 3,
+              "targetId": "actor-1001578",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3775589,
+                  "coordinates": {
+                    "x": 20.8,
+                    "y": 18.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -35.4162,
+                      "y": -2.05769,
+                      "z": -154.925
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                },
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 2464316,
+                  "coordinates": {
+                    "x": 21.2,
+                    "y": 17.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -13.0465,
+                      "y": -2.07227,
+                      "z": -184.405
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                },
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3995555,
+                  "coordinates": {
+                    "x": 21.6,
+                    "y": 18
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 5.72211,
+                      "y": -1.98518,
+                      "z": -172.778
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-the-spirit-is-willing-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003822",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3955440,
+                  "coordinates": {
+                    "x": 21,
+                    "y": 18.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -27.3702,
+                      "y": -2.05996,
+                      "z": -146.899
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-the-spirit-is-willing-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2001349",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3954552,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 20.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -241.411,
+                      "y": 8.10087,
+                      "z": -32.2145
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-the-spirit-is-willing-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1004149",
+              "locations": [
+                {
+                  "zoneId": "central-thanalan",
+                  "zoneName": "Central Thanalan",
+                  "territoryId": "territory-141",
+                  "mapId": "map-21",
+                  "sourceLevelRowId": 3995660,
+                  "coordinates": {
+                    "x": 16.6,
+                    "y": 20.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -242.828,
+                      "y": 7.40504,
+                      "z": -29.2897
+                    },
+                    "mapGameId": "w1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-the-spirit-is-willing-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003827",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3956763,
+                  "coordinates": {
+                    "x": 9.9,
+                    "y": 10.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -65.6561,
+                      "y": 0.948195,
+                      "z": -51.983
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 5760,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1685",
+                "itemName": "Hard Leather Himantes",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3022",
+                "itemName": "Cotton Shirt",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-66",
+                "notes": "Stain: Ceruleum Blue"
+              },
+              {
+                "itemId": "item-2677",
+                "itemName": "Hunting Hat",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-66",
+                "notes": "Stain: Ceruleum Blue"
+              },
+              {
+                "itemId": "item-3546",
+                "itemName": "Fingerless Hard Leather Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-66",
+                "notes": "Stain: Ceruleum Blue"
+              },
+              {
+                "itemId": "item-3780",
+                "itemName": "Hard Leather Crakows",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-66",
+                "notes": "Stain: Ceruleum Blue"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "action",
+              "targetId": "action-25761",
+              "sourceRowId": 25761,
+              "name": "Steel Peak"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66094,
+              "internalId": "ClsPgl150_00558",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 150,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 26,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2000408,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003822,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1004147,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1001578,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1001445,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1004148,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2001349,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_WAITING_SHOR",
+                  "argument": 11,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1004149,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1004150,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1003827,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 258,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 30,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1003827,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1002024,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "NCUT_15010",
+                  "argument": 164,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 995,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_WS",
+                  "argument": 25761,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2000408,
+                  "itemId": "event-item-2000408",
+                  "name": "Toxic Toad Leg",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25155,
+                  "quantity": 5
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003822
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1004147
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1001578
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1001445
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1004148
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1004149
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1004150
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1003827
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1003827
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1002024
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003822,
+                  "name": "Hamon",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1004147,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1001578,
+                  "name": "Zuzumeda",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1001445,
+                  "name": "Osbert",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1004148,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1004149,
+                  "name": "Hamon",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1004150,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1003827,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1003827,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1002024,
+                  "name": "Nanajapi",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66098
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        },
+        {
+          "id": "pugilist-class-quests-class-keeping-the-spirit-alive-66098",
+          "name": "Keeping the Spirit Alive",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 66098
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66098,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:18.359Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003817",
+            "npcName": "Hamon",
+            "sourceRowId": 1003817,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.8,
+              "y": 10.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "pugilist-class-quests-class-the-spirit-is-willing-66094"
+          ],
+          "nextQuestIds": [
+            "pugilist-class-quests-class-star-crossed-rivals-66102"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66094
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2000367",
+              "itemName": "Hornet Stinger",
+              "sourceRowId": 2000367,
+              "sourceSheet": "event-item",
+              "quantity": 6,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-keeping-the-spirit-alive-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003827",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3956763,
+                  "coordinates": {
+                    "x": 9.9,
+                    "y": 10.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -65.6561,
+                      "y": 0.948195,
+                      "z": -51.983
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-keeping-the-spirit-alive-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "eastern-thanalan",
+                  "zoneName": "Eastern Thanalan",
+                  "territoryId": "territory-145",
+                  "mapId": "map-22",
+                  "sourceLevelRowId": 4009286,
+                  "coordinates": {
+                    "x": 17,
+                    "y": 25.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -222.427,
+                      "y": -38.0642,
+                      "z": 219.838
+                    },
+                    "mapGameId": "w1f3/00"
+                  }
+                },
+                {
+                  "zoneId": "eastern-thanalan",
+                  "zoneName": "Eastern Thanalan",
+                  "territoryId": "territory-145",
+                  "mapId": "map-22",
+                  "sourceLevelRowId": 4009286,
+                  "coordinates": {
+                    "x": 17,
+                    "y": 25.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -222.427,
+                      "y": -38.0642,
+                      "z": 219.838
+                    },
+                    "mapGameId": "w1f3/00"
+                  }
+                },
+                {
+                  "zoneId": "eastern-thanalan",
+                  "zoneName": "Eastern Thanalan",
+                  "territoryId": "territory-145",
+                  "mapId": "map-22",
+                  "sourceLevelRowId": 4009286,
+                  "coordinates": {
+                    "x": 17,
+                    "y": 25.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -222.427,
+                      "y": -38.0642,
+                      "z": 219.838
+                    },
+                    "mapGameId": "w1f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-keeping-the-spirit-alive-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 15,
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-keeping-the-spirit-alive-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-keeping-the-spirit-alive-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1688",
+                "itemName": "Goatskin Cesti",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3043",
+                "itemName": "Goatskin Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-40",
+                "notes": "Stain: Cream Yellow"
+              },
+              {
+                "itemId": "item-2710",
+                "itemName": "Goatskin Eyepatch",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-40",
+                "notes": "Stain: Cream Yellow"
+              },
+              {
+                "itemId": "item-3559",
+                "itemName": "Goatskin Armguards",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-40",
+                "notes": "Stain: Cream Yellow"
+              },
+              {
+                "itemId": "item-3791",
+                "itemName": "Goatskin Leg Guards",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-40",
+                "notes": "Stain: Cream Yellow"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 5,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66098,
+              "internalId": "ClsPgl200_00562",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 200,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003827,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2001389,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTION0",
+                  "argument": 53,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 3996145,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 3996150,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2000367,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2001390,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 3996230,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY3",
+                  "argument": 3996232,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2001391,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ENEMY4",
+                  "argument": 4023653,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY5",
+                  "argument": 4023654,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY6",
+                  "argument": 4172347,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2001855,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 259,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 31,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_20010",
+                  "argument": 165,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2000367,
+                  "itemId": "event-item-2000367",
+                  "name": "Hornet Stinger",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 22305,
+                  "quantity": 6
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003827
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003827,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66102
+                ]
+              }
+            }
+          },
+          "sortOrder": 8
+        },
+        {
+          "id": "pugilist-class-quests-class-star-crossed-rivals-66102",
+          "name": "Star-crossed Rivals",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 25,
+          "externalIds": {
+            "xivapi-quest-row": 66102
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66102,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:21.121Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003817",
+            "npcName": "Hamon",
+            "sourceRowId": 1003817,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.8,
+              "y": 10.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "pugilist-class-quests-class-keeping-the-spirit-alive-66098"
+          ],
+          "nextQuestIds": [
+            "pugilist-class-quests-class-return-of-the-holyfist-66103"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66098
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 25
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2000409",
+              "itemName": "Striking Dummy",
+              "sourceRowId": 2000409,
+              "sourceSheet": "event-item",
+              "quantity": 4,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-star-crossed-rivals-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003827",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3956763,
+                  "coordinates": {
+                    "x": 9.9,
+                    "y": 10.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -65.6561,
+                      "y": 0.948195,
+                      "z": -51.983
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-star-crossed-rivals-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003829",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4056390,
+                  "coordinates": {
+                    "x": 18.6,
+                    "y": 14.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -147.322,
+                      "y": 25.91,
+                      "z": -359.736
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-star-crossed-rivals-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 4,
+              "targetId": "actor-2001522",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4055936,
+                  "coordinates": {
+                    "x": 21.9,
+                    "y": 9.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 22.1893,
+                      "y": 17.8722,
+                      "z": -600.219
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                },
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4055942,
+                  "coordinates": {
+                    "x": 19.4,
+                    "y": 17.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -105.572,
+                      "y": 15.0025,
+                      "z": -185.303
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                },
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4056093,
+                  "coordinates": {
+                    "x": 25.5,
+                    "y": 12.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 197.441,
+                      "y": 15.5578,
+                      "z": -450.583
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                },
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4056101,
+                  "coordinates": {
+                    "x": 17.4,
+                    "y": 14.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -203.799,
+                      "y": 27.2687,
+                      "z": -351.76
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-star-crossed-rivals-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003829",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4056390,
+                  "coordinates": {
+                    "x": 18.6,
+                    "y": 14.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -147.322,
+                      "y": 25.91,
+                      "z": -359.736
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-star-crossed-rivals-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 8160,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1697",
+                "itemName": "Toadskin Cesti",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3066",
+                "itemName": "Velveteen Shirt",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-55",
+                "notes": "Stain: Nophica Green"
+              },
+              {
+                "itemId": "item-3576",
+                "itemName": "Fingerless Goatskin Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-55",
+                "notes": "Stain: Nophica Green"
+              },
+              {
+                "itemId": "item-3349",
+                "itemName": "Velveteen Sarouel",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-55",
+                "notes": "Stain: Nophica Green"
+              },
+              {
+                "itemId": "item-27638",
+                "itemName": "Altered Velveteen Bandana",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-55",
+                "notes": "Stain: Nophica Green"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66102,
+              "internalId": "ClsPgl250_00566",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 250,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003827,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1003829,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2000409,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2001522,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2001523,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2001524,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2001525,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2001856,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 260,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 32,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2000409,
+                  "itemId": "event-item-2000409",
+                  "name": "Striking Dummy",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 27281,
+                  "quantity": 4
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003827
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1003829
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003827,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1003829,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66103
+                ]
+              }
+            }
+          },
+          "sortOrder": 9
+        },
+        {
+          "id": "pugilist-class-quests-class-return-of-the-holyfist-66103",
+          "name": "Return of the Holyfist",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 30,
+          "externalIds": {
+            "xivapi-quest-row": 66103
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 66103,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:24.312Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1003817",
+            "npcName": "Hamon",
+            "sourceRowId": 1003817,
+            "zoneId": "uldah-steps-of-nald",
+            "zoneName": "Ul'dah - Steps of Nald",
+            "coordinates": {
+              "x": 9.8,
+              "y": 10.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "pugilist-class-quests-class-star-crossed-rivals-66102"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              66102
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 30
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-return-of-the-holyfist-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003830",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 3961750,
+                  "coordinates": {
+                    "x": 15.5,
+                    "y": 30.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -301.53,
+                      "y": 5.29996,
+                      "z": 471.33
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-return-of-the-holyfist-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 4175107,
+                  "coordinates": {
+                    "x": 16,
+                    "y": 35
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -276.6,
+                      "y": -7.0429,
+                      "z": 672.413
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-return-of-the-holyfist-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003830",
+              "locations": [
+                {
+                  "zoneId": "southern-thanalan",
+                  "zoneName": "Southern Thanalan",
+                  "territoryId": "territory-146",
+                  "mapId": "map-23",
+                  "sourceLevelRowId": 3961750,
+                  "coordinates": {
+                    "x": 15.5,
+                    "y": 30.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -301.53,
+                      "y": 5.29996,
+                      "z": 471.33
+                    },
+                    "mapGameId": "w1f4/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-return-of-the-holyfist-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003890",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3961755,
+                  "coordinates": {
+                    "x": 10.8,
+                    "y": 8.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -21.8052,
+                      "y": 4,
+                      "z": -145.159
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-return-of-the-holyfist-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1003817",
+              "targetName": "Hamon",
+              "locations": [
+                {
+                  "zoneId": "uldah-steps-of-nald",
+                  "zoneName": "Ul'dah - Steps of Nald",
+                  "territoryId": "territory-130",
+                  "mapId": "map-13",
+                  "sourceLevelRowId": 3947222,
+                  "coordinates": {
+                    "x": 9.8,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -74.5413,
+                      "y": 1.99999,
+                      "z": -42.3795
+                    },
+                    "mapGameId": "w1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 12480,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-1699",
+                "itemName": "Steel Claws",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3100",
+                "itemName": "Toadskin Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-68",
+                "notes": "Stain: Ink Blue"
+              },
+              {
+                "itemId": "item-2753",
+                "itemName": "Steel Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-68",
+                "notes": "Stain: Ink Blue"
+              },
+              {
+                "itemId": "item-3597",
+                "itemName": "Toadskin Armguards",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-68",
+                "notes": "Stain: Ink Blue"
+              },
+              {
+                "itemId": "item-3827",
+                "itemName": "Toadskin Leg Guards",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-68",
+                "notes": "Stain: Ink Blue"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:46:27.309Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 66103,
+              "internalId": "ClsPgl300_00567",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Pugilist Quests",
+              "eventIconType": 8,
+              "sortKey": 300,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1003817,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1003830,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1003827,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 357,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2001857,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1003890,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1003891,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1003892,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1005995,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1005996,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1005997,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2001858,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1004470,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 261,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 33,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "TERRITORYTYPE1",
+                  "argument": 251,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE1",
+                  "argument": 34,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1003827,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1006011,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_FACE0",
+                  "argument": 604,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_FACE1",
+                  "argument": 605,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_30010",
+                  "argument": 166,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_30020",
+                  "argument": 167,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION0",
+                  "argument": 995,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_WS",
+                  "argument": 66,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_VFX",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003830
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1003827
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1003890
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1003891
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1003892
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1005995
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1005996
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1005997
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1004470
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1003827
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1006011
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1003830,
+                  "name": "Hamon",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1003827,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1003890,
+                  "name": "Weggfarr",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1003891
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1003892
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1005995
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1005996
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1005997
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1004470,
+                  "name": "Rurukuta",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1003827,
+                  "name": "Chuchuto",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1006011,
+                  "name": "Rurukuta",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  66597
+                ]
+              }
+            }
+          },
+          "sortOrder": 10
+        }
+      ]
+    }
+  ]
+}

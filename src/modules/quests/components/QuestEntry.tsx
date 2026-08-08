@@ -2,6 +2,7 @@ import type { KeyboardEvent, MouseEvent } from 'react';
 
 import {
   BookOpen,
+  CheckCircle2,
   Coins,
   Crosshair,
   Gauge,
@@ -26,6 +27,7 @@ interface QuestEntryProps {
   quest: Quest;
 
   isCompleted: boolean;
+  isAlternativeSatisfied: boolean;
   isCurrent: boolean;
 
   onToggleCompletion: () => void;
@@ -84,6 +86,7 @@ function isInteractiveTarget(target: EventTarget | null): boolean {
 export function QuestEntry({
   quest,
   isCompleted,
+  isAlternativeSatisfied,
   isCurrent,
   onToggleCompletion,
   onOpenDetails,
@@ -145,11 +148,28 @@ export function QuestEntry({
     >
       <div className="quest-entry__main">
         {isCompletable ? (
-          <label className="quest-entry__check">
+          <label
+            className={[
+              'quest-entry__check',
+              isAlternativeSatisfied ? 'quest-entry__check--disabled' : '',
+            ]
+              .filter(Boolean)
+              .join(' ')}
+            title={
+              isAlternativeSatisfied
+                ? 'Another mutually exclusive quest satisfies this requirement.'
+                : undefined
+            }
+          >
             <input
               type="checkbox"
               checked={isCompleted}
-              aria-label={`Mark ${quest.name} complete`}
+              disabled={isAlternativeSatisfied}
+              aria-label={
+                isAlternativeSatisfied
+                  ? `${quest.name} is satisfied by an alternative quest`
+                  : `Mark ${quest.name} complete`
+              }
               onChange={onToggleCompletion}
             />
 
@@ -175,7 +195,7 @@ export function QuestEntry({
               </p>
             </div>
 
-            {(isCurrent || !isCompletable) && (
+            {(isCurrent || !isCompletable || isAlternativeSatisfied) && (
               <div className="quest-entry__actions">
                 {!isCompletable && (
                   <span className="quest-entry__reference-indicator">
@@ -190,6 +210,17 @@ export function QuestEntry({
                     <Crosshair aria-hidden="true" />
 
                     <span>Current</span>
+                  </span>
+                )}
+
+                {isAlternativeSatisfied && (
+                  <span
+                    className="quest-entry__current-indicator"
+                    title="A mutually exclusive alternative has been completed."
+                  >
+                    <CheckCircle2 aria-hidden="true" />
+
+                    <span>Alternative satisfied</span>
                   </span>
                 )}
               </div>

@@ -20,7 +20,11 @@ import { QuestEntry } from '../components/QuestEntry';
 
 import { useQuestFilterStore } from '../state/questFilterStore';
 
-import { isQuestCompletionEligible } from '../utilities/questCompletion';
+import {
+  createSatisfiedQuestIdSet,
+  getQuestCompletionSummary,
+  isQuestCompletionEligible,
+} from '../utilities/questCompletion';
 
 import type {
   Quest,
@@ -96,26 +100,6 @@ function formatPatchTitle(
   return normalizedManifestTitle || patchLabel;
 }
 
-function formatVerificationStatus(status: string): string {
-  return status
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
-const VERIFICATION_STATUS_ORDER: ReadonlyArray<
-  QuestCollection['verificationStatus']
-> = ['incomplete', 'partially-complete', 'in-review', 'verified'];
-
-function getCombinedVerificationStatus(
-  statuses: ReadonlyArray<QuestCollection['verificationStatus']>,
-): QuestCollection['verificationStatus'] {
-  return (
-    VERIFICATION_STATUS_ORDER.find((status) => statuses.includes(status)) ??
-    'incomplete'
-  );
-}
-
 export function QuestLogPage() {
   const state = useQuestCatalog();
 
@@ -186,6 +170,8 @@ export function QuestLogPage() {
     return createAvailableQuestCatalog(state.catalog, {
       startingCity: profile.startingCity,
 
+      startingClassJob: profile.startingClassJob,
+
       initialGrandCompany: profile.initialGrandCompany,
 
       currentGrandCompany: profile.currentGrandCompany,
@@ -193,9 +179,20 @@ export function QuestLogPage() {
   }, [
     state,
     profile.startingCity,
+    profile.startingClassJob,
     profile.initialGrandCompany,
     profile.currentGrandCompany,
   ]);
+
+  const catalogQuests = useMemo(
+    () => (catalog ? Array.from(catalog.questsById.values()) : []),
+    [catalog],
+  );
+
+  const satisfiedQuestIdSet = useMemo(
+    () => createSatisfiedQuestIdSet(catalogQuests, profile.completedQuestIds),
+    [catalogQuests, profile.completedQuestIds],
+  );
 
   const automaticCurrentQuestId = useMemo(() => {
     if (!catalog) {
@@ -208,9 +205,9 @@ export function QuestLogPage() {
 
     return getAutomaticCurrentQuestId(
       currentQuestCollections,
-      profile.completedQuestIds,
+      Array.from(satisfiedQuestIdSet),
     );
-  }, [catalog, categoryFilter, profile.completedQuestIds]);
+  }, [catalog, categoryFilter, satisfiedQuestIdSet]);
 
   const questsByPatchSectionId = useMemo(() => {
     const questsBySectionId = new Map<string, Quest[]>();
@@ -415,7 +412,7 @@ export function QuestLogPage() {
               const matchesCompletion =
                 showCompleted ||
                 !isQuestCompletionEligible(quest) ||
-                !completedQuestIdSet.has(quest.id);
+                !satisfiedQuestIdSet.has(quest.id);
 
               return (
                 matchesCategory &&
@@ -445,7 +442,7 @@ export function QuestLogPage() {
     primaryFilter,
     secondaryFilter,
     searchQuery,
-    completedQuestIdSet,
+    satisfiedQuestIdSet,
     showCompleted,
   ]);
 
@@ -510,27 +507,13 @@ export function QuestLogPage() {
     [filteredCollections],
   );
 
-  const completableQuestCount = useMemo(() => {
-    if (!catalog) {
-      return 0;
-    }
+  const catalogCompletionSummary = useMemo(
+    () => getQuestCompletionSummary(catalogQuests, satisfiedQuestIdSet),
+    [catalogQuests, satisfiedQuestIdSet],
+  );
 
-    return Array.from(catalog.questsById.values()).filter(
-      isQuestCompletionEligible,
-    ).length;
-  }, [catalog]);
-
-  const loadedCompletedCount = useMemo(() => {
-    if (!catalog) {
-      return 0;
-    }
-
-    return profile.completedQuestIds.filter((questId) => {
-      const quest = catalog.questsById.get(questId);
-
-      return quest !== undefined && isQuestCompletionEligible(quest);
-    }).length;
-  }, [catalog, profile.completedQuestIds]);
+  const completableQuestCount = catalogCompletionSummary.total;
+  const loadedCompletedCount = catalogCompletionSummary.completed;
 
   const selectedQuest =
     catalog && selectedQuestId
@@ -584,6 +567,15 @@ export function QuestLogPage() {
       return;
     }
 
+    const isAlternativeSatisfied =
+      quest.alternativeCompletionGroupId !== undefined &&
+      satisfiedQuestIdSet.has(quest.id) &&
+      !completedQuestIdSet.has(quest.id);
+
+    if (isAlternativeSatisfied) {
+      return;
+    }
+
     if (!catalog || completedQuestIdSet.has(quest.id)) {
       toggleQuestCompletion(quest.id);
       return;
@@ -592,7 +584,7 @@ export function QuestLogPage() {
     const previousQuestIds = getPreviousQuestIds(
       quest.id,
       catalog.questsById,
-      completedQuestIdSet,
+      satisfiedQuestIdSet,
     );
 
     markQuestsComplete([...previousQuestIds, quest.id]);
@@ -616,6 +608,11 @@ export function QuestLogPage() {
         onOpenDetails={() => {
           setSelectedQuestId(quest.id);
         }}
+        isAlternativeSatisfied={
+          quest.alternativeCompletionGroupId !== undefined &&
+          satisfiedQuestIdSet.has(quest.id) &&
+          !completedQuestIdSet.has(quest.id)
+        }
       />
     );
   }
@@ -677,7 +674,29 @@ export function QuestLogPage() {
         </section>
       )}
 
+      {profile.startingCity !== null && profile.startingClassJob === null && (
+        <section className="quest-path-notice">
+          <div className="quest-path-notice__icon" aria-hidden="true">
+            <AlertTriangle />
+          </div>
+
+          <div>
+            <p className="quest-path-notice__eyebrow">Starting class needed</p>
+
+            <h2>Select your starting class</h2>
+
+            <p>
+              Early class quest routes differ depending on which class the
+              character selected during character creation.
+            </p>
+
+            <Link to="/profile">Configure profile</Link>
+          </div>
+        </section>
+      )}
+
       {profile.startingCity !== null &&
+        profile.startingClassJob !== null &&
         profile.initialGrandCompany === null && (
           <section className="quest-path-notice">
             <div className="quest-path-notice__icon" aria-hidden="true">
@@ -867,21 +886,21 @@ export function QuestLogPage() {
                 const sectionQuests =
                   questsByPatchSectionId.get(section.id) ?? [];
 
-                const completableSectionQuests = sectionQuests.filter(
-                  isQuestCompletionEligible,
+                const sectionCompletionSummary = getQuestCompletionSummary(
+                  sectionQuests,
+                  satisfiedQuestIdSet,
                 );
 
-                const completedSectionCount = completableSectionQuests.filter(
-                  (quest) => completedQuestIdSet.has(quest.id),
-                ).length;
+                const completedSectionCount =
+                  sectionCompletionSummary.completed;
+                const completableSectionCount = sectionCompletionSummary.total;
 
                 const isReferenceOnlySection =
-                  sectionQuests.length > 0 &&
-                  completableSectionQuests.length === 0;
+                  sectionQuests.length > 0 && completableSectionCount === 0;
 
                 const isPatchComplete =
-                  completableSectionQuests.length > 0 &&
-                  completedSectionCount === completableSectionQuests.length;
+                  completableSectionCount > 0 &&
+                  completedSectionCount === completableSectionCount;
 
                 const visibleSectionCount = section.ranges.reduce(
                   (rangeTotal, { groups }) =>
@@ -891,12 +910,6 @@ export function QuestLogPage() {
                       0,
                     ),
                   0,
-                );
-
-                const verificationStatus = getCombinedVerificationStatus(
-                  section.ranges.map(
-                    ({ collection }) => collection.verificationStatus,
-                  ),
                 );
 
                 const isPatchExpanded =
@@ -971,20 +984,11 @@ export function QuestLogPage() {
                         <p className="quest-collection__progress">
                           {isReferenceOnlySection
                             ? 'Reference collection · not counted toward completion'
-                            : `${completedSectionCount} of ${completableSectionQuests.length} complete`}
+                            : `${completedSectionCount} of ${completableSectionCount} complete`}
                         </p>
                       </div>
 
                       <div className="quest-collection__header-actions">
-                        <span
-                          className={[
-                            'quest-collection__status',
-                            `quest-collection__status--${verificationStatus}`,
-                          ].join(' ')}
-                        >
-                          {formatVerificationStatus(verificationStatus)}
-                        </span>
-
                         {visibleSectionCount !== sectionQuests.length && (
                           <span className="quest-collection__visible-count">
                             {visibleSectionCount} shown
@@ -1046,23 +1050,24 @@ export function QuestLogPage() {
 
                               const visibleRangeQuests = quests;
 
-                              const completableRangeQuests = rangeQuests.filter(
-                                isQuestCompletionEligible,
-                              );
+                              const rangeCompletionSummary =
+                                getQuestCompletionSummary(
+                                  rangeQuests,
+                                  satisfiedQuestIdSet,
+                                );
 
                               const completedRangeCount =
-                                completableRangeQuests.filter((quest) =>
-                                  completedQuestIdSet.has(quest.id),
-                                ).length;
+                                rangeCompletionSummary.completed;
+                              const completableRangeCount =
+                                rangeCompletionSummary.total;
 
                               const isReferenceOnlyRange =
                                 rangeQuests.length > 0 &&
-                                completableRangeQuests.length === 0;
+                                completableRangeCount === 0;
 
                               const isRangeComplete =
-                                completableRangeQuests.length > 0 &&
-                                completedRangeCount ===
-                                  completableRangeQuests.length;
+                                completableRangeCount > 0 &&
+                                completedRangeCount === completableRangeCount;
 
                               const isRangeExpanded =
                                 shouldAutoExpandMatches ||
@@ -1113,7 +1118,7 @@ export function QuestLogPage() {
                                       <span>
                                         {isReferenceOnlyRange
                                           ? 'Reference only'
-                                          : `${completedRangeCount} / ${completableRangeQuests.length} complete`}
+                                          : `${completedRangeCount} / ${completableRangeCount} complete`}
                                       </span>
 
                                       {visibleRangeQuests.length !==
@@ -1203,6 +1208,11 @@ export function QuestLogPage() {
           onSaveNote={(note) => {
             setQuestNote(selectedQuest.id, note);
           }}
+          isAlternativeSatisfied={
+            selectedQuest.alternativeCompletionGroupId !== undefined &&
+            satisfiedQuestIdSet.has(selectedQuest.id) &&
+            !completedQuestIdSet.has(selectedQuest.id)
+          }
         />
       )}
     </div>

@@ -801,6 +801,8 @@ function createMarkdown(review: JsonObject): string {
 async function main(): Promise<void> {
   const inputPath = readInputPath();
 
+  const quiet = process.argv.includes('--quiet');
+
   const rawText = await readFile(inputPath, 'utf8');
 
   const response = xivapiRowResponseSchema.parse(
@@ -1265,11 +1267,13 @@ async function main(): Promise<void> {
 
   await writeFile(markdownOutputPath, createMarkdown(review), 'utf8');
 
-  console.log(createMarkdown(review));
+  if (!quiet) {
+    console.log(createMarkdown(review));
 
-  console.log(`JSON review: ${jsonOutputPath}`);
+    console.log(`JSON review: ${jsonOutputPath}`);
 
-  console.log(`Markdown review: ${markdownOutputPath}`);
+    console.log(`Markdown review: ${markdownOutputPath}`);
+  }
 }
 
 await main();

@@ -12,6 +12,8 @@ JOURNAL_GENRES=(
   "White Mage Quests"
 )
 
+EXCLUDED_QUEST_ROWS="66660"
+
 PRIMARY_FACET_ID="healer"
 PRIMARY_FACET_NAME="Healer"
 

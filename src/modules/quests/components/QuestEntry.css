@@ -302,6 +302,18 @@
   white-space: nowrap;
 }
 
+.quest-entry__check--disabled {
+  cursor: default;
+}
+
+.quest-entry__check--disabled .quest-entry__custom-check {
+  opacity: 0.45;
+}
+
+.quest-entry__check--disabled:hover .quest-entry__custom-check {
+  border-color: var(--color-border-strong);
+}
+
 @media (max-width: 38rem) {
   .quest-entry__heading {
     display: grid;

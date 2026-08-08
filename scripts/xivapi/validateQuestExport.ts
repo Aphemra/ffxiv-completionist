@@ -991,6 +991,15 @@ async function main(): Promise<void> {
     allowDisconnected,
   );
 
+  const willRefreshDerivedMetadata =
+    shouldWrite && integrityResult.errors.length === 0;
+
+  const reportedWarnings = willRefreshDerivedMetadata
+    ? integrityResult.warnings.filter(
+        (warning) => !warning.includes('Run with "--write"'),
+      )
+    : integrityResult.warnings;
+
   const questsWithIssues = new Set(
     unresolvedIssues.map((issue) => issue.questId),
   ).size;
@@ -1008,7 +1017,7 @@ async function main(): Promise<void> {
 
   console.log(`Structural errors: ${integrityResult.errors.length}`);
 
-  console.log(`Warnings: ${integrityResult.warnings.length}`);
+  console.log(`Warnings: ${reportedWarnings.length}`);
 
   console.log(`Unresolved fields: ${unresolvedIssues.length}`);
 
@@ -1016,7 +1025,7 @@ async function main(): Promise<void> {
 
   printMessages('Structural errors', integrityResult.errors);
 
-  printMessages('Warnings', integrityResult.warnings);
+  printMessages('Warnings', reportedWarnings);
 
   printUnresolvedIssues(unresolvedIssues, verbose);
 

@@ -1,0 +1,4277 @@
+{
+  "schemaVersion": 1,
+  "id": "lancer-class-quests",
+  "title": "Lancer Quests",
+  "category": "class",
+  "generatedAt": "2026-08-08T06:43:59.129Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 10,
+    "branchCount": 3,
+    "convergenceCount": 4,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [
+    {
+      "questId": "lancer-class-quests-class-way-of-the-lancer-65559",
+      "questName": "Way of the Lancer",
+      "relatedQuestIds": [
+        "lancer-class-quests-class-courage-of-stone-65571",
+        "lancer-class-quests-class-spear-of-the-fearless-65583"
+      ]
+    },
+    {
+      "questId": "lancer-class-quests-class-way-of-the-lancer-65668",
+      "questName": "Way of the Lancer",
+      "relatedQuestIds": [
+        "lancer-class-quests-class-courage-of-stone-65679",
+        "lancer-class-quests-class-my-first-spear-65754"
+      ]
+    },
+    {
+      "questId": "lancer-class-quests-class-spear-of-the-fearless-65583",
+      "questName": "Spear of the Fearless",
+      "relatedQuestIds": [
+        "lancer-class-quests-class-courage-of-stone-65571",
+        "lancer-class-quests-class-courage-of-stone-65679"
+      ]
+    }
+  ],
+  "convergences": [
+    {
+      "questId": "lancer-class-quests-class-spear-of-the-fearless-65583",
+      "questName": "Spear of the Fearless",
+      "relatedQuestIds": [
+        "lancer-class-quests-class-way-of-the-lancer-65559",
+        "lancer-class-quests-class-my-first-spear-65754"
+      ]
+    },
+    {
+      "questId": "lancer-class-quests-class-courage-of-stone-65571",
+      "questName": "Courage of Stone",
+      "relatedQuestIds": [
+        "lancer-class-quests-class-spear-of-the-fearless-65583",
+        "lancer-class-quests-class-way-of-the-lancer-65559"
+      ]
+    },
+    {
+      "questId": "lancer-class-quests-class-courage-of-stone-65679",
+      "questName": "Courage of Stone",
+      "relatedQuestIds": [
+        "lancer-class-quests-class-spear-of-the-fearless-65583",
+        "lancer-class-quests-class-way-of-the-lancer-65668"
+      ]
+    },
+    {
+      "questId": "lancer-class-quests-class-a-dangerous-proposition-65591",
+      "questName": "A Dangerous Proposition",
+      "relatedQuestIds": [
+        "lancer-class-quests-class-courage-of-stone-65571",
+        "lancer-class-quests-class-courage-of-stone-65679"
+      ]
+    }
+  ],
+  "issues": [],
+  "quests": [
+    {
+      "id": "lancer-class-quests-class-way-of-the-lancer-65559",
+      "xivapiRowId": 65559,
+      "sortOrder": 1,
+      "name": "Way of the Lancer",
+      "level": 1,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "startingClassJobIds": [
+          "lancer"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 1
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 1
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-way-of-the-lancer-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-lancer-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2650185,
+              "coordinates": {
+                "x": 23.1,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 81.0942,
+                  "y": -9.79,
+                  "z": -216.545
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-lancer-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2650185,
+              "coordinates": {
+                "x": 23.1,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 81.0942,
+                  "y": -9.79,
+                  "z": -216.545
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-lancer-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2650185,
+              "coordinates": {
+                "x": 23.1,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 81.0942,
+                  "y": -9.79,
+                  "z": -216.545
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-way-of-the-lancer-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65559,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:29.635Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65559,
+          "internalId": "ClsLnc000_00023",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 11,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            21
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000251,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "SEQ_0_ACTOR0",
+              "argument": 0,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "SEQ_1_ACTOR1",
+              "argument": 1,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 37,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 49,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 47,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SEQ_3_ACTOR1",
+              "argument": 2,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_CLASS_CHANGE",
+              "argument": 10,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_MONSTER_NOTE",
+              "argument": 32,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_MONSTER_NOTE",
+              "argument": 45,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+              "argument": 1007,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000254
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000254,
+              "name": "Ywain",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65571,
+              65583
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "lancer-class-quests-class-courage-of-stone-65571",
+        "lancer-class-quests-class-spear-of-the-fearless-65583"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "class-job",
+          "id": "class-job-4",
+          "sourceRowId": 4,
+          "name": "Lancer"
+        }
+      ],
+      "rewards": {
+        "experience": 400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-4639",
+            "itemName": "Marmot Steak",
+            "quantity": 5,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Jillian",
+          "title": "Guild Receptionist",
+          "xivapiRowId": 1000251
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.2,
+          "y": 5.9
+        }
+      },
+      "graphRole": "branch"
+    },
+    {
+      "id": "lancer-class-quests-class-way-of-the-lancer-65668",
+      "xivapiRowId": 65668,
+      "sortOrder": 2,
+      "name": "Way of the Lancer",
+      "level": 1,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "excludedStartingClassJobIds": [
+          "lancer"
+        ],
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 1
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 1
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-way-of-the-lancer-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65716
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65668,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:32.739Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65668,
+          "internalId": "ClsLnc998_00132",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 10,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "CLASSJOB",
+              "argument": 4,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000251,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_CLASS_LNC",
+              "argument": 23,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_CLASS_CHANGE",
+              "argument": 10,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+              "argument": 1007,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "GEARSET_UNLOCK",
+              "argument": 1905,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_CLASS_CHANGE",
+              "argument": 10,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_JOB",
+              "argument": 94,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000254
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000254,
+              "name": "Ywain",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65679,
+              65754
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "lancer-class-quests-class-courage-of-stone-65679",
+        "lancer-class-quests-class-my-first-spear-65754"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-1819",
+            "itemName": "Weathered Spear",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Jillian",
+          "title": "Guild Receptionist",
+          "xivapiRowId": 1000251
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.2,
+          "y": 5.9
+        }
+      },
+      "graphRole": "branch"
+    },
+    {
+      "id": "lancer-class-quests-class-my-first-spear-65754",
+      "xivapiRowId": 65754,
+      "sortOrder": 3,
+      "name": "My First Spear",
+      "level": 1,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "excludedStartingClassJobIds": [
+          "lancer"
+        ],
+        "classJobIds": [
+          "lancer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 1
+        },
+        {
+          "type": "class-job",
+          "classJobId": "lancer",
+          "classJobName": "Lancer",
+          "level": 1
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "lancer-my-first-spear-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2650185,
+              "coordinates": {
+                "x": 23.1,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 81.0942,
+                  "y": -9.79,
+                  "z": -216.545
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-my-first-spear-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2650185,
+              "coordinates": {
+                "x": 23.1,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 81.0942,
+                  "y": -9.79,
+                  "z": -216.545
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-my-first-spear-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 3,
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2650185,
+              "coordinates": {
+                "x": 23.1,
+                "y": 17.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 81.0942,
+                  "y": -9.79,
+                  "z": -216.545
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-my-first-spear-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65668
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65754,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:35.125Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65754,
+          "internalId": "ClsLnc100_00218",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 12,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "SEQ_0_ACTOR0",
+              "argument": 0,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 37,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 49,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 47,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SEQ_2_ACTOR0",
+              "argument": 1,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65583
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "lancer-class-quests-class-way-of-the-lancer-65668"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "lancer-class-quests-class-spear-of-the-fearless-65583"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 400,
+        "gil": 115,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Ywain",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000254
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.4,
+          "y": 5.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "lancer-class-quests-class-spear-of-the-fearless-65583",
+      "xivapiRowId": 65583,
+      "sortOrder": 4,
+      "name": "Spear of the Fearless",
+      "level": 5,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "lancer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 5
+        },
+        {
+          "type": "class-job",
+          "classJobId": "lancer",
+          "classJobName": "Lancer",
+          "level": 5
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000230",
+          "itemName": "Foul-smelling Bait",
+          "sourceRowId": 2000230,
+          "sourceSheet": "event-item",
+          "quantity": 2,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "lancer-spear-of-the-fearless-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 2,
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2153813,
+              "coordinates": {
+                "x": 26.7,
+                "y": 18.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 262.111,
+                  "y": -21.1294,
+                  "z": -170.678
+                },
+                "mapGameId": "f1f1/00"
+              }
+            },
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2153813,
+              "coordinates": {
+                "x": 26.7,
+                "y": 18.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 262.111,
+                  "y": -21.1294,
+                  "z": -170.678
+                },
+                "mapGameId": "f1f1/00"
+              }
+            },
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2153813,
+              "coordinates": {
+                "x": 26.7,
+                "y": 18.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 262.111,
+                  "y": -21.1294,
+                  "z": -170.678
+                },
+                "mapGameId": "f1f1/00"
+              }
+            },
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 2153813,
+              "coordinates": {
+                "x": 26.7,
+                "y": 18.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 262.111,
+                  "y": -21.1294,
+                  "z": -170.678
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-spear-of-the-fearless-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "lancer-spear-of-the-fearless-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 3,
+          "targetId": "actor-2000914",
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3777631,
+              "coordinates": {
+                "x": 27.6,
+                "y": 23.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 302.316,
+                  "y": 2.10213,
+                  "z": 88.0487
+                },
+                "mapGameId": "f1f1/00"
+              }
+            },
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3777633,
+              "coordinates": {
+                "x": 28,
+                "y": 23.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 327.128,
+                  "y": 3.71192,
+                  "z": 93.6556
+                },
+                "mapGameId": "f1f1/00"
+              }
+            },
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3777635,
+              "coordinates": {
+                "x": 27.6,
+                "y": 23.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 305.417,
+                  "y": 4.50383,
+                  "z": 103.995
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "lancer-spear-of-the-fearless-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000251",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141271,
+              "coordinates": {
+                "x": 14.2,
+                "y": 5.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 147.082,
+                  "y": 15.5017,
+                  "z": -267.994
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "lancer-spear-of-the-fearless-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65559,
+          65754
+        ],
+        "previousQuestJoin": 2,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65583,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:37.146Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65583,
+          "internalId": "ClsLnc001_00047",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 50,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000230,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2000908,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 3776272,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 3776273,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2000909,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 3776274,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY3",
+              "argument": 3776275,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2000910,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY4",
+              "argument": 3776276,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY5",
+              "argument": 3776277,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2000911,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY6",
+              "argument": 3776278,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY7",
+              "argument": 3776279,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2000914,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_PROCESS_SHOR",
+              "argument": 15,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY8",
+              "argument": 3777647,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT5",
+              "argument": 2000915,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY9",
+              "argument": 3777652,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT6",
+              "argument": 2000916,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY10",
+              "argument": 3777654,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000251,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "POPRANGE_ACTOR1",
+              "argument": 3927442,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "TERRITORYTYPE_ACTOR1",
+              "argument": 133,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_01",
+              "argument": 13,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000230,
+              "itemId": "event-item-2000230",
+              "name": "Foul-smelling Bait",
+              "resolvedSheet": "EventItem",
+              "iconId": 21005,
+              "quantity": 2
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000251
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000251,
+              "name": "Jillian",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65571,
+              65679
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "lancer-class-quests-class-way-of-the-lancer-65559",
+        "lancer-class-quests-class-my-first-spear-65754"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "lancer-class-quests-class-courage-of-stone-65571",
+        "lancer-class-quests-class-courage-of-stone-65679"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 1400,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-1820",
+            "itemName": "Bone Harpoon",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3006",
+            "itemName": "Custom-made Scale Mail",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-2653",
+            "itemName": "Leather Eyepatch",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-78",
+            "stainName": "Gloom Purple"
+          },
+          {
+            "itemId": "item-3530",
+            "itemName": "Fingerless Leather Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-78",
+            "stainName": "Gloom Purple"
+          },
+          {
+            "itemId": "item-27634",
+            "itemName": "Altered Thighboots",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-78",
+            "stainName": "Gloom Purple"
+          },
+          {
+            "itemId": "item-5823",
+            "itemName": "Allagan Tin Piece",
+            "quantity": 5,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Ywain",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000254
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.4,
+          "y": 5.8
+        }
+      },
+      "graphRole": "branch-and-convergence"
+    },
+    {
+      "id": "lancer-class-quests-class-courage-of-stone-65571",
+      "xivapiRowId": 65571,
+      "sortOrder": 5,
+      "name": "Courage of Stone",
+      "level": 10,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "startingClassJobIds": [
+          "lancer"
+        ],
+        "classJobIds": [
+          "lancer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 10
+        },
+        {
+          "type": "class-job",
+          "classJobId": "lancer",
+          "classJobName": "Lancer",
+          "level": 10
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000102",
+          "itemName": "Stone of Courage",
+          "sourceRowId": 2000102,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "lancer-courage-of-stone-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2000966",
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3785247,
+              "coordinates": {
+                "x": 31.8,
+                "y": 20.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 514.877,
+                  "y": 43.7994,
+                  "z": -48.6365
+                },
+                "mapGameId": "f1f1/00"
+              }
+            },
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3785247,
+              "coordinates": {
+                "x": 31.8,
+                "y": 20.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 514.877,
+                  "y": 43.7994,
+                  "z": -48.6365
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-courage-of-stone-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3842560,
+              "coordinates": {
+                "x": 26.3,
+                "y": 25.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 240.498,
+                  "y": 14.5385,
+                  "z": 189.731
+                },
+                "mapGameId": "f1f1/00"
+              }
+            },
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3842560,
+              "coordinates": {
+                "x": 26.3,
+                "y": 25.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 240.498,
+                  "y": 14.5385,
+                  "z": 189.731
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "lancer-courage-of-stone-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65583,
+          65559
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65571,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:40.373Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65571,
+          "internalId": "ClsLnc002_00035",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 100,
+          "questLevelOffset": 0,
+          "systemRewards": [
+            6
+          ],
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 3785532,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2000966,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_GATHER_MIDDLE",
+              "argument": 7,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 3785539,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 3785540,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001847,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENTRANGE1",
+              "argument": 3785665,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2000917,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 3785703,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY3",
+              "argument": 3785704,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000102,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2001848,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1003009,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_PC",
+              "argument": 3868064,
+              "referenceType": "level"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_CLASS_CANGE",
+              "argument": 22,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "HOW_TO_GEAR_SET",
+              "argument": 38,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "UNLOCK_IMAGE_GEAR_SET",
+              "argument": 29,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000102,
+              "itemId": "event-item-2000102",
+              "name": "Stone of Courage",
+              "resolvedSheet": "EventItem",
+              "iconId": 21451,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1003009
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1003009,
+              "name": "Foulques",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65591
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "lancer-class-quests-class-spear-of-the-fearless-65583",
+        "lancer-class-quests-class-way-of-the-lancer-65559"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "lancer-class-quests-class-a-dangerous-proposition-65591"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 3420,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-1823",
+            "itemName": "Feathered Harpoon",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3016",
+            "itemName": "Leather Jacket",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-48",
+            "stainName": "Olive Green"
+          },
+          {
+            "itemId": "item-2662",
+            "itemName": "Bronze Sallet",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-14",
+            "stainName": "Blood Red"
+          },
+          {
+            "itemId": "item-3539",
+            "itemName": "Hempen Bracers",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-14",
+            "stainName": "Blood Red"
+          },
+          {
+            "itemId": "item-27637",
+            "itemName": "Hard Leather Thighboots",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-66",
+            "stainName": "Ceruleum Blue"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Ywain",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000254
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.4,
+          "y": 5.8
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "lancer-class-quests-class-courage-of-stone-65679",
+      "xivapiRowId": 65679,
+      "sortOrder": 6,
+      "name": "Courage of Stone",
+      "level": 10,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "excludedStartingClassJobIds": [
+          "lancer"
+        ],
+        "classJobIds": [
+          "lancer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 10
+        },
+        {
+          "type": "class-job",
+          "classJobId": "lancer",
+          "classJobName": "Lancer",
+          "level": 10
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000122",
+          "itemName": "Stone of Courage",
+          "sourceRowId": 2000122,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "lancer-courage-of-stone-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2000967",
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3785248,
+              "coordinates": {
+                "x": 31.8,
+                "y": 20.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 514.865,
+                  "y": 43.8089,
+                  "z": -48.611
+                },
+                "mapGameId": "f1f1/00"
+              }
+            },
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3785248,
+              "coordinates": {
+                "x": 31.8,
+                "y": 20.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 514.865,
+                  "y": 43.8089,
+                  "z": -48.611
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-courage-of-stone-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3842560,
+              "coordinates": {
+                "x": 26.3,
+                "y": 25.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 240.498,
+                  "y": 14.5385,
+                  "z": 189.731
+                },
+                "mapGameId": "f1f1/00"
+              }
+            },
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3842560,
+              "coordinates": {
+                "x": 26.3,
+                "y": 25.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 240.498,
+                  "y": 14.5385,
+                  "z": 189.731
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "lancer-courage-of-stone-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65583,
+          65668
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65679,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:43.077Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65679,
+          "internalId": "ClsLnc997_00143",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 100,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTRANGE0",
+              "argument": 3895753,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2000967,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_GATHER_MIDDLE",
+              "argument": 7,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 3785539,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 3785540,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001849,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EVENTRANGE1",
+              "argument": 3895754,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2000918,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 3785703,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ENEMY3",
+              "argument": 3785704,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000122,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2001850,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1003009,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_POS_PC",
+              "argument": 3868064,
+              "referenceType": "level"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000122,
+              "itemId": "event-item-2000122",
+              "name": "Stone of Courage",
+              "resolvedSheet": "EventItem",
+              "iconId": 21451,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1003009
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1003009,
+              "name": "Foulques",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65591
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "lancer-class-quests-class-spear-of-the-fearless-65583",
+        "lancer-class-quests-class-way-of-the-lancer-65668"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "lancer-class-quests-class-a-dangerous-proposition-65591"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 3420,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-1823",
+            "itemName": "Feathered Harpoon",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3016",
+            "itemName": "Leather Jacket",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-48",
+            "stainName": "Olive Green"
+          },
+          {
+            "itemId": "item-2662",
+            "itemName": "Bronze Sallet",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-14",
+            "stainName": "Blood Red"
+          },
+          {
+            "itemId": "item-3539",
+            "itemName": "Hempen Bracers",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-14",
+            "stainName": "Blood Red"
+          },
+          {
+            "itemId": "item-3772",
+            "itemName": "Hard Leather Caligae",
+            "quantity": 1,
+            "quality": "normal",
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Ywain",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000254
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.4,
+          "y": 5.8
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "lancer-class-quests-class-a-dangerous-proposition-65591",
+      "xivapiRowId": 65591,
+      "sortOrder": 7,
+      "name": "A Dangerous Proposition",
+      "level": 15,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "lancer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 15
+        },
+        {
+          "type": "class-job",
+          "classJobId": "lancer",
+          "classJobName": "Lancer",
+          "level": 15
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000235",
+          "itemName": "Alchemic Potation",
+          "sourceRowId": 2000235,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "lancer-a-dangerous-proposition-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001194",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 2065749,
+              "coordinates": {
+                "x": 13.2,
+                "y": 22.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -416.367,
+                  "y": 0.129451,
+                  "z": 61.0162
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-a-dangerous-proposition-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "targetId": "actor-2000919",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 3790571,
+              "coordinates": {
+                "x": 13.1,
+                "y": 24
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -418.584,
+                  "y": 0.319694,
+                  "z": 127.087
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "lancer-a-dangerous-proposition-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1001194",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 2065749,
+              "coordinates": {
+                "x": 13.2,
+                "y": 22.7
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -416.367,
+                  "y": 0.129451,
+                  "z": 61.0162
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "lancer-a-dangerous-proposition-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2000920",
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3792999,
+              "coordinates": {
+                "x": 26.9,
+                "y": 16.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 267.584,
+                  "y": -0.583424,
+                  "z": -253.827
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "lancer-a-dangerous-proposition-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65571,
+          65679
+        ],
+        "previousQuestJoin": 2,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65591,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:46.258Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65591,
+          "internalId": "ClsLnc003_00055",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 150,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1001194,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000235,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1000492,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2000919,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 3790598,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1000493,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2000920,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING3_LONG",
+              "argument": 13,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 237,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 7,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EVENT_MOT_YARINAGE",
+              "argument": 352,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 995,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_WS",
+              "argument": 90,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VFX",
+              "argument": 241,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000235,
+              "itemId": "event-item-2000235",
+              "name": "Alchemic Potation",
+              "resolvedSheet": "EventItem",
+              "iconId": 24403,
+              "quantity": 1
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001194
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000492
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1000493
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1001194,
+              "name": "Foulques",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000492
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1000493
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65592
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "lancer-class-quests-class-courage-of-stone-65571",
+        "lancer-class-quests-class-courage-of-stone-65679"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "lancer-class-quests-class-lance-of-destiny-65592"
+      ],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "action",
+          "id": "action-90",
+          "sourceRowId": 90,
+          "name": "Piercing Talon"
+        }
+      ],
+      "rewards": {
+        "experience": 5760,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-1824",
+            "itemName": "Brass Spear",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3028",
+            "itemName": "Cotton Tabard",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-15",
+            "stainName": "Salmon Pink"
+          },
+          {
+            "itemId": "item-2677",
+            "itemName": "Hunting Hat",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-15",
+            "stainName": "Salmon Pink"
+          },
+          {
+            "itemId": "item-3546",
+            "itemName": "Fingerless Hard Leather Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-15",
+            "stainName": "Salmon Pink"
+          },
+          {
+            "itemId": "item-3780",
+            "itemName": "Hard Leather Crakows",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-15",
+            "stainName": "Salmon Pink"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Ywain",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000254
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.4,
+          "y": 5.8
+        }
+      },
+      "graphRole": "convergence"
+    },
+    {
+      "id": "lancer-class-quests-class-lance-of-destiny-65592",
+      "xivapiRowId": 65592,
+      "sortOrder": 8,
+      "name": "Lance of Destiny",
+      "level": 20,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "lancer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 20
+        },
+        {
+          "type": "class-job",
+          "classJobId": "lancer",
+          "classJobName": "Lancer",
+          "level": 20
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000236",
+          "itemName": "Bloody Boar Tusk",
+          "sourceRowId": 2000236,
+          "sourceSheet": "event-item",
+          "quantity": 10,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "lancer-lance-of-destiny-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2000977",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 3793424,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.525,
+                  "y": 16.208,
+                  "z": -273.614
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-lance-of-destiny-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "lancer-lance-of-destiny-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 10,
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 2264108,
+              "coordinates": {
+                "x": 18.1,
+                "y": 23.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -171.071,
+                  "y": -5.89281,
+                  "z": 98.4617
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "lancer-lance-of-destiny-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2000089",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 2263090,
+              "coordinates": {
+                "x": 16.7,
+                "y": 22.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -238.649,
+                  "y": 11.8684,
+                  "z": 29.0343
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "lancer-lance-of-destiny-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2000978",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 3793244,
+              "coordinates": {
+                "x": 16.7,
+                "y": 22.1
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -238.921,
+                  "y": 11.5674,
+                  "z": 29.0761
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "lancer-lance-of-destiny-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65591
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65592,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:49.644Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65592,
+          "internalId": "ClsLnc004_00056",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 200,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2000977,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING_SHOR",
+              "argument": 11,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 15,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000236,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2000089,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2000978,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_WAITING2_MIDDLE",
+              "argument": 12,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2002613,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 238,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 8,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "TERRITORYTYPE1",
+              "argument": 290,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE1",
+              "argument": 55,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1003038,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR1",
+              "argument": 1003009,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "CUT_SCENE_01",
+              "argument": 21,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000236,
+              "itemId": "event-item-2000236",
+              "name": "Bloody Boar Tusk",
+              "resolvedSheet": "EventItem",
+              "iconId": 22301,
+              "quantity": 10
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1003038
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1003009
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1003038,
+              "name": "???",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR1",
+              "actorRowId": 1003009,
+              "name": "Foulques",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65974
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "lancer-class-quests-class-a-dangerous-proposition-65591"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "lancer-class-quests-class-questions-and-lancers-65974"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 6960,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-1827",
+            "itemName": "Iron Lance",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3043",
+            "itemName": "Goatskin Jacket",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-17",
+            "stainName": "Mesa Red"
+          },
+          {
+            "itemId": "item-2708",
+            "itemName": "Iron Sallet",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-17",
+            "stainName": "Mesa Red"
+          },
+          {
+            "itemId": "item-3559",
+            "itemName": "Goatskin Armguards",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-17",
+            "stainName": "Mesa Red"
+          },
+          {
+            "itemId": "item-3791",
+            "itemName": "Goatskin Leg Guards",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-17",
+            "stainName": "Mesa Red"
+          },
+          {
+            "itemId": "item-5824",
+            "itemName": "Allagan Bronze Piece",
+            "quantity": 5,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Ywain",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000254
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.4,
+          "y": 5.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "lancer-class-quests-class-questions-and-lancers-65974",
+      "xivapiRowId": 65974,
+      "sortOrder": 9,
+      "name": "Questions and Lancers",
+      "level": 25,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "lancer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 25
+        },
+        {
+          "type": "class-job",
+          "classJobId": "lancer",
+          "classJobName": "Lancer",
+          "level": 25
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "event-item-2000243",
+          "itemName": "Spoken Blood",
+          "sourceRowId": 2000243,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM0"
+        },
+        {
+          "itemId": "event-item-2000232",
+          "itemName": "Fullflower Mead",
+          "sourceRowId": 2000232,
+          "sourceSheet": "event-item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM1"
+        },
+        {
+          "itemId": "event-item-2000233",
+          "itemName": "Balloon Finger",
+          "sourceRowId": 2000233,
+          "sourceSheet": "event-item",
+          "quantity": 6,
+          "usage": "used-during-quest",
+          "sourceInstruction": "ITEM2"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "lancer-questions-and-lancers-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000756",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 1332304,
+              "coordinates": {
+                "x": 21.9,
+                "y": 29.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 20.6889,
+                  "y": 24.3085,
+                  "z": 392.58
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "targetId": "actor-2000963",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 3783340,
+              "coordinates": {
+                "x": 22.3,
+                "y": 28.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 39.25,
+                  "y": -0.5,
+                  "z": 337.4
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000756",
+          "locations": [
+            {
+              "zoneId": "east-shroud",
+              "zoneName": "East Shroud",
+              "territoryId": "territory-152",
+              "mapId": "map-5",
+              "sourceLevelRowId": 1332304,
+              "coordinates": {
+                "x": 21.9,
+                "y": 29.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 20.6889,
+                  "y": 24.3085,
+                  "z": 392.58
+                },
+                "mapGameId": "f1f2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000590",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 1146551,
+              "coordinates": {
+                "x": 18.2,
+                "y": 19.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -165.911,
+                  "y": 9.86923,
+                  "z": -81.3154
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2000921",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 3781604,
+              "coordinates": {
+                "x": 19.4,
+                "y": 23.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -103.685,
+                  "y": 6.4461,
+                  "z": 101.61
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5,
+            "completeSequence": 5
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-6",
+          "sortOrder": 6,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000590",
+          "locations": [
+            {
+              "zoneId": "south-shroud",
+              "zoneName": "South Shroud",
+              "territoryId": "territory-153",
+              "mapId": "map-6",
+              "sourceLevelRowId": 1146551,
+              "coordinates": {
+                "x": 18.2,
+                "y": 19.9
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -165.911,
+                  "y": 9.86923,
+                  "z": -81.3154
+                },
+                "mapGameId": "f1f3/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 6,
+            "completeSequence": 6
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-7",
+          "sortOrder": 7,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002815",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 3656581,
+              "coordinates": {
+                "x": 21,
+                "y": 25
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -27.3022,
+                  "y": -34.6184,
+                  "z": 173.08
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 7,
+            "completeSequence": 7
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-8",
+          "sortOrder": 8,
+          "type": "unknown",
+          "quantity": 6,
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 3829827,
+              "coordinates": {
+                "x": 21.2,
+                "y": 30.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -15.5977,
+                  "y": -66.185,
+                  "z": 448.132
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 8,
+            "completeSequence": 8
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-9",
+          "sortOrder": 9,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2000922",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 3781816,
+              "coordinates": {
+                "x": 22.1,
+                "y": 31.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 28.262,
+                  "y": -54.3178,
+                  "z": 512.945
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 9,
+            "completeSequence": 9
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-10",
+          "sortOrder": 10,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1002815",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 3656581,
+              "coordinates": {
+                "x": 21,
+                "y": 25
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -27.3022,
+                  "y": -34.6184,
+                  "z": 173.08
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 10,
+            "completeSequence": 10
+          }
+        },
+        {
+          "id": "lancer-questions-and-lancers-objective-11",
+          "sortOrder": 11,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 11
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65592
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65974,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:52.771Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65974,
+          "internalId": "ClsLnc005_00438",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 250,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000756,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM0",
+              "argument": 2000243,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2000963,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY0",
+              "argument": 3783324,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1000590,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ITEM1",
+              "argument": 2000232,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2000921,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1002815,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ENEMY1",
+              "argument": 17,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "ITEM2",
+              "argument": 2000233,
+              "referenceType": "event-item"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2001081,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT3",
+              "argument": 2000922,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "ENEMY2",
+              "argument": 3781827,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT4",
+              "argument": 2000923,
+              "referenceType": "event-object"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "ITEM0",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000243,
+              "itemId": "event-item-2000243",
+              "name": "Spoken Blood",
+              "resolvedSheet": "EventItem",
+              "iconId": 22601,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM1",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000232,
+              "itemId": "event-item-2000232",
+              "name": "Fullflower Mead",
+              "resolvedSheet": "EventItem",
+              "iconId": 25057,
+              "quantity": 1
+            },
+            {
+              "sourceInstruction": "ITEM2",
+              "itemSheet": "EventItem",
+              "itemRowId": 2000233,
+              "itemId": "event-item-2000233",
+              "name": "Balloon Finger",
+              "resolvedSheet": "EventItem",
+              "iconId": 25911,
+              "quantity": 6
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000756
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000590
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1002815
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000756,
+              "name": "Matheomi",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000590,
+              "name": "Buscarron",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1002815,
+              "name": "Vauxclairt",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              65975
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "lancer-class-quests-class-lance-of-destiny-65592"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "lancer-class-quests-class-proof-of-might-65975"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 8160,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-1836",
+            "itemName": "Silver Battle Fork",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3066",
+            "itemName": "Velveteen Shirt",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-81",
+            "stainName": "Grape Purple"
+          },
+          {
+            "itemId": "item-27638",
+            "itemName": "Altered Velveteen Bandana",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-81",
+            "stainName": "Grape Purple"
+          },
+          {
+            "itemId": "item-3576",
+            "itemName": "Fingerless Goatskin Gloves",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-81",
+            "stainName": "Grape Purple"
+          },
+          {
+            "itemId": "item-3808",
+            "itemName": "Goatskin Crakows",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-81",
+            "stainName": "Grape Purple"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 2,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Ywain",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000254
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.4,
+          "y": 5.8
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "lancer-class-quests-class-proof-of-might-65975",
+      "xivapiRowId": 65975,
+      "sortOrder": 10,
+      "name": "Proof of Might",
+      "level": 30,
+      "category": "class",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "lancer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 30
+        },
+        {
+          "type": "class-job",
+          "classJobId": "lancer",
+          "classJobName": "Lancer",
+          "level": 30
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "lancer-proof-of-might-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-2000924",
+          "locations": [
+            {
+              "zoneId": "central-shroud",
+              "zoneName": "Central Shroud",
+              "territoryId": "territory-148",
+              "mapId": "map-4",
+              "sourceLevelRowId": 3818787,
+              "coordinates": {
+                "x": 13.7,
+                "y": 17.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -389.235,
+                  "y": 65.5462,
+                  "z": -186.546
+                },
+                "mapGameId": "f1f1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "lancer-proof-of-might-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000448",
+          "locations": [
+            {
+              "zoneId": "north-shroud",
+              "zoneName": "North Shroud",
+              "territoryId": "territory-154",
+              "mapId": "map-7",
+              "sourceLevelRowId": 3783938,
+              "coordinates": {
+                "x": 15.8,
+                "y": 27.3
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -287.007,
+                  "y": -54.4063,
+                  "z": 289.998
+                },
+                "mapGameId": "f1f4/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "lancer-proof-of-might-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1000254",
+          "targetName": "Ywain",
+          "locations": [
+            {
+              "zoneId": "old-gridania",
+              "zoneName": "Old Gridania",
+              "territoryId": "territory-133",
+              "mapId": "map-3",
+              "sourceLevelRowId": 1141274,
+              "coordinates": {
+                "x": 14.4,
+                "y": 5.8
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 157.705,
+                  "y": 15.8845,
+                  "z": -270.327
+                },
+                "mapGameId": "f1t2/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          65974
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 65975,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T06:43:55.545Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 65975,
+          "internalId": "ClsLnc006_00439",
+          "expansion": "A Realm Reborn",
+          "journalGenre": "Lancer Quests",
+          "eventIconType": 8,
+          "sortKey": 300,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1000254,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2000924,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_GATHER_MIDDLE",
+              "argument": 7,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2001842,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENT_ACTION_SEARCH",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1000448,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1000450,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1000451,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR4",
+              "argument": 1000452,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR5",
+              "argument": 1000467,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR6",
+              "argument": 1000495,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT2",
+              "argument": 2001843,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "TERRITORYTYPE0",
+              "argument": 239,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE0",
+              "argument": 9,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "TERRITORYTYPE1",
+              "argument": 240,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "QUESTBATTLE1",
+              "argument": 10,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "SEQ_0_ACTOR0_LQ",
+              "argument": 98,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR0",
+              "argument": 1003080,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENT_MOT_PANK",
+              "argument": 353,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTION0",
+              "argument": 995,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "LOC_WS",
+              "argument": 85,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_VFX",
+              "argument": 241,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000448
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000450
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1000451
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1000452
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1000467
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1000495
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1003080
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1000448,
+              "name": "Foulques",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1000450
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1000451
+            },
+            {
+              "sourceInstruction": "ACTOR4",
+              "actorRowId": 1000452
+            },
+            {
+              "sourceInstruction": "ACTOR5",
+              "actorRowId": 1000467
+            },
+            {
+              "sourceInstruction": "ACTOR6",
+              "actorRowId": 1000495
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR0",
+              "actorRowId": 1003080,
+              "name": "Eddard",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              66603
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "lancer-class-quests-class-questions-and-lancers-65974"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [
+        {
+          "type": "action",
+          "id": "action-85",
+          "sourceRowId": 85,
+          "name": "Lance Charge"
+        }
+      ],
+      "rewards": {
+        "experience": 12480,
+        "gil": 0,
+        "items": [
+          {
+            "itemId": "item-1845",
+            "itemName": "Steel Spear",
+            "quantity": 1,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": [
+          {
+            "itemId": "item-3100",
+            "itemName": "Toadskin Jacket",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-5",
+            "stainName": "Charcoal Grey"
+          },
+          {
+            "itemId": "item-2753",
+            "itemName": "Steel Sallet",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-5",
+            "stainName": "Charcoal Grey"
+          },
+          {
+            "itemId": "item-3597",
+            "itemName": "Toadskin Armguards",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-5",
+            "stainName": "Charcoal Grey"
+          },
+          {
+            "itemId": "item-3827",
+            "itemName": "Toadskin Leg Guards",
+            "quantity": 1,
+            "quality": "normal",
+            "stainId": "stain-5",
+            "stainName": "Charcoal Grey"
+          },
+          {
+            "itemId": "item-5825",
+            "itemName": "Allagan Silver Piece",
+            "quantity": 3,
+            "quality": "normal",
+            "stainName": "No Color"
+          }
+        ]
+      },
+      "start": {
+        "npc": {
+          "name": "Ywain",
+          "title": "Guildmaster",
+          "xivapiRowId": 1000254
+        },
+        "location": {
+          "zone": "Old Gridania",
+          "x": 14.4,
+          "y": 5.8
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

@@ -40,6 +40,7 @@ interface QuestDetailsDrawerProps {
   questsById: ReadonlyMap<string, Quest>;
 
   isCompleted: boolean;
+  isAlternativeSatisfied: boolean;
   isCurrent: boolean;
 
   personalNote: string;
@@ -330,6 +331,7 @@ export function QuestDetailsDrawer({
   quest,
   questsById,
   isCompleted,
+  isAlternativeSatisfied,
   isCurrent,
   personalNote,
   onClose,
@@ -587,17 +589,31 @@ export function QuestDetailsDrawer({
             <button
               className={[
                 'quest-details__action',
-                isCompleted ? 'quest-details__action--active' : '',
+                isCompleted || isAlternativeSatisfied
+                  ? 'quest-details__action--active'
+                  : '',
               ]
                 .filter(Boolean)
                 .join(' ')}
               type="button"
+              disabled={isAlternativeSatisfied}
               aria-pressed={isCompleted}
+              title={
+                isAlternativeSatisfied
+                  ? 'Another mutually exclusive quest satisfies this requirement.'
+                  : undefined
+              }
               onClick={onToggleCompletion}
             >
               <CheckCircle2 aria-hidden="true" />
 
-              <span>{isCompleted ? 'Completed' : 'Mark complete'}</span>
+              <span>
+                {isCompleted
+                  ? 'Completed'
+                  : isAlternativeSatisfied
+                    ? 'Alternative satisfied'
+                    : 'Mark complete'}
+              </span>
             </button>
           ) : (
             <span

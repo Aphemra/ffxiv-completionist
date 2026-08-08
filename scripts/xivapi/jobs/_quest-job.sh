@@ -70,6 +70,34 @@ END_ROW="${END_ROW:-}"
 
 QUEST_ROWS="${QUEST_ROWS:-}"
 
+EXCLUDED_QUEST_ROWS="${EXCLUDED_QUEST_ROWS:-}"
+
+STARTING_CLASS_JOB_ID="${STARTING_CLASS_JOB_ID:-}"
+STARTING_CLASS_ROUTE_ROWS="${STARTING_CLASS_ROUTE_ROWS:-}"
+NONSTARTING_CLASS_ROUTE_ROWS="${NONSTARTING_CLASS_ROUTE_ROWS:-}"
+
+if \
+  [[ -z "$STARTING_CLASS_JOB_ID" ]] &&
+  [[ -n "$STARTING_CLASS_ROUTE_ROWS" || -n "$NONSTARTING_CLASS_ROUTE_ROWS" ]]
+then
+  echo \
+    'Starting-class route rows require STARTING_CLASS_JOB_ID.' \
+    >&2
+
+  exit 1
+fi
+
+if \
+  [[ -n "$STARTING_CLASS_JOB_ID" ]] &&
+  [[ -z "$STARTING_CLASS_ROUTE_ROWS" && -z "$NONSTARTING_CLASS_ROUTE_ROWS" ]]
+then
+  echo \
+    'STARTING_CLASS_JOB_ID requires at least one route row list.' \
+    >&2
+
+  exit 1
+fi
+
 JOURNAL_GENRE="${JOURNAL_GENRE:-}"
 JOURNAL_CATEGORY="${JOURNAL_CATEGORY:-}"
 CLASS_JOB="${CLASS_JOB:-}"
@@ -77,6 +105,14 @@ CLASS_JOB="${CLASS_JOB:-}"
 JOURNAL_GENRE_VALUES=()
 JOURNAL_CATEGORY_VALUES=()
 CLASS_JOB_VALUES=()
+
+ALTERNATIVE_COMPLETION_GROUP_VALUES=()
+
+if declare -p ALTERNATIVE_COMPLETION_GROUPS >/dev/null 2>&1; then
+  ALTERNATIVE_COMPLETION_GROUP_VALUES+=(
+    "${ALTERNATIVE_COMPLETION_GROUPS[@]}"
+  )
+fi
 
 if [[ -n "$JOURNAL_GENRE" ]]; then
   JOURNAL_GENRE_VALUES+=("$JOURNAL_GENRE")
@@ -219,6 +255,38 @@ done
 for class_job in "${CLASS_JOB_VALUES[@]}"; do
   EXPORT_ARGUMENTS+=(
     --class-job "$class_job"
+  )
+done
+
+if [[ -n "$EXCLUDED_QUEST_ROWS" ]]; then
+  EXPORT_ARGUMENTS+=(
+    --exclude-rows "$EXCLUDED_QUEST_ROWS"
+  )
+fi
+
+if [[ -n "$STARTING_CLASS_JOB_ID" ]]; then
+  EXPORT_ARGUMENTS+=(
+    --starting-class-job "$STARTING_CLASS_JOB_ID"
+  )
+fi
+
+if [[ -n "$STARTING_CLASS_ROUTE_ROWS" ]]; then
+  EXPORT_ARGUMENTS+=(
+    --starting-class-rows "$STARTING_CLASS_ROUTE_ROWS"
+  )
+fi
+
+if [[ -n "$NONSTARTING_CLASS_ROUTE_ROWS" ]]; then
+  EXPORT_ARGUMENTS+=(
+    --nonstarting-class-rows "$NONSTARTING_CLASS_ROUTE_ROWS"
+  )
+fi
+
+for alternative_completion_group in \
+  "${ALTERNATIVE_COMPLETION_GROUP_VALUES[@]}"
+do
+  EXPORT_ARGUMENTS+=(
+    --alternative-completion-group "$alternative_completion_group"
   )
 done
 
@@ -505,6 +573,24 @@ Filter scopes:
   CLASS_JOB or CLASS_JOBS
 
   Array values use OR matching. Different filter types combine with AND.
+
+Row exclusions:
+  EXCLUDED_QUEST_ROWS
+  Comma-separated XIVAPI Quest row IDs omitted from this export.
+
+Alternative completion groups:
+  ALTERNATIVE_COMPLETION_GROUPS
+  Each entry uses "group-id:row-id,row-id".
+  Completing any quest in the group satisfies one completion requirement.
+
+Starting-class routes:
+  STARTING_CLASS_JOB_ID
+  STARTING_CLASS_ROUTE_ROWS
+  NONSTARTING_CLASS_ROUTE_ROWS
+
+  The starting route is shown only when that class was selected during
+  character creation. The nonstarting route is shown for every other
+  starting class.
 
 Default action:
   validate

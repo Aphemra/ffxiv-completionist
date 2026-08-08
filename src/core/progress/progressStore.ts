@@ -23,6 +23,7 @@ function createInitialProfile(): PlayerProgress {
     characterName: '',
 
     startingCity: null,
+    startingClassJob: null,
 
     initialGrandCompany: null,
     currentGrandCompany: null,
@@ -78,6 +79,7 @@ export const useProgressStore = create<ProgressStore>()(
             characterName: metadata.characterName.trim(),
 
             startingCity: metadata.startingCity,
+            startingClassJob: metadata.startingClassJob,
 
             initialGrandCompany: metadata.initialGrandCompany,
 

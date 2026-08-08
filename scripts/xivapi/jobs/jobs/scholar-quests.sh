@@ -12,6 +12,8 @@ JOURNAL_GENRES=(
   "Scholar Quests"
 )
 
+EXCLUDED_QUEST_ROWS="66663"
+
 PRIMARY_FACET_ID="healer"
 PRIMARY_FACET_NAME="Healer"
 

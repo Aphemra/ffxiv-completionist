@@ -1,0 +1,4997 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "groups": [
+    {
+      "id": "rogue-class-quests-quests",
+      "title": "Rogue Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "rogue-class-quests-class-my-first-daggers-65638",
+          "name": "My First Daggers",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 1,
+          "externalIds": {
+            "xivapi-quest-row": 65638
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65638,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:41.567Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009944",
+            "npcName": "Lonwoerd",
+            "sourceRowId": 1009944,
+            "zoneId": "limsa-lominsa-lower-decks",
+            "zoneName": "Limsa Lominsa Lower Decks",
+            "coordinates": {
+              "x": 8.2,
+              "y": 16.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "rogue-class-quests-class-stabbers-in-yer-fambles-65640"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65637
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-my-first-daggers-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-7952",
+                "itemName": "Weathered Daggers",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65638,
+              "internalId": "ClsRog011_00102",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 10,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "CLASSJOB",
+                  "argument": 29,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009944,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 129,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 5341051,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5120981,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5120983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 5121028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5404447,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOGMESSAGE_MONSTER_NOTE_PAGE_UNLOCK",
+                  "argument": 1020,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "UNLOCK_IMAGE_CLASS_ROG",
+                  "argument": 258,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "GEARSET_UNLOCK",
+                  "argument": 1905,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 97,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM1",
+                  "argument": 87,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_CLASS_CHANGE",
+                  "argument": 10,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "HOW_TO_JOB",
+                  "argument": 94,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009943
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009943,
+                  "name": "Jacke",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65640
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "rogue-class-quests-class-stabbers-in-yer-fambles-65640",
+          "name": "Stabbers in Yer Fambles",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 1,
+          "externalIds": {
+            "xivapi-quest-row": 65640
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65640,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:44.758Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009943",
+            "npcName": "Jacke",
+            "sourceRowId": 1009943,
+            "zoneId": "dutiful-sisters-of-the-edelweiss",
+            "zoneName": "Dutiful Sisters of the Edelweiss",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rogue-class-quests-class-my-first-daggers-65638"
+          ],
+          "nextQuestIds": [
+            "rogue-class-quests-class-a-dainty-dilemma-65646"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65638
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 1
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-stabbers-in-yer-fambles-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5046762,
+                  "coordinates": {
+                    "x": 22.6,
+                    "y": 25.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 53.9016,
+                      "y": 36.9474,
+                      "z": 207.758
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-stabbers-in-yer-fambles-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5046761,
+                  "coordinates": {
+                    "x": 21.8,
+                    "y": 23.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 15.8571,
+                      "y": 34.0989,
+                      "z": 117.983
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-stabbers-in-yer-fambles-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5046763,
+                  "coordinates": {
+                    "x": 21.7,
+                    "y": 22.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 11.268,
+                      "y": 33.6911,
+                      "z": 44.5622
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-stabbers-in-yer-fambles-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 400,
+            "gil": 115
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65640,
+              "internalId": "ClsRog021_00104",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 11,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 338,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 347,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 383,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65646
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "rogue-class-quests-class-a-dainty-dilemma-65646",
+          "name": "A Dainty Dilemma",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 5,
+          "externalIds": {
+            "xivapi-quest-row": 65646
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65646,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:46.804Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009943",
+            "npcName": "Jacke",
+            "sourceRowId": 1009943,
+            "zoneId": "dutiful-sisters-of-the-edelweiss",
+            "zoneName": "Dutiful Sisters of the Edelweiss",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rogue-class-quests-class-stabbers-in-yer-fambles-65640"
+          ],
+          "nextQuestIds": [
+            "rogue-class-quests-class-stray-into-the-shadows-65662"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65640
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 5
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001507",
+              "itemName": "Firing Mechanism #43",
+              "sourceRowId": 2001507,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-dainty-dilemma-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010197",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5045765,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -150.975,
+                      "y": -129.44,
+                      "z": 266.335
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-a-dainty-dilemma-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 5058426,
+                  "coordinates": {
+                    "x": 25.6,
+                    "y": 22.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 205.889,
+                      "y": 32.4719,
+                      "z": 40.7073
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-a-dainty-dilemma-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010197",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5045765,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -150.975,
+                      "y": -129.44,
+                      "z": 266.335
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-a-dainty-dilemma-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1005411",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 4695274,
+                  "coordinates": {
+                    "x": 11.5,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 13.432,
+                      "y": 40.2,
+                      "z": -13.2326
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-a-dainty-dilemma-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010206",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5074696,
+                  "coordinates": {
+                    "x": 23.7,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 107.728,
+                      "y": 47.7843,
+                      "z": 50.7551
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-a-dainty-dilemma-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5074059,
+                  "coordinates": {
+                    "x": 23.9,
+                    "y": 21.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 120.161,
+                      "y": 40.7465,
+                      "z": 3.2507
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-a-dainty-dilemma-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010206",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5074696,
+                  "coordinates": {
+                    "x": 23.7,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 107.728,
+                      "y": 47.7843,
+                      "z": 50.7551
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-a-dainty-dilemma-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 8
+              }
+            },
+            {
+              "id": "adventurer-a-dainty-dilemma-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 1400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-9184",
+                "itemName": "Bronze Daggers",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3003",
+                "itemName": "Custom-made Tunic",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-2653",
+                "itemName": "Leather Eyepatch",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-50",
+                "notes": "Stain: Apple Green"
+              },
+              {
+                "itemId": "item-3530",
+                "itemName": "Fingerless Leather Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-50",
+                "notes": "Stain: Apple Green"
+              },
+              {
+                "itemId": "item-27634",
+                "itemName": "Altered Thighboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-50",
+                "notes": "Stain: Apple Green"
+              },
+              {
+                "itemId": "item-5823",
+                "itemName": "Allagan Tin Piece",
+                "quantity": 5,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65646,
+              "internalId": "ClsRog050_00110",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 50,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1010197,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 324,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1005411,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1010205,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1010206,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 769,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001507,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1010207,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "NCUT0",
+                  "argument": 686,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1010201,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR1",
+                  "argument": 1010208,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR2",
+                  "argument": 1010209,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR3",
+                  "argument": 1010210,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5045765,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5120981,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 5120983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5121028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS4",
+                  "argument": 5121191,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTION0",
+                  "argument": 1014,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 39,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 78,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM1",
+                  "argument": 83,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM2",
+                  "argument": 100,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001507,
+                  "itemId": "event-item-2001507",
+                  "name": "Firing Mechanism #43",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 21003,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010197
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1005411
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010205
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010206
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010207
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010197,
+                  "name": "Perimu Haurimu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1005411,
+                  "name": "I'tolwann",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010205,
+                  "name": "Perimu Haurimu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010206,
+                  "name": "Perimu Haurimu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010207
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65662
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "rogue-class-quests-class-stray-into-the-shadows-65662",
+          "name": "Stray into the Shadows",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 10,
+          "externalIds": {
+            "xivapi-quest-row": 65662
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65662,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:49.799Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009943",
+            "npcName": "Jacke",
+            "sourceRowId": 1009943,
+            "zoneId": "dutiful-sisters-of-the-edelweiss",
+            "zoneName": "Dutiful Sisters of the Edelweiss",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rogue-class-quests-class-a-dainty-dilemma-65646"
+          ],
+          "nextQuestIds": [
+            "rogue-class-quests-class-stifled-screams-65680"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65646
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 10
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010198",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5045773,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -152.096,
+                      "y": -129.44,
+                      "z": 267.129
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010212",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 5046049,
+                  "coordinates": {
+                    "x": 10.2,
+                    "y": 13.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -50.8377,
+                      "y": 40,
+                      "z": 111.429
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010211",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 5046048,
+                  "coordinates": {
+                    "x": 10.4,
+                    "y": 13.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -42.2023,
+                      "y": 42.2337,
+                      "z": 115.921
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 5101695,
+                  "coordinates": {
+                    "x": 10.2,
+                    "y": 8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -54.0968,
+                      "y": 34.6021,
+                      "z": -159.948
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-lower-decks",
+                  "zoneName": "Limsa Lominsa Lower Decks",
+                  "territoryId": "territory-129",
+                  "mapId": "map-12",
+                  "sourceLevelRowId": 5098592,
+                  "coordinates": {
+                    "x": 7.4,
+                    "y": 15.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -192.175,
+                      "y": -9,
+                      "z": 211.637
+                    },
+                    "mapGameId": "s1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-lower-decks",
+                  "zoneName": "Limsa Lominsa Lower Decks",
+                  "territoryId": "territory-129",
+                  "mapId": "map-12",
+                  "sourceLevelRowId": 5098715,
+                  "coordinates": {
+                    "x": 8.2,
+                    "y": 12
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -149.875,
+                      "y": 9.30389,
+                      "z": 36.827
+                    },
+                    "mapGameId": "s1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010213",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-lower-decks",
+                  "zoneName": "Limsa Lominsa Lower Decks",
+                  "territoryId": "territory-129",
+                  "mapId": "map-12",
+                  "sourceLevelRowId": 5071183,
+                  "coordinates": {
+                    "x": 8,
+                    "y": 16
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -161.111,
+                      "y": 1.95316,
+                      "z": 239.309
+                    },
+                    "mapGameId": "s1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010213",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-lower-decks",
+                  "zoneName": "Limsa Lominsa Lower Decks",
+                  "territoryId": "territory-129",
+                  "mapId": "map-12",
+                  "sourceLevelRowId": 5071183,
+                  "coordinates": {
+                    "x": 8,
+                    "y": 16
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -161.111,
+                      "y": 1.95316,
+                      "z": 239.309
+                    },
+                    "mapGameId": "s1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010213",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-lower-decks",
+                  "zoneName": "Limsa Lominsa Lower Decks",
+                  "territoryId": "territory-129",
+                  "mapId": "map-12",
+                  "sourceLevelRowId": 5071183,
+                  "coordinates": {
+                    "x": 8,
+                    "y": 16
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -161.111,
+                      "y": 1.95316,
+                      "z": 239.309
+                    },
+                    "mapGameId": "s1t2/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-stray-into-the-shadows-objective-10",
+              "sortOrder": 10,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 10
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 3420,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-8660",
+                "itemName": "Bronze Baselards",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3016",
+                "itemName": "Leather Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-75",
+                "notes": "Stain: Shadow Blue"
+              },
+              {
+                "itemId": "item-2662",
+                "itemName": "Bronze Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-75",
+                "notes": "Stain: Shadow Blue"
+              },
+              {
+                "itemId": "item-3539",
+                "itemName": "Hempen Bracers",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-75",
+                "notes": "Stain: Shadow Blue"
+              },
+              {
+                "itemId": "item-3770",
+                "itemName": "Leather Jackboots",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-75",
+                "notes": "Stain: Shadow Blue"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65662,
+              "internalId": "ClsRog101_00126",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 100,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1010198,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1010212,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1010211,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 5102250,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "STATUS0",
+                  "argument": 614,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE1",
+                  "argument": 5098053,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE2",
+                  "argument": 5098095,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE3",
+                  "argument": 5403407,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE4",
+                  "argument": 5404406,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE5",
+                  "argument": 5404407,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1010213,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 404,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 90,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004906,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EAVESDROP1",
+                  "argument": 2469824,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EAVESDROP2",
+                  "argument": 2470161,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EAVESDROP3",
+                  "argument": 4069499,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1010444,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR1",
+                  "argument": 1010201,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR2",
+                  "argument": 1010202,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR3",
+                  "argument": 1010204,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR4",
+                  "argument": 1010200,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_EOBJ0",
+                  "argument": 2004892,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5120981,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5120983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 5121028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5119723,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS4",
+                  "argument": 5119727,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS5",
+                  "argument": 5119733,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS6",
+                  "argument": 5106077,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 39,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE2",
+                  "argument": 57,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM1",
+                  "argument": 93,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM2",
+                  "argument": 78,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM3",
+                  "argument": 100,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM4",
+                  "argument": 114,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_FACE1",
+                  "argument": 613,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR1",
+                  "argument": 5046049,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR2",
+                  "argument": 5046048,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010198
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010212
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010211
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010213
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010198,
+                  "name": "V'kebbe",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010212,
+                  "name": "fishmonger",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010211,
+                  "name": "V'kebbe",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010213,
+                  "name": "V'kebbe",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65680
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "rogue-class-quests-class-stifled-screams-65680",
+          "name": "Stifled Screams",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 15,
+          "externalIds": {
+            "xivapi-quest-row": 65680
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65680,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:52.207Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009943",
+            "npcName": "Jacke",
+            "sourceRowId": 1009943,
+            "zoneId": "dutiful-sisters-of-the-edelweiss",
+            "zoneName": "Dutiful Sisters of the Edelweiss",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rogue-class-quests-class-stray-into-the-shadows-65662"
+          ],
+          "nextQuestIds": [
+            "rogue-class-quests-class-slave-to-the-code-65681"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65662
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 15
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-stifled-screams-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-stifled-screams-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010199",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 5063246,
+                  "coordinates": {
+                    "x": 26.6,
+                    "y": 33.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 256.146,
+                      "y": 21.0675,
+                      "z": 581.413
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-stifled-screams-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004861",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 5069536,
+                  "coordinates": {
+                    "x": 18.9,
+                    "y": 36.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -131.617,
+                      "y": 0.512191,
+                      "z": 729.981
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-stifled-screams-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010218",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 5106386,
+                  "coordinates": {
+                    "x": 27.9,
+                    "y": 28.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 319.475,
+                      "y": -36.3538,
+                      "z": 346.763
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-stifled-screams-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010218",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 5106386,
+                  "coordinates": {
+                    "x": 27.9,
+                    "y": 28.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 319.475,
+                      "y": -36.3538,
+                      "z": 346.763
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-stifled-screams-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010218",
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 5106386,
+                  "coordinates": {
+                    "x": 27.9,
+                    "y": 28.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 319.475,
+                      "y": -36.3538,
+                      "z": 346.763
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 2880,
+            "gil": 0
+          },
+          "unlocks": [
+            {
+              "type": "action",
+              "targetId": "action-2247",
+              "sourceRowId": 2247,
+              "name": "Throwing Dagger"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65680,
+              "internalId": "ClsRog150_00144",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 150,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1010197,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1010198,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1010220,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1010199,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004861,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_WAITING_SHOR",
+                  "argument": 11,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1010301,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2004860,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1010218,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 405,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 91,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2004907,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1010221,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1010201,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR1",
+                  "argument": 1010202,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR2",
+                  "argument": 1010222,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR3",
+                  "argument": 1010223,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR4",
+                  "argument": 1010226,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR5",
+                  "argument": 1010227,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR6",
+                  "argument": 1010200,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5120981,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 5120983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5121028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS4",
+                  "argument": 5125607,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS5",
+                  "argument": 5125608,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS6",
+                  "argument": 5045765,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS7",
+                  "argument": 5045773,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS8",
+                  "argument": 5045804,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 39,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTION0",
+                  "argument": 788,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION1",
+                  "argument": 1014,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION2",
+                  "argument": 983,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION3",
+                  "argument": 985,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_FACE0",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTION4",
+                  "argument": 995,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_WS",
+                  "argument": 2247,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_VFX",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 85,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM1",
+                  "argument": 78,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010197
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010198
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010220
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010199
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010301
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1010218
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1010221
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010197,
+                  "name": "Perimu Haurimu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010198,
+                  "name": "V'kebbe",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010220,
+                  "name": "Maelstrom officer",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010199,
+                  "name": "Swarsynt",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010301
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1010218,
+                  "name": "Jacke",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1010221,
+                  "name": "Maelstrom officer",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65681
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "rogue-class-quests-class-slave-to-the-code-65681",
+          "name": "Slave to the Code",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 15,
+          "externalIds": {
+            "xivapi-quest-row": 65681
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65681,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:54.921Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1010218",
+            "npcName": "Jacke",
+            "sourceRowId": 1010218,
+            "zoneId": "western-la-noscea",
+            "zoneName": "Western La Noscea",
+            "coordinates": {
+              "x": 27.9,
+              "y": 28.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rogue-class-quests-class-stifled-screams-65680"
+          ],
+          "nextQuestIds": [
+            "rogue-class-quests-class-grinners-in-the-mist-65682"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65680
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 15
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-slave-to-the-code-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "western-la-noscea",
+                  "zoneName": "Western La Noscea",
+                  "territoryId": "territory-138",
+                  "mapId": "map-18",
+                  "sourceLevelRowId": 5375022,
+                  "coordinates": {
+                    "x": 33.5,
+                    "y": 27.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 599.18,
+                      "y": 32.1137,
+                      "z": 311.154
+                    },
+                    "mapGameId": "s1f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-slave-to-the-code-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-slave-to-the-code-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 2880,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-8661",
+                "itemName": "Brass Knives",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3022",
+                "itemName": "Cotton Shirt",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-13",
+                "notes": "Stain: Coral Pink"
+              },
+              {
+                "itemId": "item-2677",
+                "itemName": "Hunting Hat",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-13",
+                "notes": "Stain: Coral Pink"
+              },
+              {
+                "itemId": "item-3546",
+                "itemName": "Fingerless Hard Leather Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-13",
+                "notes": "Stain: Coral Pink"
+              },
+              {
+                "itemId": "item-3780",
+                "itemName": "Hard Leather Crakows",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-13",
+                "notes": "Stain: Coral Pink"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "action",
+              "targetId": "action-2248",
+              "sourceRowId": 2248,
+              "name": "Mug"
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65681,
+              "internalId": "ClsRog151_00145",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 151,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1010218,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1010228,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_ACTION_RESCUE_UNDER_MIDDLE",
+                  "argument": 35,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 406,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 92,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004908,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1010229,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1010230,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE1",
+                  "argument": 138,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "NCUT0",
+                  "argument": 687,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTION0",
+                  "argument": 995,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_WS",
+                  "argument": 2248,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_VFX",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010228
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010229
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010230
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1009943
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010228,
+                  "name": "beggarly boy",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010229,
+                  "name": "beggarly woman",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010230
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1009943,
+                  "name": "Jacke",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65682
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "rogue-class-quests-class-grinners-in-the-mist-65682",
+          "name": "Grinners in the Mist",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 20,
+          "externalIds": {
+            "xivapi-quest-row": 65682
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65682,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:46:57.643Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009943",
+            "npcName": "Jacke",
+            "sourceRowId": 1009943,
+            "zoneId": "dutiful-sisters-of-the-edelweiss",
+            "zoneName": "Dutiful Sisters of the Edelweiss",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rogue-class-quests-class-slave-to-the-code-65681"
+          ],
+          "nextQuestIds": [
+            "rogue-class-quests-class-sweet-sorrows-65684"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65681
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 20
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-grinners-in-the-mist-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010238",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5109006,
+                  "coordinates": {
+                    "x": 24.4,
+                    "y": 27.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 146.728,
+                      "y": 62.3291,
+                      "z": 291.831
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-grinners-in-the-mist-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5108084,
+                  "coordinates": {
+                    "x": 25.1,
+                    "y": 28.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 181.133,
+                      "y": 59.5204,
+                      "z": 327.545
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-grinners-in-the-mist-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010238",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5109006,
+                  "coordinates": {
+                    "x": 24.4,
+                    "y": 27.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 146.728,
+                      "y": 62.3291,
+                      "z": 291.831
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-grinners-in-the-mist-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 2,
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5375023,
+                  "coordinates": {
+                    "x": 21.8,
+                    "y": 15.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 16.8829,
+                      "y": 48.3172,
+                      "z": -301.161
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-grinners-in-the-mist-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010242",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5108558,
+                  "coordinates": {
+                    "x": 21.6,
+                    "y": 15.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 7.23369,
+                      "y": 57.9145,
+                      "z": -307.091
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-grinners-in-the-mist-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-grinners-in-the-mist-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010237",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 5069543,
+                  "coordinates": {
+                    "x": 26.4,
+                    "y": 34.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 242.316,
+                      "y": 8.00016,
+                      "z": 668.253
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-grinners-in-the-mist-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010237",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 5069543,
+                  "coordinates": {
+                    "x": 26.4,
+                    "y": 34.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 242.316,
+                      "y": 8.00016,
+                      "z": 668.253
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 8
+              }
+            },
+            {
+              "id": "adventurer-grinners-in-the-mist-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 6960,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-8662",
+                "itemName": "Iron Daggers",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3043",
+                "itemName": "Goatskin Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-30",
+                "notes": "Stain: Gobbiebag Brown"
+              },
+              {
+                "itemId": "item-2710",
+                "itemName": "Goatskin Eyepatch",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-30",
+                "notes": "Stain: Gobbiebag Brown"
+              },
+              {
+                "itemId": "item-3559",
+                "itemName": "Goatskin Armguards",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-30",
+                "notes": "Stain: Gobbiebag Brown"
+              },
+              {
+                "itemId": "item-3791",
+                "itemName": "Goatskin Leg Guards",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-30",
+                "notes": "Stain: Gobbiebag Brown"
+              },
+              {
+                "itemId": "item-5824",
+                "itemName": "Allagan Bronze Piece",
+                "quantity": 5,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65682,
+              "internalId": "ClsRog200_00146",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 200,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1010238,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1010198,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004903,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1010240,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1010241,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 5107907,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "STATUS0",
+                  "argument": 614,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE1",
+                  "argument": 5411165,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1010242,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 5110355,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 5110356,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2004904,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2004905,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1010237,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 407,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 93,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2004910,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1010239,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2004862,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1010243,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1010244,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 1010245,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR11",
+                  "argument": 1010541,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR12",
+                  "argument": 1010249,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EAVESDROP1",
+                  "argument": 5107890,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EAVESDROP2",
+                  "argument": 5107903,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1010201,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR1",
+                  "argument": 1010202,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR2",
+                  "argument": 1010204,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR3",
+                  "argument": 1010246,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5120981,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 5120983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5121028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS4",
+                  "argument": 5045765,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS5",
+                  "argument": 5045773,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS6",
+                  "argument": 5069558,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS7",
+                  "argument": 5114752,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 39,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTION0",
+                  "argument": 788,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION1",
+                  "argument": 979,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_FACE0",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_FACE1",
+                  "argument": 607,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 85,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM1",
+                  "argument": 130,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM2",
+                  "argument": 78,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010238
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010198
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010240
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010241
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010242
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1010237
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1010239
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1010243
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1010244
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1010245
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1010541
+                },
+                {
+                  "sourceInstruction": "ACTOR12",
+                  "actorRowId": 1010249
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010238,
+                  "name": "Perimu Haurimu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010198,
+                  "name": "V'kebbe",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010240,
+                  "name": "Yellowjacket",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010241,
+                  "name": "Yellowjacket",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010242,
+                  "name": "black marketeer",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1010237,
+                  "name": "Jacke",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1010239
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1010243,
+                  "name": "Grinning Cur cap'n",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1010244
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1010245
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1010541,
+                  "name": "V'kebbe",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR12",
+                  "actorRowId": 1010249,
+                  "name": "Milala",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65684
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        },
+        {
+          "id": "rogue-class-quests-class-sweet-sorrows-65684",
+          "name": "Sweet Sorrows",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 25,
+          "externalIds": {
+            "xivapi-quest-row": 65684
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65684,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:47:00.947Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009943",
+            "npcName": "Jacke",
+            "sourceRowId": 1009943,
+            "zoneId": "dutiful-sisters-of-the-edelweiss",
+            "zoneName": "Dutiful Sisters of the Edelweiss",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rogue-class-quests-class-grinners-in-the-mist-65682"
+          ],
+          "nextQuestIds": [
+            "rogue-class-quests-class-market-for-death-65690"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65682
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 25
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2001510",
+              "itemName": "Sack of Coin",
+              "sourceRowId": 2001510,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-sweet-sorrows-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 5117555,
+                  "coordinates": {
+                    "x": 31.7,
+                    "y": 12.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 508.247,
+                      "y": 86.3508,
+                      "z": -449.799
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-sweet-sorrows-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010252",
+              "locations": [
+                {
+                  "zoneId": "lower-la-noscea",
+                  "zoneName": "Lower La Noscea",
+                  "territoryId": "territory-135",
+                  "mapId": "map-16",
+                  "sourceLevelRowId": 5109558,
+                  "coordinates": {
+                    "x": 31.7,
+                    "y": 12.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 508.247,
+                      "y": 95.9576,
+                      "z": -449.799
+                    },
+                    "mapGameId": "s1f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-sweet-sorrows-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-sweet-sorrows-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010251",
+              "locations": [
+                {
+                  "zoneId": "eastern-la-noscea",
+                  "zoneName": "Eastern La Noscea",
+                  "territoryId": "territory-137",
+                  "mapId": "map-17",
+                  "sourceLevelRowId": 5109470,
+                  "coordinates": {
+                    "x": 30.5,
+                    "y": 29.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 450.849,
+                      "y": 16.1824,
+                      "z": 406.701
+                    },
+                    "mapGameId": "s1f3/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-sweet-sorrows-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010251",
+              "locations": [
+                {
+                  "zoneId": "eastern-la-noscea",
+                  "zoneName": "Eastern La Noscea",
+                  "territoryId": "territory-137",
+                  "mapId": "map-17",
+                  "sourceLevelRowId": 5109470,
+                  "coordinates": {
+                    "x": 30.5,
+                    "y": 29.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 450.849,
+                      "y": 16.1824,
+                      "z": 406.701
+                    },
+                    "mapGameId": "s1f3/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-sweet-sorrows-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010250",
+              "locations": [
+                {
+                  "zoneId": "eastern-la-noscea",
+                  "zoneName": "Eastern La Noscea",
+                  "territoryId": "territory-137",
+                  "mapId": "map-17",
+                  "sourceLevelRowId": 5109474,
+                  "coordinates": {
+                    "x": 30.5,
+                    "y": 29.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 448.493,
+                      "y": 16.1563,
+                      "z": 408.793
+                    },
+                    "mapGameId": "s1f3/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-sweet-sorrows-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 8160,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-8663",
+                "itemName": "Iron Pugiones",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3066",
+                "itemName": "Velveteen Shirt",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-54",
+                "notes": "Stain: Adamantoise Green"
+              },
+              {
+                "itemId": "item-3576",
+                "itemName": "Fingerless Goatskin Gloves",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-54",
+                "notes": "Stain: Adamantoise Green"
+              },
+              {
+                "itemId": "item-3349",
+                "itemName": "Velveteen Sarouel",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-54",
+                "notes": "Stain: Adamantoise Green"
+              },
+              {
+                "itemId": "item-27638",
+                "itemName": "Altered Velveteen Bandana",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-54",
+                "notes": "Stain: Adamantoise Green"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 2,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65684,
+              "internalId": "ClsRog250_00148",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 250,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2001510,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 5110336,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 5110359,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 5110360,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 5110361,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004911,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1010198,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1010252,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1010253,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1010254,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1010255,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2004914,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2004915,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1010251,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 408,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 94,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2004912,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1010250,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1010202,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR1",
+                  "argument": 1010204,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5121028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5120983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 5120981,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5045773,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS4",
+                  "argument": 5109470,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_FACE1",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 5109559,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR1",
+                  "argument": 5109574,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR2",
+                  "argument": 5109575,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 85,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM1",
+                  "argument": 83,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2001510,
+                  "itemId": "event-item-2001510",
+                  "name": "Sack of Coin",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 25919,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010198
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010252
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010253
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010254
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010255
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1010251
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1010250
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010198,
+                  "name": "V'kebbe",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010252,
+                  "name": "black marketeer",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010253
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010254
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010255
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1010251,
+                  "name": "V'kebbe",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1010250,
+                  "name": "Jacke",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65690
+                ]
+              }
+            }
+          },
+          "sortOrder": 8
+        },
+        {
+          "id": "rogue-class-quests-class-market-for-death-65690",
+          "name": "Market for Death",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 30,
+          "externalIds": {
+            "xivapi-quest-row": 65690
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65690,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:47:04.620Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009943",
+            "npcName": "Jacke",
+            "sourceRowId": 1009943,
+            "zoneId": "dutiful-sisters-of-the-edelweiss",
+            "zoneName": "Dutiful Sisters of the Edelweiss",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rogue-class-quests-class-sweet-sorrows-65684"
+          ],
+          "nextQuestIds": [
+            "rogue-class-quests-class-cloying-victory-65691"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65684
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 30
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-market-for-death-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 5,
+              "locations": [
+                {
+                  "zoneId": "upper-la-noscea",
+                  "zoneName": "Upper La Noscea",
+                  "territoryId": "territory-139",
+                  "mapId": "map-19",
+                  "sourceLevelRowId": 5117775,
+                  "coordinates": {
+                    "x": 12.8,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -436.086,
+                      "y": -11.2935,
+                      "z": 48.5859
+                    },
+                    "mapGameId": "s1f5/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-market-for-death-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004916",
+              "locations": [
+                {
+                  "zoneId": "upper-la-noscea",
+                  "zoneName": "Upper La Noscea",
+                  "territoryId": "territory-139",
+                  "mapId": "map-19",
+                  "sourceLevelRowId": 5120198,
+                  "coordinates": {
+                    "x": 12.8,
+                    "y": 22.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -436.011,
+                      "y": -1.92942,
+                      "z": 48.5859
+                    },
+                    "mapGameId": "s1f5/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-market-for-death-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010261",
+              "locations": [
+                {
+                  "zoneId": "upper-la-noscea",
+                  "zoneName": "Upper La Noscea",
+                  "territoryId": "territory-139",
+                  "mapId": "map-19",
+                  "sourceLevelRowId": 5109632,
+                  "coordinates": {
+                    "x": 12.7,
+                    "y": 22.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -437.361,
+                      "y": -2.36933,
+                      "z": 55.9566
+                    },
+                    "mapGameId": "s1f5/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-market-for-death-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1010267",
+              "locations": [
+                {
+                  "zoneId": "middle-la-noscea",
+                  "zoneName": "Middle La Noscea",
+                  "territoryId": "territory-134",
+                  "mapId": "map-15",
+                  "sourceLevelRowId": 5109872,
+                  "coordinates": {
+                    "x": 12.5,
+                    "y": 14.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -449.058,
+                      "y": 21.6346,
+                      "z": -327.932
+                    },
+                    "mapGameId": "s1f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-market-for-death-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 6240,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65690,
+              "internalId": "ClsRog300_00154",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 300,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 5110339,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY0",
+                  "argument": 5110345,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY1",
+                  "argument": 5110346,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY2",
+                  "argument": 5110348,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY3",
+                  "argument": 5110349,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ENEMY4",
+                  "argument": 5110352,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004913,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_SEARCH",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1010262,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1010263,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1010264,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2004916,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_RESCUE_UNDER_MIDDLE",
+                  "argument": 35,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1010261,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1010265,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1010267,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_ACTOR0",
+                  "argument": 1010200,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR1",
+                  "argument": 1010201,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR2",
+                  "argument": 1010202,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR3",
+                  "argument": 1010203,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTOR4",
+                  "argument": 1010266,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5121028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5120983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 5120981,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS3",
+                  "argument": 5045765,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS4",
+                  "argument": 5045773,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE0",
+                  "argument": 39,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_SE1",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTION0",
+                  "argument": 788,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION1",
+                  "argument": 649,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_ACTION2",
+                  "argument": 1061,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_FACE0",
+                  "argument": 617,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_FACE1",
+                  "argument": 608,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR0",
+                  "argument": 5109631,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_ACTION3",
+                  "argument": 995,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LCUT_WS",
+                  "argument": 2257,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_VFX",
+                  "argument": 241,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 85,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM1",
+                  "argument": 114,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM2",
+                  "argument": 83,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010262
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010263
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010264
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010261
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010265
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1010267
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1010262
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1010263
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1010264
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1010261,
+                  "name": "Jacke",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1010265,
+                  "name": "Bloody Executioner",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1010267,
+                  "name": "Milala",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65691
+                ]
+              }
+            }
+          },
+          "sortOrder": 9
+        },
+        {
+          "id": "rogue-class-quests-class-cloying-victory-65691",
+          "name": "Cloying Victory",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 30,
+          "externalIds": {
+            "xivapi-quest-row": 65691
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 65691,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T06:47:07.935Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1009943",
+            "npcName": "Jacke",
+            "sourceRowId": 1009943,
+            "zoneId": "dutiful-sisters-of-the-edelweiss",
+            "zoneName": "Dutiful Sisters of the Edelweiss",
+            "coordinates": {
+              "x": 6.1,
+              "y": 6.1
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "rogue-class-quests-class-market-for-death-65690"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              65690
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 30
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-cloying-victory-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2004863",
+              "locations": [
+                {
+                  "zoneId": "limsa-lominsa-upper-decks",
+                  "zoneName": "Limsa Lominsa Upper Decks",
+                  "territoryId": "territory-128",
+                  "mapId": "map-11",
+                  "sourceLevelRowId": 5110041,
+                  "coordinates": {
+                    "x": 11.3,
+                    "y": 13.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 4.45501,
+                      "y": 44.5,
+                      "z": 121.3
+                    },
+                    "mapGameId": "s1t1/01"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-cloying-victory-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1009943",
+              "targetName": "Jacke",
+              "locations": [
+                {
+                  "zoneId": "dutiful-sisters-of-the-edelweiss",
+                  "zoneName": "Dutiful Sisters of the Edelweiss",
+                  "territoryId": "territory-129",
+                  "mapId": "map-548",
+                  "sourceLevelRowId": 5013506,
+                  "coordinates": {
+                    "x": 6.1,
+                    "y": 6.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -153.367,
+                      "y": -129.44,
+                      "z": 265.908
+                    },
+                    "mapGameId": "s1t2/02"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 6240,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-8664",
+                "itemName": "Steel Knives",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ],
+            "optionalItems": [
+              {
+                "itemId": "item-3100",
+                "itemName": "Toadskin Jacket",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-2753",
+                "itemName": "Steel Sallet",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-3597",
+                "itemName": "Toadskin Armguards",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-3827",
+                "itemName": "Toadskin Leg Guards",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "stainId": "stain-6",
+                "notes": "Stain: Soot Black"
+              },
+              {
+                "itemId": "item-5825",
+                "itemName": "Allagan Silver Piece",
+                "quantity": 3,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T06:47:09.496Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 65691,
+              "internalId": "ClsRog301_00155",
+              "expansion": "A Realm Reborn",
+              "journalGenre": "Rogue Quests",
+              "eventIconType": 8,
+              "sortKey": 301,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1009943,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2004863,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_ACTION_LOOKOUT_MIDDLE",
+                  "argument": 50,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "TERRITORYTYPE0",
+                  "argument": 409,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QUESTBATTLE0",
+                  "argument": 95,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1009945,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1005411,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LCUT_POS0",
+                  "argument": 5121028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS1",
+                  "argument": 5120983,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_POS2",
+                  "argument": 5120981,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_FACE0",
+                  "argument": 605,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LCUT_BGM0",
+                  "argument": 87,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009945
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1005411
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1009945,
+                  "name": "Bochard",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1005411,
+                  "name": "I'tolwann",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  65748
+                ]
+              }
+            }
+          },
+          "sortOrder": 10
+        }
+      ]
+    }
+  ]
+}

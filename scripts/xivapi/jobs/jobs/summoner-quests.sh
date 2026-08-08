@@ -12,6 +12,8 @@ JOURNAL_GENRES=(
   "Summoner Quests"
 )
 
+EXCLUDED_QUEST_ROWS="66662"
+
 PRIMARY_FACET_ID="magical-ranged-dps"
 PRIMARY_FACET_NAME="Magical Ranged DPS"
 

@@ -16,6 +16,12 @@ JOURNAL_GENRES=(
   "A Realm Reborn Allied Society Quests"
 )
 
+# These three quests are mutually exclusive.
+# Completing any one permits the shared questline to continue.
+ALTERNATIVE_COMPLETION_GROUPS=(
+  "arr-allied-call-of-the-wild:67001,67002,67003"
+)
+
 PRIMARY_FACET_ID="allied-societies"
 PRIMARY_FACET_NAME="Allied Societies"
 

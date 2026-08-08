@@ -40,11 +40,15 @@ async function main(): Promise<void> {
 
   const useFullResponse = process.argv.includes('--full');
 
+  const quiet = process.argv.includes('--quiet');
+
   const pins = await readXivapiPins();
 
   const mode = useFullResponse ? 'full' : 'focused';
 
-  console.log([`Fetching ${mode} Quest row`, `${rowId}...`].join(' '));
+  if (!quiet) {
+    console.log([`Fetching ${mode} Quest row`, `${rowId}...`].join(' '));
+  }
 
   const response = await requestXivapi({
     path: `/sheet/Quest/${rowId}`,
@@ -68,7 +72,9 @@ async function main(): Promise<void> {
 
   await writeJsonFile(outputPath, response);
 
-  console.log(`Saved: ${outputPath}`);
+  if (!quiet) {
+    console.log(`Saved: ${outputPath}`);
+  }
 }
 
 await main();

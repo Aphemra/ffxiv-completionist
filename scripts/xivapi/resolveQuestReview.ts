@@ -23,6 +23,8 @@ import { xivapiSheetResponseSchema, type XivapiPins } from './schemas';
 
 type JsonObject = Record<string, unknown>;
 
+const useConciseOutput = process.argv.includes('--concise');
+
 interface ResolvedReference {
   rowId: number;
   sheet: string;
@@ -213,13 +215,15 @@ async function fetchSheetRows(
       continue;
     }
 
-    console.log(
-      [
-        `Resolving ${sheet} rows`,
-        `${chunkIndex + 1}`,
-        `of ${chunks.length}...`,
-      ].join(' '),
-    );
+    if (!useConciseOutput) {
+      console.log(
+        [
+          `Resolving ${sheet} rows`,
+          `${chunkIndex + 1}`,
+          `of ${chunks.length}...`,
+        ].join(' '),
+      );
+    }
 
     await fetchChunk(chunk);
 
@@ -984,12 +988,34 @@ async function main(): Promise<void> {
 
   await writeFile(markdownOutputPath, markdown, 'utf8');
 
-  console.log('');
-  console.log(markdown);
+  if (useConciseOutput) {
+    const classification = asObject(review.classification);
 
-  console.log(`Resolved JSON: ${jsonOutputPath}`);
+    const level = readInteger(classification?.level);
 
-  console.log(`Resolved Markdown: ${markdownOutputPath}`);
+    const conciseDetails = [
+      readString(classification?.expansion),
+      readString(classification?.journalGenre),
+      readString(classification?.suggestedCategory),
+      level === undefined ? undefined : `Level ${level}`,
+      readString(classification?.classJobName),
+    ].filter((value): value is string => value !== undefined);
+
+    console.log(`Resolved: ${conciseDetails.join(' | ')}`);
+
+    console.log(`Resolved JSON: ${jsonOutputPath}`);
+
+    console.log(`Resolved Markdown: ${markdownOutputPath}`);
+    console.log('');
+  } else {
+    console.log('');
+    console.log(markdown);
+
+    console.log(`Resolved JSON: ${jsonOutputPath}`);
+
+    console.log(`Resolved Markdown: ${markdownOutputPath}`);
+    console.log('');
+  }
 }
 
 await main();
