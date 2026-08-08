@@ -1,0 +1,1130 @@
+{
+  "schemaVersion": 1,
+  "id": "crystalline-mean-crafting-quests",
+  "title": "Facet of Crafting Quests",
+  "category": "crafting",
+  "generatedAt": "2026-08-08T07:00:11.936Z",
+  "source": {
+    "provider": "xivapi",
+    "version": "7583112015aaef5d",
+    "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828"
+  },
+  "summary": {
+    "questCount": 3,
+    "branchCount": 0,
+    "convergenceCount": 0,
+    "unresolvedIssueCount": 0
+  },
+  "branches": [],
+  "convergences": [],
+  "issues": [],
+  "quests": [
+    {
+      "id": "crystalline-mean-crafting-quests-crafting-cherished-memories-68766",
+      "xivapiRowId": 68766,
+      "sortOrder": 1,
+      "name": "Cherished Memories",
+      "level": 70,
+      "category": "crafting",
+      "isFeatureQuest": true,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 70
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 70
+        }
+      ],
+      "questItems": [],
+      "objectives": [
+        {
+          "id": "adventurer-cherished-memories-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7914761,
+              "coordinates": {
+                "x": 10.7,
+                "y": 10.6
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -25.8178,
+                  "y": 19.2691,
+                  "z": -32.7408
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-cherished-memories-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1027234",
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7788927,
+              "coordinates": {
+                "x": 11.5,
+                "y": 8.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 10.2395,
+                  "y": 20.186,
+                  "z": -138.221
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          69191
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68766,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T07:00:04.971Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68766,
+          "internalId": "LucKla201_03230",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Facet of Crafting Quests",
+          "eventIconType": 8,
+          "sortKey": 210,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1028326,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1028436,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1028437,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1027234,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR01",
+              "argument": 7904698,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1028480,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_MOTION0",
+              "argument": 3752,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_MOTION1",
+              "argument": 3177,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR02",
+              "argument": 7846379,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SCREENIMAGE0",
+              "argument": 774,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SCREENIMAGE1",
+              "argument": 830,
+              "referenceType": "script-value"
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1028436
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1028437
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1027234
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1028480
+            }
+          ],
+          "questItemReferences": [],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1028436,
+              "name": "troubled citizen",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1028437,
+              "name": "recording node",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1027234,
+              "name": "Thiuna",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1028480,
+              "name": "Thiuna",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68767
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "crystalline-mean-crafting-quests-crafting-for-sentimental-reasons-68767"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 54000,
+        "gil": 752,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "recording node",
+          "xivapiRowId": 1028326
+        },
+        "location": {
+          "zone": "The Crystarium",
+          "x": 11.5,
+          "y": 8.4
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "crystalline-mean-crafting-quests-crafting-for-sentimental-reasons-68767",
+      "xivapiRowId": 68767,
+      "sortOrder": 2,
+      "name": "For Sentimental Reasons",
+      "level": 75,
+      "category": "crafting",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 75
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 75
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-27244",
+          "itemName": "Workshop Sign Materials",
+          "sourceRowId": 27244,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        },
+        {
+          "itemId": "item-27245",
+          "itemName": "Workshop Sign",
+          "sourceRowId": 27245,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-for-sentimental-reasons-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1028438",
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7904699,
+              "coordinates": {
+                "x": 10.1,
+                "y": 15.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -55.8061,
+                  "y": 3.99982,
+                  "z": 198.684
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-for-sentimental-reasons-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1027234",
+          "targetName": "Thiuna",
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7788927,
+              "coordinates": {
+                "x": 11.5,
+                "y": 8.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 10.2395,
+                  "y": 20.186,
+                  "z": -138.221
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-for-sentimental-reasons-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1027234",
+          "targetName": "Thiuna",
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7788927,
+              "coordinates": {
+                "x": 11.5,
+                "y": 8.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 10.2395,
+                  "y": 20.186,
+                  "z": -138.221
+                },
+                "mapGameId": "n4t1/00"
+              }
+            },
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7846379,
+              "coordinates": {
+                "x": 11.5,
+                "y": 8.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 10.9571,
+                  "y": 20.186,
+                  "z": -142.53
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68766
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68767,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T07:00:07.333Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68767,
+          "internalId": "LucKla202_03231",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Facet of Crafting Quests",
+          "eventIconType": 1,
+          "sortKey": 220,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1027234,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1028438,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 27244,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1028326,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "RITEM1",
+              "argument": 27245,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "BIND_ACTOR01",
+              "argument": 7904698,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1028508,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_ACTOR_02",
+              "argument": 1028509,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR02",
+              "argument": 7846379,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2010473,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2010474,
+              "referenceType": "event-object"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 27244,
+              "itemId": "item-27244",
+              "quantity": 1,
+              "name": "Workshop Sign Materials",
+              "resolvedSheet": "Item",
+              "iconId": 25997
+            },
+            {
+              "sourceInstruction": "RITEM1",
+              "itemSheet": "Item",
+              "itemRowId": 27245,
+              "itemId": "item-27245",
+              "quantity": 1,
+              "name": "Workshop Sign",
+              "resolvedSheet": "Item",
+              "iconId": 26580
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1028438
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1028326
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1028508
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1028509
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1028438,
+              "name": "Thiuna",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1028326,
+              "name": "recording node",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1028508,
+              "name": "Owell",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_02",
+              "actorRowId": 1028509,
+              "name": "recording node",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": [
+              68768
+            ]
+          }
+        }
+      },
+      "previousQuestIds": [
+        "crystalline-mean-crafting-quests-crafting-cherished-memories-68766"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [
+        "crystalline-mean-crafting-quests-crafting-the-notes-of-bond-restoring-68768"
+      ],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 1395000,
+        "gil": 861,
+        "items": [],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Thiuna",
+          "xivapiRowId": 1027234
+        },
+        "location": {
+          "zone": "The Crystarium",
+          "x": 11.5,
+          "y": 8.5
+        }
+      },
+      "graphRole": "linear"
+    },
+    {
+      "id": "crystalline-mean-crafting-quests-crafting-the-notes-of-bond-restoring-68768",
+      "xivapiRowId": 68768,
+      "sortOrder": 3,
+      "name": "The Notes of Bond Restoring",
+      "level": 80,
+      "category": "crafting",
+      "isFeatureQuest": false,
+      "isRepeatable": false,
+      "isSeasonalQuest": false,
+      "availability": {
+        "classJobIds": [
+          "adventurer"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "level",
+          "level": 80
+        },
+        {
+          "type": "class-job",
+          "classJobId": "adventurer",
+          "classJobName": "Adventurer",
+          "level": 80
+        }
+      ],
+      "questItems": [
+        {
+          "itemId": "item-27246",
+          "itemName": "Lute Modification Component Materials",
+          "sourceRowId": 27246,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM0"
+        },
+        {
+          "itemId": "item-27247",
+          "itemName": "Lute Modification Component",
+          "sourceRowId": 27247,
+          "sourceSheet": "item",
+          "quantity": 1,
+          "usage": "used-during-quest",
+          "sourceInstruction": "RITEM1"
+        }
+      ],
+      "objectives": [
+        {
+          "id": "adventurer-the-notes-of-bond-restoring-objective-1",
+          "sortOrder": 1,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1028326",
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7846379,
+              "coordinates": {
+                "x": 11.5,
+                "y": 8.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 10.9571,
+                  "y": 20.186,
+                  "z": -142.53
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 1,
+            "completeSequence": 1
+          }
+        },
+        {
+          "id": "adventurer-the-notes-of-bond-restoring-objective-2",
+          "sortOrder": 2,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1027234",
+          "targetName": "Thiuna",
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7788927,
+              "coordinates": {
+                "x": 11.5,
+                "y": 8.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 10.2395,
+                  "y": 20.186,
+                  "z": -138.221
+                },
+                "mapGameId": "n4t1/00"
+              }
+            },
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7846379,
+              "coordinates": {
+                "x": 11.5,
+                "y": 8.4
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 10.9571,
+                  "y": 20.186,
+                  "z": -142.53
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 2,
+            "completeSequence": 2
+          }
+        },
+        {
+          "id": "adventurer-the-notes-of-bond-restoring-objective-3",
+          "sortOrder": 3,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1028438",
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7904699,
+              "coordinates": {
+                "x": 10.1,
+                "y": 15.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -55.8061,
+                  "y": 3.99982,
+                  "z": 198.684
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 3,
+            "completeSequence": 3
+          }
+        },
+        {
+          "id": "adventurer-the-notes-of-bond-restoring-objective-4",
+          "sortOrder": 4,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1028438",
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7904699,
+              "coordinates": {
+                "x": 10.1,
+                "y": 15.2
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": -55.8061,
+                  "y": 3.99982,
+                  "z": 198.684
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 4,
+            "completeSequence": 4
+          }
+        },
+        {
+          "id": "adventurer-the-notes-of-bond-restoring-objective-5",
+          "sortOrder": 5,
+          "type": "unknown",
+          "quantity": 1,
+          "targetId": "actor-1027234",
+          "targetName": "Thiuna",
+          "locations": [
+            {
+              "zoneId": "the-crystarium",
+              "zoneName": "The Crystarium",
+              "territoryId": "territory-819",
+              "mapId": "map-497",
+              "sourceLevelRowId": 7788927,
+              "coordinates": {
+                "x": 11.5,
+                "y": 8.5
+              },
+              "extensions": {
+                "rawCoordinates": {
+                  "x": 10.2395,
+                  "y": 20.186,
+                  "z": -138.221
+                },
+                "mapGameId": "n4t1/00"
+              }
+            }
+          ],
+          "notes": "Objective text is not available from the parsed Quest row.",
+          "sourceData": {
+            "todoIndex": 5
+          }
+        }
+      ],
+      "rawRelations": {
+        "previousQuestRowIds": [
+          68767
+        ],
+        "previousQuestJoin": 1,
+        "questLockJoin": 2
+      },
+      "sources": [
+        {
+          "provider": "xivapi",
+          "sheet": "Quest",
+          "rowId": 68768,
+          "gameVersion": "7583112015aaef5d",
+          "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+          "language": "en",
+          "importedAt": "2026-08-08T07:00:10.104Z"
+        }
+      ],
+      "sourceData": {
+        "xivapi": {
+          "rowId": 68768,
+          "internalId": "LucKla203_03232",
+          "expansion": "Shadowbringers",
+          "journalGenre": "Facet of Crafting Quests",
+          "eventIconType": 1,
+          "sortKey": 230,
+          "questLevelOffset": 0,
+          "scriptParameters": [
+            {
+              "instruction": "ACTOR0",
+              "argument": 1027234,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "ACTOR1",
+              "argument": 1028326,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EVENTACTION0",
+              "argument": 31,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "RITEM0",
+              "argument": 27246,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "RITEM1",
+              "argument": 27247,
+              "referenceType": "item"
+            },
+            {
+              "instruction": "ACTOR2",
+              "argument": 1028438,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "EOBJECT0",
+              "argument": 2009771,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "EVENTACTION1",
+              "argument": 1,
+              "referenceType": "action"
+            },
+            {
+              "instruction": "ACTOR3",
+              "argument": 1028439,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "BIND_ACTOR01",
+              "argument": 7788927,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR02",
+              "argument": 7846379,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "BIND_ACTOR03",
+              "argument": 7904700,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_ACTOR_01",
+              "argument": 1028508,
+              "referenceType": "actor"
+            },
+            {
+              "instruction": "LOC_MOTION0",
+              "argument": 3752,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_MOTION1",
+              "argument": 3177,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "CUT_SCENE_00",
+              "argument": 2116,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_SCREENIMAGE0",
+              "argument": 781,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_QUEST_DKB_01",
+              "argument": 68765,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_QUEST_DKB_02",
+              "argument": 68771,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_QUEST_DKB_03",
+              "argument": 68774,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_QUEST_DKB_04",
+              "argument": 68777,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_QUEST_LAST_MAIN_01",
+              "argument": 69190,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "EOBJECT1",
+              "argument": 2010475,
+              "referenceType": "event-object"
+            },
+            {
+              "instruction": "LOC_LOGMES_LAST_01",
+              "argument": 5399,
+              "referenceType": "script-value"
+            },
+            {
+              "instruction": "LOC_BGM0",
+              "argument": 648,
+              "referenceType": "script-value"
+            }
+          ],
+          "questItemReferences": [
+            {
+              "sourceInstruction": "RITEM0",
+              "itemSheet": "Item",
+              "itemRowId": 27246,
+              "itemId": "item-27246",
+              "quantity": 1,
+              "name": "Lute Modification Component Materials",
+              "resolvedSheet": "Item",
+              "iconId": 25990
+            },
+            {
+              "sourceInstruction": "RITEM1",
+              "itemSheet": "Item",
+              "itemRowId": 27247,
+              "itemId": "item-27247",
+              "quantity": 1,
+              "name": "Lute Modification Component",
+              "resolvedSheet": "Item",
+              "iconId": 26523
+            }
+          ],
+          "unresolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1028326
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1028438
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1028439
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1028508
+            }
+          ],
+          "resolvedActorReferences": [
+            {
+              "sourceInstruction": "ACTOR1",
+              "actorRowId": 1028326,
+              "name": "recording node",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR2",
+              "actorRowId": 1028438,
+              "name": "Thiuna",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "ACTOR3",
+              "actorRowId": 1028439,
+              "name": "recording node",
+              "resolvedSheet": "ENpcResident"
+            },
+            {
+              "sourceInstruction": "LOC_ACTOR_01",
+              "actorRowId": 1028508,
+              "name": "Owell",
+              "resolvedSheet": "ENpcResident"
+            }
+          ],
+          "reverseRelations": {
+            "nextQuestRowIds": []
+          }
+        }
+      },
+      "previousQuestIds": [
+        "crystalline-mean-crafting-quests-crafting-for-sentimental-reasons-68767"
+      ],
+      "previousQuestMode": "all",
+      "nextQuestIds": [],
+      "duties": [],
+      "unlocks": [],
+      "rewards": {
+        "experience": 0,
+        "gil": 1215,
+        "items": [
+          {
+            "itemId": "item-26737",
+            "itemName": "Craftsman's Command Materia VIII",
+            "quantity": 2,
+            "stainName": "No Color"
+          },
+          {
+            "itemId": "item-26735",
+            "itemName": "Craftsman's Competence Materia VIII",
+            "quantity": 2,
+            "stainName": "No Color"
+          }
+        ],
+        "choices": []
+      },
+      "start": {
+        "npc": {
+          "name": "Thiuna",
+          "xivapiRowId": 1027234
+        },
+        "location": {
+          "zone": "The Crystarium",
+          "x": 11.5,
+          "y": 8.5
+        }
+      },
+      "graphRole": "linear"
+    }
+  ]
+}

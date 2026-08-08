@@ -1,0 +1,2187 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "groups": [
+    {
+      "id": "wachumeqimeqi-juicecraft-quests-quests",
+      "title": "Xeerol Ja Juicecraft Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "wachumeqimeqi-juicecraft-quests-crafting-blame-it-on-my-juice-70518",
+          "name": "Blame It on My Juice",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70518
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70518,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:51.790Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047109",
+            "npcName": "Xeerol Ja",
+            "sourceRowId": 1047109,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.5,
+              "y": 11
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-mon-cherimoya-70519"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70502
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-blame-it-on-my-juice-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047110",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10429379,
+                  "coordinates": {
+                    "x": 12.7,
+                    "y": 13.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -35.4151,
+                      "y": -10,
+                      "z": 126.733
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-blame-it-on-my-juice-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047109",
+              "targetName": "Xeerol Ja",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10429372,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 155.056,
+                      "y": -13.98,
+                      "z": 2.99969
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 248640,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-38929",
+                "itemName": "Jhinga Biryani",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:06:07.980Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70518,
+              "internalId": "KinGla301_04982",
+              "expansion": "Dawntrail",
+              "journalGenre": "Xeerol Ja Juicecraft Quests",
+              "eventIconType": 8,
+              "sortKey": 310,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047109,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047110,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1047111,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1282,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_HALE",
+                  "argument": 10429373,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOB1",
+                  "argument": 1050919,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SHE",
+                  "argument": 1049652,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_KINGMD108",
+                  "argument": 70455,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_KINGMD115",
+                  "argument": 70462,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_AKTKLA307",
+                  "argument": 69688,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047110
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047111
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047110,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047111,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70519
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "wachumeqimeqi-juicecraft-quests-crafting-mon-cherimoya-70519",
+          "name": "Mon Cherimoya",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70519
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70519,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:54.225Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047109",
+            "npcName": "Xeerol Ja",
+            "sourceRowId": 1047109,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.5,
+              "y": 11
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-blame-it-on-my-juice-70518"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-a-drink-for-everymobbie-70520"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70518
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-mon-cherimoya-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047109",
+              "targetName": "Xeerol Ja",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10429372,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 155.056,
+                      "y": -13.98,
+                      "z": 2.99969
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 248640,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:06:07.980Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70519,
+              "internalId": "KinGla302_04983",
+              "expansion": "Dawntrail",
+              "journalGenre": "Xeerol Ja Juicecraft Quests",
+              "eventIconType": 34,
+              "sortKey": 320,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047109,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047111,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10411,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_01",
+                  "argument": 70519,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_HALE",
+                  "argument": 10429373,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ_KARANOCUP",
+                  "argument": 2014230,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ_WHITE_CUP",
+                  "argument": 2014226,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_MAKER_INIT_CUP",
+                  "argument": 10657239,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_GOGUGOGU",
+                  "argument": 208,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOB1",
+                  "argument": 1050919,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047111
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047111,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70520
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "wachumeqimeqi-juicecraft-quests-crafting-a-drink-for-everymobbie-70520",
+          "name": "A Drink for Everymobbie",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 93,
+          "externalIds": {
+            "xivapi-quest-row": 70520
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70520,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:56.615Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047109",
+            "npcName": "Xeerol Ja",
+            "sourceRowId": 1047109,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.5,
+              "y": 11
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-mon-cherimoya-70519"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-halnaruk-the-helphand-70521"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70519
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 93
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-drink-for-everymobbie-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047109",
+              "targetName": "Xeerol Ja",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10429372,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 155.056,
+                      "y": -13.98,
+                      "z": 2.99969
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 258720,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:06:07.980Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70520,
+              "internalId": "KinGla303_04984",
+              "expansion": "Dawntrail",
+              "journalGenre": "Xeerol Ja Juicecraft Quests",
+              "eventIconType": 34,
+              "sortKey": 330,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047109,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10411,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_01",
+                  "argument": 70520,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_HALE",
+                  "argument": 1050367,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOB1",
+                  "argument": 1050919,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_GOGUGOGU",
+                  "argument": 208,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ_KARANOCUP",
+                  "argument": 2014230,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ_RED_CUP",
+                  "argument": 2014227,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_MAKER_INIT_CUP",
+                  "argument": 10657239,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_KINGMC107",
+                  "argument": 70439,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SE_MOB_JOY",
+                  "argument": 380,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70521
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "wachumeqimeqi-juicecraft-quests-crafting-halnaruk-the-helphand-70521",
+          "name": "Halnaruk the Helphand",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 95,
+          "externalIds": {
+            "xivapi-quest-row": 70521
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70521,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:58.619Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047109",
+            "npcName": "Xeerol Ja",
+            "sourceRowId": 1047109,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.5,
+              "y": 11
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-a-drink-for-everymobbie-70520"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-the-missing-drink-70522"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70520
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 95
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-halnaruk-the-helphand-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047109",
+              "targetName": "Xeerol Ja",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10429372,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 155.056,
+                      "y": -13.98,
+                      "z": 2.99969
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 265440,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:06:07.980Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70521,
+              "internalId": "KinGla304_04985",
+              "expansion": "Dawntrail",
+              "journalGenre": "Xeerol Ja Juicecraft Quests",
+              "eventIconType": 34,
+              "sortKey": 340,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047109,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047171,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10411,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_01",
+                  "argument": 70521,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_HALE",
+                  "argument": 10857552,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_KINGMC107",
+                  "argument": 70439,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_HALE",
+                  "argument": 1050367,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOB1",
+                  "argument": 1050919,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_GOGUGOGU",
+                  "argument": 208,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ_KARANOCUP",
+                  "argument": 2014230,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ_KIMIDORI_CUP",
+                  "argument": 2014228,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_MAKER_INIT_CUP",
+                  "argument": 10657239,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_HANUHANU",
+                  "argument": 1050616,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SE_MOB_JOY",
+                  "argument": 380,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047171
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047171,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70522
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "wachumeqimeqi-juicecraft-quests-crafting-the-missing-drink-70522",
+          "name": "The Missing Drink",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 95,
+          "externalIds": {
+            "xivapi-quest-row": 70522
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70522,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:06:01.042Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047109",
+            "npcName": "Xeerol Ja",
+            "sourceRowId": 1047109,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.5,
+              "y": 11
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-halnaruk-the-helphand-70521"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-good-hydrations-70523"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70521
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 95
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-43939",
+              "itemName": "Yok Kukuru Pod",
+              "sourceRowId": 43939,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-43911",
+              "itemName": "Kukuru Pulp Juice",
+              "sourceRowId": 43911,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-missing-drink-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047112",
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10457859,
+                  "coordinates": {
+                    "x": 29.1,
+                    "y": 13.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 380.072,
+                      "y": -156.005,
+                      "z": -378.68
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-missing-drink-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 3,
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10519004,
+                  "coordinates": {
+                    "x": 28.6,
+                    "y": 12.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 354.545,
+                      "y": -167.327,
+                      "z": -449.816
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10519004,
+                  "coordinates": {
+                    "x": 28.6,
+                    "y": 12.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 354.545,
+                      "y": -167.327,
+                      "z": -449.816
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10519005,
+                  "coordinates": {
+                    "x": 26.7,
+                    "y": 12
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 257.909,
+                      "y": -175.738,
+                      "z": -473.658
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-missing-drink-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047131",
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10457978,
+                  "coordinates": {
+                    "x": 29.4,
+                    "y": 13.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 394.489,
+                      "y": -156.05,
+                      "z": -385.751
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-the-missing-drink-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047113",
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10429357,
+                  "coordinates": {
+                    "x": 27.8,
+                    "y": 12.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 316.213,
+                      "y": -164.172,
+                      "z": -465.293
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-the-missing-drink-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047167",
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10749453,
+                  "coordinates": {
+                    "x": 28.6,
+                    "y": 14.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 354.793,
+                      "y": -155.876,
+                      "z": -370.9
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-the-missing-drink-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047115",
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10457860,
+                  "coordinates": {
+                    "x": 28.2,
+                    "y": 14
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 335.91,
+                      "y": -154.137,
+                      "z": -372.702
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10749453,
+                  "coordinates": {
+                    "x": 28.6,
+                    "y": 14.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 354.793,
+                      "y": -155.876,
+                      "z": -370.9
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-the-missing-drink-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047109",
+              "targetName": "Xeerol Ja",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10429372,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 155.056,
+                      "y": -13.98,
+                      "z": 2.99969
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 265440,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-44088",
+                "itemName": "Gateau au Chocolat",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:06:07.980Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70522,
+              "internalId": "KinGla305_04986",
+              "expansion": "Dawntrail",
+              "journalGenre": "Xeerol Ja Juicecraft Quests",
+              "eventIconType": 1,
+              "sortKey": 350,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047109,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047171,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1047112,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1048629,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1046595,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1048630,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1047113,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1047114,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1047131,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1047163,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 1047167,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 43939,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR11",
+                  "argument": 1047115,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 43911,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "LOC_BIND_HALE",
+                  "argument": 10857552,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_YOIDORE",
+                  "argument": 10429358,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_HALE",
+                  "argument": 1050367,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_SHE",
+                  "argument": 1050366,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MOB1",
+                  "argument": 1050919,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_GOGUGOGU",
+                  "argument": 208,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_SHE",
+                  "argument": 10661363,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MAKER_INIT_SEQ5",
+                  "argument": 10520660,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MAKER_INIT_SEQ4",
+                  "argument": 10520663,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_PERUPERU",
+                  "argument": 1051096,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION_STRETCH",
+                  "argument": 9067,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_KINGMD101",
+                  "argument": 70448,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SE_MOB_JOY",
+                  "argument": 380,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 43939,
+                  "itemId": "item-43939",
+                  "quantity": 1,
+                  "name": "Yok Kukuru Pod",
+                  "resolvedSheet": "Item",
+                  "iconId": 26110
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 43911,
+                  "itemId": "item-43911",
+                  "quantity": 1,
+                  "name": "Kukuru Pulp Juice",
+                  "resolvedSheet": "Item",
+                  "iconId": 24422
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047171
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047112
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1048629
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1046595
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1048630
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1047113
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1047114
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1047131
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1047163
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1047167
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1047115
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_HALE",
+                  "actorRowId": 1050367
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SHE",
+                  "actorRowId": 1050366
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047171,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047112,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1048629,
+                  "name": "Qobli",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1046595,
+                  "name": "Tsuvli",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1048630,
+                  "name": "Wavlu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1047113,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1047114,
+                  "name": "Pelupelu tippler",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1047131,
+                  "name": "Xeerol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1047163,
+                  "name": "Xeerol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1047167,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1047115,
+                  "name": "Xeerol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_HALE",
+                  "actorRowId": 1050367,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SHE",
+                  "actorRowId": 1050366,
+                  "name": "Xeerol Ja",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70523
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "wachumeqimeqi-juicecraft-quests-crafting-good-hydrations-70523",
+          "name": "Good Hydrations",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 98,
+          "externalIds": {
+            "xivapi-quest-row": 70523
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70523,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:06:03.718Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047109",
+            "npcName": "Xeerol Ja",
+            "sourceRowId": 1047109,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.5,
+              "y": 11
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-the-missing-drink-70522"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-three-cheers-for-sweet-juice-70524"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70522
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 98
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-good-hydrations-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047109",
+              "targetName": "Xeerol Ja",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10429372,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 155.056,
+                      "y": -13.98,
+                      "z": 2.99969
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 275520,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-44077",
+                "itemName": "Salmon Jerky",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:06:07.980Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70523,
+              "internalId": "KinGla306_04987",
+              "expansion": "Dawntrail",
+              "journalGenre": "Xeerol Ja Juicecraft Quests",
+              "eventIconType": 34,
+              "sortKey": 360,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047109,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047171,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10411,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_01",
+                  "argument": 70523,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_HALE",
+                  "argument": 10857552,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_KINGMD101",
+                  "argument": 70448,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_02",
+                  "argument": 70478,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ_KARANOCUP",
+                  "argument": 2014230,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ_GREEN_CUP",
+                  "argument": 2014229,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_MAKER_INIT_CUP",
+                  "argument": 10657239,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOB1",
+                  "argument": 1050919,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ROPERI",
+                  "argument": 1049649,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_GOGUGOGU",
+                  "argument": 208,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SE_MOB_JOY",
+                  "argument": 380,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047171
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047171,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70524
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "wachumeqimeqi-juicecraft-quests-crafting-three-cheers-for-sweet-juice-70524",
+          "name": "Three Cheers for Sweet Juice",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 100,
+          "externalIds": {
+            "xivapi-quest-row": 70524
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70524,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:06:06.132Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047109",
+            "npcName": "Xeerol Ja",
+            "sourceRowId": 1047109,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.5,
+              "y": 11
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-juicecraft-quests-crafting-good-hydrations-70523"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70523
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 100
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-43940",
+              "itemName": "Turali Spice Blend",
+              "sourceRowId": 43940,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-43912",
+              "itemName": "Boonewa Soda",
+              "sourceRowId": 43912,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-three-cheers-for-sweet-juice-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047109",
+              "targetName": "Xeerol Ja",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10429372,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 155.056,
+                      "y": -13.98,
+                      "z": 2.99969
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                },
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10445766,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 11.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 156.523,
+                      "y": -13.1,
+                      "z": 4.52775
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-three-cheers-for-sweet-juice-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047109",
+              "targetName": "Xeerol Ja",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10429372,
+                  "coordinates": {
+                    "x": 16.5,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 155.056,
+                      "y": -13.98,
+                      "z": 2.99969
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1012,
+            "optionalItems": [
+              {
+                "itemId": "item-41765",
+                "itemName": "Craftsman's Competence Materia XI",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-41766",
+                "itemName": "Craftsman's Cunning Materia XI",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-41767",
+                "itemName": "Craftsman's Command Materia XI",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:06:07.980Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70524,
+              "internalId": "KinGla307_04988",
+              "expansion": "Dawntrail",
+              "journalGenre": "Xeerol Ja Juicecraft Quests",
+              "eventIconType": 1,
+              "sortKey": 370,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047109,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 43940,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 43912,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047129,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1047171,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOGMSG_EVENT_INVENTORY_FULL_ERROR",
+                  "argument": 1767,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1289,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_LAST_01",
+                  "argument": 10416,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_HALE",
+                  "argument": 10857552,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "NCUT_SCENE_CLSFAC0A070",
+                  "argument": 3443,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_01",
+                  "argument": 70478,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOB1",
+                  "argument": 1050919,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_SHE_SEQ1",
+                  "argument": 10429372,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_01",
+                  "argument": 70510,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_02",
+                  "argument": 70517,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_03",
+                  "argument": 70531,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_04",
+                  "argument": 70538,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SE_MOB_JOY",
+                  "argument": 380,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 43940,
+                  "itemId": "item-43940",
+                  "quantity": 1,
+                  "name": "Turali Spice Blend",
+                  "resolvedSheet": "Item",
+                  "iconId": 21464
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 43912,
+                  "itemId": "item-43912",
+                  "quantity": 1,
+                  "name": "Boonewa Soda",
+                  "resolvedSheet": "Item",
+                  "iconId": 52777
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047129
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047171
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047129,
+                  "name": "supply crate",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047171,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70503
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        }
+      ]
+    }
+  ]
+}

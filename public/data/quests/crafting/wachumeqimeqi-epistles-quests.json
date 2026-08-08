@@ -1,0 +1,2667 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "groups": [
+    {
+      "id": "wachumeqimeqi-epistles-quests-quests",
+      "title": "Epistles by Pameka Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "wachumeqimeqi-epistles-quests-crafting-pameka-the-scrivener-70511",
+          "name": "Pameka, the Scrivener",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70511
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70511,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:29.820Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047120",
+            "npcName": "Pameka",
+            "sourceRowId": 1047120,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.7,
+              "y": 11.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-hanu-opportunities-70512"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70502
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-pameka-the-scrivener-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047121",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479808,
+                  "coordinates": {
+                    "x": 12.3,
+                    "y": 14.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -54.742,
+                      "y": -6.08132,
+                      "z": 169.317
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-pameka-the-scrivener-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047120",
+              "targetName": "Pameka",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479801,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 165.852,
+                      "y": -13.98,
+                      "z": 18.3505
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 248640,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-38929",
+                "itemName": "Jhinga Biryani",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:46.683Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70511,
+              "internalId": "KinGla201_04975",
+              "expansion": "Dawntrail",
+              "journalGenre": "Epistles by Pameka Quests",
+              "eventIconType": 8,
+              "sortKey": 210,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047120,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047121,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1281,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 10479813,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_00",
+                  "argument": 70455,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_01",
+                  "argument": 70462,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 10570791,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 812,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5591,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 9002,
+                  "referenceType": "action"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047121
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047121,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70512
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "wachumeqimeqi-epistles-quests-crafting-hanu-opportunities-70512",
+          "name": "Hanu Opportunities",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70512
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70512,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:32.228Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047120",
+            "npcName": "Pameka",
+            "sourceRowId": 1047120,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.7,
+              "y": 11.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-pameka-the-scrivener-70511"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-this-little-pelu-70513"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70511
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-hanu-opportunities-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047120",
+              "targetName": "Pameka",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479801,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 165.852,
+                      "y": -13.98,
+                      "z": 18.3505
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 248640,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:46.683Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70512,
+              "internalId": "KinGla202_04976",
+              "expansion": "Dawntrail",
+              "journalGenre": "Epistles by Pameka Quests",
+              "eventIconType": 34,
+              "sortKey": 220,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047120,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047121,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 70512,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1050460,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1050796,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_01",
+                  "argument": 1315,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_02",
+                  "argument": 1316,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_03",
+                  "argument": 1317,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 10570791,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5591,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 9002,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2013891,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ1",
+                  "argument": 2013892,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ2",
+                  "argument": 2013886,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_MARKER_02",
+                  "argument": 10594440,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_03",
+                  "argument": 10594445,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_04",
+                  "argument": 10594449,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ3",
+                  "argument": 2014201,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 4203,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047121
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050460
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050796
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047121,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050460,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050796,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70513
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "wachumeqimeqi-epistles-quests-crafting-this-little-pelu-70513",
+          "name": "This Little Pelu",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 93,
+          "externalIds": {
+            "xivapi-quest-row": 70513
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70513,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:34.721Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047120",
+            "npcName": "Pameka",
+            "sourceRowId": 1047120,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.7,
+              "y": 11.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-hanu-opportunities-70512"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-oldton-roads-70514"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70512
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 93
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-this-little-pelu-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047120",
+              "targetName": "Pameka",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479801,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 165.852,
+                      "y": -13.98,
+                      "z": 18.3505
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 258720,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:46.683Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70513,
+              "internalId": "KinGla203_04977",
+              "expansion": "Dawntrail",
+              "journalGenre": "Epistles by Pameka Quests",
+              "eventIconType": 34,
+              "sortKey": 230,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047120,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 70513,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1050460,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1050796,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_01",
+                  "argument": 1318,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_02",
+                  "argument": 1319,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_03",
+                  "argument": 1320,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 10570791,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5591,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 9002,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2013891,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ1",
+                  "argument": 2013892,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ2",
+                  "argument": 2013887,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_MARKER_02",
+                  "argument": 10594440,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_03",
+                  "argument": 10594445,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_04",
+                  "argument": 10594449,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ3",
+                  "argument": 2014201,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 4203,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050460
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050796
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050460,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050796,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70514
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "wachumeqimeqi-epistles-quests-crafting-oldton-roads-70514",
+          "name": "Oldton Roads",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 95,
+          "externalIds": {
+            "xivapi-quest-row": 70514
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70514,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:37.120Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047120",
+            "npcName": "Pameka",
+            "sourceRowId": 1047120,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.7,
+              "y": 11.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-this-little-pelu-70513"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-written-in-stone-70515"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70513
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 95
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-oldton-roads-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047120",
+              "targetName": "Pameka",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479801,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 165.852,
+                      "y": -13.98,
+                      "z": 18.3505
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 265440,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:46.683Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70514,
+              "internalId": "KinGla204_04978",
+              "expansion": "Dawntrail",
+              "journalGenre": "Epistles by Pameka Quests",
+              "eventIconType": 34,
+              "sortKey": 240,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047120,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 70514,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1050460,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1050796,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_01",
+                  "argument": 1321,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_02",
+                  "argument": 1322,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_03",
+                  "argument": 1323,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_01",
+                  "argument": 70432,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 10570791,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5591,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 9002,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2013891,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ1",
+                  "argument": 2013892,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ2",
+                  "argument": 2013888,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_MARKER_02",
+                  "argument": 10594440,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_03",
+                  "argument": 10594445,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_04",
+                  "argument": 10594449,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ3",
+                  "argument": 2014201,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 4203,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050460
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050796
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050460,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050796,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70515
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "wachumeqimeqi-epistles-quests-crafting-written-in-stone-70515",
+          "name": "Written in Stone",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 95,
+          "externalIds": {
+            "xivapi-quest-row": 70515
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70515,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:39.550Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047120",
+            "npcName": "Pameka",
+            "sourceRowId": 1047120,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.7,
+              "y": 11.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-oldton-roads-70514"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-reaching-for-the-sky-70516"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70514
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 95
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-43937",
+              "itemName": "Yok Huy Supplies",
+              "sourceRowId": 43937,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-43909",
+              "itemName": "Yok Huy Cover",
+              "sourceRowId": 43909,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-written-in-stone-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2013893",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479815,
+                  "coordinates": {
+                    "x": 14.5,
+                    "y": 3.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 55.7246,
+                      "y": 47,
+                      "z": -366.848
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-written-in-stone-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047123",
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10479973,
+                  "coordinates": {
+                    "x": 32,
+                    "y": 34.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 525.586,
+                      "y": 105.124,
+                      "z": 660.617
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-written-in-stone-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 3,
+              "targetId": "actor-1047124",
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10480273,
+                  "coordinates": {
+                    "x": 31.4,
+                    "y": 33.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 493.326,
+                      "y": 111.135,
+                      "z": 589.152
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10480275,
+                  "coordinates": {
+                    "x": 30.5,
+                    "y": 32.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 449.68,
+                      "y": 120.235,
+                      "z": 560.905
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10480279,
+                  "coordinates": {
+                    "x": 28.9,
+                    "y": 34.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 367.574,
+                      "y": 129.046,
+                      "z": 635.218
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10479973,
+                  "coordinates": {
+                    "x": 32,
+                    "y": 34.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 525.586,
+                      "y": 105.124,
+                      "z": 660.617
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-written-in-stone-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10837800,
+                  "coordinates": {
+                    "x": 31.4,
+                    "y": 35.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 495.031,
+                      "y": 108.409,
+                      "z": 706.776
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10479973,
+                  "coordinates": {
+                    "x": 32,
+                    "y": 34.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 525.586,
+                      "y": 105.124,
+                      "z": 660.617
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-written-in-stone-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047128",
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10480350,
+                  "coordinates": {
+                    "x": 31.9,
+                    "y": 36.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 521.977,
+                      "y": 111.135,
+                      "z": 730.943
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-written-in-stone-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047128",
+              "locations": [
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10480350,
+                  "coordinates": {
+                    "x": 31.9,
+                    "y": 36.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 521.977,
+                      "y": 111.135,
+                      "z": 730.943
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                },
+                {
+                  "zoneId": "urqopacha",
+                  "zoneName": "Urqopacha",
+                  "territoryId": "territory-1187",
+                  "mapId": "map-857",
+                  "sourceLevelRowId": 10480296,
+                  "coordinates": {
+                    "x": 32,
+                    "y": 36.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 526.232,
+                      "y": 111.135,
+                      "z": 730.117
+                    },
+                    "mapGameId": "y6f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-written-in-stone-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047120",
+              "targetName": "Pameka",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479801,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 165.852,
+                      "y": -13.98,
+                      "z": 18.3505
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 265440,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-44088",
+                "itemName": "Gateau au Chocolat",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:46.683Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70515,
+              "internalId": "KinGla205_04979",
+              "expansion": "Dawntrail",
+              "journalGenre": "Epistles by Pameka Quests",
+              "eventIconType": 1,
+              "sortKey": 250,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047120,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2013893,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047123,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1047124,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1047125,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1047126,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2013894,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 10480325,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1047127,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1047128,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 43937,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 43909,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "SEQEV_00",
+                  "argument": 211,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 10479973,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_01",
+                  "argument": 70432,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR02",
+                  "argument": 10480296,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_02",
+                  "argument": 70447,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 10570791,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5591,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 9002,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2013889,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ET_DOUKOU",
+                  "argument": 5,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 43937,
+                  "itemId": "item-43937",
+                  "quantity": 1,
+                  "name": "Yok Huy Supplies",
+                  "resolvedSheet": "Item",
+                  "iconId": 23001
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 43909,
+                  "itemId": "item-43909",
+                  "quantity": 1,
+                  "name": "Yok Huy Cover",
+                  "resolvedSheet": "Item",
+                  "iconId": 25991
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047123
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047124
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1047125
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1047126
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1047127
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1047128
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047123,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047124,
+                  "name": "young Yok Huy",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1047125,
+                  "name": "severe Yok Huy",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1047126,
+                  "name": "drowsy Yok Huy",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1047127,
+                  "name": "Yok Huy stonemason",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1047128,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70516
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "wachumeqimeqi-epistles-quests-crafting-reaching-for-the-sky-70516",
+          "name": "Reaching for the Sky",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 98,
+          "externalIds": {
+            "xivapi-quest-row": 70516
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70516,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:42.279Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047120",
+            "npcName": "Pameka",
+            "sourceRowId": 1047120,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.7,
+              "y": 11.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-written-in-stone-70515"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-a-place-in-the-sun-70517"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70515
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 98
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-reaching-for-the-sky-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047120",
+              "targetName": "Pameka",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479801,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 165.852,
+                      "y": -13.98,
+                      "z": 18.3505
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 275520,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-44077",
+                "itemName": "Salmon Jerky",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:46.683Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70516,
+              "internalId": "KinGla206_04980",
+              "expansion": "Dawntrail",
+              "journalGenre": "Epistles by Pameka Quests",
+              "eventIconType": 34,
+              "sortKey": 260,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047120,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047122,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 70516,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 10479813,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1050460,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1050796,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_01",
+                  "argument": 1324,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_02",
+                  "argument": 1325,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_03",
+                  "argument": 1326,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_01",
+                  "argument": 70447,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 10570791,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5591,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 9002,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2013891,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ1",
+                  "argument": 2013892,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ2",
+                  "argument": 2013890,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_MARKER_02",
+                  "argument": 10594440,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_03",
+                  "argument": 10594445,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_04",
+                  "argument": 10594449,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ3",
+                  "argument": 2014201,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 4203,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDEL_02",
+                  "argument": 4319,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047122
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050460
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050796
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047122,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050460,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050796,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70517
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "wachumeqimeqi-epistles-quests-crafting-a-place-in-the-sun-70517",
+          "name": "A Place in the Sun",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 100,
+          "externalIds": {
+            "xivapi-quest-row": 70517
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70517,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:44.880Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047120",
+            "npcName": "Pameka",
+            "sourceRowId": 1047120,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.7,
+              "y": 11.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-epistles-quests-crafting-reaching-for-the-sky-70516"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70516
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 100
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-43938",
+              "itemName": "Xak Tural Miscellany",
+              "sourceRowId": 43938,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-43910",
+              "itemName": "Tonawawtan Cover Components",
+              "sourceRowId": 43910,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-place-in-the-sun-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047130",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479817,
+                  "coordinates": {
+                    "x": 12.2,
+                    "y": 14.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -57.0852,
+                      "y": -17.9729,
+                      "z": 176.686
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-a-place-in-the-sun-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047120",
+              "targetName": "Pameka",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479801,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 165.852,
+                      "y": -13.98,
+                      "z": 18.3505
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                },
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479813,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 164.08,
+                      "y": -14,
+                      "z": 16.113
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-a-place-in-the-sun-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2013895",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479818,
+                  "coordinates": {
+                    "x": 12.4,
+                    "y": 14.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -50.4449,
+                      "y": -6.08132,
+                      "z": 177.148
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-a-place-in-the-sun-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047169",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10837797,
+                  "coordinates": {
+                    "x": 12.3,
+                    "y": 14.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -52.0579,
+                      "y": -6.08132,
+                      "z": 176.094
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-a-place-in-the-sun-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047120",
+              "targetName": "Pameka",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10479801,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 165.852,
+                      "y": -13.98,
+                      "z": 18.3505
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1195,
+            "optionalItems": [
+              {
+                "itemId": "item-41765",
+                "itemName": "Craftsman's Competence Materia XI",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-41766",
+                "itemName": "Craftsman's Cunning Materia XI",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-41767",
+                "itemName": "Craftsman's Command Materia XI",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:46.683Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70517,
+              "internalId": "KinGla207_04981",
+              "expansion": "Dawntrail",
+              "journalGenre": "Epistles by Pameka Quests",
+              "eventIconType": 1,
+              "sortKey": 270,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047120,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047130,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 43938,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 43910,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1047122,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2013895,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1047121,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1047169,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1288,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_LAST_01",
+                  "argument": 10415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "CUT_SCENE_01",
+                  "argument": 3442,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_01",
+                  "argument": 70510,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_02",
+                  "argument": 70524,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_03",
+                  "argument": 70531,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_04",
+                  "argument": 70538,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1050452,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 5592,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1050460,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 10570791,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 5591,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 9002,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "INVIS_ACTOR1",
+                  "argument": 1048410,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_02",
+                  "argument": 10594440,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_04",
+                  "argument": 1050796,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2013891,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_IDEL_02",
+                  "argument": 4203,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDEL_03",
+                  "argument": 796,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 43938,
+                  "itemId": "item-43938",
+                  "quantity": 1,
+                  "name": "Xak Tural Miscellany",
+                  "resolvedSheet": "Item",
+                  "iconId": 21005
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 43910,
+                  "itemId": "item-43910",
+                  "quantity": 1,
+                  "name": "Tonawawtan Cover Components",
+                  "resolvedSheet": "Item",
+                  "iconId": 25992
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047130
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047122
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1047121
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1047169
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050452
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050460
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1050796
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047130,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047122,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1047121,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1047169,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050459,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050452,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1050460,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1050796,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70503
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        }
+      ]
+    }
+  ]
+}

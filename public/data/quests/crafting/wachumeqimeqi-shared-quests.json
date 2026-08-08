@@ -1,0 +1,1393 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "wachumeqimeqi-shared-quests-quests-standalone",
+      "title": "Standalone Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "wachumeqimeqi-shared-quests-crafting-wrought-in-wachumeqimeqi-70502",
+          "name": "Wrought in Wachumeqimeqi",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70502
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70502,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:06:35.238Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047095",
+            "npcName": "Ropli",
+            "sourceRowId": 1047095,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.2,
+              "y": 11.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "wachumeqimeqi-metalwares-quests-crafting-your-friendly-neighborhood-metalworker-70504",
+            "wachumeqimeqi-epistles-quests-crafting-pameka-the-scrivener-70511",
+            "wachumeqimeqi-juicecraft-quests-crafting-blame-it-on-my-juice-70518"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70418
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-wrought-in-wachumeqimeqi-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047095",
+              "targetName": "Ropli",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10276848,
+                  "coordinates": {
+                    "x": 16.2,
+                    "y": 11.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 139.569,
+                      "y": -13.98,
+                      "z": 10.6262
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 248640,
+            "gil": 656
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:06:44.240Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70502,
+              "internalId": "KinGlz000_04966",
+              "expansion": "Dawntrail",
+              "journalGenre": "Wachumeqimeqi Quests",
+              "eventIconType": 8,
+              "sortKey": 10,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047095,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_KAOYAKU",
+                  "argument": 1049649,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_KINZOKU",
+                  "argument": 1049650,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_HIKINZOKU",
+                  "argument": 1049651,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_SHOKUYAKU",
+                  "argument": 1049652,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_SIGEN",
+                  "argument": 1049653,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_SAKANA",
+                  "argument": 1049654,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "QST_HEAVNY801",
+                  "argument": 67631,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR0",
+                  "argument": 10396265,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_POS_ACTOR1",
+                  "argument": 10807801,
+                  "referenceType": "level"
+                },
+                {
+                  "instruction": "LOC_ACTOR_ROUJIN",
+                  "argument": 1051485,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_IDLE0",
+                  "argument": 811,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR_KAOYAKU",
+                  "actorRowId": 1049649
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_KINZOKU",
+                  "actorRowId": 1049650
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_HIKINZOKU",
+                  "actorRowId": 1049651
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SHOKUYAKU",
+                  "actorRowId": 1049652
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SIGEN",
+                  "actorRowId": 1049653
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SAKANA",
+                  "actorRowId": 1049654
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_ROUJIN",
+                  "actorRowId": 1051485
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR_KAOYAKU",
+                  "actorRowId": 1049649,
+                  "name": "Ropli",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_KINZOKU",
+                  "actorRowId": 1049650
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_HIKINZOKU",
+                  "actorRowId": 1049651
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SHOKUYAKU",
+                  "actorRowId": 1049652,
+                  "name": "Xeerol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SIGEN",
+                  "actorRowId": 1049653
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SAKANA",
+                  "actorRowId": 1049654
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_ROUJIN",
+                  "actorRowId": 1051485
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70504,
+                  70511,
+                  70518,
+                  70525,
+                  70532
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "wachumeqimeqi-shared-quests-crafting-appreciated-value-70503",
+          "name": "Appreciated Value",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 100,
+          "externalIds": {
+            "xivapi-quest-row": 70503
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70503,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:06:39.126Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047095",
+            "npcName": "Ropli",
+            "sourceRowId": 1047095,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16.2,
+              "y": 11.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-metalwares-quests-crafting-a-dream-come-true-70510",
+            "wachumeqimeqi-epistles-quests-crafting-a-place-in-the-sun-70517",
+            "wachumeqimeqi-juicecraft-quests-crafting-three-cheers-for-sweet-juice-70524"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70510,
+              70517,
+              70524
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 100
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2003732",
+              "itemName": "Market Decorations",
+              "sourceRowId": 2003732,
+              "sourceSheet": "event-item",
+              "quantity": 3,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-appreciated-value-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2014440",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 11067403,
+                  "coordinates": {
+                    "x": 11.4,
+                    "y": 15.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -100.23,
+                      "y": -19.8712,
+                      "z": 211.166
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1052476",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 11146600,
+                  "coordinates": {
+                    "x": 11.4,
+                    "y": 15.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -100.147,
+                      "y": -19.7978,
+                      "z": 209.745
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047183",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 11110563,
+                  "coordinates": {
+                    "x": 17.6,
+                    "y": 10.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -194.905,
+                      "y": 28,
+                      "z": -553.143
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047173",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 11068509,
+                  "coordinates": {
+                    "x": 15.8,
+                    "y": 10
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -283.017,
+                      "y": 36.9725,
+                      "z": -573.731
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047174",
+              "locations": [
+                {
+                  "zoneId": "heritage-found",
+                  "zoneName": "Heritage Found",
+                  "territoryId": "territory-1191",
+                  "mapId": "map-861",
+                  "sourceLevelRowId": 11068517,
+                  "coordinates": {
+                    "x": 18.7,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -138.334,
+                      "y": 42.9846,
+                      "z": -663.264
+                    },
+                    "mapGameId": "x6f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047095",
+              "targetName": "Ropli",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10276848,
+                  "coordinates": {
+                    "x": 16.2,
+                    "y": 11.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 139.569,
+                      "y": -13.98,
+                      "z": 10.6262
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047177",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 11067407,
+                  "coordinates": {
+                    "x": 7.9,
+                    "y": 13.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -272.541,
+                      "y": -0.0153198,
+                      "z": 143.572
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047179",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10965709,
+                  "coordinates": {
+                    "x": 15.6,
+                    "y": 3.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 109.148,
+                      "y": 42,
+                      "z": -353.262
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047133",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10498570,
+                  "coordinates": {
+                    "x": 17,
+                    "y": 11
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 180.39,
+                      "y": -13.98,
+                      "z": 1.92402
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9,
+                "completeSequence": 8
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-10",
+              "sortOrder": 10,
+              "type": "unknown",
+              "quantity": 3,
+              "targetId": "actor-2014437",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 11068561,
+                  "coordinates": {
+                    "x": 16.7,
+                    "y": 11.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 166.833,
+                      "y": -14,
+                      "z": 3.28588
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                },
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 11068562,
+                  "coordinates": {
+                    "x": 17.5,
+                    "y": 11.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 203.058,
+                      "y": -14,
+                      "z": 11.6606
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                },
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 11068563,
+                  "coordinates": {
+                    "x": 18.1,
+                    "y": 10.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 232.962,
+                      "y": -14,
+                      "z": -9.97334
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 10,
+                "completeSequence": 9
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-11",
+              "sortOrder": 11,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047095",
+              "targetName": "Ropli",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10276848,
+                  "coordinates": {
+                    "x": 16.2,
+                    "y": 11.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 139.569,
+                      "y": -13.98,
+                      "z": 10.6262
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 11,
+                "completeSequence": 10
+              }
+            },
+            {
+              "id": "adventurer-appreciated-value-objective-12",
+              "sortOrder": 12,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047095",
+              "targetName": "Ropli",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10276848,
+                  "coordinates": {
+                    "x": 16.2,
+                    "y": 11.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 139.569,
+                      "y": -13.98,
+                      "z": 10.6262
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 12
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1000,
+            "items": [
+              {
+                "itemId": "item-44972",
+                "itemName": "Wachumeqimeqi Balloon",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:06:44.240Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70503,
+              "internalId": "KinGlz001_04967",
+              "expansion": "Dawntrail",
+              "journalGenre": "Wachumeqimeqi Quests",
+              "eventIconType": 1,
+              "sortKey": 20,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047095,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014440,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1052476,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1052478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 11145660,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1047183,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1047184,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1047149,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1047181,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1047173,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1049440,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1047174,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 1047175,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR11",
+                  "argument": 1047176,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR12",
+                  "argument": 1047150,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR13",
+                  "argument": 1047133,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR14",
+                  "argument": 1047134,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014586,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "ACTOR15",
+                  "argument": 1047177,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR16",
+                  "argument": 1047178,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR17",
+                  "argument": 1052487,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR18",
+                  "argument": 1052477,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR19",
+                  "argument": 1047179,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR20",
+                  "argument": 1047180,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR21",
+                  "argument": 1047172,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2003732,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2014437,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION1",
+                  "argument": 16,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2014438,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2014439,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION2",
+                  "argument": 1,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_ACTOR_ROPERI",
+                  "argument": 1049649,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_PAPANI",
+                  "argument": 10498573,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_SEQ3_00055_U",
+                  "argument": 11110562,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_SEQ4_00056_P",
+                  "argument": 11158869,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_SEQ5_00078_YU",
+                  "argument": 10944666,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_SEQ4_00081_U",
+                  "argument": 11068519,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_DEMOUXENI",
+                  "argument": 11067408,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_SEQ6_00092_PE",
+                  "argument": 11159340,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_SEQ6_00094_KYO",
+                  "argument": 11159431,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_UVURO_INIT",
+                  "argument": 1050933,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_SYUNE_INIT",
+                  "argument": 1050934,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_RARUSOZI_INIT",
+                  "argument": 1049780,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_PAPANI_INIT",
+                  "argument": 1049781,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_SHEROJA_INIT",
+                  "argument": 1050366,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_HARENARUKU_INIT",
+                  "argument": 1050367,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_DONUHANU_INIT",
+                  "argument": 1049693,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_DEMOUXENI_INIT",
+                  "argument": 1050452,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_PAMEKA_INIT",
+                  "argument": 1050459,
+                  "referenceType": "actor"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2003732,
+                  "itemId": "event-item-2003732",
+                  "name": "Market Decorations",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 52546,
+                  "quantity": 3
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1052476
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1052478
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1047183
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1047184
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1047149
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1047181
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1047173
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1049440
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1047174
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1047175
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1047176
+                },
+                {
+                  "sourceInstruction": "ACTOR12",
+                  "actorRowId": 1047150
+                },
+                {
+                  "sourceInstruction": "ACTOR13",
+                  "actorRowId": 1047133
+                },
+                {
+                  "sourceInstruction": "ACTOR14",
+                  "actorRowId": 1047134
+                },
+                {
+                  "sourceInstruction": "ACTOR15",
+                  "actorRowId": 1047177
+                },
+                {
+                  "sourceInstruction": "ACTOR16",
+                  "actorRowId": 1047178
+                },
+                {
+                  "sourceInstruction": "ACTOR17",
+                  "actorRowId": 1052487
+                },
+                {
+                  "sourceInstruction": "ACTOR18",
+                  "actorRowId": 1052477
+                },
+                {
+                  "sourceInstruction": "ACTOR19",
+                  "actorRowId": 1047179
+                },
+                {
+                  "sourceInstruction": "ACTOR20",
+                  "actorRowId": 1047180
+                },
+                {
+                  "sourceInstruction": "ACTOR21",
+                  "actorRowId": 1047172
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_ROPERI",
+                  "actorRowId": 1049649
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_PAPANI",
+                  "actorRowId": 10498573
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_DEMOUXENI",
+                  "actorRowId": 11067408
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_UVURO_INIT",
+                  "actorRowId": 1050933
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SYUNE_INIT",
+                  "actorRowId": 1050934
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_RARUSOZI_INIT",
+                  "actorRowId": 1049780
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_PAPANI_INIT",
+                  "actorRowId": 1049781
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SHEROJA_INIT",
+                  "actorRowId": 1050366
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_HARENARUKU_INIT",
+                  "actorRowId": 1050367
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_DONUHANU_INIT",
+                  "actorRowId": 1049693
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_DEMOUXENI_INIT",
+                  "actorRowId": 1050452
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_PAMEKA_INIT",
+                  "actorRowId": 1050459
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1052476,
+                  "name": "Shunye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1052478,
+                  "name": "Donuhanu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1047183,
+                  "name": "Donuhanu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1047184,
+                  "name": "Shunye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1047149,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1047181,
+                  "name": "Pashenine",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1047173,
+                  "name": "Donuhanu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1049440,
+                  "name": "Luwatenine",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1047174,
+                  "name": "Shunye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1047175,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1047176,
+                  "name": "Shetona supplier",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR12",
+                  "actorRowId": 1047150,
+                  "name": "Pashenine",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR13",
+                  "actorRowId": 1047133,
+                  "name": "Rral Soj",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR14",
+                  "actorRowId": 1047134,
+                  "name": "Papawni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR15",
+                  "actorRowId": 1047177,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR16",
+                  "actorRowId": 1047178,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR17",
+                  "actorRowId": 1052487
+                },
+                {
+                  "sourceInstruction": "ACTOR18",
+                  "actorRowId": 1052477
+                },
+                {
+                  "sourceInstruction": "ACTOR19",
+                  "actorRowId": 1047179,
+                  "name": "Xeerol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR20",
+                  "actorRowId": 1047180,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR21",
+                  "actorRowId": 1047172
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_ROPERI",
+                  "actorRowId": 1049649,
+                  "name": "Ropli",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_PAPANI",
+                  "actorRowId": 10498573
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_DEMOUXENI",
+                  "actorRowId": 11067408
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_UVURO_INIT",
+                  "actorRowId": 1050933,
+                  "name": "Shunye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SYUNE_INIT",
+                  "actorRowId": 1050934,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_RARUSOZI_INIT",
+                  "actorRowId": 1049780,
+                  "name": "Rral Soj",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_PAPANI_INIT",
+                  "actorRowId": 1049781,
+                  "name": "Papawni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_SHEROJA_INIT",
+                  "actorRowId": 1050366,
+                  "name": "Xeerol Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_HARENARUKU_INIT",
+                  "actorRowId": 1050367,
+                  "name": "Halnaruk",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_DONUHANU_INIT",
+                  "actorRowId": 1049693,
+                  "name": "Donuhanu",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_DEMOUXENI_INIT",
+                  "actorRowId": 1050452,
+                  "name": "Zemoweni",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_PAMEKA_INIT",
+                  "actorRowId": 1050459,
+                  "name": "Pameka",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 2
+        }
+      ]
+    }
+  ]
+}

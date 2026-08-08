@@ -1,0 +1,1387 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "groups": [
+    {
+      "id": "crystalline-mean-forging-quests-quests",
+      "title": "Facet of Forging Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "crystalline-mean-forging-quests-crafting-iola-forgemaster-68763",
+          "name": "Iola, Forgemaster",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 70,
+          "externalIds": {
+            "xivapi-quest-row": 68763
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68763,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:00:16.921Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1027233",
+            "npcName": "Iola",
+            "sourceRowId": 1027233,
+            "zoneId": "the-crystarium",
+            "zoneName": "The Crystarium",
+            "coordinates": {
+              "x": 11.4,
+              "y": 8.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "crystalline-mean-forging-quests-crafting-to-struggle-nu-mou-68764"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69191
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 70
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-iola-forgemaster-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028448",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7923945,
+                  "coordinates": {
+                    "x": 12.8,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 76.9852,
+                      "y": 35.9997,
+                      "z": -135.668
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-iola-forgemaster-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1027233",
+              "targetName": "Iola",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7788926,
+                  "coordinates": {
+                    "x": 11.4,
+                    "y": 8.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 9.30292,
+                      "y": 20.186,
+                      "z": -124.536
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 54000,
+            "gil": 752
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:00:23.838Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68763,
+              "internalId": "LucKla101_03227",
+              "expansion": "Shadowbringers",
+              "journalGenre": "Facet of Forging Quests",
+              "eventIconType": 8,
+              "sortKey": 110,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1027233,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1028448,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1028449,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1028323,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 7846382,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR02",
+                  "argument": 7923947,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1028462,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1028463,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MOTION_00",
+                  "argument": 4676,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_LucKla101_01",
+                  "argument": 732,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 773,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE1",
+                  "argument": 830,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028448
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1028449
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1028323
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1028462
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028463
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028448,
+                  "name": "amaro tamer",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1028449,
+                  "name": "Iola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1028323,
+                  "name": "Eismon",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1028462,
+                  "name": "Colana",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028463,
+                  "name": "Sue-Rend",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68764
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "crystalline-mean-forging-quests-crafting-to-struggle-nu-mou-68764",
+          "name": "To Struggle Nu Mou",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 75,
+          "externalIds": {
+            "xivapi-quest-row": 68764
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68764,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:00:19.350Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1027233",
+            "npcName": "Iola",
+            "sourceRowId": 1027233,
+            "zoneId": "the-crystarium",
+            "zoneName": "The Crystarium",
+            "coordinates": {
+              "x": 11.4,
+              "y": 8.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "crystalline-mean-forging-quests-crafting-iola-forgemaster-68763"
+          ],
+          "nextQuestIds": [
+            "crystalline-mean-forging-quests-crafting-the-iron-bellows-68765"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68763
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 75
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-27236",
+              "itemName": "Intricate Censer Materials",
+              "sourceRowId": 27236,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-27237",
+              "itemName": "Intricate Censer",
+              "sourceRowId": 27237,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-to-struggle-nu-mou-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028450",
+              "locations": [
+                {
+                  "zoneId": "lakeland",
+                  "zoneName": "Lakeland",
+                  "territoryId": "territory-813",
+                  "mapId": "map-491",
+                  "sourceLevelRowId": 7924657,
+                  "coordinates": {
+                    "x": 15.3,
+                    "y": 5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -311.925,
+                      "y": 113.843,
+                      "z": -824.434
+                    },
+                    "mapGameId": "n4f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-to-struggle-nu-mou-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028451",
+              "locations": [
+                {
+                  "zoneId": "il-mheg",
+                  "zoneName": "Il Mheg",
+                  "territoryId": "territory-816",
+                  "mapId": "map-494",
+                  "sourceLevelRowId": 7925987,
+                  "coordinates": {
+                    "x": 18.7,
+                    "y": 8.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -138.953,
+                      "y": 58.3171,
+                      "z": -670.67
+                    },
+                    "mapGameId": "n4f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-to-struggle-nu-mou-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028452",
+              "locations": [
+                {
+                  "zoneId": "il-mheg",
+                  "zoneName": "Il Mheg",
+                  "territoryId": "territory-816",
+                  "mapId": "map-494",
+                  "sourceLevelRowId": 7925996,
+                  "coordinates": {
+                    "x": 21.2,
+                    "y": 4.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -14.4939,
+                      "y": 104.486,
+                      "z": -861.627
+                    },
+                    "mapGameId": "n4f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-to-struggle-nu-mou-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1027233",
+              "targetName": "Iola",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7788926,
+                  "coordinates": {
+                    "x": 11.4,
+                    "y": 8.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 9.30292,
+                      "y": 20.186,
+                      "z": -124.536
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-to-struggle-nu-mou-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1027233",
+              "targetName": "Iola",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7788926,
+                  "coordinates": {
+                    "x": 11.4,
+                    "y": 8.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 9.30292,
+                      "y": 20.186,
+                      "z": -124.536
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 1395000,
+            "gil": 1772
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:00:23.838Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68764,
+              "internalId": "LucKla102_03228",
+              "expansion": "Shadowbringers",
+              "journalGenre": "Facet of Forging Quests",
+              "eventIconType": 1,
+              "sortKey": 120,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1027233,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1028450,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1028323,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1028451,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1028452,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 27236,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1028453,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 27237,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 7846382,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1030155,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1028464,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1028462,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_04",
+                  "argument": 1028463,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INVIS_ACTOR0",
+                  "argument": 1028324,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INVIS_ACTOR1",
+                  "argument": 1028325,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2010472,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_LucKla102_01",
+                  "argument": 735,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MAINQUEST_CHECK_01",
+                  "argument": 68856,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INVIS_ACTOR2",
+                  "argument": 1027669,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 234,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 27236,
+                  "itemId": "item-27236",
+                  "quantity": 1,
+                  "name": "Intricate Censer Materials",
+                  "resolvedSheet": "Item",
+                  "iconId": 20970
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 27237,
+                  "itemId": "item-27237",
+                  "quantity": 1,
+                  "name": "Intricate Censer",
+                  "resolvedSheet": "Item",
+                  "iconId": 26579
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028450
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1028323
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1028451
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1028452
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1028453
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1030155
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028464
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1028462
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1028463
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028450,
+                  "name": "Iola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1028323,
+                  "name": "Eismon",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1028451,
+                  "name": "Iola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1028452,
+                  "name": "Iola",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1028453,
+                  "name": "Nee Marn",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1030155,
+                  "name": "Nee Marn",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028464,
+                  "name": "Nee Marn's familiar",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1028462,
+                  "name": "Colana",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1028463,
+                  "name": "Sue-Rend",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68765
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "crystalline-mean-forging-quests-crafting-the-iron-bellows-68765",
+          "name": "The Iron Bellows",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 80,
+          "externalIds": {
+            "xivapi-quest-row": 68765
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68765,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:00:22.009Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1027233",
+            "npcName": "Iola",
+            "sourceRowId": 1027233,
+            "zoneId": "the-crystarium",
+            "zoneName": "The Crystarium",
+            "coordinates": {
+              "x": 11.4,
+              "y": 8.8
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "crystalline-mean-forging-quests-crafting-to-struggle-nu-mou-68764"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68764
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 80
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-27238",
+              "itemName": "Enchanting Ring Materials",
+              "sourceRowId": 27238,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-27239",
+              "itemName": "Enchanting Ring",
+              "sourceRowId": 27239,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-iron-bellows-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028454",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7924150,
+                  "coordinates": {
+                    "x": 10.9,
+                    "y": 15.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -17.4411,
+                      "y": 3.99982,
+                      "z": 191.943
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-iron-bellows-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028454",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7924150,
+                  "coordinates": {
+                    "x": 10.9,
+                    "y": 15.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -17.4411,
+                      "y": 3.99982,
+                      "z": 191.943
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-iron-bellows-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028458",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7926978,
+                  "coordinates": {
+                    "x": 9.3,
+                    "y": 13.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -96.6416,
+                      "y": -4.18143,
+                      "z": 133.185
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-the-iron-bellows-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028454",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7924150,
+                  "coordinates": {
+                    "x": 10.9,
+                    "y": 15.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -17.4411,
+                      "y": 3.99982,
+                      "z": 191.943
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-the-iron-bellows-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1027233",
+              "targetName": "Iola",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7788926,
+                  "coordinates": {
+                    "x": 11.4,
+                    "y": 8.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 9.30292,
+                      "y": 20.186,
+                      "z": -124.536
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1215,
+            "items": [
+              {
+                "itemId": "item-26736",
+                "itemName": "Craftsman's Cunning Materia VIII",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-26737",
+                "itemName": "Craftsman's Command Materia VIII",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:00:23.838Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68765,
+              "internalId": "LucKla103_03229",
+              "expansion": "Shadowbringers",
+              "journalGenre": "Facet of Forging Quests",
+              "eventIconType": 1,
+              "sortKey": 130,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1027233,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1028454,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 27238,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1028455,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1028456,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 27239,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1028457,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1028458,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1028459,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1029870,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1029871,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1029872,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 7924211,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR02",
+                  "argument": 7924219,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR03",
+                  "argument": 7924228,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR04",
+                  "argument": 7926979,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR05",
+                  "argument": 7937031,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1028464,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1028462,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1028463,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "INVIS_ACTOR0",
+                  "argument": 1029871,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INVIS_ACTOR1",
+                  "argument": 1029872,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION_00",
+                  "argument": 4676,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_04",
+                  "argument": 1030994,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "CUT_SCENE_00",
+                  "argument": 2115,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 780,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_01",
+                  "argument": 68768,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_02",
+                  "argument": 68771,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_03",
+                  "argument": 68774,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_04",
+                  "argument": 68777,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_LAST_MAIN_01",
+                  "argument": 69190,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MAINQUEST_CHECK_01",
+                  "argument": 69170,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_LAST_01",
+                  "argument": 5398,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION_01",
+                  "argument": 6226,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 234,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 27238,
+                  "itemId": "item-27238",
+                  "quantity": 1,
+                  "name": "Enchanting Ring Materials",
+                  "resolvedSheet": "Item",
+                  "iconId": 20801
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 27239,
+                  "itemId": "item-27239",
+                  "quantity": 1,
+                  "name": "Enchanting Ring",
+                  "resolvedSheet": "Item",
+                  "iconId": 54562
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028454
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1028455
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1028456
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1028457
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1028458
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1028459
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1029870
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1029871
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1029872
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1028464
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028462
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1028463
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1030994
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028454,
+                  "name": "Eismon",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1028455,
+                  "name": "Colana",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1028456,
+                  "name": "Sue-Rend",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1028457,
+                  "name": "Nee Marn's familiar",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1028458,
+                  "name": "Walden",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1028459,
+                  "name": "Eismon",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1029870,
+                  "name": "Eismon",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1029871,
+                  "name": "Colana",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1029872,
+                  "name": "Sue-Rend",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1028464,
+                  "name": "Nee Marn's familiar",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028462,
+                  "name": "Colana",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1028463,
+                  "name": "Sue-Rend",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1030994,
+                  "name": "Walden",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 3
+        }
+      ]
+    }
+  ]
+}

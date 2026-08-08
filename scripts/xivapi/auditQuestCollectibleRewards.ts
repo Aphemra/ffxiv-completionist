@@ -46,6 +46,7 @@ const ignoredItemCategoryNames = new Set(['Meal', 'Medicine']);
  * collectibles or player features.
  */
 const ignoredItemActionRowIds = new Set([
+  816, // Crafting EXP manuals
   4647, // Level/weapon coffers
   9994, // Vesper Bay Aetheryte Ticket
 ]);

@@ -1,0 +1,832 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "studium-shared-quests-quests-standalone",
+      "title": "Standalone Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "studium-shared-quests-crafting-the-faculty-70009",
+          "name": "The Faculty",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 80,
+          "externalIds": {
+            "xivapi-quest-row": 70009
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70009,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:21.206Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1038500",
+            "npcName": "Qih Aliapoh",
+            "sourceRowId": 1038500,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 4.1,
+              "y": 9.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "studium-medicine-quests-crafting-perfectly-awful-69682",
+            "studium-anthropology-quests-crafting-cultured-pursuits-69689",
+            "studium-aetherology-quests-crafting-fear-the-thesis-69696"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69916
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 80
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-faculty-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1038500",
+              "targetName": "Qih Aliapoh",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8869779,
+                  "coordinates": {
+                    "x": 4.1,
+                    "y": 9.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -357.831,
+                      "y": 21.846,
+                      "z": -91.3111
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 112200,
+            "gil": 615
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:24.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70009,
+              "internalId": "AktKlz000_04473",
+              "expansion": "Endwalker",
+              "journalGenre": "Studium Quests",
+              "eventIconType": 8,
+              "sortKey": 10,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1038500,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_QUEST_CHECK_01",
+                  "argument": 67631,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_TLA_01",
+                  "argument": 1038543,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69668,
+                  69675,
+                  69682,
+                  69689,
+                  69696
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "studium-shared-quests-crafting-the-meeting-of-minds-70010",
+          "name": "The Meeting of Minds",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70010
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70010,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:23.206Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1038500",
+            "npcName": "Qih Aliapoh",
+            "sourceRowId": 1038500,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 4.1,
+              "y": 9.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-medicine-quests-crafting-sharlayan-cuisine-69688"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69674,
+              69681,
+              69688
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1040917",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8964638,
+                  "coordinates": {
+                    "x": 3.6,
+                    "y": 8.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -383.477,
+                      "y": 21.8,
+                      "z": -125.749
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1040912",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8958176,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1038565",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8883985,
+                  "coordinates": {
+                    "x": 5.3,
+                    "y": 7.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -297.475,
+                      "y": 21.9356,
+                      "z": -165.85
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1040913",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8979169,
+                  "coordinates": {
+                    "x": 5.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -287.15,
+                      "y": 21.846,
+                      "z": -150.752
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039321",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8949076,
+                  "coordinates": {
+                    "x": 3.9,
+                    "y": 9.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -367.327,
+                      "y": 21.846,
+                      "z": -102.963
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039239",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8883947,
+                  "coordinates": {
+                    "x": 4.3,
+                    "y": 9.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -348.494,
+                      "y": 21.846,
+                      "z": -80.185
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1038500",
+              "targetName": "Qih Aliapoh",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8869779,
+                  "coordinates": {
+                    "x": 4.1,
+                    "y": 9.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -357.831,
+                      "y": 21.846,
+                      "z": -91.3111
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1041423",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8964646,
+                  "coordinates": {
+                    "x": 9.5,
+                    "y": 13.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -85.25,
+                      "y": -13.777,
+                      "z": 121.716
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-9",
+              "sortOrder": 9,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2012479",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8979148,
+                  "coordinates": {
+                    "x": 3.2,
+                    "y": 8.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -401.232,
+                      "y": 20.798,
+                      "z": -116.734
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 9,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-the-meeting-of-minds-objective-10",
+              "sortOrder": 10,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1038500",
+              "targetName": "Qih Aliapoh",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8869779,
+                  "coordinates": {
+                    "x": 4.1,
+                    "y": 9.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -357.831,
+                      "y": 21.846,
+                      "z": -91.3111
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 10
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1303,
+            "items": [
+              {
+                "itemId": "item-35985",
+                "itemName": "Golden Dhyata",
+                "quantity": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "unlocks": [
+            {
+              "type": "minion",
+              "targetId": "minion-437",
+              "sourceRowId": 35985,
+              "name": "Golden Dhyata",
+              "notes": "Using Golden Dhyata unlocks this minion."
+            }
+          ],
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:24.785Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70010,
+              "internalId": "AktKlz001_04474",
+              "expansion": "Endwalker",
+              "journalGenre": "Studium Quests",
+              "eventIconType": 1,
+              "sortKey": 20,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1038500,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1040917,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1040912,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1038565,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1040913,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1039321,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1039239,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1041423,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2012479,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1041424,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1041425,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 8964678,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_AUDI_CHAIR_01",
+                  "argument": 8964642,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_AUDI_CHAIR_02",
+                  "argument": 8964643,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_LAST_CHAIR_01",
+                  "argument": 8964647,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_LAST_CHAIR_02",
+                  "argument": 8964648,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_MONT_01",
+                  "argument": 1038067,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_BOR_01",
+                  "argument": 8881428,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_JER_01",
+                  "argument": 8883984,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_SEARCH_01",
+                  "argument": 1041438,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_CHTALK_01",
+                  "argument": 9002,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_CUT_SCENE_00",
+                  "argument": 2592,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_CAM_LALA_01",
+                  "argument": 1039207,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_CR_QIH_01",
+                  "argument": 8964639,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BIND_CR_SEA_01",
+                  "argument": 8964641,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_LAST_TEA_01",
+                  "argument": 8994396,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ENPC_LAST_TEA_02",
+                  "argument": 8994397,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ_TEASET_01",
+                  "argument": 2012517,
+                  "referenceType": "event-object"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1040917
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1040912
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1038565
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1040913
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1039321
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1039239
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1041423
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1041424
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1041425
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1040917,
+                  "name": "Qih Aliapoh",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1040912,
+                  "name": "Rurusha",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1038565,
+                  "name": "Jude",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1040913,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1039321,
+                  "name": "Hinageshi",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1039239,
+                  "name": "T'laqa Tia",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1041423,
+                  "name": "Qih Aliapoh",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1041424,
+                  "name": "Qih Aliapoh",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1041425,
+                  "name": "Searchingway",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70989
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        }
+      ]
+    }
+  ]
+}

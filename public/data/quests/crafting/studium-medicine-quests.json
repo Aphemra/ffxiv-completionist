@@ -1,0 +1,2493 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "groups": [
+    {
+      "id": "studium-medicine-quests-quests",
+      "title": "Faculty of Medicine Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "studium-medicine-quests-crafting-perfectly-awful-69682",
+          "name": "Perfectly Awful",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 80,
+          "externalIds": {
+            "xivapi-quest-row": 69682
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69682,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:04:59.326Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039227",
+            "npcName": "Debroye",
+            "sourceRowId": 1039227,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 4.3,
+              "y": 9.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [],
+          "nextQuestIds": [
+            "studium-medicine-quests-crafting-make-it-sweeter-69683"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70009
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 80
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-perfectly-awful-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039220",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882899,
+                  "coordinates": {
+                    "x": 5.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -287.15,
+                      "y": 21.846,
+                      "z": -150.752
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-perfectly-awful-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039228",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882902,
+                  "coordinates": {
+                    "x": 9.5,
+                    "y": 13.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -85.8101,
+                      "y": -13.777,
+                      "z": 121.776
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-perfectly-awful-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039220",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882899,
+                  "coordinates": {
+                    "x": 5.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -287.15,
+                      "y": 21.846,
+                      "z": -150.752
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 112200,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-30482",
+                "itemName": "Chili Crab",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:16.108Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69682,
+              "internalId": "AktKla301_04146",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Medicine Quests",
+              "eventIconType": 8,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039227,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039220,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1039228,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039223,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1039222,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1030,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8905420,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 8882903,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_02",
+                  "argument": 8882906,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2011081,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ1",
+                  "argument": 2012462,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 302,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE1",
+                  "argument": 304,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION0",
+                  "argument": 5464,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION1",
+                  "argument": 5470,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 837,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039220
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039228
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039222
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039220,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039228,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223,
+                  "name": "Galveroche",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039222,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69683
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "studium-medicine-quests-crafting-make-it-sweeter-69683",
+          "name": "Make It Sweeter",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 80,
+          "externalIds": {
+            "xivapi-quest-row": 69683
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69683,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:01.787Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039220",
+            "npcName": "Debroye",
+            "sourceRowId": 1039220,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.5,
+              "y": 8.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-medicine-quests-crafting-perfectly-awful-69682"
+          ],
+          "nextQuestIds": [
+            "studium-medicine-quests-crafting-remember-the-texture-69684"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69682
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 80
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-make-it-sweeter-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039220",
+              "targetName": "Debroye",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882899,
+                  "coordinates": {
+                    "x": 5.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -287.15,
+                      "y": 21.846,
+                      "z": -150.752
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 112200,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:16.108Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69683,
+              "internalId": "AktKla302_04147",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Medicine Quests",
+              "eventIconType": 33,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039220,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1033,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 5415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 69683,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8882903,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 8961154,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039223,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1039221,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1039225,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MOTION0",
+                  "argument": 5464,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1039225
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223,
+                  "name": "Galveroche",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1039225,
+                  "name": "Flaugustert",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69684
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "studium-medicine-quests-crafting-remember-the-texture-69684",
+          "name": "Remember the Texture",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 83,
+          "externalIds": {
+            "xivapi-quest-row": 69684
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69684,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:04.204Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039220",
+            "npcName": "Debroye",
+            "sourceRowId": 1039220,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.5,
+              "y": 8.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-medicine-quests-crafting-make-it-sweeter-69683"
+          ],
+          "nextQuestIds": [
+            "studium-medicine-quests-crafting-aroma-is-key-69685"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69683
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 83
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-remember-the-texture-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039220",
+              "targetName": "Debroye",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882899,
+                  "coordinates": {
+                    "x": 5.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -287.15,
+                      "y": 21.846,
+                      "z": -150.752
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 117150,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:16.108Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69684,
+              "internalId": "AktKla303_04148",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Medicine Quests",
+              "eventIconType": 33,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039220,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1033,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 5415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 69684,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8882909,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 8961154,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039223,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1039221,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1039237,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 102,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1039237
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223,
+                  "name": "Galveroche",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1039237,
+                  "name": "Dickon",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69685
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "studium-medicine-quests-crafting-aroma-is-key-69685",
+          "name": "Aroma Is Key",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 85,
+          "externalIds": {
+            "xivapi-quest-row": 69685
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69685,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:06.605Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039220",
+            "npcName": "Debroye",
+            "sourceRowId": 1039220,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.5,
+              "y": 8.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-medicine-quests-crafting-remember-the-texture-69684"
+          ],
+          "nextQuestIds": [
+            "studium-medicine-quests-crafting-long-live-the-gourmet-69686"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69684
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 85
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-aroma-is-key-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039220",
+              "targetName": "Debroye",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882899,
+                  "coordinates": {
+                    "x": 5.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -287.15,
+                      "y": 21.846,
+                      "z": -150.752
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 120450,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-36046",
+                "itemName": "Happiness Juice",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:16.108Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69685,
+              "internalId": "AktKla304_04149",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Medicine Quests",
+              "eventIconType": 33,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039220,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1033,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 5415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 69685,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8882909,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 8961154,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039223,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1039221,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1039237,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "QUEST0",
+                  "argument": 69953,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1039237
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223,
+                  "name": "Galveroche",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1039237,
+                  "name": "Dickon",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69686
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "studium-medicine-quests-crafting-long-live-the-gourmet-69686",
+          "name": "Long Live the Gourmet",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 85,
+          "externalIds": {
+            "xivapi-quest-row": 69686
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69686,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:08.982Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039220",
+            "npcName": "Debroye",
+            "sourceRowId": 1039220,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.5,
+              "y": 8.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-medicine-quests-crafting-aroma-is-key-69685"
+          ],
+          "nextQuestIds": [
+            "studium-medicine-quests-crafting-perfectly-delectable-69687"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69685
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 85
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-35843",
+              "itemName": "Golden Spice Ingredients",
+              "sourceRowId": 35843,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-35844",
+              "itemName": "Golden Spice",
+              "sourceRowId": 35844,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-long-live-the-gourmet-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039229",
+              "locations": [
+                {
+                  "zoneId": "thavnair",
+                  "zoneName": "Thavnair",
+                  "territoryId": "territory-957",
+                  "mapId": "map-696",
+                  "sourceLevelRowId": 8901895,
+                  "coordinates": {
+                    "x": 25,
+                    "y": 33.6
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 172.586,
+                      "y": 5.76694,
+                      "z": 602.996
+                    },
+                    "mapGameId": "m5f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-long-live-the-gourmet-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039230",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 8901813,
+                  "coordinates": {
+                    "x": 11,
+                    "y": 13
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -12.849,
+                      "y": -2,
+                      "z": 89.7766
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-long-live-the-gourmet-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039231",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 8901814,
+                  "coordinates": {
+                    "x": 13.9,
+                    "y": 8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 131.548,
+                      "y": 4.78412,
+                      "z": -164.207
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                },
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 8901813,
+                  "coordinates": {
+                    "x": 11,
+                    "y": 13
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -12.849,
+                      "y": -2,
+                      "z": 89.7766
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-long-live-the-gourmet-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039232",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 8901825,
+                  "coordinates": {
+                    "x": 13,
+                    "y": 6.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 87.2466,
+                      "y": -24.6933,
+                      "z": -219.061
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                },
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 8901813,
+                  "coordinates": {
+                    "x": 11,
+                    "y": 13
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -12.849,
+                      "y": -2,
+                      "z": 89.7766
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-long-live-the-gourmet-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039230",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 8901813,
+                  "coordinates": {
+                    "x": 11,
+                    "y": 13
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -12.849,
+                      "y": -2,
+                      "z": 89.7766
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                },
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 8905976,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -1.5733,
+                      "y": 0.100632,
+                      "z": -211.804
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-long-live-the-gourmet-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039233",
+              "locations": [
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 8901830,
+                  "coordinates": {
+                    "x": 11.1,
+                    "y": 7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -9.61604,
+                      "y": 3.03,
+                      "z": -214.05
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                },
+                {
+                  "zoneId": "radz-at-han",
+                  "zoneName": "Radz-at-Han",
+                  "territoryId": "territory-963",
+                  "mapId": "map-694",
+                  "sourceLevelRowId": 8901831,
+                  "coordinates": {
+                    "x": 11.1,
+                    "y": 6.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -8.21156,
+                      "y": 3.03,
+                      "z": -215.796
+                    },
+                    "mapGameId": "m5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-long-live-the-gourmet-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039220",
+              "targetName": "Debroye",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882899,
+                  "coordinates": {
+                    "x": 5.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -287.15,
+                      "y": 21.846,
+                      "z": -150.752
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 120450,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-36053",
+                "itemName": "Giant Haddock Dip",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:16.108Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69686,
+              "internalId": "AktKla305_04150",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Medicine Quests",
+              "eventIconType": 1,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039220,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039229,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1039230,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1039231,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1039232,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2011784,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 8901837,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2011785,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTRANGE1",
+                  "argument": 8901854,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 35843,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2011786,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT3",
+                  "argument": 2011787,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT4",
+                  "argument": 2012475,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTRANGE2",
+                  "argument": 8901861,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE3",
+                  "argument": 8901862,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE4",
+                  "argument": 8901863,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1039233,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 35844,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1039234,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8905450,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 8905451,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039223,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1039221,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR2",
+                  "argument": 1039224,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_0",
+                  "argument": 8901831,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_1",
+                  "argument": 8901813,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_COMP_QUEST0",
+                  "argument": 69953,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SEQ_EVENT0",
+                  "argument": 26,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 136,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE1",
+                  "argument": 90,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE2",
+                  "argument": 303,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012463,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_MOTION0",
+                  "argument": 808,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION1",
+                  "argument": 800,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION2",
+                  "argument": 5464,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION3",
+                  "argument": 5466,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION4",
+                  "argument": 923,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ET_DOUKOU",
+                  "argument": 5,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 35843,
+                  "itemId": "item-35843",
+                  "quantity": 1,
+                  "name": "Golden Spice Ingredients",
+                  "resolvedSheet": "Item",
+                  "iconId": 25977
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 35844,
+                  "itemId": "item-35844",
+                  "quantity": 1,
+                  "name": "Golden Spice",
+                  "resolvedSheet": "Item",
+                  "iconId": 25011
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039229
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039230
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1039231
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1039232
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1039233
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1039234
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1039224
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039229,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039230,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1039231,
+                  "name": "apprentice alchemist",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1039232,
+                  "name": "amiable alchemist",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1039233,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1039234,
+                  "name": "Jalvaaz",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223,
+                  "name": "Galveroche",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR2",
+                  "actorRowId": 1039224,
+                  "name": "Jalvaaz",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69687
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "studium-medicine-quests-crafting-perfectly-delectable-69687",
+          "name": "Perfectly Delectable",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 88,
+          "externalIds": {
+            "xivapi-quest-row": 69687
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69687,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:11.737Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039220",
+            "npcName": "Debroye",
+            "sourceRowId": 1039220,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.5,
+              "y": 8.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-medicine-quests-crafting-long-live-the-gourmet-69686"
+          ],
+          "nextQuestIds": [
+            "studium-medicine-quests-crafting-sharlayan-cuisine-69688"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69686
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 88
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-perfectly-delectable-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039220",
+              "targetName": "Debroye",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882899,
+                  "coordinates": {
+                    "x": 5.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -287.15,
+                      "y": 21.846,
+                      "z": -150.752
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 125400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-36060",
+                "itemName": "Tsai tou Vounou",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:16.108Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69687,
+              "internalId": "AktKla306_04151",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Medicine Quests",
+              "eventIconType": 33,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039220,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1033,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 5415,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 69687,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8905420,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039223,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012464,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 190,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION0",
+                  "argument": 6278,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223,
+                  "name": "Galveroche",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69688
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "studium-medicine-quests-crafting-sharlayan-cuisine-69688",
+          "name": "Sharlayan Cuisine",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 69688
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69688,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:05:14.204Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039220",
+            "npcName": "Debroye",
+            "sourceRowId": 1039220,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.5,
+              "y": 8.2
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-medicine-quests-crafting-perfectly-delectable-69687"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69687
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-35845",
+              "itemName": "Fishcake Ingredient Supplies",
+              "sourceRowId": 35845,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-35846",
+              "itemName": "Sharlayan Fishcake Ingredient",
+              "sourceRowId": 35846,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-sharlayan-cuisine-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039235",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882996,
+                  "coordinates": {
+                    "x": 11.1,
+                    "y": 8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -9.31428,
+                      "y": 41.5301,
+                      "z": -162.843
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-sharlayan-cuisine-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039235",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882996,
+                  "coordinates": {
+                    "x": 11.1,
+                    "y": 8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -9.31428,
+                      "y": 41.5301,
+                      "z": -162.843
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-sharlayan-cuisine-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039236",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882998,
+                  "coordinates": {
+                    "x": 10.5,
+                    "y": 13.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -39.6885,
+                      "y": -14.1757,
+                      "z": 107.896
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-sharlayan-cuisine-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039236",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882998,
+                  "coordinates": {
+                    "x": 10.5,
+                    "y": 13.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -39.6885,
+                      "y": -14.1757,
+                      "z": 107.896
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                },
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8859759,
+                  "coordinates": {
+                    "x": 10.5,
+                    "y": 13.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -38.0709,
+                      "y": -14.1693,
+                      "z": 105.309
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-sharlayan-cuisine-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039220",
+              "targetName": "Debroye",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8882899,
+                  "coordinates": {
+                    "x": 5.5,
+                    "y": 8.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -287.15,
+                      "y": 21.846,
+                      "z": -150.752
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1001,
+            "optionalItems": [
+              {
+                "itemId": "item-33938",
+                "itemName": "Craftsman's Competence Materia X",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-33939",
+                "itemName": "Craftsman's Cunning Materia X",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-33940",
+                "itemName": "Craftsman's Command Materia X",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:05:16.108Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69688,
+              "internalId": "AktKla307_04152",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Medicine Quests",
+              "eventIconType": 1,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039220,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039235,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1039236,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 35845,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1037077,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 35846,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "POPRANGE0",
+                  "argument": 8882999,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8882903,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 8882906,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039223,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1039221,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_0",
+                  "argument": 8859759,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012465,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 304,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUT_SCENE_00",
+                  "argument": 2589,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1037,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_LAST_01",
+                  "argument": 5420,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_01",
+                  "argument": 69674,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_02",
+                  "argument": 69681,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_03",
+                  "argument": 69695,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_04",
+                  "argument": 69702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION0",
+                  "argument": 5470,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION1",
+                  "argument": 5471,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION2",
+                  "argument": 5464,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION3",
+                  "argument": 5468,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION4",
+                  "argument": 5476,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION5",
+                  "argument": 685,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 836,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 35845,
+                  "itemId": "item-35845",
+                  "quantity": 1,
+                  "name": "Fishcake Ingredient Supplies",
+                  "resolvedSheet": "Item",
+                  "iconId": 26109
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 35846,
+                  "itemId": "item-35846",
+                  "quantity": 1,
+                  "name": "Sharlayan Fishcake Ingredient",
+                  "resolvedSheet": "Item",
+                  "iconId": 25055
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039235
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039236
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1037077
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039235,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039236,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1037077,
+                  "name": "Dickon",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039223,
+                  "name": "Galveroche",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039221,
+                  "name": "Debroye",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70010
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        }
+      ]
+    }
+  ]
+}
