@@ -1,0 +1,1231 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "startsAfterQuestIds": [
+    "crystalline-mean-shared-quests-crafting-the-crystalline-mean-69191"
+  ],
+  "groups": [
+    {
+      "id": "crystalline-mean-fishing-quests-quests",
+      "title": "Facet of Fishing Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "crystalline-mean-fishing-quests-gathering-well-eel-be-damned-68775",
+          "name": "Well Eel Be Damned",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 70,
+          "externalIds": {
+            "xivapi-quest-row": 68775
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68775,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:12:00.487Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1027237",
+            "npcName": "Frithrik",
+            "sourceRowId": 1027237,
+            "zoneId": "the-crystarium",
+            "zoneName": "The Crystarium",
+            "coordinates": {
+              "x": 11.1,
+              "y": 8.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "crystalline-mean-shared-quests-crafting-the-crystalline-mean-69191"
+          ],
+          "nextQuestIds": [
+            "crystalline-mean-fishing-quests-gathering-fishing-for-confidence-68776"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69191
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 70
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-well-eel-be-damned-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-2009924",
+              "locations": [
+                {
+                  "zoneId": "lakeland",
+                  "zoneName": "Lakeland",
+                  "territoryId": "territory-813",
+                  "mapId": "map-491",
+                  "sourceLevelRowId": 7926221,
+                  "coordinates": {
+                    "x": 21.8,
+                    "y": 34.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 16.9337,
+                      "y": 2.30439,
+                      "z": 669.905
+                    },
+                    "mapGameId": "n4f1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-well-eel-be-damned-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028472",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7924265,
+                  "coordinates": {
+                    "x": 9.9,
+                    "y": 5.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -66.8032,
+                      "y": -36.7501,
+                      "z": -273.254
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-well-eel-be-damned-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1027237",
+              "targetName": "Frithrik",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7788930,
+                  "coordinates": {
+                    "x": 11.1,
+                    "y": 8.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -8.92877,
+                      "y": 20.186,
+                      "z": -119.161
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 54000,
+            "gil": 1125
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:12:09.824Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68775,
+              "internalId": "LucKla501_03239",
+              "expansion": "Shadowbringers",
+              "journalGenre": "Facet of Fishing Quests",
+              "eventIconType": 8,
+              "sortKey": 510,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1027237,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2009924,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTACTION0",
+                  "argument": 12,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1028472,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1029652,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1028470,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1028468,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_04",
+                  "argument": 1028469,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_05",
+                  "argument": 1028471,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_00",
+                  "argument": 69190,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_01",
+                  "argument": 7949819,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 777,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 648,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE1",
+                  "argument": 830,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "INVIS_ACTOR0",
+                  "argument": 1027845,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028472
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1029652
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028470
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1028468
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1028469
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_05",
+                  "actorRowId": 1028471
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028472,
+                  "name": "Frithrik",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1029652,
+                  "name": "Frithrik",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028470,
+                  "name": "Mervyl",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1028468
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1028469
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_05",
+                  "actorRowId": 1028471,
+                  "name": "Lobb",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68776
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "crystalline-mean-fishing-quests-gathering-fishing-for-confidence-68776",
+          "name": "Fishing for Confidence",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 75,
+          "externalIds": {
+            "xivapi-quest-row": 68776
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68776,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:12:04.233Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1027237",
+            "npcName": "Frithrik",
+            "sourceRowId": 1027237,
+            "zoneId": "the-crystarium",
+            "zoneName": "The Crystarium",
+            "coordinates": {
+              "x": 11.1,
+              "y": 8.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "crystalline-mean-fishing-quests-gathering-well-eel-be-damned-68775"
+          ],
+          "nextQuestIds": [
+            "crystalline-mean-fishing-quests-gathering-morsel-of-the-deep-68777"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68775
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 75
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-26750",
+              "itemName": "Calico Trout",
+              "sourceRowId": 26750,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-fishing-for-confidence-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028473",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7924275,
+                  "coordinates": {
+                    "x": 10.1,
+                    "y": 5.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -59.1723,
+                      "y": -27.236,
+                      "z": -270.162
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-fishing-for-confidence-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028474",
+              "locations": [
+                {
+                  "zoneId": "il-mheg",
+                  "zoneName": "Il Mheg",
+                  "territoryId": "territory-816",
+                  "mapId": "map-494",
+                  "sourceLevelRowId": 7926050,
+                  "coordinates": {
+                    "x": 12.8,
+                    "y": 14.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -435.723,
+                      "y": 53.7912,
+                      "z": -332.221
+                    },
+                    "mapGameId": "n4f4/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-fishing-for-confidence-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1031217",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 8013115,
+                  "coordinates": {
+                    "x": 11,
+                    "y": 8.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -13.6153,
+                      "y": 20.186,
+                      "z": -119.516
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 1395000,
+            "gil": 1295,
+            "items": [
+              {
+                "itemId": "item-12669",
+                "itemName": "Hi-Cordial",
+                "quantity": 30,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:12:09.824Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68776,
+              "internalId": "LucKla502_03240",
+              "expansion": "Shadowbringers",
+              "journalGenre": "Facet of Fishing Quests",
+              "eventIconType": 1,
+              "sortKey": 520,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1027237,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1031217,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1031280,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1031281,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1028473,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1030154,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1028474,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 26750,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 7846376,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1029652,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1028470,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR02",
+                  "argument": 7934653,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2010476,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "BIND_ACTOR03",
+                  "argument": 8013115,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MAINQUEST_CHECK_01",
+                  "argument": 68856,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 26750,
+                  "itemId": "item-26750",
+                  "quantity": 1,
+                  "name": "Calico Trout",
+                  "resolvedSheet": "Item",
+                  "iconId": 29300
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1031217
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1031280
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1031281
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1028473
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1030154
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1028474
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1029652
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028470
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1031217,
+                  "name": "Lobb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1031280
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1031281
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1028473,
+                  "name": "Frithrik",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1030154,
+                  "name": "Lobb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1028474,
+                  "name": "Frithrik",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1029652,
+                  "name": "Frithrik",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028470,
+                  "name": "Mervyl",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  68777
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "crystalline-mean-fishing-quests-gathering-morsel-of-the-deep-68777",
+          "name": "Morsel of the Deep",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 80,
+          "externalIds": {
+            "xivapi-quest-row": 68777
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 68777,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:12:07.530Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1027237",
+            "npcName": "Frithrik",
+            "sourceRowId": 1027237,
+            "zoneId": "the-crystarium",
+            "zoneName": "The Crystarium",
+            "coordinates": {
+              "x": 11.1,
+              "y": 8.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "crystalline-mean-fishing-quests-gathering-fishing-for-confidence-68776"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              68776
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 80
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-26751",
+              "itemName": "Prospero Eel",
+              "sourceRowId": 26751,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-morsel-of-the-deep-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028475",
+              "locations": [
+                {
+                  "zoneId": "kholusia",
+                  "zoneName": "Kholusia",
+                  "territoryId": "territory-814",
+                  "mapId": "map-492",
+                  "sourceLevelRowId": 7925242,
+                  "coordinates": {
+                    "x": 35.9,
+                    "y": 27.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 719.19,
+                      "y": 26.8862,
+                      "z": 298.391
+                    },
+                    "mapGameId": "n4f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-morsel-of-the-deep-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1028476",
+              "locations": [
+                {
+                  "zoneId": "kholusia",
+                  "zoneName": "Kholusia",
+                  "territoryId": "territory-814",
+                  "mapId": "map-492",
+                  "sourceLevelRowId": 7925643,
+                  "coordinates": {
+                    "x": 35.4,
+                    "y": 27
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 695.139,
+                      "y": 28.116,
+                      "z": 274.942
+                    },
+                    "mapGameId": "n4f2/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-morsel-of-the-deep-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1027237",
+              "targetName": "Frithrik",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7788930,
+                  "coordinates": {
+                    "x": 11.1,
+                    "y": 8.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -8.92877,
+                      "y": 20.186,
+                      "z": -119.161
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-morsel-of-the-deep-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1029869",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7926438,
+                  "coordinates": {
+                    "x": 11.2,
+                    "y": 10
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -3.79475,
+                      "y": 0,
+                      "z": -63.6972
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-morsel-of-the-deep-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1027237",
+              "targetName": "Frithrik",
+              "locations": [
+                {
+                  "zoneId": "the-crystarium",
+                  "zoneName": "The Crystarium",
+                  "territoryId": "territory-819",
+                  "mapId": "map-497",
+                  "sourceLevelRowId": 7788930,
+                  "coordinates": {
+                    "x": 11.1,
+                    "y": 8.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -8.92877,
+                      "y": 20.186,
+                      "z": -119.161
+                    },
+                    "mapGameId": "n4t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 2027,
+            "items": [
+              {
+                "itemId": "item-26732",
+                "itemName": "Gatherer's Guerdon Materia VIII",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-26733",
+                "itemName": "Gatherer's Guile Materia VIII",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-26734",
+                "itemName": "Gatherer's Grasp Materia VIII",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:12:09.824Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 68777,
+              "internalId": "LucKla503_03241",
+              "expansion": "Shadowbringers",
+              "journalGenre": "Facet of Fishing Quests",
+              "eventIconType": 1,
+              "sortKey": 530,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1027237,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1028475,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1028327,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1028476,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 26751,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1029869,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1028477,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1028478,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1029873,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 7846376,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1029652,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_00",
+                  "argument": 69184,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1028470,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "CUT_SCENE_00",
+                  "argument": 2119,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION_00",
+                  "argument": 812,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MOTION_01",
+                  "argument": 811,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 784,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_01",
+                  "argument": 68765,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_02",
+                  "argument": 68768,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_03",
+                  "argument": 68771,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_04",
+                  "argument": 68774,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_LAST_MAIN_01",
+                  "argument": 69190,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2010477,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_LOGMES_LAST_01",
+                  "argument": 5402,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 676,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 400,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 26751,
+                  "itemId": "item-26751",
+                  "quantity": 1,
+                  "name": "Prospero Eel",
+                  "resolvedSheet": "Item",
+                  "iconId": 29205
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028475
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1028327
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1028476
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1029869
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1028477
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1028478
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1029873
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1029652
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028470
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1028475,
+                  "name": "Frithrik",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1028327,
+                  "name": "Lobb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1028476,
+                  "name": "wizened fisher",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1029869,
+                  "name": "Frithrik",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1028477,
+                  "name": "Lobb",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1028478,
+                  "name": "Hurielle",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1029873,
+                  "name": "Mervyl",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1029652,
+                  "name": "Frithrik",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1028470,
+                  "name": "Mervyl",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2111 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "startsAfterQuestIds": [
+    "studium-shared-quests-crafting-the-faculty-70009"
+  ],
+  "continuesToQuestIds": [
+    "studium-shared-quests-crafting-the-meeting-of-minds-70010"
+  ],
+  "groups": [
+    {
+      "id": "studium-archaeology-quests-quests",
+      "title": "Faculty of Archaeology Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "studium-archaeology-quests-gathering-professor-rurushas-new-friend-69668",
+          "name": "Professor Rurusha's New Friend",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 80,
+          "externalIds": {
+            "xivapi-quest-row": 69668
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69668,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:14:49.778Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039211",
+            "npcName": "Boric",
+            "sourceRowId": 1039211,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 4.3,
+              "y": 9.4
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-shared-quests-crafting-the-faculty-70009"
+          ],
+          "nextQuestIds": [
+            "studium-archaeology-quests-gathering-the-dormant-dhyata-69669"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70009
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 80
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-professor-rurushas-new-friend-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 9007516,
+                  "coordinates": {
+                    "x": 5.2,
+                    "y": 8.4
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -301.518,
+                      "y": 18.2695,
+                      "z": -141.2
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-professor-rurushas-new-friend-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039203",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881421,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 112200,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-30482",
+                "itemName": "Chili Crab",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:06.557Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69668,
+              "internalId": "AktKla101_04132",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Archaeology Quests",
+              "eventIconType": 8,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039211,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039212,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1039213,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1040742,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1039203,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1039204,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039209,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_0",
+                  "argument": 8881464,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_1",
+                  "argument": 8950642,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_2",
+                  "argument": 8881428,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 301,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8950452,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012238,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 837,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039212
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039213
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1040742
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1039203
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1039204
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039212,
+                  "name": "Rurusha",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039213,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1040742,
+                  "name": "Namono Tayamono",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1039203,
+                  "name": "Rurusha",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1039204,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209,
+                  "name": "Namono Tayamono",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69669
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "studium-archaeology-quests-gathering-the-dormant-dhyata-69669",
+          "name": "The Dormant Dhyata",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 80,
+          "externalIds": {
+            "xivapi-quest-row": 69669
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69669,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:14:52.189Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039203",
+            "npcName": "Rurusha",
+            "sourceRowId": 1039203,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.7,
+              "y": 8.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-archaeology-quests-gathering-professor-rurushas-new-friend-69668"
+          ],
+          "nextQuestIds": [
+            "studium-archaeology-quests-gathering-gears-of-gold-69670"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69668
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 80
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-dormant-dhyata-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039203",
+              "targetName": "Rurusha",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881421,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 112200,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:06.557Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69669,
+              "internalId": "AktKla102_04133",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Archaeology Quests",
+              "eventIconType": 33,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039203,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039204,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1033,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 5413,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 69669,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8950452,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012238,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 307,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_0",
+                  "argument": 8881428,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039209,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 102,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039204
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039204,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209,
+                  "name": "Namono Tayamono",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69670
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "studium-archaeology-quests-gathering-gears-of-gold-69670",
+          "name": "Gears of Gold",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 83,
+          "externalIds": {
+            "xivapi-quest-row": 69670
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69670,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:14:54.691Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039203",
+            "npcName": "Rurusha",
+            "sourceRowId": 1039203,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.7,
+              "y": 8.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-archaeology-quests-gathering-the-dormant-dhyata-69669"
+          ],
+          "nextQuestIds": [
+            "studium-archaeology-quests-gathering-rubbished-research-69671"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69669
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 83
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-gears-of-gold-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039203",
+              "targetName": "Rurusha",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881421,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 117150,
+            "gil": 0
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:06.557Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69670,
+              "internalId": "AktKla103_04134",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Archaeology Quests",
+              "eventIconType": 33,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039203,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039204,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1033,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 5413,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 69670,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8950452,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012238,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 307,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_0",
+                  "argument": 8881428,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039209,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 102,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_BEFORE_QUEST_01",
+                  "argument": 65786,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_BEFORE_QUEST_02",
+                  "argument": 67911,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_BEFORE_QUEST_03",
+                  "argument": 68545,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_BEFORE_QUEST_04",
+                  "argument": 68709,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_BEFORE_QUEST_05",
+                  "argument": 69258,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACT_BEFORE_QUEST_06",
+                  "argument": 69553,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039204
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039204,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209,
+                  "name": "Namono Tayamono",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69671
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "studium-archaeology-quests-gathering-rubbished-research-69671",
+          "name": "Rubbished Research",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 85,
+          "externalIds": {
+            "xivapi-quest-row": 69671
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69671,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:14:57.106Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039203",
+            "npcName": "Rurusha",
+            "sourceRowId": 1039203,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.7,
+              "y": 8.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-archaeology-quests-gathering-gears-of-gold-69670"
+          ],
+          "nextQuestIds": [
+            "studium-archaeology-quests-gathering-borics-choice-69672"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69670
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 85
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-rubbished-research-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039203",
+              "targetName": "Rurusha",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881421,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 120450,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-36046",
+                "itemName": "Happiness Juice",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:06.557Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69671,
+              "internalId": "AktKla104_04135",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Archaeology Quests",
+              "eventIconType": 33,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039203,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039204,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1033,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 5413,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 69671,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8950452,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012238,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 307,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_0",
+                  "argument": 8881428,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039209,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 102,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039204
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039204,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209,
+                  "name": "Namono Tayamono",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69672
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "studium-archaeology-quests-gathering-borics-choice-69672",
+          "name": "Boric's Choice",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 85,
+          "externalIds": {
+            "xivapi-quest-row": 69672
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69672,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:14:59.552Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039203",
+            "npcName": "Rurusha",
+            "sourceRowId": 1039203,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.7,
+              "y": 8.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-archaeology-quests-gathering-rubbished-research-69671"
+          ],
+          "nextQuestIds": [
+            "studium-archaeology-quests-gathering-a-friend-in-need-69673"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69671
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 85
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-35835",
+              "itemName": "Gold Core Material",
+              "sourceRowId": 35835,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-35836",
+              "itemName": "Gold Core",
+              "sourceRowId": 35836,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-borics-choice-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039214",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881488,
+                  "coordinates": {
+                    "x": 9.4,
+                    "y": 14.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -94.8663,
+                      "y": -16.147,
+                      "z": 179.855
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-borics-choice-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039203",
+              "targetName": "Rurusha",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881421,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-borics-choice-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039203",
+              "targetName": "Rurusha",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881421,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                },
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881428,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -276.427,
+                      "y": 21.846,
+                      "z": -138.695
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 120450,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-36053",
+                "itemName": "Giant Haddock Dip",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:06.557Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69672,
+              "internalId": "AktKla105_04136",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Archaeology Quests",
+              "eventIconType": 1,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039203,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039214,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1039215,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 35835,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1039204,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 35836,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8950452,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012238,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 307,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 102,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_0",
+                  "argument": 8881428,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_1",
+                  "argument": 8881490,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1040911,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MOTION0",
+                  "argument": 937,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 35835,
+                  "itemId": "item-35835",
+                  "quantity": 1,
+                  "name": "Gold Core Material",
+                  "resolvedSheet": "Item",
+                  "iconId": 21474
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 35836,
+                  "itemId": "item-35836",
+                  "quantity": 1,
+                  "name": "Gold Core",
+                  "resolvedSheet": "Item",
+                  "iconId": 21283
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039214
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039215
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1039204
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1040911
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039214,
+                  "name": "merchant",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039215,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1039204,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1040911,
+                  "name": "Namono Tayamono",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69673
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "studium-archaeology-quests-gathering-a-friend-in-need-69673",
+          "name": "A Friend in Need",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 88,
+          "externalIds": {
+            "xivapi-quest-row": 69673
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69673,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:15:02.278Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039203",
+            "npcName": "Rurusha",
+            "sourceRowId": 1039203,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.7,
+              "y": 8.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-archaeology-quests-gathering-borics-choice-69672"
+          ],
+          "nextQuestIds": [
+            "studium-archaeology-quests-gathering-wayback-machine-69674"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69672
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 88
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-friend-in-need-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039203",
+              "targetName": "Rurusha",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881421,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 125400,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-36060",
+                "itemName": "Tsai tou Vounou",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:06.557Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69673,
+              "internalId": "AktKla106_04137",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Archaeology Quests",
+              "eventIconType": 33,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039203,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039204,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1033,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 5413,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 69673,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8950452,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012238,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 307,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE1",
+                  "argument": 39,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE2",
+                  "argument": 40,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_0",
+                  "argument": 8881428,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039209,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 102,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039204
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039204,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209,
+                  "name": "Namono Tayamono",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  69674
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "studium-archaeology-quests-gathering-wayback-machine-69674",
+          "name": "Wayback Machine",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 69674
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 69674,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:15:04.702Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1039203",
+            "npcName": "Rurusha",
+            "sourceRowId": 1039203,
+            "zoneId": "old-sharlayan",
+            "zoneName": "Old Sharlayan",
+            "coordinates": {
+              "x": 5.7,
+              "y": 8.5
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "studium-archaeology-quests-gathering-a-friend-in-need-69673"
+          ],
+          "nextQuestIds": [
+            "studium-shared-quests-crafting-the-meeting-of-minds-70010"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              69673
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-35837",
+              "itemName": "Gold Connector Material",
+              "sourceRowId": 35837,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "item-35838",
+              "itemName": "Gold Connector",
+              "sourceRowId": 35838,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM1"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-wayback-machine-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039203",
+              "targetName": "Rurusha",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881421,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                },
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881550,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -276.604,
+                      "y": 21.846,
+                      "z": -138.576
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-wayback-machine-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039217",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881565,
+                  "coordinates": {
+                    "x": 4.8,
+                    "y": 7.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -322.814,
+                      "y": 22.3,
+                      "z": -172.634
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-wayback-machine-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1039203",
+              "targetName": "Rurusha",
+              "locations": [
+                {
+                  "zoneId": "old-sharlayan",
+                  "zoneName": "Old Sharlayan",
+                  "territoryId": "territory-962",
+                  "mapId": "map-693",
+                  "sourceLevelRowId": 8881421,
+                  "coordinates": {
+                    "x": 5.7,
+                    "y": 8.5
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -277.689,
+                      "y": 21.846,
+                      "z": -139.064
+                    },
+                    "mapGameId": "k5t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1044,
+            "optionalItems": [
+              {
+                "itemId": "item-33938",
+                "itemName": "Craftsman's Competence Materia X",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-33939",
+                "itemName": "Craftsman's Cunning Materia X",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-33940",
+                "itemName": "Craftsman's Command Materia X",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:06.557Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 69674,
+              "internalId": "AktKla107_04138",
+              "expansion": "Endwalker",
+              "journalGenre": "Faculty of Archaeology Quests",
+              "eventIconType": 1,
+              "sortKey": 0,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1039203,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 35837,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "RITEM1",
+                  "argument": 35838,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1039216,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1039217,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1039218,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1039204,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MARKER_00",
+                  "argument": 8950452,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2012238,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ1",
+                  "argument": 2011823,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_SE0",
+                  "argument": 307,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SE1",
+                  "argument": 80,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_0",
+                  "argument": 8881428,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_1",
+                  "argument": 8881566,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LEVEL_ENPC_ID_2",
+                  "argument": 8881441,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR0",
+                  "argument": 1039209,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR1",
+                  "argument": 1039208,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_BGM0",
+                  "argument": 102,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM1",
+                  "argument": 892,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "CUT_SCENE_00",
+                  "argument": 2587,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1035,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_LAST_01",
+                  "argument": 5418,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_01",
+                  "argument": 69681,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_02",
+                  "argument": 69688,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_03",
+                  "argument": 69695,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_04",
+                  "argument": 69702,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOGMSG_EVENT_INVENTORY_FULL_ERROR",
+                  "argument": 1767,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 35837,
+                  "itemId": "item-35837",
+                  "quantity": 1,
+                  "name": "Gold Connector Material",
+                  "resolvedSheet": "Item",
+                  "iconId": 25919
+                },
+                {
+                  "sourceInstruction": "RITEM1",
+                  "itemSheet": "Item",
+                  "itemRowId": 35838,
+                  "itemId": "item-35838",
+                  "quantity": 1,
+                  "name": "Gold Connector",
+                  "resolvedSheet": "Item",
+                  "iconId": 26108
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039216
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039217
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1039218
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1039204
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039208
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1039216,
+                  "name": "Rurusha's box",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1039217,
+                  "name": "Namono Tayamono",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1039218,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1039204,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR0",
+                  "actorRowId": 1039209,
+                  "name": "Namono Tayamono",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR1",
+                  "actorRowId": 1039208,
+                  "name": "Boric",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70010
+                ]
+              }
+            }
+          },
+          "sortOrder": 7
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2394 @@
+{
+  "schemaVersion": 1,
+  "format": "linear",
+  "startsAfterQuestIds": [
+    "wachumeqimeqi-shared-quests-crafting-wrought-in-wachumeqimeqi-70502"
+  ],
+  "groups": [
+    {
+      "id": "wachumeqimeqi-apothecary-quests-quests",
+      "title": "Shunye's Apothecary Quests",
+      "sortOrder": 1,
+      "quests": [
+        {
+          "id": "wachumeqimeqi-apothecary-quests-gathering-hands-for-hire-70525",
+          "name": "Hands for Hire",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70525
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70525,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:15:32.357Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047151",
+            "npcName": "greying gatherer",
+            "sourceRowId": 1047151,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 16,
+              "y": 11.3
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-shared-quests-crafting-wrought-in-wachumeqimeqi-70502"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-test-of-talents-70526"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70502
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-hands-for-hire-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047164",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10744072,
+                  "coordinates": {
+                    "x": 17.7,
+                    "y": 10.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 217.237,
+                      "y": -14,
+                      "z": -8.29867
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 248640,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-38930",
+                "itemName": "Jhinga Curry",
+                "quantity": 3,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:50.756Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70525,
+              "internalId": "KinGla401_04989",
+              "expansion": "Dawntrail",
+              "journalGenre": "Shunye's Apothecary Quests",
+              "eventIconType": 8,
+              "sortKey": 410,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047151,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047164,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1283,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050934,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_00",
+                  "argument": 70455,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_01",
+                  "argument": 70462,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_01",
+                  "argument": 20028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_02",
+                  "argument": 465,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047164
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047164,
+                  "name": "Shunye",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70526
+                ]
+              }
+            }
+          },
+          "sortOrder": 1
+        },
+        {
+          "id": "wachumeqimeqi-apothecary-quests-gathering-test-of-talents-70526",
+          "name": "Test of Talents",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 90,
+          "externalIds": {
+            "xivapi-quest-row": 70526
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70526,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:15:34.810Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047132",
+            "npcName": "Shunye",
+            "sourceRowId": 1047132,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 17.7,
+              "y": 10.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-hands-for-hire-70525"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-a-discerning-eye-70527"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70525
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 90
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-test-of-talents-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047132",
+              "targetName": "Shunye",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10498036,
+                  "coordinates": {
+                    "x": 17.7,
+                    "y": 10.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 217.385,
+                      "y": -14,
+                      "z": -5.66309
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 248640,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-12669",
+                "itemName": "Hi-Cordial",
+                "quantity": 30,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:50.756Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70526,
+              "internalId": "KinGla402_04990",
+              "expansion": "Dawntrail",
+              "journalGenre": "Shunye's Apothecary Quests",
+              "eventIconType": 34,
+              "sortKey": 420,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047132,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047152,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10412,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050934,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 10661337,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 70526,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 812,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047152
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047152,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70527
+                ]
+              }
+            }
+          },
+          "sortOrder": 2
+        },
+        {
+          "id": "wachumeqimeqi-apothecary-quests-gathering-a-discerning-eye-70527",
+          "name": "A Discerning Eye",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 93,
+          "externalIds": {
+            "xivapi-quest-row": 70527
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70527,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:15:37.377Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047132",
+            "npcName": "Shunye",
+            "sourceRowId": 1047132,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 17.7,
+              "y": 10.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-test-of-talents-70526"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-as-nature-intends-70528"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70526
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 93
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-a-discerning-eye-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047132",
+              "targetName": "Shunye",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10498036,
+                  "coordinates": {
+                    "x": 17.7,
+                    "y": 10.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 217.385,
+                      "y": -14,
+                      "z": -5.66309
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 258720,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-12669",
+                "itemName": "Hi-Cordial",
+                "quantity": 30,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:50.756Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70527,
+              "internalId": "KinGla403_04991",
+              "expansion": "Dawntrail",
+              "journalGenre": "Shunye's Apothecary Quests",
+              "eventIconType": 34,
+              "sortKey": 430,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047132,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047168,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10412,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050934,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EVENT_PICTRUE_01",
+                  "argument": 1333,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 70527,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 10824164,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 812,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_01",
+                  "argument": 70448,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2014241,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ1",
+                  "argument": 2014242,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ2",
+                  "argument": 2014374,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_BGM_01",
+                  "argument": 70,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_02",
+                  "argument": 20034,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047168
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047168,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70528
+                ]
+              }
+            }
+          },
+          "sortOrder": 3
+        },
+        {
+          "id": "wachumeqimeqi-apothecary-quests-gathering-as-nature-intends-70528",
+          "name": "As Nature Intends",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 95,
+          "externalIds": {
+            "xivapi-quest-row": 70528
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70528,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:15:39.801Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047132",
+            "npcName": "Shunye",
+            "sourceRowId": 1047132,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 17.7,
+              "y": 10.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-a-discerning-eye-70527"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-the-cycle-of-life-70529"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70527
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 95
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-as-nature-intends-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047132",
+              "targetName": "Shunye",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10498036,
+                  "coordinates": {
+                    "x": 17.7,
+                    "y": 10.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 217.385,
+                      "y": -14,
+                      "z": -5.66309
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 265440,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-12669",
+                "itemName": "Hi-Cordial",
+                "quantity": 30,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:50.756Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70528,
+              "internalId": "KinGla404_04992",
+              "expansion": "Dawntrail",
+              "journalGenre": "Shunye's Apothecary Quests",
+              "eventIconType": 34,
+              "sortKey": 440,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047132,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047168,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10412,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050934,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 70528,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 10824164,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1050936,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "QST_COMP_CHK_01",
+                  "argument": 70448,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2014241,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_EOBJ1",
+                  "argument": 2014243,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 812,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_03",
+                  "argument": 1051136,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_04",
+                  "argument": 1051137,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_BGM_01",
+                  "argument": 20031,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047168
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050936
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1051136
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1051137
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047168,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050936,
+                  "name": "Uapyota",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_03",
+                  "actorRowId": 1051136
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_04",
+                  "actorRowId": 1051137
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70529
+                ]
+              }
+            }
+          },
+          "sortOrder": 4
+        },
+        {
+          "id": "wachumeqimeqi-apothecary-quests-gathering-the-cycle-of-life-70529",
+          "name": "The Cycle of Life",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 95,
+          "externalIds": {
+            "xivapi-quest-row": 70529
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70529,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:15:42.869Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047132",
+            "npcName": "Shunye",
+            "sourceRowId": 1047132,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 17.7,
+              "y": 10.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-as-nature-intends-70528"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-digging-up-the-truth-70530"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70528
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 95
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "event-item-2003661",
+              "itemName": "Package for Uapyota",
+              "sourceRowId": 2003661,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            },
+            {
+              "itemId": "item-43913",
+              "itemName": "Precious Material",
+              "sourceRowId": 43913,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-the-cycle-of-life-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047153",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10661353,
+                  "coordinates": {
+                    "x": 8,
+                    "y": 10.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": -270.464,
+                      "y": 40.0732,
+                      "z": -12.2285
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-the-cycle-of-life-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047132",
+              "targetName": "Shunye",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10498036,
+                  "coordinates": {
+                    "x": 17.7,
+                    "y": 10.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 217.385,
+                      "y": -14,
+                      "z": -5.66309
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 265440,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-44099",
+                "itemName": "Turali Pineapple Ponzecake",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:50.756Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70529,
+              "internalId": "KinGla405_04993",
+              "expansion": "Dawntrail",
+              "journalGenre": "Shunye's Apothecary Quests",
+              "eventIconType": 1,
+              "sortKey": 450,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047132,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2003661,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047152,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1047153,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1047154,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 43913,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1047170,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050934,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_ACTOR_02",
+                  "argument": 1050936,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 10661337,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR02",
+                  "argument": 10661360,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 8049,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_EOBJ0",
+                  "argument": 2014244,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "LOC_ACTION_02",
+                  "argument": 1067,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "LOC_SE_01",
+                  "argument": 301,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_01",
+                  "argument": 20027,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_02",
+                  "argument": 223,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_03",
+                  "argument": 20034,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR03",
+                  "argument": 10847410,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2003661,
+                  "itemId": "event-item-2003661",
+                  "name": "Package for Uapyota",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 23001,
+                  "quantity": 1
+                },
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 43913,
+                  "itemId": "item-43913",
+                  "quantity": 1,
+                  "name": "Precious Material",
+                  "resolvedSheet": "Item",
+                  "iconId": 26108
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047152
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047153
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1047154
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1047170
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050936
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047152,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047153,
+                  "name": "Uapyota",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1047154,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1047170,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_02",
+                  "actorRowId": 1050936,
+                  "name": "Uapyota",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70530
+                ]
+              }
+            }
+          },
+          "sortOrder": 5
+        },
+        {
+          "id": "wachumeqimeqi-apothecary-quests-gathering-digging-up-the-truth-70530",
+          "name": "Digging Up the Truth",
+          "isFeatureQuest": true,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 98,
+          "externalIds": {
+            "xivapi-quest-row": 70530
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70530,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:15:45.972Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047132",
+            "npcName": "Shunye",
+            "sourceRowId": 1047132,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 17.7,
+              "y": 10.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-the-cycle-of-life-70529"
+          ],
+          "nextQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-wellspring-of-tears-70531"
+          ],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70529
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 98
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-digging-up-the-truth-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047132",
+              "targetName": "Shunye",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10498036,
+                  "coordinates": {
+                    "x": 17.7,
+                    "y": 10.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 217.385,
+                      "y": -14,
+                      "z": -5.66309
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 275520,
+            "gil": 0,
+            "items": [
+              {
+                "itemId": "item-44078",
+                "itemName": "Nasi Goreng",
+                "quantity": 2,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:50.756Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70530,
+              "internalId": "KinGla406_04994",
+              "expansion": "Dawntrail",
+              "journalGenre": "Shunye's Apothecary Quests",
+              "eventIconType": 34,
+              "sortKey": 460,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047132,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047168,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_START_01",
+                  "argument": 1279,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_COMP_01",
+                  "argument": 1285,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE_RANKUP_01",
+                  "argument": 1286,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_COMP_01",
+                  "argument": 5403,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_RANKUP_01",
+                  "argument": 10412,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_REACT_01",
+                  "argument": 5392,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050934,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_MY_QUEST_00",
+                  "argument": 70530,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 10824164,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 812,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_01",
+                  "argument": 70,
+                  "referenceType": "script-value"
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047168
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934
+                }
+              ],
+              "questItemReferences": [],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047168,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": [
+                  70531
+                ]
+              }
+            }
+          },
+          "sortOrder": 6
+        },
+        {
+          "id": "wachumeqimeqi-apothecary-quests-gathering-wellspring-of-tears-70531",
+          "name": "Wellspring of Tears",
+          "isFeatureQuest": false,
+          "isRepeatable": false,
+          "isSeasonalQuest": false,
+          "level": 100,
+          "externalIds": {
+            "xivapi-quest-row": 70531
+          },
+          "sources": [
+            {
+              "provider": "xivapi",
+              "sheet": "Quest",
+              "rowId": 70531,
+              "gameVersion": "7583112015aaef5d",
+              "schema": "exdschema@2:rev:cf037c37eff351db4d1ca5952e10cc08c131b828",
+              "language": "en",
+              "importedAt": "2026-08-08T07:15:48.528Z"
+            }
+          ],
+          "start": {
+            "npcId": "enpc-1047132",
+            "npcName": "Shunye",
+            "sourceRowId": 1047132,
+            "zoneId": "tuliyollal",
+            "zoneName": "Tuliyollal",
+            "coordinates": {
+              "x": 17.7,
+              "y": 10.9
+            }
+          },
+          "availability": {
+            "classJobIds": [
+              "adventurer"
+            ]
+          },
+          "prerequisiteQuestMode": "all",
+          "prerequisiteQuestIds": [
+            "wachumeqimeqi-apothecary-quests-gathering-digging-up-the-truth-70530"
+          ],
+          "nextQuestIds": [],
+          "rawRelations": {
+            "previousQuestRowIds": [
+              70530
+            ],
+            "previousQuestJoin": 1,
+            "questLockJoin": 2
+          },
+          "requirements": [
+            {
+              "type": "class-job-level",
+              "classJobId": "adventurer",
+              "classJobName": "Adventurer",
+              "level": 100
+            }
+          ],
+          "questItems": [
+            {
+              "itemId": "item-43914",
+              "itemName": "Azure Fragment",
+              "sourceRowId": 43914,
+              "sourceSheet": "item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "RITEM0"
+            },
+            {
+              "itemId": "event-item-2003662",
+              "itemName": "Azure Fragment",
+              "sourceRowId": 2003662,
+              "sourceSheet": "event-item",
+              "quantity": 1,
+              "usage": "used-during-quest",
+              "sourceInstruction": "ITEM0"
+            }
+          ],
+          "objectives": [
+            {
+              "id": "adventurer-wellspring-of-tears-objective-1",
+              "sortOrder": 1,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047155",
+              "locations": [
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10674713,
+                  "coordinates": {
+                    "x": 36.4,
+                    "y": 31.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 746.257,
+                      "y": -133.189,
+                      "z": 507.58
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 1,
+                "completeSequence": 1
+              }
+            },
+            {
+              "id": "adventurer-wellspring-of-tears-objective-2",
+              "sortOrder": 2,
+              "type": "unknown",
+              "quantity": 4,
+              "targetId": "actor-1048973",
+              "locations": [
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10567341,
+                  "coordinates": {
+                    "x": 34.8,
+                    "y": 33.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 661.861,
+                      "y": -135.179,
+                      "z": 582.129
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                },
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10567371,
+                  "coordinates": {
+                    "x": 33.9,
+                    "y": 32.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 621.526,
+                      "y": -135.127,
+                      "z": 531.14
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                },
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10661529,
+                  "coordinates": {
+                    "x": 34.2,
+                    "y": 33.3
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 632.527,
+                      "y": -137.174,
+                      "z": 590.851
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                },
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10567393,
+                  "coordinates": {
+                    "x": 35.2,
+                    "y": 32.2
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 686.532,
+                      "y": -137.174,
+                      "z": 534.884
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                },
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10674713,
+                  "coordinates": {
+                    "x": 36.4,
+                    "y": 31.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 746.257,
+                      "y": -133.189,
+                      "z": 507.58
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 2,
+                "completeSequence": 2
+              }
+            },
+            {
+              "id": "adventurer-wellspring-of-tears-objective-3",
+              "sortOrder": 3,
+              "type": "unknown",
+              "quantity": 2,
+              "targetId": "actor-1047157",
+              "locations": [
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10661531,
+                  "coordinates": {
+                    "x": 33.2,
+                    "y": 30.8
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 586.276,
+                      "y": -142.498,
+                      "z": 462.998
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                },
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10661532,
+                  "coordinates": {
+                    "x": 32.3,
+                    "y": 31.1
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 539.721,
+                      "y": -142.492,
+                      "z": 481.68
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                },
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10674713,
+                  "coordinates": {
+                    "x": 36.4,
+                    "y": 31.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 746.257,
+                      "y": -133.189,
+                      "z": 507.58
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 3,
+                "completeSequence": 3
+              }
+            },
+            {
+              "id": "adventurer-wellspring-of-tears-objective-4",
+              "sortOrder": 4,
+              "type": "unknown",
+              "quantity": 1,
+              "locations": [
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10661542,
+                  "coordinates": {
+                    "x": 25.9,
+                    "y": 29.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 221.843,
+                      "y": -164.946,
+                      "z": 418.552
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                },
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10674713,
+                  "coordinates": {
+                    "x": 36.4,
+                    "y": 31.7
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 746.257,
+                      "y": -133.189,
+                      "z": 507.58
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 4,
+                "completeSequence": 4
+              }
+            },
+            {
+              "id": "adventurer-wellspring-of-tears-objective-5",
+              "sortOrder": 5,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047160",
+              "locations": [
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10661541,
+                  "coordinates": {
+                    "x": 34.8,
+                    "y": 11.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 664.615,
+                      "y": 1.55554,
+                      "z": -477.222
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 5,
+                "completeSequence": 5
+              }
+            },
+            {
+              "id": "adventurer-wellspring-of-tears-objective-6",
+              "sortOrder": 6,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047160",
+              "locations": [
+                {
+                  "zoneId": "yak-tel",
+                  "zoneName": "Yak T'el",
+                  "territoryId": "territory-1189",
+                  "mapId": "map-859",
+                  "sourceLevelRowId": 10661541,
+                  "coordinates": {
+                    "x": 34.8,
+                    "y": 11.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 664.615,
+                      "y": 1.55554,
+                      "z": -477.222
+                    },
+                    "mapGameId": "y6f3/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 6,
+                "completeSequence": 6
+              }
+            },
+            {
+              "id": "adventurer-wellspring-of-tears-objective-7",
+              "sortOrder": 7,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047132",
+              "targetName": "Shunye",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10498036,
+                  "coordinates": {
+                    "x": 17.7,
+                    "y": 10.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 217.385,
+                      "y": -14,
+                      "z": -5.66309
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 7,
+                "completeSequence": 7
+              }
+            },
+            {
+              "id": "adventurer-wellspring-of-tears-objective-8",
+              "sortOrder": 8,
+              "type": "unknown",
+              "quantity": 1,
+              "targetId": "actor-1047132",
+              "targetName": "Shunye",
+              "locations": [
+                {
+                  "zoneId": "tuliyollal",
+                  "zoneName": "Tuliyollal",
+                  "territoryId": "territory-1185",
+                  "mapId": "map-855",
+                  "sourceLevelRowId": 10498036,
+                  "coordinates": {
+                    "x": 17.7,
+                    "y": 10.9
+                  },
+                  "extensions": {
+                    "rawCoordinates": {
+                      "x": 217.385,
+                      "y": -14,
+                      "z": -5.66309
+                    },
+                    "mapGameId": "y6t1/00"
+                  }
+                }
+              ],
+              "notes": "Objective text is not available from the parsed Quest row.",
+              "sourceData": {
+                "todoIndex": 8
+              }
+            }
+          ],
+          "rewards": {
+            "experience": 0,
+            "gil": 1058,
+            "optionalItems": [
+              {
+                "itemId": "item-41762",
+                "itemName": "Gatherer's Guerdon Materia XI",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-41763",
+                "itemName": "Gatherer's Guile Materia XI",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              },
+              {
+                "itemId": "item-41764",
+                "itemName": "Gatherer's Grasp Materia XI",
+                "quantity": 1,
+                "quality": "normal",
+                "choiceGroup": 1,
+                "notes": "Stain: No Color"
+              }
+            ]
+          },
+          "tags": [
+            "xivapi-import"
+          ],
+          "lastVerifiedAt": "2026-08-08T07:15:50.756Z",
+          "sourceData": {
+            "xivapi": {
+              "rowId": 70531,
+              "internalId": "KinGla407_04995",
+              "expansion": "Dawntrail",
+              "journalGenre": "Shunye's Apothecary Quests",
+              "eventIconType": 1,
+              "sortKey": 470,
+              "questLevelOffset": 0,
+              "scriptParameters": [
+                {
+                  "instruction": "ACTOR0",
+                  "argument": 1047132,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR1",
+                  "argument": 1047168,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR2",
+                  "argument": 1047155,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR3",
+                  "argument": 1048973,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR4",
+                  "argument": 1048974,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR5",
+                  "argument": 1047156,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR6",
+                  "argument": 1048981,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT0",
+                  "argument": 2014351,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EOBJECT1",
+                  "argument": 2014352,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTRANGE0",
+                  "argument": 10804451,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "EVENTRANGE1",
+                  "argument": 10804455,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR7",
+                  "argument": 1047157,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR8",
+                  "argument": 1047158,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "ACTOR9",
+                  "argument": 1047159,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "EOBJECT2",
+                  "argument": 2014353,
+                  "referenceType": "event-object"
+                },
+                {
+                  "instruction": "EVENTRANGE2",
+                  "argument": 10804457,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ACTOR10",
+                  "argument": 1047160,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "RITEM0",
+                  "argument": 43914,
+                  "referenceType": "item"
+                },
+                {
+                  "instruction": "ITEM0",
+                  "argument": 2003662,
+                  "referenceType": "event-item"
+                },
+                {
+                  "instruction": "ACTOR11",
+                  "argument": 1047152,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "LOC_SCREENIMAGE0",
+                  "argument": 1290,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_LOGMES_LAST_01",
+                  "argument": 10417,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "SEQEV_00",
+                  "argument": 236,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTOR_01",
+                  "argument": 1050934,
+                  "referenceType": "actor"
+                },
+                {
+                  "instruction": "CUT_SCENE_01",
+                  "argument": 3444,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_01",
+                  "argument": 70510,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_02",
+                  "argument": 70517,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_03",
+                  "argument": 70524,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_QUEST_DKB_04",
+                  "argument": 70538,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR01",
+                  "argument": 10674713,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "BIND_ACTOR02",
+                  "argument": 10661337,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_IDEL_01",
+                  "argument": 812,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_ACTION_01",
+                  "argument": 701,
+                  "referenceType": "action"
+                },
+                {
+                  "instruction": "BIND_ACTOR03",
+                  "argument": 10824164,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_01",
+                  "argument": 20029,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "LOC_BGM_02",
+                  "argument": 20028,
+                  "referenceType": "script-value"
+                },
+                {
+                  "instruction": "ET_DOUKOU",
+                  "argument": 5,
+                  "referenceType": "script-value"
+                }
+              ],
+              "questItemReferences": [
+                {
+                  "sourceInstruction": "RITEM0",
+                  "itemSheet": "Item",
+                  "itemRowId": 43914,
+                  "itemId": "item-43914",
+                  "quantity": 1,
+                  "name": "Azure Fragment",
+                  "resolvedSheet": "Item",
+                  "iconId": 20048
+                },
+                {
+                  "sourceInstruction": "ITEM0",
+                  "itemSheet": "EventItem",
+                  "itemRowId": 2003662,
+                  "itemId": "event-item-2003662",
+                  "name": "Azure Fragment",
+                  "resolvedSheet": "EventItem",
+                  "iconId": 20048,
+                  "quantity": 1
+                }
+              ],
+              "unresolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047168
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047155
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1048973
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1048974
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1047156
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1048981
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1047157
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1047158
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1047159
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1047160
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1047152
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934
+                }
+              ],
+              "resolvedActorReferences": [
+                {
+                  "sourceInstruction": "ACTOR1",
+                  "actorRowId": 1047168,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR2",
+                  "actorRowId": 1047155,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR3",
+                  "actorRowId": 1048973,
+                  "name": "Heemil Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR4",
+                  "actorRowId": 1048974,
+                  "name": "Tojoll Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR5",
+                  "actorRowId": 1047156,
+                  "name": "idle sentry",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR6",
+                  "actorRowId": 1048981,
+                  "name": "Veenil Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR7",
+                  "actorRowId": 1047157,
+                  "name": "kindly Hoobigo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR8",
+                  "actorRowId": 1047158,
+                  "name": "attentive gardener",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR9",
+                  "actorRowId": 1047159,
+                  "name": "Gosaal Ja",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR10",
+                  "actorRowId": 1047160,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "ACTOR11",
+                  "actorRowId": 1047152,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                },
+                {
+                  "sourceInstruction": "LOC_ACTOR_01",
+                  "actorRowId": 1050934,
+                  "name": "Uvlo",
+                  "resolvedSheet": "ENpcResident"
+                }
+              ],
+              "reverseRelations": {
+                "nextQuestRowIds": []
+              }
+            }
+          },
+          "sortOrder": 7
+        }
+      ]
+    }
+  ]
+}
