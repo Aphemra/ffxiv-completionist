@@ -7,6 +7,7 @@ import { delayBetweenRequests, requestXivapi } from './client';
 import { readXivapiPins } from './pins';
 
 import {
+  createSafePathSegment,
   questIndexPath,
   readJsonFile,
   writeJsonFile,
@@ -338,20 +339,30 @@ async function main(): Promise<void> {
 
   const comparison = compareQuestIndexes(previousIndex, output);
 
-  const comparisonPath = path.join(xivapiCacheRoot, 'quest-index-diff.json');
-
-  await writeJsonFile(comparisonPath, comparison);
-
   const hasSemanticChanges =
     comparison.summary.addedQuestCount > 0 ||
     comparison.summary.removedQuestCount > 0 ||
     comparison.summary.changedQuestCount > 0;
 
-  if (
+  const shouldUpdateIndex =
     previousIndex === undefined ||
     comparison.summary.sourceChanged ||
-    hasSemanticChanges
-  ) {
+    hasSemanticChanges;
+
+  const comparisonPath = path.join(xivapiCacheRoot, 'quest-index-diff.json');
+
+  await writeJsonFile(comparisonPath, comparison);
+
+  let archivedComparisonPath: string | undefined;
+
+  if (shouldUpdateIndex) {
+    archivedComparisonPath = path.join(
+      xivapiCacheRoot,
+      'quest-index-diffs',
+      `${createSafePathSegment(comparison.generatedAt)}.json`,
+    );
+
+    await writeJsonFile(archivedComparisonPath, comparison);
     await writeJsonFile(questIndexPath, output);
   }
 
@@ -398,11 +409,11 @@ async function main(): Promise<void> {
   console.log('');
   console.log(`Comparison report: ${comparisonPath}`);
 
-  if (
-    previousIndex === undefined ||
-    comparison.summary.sourceChanged ||
-    hasSemanticChanges
-  ) {
+  if (archivedComparisonPath) {
+    console.log(`Archived comparison: ${archivedComparisonPath}`);
+  }
+
+  if (shouldUpdateIndex) {
     console.log(`Updated index: ${questIndexPath}`);
   } else {
     console.log('The tracked quest index is already current.');

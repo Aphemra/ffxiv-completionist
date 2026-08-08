@@ -563,46 +563,90 @@ function getInspectionPaths(rowId: number) {
   };
 }
 
+async function resolvedReviewMatchesSource(
+  filePath: string,
+  rowId: number,
+  source: {
+    version: string;
+    schema: string;
+  },
+): Promise<boolean> {
+  try {
+    const parsedReview = resolvedReviewSchema.safeParse(
+      await readJsonFile(filePath),
+    );
+
+    if (!parsedReview.success) {
+      return false;
+    }
+
+    return asArray(parsedReview.data.questDraft.sources).some((rawSource) => {
+      const questSource = asObject(rawSource);
+
+      return (
+        readString(questSource?.provider) === 'xivapi' &&
+        readString(questSource?.sheet) === 'Quest' &&
+        readInteger(questSource?.rowId) === rowId &&
+        readString(questSource?.gameVersion) === source.version &&
+        readString(questSource?.schema) === source.schema
+      );
+    });
+  } catch {
+    return false;
+  }
+}
+
 async function ensureResolvedReview(
   rowId: number,
   options: {
     offline: boolean;
     refresh: boolean;
+
+    sourceVersion: string;
+    sourceSchema: string;
   },
 ): Promise<string> {
   const inspectionPaths = getInspectionPaths(rowId);
 
-  if (!options.refresh && (await fileExists(inspectionPaths.resolved))) {
+  const hasReusableResolvedReview =
+    !options.refresh &&
+    (await fileExists(inspectionPaths.resolved)) &&
+    (await resolvedReviewMatchesSource(inspectionPaths.resolved, rowId, {
+      version: options.sourceVersion,
+      schema: options.sourceSchema,
+    }));
+
+  if (hasReusableResolvedReview) {
     return inspectionPaths.resolved;
   }
 
   if (options.offline) {
     throw new Error(
       [
-        `Quest row ${rowId} has no reusable resolved review.`,
+        `Quest row ${rowId} has no reusable resolved review`,
+        'matching the currently pinned XIVAPI source.',
         '',
         'Run the exporter without "--offline" first.',
       ].join('\n'),
     );
   }
 
-  if (options.refresh || !(await fileExists(inspectionPaths.focused))) {
-    await runNpmScript('xivapi:inspect:quest', ['--row', String(rowId)]);
-  }
+  /*
+   * If the final resolved review is missing, invalid, stale, or explicitly
+   * refreshed, rebuild the entire inspection pipeline from the pinned source.
+   * Reusing only part of a stale inspection chain could mix XIVAPI versions.
+   */
+  await runNpmScript('xivapi:inspect:quest', ['--row', String(rowId)]);
 
-  if (options.refresh || !(await fileExists(inspectionPaths.review))) {
-    await runNpmScript('xivapi:interpret:quest', [
-      '--input',
-      toProjectRelativePath(inspectionPaths.focused),
-    ]);
-  }
+  await runNpmScript('xivapi:interpret:quest', [
+    '--input',
+    toProjectRelativePath(inspectionPaths.focused),
+  ]);
 
-  if (options.refresh || !(await fileExists(inspectionPaths.resolved))) {
-    await runNpmScript('xivapi:resolve:quest', [
-      '--input',
-      toProjectRelativePath(inspectionPaths.review),
-    ]);
-  }
+  await runNpmScript('xivapi:resolve:quest', [
+    '--input',
+    toProjectRelativePath(inspectionPaths.review),
+  ]);
 
   return inspectionPaths.resolved;
 }
@@ -2336,6 +2380,27 @@ async function main(): Promise<void> {
     await readJsonFile(questIndexPath),
   );
 
+  const pins = await readXivapiPins();
+
+  if (
+    rawQuestIndex.source.version !== pins.version ||
+    rawQuestIndex.source.schema !== pins.schema
+  ) {
+    throw new Error(
+      [
+        'The quest index does not match the currently pinned XIVAPI source.',
+        '',
+        `Pinned version: ${pins.version}`,
+        `Index version: ${rawQuestIndex.source.version}`,
+        '',
+        `Pinned schema: ${pins.schema}`,
+        `Index schema: ${rawQuestIndex.source.schema}`,
+        '',
+        'Run "npm run xivapi:index:quests" before exporting quests.',
+      ].join('\n'),
+    );
+  }
+
   const questIndex = {
     ...rawQuestIndex,
 
@@ -2536,6 +2601,9 @@ async function main(): Promise<void> {
     const resolvedPath = await ensureResolvedReview(quest.rowId, {
       offline,
       refresh,
+
+      sourceVersion: questIndex.source.version,
+      sourceSchema: questIndex.source.schema,
     });
 
     reviewsByRowId.set(quest.rowId, await readResolvedReview(resolvedPath));
