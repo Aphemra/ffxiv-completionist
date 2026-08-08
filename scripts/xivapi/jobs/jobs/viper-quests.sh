@@ -22,6 +22,6 @@ COLLECTION_ID="viper-job-quests"
 COLLECTION_TITLE="Viper Quests"
 COLLECTION_DESCRIPTION="The complete Viper job questline."
 
-VERIFICATION_STATUS="in-review"
+VERIFICATION_STATUS="verified"
 
 source "$(dirname "${BASH_SOURCE[0]}")/../_quest-job.sh"

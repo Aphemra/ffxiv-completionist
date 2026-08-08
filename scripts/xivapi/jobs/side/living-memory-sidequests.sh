@@ -22,6 +22,6 @@ COLLECTION_ID="living-memory-sidequests"
 COLLECTION_TITLE="Living Memory Sidequests"
 COLLECTION_DESCRIPTION="Side quests found throughout Living Memory."
 
-VERIFICATION_STATUS="in-review"
+VERIFICATION_STATUS="verified"
 
 source "$(dirname "${BASH_SOURCE[0]}")/../_quest-job.sh"
