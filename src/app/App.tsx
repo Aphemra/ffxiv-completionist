@@ -1,11 +1,11 @@
-import { BrowserRouter } from 'react-router';
+import { HashRouter } from 'react-router';
 
 import { AppRouter } from './router';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppRouter />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
