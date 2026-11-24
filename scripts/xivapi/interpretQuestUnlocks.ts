@@ -170,7 +170,8 @@ export function isSupportedCollectibleReward(
 ): boolean {
   return (
     supportedCollectibleItemActionRowIds.has(actionRowId) ||
-    (actionRowId === 1013 && chocoboBardingItemRowIds.has(itemRowId))
+    (actionRowId === 1013 && chocoboBardingItemRowIds.has(itemRowId)) ||
+    (actionRowId === 50454 && itemRowId === 49805)
   );
 }
 
@@ -206,6 +207,16 @@ function createCollectibleRewardUnlock(
       sourceRowId: itemRowId,
       name: itemName,
       notes: `Obtaining ${itemName} adds this chocobo barding.`,
+    };
+  }
+
+  if (actionRowId === 50454 && itemRowId === 49805) {
+    return {
+      type: 'feature',
+      targetId: 'beastmaster-familiar-cu-sith',
+      sourceRowId: itemRowId,
+      name: 'Cu Sith',
+      notes: `Use ${itemName} to register Cu Sith in the Master's Bestiary.`,
     };
   }
 

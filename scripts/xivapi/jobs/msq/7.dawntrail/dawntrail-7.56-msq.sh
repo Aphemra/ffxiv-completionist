@@ -10,8 +10,8 @@ DATA_EXPANSION_FOLDER="7.dawntrail"
 
 SELECTION_MODE="chain"
 
-START_QUEST="7.56 Beginning"
-END_QUEST="7.56 End"
+START_QUEST="A Winter's Dream"
+END_QUEST="Windborne"
 
 START_ROW=""
 END_ROW=""
